@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Box, Tabs, Tab, Paper } from '@mui/material';
-import SampleEntryForm from './SampleEntryForm';
-import InvoiceList from './InvoiceList';
+import DoctorList from './DoctorList';
+import CommissionList from './CommissionList';
 
-const Billing: React.FC = () => {
+const Commissions: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -14,17 +14,17 @@ const Billing: React.FC = () => {
     <Box>
       <Paper>
         <Tabs value={activeTab} onChange={handleChange} centered>
-          <Tab label="Nueva Muestra" />
-          <Tab label="Historial de Facturas" />
+          <Tab label="Gestión de Doctores" />
+          <Tab label="Reporte de Comisiones" />
         </Tabs>
       </Paper>
 
       <Box sx={{ mt: 3 }}>
-        {activeTab === 0 && <SampleEntryForm />}
-        {activeTab === 1 && <InvoiceList />}
+        {activeTab === 0 && <DoctorList />}
+        {activeTab === 1 && <CommissionList />}
       </Box>
     </Box>
   );
 };
 
-export default Billing;
+export default Commissions;

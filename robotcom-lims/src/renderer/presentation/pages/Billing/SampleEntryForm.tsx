@@ -26,7 +26,7 @@ import { Patient } from '../../../domain/entities/Patient';
 import { Test } from '../../../domain/entities/Test';
 import { TestProfile } from '../../../domain/entities/TestProfile';
 
-const steps = ['Select Patient', 'Select Tests', 'Confirm & Save'];
+const steps = ['Seleccionar Paciente', 'Seleccionar Exámenes', 'Confirmar y Guardar'];
 
 const SampleEntryForm: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -96,13 +96,13 @@ const SampleEntryForm: React.FC = () => {
         testIds: selectionMode === 'individual' ? selectedTestIds : [],
         sampleNumber,
         notes,
-        labId: 'current-lab-id', // Replace with auth context
+        labId: 'current-lab-id',
       });
       // Reset form and navigate away or show success
       setActiveStep(0);
       setSelectedPatient(null);
       // ... reset other states
-    } catch (error) {
+    } catch (error)_ {
       console.error('Failed to create sample:', error);
     }
   };
@@ -126,7 +126,7 @@ const SampleEntryForm: React.FC = () => {
      <Box>
       <TextField
         fullWidth
-        label="Search Patients"
+        label="Buscar Pacientes"
         variant="outlined"
         value={patientSearch}
         onChange={(e) => {
@@ -162,17 +162,17 @@ const SampleEntryForm: React.FC = () => {
         onChange={(_, val) => setSelectionMode(val)}
         sx={{ mb: 2 }}
       >
-        <ToggleButton value="profile">By Profile</ToggleButton>
-        <ToggleButton value="individual">By Individual Test</ToggleButton>
+        <ToggleButton value="profile">Por Perfil</ToggleButton>
+        <ToggleButton value="individual">Por Examen Individual</ToggleButton>
       </ToggleButtonGroup>
 
       {testLoading ? <CircularProgress /> : (
         selectionMode === 'profile' ? (
           <FormControl fullWidth>
-            <InputLabel>Test Profile</InputLabel>
+            <InputLabel>Perfil de Exámenes</InputLabel>
             <Select
               value={selectedProfileId}
-              label="Test Profile"
+              label="Perfil de Exámenes"
               onChange={(e) => setSelectedProfileId(e.target.value)}
             >
               {profiles.map(p => <MenuItem key={p.id} value={p.id}>{p.name}</MenuItem>)}
@@ -209,19 +209,19 @@ const SampleEntryForm: React.FC = () => {
 
   const ConfirmationStep = () => (
     <Box>
-      <Typography variant="h6">Confirm Sample Details</Typography>
-      <Typography>Patient: {selectedPatient?.fullName}</Typography>
+      <Typography variant="h6">Confirmar Detalles de la Muestra</Typography>
+      <Typography>Paciente: {selectedPatient?.fullName}</Typography>
       {/* ... display selected tests/profile ... */}
-      <Typography>Total Cost: ${totalCost.toFixed(2)}</Typography>
+      <Typography>Costo Total: ${totalCost.toFixed(2)}</Typography>
       <TextField
-        label="Sample Number / ID"
+        label="Número / ID de Muestra"
         fullWidth
         value={sampleNumber}
         onChange={e => setSampleNumber(e.target.value)}
         sx={{ mt: 2 }}
       />
       <TextField
-        label="Notes"
+        label="Notas"
         fullWidth
         multiline
         rows={3}
@@ -237,7 +237,7 @@ const SampleEntryForm: React.FC = () => {
     <Box sx={{ p: 3, maxWidth: 600, mx: 'auto' }}>
       <Paper sx={{p:3}}>
         <Typography variant="h4" sx={{ mb: 3 }}>
-          New Sample Entry
+          Nueva Entrada de Muestra
         </Typography>
         <Stepper activeStep={activeStep} sx={{ mb: 3 }}>
           {steps.map((label) => <Step key={label}><StepLabel>{label}</StepLabel></Step>)}
@@ -249,14 +249,14 @@ const SampleEntryForm: React.FC = () => {
 
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 3 }}>
           <Button disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 1 }}>
-            Back
+            Atrás
           </Button>
           <Button
             variant="contained"
             onClick={activeStep === steps.length - 1 ? handleSave : handleNext}
             disabled={activeStep === 0 && !selectedPatient}
           >
-            {activeStep === steps.length - 1 ? 'Save Sample' : 'Next'}
+            {activeStep === steps.length - 1 ? 'Guardar Muestra' : 'Siguiente'}
           </Button>
         </Box>
       </Paper>

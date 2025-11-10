@@ -1,4 +1,5 @@
 import { Invoice } from '../../domain/entities/Invoice';
+import { InvoiceItem } from '../../domain/entities/InvoiceItem';
 import { IInvoiceRepository } from '../../domain/interfaces/IInvoiceRepository';
 
 export class InvoiceRepository implements IInvoiceRepository {
@@ -9,7 +10,7 @@ export class InvoiceRepository implements IInvoiceRepository {
   }
 
   async findAll(): Promise<Invoice[]> {
-    const data = await this.query('findMany', { orderBy: { createdAt: 'desc' } });
+    const data = await this.query('findMany', { orderBy: { createdAt: 'desc' }, include: { patient: true } });
     return data.map(this.toDomain);
   }
 
@@ -19,19 +20,20 @@ export class InvoiceRepository implements IInvoiceRepository {
   }
 
   async create(entity: Invoice): Promise<Invoice> {
-    const data = await this.query('create', { data: this.toPersistence(entity) });
+    const data = await this.query('create', { data: this.toPersistence(entity), include: { items: true, patient: true } });
     return this.toDomain(data);
   }
 
   async update(entity: Invoice): Promise<Invoice> {
-    const data = await this.query('update', { where: { id: entity.id }, data: this.toPersistence(entity) });
+    const data = await this.query('update', { where: { id: entity.id }, data: this.toPersistence(entity), include: { items: true, patient: true } });
     return this.toDomain(data);
   }
 
   private toDomain(data: any): Invoice {
-    // This is a simplified mapping. A real implementation would also map items, patient, etc.
+    const items = data.items?.map((item: any) => InvoiceItem.create(item, item.id)) || [];
     return Invoice.create({
       ...data,
+      items,
     }, data.id);
   }
 
@@ -49,7 +51,14 @@ export class InvoiceRepository implements IInvoiceRepository {
       dueDate: entity.dueDate,
       paidDate: entity.paidDate,
       notes: entity.notes,
-      // Items would be handled here in a real implementation
+      items: {
+        create: entity.items.map(item => ({
+          description: item.description,
+          quantity: item.quantity,
+          unitPrice: item.unitPrice,
+          total: item.total,
+        }))
+      }
     };
   }
 }

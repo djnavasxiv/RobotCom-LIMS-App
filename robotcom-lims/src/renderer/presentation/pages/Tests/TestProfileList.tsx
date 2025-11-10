@@ -38,7 +38,7 @@ const TestProfileList: React.FC = () => {
       const data = await testProfileService.getAllTestProfiles();
       setProfiles(data);
     } catch (err) {
-      setError('Failed to load test profiles.');
+      setError('Error al cargar los perfiles.');
       console.error(err);
     } finally {
       setLoading(false);
@@ -46,14 +46,14 @@ const TestProfileList: React.FC = () => {
   };
 
   const handleDelete = async (id: string) => {
-    if (!confirm('Are you sure you want to delete this profile?')) {
+    if (!confirm('¿Está seguro de que desea eliminar este perfil?')) {
       return;
     }
     try {
       await testProfileService.deleteTestProfile(id);
       loadProfiles();
     } catch (err) {
-      setError('Failed to delete profile.');
+      setError('Error al eliminar el perfil.');
       console.error(err);
     }
   };
@@ -75,13 +75,13 @@ const TestProfileList: React.FC = () => {
   return (
     <Box sx={{ p: 3 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
-        <Typography variant="h4">Test Profiles</Typography>
+        <Typography variant="h4">Perfiles de Exámenes</Typography>
         <Button
           variant="contained"
           startIcon={<Add />}
           onClick={() => handleOpenForm()}
         >
-          Add Profile
+          Añadir Perfil
         </Button>
       </Box>
 
@@ -93,10 +93,10 @@ const TestProfileList: React.FC = () => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Name</TableCell>
-                <TableCell>Description</TableCell>
-                <TableCell>Test Count</TableCell>
-                <TableCell align="right">Actions</TableCell>
+                <TableCell>Nombre</TableCell>
+                <TableCell>Descripción</TableCell>
+                <TableCell>Nº de Exámenes</TableCell>
+                <TableCell align="right">Acciones</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

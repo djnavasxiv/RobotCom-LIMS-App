@@ -58,12 +58,12 @@ const TestResultForm: React.FC<TestResultFormProps> = ({ sampleId }) => {
   };
 
   if (loading) return <CircularProgress />;
-  if (!sample) return <Typography>Sample not found.</Typography>;
+  if (!sample) return <Typography>Muestra no encontrada.</Typography>;
 
   return (
     <Paper sx={{ p: 3 }}>
       <Typography variant="h5" sx={{ mb: 2 }}>
-        Enter Results for Sample #{sample.sampleNumber}
+        Registrar Resultados para Muestra #{sample.sampleNumber}
       </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid container spacing={2}>
@@ -77,11 +77,11 @@ const TestResultForm: React.FC<TestResultFormProps> = ({ sampleId }) => {
                   name={`results.${index}.value`}
                   control={control}
                   defaultValue=""
-                  rules={{ required: 'Result value is required' }}
+                  rules={{ required: 'El valor del resultado es obligatorio' }}
                   render={({ field: controllerField, fieldState }) => (
                     <TextField
                       {...controllerField}
-                      label="Result Value"
+                      label="Valor del Resultado"
                       fullWidth
                       error={!!fieldState.error}
                       helperText={fieldState.error?.message}
@@ -95,7 +95,7 @@ const TestResultForm: React.FC<TestResultFormProps> = ({ sampleId }) => {
                   control={control}
                   defaultValue=""
                   render={({ field: controllerField }) => (
-                    <TextField {...controllerField} label="Notes" fullWidth />
+                    <TextField {...controllerField} label="Notas" fullWidth />
                   )}
                 />
               </Grid>
@@ -104,7 +104,7 @@ const TestResultForm: React.FC<TestResultFormProps> = ({ sampleId }) => {
         </Grid>
         <Box sx={{ mt: 3, display: 'flex', justifyContent: 'flex-end' }}>
           <Button type="submit" variant="contained">
-            Save Results
+            Guardar Resultados
           </Button>
         </Box>
       </form>

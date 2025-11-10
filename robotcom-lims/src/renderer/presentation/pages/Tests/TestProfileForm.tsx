@@ -72,7 +72,7 @@ const TestProfileForm: React.FC<TestProfileFormProps> = ({ open, onClose, onSave
 
   return (
     <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
-      <DialogTitle>{profile ? 'Edit Test Profile' : 'Add Test Profile'}</DialogTitle>
+      <DialogTitle>{profile ? 'Editar Perfil de Examen' : 'Añadir Perfil de Examen'}</DialogTitle>
       <form onSubmit={handleSubmit(onSubmit)}>
         <DialogContent>
           <Grid container spacing={2} sx={{ mt: 1 }}>
@@ -81,9 +81,9 @@ const TestProfileForm: React.FC<TestProfileFormProps> = ({ open, onClose, onSave
                 name="name"
                 control={control}
                 defaultValue=""
-                rules={{ required: 'Profile name is required' }}
+                rules={{ required: 'El nombre del perfil es obligatorio' }}
                 render={({ field }) => (
-                  <TextField {...field} label="Profile Name" fullWidth error={!!errors.name} helperText={errors.name?.message} />
+                  <TextField {...field} label="Nombre del Perfil" fullWidth error={!!errors.name} helperText={errors.name?.message} />
                 )}
               />
             </Grid>
@@ -92,22 +92,22 @@ const TestProfileForm: React.FC<TestProfileFormProps> = ({ open, onClose, onSave
                 name="description"
                 control={control}
                 defaultValue=""
-                render={({ field }) => <TextField {...field} label="Description" fullWidth multiline rows={2} />}
+                render={({ field }) => <TextField {...field} label="Descripción" fullWidth multiline rows={2} />}
               />
             </Grid>
             <Grid item xs={12}>
               <FormControl fullWidth>
-                <InputLabel>Tests</InputLabel>
+                <InputLabel>Exámenes</InputLabel>
                 <Controller
                   name="testIds"
                   control={control}
                   defaultValue={[]}
-                  rules={{ required: 'At least one test is required' }}
+                  rules={{ required: 'Se requiere al menos un examen' }}
                   render={({ field }) => (
                     <Select
                       {...field}
                       multiple
-                      input={<OutlinedInput label="Tests" />}
+                      input={<OutlinedInput label="Exámenes" />}
                       renderValue={(selected) => (
                         <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
                           {selected.map((id) => {
@@ -130,8 +130,8 @@ const TestProfileForm: React.FC<TestProfileFormProps> = ({ open, onClose, onSave
           </Grid>
         </DialogContent>
         <DialogActions>
-          <Button onClick={onClose}>Cancel</Button>
-          <Button type="submit" variant="contained">Save</Button>
+          <Button onClick={onClose}>Cancelar</Button>
+          <Button type="submit" variant="contained">Guardar</Button>
         </DialogActions>
       </form>
     </Dialog>

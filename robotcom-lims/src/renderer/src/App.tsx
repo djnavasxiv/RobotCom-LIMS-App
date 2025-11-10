@@ -7,6 +7,7 @@ import Tests from './presentation/pages/Tests/Tests';
 import Billing from './presentation/pages/Billing/Billing';
 import Inventory from './presentation/pages/Inventory/Inventory';
 import Settings from './presentation/pages/Settings/Settings';
+import Commissions from './presentation/pages/Commissions/Commissions';
 
 function App(): JSX.Element {
   return (
@@ -18,6 +19,7 @@ function App(): JSX.Element {
           <Route path="/patients" element={<Patients />} />
           <Route path="/tests" element={<Tests />} />
           <Route path="/billing" element={<Billing />} />
+          <Route path="/commissions" element={<Commissions />} />
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>

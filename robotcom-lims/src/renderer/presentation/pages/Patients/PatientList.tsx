@@ -41,7 +41,7 @@ const PatientList: React.FC = () => {
       const data = await patientService.getPatientsByLab(labId);
       setPatients(data);
     } catch (err) {
-      setError('Failed to load patients.');
+      setError('Error al cargar pacientes.');
       console.error(err);
     } finally {
       setLoading(false);
@@ -60,7 +60,7 @@ const PatientList: React.FC = () => {
       const data = await patientService.searchPatients(labId, searchQuery);
       setPatients(data);
     } catch (err) {
-      setError('Search failed.');
+      setError('Error en la búsqueda.');
       console.error(err);
     } finally {
       setLoading(false);
@@ -68,14 +68,14 @@ const PatientList: React.FC = () => {
   };
 
   const handleDelete = async (id: string) => {
-    if (!confirm('Are you sure you want to delete this patient?')) {
+    if (!confirm('¿Está seguro de que desea eliminar este paciente?')) {
       return;
     }
     try {
       await patientService.deletePatient(id);
       loadPatients();
     } catch (err) {
-      setError('Failed to delete patient.');
+      setError('Error al eliminar el paciente.');
       console.error(err);
     }
   };
@@ -97,20 +97,20 @@ const PatientList: React.FC = () => {
   return (
     <Box sx={{ p: 3 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
-        <Typography variant="h4">Patients</Typography>
+        <Typography variant="h4">Pacientes</Typography>
         <Button
           variant="contained"
           startIcon={<Add />}
           onClick={() => handleOpenForm()}
         >
-          Add Patient
+          Añadir Paciente
         </Button>
       </Box>
 
       <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
         <TextField
           fullWidth
-          placeholder="Search by name, phone, or email..."
+          placeholder="Buscar por nombre, teléfono, o email..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
@@ -121,7 +121,7 @@ const PatientList: React.FC = () => {
           onClick={handleSearch}
           disabled={loading}
         >
-          Search
+          Buscar
         </Button>
       </Box>
 
@@ -133,12 +133,12 @@ const PatientList: React.FC = () => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Name</TableCell>
-                <TableCell>Phone</TableCell>
+                <TableCell>Nombre</TableCell>
+                <TableCell>Teléfono</TableCell>
                 <TableCell>Email</TableCell>
-                <TableCell>Age</TableCell>
-                <TableCell>Gender</TableCell>
-                <TableCell align="right">Actions</TableCell>
+                <TableCell>Edad</TableCell>
+                <TableCell>Género</TableCell>
+                <TableCell align="right">Acciones</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

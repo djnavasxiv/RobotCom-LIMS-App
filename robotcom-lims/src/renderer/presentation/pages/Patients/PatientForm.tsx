@@ -67,13 +67,12 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
       onClose();
     } catch (error) {
       console.error('Failed to save patient:', error);
-      // You might want to show an error to the user here
     }
   };
 
   return (
     <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
-      <DialogTitle>{patient ? 'Edit Patient' : 'Add Patient'}</DialogTitle>
+      <DialogTitle>{patient ? 'Editar Paciente' : 'Añadir Paciente'}</DialogTitle>
       <form onSubmit={handleSubmit(onSubmit)}>
         <DialogContent>
           <Grid container spacing={2}>
@@ -82,11 +81,11 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
                 name="firstName"
                 control={control}
                 defaultValue=""
-                rules={{ required: 'First name is required' }}
+                rules={{ required: 'El nombre es obligatorio' }}
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    label="First Name"
+                    label="Nombre"
                     fullWidth
                     error={!!errors.firstName}
                     helperText={errors.firstName?.message}
@@ -99,11 +98,11 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
                 name="lastName"
                 control={control}
                 defaultValue=""
-                rules={{ required: 'Last name is required' }}
+                rules={{ required: 'El apellido es obligatorio' }}
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    label="Last Name"
+                    label="Apellido"
                     fullWidth
                     error={!!errors.lastName}
                     helperText={errors.lastName?.message}
@@ -116,7 +115,7 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
                 name="email"
                 control={control}
                 defaultValue=""
-                rules={{ pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email' } }}
+                rules={{ pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Email inválido' } }}
                 render={({ field }) => (
                   <TextField
                     {...field}
@@ -133,11 +132,11 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
                 name="phone"
                 control={control}
                 defaultValue=""
-                rules={{ required: 'Phone is required' }}
+                rules={{ required: 'El teléfono es obligatorio' }}
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    label="Phone"
+                    label="Teléfono"
                     fullWidth
                     error={!!errors.phone}
                     helperText={errors.phone?.message}
@@ -150,11 +149,11 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
                 name="birthDate"
                 control={control}
                 defaultValue=""
-                rules={{ required: 'Birth date is required' }}
+                rules={{ required: 'La fecha de nacimiento es obligatoria' }}
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    label="Birth Date"
+                    label="Fecha de Nacimiento"
                     type="date"
                     fullWidth
                     InputLabelProps={{ shrink: true }}
@@ -170,10 +169,10 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
                 control={control}
                 defaultValue="male"
                 render={({ field }) => (
-                  <TextField {...field} label="Gender" select fullWidth>
-                    <MenuItem value="male">Male</MenuItem>
-                    <MenuItem value="female">Female</MenuItem>
-                    <MenuItem value="other">Other</MenuItem>
+                  <TextField {...field} label="Género" select fullWidth>
+                    <MenuItem value="male">Masculino</MenuItem>
+                    <MenuItem value="female">Femenino</MenuItem>
+                    <MenuItem value="other">Otro</MenuItem>
                   </TextField>
                 )}
               />
@@ -184,15 +183,15 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
                 control={control}
                 defaultValue=""
                 render={({ field }) => (
-                  <TextField {...field} label="Address" fullWidth multiline rows={2} />
+                  <TextField {...field} label="Dirección" fullWidth multiline rows={2} />
                 )}
               />
             </Grid>
           </Grid>
         </DialogContent>
         <DialogActions>
-          <Button onClick={onClose}>Cancel</Button>
-          <Button type="submit" variant="contained">Save</Button>
+          <Button onClick={onClose}>Cancelar</Button>
+          <Button type="submit" variant="contained">Guardar</Button>
         </DialogActions>
       </form>
     </Dialog>

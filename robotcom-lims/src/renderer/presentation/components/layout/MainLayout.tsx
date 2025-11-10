@@ -19,17 +19,19 @@ import {
   Receipt as ReceiptIcon,
   Inventory as InventoryIcon,
   Settings as SettingsIcon,
+  AttachMoney as CommissionIcon,
 } from '@mui/icons-material';
 
 const drawerWidth = 240;
 
 const navItems = [
-  { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
-  { text: 'Patients', icon: <PeopleIcon />, path: '/patients' },
-  { text: 'Tests', icon: <BiotechIcon />, path: '/tests' },
-  { text: 'Billing', icon: <ReceiptIcon />, path: '/billing' },
-  { text: 'Inventory', icon: <InventoryIcon />, path: '/inventory' },
-  { text: 'Settings', icon: <SettingsIcon />, path: '/settings' },
+  { text: 'Principal', icon: <DashboardIcon />, path: '/dashboard' },
+  { text: 'Pacientes', icon: <PeopleIcon />, path: '/patients' },
+  { text: 'Exámenes', icon: <BiotechIcon />, path: '/tests' },
+  { text: 'Ingresos', icon: <ReceiptIcon />, path: '/billing' },
+  { text: 'Comisiones', icon: <CommissionIcon />, path: '/commissions' },
+  { text: 'Inventario', icon: <InventoryIcon />, path: '/inventory' },
+  { text: 'Configuración', icon: <SettingsIcon />, path: '/settings' },
 ];
 
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -63,7 +65,7 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 <ListItemButton
                   component={RouterLink}
                   to={item.path}
-                  selected={location.pathname === item.path}
+                  selected={location.pathname.startsWith(item.path)}
                 >
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />

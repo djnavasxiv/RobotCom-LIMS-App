@@ -1,4 +1,5 @@
 import { Entity } from './Entity';
+import { InvoiceItem } from './InvoiceItem';
 
 interface InvoiceProps {
   invoiceNumber: string;
@@ -12,6 +13,7 @@ interface InvoiceProps {
   dueDate?: Date;
   paidDate?: Date;
   notes?: string;
+  items: InvoiceItem[];
 }
 
 export class Invoice extends Entity<InvoiceProps> {
@@ -46,6 +48,7 @@ export class Invoice extends Entity<InvoiceProps> {
   get dueDate(): Date | undefined { return this.props.dueDate; }
   get paidDate(): Date | undefined { return this.props.paidDate; }
   get notes(): string | undefined { return this.props.notes; }
+  get items(): InvoiceItem[] { return this.props.items; }
 
   public calculateTotal(): void {
     this.props.total = this.props.subtotal + this.props.tax - this.props.discount;

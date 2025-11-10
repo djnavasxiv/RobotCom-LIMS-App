@@ -42,7 +42,7 @@ const InvoiceList: React.FC = () => {
       const data = await invoiceService.getAllInvoices();
       setInvoices(data);
     } catch (err) {
-      setError('Failed to load invoices.');
+      setError('Error al cargar facturas.');
       console.error(err);
     } finally {
       setLoading(false);
@@ -54,57 +54,69 @@ const InvoiceList: React.FC = () => {
   };
 
   const getStatusChip = (status: string) => {
-    // ... (same as before)
+    switch (status) {
+      case 'paid':
+        return <Chip label="Pagada" color="success" size="small" />;
+      case 'pending':
+        return <Chip label="Pendiente" color="warning" size="small" />;
+      case 'overdue':
+        return <Chip label="Vencida" color="error" size="small" />;
+      default:
+        return <Chip label={status} size="small" />;
+    }
   };
 
   return (
     <Box>
-      {/* ... (loading/error display) ... */}
+      {loading && <CircularProgress />}
+      {error && <Typography color="error">{error}</Typography>}
 
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Invoice #</TableCell>
-              <TableCell>Patient</TableCell>
-              <TableCell>Date</TableCell>
-              <TableCell>Total</TableCell>
-              <TableCell>Status</TableCell>
-              <TableCell align="right">Actions</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {invoices.map((invoice) => (
-              <TableRow key={invoice.id}>
-                <TableCell>{invoice.invoiceNumber}</TableCell>
-                <TableCell>{(invoice as any).patient?.fullName || 'N/A'}</TableCell>
-                <TableCell>{new Date(invoice.createdAt).toLocaleDateString()}</TableCell>
-                <TableCell>${invoice.total.toFixed(2)}</TableCell>
-                <TableCell>{getStatusChip(invoice.status)}</TableCell>
-                <TableCell align="right">
-                  <IconButton
-                    color="primary"
-                    onClick={() => setSelectedInvoiceId(invoice.id)}
-                  >
-                    <Visibility />
-                  </IconButton>
-                </TableCell>
+      {!loading && !error && (
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Factura #</TableCell>
+                <TableCell>Paciente</TableCell>
+                <TableCell>Fecha</TableCell>
+                <TableCell>Total</TableCell>
+                <TableCell>Estado</TableCell>
+                <TableCell align="right">Acciones</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {invoices.map((invoice) => (
+                <TableRow key={invoice.id}>
+                  <TableCell>{invoice.invoiceNumber}</TableCell>
+                  <TableCell>{(invoice as any).patient?.fullName || 'N/A'}</TableCell>
+                  <TableCell>{new Date(invoice.createdAt).toLocaleDateString()}</TableCell>
+                  <TableCell>${invoice.total.toFixed(2)}</TableCell>
+                  <TableCell>{getStatusChip(invoice.status)}</TableCell>
+                  <TableCell align="right">
+                    <IconButton
+                      color="primary"
+                      onClick={() => setSelectedInvoiceId(invoice.id)}
+                    >
+                      <Visibility />
+                    </IconButton>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
 
       <Dialog open={!!selectedInvoiceId} onClose={handleCloseDetail} maxWidth="md" fullWidth>
-        <DialogTitle>Invoice Details</DialogTitle>
+        <DialogTitle>Detalles de la Factura</DialogTitle>
         <DialogContent>
           {selectedInvoiceId && <InvoiceDetail invoiceId={selectedInvoiceId} />}
         </DialogContent>
         <DialogActions>
           <Button onClick={() => alert('Print functionality not yet implemented.')} startIcon={<Print />}>
-            Print
+            Imprimir
           </Button>
-          <Button onClick={handleCloseDetail}>Close</Button>
+          <Button onClick={handleCloseDetail}>Cerrar</Button>
         </DialogActions>
       </Dialog>
     </Box>

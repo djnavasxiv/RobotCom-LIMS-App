@@ -40,3 +40,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Log files
+pnpm_dev.log

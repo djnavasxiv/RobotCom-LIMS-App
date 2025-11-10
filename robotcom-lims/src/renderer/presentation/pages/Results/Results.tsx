@@ -14,21 +14,21 @@ const Results: React.FC = () => {
     <Box>
       <Paper sx={{ p: 2, mb: 3, display: 'flex', gap: 2, alignItems: 'center' }}>
         <TextField
-          label="Enter Sample ID"
+          label="Introducir ID de Muestra"
           value={sampleId}
           onChange={(e) => setSampleId(e.target.value)}
           variant="outlined"
           size="small"
         />
         <Button variant="contained" onClick={handleSearch}>
-          Find Sample
+          Buscar Muestra
         </Button>
       </Paper>
 
       {searchedId ? (
         <TestResultForm sampleId={searchedId} />
       ) : (
-        <Typography>Enter a sample ID to begin entering results.</Typography>
+        <Typography>Introduzca un ID de muestra para comenzar a registrar resultados.</Typography>
       )}
     </Box>
   );
