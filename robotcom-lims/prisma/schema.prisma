@@ -1,0 +1,275 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./robotcom.db"
+}
+
+model Lab {
+  id          String   @id @default(uuid())
+  name        String
+  address     String?
+  phone       String?
+  email       String?
+  logo        String?
+  customText1 String?
+  customText2 String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  patients    Patient[]
+  invoices    Invoice[]
+  users       User[]
+}
+
+model User {
+  id        String   @id @default(uuid())
+  username  String   @unique
+  password  String
+  fullName  String
+  email     String   @unique
+  role      String
+  isActive  Boolean  @default(true)
+  labId     String
+  lab       Lab      @relation(fields: [labId], references: [id])
+  createdAt DateTime @default(now())
+  auditLogs AuditLog[]
+  @@index([labId])
+}
+
+model Patient {
+  id        String   @id @default(uuid())
+  firstName String
+  lastName  String
+  email     String?
+  phone     String
+  birthDate DateTime
+  gender    String
+  address   String?
+  labId     String
+  lab       Lab      @relation(fields: [labId], references: [id])
+  createdAt DateTime @default(now())
+  samples   Sample[]
+  invoices  Invoice[]
+  @@index([labId])
+  @@index([phone])
+}
+
+model Test {
+  id          String   @id @default(uuid())
+  code        String   @unique
+  name        String
+  price       Float
+  category    String?
+  normalRange String?
+  unit        String?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  profileTests TestProfileItem[]
+  sampleTests  SampleTest[]
+  results      Result[]
+  @@index([code])
+}
+
+model TestProfile {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  tests       TestProfileItem[]
+  samples     Sample[]
+}
+
+model TestProfileItem {
+  id        String      @id @default(uuid())
+  profileId String
+  profile   TestProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  testId    String
+  test      Test        @relation(fields: [testId], references: [id])
+  @@unique([profileId, testId])
+  @@index([profileId])
+  @@index([testId])
+}
+
+model Sample {
+  id             String       @id @default(uuid())
+  sampleNumber   String       @unique
+  patientId      String
+  patient        Patient      @relation(fields: [patientId], references: [id])
+  profileId      String?
+  profile        TestProfile? @relation(fields: [profileId], references: [id])
+  collectionDate DateTime     @default(now())
+  status         String       @default("pending")
+  notes          String?
+  createdAt      DateTime     @default(now())
+  tests          SampleTest[]
+  results        Result[]
+  invoice        Invoice?
+  @@index([patientId])
+  @@index([sampleNumber])
+}
+
+model SampleTest {
+  id       String @id @default(uuid())
+  sampleId String
+  sample   Sample @relation(fields: [sampleId], references: [id], onDelete: Cascade)
+  testId   String
+  test     Test   @relation(fields: [testId], references: [id])
+  price    Float
+  @@unique([sampleId, testId])
+  @@index([sampleId])
+  @@index([testId])
+}
+
+model Result {
+  id        String   @id @default(uuid())
+  sampleId  String
+  sample    Sample   @relation(fields: [sampleId], references: [id])
+  testId    String
+  test      Test     @relation(fields: [testId], references: [id])
+  value     String
+  isNormal  Boolean  @default(true)
+  notes     String?
+  enteredBy String?
+  enteredAt DateTime @default(now())
+  createdAt DateTime @default(now())
+  @@unique([sampleId, testId])
+  @@index([sampleId])
+}
+
+model Invoice {
+  id            String        @id @default(uuid())
+  invoiceNumber String        @unique
+  patientId     String
+  patient       Patient       @relation(fields: [patientId], references: [id])
+  sampleId      String?       @unique
+  sample        Sample?       @relation(fields: [sampleId], references: [id])
+  labId         String
+  lab           Lab           @relation(fields: [labId], references: [id])
+  subtotal      Float
+  tax           Float         @default(0)
+  discount      Float         @default(0)
+  total         Float
+  status        String        @default("pending")
+  dueDate       DateTime?
+  paidDate      DateTime?
+  notes         String?
+  createdAt     DateTime      @default(now())
+  items         InvoiceItem[]
+  commissions   Commission[]
+  @@index([patientId])
+  @@index([labId])
+  @@index([invoiceNumber])
+}
+
+model InvoiceItem {
+  id          String  @id @default(uuid())
+  invoiceId   String
+  invoice     Invoice @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  description String
+  quantity    Int     @default(1)
+  unitPrice   Float
+  total       Float
+  @@index([invoiceId])
+}
+
+model Doctor {
+  id             String       @id @default(uuid())
+  firstName      String
+  lastName       String
+  specialty      String?
+  phone          String?
+  email          String?
+  commissionRate Float        @default(0)
+  isActive       Boolean      @default(true)
+  createdAt      DateTime     @default(now())
+  commissions    Commission[]
+  @@index([email])
+}
+
+model Commission {
+  id         String   @id @default(uuid())
+  doctorId   String
+  doctor     Doctor   @relation(fields: [doctorId], references: [id])
+  invoiceId  String
+  invoice    Invoice  @relation(fields: [invoiceId], references: [id])
+  amount     Float
+  percentage Float
+  isPaid     Boolean  @default(false)
+  paidDate   DateTime?
+  notes      String?
+  createdAt  DateTime @default(now())
+  @@index([doctorId])
+  @@index([invoiceId])
+}
+
+model InventoryItem {
+  id          String            @id @default(uuid())
+  code        String            @unique
+  name        String
+  description String?
+  category    String?
+  quantity    Int               @default(0)
+  minQuantity Int               @default(0)
+  unit        String
+  unitPrice   Float?
+  supplier    String?
+  notes       String?
+  isActive    Boolean           @default(true)
+  createdAt   DateTime          @default(now())
+  adjustments StockAdjustment[]
+  @@index([code])
+}
+
+model StockAdjustment {
+  id         String        @id @default(uuid())
+  itemId     String
+  item       InventoryItem @relation(fields: [itemId], references: [id])
+  type       String
+  quantity   Int
+  reason     String?
+  adjustedBy String?
+  createdAt  DateTime      @default(now())
+  @@index([itemId])
+}
+
+model License {
+  id               String   @id @default(uuid())
+  licenseKey       String   @unique
+  machineId        String   @unique
+  subscriptionType String
+  isActive         Boolean  @default(true)
+  activatedAt      DateTime @default(now())
+  expiresAt        DateTime
+  lastCheckAt      DateTime @default(now())
+  gracePeriodEnds  DateTime?
+  createdAt        DateTime @default(now())
+  @@index([licenseKey])
+  @@index([machineId])
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  action    String
+  entity    String?
+  entityId  String?
+  oldValues String?
+  newValues String?
+  ipAddress String?
+  createdAt DateTime @default(now())
+  @@index([userId])
+  @@index([action])
+}
+
+model Setting {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([key])
+}
