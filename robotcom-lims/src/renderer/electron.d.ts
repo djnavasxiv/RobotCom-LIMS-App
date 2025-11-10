@@ -9,6 +9,7 @@ export interface IElectronAPI {
   saveFile: (data: any, filename: string) => Promise<{ success: boolean }>;
   getAppVersion: () => Promise<string>;
   checkForUpdates: () => Promise<void>;
+  getHostname: () => Promise<string>;
 }
 
 declare global {

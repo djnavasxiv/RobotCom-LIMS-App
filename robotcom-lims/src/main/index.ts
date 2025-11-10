@@ -69,3 +69,7 @@ ipcMain.handle('license:validate', async (event, licenseKey) => {
   console.log('Validating license:', licenseKey);
   return { success: true, valid: true };
 });
+
+ipcMain.handle('app:get-hostname', () => {
+  return require('os').hostname();
+});

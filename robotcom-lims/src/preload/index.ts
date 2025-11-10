@@ -32,4 +32,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
 
   checkForUpdates: () =>
     ipcRenderer.invoke('app:check-updates'),
+
+  getHostname: () => ipcRenderer.invoke('app:get-hostname'),
 });
