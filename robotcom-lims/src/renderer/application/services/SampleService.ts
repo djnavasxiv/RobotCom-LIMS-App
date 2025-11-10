@@ -10,9 +10,11 @@ import { SampleRepository } from '../../data/repositories/SampleRepository';
 import { PatientRepository } from '../../data/repositories/PatientRepository';
 import { TestRepository } from '../../data/repositories/TestRepository';
 import { TestProfileRepository } from '../../data/repositories/TestProfileRepository';
+import { InvoiceService } from './InvoiceService';
 
 export class SampleService {
   private sampleRepository: ISampleRepository;
+  private invoiceService: InvoiceService;
   private patientRepository: IPatientRepository;
   private testRepository: ITestRepository;
   private testProfileRepository: ITestProfileRepository;
@@ -22,6 +24,7 @@ export class SampleService {
     this.patientRepository = new PatientRepository();
     this.testRepository = new TestRepository();
     this.testProfileRepository = new TestProfileRepository();
+    this.invoiceService = new InvoiceService();
   }
 
   async getAllPatients(labId: string): Promise<Patient[]> {
@@ -46,6 +49,7 @@ export class SampleService {
     testIds: string[];
     sampleNumber: string;
     notes?: string;
+    labId: string;
   }): Promise<Sample> {
     const tests: Test[] = [];
     let profile: TestProfile | undefined = undefined;
@@ -74,6 +78,11 @@ export class SampleService {
       notes: data.notes,
     });
 
-    return this.sampleRepository.create(sample);
+    const createdSample = await this.sampleRepository.create(sample);
+
+    // Automatically generate an invoice for the new sample
+    await this.invoiceService.generateInvoiceForSample(createdSample, data.labId);
+
+    return createdSample;
   }
 }

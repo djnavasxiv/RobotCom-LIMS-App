@@ -96,6 +96,7 @@ const SampleEntryForm: React.FC = () => {
         testIds: selectionMode === 'individual' ? selectedTestIds : [],
         sampleNumber,
         notes,
+        labId: 'current-lab-id', // Replace with auth context
       });
       // Reset form and navigate away or show success
       setActiveStep(0);
