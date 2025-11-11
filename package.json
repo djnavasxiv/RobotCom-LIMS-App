@@ -1,0 +1,15 @@
+{
+  "name": "robotcom-lims-monorepo",
+  "private": true,
+  "scripts": {
+    "app": "pnpm --filter robotcom-lims",
+    "web": "pnpm --filter website",
+    "dev:app": "pnpm app dev",
+    "build:app": "pnpm app build",
+    "dev:web": "pnpm web dev",
+    "build:web": "pnpm web build"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
