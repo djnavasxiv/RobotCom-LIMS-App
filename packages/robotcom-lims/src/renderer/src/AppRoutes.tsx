@@ -6,6 +6,7 @@ import LoginPage from './presentation/pages/Auth/LoginPage';
 import SignupPage from './presentation/pages/Auth/SignupPage';
 import Dashboard from './presentation/pages/Dashboard';
 import OrderEntry from './presentation/pages/OrderEntry';
+import { OrderHistory } from './presentation/pages/OrderHistory';
 import Patients from './presentation/pages/Patients/Patients';
 import Tests from './presentation/pages/Tests/Tests';
 import Billing from './presentation/pages/Billing/Billing';
@@ -48,6 +49,17 @@ const AppRoutes: React.FC = () => {
           <ProtectedRoute>
             <MainLayout>
               <OrderEntry />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/order-history"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <OrderHistory />
             </MainLayout>
           </ProtectedRoute>
         }

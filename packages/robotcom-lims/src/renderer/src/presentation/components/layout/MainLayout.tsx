@@ -14,6 +14,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           <nav className="main-nav">
             <a href="/">Dashboard</a>
             <a href="/order-entry">Órdenes</a>
+            <a href="/order-history">Historial</a>
             <a href="/patients">Patients</a>
             <a href="/samples">Samples</a>
             <a href="/tests">Tests</a>
