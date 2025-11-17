@@ -16,8 +16,7 @@ export class ResultService {
 
   // This is a placeholder for a proper sample search/list UI
   async findSampleById(sampleId: string): Promise<Sample | null> {
-    // This method needs to be added to the repository
-    return (this.sampleRepository as any).findById(sampleId);
+    return this.sampleRepository.findById(sampleId);
   }
 
   async getResultsForSample(sampleId: string): Promise<Result[]> {

@@ -24,7 +24,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         {children}
       </main>
       <footer className="app-footer">
-        <p>&copy; 2024 RobotCom LIMS. All rights reserved.</p>
+        <p>&copy; 2025 RobotCom LIMS. All rights reserved.</p>
       </footer>
     </div>
   );
