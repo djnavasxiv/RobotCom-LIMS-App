@@ -78,6 +78,98 @@ ipcMain.handle('db:query', async (event, model, method, ...args) => {
   }
 });
 
+// Order creation handler
+ipcMain.handle('order:create', async (event, orderData) => {
+  try {
+    const { patientId, doctorId, testIds, subtotal, discountPercentage, labId } = orderData;
+
+    // Generate order number based on current month
+    const now = new Date();
+    const monthYear = `${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getFullYear()).slice(-2)}`;
+    
+    // Get the count of orders for this month
+    const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
+    const monthEnd = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+    
+    const orderCount = await prisma.invoice.count({
+      where: {
+        labId,
+        createdAt: {
+          gte: monthStart,
+          lt: monthEnd,
+        },
+      },
+    });
+
+    const orderNumber = `${monthYear}-${String(orderCount + 1).padStart(3, '0')}`;
+    const discountAmount = subtotal * (discountPercentage / 100);
+    const total = subtotal - discountAmount;
+
+    // Create sample (order)
+    const sample = await prisma.sample.create({
+      data: {
+        sampleNumber: orderNumber,
+        patientId,
+        collectionDate: new Date(),
+        status: 'pending',
+      },
+    });
+
+    // Add tests to sample
+    for (const testId of testIds) {
+      const test = await prisma.test.findUnique({ where: { id: testId } });
+      if (test) {
+        await prisma.sampleTest.create({
+          data: {
+            sampleId: sample.id,
+            testId,
+            price: test.price,
+          },
+        });
+      }
+    }
+
+    // Create invoice
+    const invoice = await prisma.invoice.create({
+      data: {
+        invoiceNumber: orderNumber,
+        patientId,
+        sampleId: sample.id,
+        labId,
+        subtotal,
+        discount: discountAmount,
+        total,
+        status: 'pending',
+        items: {
+          create: testIds.map(async (testId) => {
+            const test = await prisma.test.findUnique({ where: { id: testId } });
+            return {
+              description: test?.name || 'Test',
+              quantity: 1,
+              unitPrice: test?.price || 0,
+              total: test?.price || 0,
+            };
+          }),
+        },
+      },
+      include: {
+        items: true,
+        sample: {
+          include: {
+            tests: true,
+          },
+        },
+      },
+    });
+
+    return { success: true, data: { invoice, sample, orderNumber } };
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error('Error creating order:', errorMessage);
+    return { success: false, error: errorMessage };
+  }
+});
+
 ipcMain.handle('print:invoice', async (event, invoiceData) => {
   // This is a placeholder. A real implementation would generate the PDF here.
   return { success: true };

@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react';
 import { useOrderStore } from '../../../application/state/orderStore';
+import { OrderService } from '../../../application/services/OrderService';
 import { PatientSearchForm } from '../components/OrderEntry/PatientSearchForm';
 import { TestSelectionGrid } from '../components/OrderEntry/TestSelectionGrid';
 import { BillingSection } from '../components/OrderEntry/BillingSection';
+import { useAuthStore } from '../../../application/state/authStore';
 import { Patient } from '../../../domain/entities/Patient';
 import { Test } from '../../../domain/entities/Test';
 import './OrderEntry.css';
 
 const OrderEntry: React.FC = () => {
+  const { labId } = useAuthStore();
   const {
     patient,
     selectedTests,
@@ -23,7 +26,11 @@ const OrderEntry: React.FC = () => {
     setDiscountPercentage,
     calculateTotals,
     resetOrder,
+    setLoading,
+    setError,
   } = useOrderStore();
+
+  const orderService = new OrderService();
 
   useEffect(() => {
     calculateTotals();
@@ -31,28 +38,42 @@ const OrderEntry: React.FC = () => {
 
   const handleSaveOrder = async () => {
     if (!patient) {
-      alert('Please select a patient');
+      setError('Please select a patient');
       return;
     }
     if (selectedTests.length === 0) {
-      alert('Please select at least one test');
+      setError('Please select at least one test');
       return;
     }
-    
-    // TODO: Implement order save logic
-    console.log('Saving order:', {
-      patient,
-      selectedTests,
-      subtotal,
-      discountPercentage,
-      discountedTotal,
-    });
-    alert('Order saved successfully! (TODO: Implement backend save)');
+
+    setLoading(true);
+    try {
+      const response = await orderService.createOrder({
+        patientId: patient.id,
+        testIds: selectedTests.map((t) => t.testId),
+        subtotal,
+        discountPercentage,
+        labId: labId || '',
+      });
+
+      if (response.success && response.data) {
+        alert(`✅ Order saved successfully!\nOrder Number: ${response.data.orderNumber}`);
+        resetOrder();
+        setError(null);
+      } else {
+        setError(response.error || 'Failed to save order');
+      }
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : String(err);
+      setError(`Error saving order: ${errorMessage}`);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handlePrintOrder = () => {
     if (!patient || selectedTests.length === 0) {
-      alert('Cannot print: Order is incomplete');
+      setError('Cannot print: Order is incomplete');
       return;
     }
     // TODO: Implement print logic

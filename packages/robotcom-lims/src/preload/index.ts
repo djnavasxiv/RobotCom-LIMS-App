@@ -5,6 +5,10 @@ contextBridge.exposeInMainWorld('electronAPI', {
   dbQuery: (model: string, method: string, ...args: any[]) =>
     ipcRenderer.invoke('db:query', model, method, ...args),
 
+  // Order operations
+  createOrder: (orderData: any) =>
+    ipcRenderer.invoke('order:create', orderData),
+
   // Printing
   printInvoice: (invoiceData: any) =>
     ipcRenderer.invoke('print:invoice', invoiceData),
