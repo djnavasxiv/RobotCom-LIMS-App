@@ -18,7 +18,7 @@ export const useAuthStore = create<AuthState>((set) => ({
   user: null,
   labId: null,
   isAuthenticated: false,
-  isLoading: true,
+  isLoading: false,
   error: null,
   login: async (username, password) => {
     set({ isLoading: true, error: null });
