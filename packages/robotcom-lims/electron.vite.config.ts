@@ -1,13 +1,28 @@
-import { resolve } from 'path'
-import { defineConfig } from 'electron-vite'
+import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
 import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 
 export default defineConfig({
   main: {
-    // Vite options for main process
+    plugins: [externalizeDepsPlugin()],
+    build: {
+      rollupOptions: {
+        external: [
+          '@prisma/client',
+          '.prisma/client',
+          '.prisma/client/index-browser'
+        ]
+      }
+    },
+    resolve: {
+      alias: {
+        '@prisma/client': resolve(__dirname, '../../node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/@prisma/client'),
+        '.prisma/client': resolve(__dirname, '../../node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client')
+      }
+    }
   },
   preload: {
-    // Vite options for preload script
+    plugins: [externalizeDepsPlugin()]
   },
   renderer: {
     resolve: {

@@ -15,25 +15,94 @@ const AppRoutes: React.FC = () => {
   return (
     <Routes>
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/" element={<ProtectedRoute />}>
-        <Route
-          path="/"
-          element={
+      
+      <Route
+        path="/"
+        element={
+          <ProtectedRoute>
             <MainLayout>
-              <Routes>
-                <Route path="/" element={<Navigate to="/dashboard" />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/patients" element={<Patients />} />
-                <Route path="/tests" element={<Tests />} />
-                <Route path="/billing" element={<Billing />} />
-                <Route path="/commissions" element={<Commissions />} />
-                <Route path="/inventory" element={<Inventory />} />
-                <Route path="/settings" element={<Settings />} />
-              </Routes>
+              <Dashboard />
             </MainLayout>
-          }
-        />
-      </Route>
+          </ProtectedRoute>
+        }
+      />
+      
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <Dashboard />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+      
+      <Route
+        path="/patients"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <Patients />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+      
+      <Route
+        path="/tests"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <Tests />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+      
+      <Route
+        path="/billing"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <Billing />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+      
+      <Route
+        path="/commissions"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <Commissions />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+      
+      <Route
+        path="/inventory"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <Inventory />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+      
+      <Route
+        path="/settings"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <Settings />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 };

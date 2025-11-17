@@ -4,7 +4,7 @@ import { IInventoryRepository } from '../../domain/interfaces/IInventoryReposito
 export class InventoryRepository implements IInventoryRepository {
   private async query(method: string, ...args: any[]): Promise<any> {
     const { success, data, error } = await window.electronAPI.dbQuery('inventoryItem', method, ...args);
-    if (!success) throw new Error(error);
+    if (!success) throw new Error(error || 'Database query failed');
     return data;
   }
 

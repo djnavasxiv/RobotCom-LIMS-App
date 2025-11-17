@@ -10,6 +10,10 @@
     "build:web": "pnpm web build"
   },
   "devDependencies": {
+    "prisma": "^6.19.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0"
   }
 }

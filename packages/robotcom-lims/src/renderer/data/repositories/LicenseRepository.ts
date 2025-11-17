@@ -4,7 +4,7 @@ import { ILicenseRepository } from '../../domain/interfaces/ILicenseRepository';
 export class LicenseRepository implements ILicenseRepository {
   private async query(method: string, ...args: any[]): Promise<any> {
     const { success, data, error } = await window.electronAPI.dbQuery('license', method, ...args);
-    if (!success) throw new Error(error);
+    if (!success) throw new Error(error || 'Database query failed');
     return data;
   }
 

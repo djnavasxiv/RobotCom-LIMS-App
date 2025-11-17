@@ -5,7 +5,7 @@ import { IInvoiceRepository } from '../../domain/interfaces/IInvoiceRepository';
 export class InvoiceRepository implements IInvoiceRepository {
   private async query(method: string, ...args: any[]): Promise<any> {
     const { success, data, error } = await window.electronAPI.dbQuery('invoice', method, ...args);
-    if (!success) throw new Error(error);
+    if (!success) throw new Error(error || 'Database query failed');
     return data;
   }
 

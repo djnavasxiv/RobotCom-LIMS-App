@@ -5,7 +5,7 @@ import { ISampleRepository } from '../../domain/interfaces/ISampleRepository';
 export class SampleRepository implements ISampleRepository {
   private async query(method: string, ...args: any[]): Promise<any> {
     const { success, data, error } = await window.electronAPI.dbQuery('sample', method, ...args);
-    if (!success) throw new Error(error);
+    if (!success) throw new Error(error || 'Database query failed');
     return data;
   }
 

@@ -1,14 +1,15 @@
 generator client {
   provider = "prisma-client-js"
+  output   = "../src/generated/prisma-client"
 }
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./robotcom.db"
+  url      = env("DATABASE_URL")
 }
 
 model Lab {
-  id          String   @id @default(uuid())
+  id          String    @id @default(uuid())
   name        String
   address     String?
   phone       String?
@@ -16,30 +17,30 @@ model Lab {
   logo        String?
   customText1 String?
   customText2 String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
   patients    Patient[]
   invoices    Invoice[]
   users       User[]
 }
 
 model User {
-  id        String   @id @default(uuid())
-  username  String   @unique
+  id        String     @id @default(uuid())
+  username  String     @unique
   password  String
   fullName  String
-  email     String   @unique
+  email     String     @unique
   role      String
-  isActive  Boolean  @default(true)
+  isActive  Boolean    @default(true)
   labId     String
-  lab       Lab      @relation(fields: [labId], references: [id])
-  createdAt DateTime @default(now())
+  lab       Lab        @relation(fields: [labId], references: [id])
+  createdAt DateTime   @default(now())
   auditLogs AuditLog[]
   @@index([labId])
 }
 
 model Patient {
-  id        String   @id @default(uuid())
+  id        String    @id @default(uuid())
   firstName String
   lastName  String
   email     String?
@@ -48,8 +49,8 @@ model Patient {
   gender    String
   address   String?
   labId     String
-  lab       Lab      @relation(fields: [labId], references: [id])
-  createdAt DateTime @default(now())
+  lab       Lab       @relation(fields: [labId], references: [id])
+  createdAt DateTime  @default(now())
   samples   Sample[]
   invoices  Invoice[]
   @@index([labId])
@@ -57,15 +58,15 @@ model Patient {
 }
 
 model Test {
-  id          String   @id @default(uuid())
-  code        String   @unique
-  name        String
-  price       Float
-  category    String?
-  normalRange String?
-  unit        String?
-  isActive    Boolean  @default(true)
-  createdAt   DateTime @default(now())
+  id           String            @id @default(uuid())
+  code         String            @unique
+  name         String
+  price        Float
+  category     String?
+  normalRange  String?
+  unit         String?
+  isActive     Boolean           @default(true)
+  createdAt    DateTime          @default(now())
   profileTests TestProfileItem[]
   sampleTests  SampleTest[]
   results      Result[]
@@ -73,11 +74,11 @@ model Test {
 }
 
 model TestProfile {
-  id          String   @id @default(uuid())
+  id          String            @id @default(uuid())
   name        String
   description String?
-  isActive    Boolean  @default(true)
-  createdAt   DateTime @default(now())
+  isActive    Boolean           @default(true)
+  createdAt   DateTime          @default(now())
   tests       TestProfileItem[]
   samples     Sample[]
 }
@@ -190,17 +191,17 @@ model Doctor {
 }
 
 model Commission {
-  id         String   @id @default(uuid())
+  id         String    @id @default(uuid())
   doctorId   String
-  doctor     Doctor   @relation(fields: [doctorId], references: [id])
+  doctor     Doctor    @relation(fields: [doctorId], references: [id])
   invoiceId  String
-  invoice    Invoice  @relation(fields: [invoiceId], references: [id])
+  invoice    Invoice   @relation(fields: [invoiceId], references: [id])
   amount     Float
   percentage Float
-  isPaid     Boolean  @default(false)
+  isPaid     Boolean   @default(false)
   paidDate   DateTime?
   notes      String?
-  createdAt  DateTime @default(now())
+  createdAt  DateTime  @default(now())
   @@index([doctorId])
   @@index([invoiceId])
 }
@@ -236,16 +237,16 @@ model StockAdjustment {
 }
 
 model License {
-  id               String   @id @default(uuid())
-  licenseKey       String   @unique
-  machineId        String   @unique
+  id               String    @id @default(uuid())
+  licenseKey       String    @unique
+  machineId        String    @unique
   subscriptionType String
-  isActive         Boolean  @default(true)
-  activatedAt      DateTime @default(now())
+  isActive         Boolean   @default(true)
+  activatedAt      DateTime  @default(now())
   expiresAt        DateTime
-  lastCheckAt      DateTime @default(now())
+  lastCheckAt      DateTime  @default(now())
   gracePeriodEnds  DateTime?
-  createdAt        DateTime @default(now())
+  createdAt        DateTime  @default(now())
   @@index([licenseKey])
   @@index([machineId])
 }
@@ -262,7 +263,7 @@ model AuditLog {
   ipAddress String?
   createdAt DateTime @default(now())
   @@index([userId])
-  @@index([action])
+  @@index([action])y
 }
 
 model Setting {

@@ -5,7 +5,7 @@ import { ITestProfileRepository } from '../../domain/interfaces/ITestProfileRepo
 export class TestProfileRepository implements ITestProfileRepository {
   private async query(method: string, ...args: any[]): Promise<any> {
     const { success, data, error } = await window.electronAPI.dbQuery('testProfile', method, ...args);
-    if (!success) throw new Error(error);
+    if (!success) throw new Error(error || 'Database query failed');
     return data;
   }
 

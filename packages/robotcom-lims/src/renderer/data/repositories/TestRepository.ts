@@ -4,7 +4,7 @@ import { ITestRepository } from '../../domain/interfaces/ITestRepository';
 export class TestRepository implements ITestRepository {
   private async query(method: string, ...args: any[]): Promise<any> {
     const { success, data, error } = await window.electronAPI.dbQuery('test', method, ...args);
-    if (!success) throw new Error(error);
+    if (!success) throw new Error(error || 'Database query failed');
     return data;
   }
 

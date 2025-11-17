@@ -61,7 +61,8 @@ ipcMain.handle('db:query', async (event, { model, method, args }) => {
     const result = await prisma[model][method](...args);
     return { success: true, data: result };
   } catch (error) {
-    return { success: false, error: error.message };
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    return { success: false, error: errorMessage };
   }
 });
 
