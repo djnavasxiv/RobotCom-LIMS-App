@@ -1,0 +1,174 @@
+.patient-search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding-right: 2.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.clear-btn {
+  position: absolute;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.clear-btn:hover {
+  color: #666;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover:not(.loading, .empty, .create-new) {
+  background-color: #f5f5f5;
+}
+
+.dropdown-item.selected {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.dropdown-item.loading,
+.dropdown-item.empty {
+  text-align: center;
+  color: #999;
+  cursor: default;
+}
+
+.patient-name {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.patient-info {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 0;
+}
+
+.dropdown-item.create-new {
+  background-color: #f9f9f9;
+  color: #1976d2;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+}
+
+.dropdown-item.create-new:hover {
+  background-color: #e3f2fd;
+}
+
+.patient-details {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #1976d2;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.detail-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-col label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.detail-col span {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .detail-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .dropdown {
+    max-height: 200px;
+  }
+}

@@ -13,6 +13,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           <h1>RobotCom LIMS</h1>
           <nav className="main-nav">
             <a href="/">Dashboard</a>
+            <a href="/order-entry">Órdenes</a>
             <a href="/patients">Patients</a>
             <a href="/samples">Samples</a>
             <a href="/tests">Tests</a>
