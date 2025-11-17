@@ -26,11 +26,15 @@ const LicenseProvider: React.FC<LicenseProviderProps> = ({ children }) => {
 
   const checkLicense = async () => {
     try {
-      // TODO: Implement actual license check via IPC
-      // const result = await window.electron.ipcRenderer.invoke('check-license');
-      // setIsLicenseValid(result.isValid);
-      // setLicenseInfo(result.info);
-      setIsLicenseValid(true);
+      // Check license via IPC with the main process
+      if (window.electronAPI?.license) {
+        const result = await window.electronAPI.license.validate();
+        setIsLicenseValid(result.isValid);
+        setLicenseInfo(result.info);
+      } else {
+        // Fallback for development without license check
+        setIsLicenseValid(true);
+      }
     } catch (error) {
       console.error('License check failed:', error);
       setIsLicenseValid(false);

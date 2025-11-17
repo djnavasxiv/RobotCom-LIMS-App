@@ -44,12 +44,12 @@ const Dashboard: React.FC = () => {
 
         <Grid item xs={12} md={8}>
            <Paper sx={{ p: 2, height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-             <Typography color="text.secondary">Gráfico de Ingresos Mensuales (placeholder)</Typography>
+             <Typography color="text.secondary">Gráfico de Ingresos Mensuales - Cargando datos...</Typography>
            </Paper>
         </Grid>
         <Grid item xs={12} md={4}>
            <Paper sx={{ p: 2, height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Typography color="text.secondary">Volumen de Exámenes (placeholder)</Typography>
+              <Typography color="text.secondary">Volumen de Exámenes - Cargando datos...</Typography>
            </Paper>
         </Grid>
       </Grid>

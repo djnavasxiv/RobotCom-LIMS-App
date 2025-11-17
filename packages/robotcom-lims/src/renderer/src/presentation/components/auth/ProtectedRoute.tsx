@@ -1,14 +1,17 @@
 import React, { ReactNode } from 'react';
 import { Navigate } from 'react-router-dom';
+import { useAuthStore } from '../../application/state/authStore';
 
 interface ProtectedRouteProps {
   children: ReactNode;
 }
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-  // TODO: Implement actual authentication check
-  // For now, always allow access (development mode)
-  const isAuthenticated = true;
+  const { isAuthenticated, isLoading } = useAuthStore();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
