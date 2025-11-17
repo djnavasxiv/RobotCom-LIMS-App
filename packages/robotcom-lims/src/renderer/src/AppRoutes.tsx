@@ -5,6 +5,10 @@ import ProtectedRoute from './presentation/components/auth/ProtectedRoute';
 import LoginPage from './presentation/pages/Auth/LoginPage';
 import SignupPage from './presentation/pages/Auth/SignupPage';
 import Dashboard from './presentation/pages/Dashboard';
+import OrderEntry from './presentation/pages/OrderEntry';
+import { OrderHistory } from './presentation/pages/OrderHistory';
+import { TestResultsEntry } from './presentation/pages/TestResultsEntry';
+import { TestResultFormPage } from './presentation/pages/TestResultFormPage';
 import Patients from './presentation/pages/Patients/Patients';
 import Tests from './presentation/pages/Tests/Tests';
 import Billing from './presentation/pages/Billing/Billing';
@@ -36,6 +40,50 @@ const AppRoutes: React.FC = () => {
           <ProtectedRoute>
             <MainLayout>
               <Dashboard />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/order-entry"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <OrderEntry />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/order-history"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <OrderHistory />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/test-results"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <TestResultsEntry />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/test-results/:testType/*"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <TestResultFormPage />
             </MainLayout>
           </ProtectedRoute>
         }
