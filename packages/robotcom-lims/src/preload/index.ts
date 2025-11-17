@@ -3,7 +3,7 @@ import { contextBridge, ipcRenderer } from 'electron';
 contextBridge.exposeInMainWorld('electronAPI', {
   // Database operations
   dbQuery: (model: string, method: string, ...args: any[]) =>
-    ipcRenderer.invoke('db:query', { model, method, args }),
+    ipcRenderer.invoke('db:query', model, method, ...args),
 
   // Printing
   printInvoice: (invoiceData: any) =>

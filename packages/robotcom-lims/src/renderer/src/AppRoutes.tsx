@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './presentation/components/layout/MainLayout';
 import ProtectedRoute from './presentation/components/auth/ProtectedRoute';
 import LoginPage from './presentation/pages/Auth/LoginPage';
+import SignupPage from './presentation/pages/Auth/SignupPage';
 import Dashboard from './presentation/pages/Dashboard';
 import Patients from './presentation/pages/Patients/Patients';
 import Tests from './presentation/pages/Tests/Tests';
@@ -18,6 +19,7 @@ const AppRoutes: React.FC = () => {
       <Route path="/" element={<Navigate to="/login" replace />} />
       
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} />
       
       <Route
         path="/dashboard"

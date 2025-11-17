@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuthStore } from '../../../../application/state/authStore';
 import './LoginPage.css';
 
@@ -70,6 +70,7 @@ const LoginPage = () => {
         </form>
         <div className="login-footer">
           <p>&copy; 2025 RobotCom LIMS. All rights reserved.</p>
+          <p><Link to="/signup">Create new account</Link></p>
         </div>
       </div>
     </div>
