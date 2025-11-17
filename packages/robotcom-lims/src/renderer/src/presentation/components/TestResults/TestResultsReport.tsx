@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FileJson, FileText, Printer, Download } from 'lucide-react';
-import ReportService, { ReportRecord, ReportSummary } from '../../application/services/ReportService';
+import ReportService, { ReportRecord, ReportSummary } from '../../../application/services/ReportService';
 
 interface TestResultsReportProps {
   results: ReportRecord[];
@@ -158,16 +157,14 @@ export const TestResultsReport: React.FC<TestResultsReportProps> = ({ results, o
             disabled={isExporting}
             className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded font-medium hover:bg-blue-700 disabled:bg-gray-400 transition-colors"
           >
-            <Download size={18} />
-            {isExporting ? 'Exporting...' : 'Export'}
+            📥 {isExporting ? 'Exporting...' : 'Export'}
           </button>
 
           <button
             onClick={handlePrint}
             className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded font-medium hover:bg-green-700 transition-colors"
           >
-            <Printer size={18} />
-            Print
+            🖨️ Print
           </button>
         </div>
       </div>

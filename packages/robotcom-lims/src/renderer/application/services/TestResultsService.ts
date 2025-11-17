@@ -408,4 +408,32 @@ export class TestResultsService {
 
     return configs[testType] || null;
   }
+
+  /**
+   * Get all results for a specific sample
+   */
+  static async getResultsBySampleId(sampleId: string): Promise<any[]> {
+    try {
+      const result = await window.electronAPI!.dbQuery('result', 'findMany', {
+        where: { sampleId },
+        include: {
+          sample: {
+            include: { patient: true },
+          },
+          test: true,
+        },
+        orderBy: { createdAt: 'desc' },
+      });
+
+      if (!result.success) {
+        throw new Error('Failed to fetch results');
+      }
+
+      return result.data || [];
+    } catch (error) {
+      console.error('Error fetching results by sample ID:', error);
+      throw error;
+    }
+  }
 }
+

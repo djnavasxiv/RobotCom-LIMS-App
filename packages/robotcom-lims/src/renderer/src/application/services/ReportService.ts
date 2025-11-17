@@ -3,7 +3,7 @@
  * Handles export and report generation for test results
  */
 
-interface ReportFilters {
+export interface ReportFilters {
   sampleId?: string;
   patientId?: string;
   startDate?: Date;
@@ -12,17 +12,23 @@ interface ReportFilters {
   status?: 'pending' | 'completed' | 'all';
 }
 
-interface ReportRecord {
+export interface ReportRecord {
+  id?: string;
+  sampleId: string;
   sampleNumber: string;
+  patientId: string;
   patientName: string;
   patientDOB: string;
   testType: string;
-  testName: string;
-  result: Record<string, any>;
-  isNormal: boolean;
-  enteredBy: string;
+  testName?: string;
+  status: string;
+  value?: Record<string, any>;
+  result?: Record<string, any>;
+  isNormal?: boolean;
+  enteredBy?: string;
   enteredAt: string;
-  notes: string;
+  notes?: string;
+  createdAt?: string;
 }
 
 /**
@@ -49,12 +55,12 @@ export function exportToCSV(records: ReportRecord[], filename: string): void {
     escapeCSV(record.patientName),
     escapeCSV(record.patientDOB),
     escapeCSV(record.testType),
-    escapeCSV(record.testName),
-    escapeCSV(JSON.stringify(record.result)),
+    escapeCSV(record.testName || ''),
+    escapeCSV(JSON.stringify(record.result || record.value || {})),
     record.isNormal ? 'Yes' : 'No',
-    escapeCSV(record.enteredBy),
+    escapeCSV(record.enteredBy || ''),
     escapeCSV(record.enteredAt),
-    escapeCSV(record.notes)
+    escapeCSV(record.notes || '')
   ]);
 
   // Combine headers and rows
@@ -294,12 +300,12 @@ export function generateHTMLReport(
             <td>${escapeHTML(record.patientName)}</td>
             <td>${escapeHTML(record.patientDOB)}</td>
             <td>${escapeHTML(record.testType)}</td>
-            <td>${escapeHTML(record.testName)}</td>
-            <td><span class="result-value">${escapeHTML(JSON.stringify(record.result))}</span></td>
+            <td>${escapeHTML(record.testName || '')}</td>
+            <td><span class="result-value">${escapeHTML(JSON.stringify(record.result || record.value || {}))}</span></td>
             <td class="${record.isNormal ? 'status-normal' : 'status-abnormal'}">
               ${record.isNormal ? '✓ Normal' : '⚠ Abnormal'}
             </td>
-            <td>${escapeHTML(record.enteredBy)}</td>
+            <td>${escapeHTML(record.enteredBy || '')}</td>
             <td>${escapeHTML(new Date(record.enteredAt).toLocaleDateString())}</td>
           </tr>
         `).join('')}

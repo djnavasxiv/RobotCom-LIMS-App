@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTestResultsStore } from '../../../application/state/testResultsStore';
 import { TestResultsService } from '../../../application/services/TestResultsService';
+import { TestResultsReport } from '../components/TestResults/TestResultsReport';
+import type { ReportRecord } from '../../../application/services/ReportService';
 
 const testCategories = [
   {
@@ -65,6 +67,9 @@ export const TestResultsEntry: React.FC = () => {
   const store = useTestResultsStore();
 
   const [selectedSampleId, setSelectedSampleId] = React.useState<string | null>(null);
+  const [showReport, setShowReport] = React.useState(false);
+  const [sampleResults, setSampleResults] = React.useState<ReportRecord[]>([]);
+  const [loadingResults, setLoadingResults] = React.useState(false);
 
   useEffect(() => {
     const loadPendingSamples = async () => {
@@ -92,6 +97,33 @@ export const TestResultsEntry: React.FC = () => {
   const handleSelectSample = (sampleId: string) => {
     setSelectedSampleId(sampleId);
     store.setCurrentSample(store.pendingSamples.find(s => s.id === sampleId) || null);
+    loadSampleResults(sampleId);
+  };
+
+  const loadSampleResults = async (sampleId: string) => {
+    setLoadingResults(true);
+    try {
+      const results = await TestResultsService.getResultsBySampleId(sampleId);
+      const reportRecords: ReportRecord[] = results.map((result: any) => ({
+        id: result.id,
+        sampleId: result.sampleId,
+        sampleNumber: result.sample?.sampleNumber || 'Unknown',
+        patientId: result.sample?.patientId || '',
+        patientName: result.sample?.patient ? `${result.sample.patient.firstName} ${result.sample.patient.lastName}` : 'Unknown',
+        patientDOB: result.sample?.patient?.dateOfBirth || '',
+        testType: result.test?.name || 'Unknown',
+        status: result.resultData?.status || 'pending',
+        value: result.resultData,
+        createdAt: result.createdAt || new Date().toISOString(),
+      }));
+      setSampleResults(reportRecords);
+      setShowReport(false);
+    } catch (error) {
+      console.error('Failed to load sample results:', error);
+      setSampleResults([]);
+    } finally {
+      setLoadingResults(false);
+    }
   };
 
   const selectedSample = selectedSampleId 
@@ -124,15 +156,26 @@ export const TestResultsEntry: React.FC = () => {
                 <p className="text-sm text-gray-600 mt-2">
                   {selectedSample.tests.length} exámenes pendientes
                 </p>
-                <button
-                  onClick={() => {
-                    setSelectedSampleId(null);
-                    store.setCurrentSample(null);
-                  }}
-                  className="mt-3 text-blue-600 hover:text-blue-800 text-sm font-semibold"
-                >
-                  Cambiar muestra
-                </button>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {sampleResults.length > 0 && (
+                    <button
+                      onClick={() => setShowReport(!showReport)}
+                      className="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors font-semibold"
+                    >
+                      {showReport ? '👁️‍🗨️' : '👁️'} {showReport ? 'Ocultar' : 'Ver'} Reporte ({sampleResults.length})
+                    </button>
+                  )}
+                  <button
+                    onClick={() => {
+                      setSelectedSampleId(null);
+                      store.setCurrentSample(null);
+                      setSampleResults([]);
+                    }}
+                    className="mt-2 text-blue-600 hover:text-blue-800 text-sm font-semibold"
+                  >
+                    Cambiar muestra
+                  </button>
+                </div>
               </div>
             ) : (
               <div className="space-y-2">
@@ -157,6 +200,36 @@ export const TestResultsEntry: React.FC = () => {
                   </button>
                 ))}
               </div>
+            )}
+          </div>
+        )}
+
+        {/* Report Section */}
+        {showReport && sampleResults.length > 0 && (
+          <div className="mb-8 bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">📄</span>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  Reporte de Resultados - {selectedSample?.sampleNumber}
+                </h2>
+              </div>
+              <button
+                onClick={() => setShowReport(false)}
+                className="text-gray-500 hover:text-gray-700 font-bold text-xl"
+              >
+                ✕
+              </button>
+            </div>
+            {loadingResults ? (
+              <div className="flex justify-center py-8">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div>
+              </div>
+            ) : (
+              <TestResultsReport 
+                results={sampleResults} 
+                onClose={() => setShowReport(false)}
+              />
             )}
           </div>
         )}
