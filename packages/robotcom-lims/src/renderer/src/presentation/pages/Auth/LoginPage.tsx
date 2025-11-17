@@ -1,24 +1,31 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuthStore } from '../../../../application/state/authStore';
 import './LoginPage.css';
 
 const LoginPage: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const { login, error: authError } = useAuthStore();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    
+    if (!username || !password) {
+      return;
+    }
 
-    // TODO: Implement actual authentication
-    if (username && password) {
-      // Simulate successful login
-      console.log('Login attempt:', { username });
+    setIsLoading(true);
+    try {
+      await login(username, password);
       navigate('/');
-    } else {
-      setError('Please enter username and password');
+    } catch (err) {
+      // Error is handled by authStore
+      console.error('Login error:', err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -31,7 +38,7 @@ const LoginPage: React.FC = () => {
         </div>
         <form onSubmit={handleSubmit} className="login-form">
           <h2>Sign In</h2>
-          {error && <div className="error-message">{error}</div>}
+          {authError && <div className="error-message">{authError}</div>}
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <input
@@ -40,7 +47,9 @@ const LoginPage: React.FC = () => {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               placeholder="Enter your username"
+              disabled={isLoading}
               autoFocus
+              required
             />
           </div>
           <div className="form-group">
@@ -51,14 +60,16 @@ const LoginPage: React.FC = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter your password"
+              disabled={isLoading}
+              required
             />
           </div>
-          <button type="submit" className="login-button">
-            Sign In
+          <button type="submit" className="submit-btn" disabled={isLoading}>
+            {isLoading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>
         <div className="login-footer">
-          <p>&copy; 2024 RobotCom LIMS. All rights reserved.</p>
+          <p>&copy; 2025 RobotCom LIMS. All rights reserved.</p>
         </div>
       </div>
     </div>
