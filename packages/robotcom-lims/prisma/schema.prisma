@@ -263,7 +263,7 @@ model AuditLog {
   ipAddress String?
   createdAt DateTime @default(now())
   @@index([userId])
-  @@index([action])y
+  @@index([action])
 }
 
 model Setting {
