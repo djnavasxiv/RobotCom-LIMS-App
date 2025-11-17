@@ -10,14 +10,30 @@ interface AuthState {
   error: string | null;
   login: (username: string, password: string) => Promise<void>;
   logout: () => void;
+  setAuthenticated: (authenticated: boolean, user?: User | null, labId?: string) => void;
 }
 
 const userService = new UserService();
 
+// Persist auth state to localStorage
+const loadPersistedState = () => {
+  try {
+    const persisted = localStorage.getItem('authState');
+    if (persisted) {
+      return JSON.parse(persisted);
+    }
+  } catch (err) {
+    console.warn('Failed to load persisted auth state:', err);
+  }
+  return null;
+};
+
+const persistedState = loadPersistedState();
+
 export const useAuthStore = create<AuthState>((set) => ({
-  user: null,
-  labId: null,
-  isAuthenticated: false,
+  user: persistedState?.user || null,
+  labId: persistedState?.labId || null,
+  isAuthenticated: persistedState?.isAuthenticated || false,
   isLoading: false,
   error: null,
   login: async (username, password) => {
@@ -25,7 +41,10 @@ export const useAuthStore = create<AuthState>((set) => ({
     try {
       const user = await userService.login(username, password);
       if (user) {
-        set({ user, labId: user.labId, isAuthenticated: true, isLoading: false });
+        const newState = { user, labId: user.labId, isAuthenticated: true, isLoading: false };
+        set(newState);
+        // Persist to localStorage
+        localStorage.setItem('authState', JSON.stringify(newState));
       } else {
         throw new Error('Invalid username or password');
       }
@@ -36,5 +55,15 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
   logout: () => {
     set({ user: null, labId: null, isAuthenticated: false });
+    localStorage.removeItem('authState');
+  },
+  setAuthenticated: (authenticated, user = null, labId = '') => {
+    const newState = { isAuthenticated: authenticated, user, labId };
+    set(newState);
+    if (authenticated) {
+      localStorage.setItem('authState', JSON.stringify(newState));
+    } else {
+      localStorage.removeItem('authState');
+    }
   },
 }));
