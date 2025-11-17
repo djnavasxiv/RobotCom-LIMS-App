@@ -1,5 +1,4 @@
 import { Entity } from './Entity';
-import * as bcrypt from 'bcrypt';
 
 interface UserProps {
   username: string;
@@ -27,10 +26,6 @@ export class User extends Entity<UserProps> {
   public validate(): boolean {
     return this.props.username?.trim().length > 0 &&
            this.props.passwordHash?.trim().length > 0;
-  }
-
-  public async comparePassword(password: string): Promise<boolean> {
-    return bcrypt.compare(password, this.props.passwordHash);
   }
 
   get username(): string { return this.props.username; }

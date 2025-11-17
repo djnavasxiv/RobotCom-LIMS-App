@@ -1,9 +1,6 @@
 import { User } from '../../domain/entities/User';
 import { IUserRepository } from '../../domain/interfaces/IUserRepository';
 import { UserRepository } from '../../data/repositories/UserRepository';
-import * as bcrypt from 'bcrypt';
-
-const SALT_ROUNDS = 10;
 
 export class UserService {
   private userRepository: IUserRepository;
@@ -12,18 +9,24 @@ export class UserService {
     this.userRepository = new UserRepository();
   }
 
-  async login(username: string, password: string):Promise<User | null> {
-    const user = await this.userRepository.findByUsername(username);
-    if (!user) {
+  async login(username: string, password: string): Promise<User | null> {
+    try {
+      // Call the main process to validate credentials (which has bcrypt access)
+      const result = await window.electronAPI.dbQuery('user', 'validatePassword', username, password);
+      if (!result.success) {
+        return null;
+      }
+      
+      if (result.data.isValid) {
+        // Fetch the user data
+        const user = await this.userRepository.findByUsername(username);
+        return user;
+      }
+      return null;
+    } catch (err) {
+      console.error('Login error:', err);
       return null;
     }
-
-    const isValid = await user.comparePassword(password);
-    if (!isValid) {
-      return null;
-    }
-
-    return user;
   }
 
   async createUser(data: any): Promise<User> {

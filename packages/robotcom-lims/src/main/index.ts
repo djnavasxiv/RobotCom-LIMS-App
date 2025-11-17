@@ -2,6 +2,7 @@ import { app, BrowserWindow, ipcMain } from 'electron';
 import { join } from 'path';
 import { PrismaClient } from '@prisma/client';
 import { autoUpdater } from 'electron-updater';
+import * as bcrypt from 'bcrypt';
 
 const prisma = new PrismaClient();
 let mainWindow: BrowserWindow | null = null;
@@ -56,8 +57,19 @@ app.on('window-all-closed', () => {
 });
 
 // IPC Handlers
-ipcMain.handle('db:query', async (event, { model, method, args }) => {
+ipcMain.handle('db:query', async (event, model, method, ...args) => {
   try {
+    // Handle special password validation method
+    if (model === 'user' && method === 'validatePassword') {
+      const [username, password] = args;
+      const user = await prisma.user.findUnique({ where: { username } });
+      if (!user) {
+        return { success: true, data: { isValid: false } };
+      }
+      const isValid = await bcrypt.compare(password, user.password);
+      return { success: true, data: { isValid } };
+    }
+
     const result = await prisma[model][method](...args);
     return { success: true, data: result };
   } catch (error) {
