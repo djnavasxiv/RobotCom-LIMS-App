@@ -15,8 +15,17 @@ import Settings from './presentation/pages/Settings/Settings';
 const AppRoutes: React.FC = () => {
   return (
     <Routes>
-      {/* Redirect root to login */}
-      <Route path="/" element={<Navigate to="/login" replace />} />
+      {/* Root route - redirect to dashboard if authenticated, otherwise to login */}
+      <Route 
+        path="/" 
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <Dashboard />
+            </MainLayout>
+          </ProtectedRoute>
+        } 
+      />
       
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
