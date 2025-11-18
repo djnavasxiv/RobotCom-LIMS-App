@@ -181,6 +181,61 @@ ipcMain.handle('license:validate', async (_event, licenseKey) => {
   return { success: true, valid: true };
 });
 
+// Database reset handler (development only)
+ipcMain.handle('db:reset', async (_event) => {
+  if (process.env.NODE_ENV !== 'development') {
+    return { success: false, error: 'Database reset only available in development' };
+  }
+  
+  try {
+    // Read and execute the seed SQL file
+    const fs = require('fs');
+    const path = require('path');
+    const sqlite3 = require('sqlite3').verbose();
+    
+    const seedSqlPath = path.join(__dirname, '../../prisma/seed.sql');
+    const dbPath = path.join(__dirname, '../../prisma/dev.db');
+    
+    if (!fs.existsSync(seedSqlPath)) {
+      return { success: false, error: 'Seed file not found' };
+    }
+    
+    // Open database connection
+    const db = new sqlite3.Database(dbPath, (err: Error | null) => {
+      if (err) {
+        console.error('Failed to open database:', err);
+      }
+    });
+    
+    // Read seed SQL
+    const seedSQL = fs.readFileSync(seedSqlPath, 'utf-8');
+    
+    // Execute all SQL statements
+    return new Promise((resolve) => {
+      db.exec(seedSQL, (execErr: Error | null) => {
+        db.close((closeErr: Error | null) => {
+          if (execErr) {
+            resolve({ success: false, error: execErr.message });
+          } else if (closeErr) {
+            resolve({ success: false, error: closeErr.message });
+          } else {
+            // Reload Prisma client
+            prisma.$disconnect().then(() => {
+              resolve({ 
+                success: true, 
+                message: 'Database reset successfully. Please refresh the application.' 
+              });
+            });
+          }
+        });
+      });
+    });
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    return { success: false, error: errorMessage };
+  }
+});
+
 ipcMain.handle('app:get-hostname', () => {
   return require('os').hostname();
 });

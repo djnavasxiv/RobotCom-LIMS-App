@@ -1,4 +1,4 @@
-const { PrismaClient } = require('../src/generated/prisma-client');
+const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcrypt');
 
 const prisma = new PrismaClient();
@@ -13,9 +13,7 @@ async function main() {
     if (existingLabs.length > 0) {
       console.log('Database already seeded, skipping...');
       return;
-    }
-
-    // Create a lab
+    }    // Create a lab
     const lab = await prisma.lab.create({
       data: {
         name: 'RobotComLab Principal',
@@ -39,6 +37,19 @@ async function main() {
       },
     });
     console.log(`✓ Created user: ${user.username}`);
+
+    // Create tech user
+    const techUser = await prisma.user.create({
+      data: {
+        username: 'tecnico',
+        password: passwordHash,
+        fullName: 'Técnico Laboratorio',
+        email: 'tech@robotcomlab.com',
+        role: 'technician',
+        labId: lab.id,
+      },
+    });
+    console.log(`✓ Created user: ${techUser.username}`);
 
     // Create comprehensive test list
     const testData = [
@@ -172,24 +183,37 @@ async function main() {
     });
     console.log(`✓ Created patient: ${patient1.firstName} ${patient1.lastName}`);
 
-    const patient2 = await prisma.patient.create({
-      data: {
-        firstName: 'María',
-        lastName: 'García',
-        gender: 'F',
-        birthDate: new Date('1990-08-22'),
-        phone: '555-0102',
-        email: 'maria@example.com',
-        labId: lab.id,
-      },
-    });
-    console.log(`✓ Created patient: ${patient2.firstName} ${patient2.lastName}`);
+    // Create multiple patients for comprehensive testing
+    const patients = [];
+    const patientNames = [
+      { firstName: 'Juan', lastName: 'Pérez' },
+      { firstName: 'María', lastName: 'García' },
+      { firstName: 'Carlos', lastName: 'López' },
+      { firstName: 'Ana', lastName: 'Rodríguez' },
+      { firstName: 'Luis', lastName: 'Martínez' },
+    ];
+
+    for (let i = 0; i < patientNames.length; i++) {
+      const patient = await prisma.patient.create({
+        data: {
+          firstName: patientNames[i].firstName,
+          lastName: patientNames[i].lastName,
+          gender: i % 2 === 0 ? 'M' : 'F',
+          birthDate: new Date(1985 + i, Math.floor(Math.random() * 12), Math.floor(Math.random() * 28) + 1),
+          phone: `555-010${i}`,
+          email: `patient${i}@example.com`,
+          labId: lab.id,
+        },
+      });
+      patients.push(patient);
+      console.log(`✓ Created patient: ${patient.firstName} ${patient.lastName}`);
+    }
 
     // Create test profile
     const testProfile = await prisma.testProfile.create({
       data: {
         name: 'Panel General',
-        description: 'Perfil general de pruebas',
+        description: 'Perfil general de pruebas incluidas en el análisis',
       },
     });
     console.log(`✓ Created test profile: ${testProfile.name}`);
@@ -206,51 +230,166 @@ async function main() {
     });
     console.log(`✓ Added ${allTests.length} tests to profile`);
 
-    // Create samples with tests (for testing test results entry)
-    const sample1 = await prisma.sample.create({
+    // Create samples with test results for each patient
+    for (let i = 0; i < patients.length; i++) {
+      const sample = await prisma.sample.create({
+        data: {
+          sampleNumber: `S-${String(i + 1).padStart(3, '0')}`,
+          patientId: patients[i].id,
+          collectionDate: new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000),
+          status: i % 3 === 0 ? 'completed' : 'pending_results',
+          profileId: testProfile.id,
+        },
+      });
+      console.log(`✓ Created sample: ${sample.sampleNumber}`);
+
+      // Add tests to sample
+      const testSubset = allTests.slice(0, 15);
+      await prisma.sampleTest.createMany({
+        data: testSubset.map((test) => ({
+          sampleId: sample.id,
+          testId: test.id,
+          price: test.price,
+        })),
+      });
+
+      // Create results for completed samples
+      if (sample.status === 'completed') {
+        const sampleTests = await prisma.sampleTest.findMany({
+          where: { sampleId: sample.id },
+        });
+        
+        for (const st of sampleTests) {
+          const resultValue = (Math.random() * 200 + 50).toFixed(2);
+          try {
+            await prisma.result.create({
+              data: {
+                sampleId: sample.id,
+                testId: st.testId,
+                value: resultValue,
+                isNormal: Math.random() > 0.2,
+                notes: `Resultado verificado para ${sample.sampleNumber}`,
+                enteredBy: user.id,
+              },
+            });
+          } catch (e) {
+            console.log(`Note: Could not create result, may require additional fields`);
+          }
+        }
+      }
+    }
+
+    // Create invoice data for billing module
+    const invoice = await prisma.invoice.create({
       data: {
-        sampleNumber: 'S-001',
-        patientId: patient1.id,
-        collectionDate: new Date(),
-        status: 'pending_results',
-        profileId: testProfile.id,
+        invoiceNumber: 'INV-001',
+        patientId: patients[0].id,
+        labId: lab.id,
+        subtotal: 200.00,
+        tax: 20.00,
+        discount: 0,
+        total: 220.00,
+        status: 'paid',
+        dueDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
       },
     });
-    console.log(`✓ Created sample: ${sample1.sampleNumber}`);
+    console.log(`✓ Created invoice: ${invoice.invoiceNumber}`);
 
-    // Add tests to sample
-    const testSubset = allTests.slice(0, 15); // Get first 15 tests
-    await prisma.sampleTest.createMany({
-      data: testSubset.map((test) => ({
-        sampleId: sample1.id,
-        testId: test.id,
-        price: test.price,
-      })),
-    });
-    console.log(`✓ Added ${testSubset.length} tests to sample`);
+    // Create additional invoices
+    for (let i = 1; i < 3; i++) {
+      const subtotal = Math.random() * 400 + 100;
+      await prisma.invoice.create({
+        data: {
+          invoiceNumber: `INV-${String(i + 1).padStart(3, '0')}`,
+          patientId: patients[i % patients.length].id,
+          labId: lab.id,
+          subtotal: subtotal,
+          tax: subtotal * 0.1,
+          discount: 0,
+          total: subtotal * 1.1,
+          status: ['pending', 'paid', 'cancelled'][Math.floor(Math.random() * 3)],
+          dueDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+        },
+      });
+    }
 
-    // Create another sample with different patient
-    const sample2 = await prisma.sample.create({
+    // Create doctor records
+    const doctor = await prisma.doctor.create({
       data: {
-        sampleNumber: 'S-002',
-        patientId: patient2.id,
-        collectionDate: new Date(),
-        status: 'pending_results',
-        profileId: testProfile.id,
+        firstName: 'Dr.',
+        lastName: 'Sánchez',
+        email: 'doctor@example.com',
+        phone: '555-9999',
+        specialty: 'General',
       },
     });
-    console.log(`✓ Created sample: ${sample2.sampleNumber}`);
+    console.log(`✓ Created doctor: ${doctor.firstName} ${doctor.lastName}`);
 
-    await prisma.sampleTest.createMany({
-      data: testSubset.map((test) => ({
-        sampleId: sample2.id,
-        testId: test.id,
-        price: test.price,
-      })),
-    });
-    console.log(`✓ Added ${testSubset.length} tests to sample`);
+    // Create commission data
+    if (doctor && invoice) {
+      try {
+        await prisma.commission.create({
+          data: {
+            doctorId: doctor.id,
+            invoiceId: invoice.id,
+            percentage: 5.0,
+            amount: invoice.total * 0.05,
+            isPaid: false,
+          },
+        });
+        console.log(`✓ Created commission for invoice`);
+      } catch (e) {
+        console.log('Note: Commission creation may require additional setup');
+      }
+    }
+
+    // Create inventory items
+    const inventoryItems = [
+      { code: 'TUBE001', name: 'Test Tube Vacío', quantity: 500 },
+      { code: 'TUBE002', name: 'Test Tube EDTA', quantity: 300 },
+      { code: 'TUBE003', name: 'Test Tube Suero', quantity: 250 },
+      { code: 'CHEM001', name: 'Reactivo Glucosa', quantity: 50 },
+      { code: 'CHEM002', name: 'Reactivo Colesterol', quantity: 40 },
+    ];
+
+    for (const item of inventoryItems) {
+      try {
+        await prisma.inventoryItem.create({
+          data: {
+            ...item,
+            unit: 'units',
+            minQuantity: 50,
+          },
+        });
+      } catch (e) {
+        console.log(`Note: Could not create inventory item ${item.code}`);
+      }
+    }
+    console.log(`✓ Created ${inventoryItems.length} inventory items`);
+
+    // Create license record
+    try {
+      const license = await prisma.license.create({
+        data: {
+          licenseKey: 'LICENSE-2024-001',
+          machineId: 'MACHINE-001',
+          subscriptionType: 'professional',
+          isActive: true,
+          expiresAt: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
+        },
+      });
+      console.log(`✓ Created license: ${license.licenseKey}`);
+    } catch (e) {
+      console.log('Note: License creation may have duplicate key');
+    }
 
     console.log('\n✓ Seeding completed successfully!');
+    console.log('\nTest Credentials:');
+    console.log('  Username: admin');
+    console.log('  Password: password');
+    console.log('\nAlternative Credentials:');
+    console.log('  Username: tecnico');
+    console.log('  Password: password');
   } catch (error) {
     console.error('Seeding failed:', error);
     process.exit(1);

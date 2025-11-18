@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Box, Button, Dialog, DialogTitle, DialogContent, DialogActions, Alert } from '@mui/material';
 import { LabService } from '../../../../application/services/LabService';
 import { LicenseService } from '../../../../application/services/LicenseService';
 
@@ -7,6 +8,9 @@ const Settings: React.FC = () => {
   const [labInfo, setLabInfo] = useState<any>(null);
   const [licenseInfo, setLicenseInfo] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [resetDialogOpen, setResetDialogOpen] = useState(false);
+  const [resetLoading, setResetLoading] = useState(false);
+  const [resetMessage, setResetMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
   const labService = new LabService();
   const licenseService = new LicenseService();
@@ -26,6 +30,27 @@ const Settings: React.FC = () => {
       console.error('Error loading settings:', error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleResetDatabase = async () => {
+    setResetLoading(true);
+    try {
+      const result = await (window as any).electronAPI?.db?.reset?.();
+      if (result?.success) {
+        setResetMessage({ type: 'success', text: 'Database reset successfully. Please refresh the application.' });
+        // Reload the app after 2 seconds
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      } else {
+        setResetMessage({ type: 'error', text: result?.error || 'Failed to reset database' });
+      }
+    } catch (error) {
+      setResetMessage({ type: 'error', text: 'Error resetting database: ' + (error instanceof Error ? error.message : String(error)) });
+    } finally {
+      setResetLoading(false);
+      setResetDialogOpen(false);
     }
   };
 
@@ -49,7 +74,7 @@ const Settings: React.FC = () => {
             fontWeight: activeTab === 'lab' ? 'bold' : 'normal'
           }}
         >
-          Información del Lab
+          Lab
         </button>
         <button
           onClick={() => setActiveTab('license')}
@@ -76,6 +101,19 @@ const Settings: React.FC = () => {
           }}
         >
           Respaldo
+        </button>
+        <button
+          onClick={() => setActiveTab('development')}
+          style={{
+            padding: '0.75rem 1.5rem',
+            background: activeTab === 'development' ? '#3498db' : 'transparent',
+            color: activeTab === 'development' ? 'white' : '#7f8c8d',
+            border: 'none',
+            cursor: 'pointer',
+            fontWeight: activeTab === 'development' ? 'bold' : 'normal'
+          }}
+        >
+          Desarrollo
         </button>
       </div>
 
@@ -194,6 +232,62 @@ const Settings: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        )}
+
+        {activeTab === 'development' && (
+          <div>
+            <h3>Herramientas de Desarrollo</h3>
+            {resetMessage && (
+              <Alert severity={resetMessage.type} sx={{ marginBottom: '1.5rem' }}>
+                {resetMessage.text}
+              </Alert>
+            )}
+            <div style={{ marginTop: '1.5rem' }}>
+              <div style={{ background: '#fff3cd', border: '1px solid #ffb84d', padding: '1rem', borderRadius: '4px', marginBottom: '1.5rem' }}>
+                <p style={{ color: '#664d03', margin: '0.5rem 0' }}>
+                  <strong>⚠️ Advertencia:</strong> Las herramientas de desarrollo solo están disponibles en modo de desarrollo. El reinicio de la base de datos eliminará todos los datos y los reemplazará con datos de prueba.
+                </p>
+              </div>
+
+              <div style={{ display: 'grid', gap: '1rem' }}>
+                <div>
+                  <h4 style={{ marginBottom: '0.5rem' }}>Reiniciar Base de Datos</h4>
+                  <p style={{ color: '#666', fontSize: '0.9rem', marginBottom: '1rem' }}>Limpia todos los datos y carga datos de prueba incluidos en la aplicación.</p>
+                  <button 
+                    onClick={() => setResetDialogOpen(true)}
+                    style={{ padding: '0.75rem 1.5rem', background: '#e74c3c', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
+                  >
+                    Reiniciar BD
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <Dialog open={resetDialogOpen} onClose={() => setResetDialogOpen(false)}>
+              <DialogTitle>Reiniciar Base de Datos</DialogTitle>
+              <DialogContent>
+                <p style={{ marginTop: '1rem' }}>
+                  ¿Está seguro de que desea reiniciar la base de datos? Esta acción eliminará todos los datos y los reemplazará con datos de prueba.
+                </p>
+                <p style={{ color: '#e74c3c', fontWeight: 'bold' }}>
+                  Esta acción no se puede deshacer.
+                </p>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={() => setResetDialogOpen(false)} disabled={resetLoading}>
+                  Cancelar
+                </Button>
+                <Button 
+                  onClick={handleResetDatabase} 
+                  variant="contained" 
+                  color="error"
+                  disabled={resetLoading}
+                >
+                  {resetLoading ? 'Reiniciando...' : 'Reiniciar'}
+                </Button>
+              </DialogActions>
+            </Dialog>
           </div>
         )}
       </div>

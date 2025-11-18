@@ -96,7 +96,7 @@ export const NavigationFooter: React.FC<NavigationFooterProps> = ({
           onClick={onSave}
           sx={{ textTransform: 'uppercase', fontSize: '10px' }}
         >
-          GUARD
+          GUARDAR
         </Button>
         <Button
           variant="outlined"
