@@ -22,7 +22,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.19",
     "@mui/material": "^5.14.20",
-    "@prisma/client": "^5.7.0",
+    "@prisma/client": "^6.19.0",
     "bcrypt": "^5.1.1",
     "electron-updater": "^6.6.2",
     "html2canvas": "^1.4.1",
