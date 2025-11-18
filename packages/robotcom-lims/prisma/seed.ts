@@ -40,27 +40,123 @@ async function main() {
     });
     console.log(`✓ Created user: ${user.username}`);
 
-    // Create some tests
+    // Create comprehensive test list
+    const testData = [
+      // Tipificación Sanguínea
+      { code: 'abo', name: 'Grupo ABO', price: 10.00, category: 'Tipificación Sanguínea' },
+      { code: 'rh', name: 'Factor Rh', price: 10.00, category: 'Tipificación Sanguínea' },
+      { code: 'subgrupo', name: 'Subgrupos de Antígenos', price: 15.00, category: 'Tipificación Sanguínea' },
+      { code: 'antiglobulina', name: 'Test de Antiglobulinas (Coombs)', price: 20.00, category: 'Tipificación Sanguínea' },
+      { code: 'compatibilidad', name: 'Prueba de Compatibilidad', price: 25.00, category: 'Tipificación Sanguínea' },
+      
+      // Coagulación
+      { code: 'pt', name: 'Tiempo de Protrombina (TP)', price: 15.00, category: 'Coagulación' },
+      { code: 'inr', name: 'INR', price: 15.00, category: 'Coagulación' },
+      { code: 'aptt', name: 'Tiempo de Tromboplastina Parcial Activado', price: 15.00, category: 'Coagulación' },
+      { code: 'fibrinogen', name: 'Fibrinógeno', price: 15.00, category: 'Coagulación' },
+      { code: 'dd', name: 'Dímero D', price: 20.00, category: 'Coagulación' },
+      
+      // ELISA
+      { code: 'hiv', name: 'VIH 1/2', price: 30.00, category: 'ELISA' },
+      { code: 'hbsag', name: 'Hepatitis B', price: 25.00, category: 'ELISA' },
+      { code: 'hvc', name: 'Hepatitis C', price: 25.00, category: 'ELISA' },
+      { code: 'rpr', name: 'Sífilis RPR/VDRL', price: 20.00, category: 'ELISA' },
+      { code: 'tppa', name: 'TPPA Sífilis', price: 20.00, category: 'ELISA' },
+      
+      // Inmunología
+      { code: 'igg', name: 'Inmunoglobulina G (IgG)', price: 18.00, category: 'Inmunología' },
+      { code: 'igm', name: 'Inmunoglobulina M (IgM)', price: 18.00, category: 'Inmunología' },
+      { code: 'iga', name: 'Inmunoglobulina A (IgA)', price: 18.00, category: 'Inmunología' },
+      { code: 'c3', name: 'Proteína C3 del Complemento', price: 20.00, category: 'Inmunología' },
+      { code: 'c4', name: 'Proteína C4 del Complemento', price: 20.00, category: 'Inmunología' },
+      
+      // Hormonas
+      { code: 'tsh', name: 'TSH', price: 20.00, category: 'Hormonas' },
+      { code: 't4', name: 'T4 Libre', price: 20.00, category: 'Hormonas' },
+      { code: 't3', name: 'T3 Libre', price: 20.00, category: 'Hormonas' },
+      { code: 'cortisol', name: 'Cortisol', price: 25.00, category: 'Hormonas' },
+      { code: 'prolactina', name: 'Prolactina', price: 20.00, category: 'Hormonas' },
+      
+      // Análisis de Orina
+      { code: 'densidad_urina', name: 'Densidad de Orina', price: 8.00, category: 'Análisis de Orina' },
+      { code: 'proteina_urina', name: 'Proteína en Orina', price: 8.00, category: 'Análisis de Orina' },
+      { code: 'glucosa_urina', name: 'Glucosa en Orina', price: 8.00, category: 'Análisis de Orina' },
+      { code: 'hemoglobina_urina', name: 'Hemoglobina en Orina', price: 8.00, category: 'Análisis de Orina' },
+      { code: 'celulas_blancas_orina', name: 'Células Blancas en Orina', price: 8.00, category: 'Análisis de Orina' },
+      
+      // Análisis de Heces
+      { code: 'parasitos', name: 'Búsqueda de Parásitos', price: 12.00, category: 'Análisis de Heces' },
+      { code: 'sangre_oculta', name: 'Sangre Oculta en Heces', price: 10.00, category: 'Análisis de Heces' },
+      { code: 'grasa_fecal', name: 'Grasa en Heces', price: 15.00, category: 'Análisis de Heces' },
+      { code: 'leucocitos_heces', name: 'Leucocitos en Heces', price: 10.00, category: 'Análisis de Heces' },
+      { code: 'cultivo_heces', name: 'Cultivo de Heces', price: 20.00, category: 'Análisis de Heces' },
+      
+      // Química Clínica
+      { code: 'glucosa', name: 'Glucosa', price: 5.00, category: 'Química Clínica' },
+      { code: 'sodio', name: 'Sodio', price: 7.00, category: 'Química Clínica' },
+      { code: 'potasio', name: 'Potasio', price: 7.00, category: 'Química Clínica' },
+      { code: 'cloruro', name: 'Cloruro', price: 7.00, category: 'Química Clínica' },
+      { code: 'calcio', name: 'Calcio Total', price: 8.00, category: 'Química Clínica' },
+      { code: 'colesterol', name: 'Colesterol Total', price: 8.00, category: 'Química Clínica' },
+      { code: 'ldl', name: 'LDL', price: 8.00, category: 'Química Clínica' },
+      { code: 'hdl', name: 'HDL', price: 8.00, category: 'Química Clínica' },
+      { code: 'trigliceridos', name: 'Triglicéridos', price: 8.00, category: 'Química Clínica' },
+      { code: 'ast', name: 'AST (GOT)', price: 8.00, category: 'Química Clínica' },
+      
+      // Pruebas de Embarazo
+      { code: 'bhcg_sangre', name: 'Beta hCG en Sangre', price: 15.00, category: 'Embarazo' },
+      { code: 'hcg_orina', name: 'hCG en Orina', price: 10.00, category: 'Embarazo' },
+      { code: 'progesterona', name: 'Progesterona', price: 20.00, category: 'Embarazo' },
+      { code: 'estriol', name: 'Estriol', price: 20.00, category: 'Embarazo' },
+      { code: 'afp', name: 'Alfa Fetoproteína (AFP)', price: 25.00, category: 'Embarazo' },
+      
+      // Hematología Completa
+      { code: 'rbc', name: 'Glóbulos Rojos (RBC)', price: 10.00, category: 'Hematología' },
+      { code: 'wbc', name: 'Glóbulos Blancos (WBC)', price: 10.00, category: 'Hematología' },
+      { code: 'hemoglobina', name: 'Hemoglobina', price: 10.00, category: 'Hematología' },
+      { code: 'hematocrito', name: 'Hematocrito', price: 10.00, category: 'Hematología' },
+      { code: 'plaquetas', name: 'Plaquetas', price: 10.00, category: 'Hematología' },
+      
+      // Pruebas Bacteriológicas
+      { code: 'cultivo_sangre', name: 'Cultivo de Sangre', price: 30.00, category: 'Bacteriología' },
+      { code: 'cultivo_orina', name: 'Cultivo de Orina', price: 25.00, category: 'Bacteriología' },
+      { code: 'gram', name: 'Tinción de Gram', price: 15.00, category: 'Bacteriología' },
+      { code: 'antibiograma', name: 'Antibiograma', price: 20.00, category: 'Bacteriología' },
+      { code: 'cultivo_general', name: 'Cultivo General', price: 20.00, category: 'Bacteriología' },
+      
+      // Análisis de Esperma
+      { code: 'concentracion', name: 'Concentración de Espermatozoides', price: 35.00, category: 'Espermatobioscopia' },
+      { code: 'movilidad', name: 'Movilidad de Espermatozoides', price: 35.00, category: 'Espermatobioscopia' },
+      { code: 'morfologia', name: 'Morfología Normal', price: 35.00, category: 'Espermatobioscopia' },
+      { code: 'viabilidad', name: 'Viabilidad de Espermatozoides', price: 35.00, category: 'Espermatobioscopia' },
+      { code: 'volumen_semen', name: 'Volumen de Semen', price: 35.00, category: 'Espermatobioscopia' },
+      
+      // Virus Bacterianas
+      { code: 'rubeola_igg', name: 'Rubeola IgG', price: 20.00, category: 'Virus Bacterianas' },
+      { code: 'varicela_igg', name: 'Varicela-Zóster IgG', price: 20.00, category: 'Virus Bacterianas' },
+      { code: 'herpes_igg', name: 'Herpes Simplex IgG', price: 20.00, category: 'Virus Bacterianas' },
+      { code: 'chlamydia', name: 'Chlamydia Trachomatis', price: 25.00, category: 'Virus Bacterianas' },
+      { code: 'gonorrea', name: 'Neisseria Gonorrhoeae', price: 25.00, category: 'Virus Bacterianas' },
+      
+      // Virus Heces
+      { code: 'rotavirus', name: 'Rotavirus', price: 20.00, category: 'Virus Heces' },
+      { code: 'norovirus', name: 'Norovirus', price: 20.00, category: 'Virus Heces' },
+      { code: 'adenovirus', name: 'Adenovirus', price: 20.00, category: 'Virus Heces' },
+      { code: 'enterovirus', name: 'Enterovirus', price: 20.00, category: 'Virus Heces' },
+      { code: 'respiratorio', name: 'Panel Respiratorio Viral', price: 25.00, category: 'Virus Heces' },
+      
+      // Virus Hematológicas
+      { code: 'cmv_igg', name: 'CMV IgG', price: 25.00, category: 'Virus Hematológicas' },
+      { code: 'ebv', name: 'EBV (Heterófilo)', price: 25.00, category: 'Virus Hematológicas' },
+      { code: 'dengue', name: 'Dengue NS1', price: 30.00, category: 'Virus Hematológicas' },
+      { code: 'malaria', name: 'Malaria (Gota Gruesa)', price: 20.00, category: 'Virus Hematológicas' },
+      { code: 'dengue_igg', name: 'Dengue IgG', price: 30.00, category: 'Virus Hematológicas' },
+    ];
+
     await prisma.test.createMany({
-      data: [
-        { code: 'GLU', name: 'Glucosa', price: 5.00, category: 'Química' },
-        { code: 'CHO', name: 'Colesterol Total', price: 7.50, category: 'Química' },
-        { code: 'TRI', name: 'Triglicéridos', price: 7.50, category: 'Química' },
-        { code: 'URI', name: 'Ácido Úrico', price: 6.00, category: 'Química' },
-        { code: 'CBC', name: 'Hemograma Completo', price: 15.00, category: 'Hematología' },
-        // Test Results module tests
-        { code: 'coagulacion', name: 'Pruebas de Coagulación', price: 20.00, category: 'Hematología' },
-        { code: 'grupo_sanguineo', name: 'Grupo Sanguíneo', price: 10.00, category: 'Hematología' },
-        { code: 'elisa', name: 'ELISA', price: 25.00, category: 'Serología' },
-        { code: 'embarazo', name: 'Prueba de Embarazo', price: 15.00, category: 'Química' },
-        { code: 'urinalisis', name: 'Urinalisis', price: 10.00, category: 'Análisis de Orina' },
-        { code: 'quimica', name: 'Panel de Química', price: 30.00, category: 'Química' },
-        { code: 'inmunologia', name: 'Panel Inmunológico', price: 35.00, category: 'Inmunología' },
-        { code: 'hormonas', name: 'Panel de Hormonas', price: 40.00, category: 'Endocrinología' },
-        { code: 'heces', name: 'Análisis de Heces', price: 15.00, category: 'Análisis Especiales' },
-      ],
+      data: testData,
     });
-    console.log('✓ Created 14 tests');
+    console.log(`✓ Created ${testData.length} tests`);
 
     // Create sample patients
     const patient1 = await prisma.patient.create({

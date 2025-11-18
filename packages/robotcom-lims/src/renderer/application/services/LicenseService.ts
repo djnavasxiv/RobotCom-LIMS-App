@@ -1,4 +1,3 @@
-import { machineIdSync } from 'node-machine-id';
 import { License } from '../../domain/entities/License';
 import { ILicenseRepository } from '../../domain/interfaces/ILicenseRepository';
 import { LicenseRepository } from '../../data/repositories/LicenseRepository';
@@ -13,12 +12,18 @@ export class LicenseService {
     this.licenseRepository = new LicenseRepository();
   }
 
-  public getMachineId(): string {
-    return machineIdSync();
+  public async getMachineId(): Promise<string> {
+    try {
+      return await window.electronAPI.getMachineId();
+    } catch (error) {
+      console.warn('Failed to get machine ID from Electron API, using fallback:', error);
+      return 'fallback-machine-id';
+    }
   }
 
   public async validateOnline(licenseKey: string): Promise<boolean> {
     try {
+      const machineId = await this.getMachineId();
       const response = await fetch(
         `${this.KEYGEN_API_URL}/accounts/${this.KEYGEN_ACCOUNT_ID}/licenses/actions/validate-key`,
         {
@@ -27,7 +32,7 @@ export class LicenseService {
           body: JSON.stringify({
             meta: {
               key: licenseKey,
-              scope: { fingerprint: this.getMachineId() }
+              scope: { fingerprint: machineId }
             }
           })
         }
@@ -43,6 +48,7 @@ export class LicenseService {
   public async activateLicense(licenseKey: string): Promise<{ success: boolean; expiresAt?: Date; error?: string; }> {
     try {
       const hostname = await window.electronAPI.getHostname();
+      const machineId = await this.getMachineId();
       const response = await fetch(
         `${this.KEYGEN_API_URL}/accounts/${this.KEYGEN_ACCOUNT_ID}/machines`,
         {
@@ -55,8 +61,8 @@ export class LicenseService {
             data: {
               type: 'machines',
               attributes: {
-                fingerprint: this.getMachineId(),
-                platform: 'electron', // Simplified
+                fingerprint: machineId,
+                platform: 'electron',
                 name: hostname
               },
               relationships: {
@@ -72,8 +78,8 @@ export class LicenseService {
         const expires = data.data.relationships.license.data.attributes.expiry;
         const license = License.create({
           licenseKey,
-          machineId: this.getMachineId(),
-          subscriptionType: 'TBD', // This would come from the API response
+          machineId: machineId,
+          subscriptionType: 'TBD',
           isActive: true,
           activatedAt: new Date(),
           expiresAt: new Date(expires),

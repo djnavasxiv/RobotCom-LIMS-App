@@ -1,0 +1,668 @@
+{
+  "testCategories": [
+    {
+      "code": "TIPEO",
+      "name": "Tipeo/Tipificación",
+      "englishName": "Blood Typing & ABO/Rh Grouping",
+      "description": "Blood group classification and compatibility testing",
+      "tests": [
+        {
+          "name": "ABO Group",
+          "code": "ABO",
+          "description": "ABO blood group classification",
+          "unit": "Group",
+          "referenceRange": "A, B, AB, or O"
+        },
+        {
+          "name": "Rh Factor",
+          "code": "RH",
+          "description": "Rhesus factor determination",
+          "unit": "Positive/Negative",
+          "referenceRange": "Rh+ or Rh-"
+        },
+        {
+          "name": "Antibody Screening",
+          "code": "ABSCREEN",
+          "description": "Detection of irregular antibodies",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Direct Antiglobulin Test (Coombs)",
+          "code": "DAT",
+          "description": "Detection of antibodies on RBC surface",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Kell Antigen",
+          "code": "KELL",
+          "description": "Kell blood group antigen detection",
+          "unit": "Positive/Negative",
+          "referenceRange": "Negative or Positive"
+        }
+      ]
+    },
+    {
+      "code": "COAG",
+      "name": "Coagulación",
+      "englishName": "Coagulation Studies",
+      "description": "Assessment of blood clotting function and factors",
+      "tests": [
+        {
+          "name": "Prothrombin Time (PT)",
+          "code": "PT",
+          "description": "Measures vitamin K-dependent clotting factors",
+          "unit": "seconds",
+          "referenceRange": "11-13.5 seconds"
+        },
+        {
+          "name": "International Normalized Ratio (INR)",
+          "code": "INR",
+          "description": "Standardized PT measurement for anticoagulation monitoring",
+          "unit": "ratio",
+          "referenceRange": "0.8-1.1"
+        },
+        {
+          "name": "Activated Partial Thromboplastin Time (aPTT)",
+          "code": "APTT",
+          "description": "Assesses intrinsic and common pathway factors",
+          "unit": "seconds",
+          "referenceRange": "25-35 seconds"
+        },
+        {
+          "name": "Fibrinogen",
+          "code": "FIBRIN",
+          "description": "Measures plasma fibrinogen concentration",
+          "unit": "mg/dL",
+          "referenceRange": "200-400 mg/dL"
+        },
+        {
+          "name": "Thrombin Time (TT)",
+          "code": "TT",
+          "description": "Evaluates fibrin formation",
+          "unit": "seconds",
+          "referenceRange": "14-20 seconds"
+        }
+      ]
+    },
+    {
+      "code": "ELISA",
+      "name": "ELISA",
+      "englishName": "Enzyme-Linked Immunosorbent Assay",
+      "description": "Immunoassay technique for antigen/antibody detection",
+      "tests": [
+        {
+          "name": "HIV Antibodies",
+          "code": "HIV_ELISA",
+          "description": "Detection of HIV-1 and HIV-2 antibodies",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Hepatitis B Surface Antigen (HBsAg)",
+          "code": "HBSAG",
+          "description": "Marker for active hepatitis B infection",
+          "unit": "IU/mL",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Hepatitis C Antibodies",
+          "code": "HCVAB",
+          "description": "Detection of antibodies to hepatitis C virus",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "SARS-CoV-2 Antibodies (IgG)",
+          "code": "COVID_IGG",
+          "description": "Detection of IgG antibodies to COVID-19",
+          "unit": "AU/mL",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Treponema pallidum Antibodies (Syphilis)",
+          "code": "RPR_ELISA",
+          "description": "Detection of anti-treponemal antibodies",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        }
+      ]
+    },
+    {
+      "code": "INMUN",
+      "name": "Inmunología",
+      "englishName": "Immunology Tests",
+      "description": "Assessment of immune system function and components",
+      "tests": [
+        {
+          "name": "Total Immunoglobulin G (IgG)",
+          "code": "IGG",
+          "description": "Major antibody in blood serum",
+          "unit": "mg/dL",
+          "referenceRange": "700-1600 mg/dL"
+        },
+        {
+          "name": "Immunoglobulin M (IgM)",
+          "code": "IGM",
+          "description": "Primary immune response antibody",
+          "unit": "mg/dL",
+          "referenceRange": "40-230 mg/dL"
+        },
+        {
+          "name": "Immunoglobulin A (IgA)",
+          "code": "IGA",
+          "description": "Antibody in mucosal secretions",
+          "unit": "mg/dL",
+          "referenceRange": "70-400 mg/dL"
+        },
+        {
+          "name": "CD4+ T-Cell Count",
+          "code": "CD4",
+          "description": "Helper T-lymphocyte count",
+          "unit": "cells/μL",
+          "referenceRange": "500-1500 cells/μL"
+        },
+        {
+          "name": "C3 Complement",
+          "code": "C3",
+          "description": "Component of complement system",
+          "unit": "mg/dL",
+          "referenceRange": "80-160 mg/dL"
+        }
+      ]
+    },
+    {
+      "code": "HORM",
+      "name": "Hormonas",
+      "englishName": "Hormonal Tests",
+      "description": "Measurement of endocrine system hormones",
+      "tests": [
+        {
+          "name": "Thyroid Stimulating Hormone (TSH)",
+          "code": "TSH",
+          "description": "Pituitary hormone regulating thyroid function",
+          "unit": "mIU/L",
+          "referenceRange": "0.27-4.2 mIU/L"
+        },
+        {
+          "name": "Free Thyroxine (Free T4)",
+          "code": "FT4",
+          "description": "Active form of thyroid hormone",
+          "unit": "ng/dL",
+          "referenceRange": "0.8-1.8 ng/dL"
+        },
+        {
+          "name": "Free Triiodothyronine (Free T3)",
+          "code": "FT3",
+          "description": "Active thyroid hormone",
+          "unit": "pg/mL",
+          "referenceRange": "2.3-4.2 pg/mL"
+        },
+        {
+          "name": "Testosterone (Total)",
+          "code": "TESTO",
+          "description": "Primary male sex hormone",
+          "unit": "ng/dL",
+          "referenceRange": "300-1000 ng/dL"
+        },
+        {
+          "name": "Follicle Stimulating Hormone (FSH)",
+          "code": "FSH",
+          "description": "Gonadotropin hormone",
+          "unit": "mIU/mL",
+          "referenceRange": "1.7-8.6 mIU/mL"
+        }
+      ]
+    },
+    {
+      "code": "URIN",
+      "name": "Urinalisis/Orina",
+      "englishName": "Urinalysis",
+      "description": "Chemical and microscopic analysis of urine",
+      "tests": [
+        {
+          "name": "Urine pH",
+          "code": "URINE_PH",
+          "description": "Acid-base balance indicator",
+          "unit": "pH units",
+          "referenceRange": "4.5-8.0"
+        },
+        {
+          "name": "Urine Glucose",
+          "code": "URINE_GLUCOSE",
+          "description": "Detection of glucose in urine",
+          "unit": "mg/dL",
+          "referenceRange": "Negative (0-5 mg/dL)"
+        },
+        {
+          "name": "Urine Protein",
+          "code": "URINE_PROTEIN",
+          "description": "Measurement of protein excretion",
+          "unit": "mg/dL",
+          "referenceRange": "Negative to trace"
+        },
+        {
+          "name": "Urine White Blood Cells (WBC)",
+          "code": "URINE_WBC",
+          "description": "Indicates urinary tract infection",
+          "unit": "cells/μL",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Urine Microscopy",
+          "code": "URINE_MICRO",
+          "description": "Examination of sediment for casts, crystals, cells",
+          "unit": "per low power field",
+          "referenceRange": "0-2 lpf"
+        }
+      ]
+    },
+    {
+      "code": "HECES",
+      "name": "Heces",
+      "englishName": "Fecal/Stool Analysis",
+      "description": "Examination of stool for parasites, pathogens, and constituents",
+      "tests": [
+        {
+          "name": "Fecal Occult Blood (FOBT)",
+          "code": "FOBT",
+          "description": "Detection of hidden blood in stool",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Stool Parasites",
+          "code": "PARASITES",
+          "description": "Microscopic examination for parasitic organisms",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Fecal Fat",
+          "code": "FECAL_FAT",
+          "description": "Quantitative measurement of fat in stool",
+          "unit": "g/24 hours",
+          "referenceRange": "less than 7 g/24 hours"
+        },
+        {
+          "name": "Stool Culture",
+          "code": "STOOL_CULTURE",
+          "description": "Identification of pathogenic bacteria",
+          "unit": "Colony counts",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Stool Leukocytes",
+          "code": "STOOL_WBC",
+          "description": "Detection of white blood cells in stool",
+          "unit": "per high power field",
+          "referenceRange": "Negative"
+        }
+      ]
+    },
+    {
+      "code": "QUIM",
+      "name": "Química/Química Clínica",
+      "englishName": "Clinical Chemistry",
+      "description": "Analysis of blood chemistry components and metabolic markers",
+      "tests": [
+        {
+          "name": "Glucose (Fasting)",
+          "code": "GLUCOSE",
+          "description": "Blood sugar level measurement",
+          "unit": "mg/dL",
+          "referenceRange": "70-100 mg/dL"
+        },
+        {
+          "name": "Creatinine",
+          "code": "CREATININE",
+          "description": "Kidney function marker",
+          "unit": "mg/dL",
+          "referenceRange": "0.7-1.3 mg/dL"
+        },
+        {
+          "name": "Blood Urea Nitrogen (BUN)",
+          "code": "BUN",
+          "description": "Protein metabolism and kidney function",
+          "unit": "mg/dL",
+          "referenceRange": "7-20 mg/dL"
+        },
+        {
+          "name": "Total Cholesterol",
+          "code": "CHOL_TOTAL",
+          "description": "Total serum cholesterol",
+          "unit": "mg/dL",
+          "referenceRange": "less than 200 mg/dL"
+        },
+        {
+          "name": "Alanine Aminotransferase (ALT)",
+          "code": "ALT",
+          "description": "Liver enzyme marker",
+          "unit": "U/L",
+          "referenceRange": "7-56 U/L"
+        }
+      ]
+    },
+    {
+      "code": "EMBARA",
+      "name": "Embarazo",
+      "englishName": "Pregnancy Tests",
+      "description": "Detection and monitoring of pregnancy-related hormones",
+      "tests": [
+        {
+          "name": "Human Chorionic Gonadotropin (hCG) - Serum",
+          "code": "HCG_SERUM",
+          "description": "Hormone produced during pregnancy",
+          "unit": "mIU/mL",
+          "referenceRange": "Non-pregnant: less than 5 mIU/mL"
+        },
+        {
+          "name": "Human Chorionic Gonadotropin (hCG) - Urine",
+          "code": "HCG_URINE",
+          "description": "Urine detection of pregnancy hormone",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Progesterone",
+          "code": "PROGESTERONE",
+          "description": "Hormone supporting pregnancy",
+          "unit": "ng/mL",
+          "referenceRange": "greater than 10 ng/mL"
+        },
+        {
+          "name": "Alpha-fetoprotein (AFP)",
+          "code": "AFP",
+          "description": "Maternal serum marker in pregnancy",
+          "unit": "ng/mL",
+          "referenceRange": "10-60 ng/mL"
+        },
+        {
+          "name": "Pregnancy-associated Plasma Protein-A (PAPP-A)",
+          "code": "PAPP_A",
+          "description": "First trimester screening marker",
+          "unit": "mIU/mL",
+          "referenceRange": "Varies by gestational age"
+        }
+      ]
+    },
+    {
+      "code": "HEMAT",
+      "name": "Hematología",
+      "englishName": "Hematology Tests",
+      "description": "Analysis of blood cells and clotting function",
+      "tests": [
+        {
+          "name": "White Blood Cell (WBC) Count",
+          "code": "WBC",
+          "description": "Total number of white blood cells",
+          "unit": "x10³/μL",
+          "referenceRange": "4.5-11.0 x10³/μL"
+        },
+        {
+          "name": "Red Blood Cell (RBC) Count",
+          "code": "RBC",
+          "description": "Total number of red blood cells",
+          "unit": "x10⁶/μL",
+          "referenceRange": "4.5-5.9 x10⁶/μL"
+        },
+        {
+          "name": "Hemoglobin (Hb)",
+          "code": "HB",
+          "description": "Oxygen-carrying protein in RBCs",
+          "unit": "g/dL",
+          "referenceRange": "13.5-17.5 g/dL"
+        },
+        {
+          "name": "Hematocrit (Hct)",
+          "code": "HCT",
+          "description": "Percentage of blood volume occupied by RBCs",
+          "unit": "%",
+          "referenceRange": "41-53%"
+        },
+        {
+          "name": "Platelet Count",
+          "code": "PLATELETS",
+          "description": "Number of blood platelets",
+          "unit": "x10³/μL",
+          "referenceRange": "150-400 x10³/μL"
+        }
+      ]
+    },
+    {
+      "code": "BACTER",
+      "name": "Bacteriológicas",
+      "englishName": "Bacteriology/Culture Tests",
+      "description": "Culture and identification of bacterial organisms",
+      "tests": [
+        {
+          "name": "Blood Culture",
+          "code": "BLOOD_CULTURE",
+          "description": "Detection of bacteria in bloodstream",
+          "unit": "Colony counts",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Urine Culture",
+          "code": "URINE_CULTURE",
+          "description": "Identification of urinary tract pathogens",
+          "unit": "CFU/mL",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Throat Culture",
+          "code": "THROAT_CULTURE",
+          "description": "Detection of Streptococcus pyogenes and other pathogens",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Wound Culture",
+          "code": "WOUND_CULTURE",
+          "description": "Identification of wound-infecting organisms",
+          "unit": "Colony counts",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Sputum Culture",
+          "code": "SPUTUM_CULTURE",
+          "description": "Respiratory tract infection identification",
+          "unit": "Colony counts",
+          "referenceRange": "Negative or normal flora"
+        }
+      ]
+    },
+    {
+      "code": "ESPERM",
+      "name": "Espermatozoides",
+      "englishName": "Semen Analysis",
+      "description": "Evaluation of sperm parameters and fertility",
+      "tests": [
+        {
+          "name": "Sperm Count",
+          "code": "SPERM_COUNT",
+          "description": "Total number of sperm cells",
+          "unit": "million/mL",
+          "referenceRange": "greater than 15 million/mL"
+        },
+        {
+          "name": "Sperm Motility",
+          "code": "SPERM_MOTILITY",
+          "description": "Percentage of progressive motile sperm",
+          "unit": "%",
+          "referenceRange": "greater than 42% total motility"
+        },
+        {
+          "name": "Sperm Morphology",
+          "code": "SPERM_MORPH",
+          "description": "Percentage of normal-shaped sperm",
+          "unit": "%",
+          "referenceRange": "greater than 4% normal morphology"
+        },
+        {
+          "name": "Semen Volume",
+          "code": "SEMEN_VOLUME",
+          "description": "Total volume of ejaculate",
+          "unit": "mL",
+          "referenceRange": "greater than 1.4 mL"
+        },
+        {
+          "name": "Semen pH",
+          "code": "SEMEN_PH",
+          "description": "Acidity/alkalinity of semen",
+          "unit": "pH units",
+          "referenceRange": "7.2-7.8"
+        }
+      ]
+    },
+    {
+      "code": "VIRUSBACT",
+      "name": "Virus Bacterianas",
+      "englishName": "Viral Serology Tests",
+      "description": "Detection of viral antibodies and antigens in serum",
+      "tests": [
+        {
+          "name": "Epstein-Barr Virus (EBV) Antibodies",
+          "code": "EBV_AB",
+          "description": "Detection of past or current EBV infection",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Cytomegalovirus (CMV) IgG",
+          "code": "CMV_IGG",
+          "description": "CMV past infection/immunity status",
+          "unit": "IU/mL",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Measles, Mumps, Rubella (MMR) Antibodies",
+          "code": "MMR_AB",
+          "description": "Immunity status to viral infections",
+          "unit": "Negative/Positive",
+          "referenceRange": "Positive"
+        },
+        {
+          "name": "Influenza Antibodies",
+          "code": "FLU_AB",
+          "description": "Detection of influenza-specific antibodies",
+          "unit": "Negative/Positive or titer",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Varicella-Zoster Virus (VZV) IgG",
+          "code": "VZV_IGG",
+          "description": "Chickenpox/shingles immunity status",
+          "unit": "IU/mL",
+          "referenceRange": "Positive"
+        }
+      ]
+    },
+    {
+      "code": "VIRUSHECES",
+      "name": "Virus Heces",
+      "englishName": "Viral Stool Tests",
+      "description": "Detection of viruses in stool samples",
+      "tests": [
+        {
+          "name": "Rotavirus Antigen",
+          "code": "ROTAVIRUS_AG",
+          "description": "Detection of rotavirus in stool",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Norovirus Detection",
+          "code": "NOROVIRUS",
+          "description": "PCR detection of norovirus",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Entrovirus PCR",
+          "code": "ENTEROVIRUS",
+          "description": "Molecular detection of enteroviruses",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Adenovirus Antigen",
+          "code": "ADENOVIRUS_AG",
+          "description": "Detection of enteric adenovirus",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Astrovirus Antigen",
+          "code": "ASTROVIRUS_AG",
+          "description": "Detection of astrovirus in stool",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        }
+      ]
+    },
+    {
+      "code": "VIRUSHEMA",
+      "name": "Virus Hematológicas",
+      "englishName": "Viral Blood Tests",
+      "description": "Detection of viruses in blood/plasma samples",
+      "tests": [
+        {
+          "name": "HIV RNA (Viral Load)",
+          "code": "HIV_VL",
+          "description": "Quantitative measurement of HIV in blood",
+          "unit": "copies/mL",
+          "referenceRange": "Undetectable"
+        },
+        {
+          "name": "Hepatitis B Viral Load (HBV DNA)",
+          "code": "HBV_DNA",
+          "description": "Quantitative HBV replication measurement",
+          "unit": "IU/mL",
+          "referenceRange": "Undetectable"
+        },
+        {
+          "name": "Hepatitis C Viral Load (HCV RNA)",
+          "code": "HCV_RNA",
+          "description": "Quantitative HCV replication measurement",
+          "unit": "IU/mL",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "SARS-CoV-2 RNA (COVID-19 PCR)",
+          "code": "COVID_PCR",
+          "description": "Molecular detection of COVID-19 virus",
+          "unit": "Negative/Positive or Ct value",
+          "referenceRange": "Negative"
+        },
+        {
+          "name": "Dengue RNA (RT-PCR)",
+          "code": "DENGUE_RNA",
+          "description": "Detection of dengue virus in acute infection",
+          "unit": "Negative/Positive",
+          "referenceRange": "Negative"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "createdDate": "2025-11-17",
+    "lastUpdated": "2025-11-17",
+    "languageCode": "es",
+    "standardsUsed": [
+      "WHO Laboratory Standards",
+      "Clinical Chemistry Reference Ranges",
+      "International Reference Values for Laboratory Tests",
+      "HL7 FHIR Laboratory Codes"
+    ],
+    "notes": [
+      "Reference ranges may vary by laboratory and methodology",
+      "Values are typical for adult populations",
+      "Sex-specific and age-specific variations apply",
+      "Some ranges are method-dependent and should be confirmed with your laboratory",
+      "Units follow SI conventions where applicable"
+    ]
+  }
+}

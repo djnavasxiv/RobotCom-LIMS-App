@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 import { User } from '../../domain/entities/User';
 import { UserService } from '../services/UserService';
 

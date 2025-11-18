@@ -1,75 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useTestResultsStore } from '../../../application/state/testResultsStore';
 import { TestResultsService } from '../../../application/services/TestResultsService';
 import { TestResultsReport } from '../components/TestResults/TestResultsReport';
+import { allTestCategories } from '../data/testCategories';
 import type { ReportRecord } from '../../../application/services/ReportService';
-
-const testCategories = [
-  {
-    code: 'coagulacion',
-    name: 'Pruebas de Coagulación',
-    icon: '🩸',
-    description: 'PT, INR, Fibrinógeno, TT, aPTT',
-  },
-  {
-    code: 'grupo_sanguineo',
-    name: 'Grupo Sanguíneo',
-    icon: '🩸',
-    description: 'Tipo ABO, Factor Rh',
-  },
-  {
-    code: 'elisa',
-    name: 'ELISA',
-    icon: '🧪',
-    description: 'VIH, VHB, VHC, Sífilis',
-  },
-  {
-    code: 'embarazo',
-    name: 'Prueba de Embarazo',
-    icon: '🤰',
-    description: 'hCG en sangre u orina',
-  },
-  {
-    code: 'urinalisis',
-    name: 'Urinalisis',
-    icon: '💛',
-    description: 'Análisis completo de orina',
-  },
-  {
-    code: 'quimica',
-    name: 'Panel de Química Clínica',
-    icon: '🧬',
-    description: 'Glucosa, Electrolitos, Hígado, Lípidos',
-  },
-  {
-    code: 'inmunologia',
-    name: 'Inmunología',
-    icon: '🛡️',
-    description: 'Inmunoglobulinas, Factores del Complemento',
-  },
-  {
-    code: 'hormonas',
-    name: 'Hormonas',
-    icon: '⚗️',
-    description: 'TSH, T3, T4, Cortisol, etc.',
-  },
-  {
-    code: 'heces',
-    name: 'Análisis de Heces',
-    icon: '🔬',
-    description: 'Parásitos, Sangre Oculta, Grasa',
-  },
-];
+import { Box, Tabs, Tab, Paper, Button, Card, CardContent, Typography, Grid, CircularProgress, Alert } from '@mui/material';
+import { 
+  OrdenExamen, 
+  QuimicaSanguinea, 
+  Hematologia, 
+  GeneralOrina, 
+  Heces, 
+  Bacteriologia, 
+  Espermiograma,
+  Inmunologia,
+  Hormonas,
+  Embarazo,
+  TipoSangre,
+  Coagulacion,
+  ELISA,
+  MultiTimer
+} from '../components/TestModules';
 
 export const TestResultsEntry: React.FC = () => {
   const navigate = useNavigate();
   const store = useTestResultsStore();
+  const { selectedModule } = useParams<{ selectedModule?: string }>();
 
   const [selectedSampleId, setSelectedSampleId] = React.useState<string | null>(null);
   const [showReport, setShowReport] = React.useState(false);
   const [sampleResults, setSampleResults] = React.useState<ReportRecord[]>([]);
   const [loadingResults, setLoadingResults] = React.useState(false);
+  const [activeModuleTab, setActiveModuleTab] = React.useState<string>(selectedModule || 'orden');
 
   useEffect(() => {
     const loadPendingSamples = async () => {
@@ -130,161 +93,199 @@ export const TestResultsEntry: React.FC = () => {
     ? store.pendingSamples.find(s => s.id === selectedSampleId) 
     : null;
 
-  return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Ingreso de Resultados de Exámenes</h1>
-          <p className="text-gray-600">
-            Selecciona el tipo de examen para ingresar los resultados
-          </p>
-        </div>
+  // Module tabs configuration
+  const modulesTabs = [
+    { id: 'orden', label: '📋 Orden', component: OrdenExamen },
+    { id: 'quimica', label: '🧪 Química Sanguínea', component: QuimicaSanguinea },
+    { id: 'hematologia', label: '🩸 Hematología', component: Hematologia },
+    { id: 'orina', label: '💧 Orina General', component: GeneralOrina },
+    { id: 'heces', label: '🔬 Heces', component: Heces },
+    { id: 'bacteriologia', label: '🧬 Bacteriología', component: Bacteriologia },
+    { id: 'espermiograma', label: '🧬 Espermiograma', component: Espermiograma },
+    { id: 'inmunologia', label: '⚡ Inmunología', component: Inmunologia },
+    { id: 'hormonas', label: '📊 Hormonas', component: Hormonas },
+    { id: 'embarazo', label: '🤰 Embarazo', component: Embarazo },
+    { id: 'tipo-sangre', label: '🩸 Tipo de Sangre', component: TipoSangre },
+    { id: 'coagulacion', label: '🩸 Coagulación', component: Coagulacion },
+    { id: 'elisa', label: '🧪 ELISA', component: ELISA },
+    { id: 'timers', label: '⏱️ Temporizadores', component: MultiTimer },
+  ];
 
-        {/* Pending Samples Summary */}
+  const handleModuleTabChange = (event: React.SyntheticEvent, newValue: string) => {
+    setActiveModuleTab(newValue);
+  };
+
+  const getCurrentModuleComponent = () => {
+    const module = modulesTabs.find(m => m.id === activeModuleTab);
+    if (!module) return null;
+    
+    const Component = module.component;
+    return <Component />;
+  };
+
+  return (
+    <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5', p: 2 }}>
+      <Box sx={{ maxWidth: '1400px', mx: 'auto' }}>
+        {/* Header */}
+        <Box sx={{ mb: 4 }}>
+          <Typography variant="h3" sx={{ fontWeight: 'bold', color: '#333', mb: 1 }}>
+            Módulos de Exámenes
+          </Typography>
+          <Typography variant="body1" sx={{ color: '#666', fontSize: '1.1rem' }}>
+            Selecciona un módulo de examen para ingresar datos
+          </Typography>
+          <Box sx={{ mt: 2, height: '4px', width: '100px', background: 'linear-gradient(to right, #2196F3, #64B5F6)', borderRadius: '2px' }}></Box>
+        </Box>
+
+        {/* Sample Selection Card */}
         {store.pendingSamples.length > 0 && (
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-            <h2 className="text-lg font-semibold text-blue-900 mb-3">
-              {selectedSample ? 'Muestra Seleccionada' : 'Selecciona una Muestra'}
-            </h2>
+          <Paper sx={{ p: 3, mb: 4, background: 'linear-gradient(to right, #E3F2FD, #F3E5F5)', border: '2px solid #2196F3' }}>
+            <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
+              📋 {selectedSample ? 'Muestra Seleccionada' : 'Selecciona una Muestra'}
+            </Typography>
             {selectedSample ? (
-              <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
-                <p className="font-semibold text-gray-900">{selectedSample.sampleNumber}</p>
-                <p className="text-gray-700">
-                  {selectedSample.patient.firstName} {selectedSample.patient.lastName}
-                </p>
-                <p className="text-sm text-gray-600 mt-2">
-                  {selectedSample.tests.length} exámenes pendientes
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {sampleResults.length > 0 && (
-                    <button
-                      onClick={() => setShowReport(!showReport)}
-                      className="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors font-semibold"
-                    >
-                      {showReport ? '👁️‍🗨️' : '👁️'} {showReport ? 'Ocultar' : 'Ver'} Reporte ({sampleResults.length})
-                    </button>
-                  )}
-                  <button
+              <Card sx={{ mb: 2, borderLeft: '4px solid #2196F3' }}>
+                <CardContent>
+                  <Grid container spacing={3} sx={{ mb: 3 }}>
+                    <Grid item xs={12} sm={4}>
+                      <Typography variant="caption" sx={{ color: '#666', fontWeight: 'bold' }}>
+                        NÚMERO DE MUESTRA
+                      </Typography>
+                      <Typography variant="h5" sx={{ color: '#2196F3', fontWeight: 'bold', mt: 0.5 }}>
+                        {selectedSample.sampleNumber}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                      <Typography variant="caption" sx={{ color: '#666', fontWeight: 'bold' }}>
+                        PACIENTE
+                      </Typography>
+                      <Typography variant="body1" sx={{ fontWeight: 'bold', mt: 0.5 }}>
+                        {selectedSample.patient.firstName} {selectedSample.patient.lastName}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                      <Typography variant="caption" sx={{ color: '#666', fontWeight: 'bold' }}>
+                        EXÁMENES PENDIENTES
+                      </Typography>
+                      <Typography variant="h5" sx={{ color: '#F57C00', fontWeight: 'bold', mt: 0.5 }}>
+                        {selectedSample.tests.length}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Button
                     onClick={() => {
                       setSelectedSampleId(null);
                       store.setCurrentSample(null);
                       setSampleResults([]);
                     }}
-                    className="mt-2 text-blue-600 hover:text-blue-800 text-sm font-semibold"
+                    variant="outlined"
+                    sx={{ borderColor: '#2196F3', color: '#2196F3', fontWeight: 'bold' }}
                   >
-                    Cambiar muestra
-                  </button>
-                </div>
-              </div>
+                    Cambiar Muestra
+                  </Button>
+                </CardContent>
+              </Card>
             ) : (
-              <div className="space-y-2">
-                <p className="text-blue-700 text-sm">
-                  Tienes {store.pendingSamples.length} muestra(s) pendiente(s)
-                </p>
-                {store.pendingSamples.map((sample) => (
-                  <button
-                    key={sample.id}
-                    onClick={() => handleSelectSample(sample.id)}
-                    className="w-full text-left p-3 bg-white rounded-lg border border-blue-200 hover:border-blue-400 hover:bg-blue-50 transition-all"
-                  >
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <p className="font-semibold text-gray-900">{sample.sampleNumber}</p>
-                        <p className="text-gray-700 text-sm">
-                          {sample.patient.firstName} {sample.patient.lastName}
-                        </p>
-                      </div>
-                      <p className="text-gray-600 text-sm">{sample.tests.length} exámenes</p>
-                    </div>
-                  </button>
-                ))}
-              </div>
+              <Box>
+                <Typography variant="body2" sx={{ color: '#1565C0', fontWeight: 'bold', mb: 2 }}>
+                  📦 Tienes <span style={{ background: '#BBDEFB', color: '#0D47A1', padding: '4px 8px', borderRadius: '20px', fontWeight: 'bold' }}>{store.pendingSamples.length}</span> muestra(s) pendiente(s)
+                </Typography>
+                <Box sx={{ maxHeight: '300px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 1 }}>
+                  {store.pendingSamples.map((sample) => (
+                    <Button
+                      key={sample.id}
+                      onClick={() => handleSelectSample(sample.id)}
+                      fullWidth
+                      sx={{
+                        justifyContent: 'flex-start',
+                        p: 2,
+                        backgroundColor: '#fff',
+                        border: '2px solid #E0E0E0',
+                        borderRadius: '8px',
+                        color: '#333',
+                        textTransform: 'none',
+                        transition: 'all 0.2s',
+                        '&:hover': { borderColor: '#2196F3', backgroundColor: '#E3F2FD' },
+                      }}
+                    >
+                      <Box sx={{ flex: 1, textAlign: 'left' }}>
+                        <Typography sx={{ fontWeight: 'bold', fontSize: '1rem', color: '#333' }}>
+                          {sample.sampleNumber}
+                        </Typography>
+                        <Typography sx={{ color: '#666', fontSize: '0.9rem', mt: 0.5 }}>
+                          👤 {sample.patient.firstName} {sample.patient.lastName}
+                        </Typography>
+                      </Box>
+                      <Typography sx={{ color: '#2196F3', fontWeight: 'bold', fontSize: '0.9rem', background: '#E3F2FD', px: 2, py: 0.5, borderRadius: '20px' }}>
+                        {sample.tests.length} exámenes
+                      </Typography>
+                    </Button>
+                  ))}
+                </Box>
+              </Box>
             )}
-          </div>
-        )}
-
-        {/* Report Section */}
-        {showReport && sampleResults.length > 0 && (
-          <div className="mb-8 bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">📄</span>
-                <h2 className="text-2xl font-bold text-gray-900">
-                  Reporte de Resultados - {selectedSample?.sampleNumber}
-                </h2>
-              </div>
-              <button
-                onClick={() => setShowReport(false)}
-                className="text-gray-500 hover:text-gray-700 font-bold text-xl"
-              >
-                ✕
-              </button>
-            </div>
-            {loadingResults ? (
-              <div className="flex justify-center py-8">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div>
-              </div>
-            ) : (
-              <TestResultsReport 
-                results={sampleResults} 
-                onClose={() => setShowReport(false)}
-              />
-            )}
-          </div>
+          </Paper>
         )}
 
         {/* Error Alert */}
         {store.error && (
-          <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg flex justify-between items-center">
-            <span>{store.error}</span>
-            <button
-              onClick={() => store.setError(null)}
-              className="text-red-700 hover:text-red-900 font-bold"
-            >
-              ✕
-            </button>
-          </div>
+          <Alert severity="error" sx={{ mb: 3, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span>⚠️ {store.error}</span>
+            <Button size="small" onClick={() => store.setError(null)}>Cerrar</Button>
+          </Alert>
         )}
 
-        {/* Test Categories Grid */}
+        {/* Test Modules Tabs */}
         {selectedSample ? (
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Selecciona el tipo de examen para {selectedSample.sampleNumber}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {testCategories.map((category) => (
-                <button
-                  key={category.code}
-                  onClick={() => handleSelectTestType(category.code)}
-                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all hover:scale-105 p-6 text-left"
-                >
-                  <div className="text-4xl mb-3">{category.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{category.name}</h3>
-                  <p className="text-gray-600 text-sm">{category.description}</p>
-                  <div className="mt-4 inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
-                    Ingresar →
-                  </div>
-                </button>
+          <Paper sx={{ mb: 4 }}>
+            <Tabs
+              value={activeModuleTab}
+              onChange={handleModuleTabChange}
+              variant="scrollable"
+              scrollButtons="auto"
+              sx={{
+                borderBottom: '2px solid #E0E0E0',
+                '& .MuiTab-root': {
+                  textTransform: 'none',
+                  fontSize: '0.95rem',
+                  fontWeight: 500,
+                  minHeight: '60px',
+                  color: '#666',
+                  '&.Mui-selected': {
+                    color: '#2196F3',
+                    fontWeight: 'bold',
+                  },
+                },
+              }}
+            >
+              {modulesTabs.map((module) => (
+                <Tab key={module.id} label={module.label} value={module.id} />
               ))}
-            </div>
-          </div>
+            </Tabs>
+
+            {/* Module Content */}
+            <Box sx={{ p: 3, backgroundColor: '#fff' }}>
+              {getCurrentModuleComponent()}
+            </Box>
+          </Paper>
         ) : (
-          <div className="bg-gray-50 border border-gray-300 rounded-lg p-8 text-center">
-            <p className="text-gray-600 text-lg">
-              Selecciona una muestra para comenzar a ingresar resultados
-            </p>
-          </div>
+          <Paper sx={{ p: 6, textAlign: 'center', backgroundColor: '#FAFAFA', border: '2px dashed #E0E0E0' }}>
+            <Typography variant="h6" sx={{ color: '#999', fontWeight: '500' }}>
+              📭 Selecciona una muestra para comenzar a ingresar resultados
+            </Typography>
+          </Paper>
         )}
 
         {/* Loading State */}
         {store.isLoading && (
-          <div className="flex justify-center items-center py-12">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-          </div>
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', py: 10 }}>
+            <Box sx={{ textAlign: 'center' }}>
+              <CircularProgress />
+              <Typography sx={{ color: '#666', fontWeight: 'bold', mt: 2 }}>Cargando...</Typography>
+            </Box>
+          </Box>
         )}
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };

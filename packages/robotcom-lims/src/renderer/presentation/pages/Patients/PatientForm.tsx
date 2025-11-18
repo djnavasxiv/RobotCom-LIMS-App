@@ -8,11 +8,15 @@ import {
   TextField,
   Grid,
   MenuItem,
+  Alert,
 } from '@mui/material';
 import { useForm, Controller } from 'react-hook-form';
 import { Patient } from '../../../domain/entities/Patient';
 import { PatientService } from '../../../application/services/PatientService';
+import { SecurityService } from '../../../application/services/SecurityService';
+import { LoggerService } from '../../../application/services/LoggerService';
 import { useAuthStore } from '../../../application/state/authStore';
+import { useCsrfToken } from '../../../application/hooks/useCsrfToken';
 
 interface PatientFormProps {
   open: boolean;
@@ -34,7 +38,11 @@ interface FormData {
 const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patient }) => {
   const { handleSubmit, control, reset, formState: { errors } } = useForm<FormData>();
   const patientService = new PatientService();
+  const securityService = new SecurityService();
+  const logger = new LoggerService();
+  const { csrfToken } = useCsrfToken();
   const labId = useAuthStore((state) => state.labId);
+  const [securityErrors, setSecurityErrors] = React.useState<Record<string, string>>({});
 
   useEffect(() => {
     if (patient) {
@@ -59,19 +67,47 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
 
   const onSubmit = async (data: FormData) => {
     if (!labId) {
-      console.error("No labId found, cannot save patient.");
+      logger.error('No labId found, cannot save patient');
       return;
     }
+
+    // Validate CSRF token
+    if (!csrfToken) {
+      logger.warn('CSRF token not available');
+      setSecurityErrors({ form: 'Token de seguridad no disponible, por favor recargue la página' });
+      return;
+    }
+
+    // Validate form data for security issues
+    const validation = securityService.validatePatientForm(data);
+    if (!validation.isValid) {
+      logger.warn('Security validation failed', validation.errors);
+      setSecurityErrors(validation.errors);
+      return;
+    }
+
+    // Sanitize form data
+    const sanitizedData = securityService.sanitizePatientForm(data);
+
     try {
       if (patient) {
-        await patientService.updatePatient(patient.id, data);
+        await patientService.updatePatient(patient.id, sanitizedData);
+        logger.info('Patient updated successfully', { patientId: patient.id });
       } else {
-        await patientService.createPatient({ ...data, birthDate: new Date(data.birthDate), labId });
+        await patientService.createPatient({ 
+          ...sanitizedData, 
+          birthDate: new Date(sanitizedData.birthDate), 
+          labId 
+        });
+        logger.info('Patient created successfully');
       }
+      setSecurityErrors({});
       onSave();
       onClose();
     } catch (error) {
-      console.error('Failed to save patient:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
+      logger.error('Failed to save patient', { error: errorMessage });
+      setSecurityErrors({ form: 'Error al guardar el paciente. Por favor intente de nuevo.' });
     }
   };
 
@@ -80,6 +116,11 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
       <DialogTitle>{patient ? 'Editar Paciente' : 'Añadir Paciente'}</DialogTitle>
       <form onSubmit={handleSubmit(onSubmit)}>
         <DialogContent>
+          {securityErrors.form && (
+            <Alert severity="error" sx={{ mb: 2 }}>
+              {securityErrors.form}
+            </Alert>
+          )}
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <Controller
@@ -126,8 +167,8 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
                     {...field}
                     label="Email"
                     fullWidth
-                    error={!!errors.email}
-                    helperText={errors.email?.message}
+                    error={!!errors.email || !!securityErrors.email}
+                    helperText={errors.email?.message || securityErrors.email}
                   />
                 )}
               />
@@ -143,8 +184,8 @@ const PatientForm: React.FC<PatientFormProps> = ({ open, onClose, onSave, patien
                     {...field}
                     label="Teléfono"
                     fullWidth
-                    error={!!errors.phone}
-                    helperText={errors.phone?.message}
+                    error={!!errors.phone || !!securityErrors.phone}
+                    helperText={errors.phone?.message || securityErrors.phone}
                   />
                 )}
               />

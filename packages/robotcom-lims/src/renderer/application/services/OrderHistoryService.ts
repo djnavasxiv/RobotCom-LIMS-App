@@ -6,7 +6,12 @@ export class OrderHistoryService {
    */
   static async getOrders(): Promise<OrderListItem[]> {
     try {
-      const samples = await window.electronAPI!.dbQuery('sample', 'findMany', {
+      if (!window.electronAPI) {
+        console.warn('electronAPI not available, returning empty orders');
+        return [];
+      }
+
+      const samples = await window.electronAPI.dbQuery('sample', 'findMany', {
         include: {
           patient: true,
           tests: {
@@ -17,8 +22,13 @@ export class OrderHistoryService {
         orderBy: { createdAt: 'desc' },
       });
 
-      if (!samples.success) {
-        throw new Error(samples.error || 'Failed to fetch orders');
+      if (!samples || !samples.success) {
+        throw new Error(samples?.error || 'Failed to fetch orders');
+      }
+
+      if (!Array.isArray(samples.data)) {
+        console.error('Invalid samples data:', samples.data);
+        return [];
       }
 
       return samples.data.map((sample: any) => ({
@@ -45,7 +55,11 @@ export class OrderHistoryService {
    */
   static async getOrderDetails(sampleId: string): Promise<OrderDetailsData> {
     try {
-      const sample = await window.electronAPI!.dbQuery('sample', 'findUnique', {
+      if (!window.electronAPI) {
+        throw new Error('electronAPI not available');
+      }
+
+      const sample = await window.electronAPI.dbQuery('sample', 'findUnique', {
         where: { id: sampleId },
         include: {
           patient: true,
@@ -54,7 +68,7 @@ export class OrderHistoryService {
         },
       });
 
-      if (!sample.success || !sample.data) {
+      if (!sample || !sample.success || !sample.data) {
         throw new Error('Order not found');
       }
 
@@ -103,13 +117,23 @@ export class OrderHistoryService {
    */
   static async getPatients(): Promise<Array<{ id: string; name: string }>> {
     try {
-      const result = await window.electronAPI!.dbQuery('patient', 'findMany', {
+      if (!window.electronAPI) {
+        console.warn('electronAPI not available, returning empty patients');
+        return [];
+      }
+
+      const result = await window.electronAPI.dbQuery('patient', 'findMany', {
         select: { id: true, firstName: true, lastName: true },
         distinct: ['id'],
       });
 
-      if (!result.success) {
-        throw new Error(result.error || 'Failed to fetch patients');
+      if (!result || !result.success) {
+        throw new Error(result?.error || 'Failed to fetch patients');
+      }
+
+      if (!Array.isArray(result.data)) {
+        console.error('Invalid patients data:', result.data);
+        return [];
       }
 
       return result.data.map((patient: any) => ({
@@ -130,13 +154,17 @@ export class OrderHistoryService {
     status: string
   ): Promise<{ success: boolean }> {
     try {
-      const result = await window.electronAPI!.dbQuery('sample', 'update', {
+      if (!window.electronAPI) {
+        throw new Error('electronAPI not available');
+      }
+
+      const result = await window.electronAPI.dbQuery('sample', 'update', {
         where: { id: sampleId },
         data: { status },
       });
 
-      if (!result.success) {
-        throw new Error(result.error || 'Failed to update order');
+      if (!result || !result.success) {
+        throw new Error(result?.error || 'Failed to update order');
       }
 
       return { success: true };
@@ -204,8 +232,12 @@ export class OrderHistoryService {
    */
   static async printOrder(sampleId: string): Promise<void> {
     try {
+      if (!window.electronAPI) {
+        throw new Error('electronAPI not available');
+      }
+
       const orderDetails = await this.getOrderDetails(sampleId);
-      await window.electronAPI!.printInvoice(orderDetails.invoice);
+      await window.electronAPI.printInvoice(orderDetails.invoice);
     } catch (error) {
       console.error('Error printing order:', error);
       throw error;

@@ -1,0 +1,458 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "RobotCom LIMS API",
+    "version": "1.0.0",
+    "description": "REST API for Laboratory Information Management System",
+    "contact": {
+      "name": "RobotCom Support",
+      "email": "support@robotcom.com"
+    },
+    "license": {
+      "name": "Proprietary"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api",
+      "description": "Development server"
+    },
+    {
+      "url": "https://api.robotcom.com",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/patients": {
+      "get": {
+        "summary": "List all patients",
+        "tags": ["Patients"],
+        "parameters": [
+          {
+            "name": "labId",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": { "type": "integer", "default": 1 }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": { "type": "integer", "default": 20 }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of patients",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Patient" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new patient",
+        "tags": ["Patients"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/PatientInput" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Patient created",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Patient" }
+              }
+            }
+          },
+          "400": { "description": "Invalid input" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/patients/{id}": {
+      "get": {
+        "summary": "Get patient details",
+        "tags": ["Patients"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Patient details",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Patient" }
+              }
+            }
+          },
+          "404": { "description": "Patient not found" }
+        }
+      },
+      "put": {
+        "summary": "Update patient",
+        "tags": ["Patients"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/PatientInput" }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Patient updated",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Patient" }
+              }
+            }
+          },
+          "404": { "description": "Patient not found" }
+        }
+      },
+      "delete": {
+        "summary": "Delete patient",
+        "tags": ["Patients"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "204": { "description": "Patient deleted" },
+          "404": { "description": "Patient not found" }
+        }
+      }
+    },
+    "/samples": {
+      "get": {
+        "summary": "List all samples",
+        "tags": ["Samples"],
+        "parameters": [
+          {
+            "name": "patientId",
+            "in": "query",
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": ["pending", "processing", "completed", "rejected"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of samples",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Sample" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new sample",
+        "tags": ["Samples"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/SampleInput" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Sample created",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Sample" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tests": {
+      "get": {
+        "summary": "List all tests",
+        "tags": ["Tests"],
+        "parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of tests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Test" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/invoices": {
+      "get": {
+        "summary": "List all invoices",
+        "tags": ["Invoices"],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": ["pending", "paid", "cancelled"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of invoices",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Invoice" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "User login",
+        "tags": ["Authentication"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": { "type": "string" },
+                  "password": { "type": "string" }
+                },
+                "required": ["username", "password"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": { "type": "string" },
+                    "user": { "$ref": "#/components/schemas/User" }
+                  }
+                }
+              }
+            }
+          },
+          "401": { "description": "Invalid credentials" }
+        }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "summary": "User logout",
+        "tags": ["Authentication"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "204": { "description": "Logout successful" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Patient": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "firstName": { "type": "string" },
+          "lastName": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "phone": { "type": "string" },
+          "birthDate": { "type": "string", "format": "date" },
+          "gender": { "type": "string", "enum": ["male", "female", "other"] },
+          "address": { "type": "string" },
+          "createdAt": { "type": "string", "format": "date-time" }
+        },
+        "required": ["firstName", "lastName", "phone"]
+      },
+      "PatientInput": {
+        "type": "object",
+        "properties": {
+          "firstName": { "type": "string", "minLength": 2, "maxLength": 100 },
+          "lastName": { "type": "string", "minLength": 2, "maxLength": 100 },
+          "email": { "type": "string", "format": "email" },
+          "phone": { "type": "string", "pattern": "^[\\d\\-\\+\\(\\)\\s]{10,}$" },
+          "birthDate": { "type": "string", "format": "date" },
+          "gender": { "type": "string", "enum": ["male", "female", "other"] },
+          "address": { "type": "string", "maxLength": 500 }
+        },
+        "required": ["firstName", "lastName", "phone", "birthDate"]
+      },
+      "Sample": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "sampleNumber": { "type": "string" },
+          "patientId": { "type": "string", "format": "uuid" },
+          "collectionDate": { "type": "string", "format": "date-time" },
+          "status": { "type": "string", "enum": ["pending", "processing", "completed", "rejected"] },
+          "notes": { "type": "string" }
+        },
+        "required": ["sampleNumber", "patientId"]
+      },
+      "SampleInput": {
+        "type": "object",
+        "properties": {
+          "sampleNumber": { "type": "string" },
+          "patientId": { "type": "string", "format": "uuid" },
+          "collectionDate": { "type": "string", "format": "date-time" },
+          "status": { "type": "string", "enum": ["pending", "processing", "completed", "rejected"] },
+          "notes": { "type": "string" }
+        },
+        "required": ["sampleNumber", "patientId"]
+      },
+      "Test": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "code": { "type": "string" },
+          "name": { "type": "string" },
+          "price": { "type": "number", "format": "decimal" },
+          "category": { "type": "string" },
+          "unit": { "type": "string" },
+          "normalRange": { "type": "string" }
+        },
+        "required": ["code", "name", "price"]
+      },
+      "Invoice": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "invoiceNumber": { "type": "string" },
+          "patientId": { "type": "string", "format": "uuid" },
+          "sampleId": { "type": "string", "format": "uuid" },
+          "subtotal": { "type": "number", "format": "decimal" },
+          "tax": { "type": "number", "format": "decimal" },
+          "total": { "type": "number", "format": "decimal" },
+          "status": { "type": "string", "enum": ["pending", "paid", "cancelled"] },
+          "createdAt": { "type": "string", "format": "date-time" }
+        },
+        "required": ["invoiceNumber", "patientId", "total"]
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "username": { "type": "string" },
+          "fullName": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "role": { "type": "string", "enum": ["admin", "manager", "technician", "viewer"] },
+          "isActive": { "type": "boolean" }
+        },
+        "required": ["username", "email", "role"]
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "code": { "type": "string" },
+          "message": { "type": "string" },
+          "details": { "type": "object" }
+        },
+        "required": ["code", "message"]
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
+      "apiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      }
+    }
+  },
+  "security": [{ "bearerAuth": [] }],
+  "tags": [
+    {
+      "name": "Patients",
+      "description": "Patient management endpoints"
+    },
+    {
+      "name": "Samples",
+      "description": "Sample collection and tracking"
+    },
+    {
+      "name": "Tests",
+      "description": "Test catalog and specifications"
+    },
+    {
+      "name": "Invoices",
+      "description": "Invoice generation and tracking"
+    },
+    {
+      "name": "Authentication",
+      "description": "User authentication and authorization"
+    }
+  ]
+}

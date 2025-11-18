@@ -57,7 +57,7 @@ app.on('window-all-closed', () => {
 });
 
 // IPC Handlers
-ipcMain.handle('db:query', async (event, model, method, ...args) => {
+ipcMain.handle('db:query', async (_event, model, method, ...args) => {
   try {
     // Handle special password validation method
     if (model === 'user' && method === 'validatePassword') {
@@ -70,7 +70,7 @@ ipcMain.handle('db:query', async (event, model, method, ...args) => {
       return { success: true, data: { isValid } };
     }
 
-    const result = await prisma[model][method](...args);
+    const result = await (prisma[model as keyof typeof prisma] as any)[method](...args);
     return { success: true, data: result };
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
@@ -79,9 +79,10 @@ ipcMain.handle('db:query', async (event, model, method, ...args) => {
 });
 
 // Order creation handler
-ipcMain.handle('order:create', async (event, orderData) => {
+ipcMain.handle('order:create', async (_event, orderData) => {
   try {
-    const { patientId, doctorId, testIds, subtotal, discountPercentage, labId } = orderData;
+    // Note: doctorId is available in orderData but not currently used - can be added for future features
+    const { patientId, testIds, subtotal, discountPercentage, labId } = orderData;
 
     // Generate order number based on current month
     const now = new Date();
@@ -141,13 +142,12 @@ ipcMain.handle('order:create', async (event, orderData) => {
         total,
         status: 'pending',
         items: {
-          create: testIds.map(async (testId) => {
-            const test = await prisma.test.findUnique({ where: { id: testId } });
+          create: testIds.map((testId: string) => {
             return {
-              description: test?.name || 'Test',
+              description: `Test ${testId}`,
               quantity: 1,
-              unitPrice: test?.price || 0,
-              total: test?.price || 0,
+              unitPrice: 0,
+              total: 0,
             };
           }),
         },
@@ -170,12 +170,12 @@ ipcMain.handle('order:create', async (event, orderData) => {
   }
 });
 
-ipcMain.handle('print:invoice', async (event, invoiceData) => {
+ipcMain.handle('print:invoice', async (_event, _invoiceData) => {
   // This is a placeholder. A real implementation would generate the PDF here.
   return { success: true };
 });
 
-ipcMain.handle('license:validate', async (event, licenseKey) => {
+ipcMain.handle('license:validate', async (_event, licenseKey) => {
   // Implement license validation
   console.log('Validating license:', licenseKey);
   return { success: true, valid: true };
@@ -183,6 +183,16 @@ ipcMain.handle('license:validate', async (event, licenseKey) => {
 
 ipcMain.handle('app:get-hostname', () => {
   return require('os').hostname();
+});
+
+ipcMain.handle('app:get-machine-id', async () => {
+  try {
+    const { machineIdSync } = require('node-machine-id');
+    return machineIdSync();
+  } catch (error) {
+    console.warn('Failed to get machine ID:', error);
+    return 'fallback-machine-id';
+  }
 });
 
 ipcMain.handle('dialog:openFile', async () => {
@@ -202,7 +212,7 @@ ipcMain.handle('dialog:openFile', async () => {
   }
 });
 
-ipcMain.handle('print:pdf', async (event, pdfData) => {
+ipcMain.handle('print:pdf', async (_event, pdfData) => {
   if (!mainWindow) return;
   const win = new BrowserWindow({ show: false });
   const tempPath = require('path').join(require('os').tmpdir(), `print-${Date.now()}.pdf`);

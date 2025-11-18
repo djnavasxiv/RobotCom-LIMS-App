@@ -1,4 +1,7 @@
 import React, { ReactNode } from 'react';
+import { Box } from '@mui/material';
+import TopMenu from './TopMenu';
+import IconToolbar from './IconToolbar';
 import './MainLayout.css';
 
 interface MainLayoutProps {
@@ -7,29 +10,31 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
-    <div className="main-layout">
-      <header className="app-header">
-        <div className="header-content">
-          <h1>RobotCom LIMS</h1>
-          <nav className="main-nav">
-            <a href="/">Dashboard</a>
-            <a href="/order-entry">Órdenes</a>
-            <a href="/order-history">Historial</a>
-            <a href="/test-results">Resultados</a>
-            <a href="/patients">Patients</a>
-            <a href="/samples">Samples</a>
-            <a href="/tests">Tests</a>
-            <a href="/invoices">Invoices</a>
-          </nav>
-        </div>
-      </header>
-      <main className="app-main">
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      {/* Top Menu */}
+      <TopMenu />
+      
+      {/* Icon Toolbar */}
+      <IconToolbar />
+      
+      {/* Main Content Area */}
+      <Box
+        component="main"
+        sx={{
+          flex: 1,
+          overflow: 'auto',
+          backgroundColor: '#f5f5f5',
+          padding: '16px',
+        }}
+      >
         {children}
-      </main>
+      </Box>
+      
+      {/* Footer */}
       <footer className="app-footer">
         <p>&copy; 2025 RobotCom LIMS. All rights reserved.</p>
       </footer>
-    </div>
+    </Box>
   );
 };
 

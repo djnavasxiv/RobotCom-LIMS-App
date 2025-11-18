@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "pre-commit": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "pre-push": [
+      "npm run test:precommit",
+      "npm run build"
+    ],
+    "commit-msg": [
+      "commitlint --edit"
+    ]
+  }
+}

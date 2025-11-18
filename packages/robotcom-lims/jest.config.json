@@ -1,0 +1,46 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "jsdom",
+  "roots": ["<rootDir>/src"],
+  "testMatch": ["**/__tests__/**/*.ts?(x)", "**/?(*.)+(spec|test).ts?(x)"],
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+  "transform": {
+    "^.+\\.tsx?$": ["ts-jest", {
+      "tsconfig": {
+        "jsx": "react-jsx",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "types": ["jest", "@testing-library/jest-dom", "node"]
+      }
+    }]
+  },
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "\\.(css|less|scss|sass)$": "<rootDir>/src/__mocks__/styleMock.js"
+  },
+  "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"],
+  "collectCoverageFrom": [
+    "src/**/*.{ts,tsx}",
+    "!src/**/*.d.ts",
+    "!src/main/**",
+    "!src/preload/**",
+    "!src/index.html"
+  ],
+  "coverageThresholds": {
+    "global": {
+      "branches": 60,
+      "functions": 60,
+      "lines": 60,
+      "statements": 60
+    }
+  },
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/out/"
+  ],
+  "globals": {
+    "ts-jest": {
+      "isolatedModules": true
+    }
+  }
+}

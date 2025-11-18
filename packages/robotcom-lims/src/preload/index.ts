@@ -39,6 +39,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
 
   getHostname: () => ipcRenderer.invoke('app:get-hostname'),
 
+  getMachineId: () => ipcRenderer.invoke('app:get-machine-id'),
+
   printPDF: (data: ArrayBuffer) => ipcRenderer.invoke('print:pdf', data),
 
   openFile: () => ipcRenderer.invoke('dialog:openFile'),
