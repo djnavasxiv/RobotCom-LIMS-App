@@ -96,7 +96,7 @@ jobs:
           test -f out/renderer/index.html || (echo "Renderer HTML not found" && exit 1)
       
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v5
         with:
           name: build-${{ matrix.os }}-${{ matrix.node-version }}
           path: out/
@@ -139,7 +139,7 @@ jobs:
           NODE_ENV: production
       
       - name: Upload release artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v5
         with:
           name: release-${{ matrix.os }}
           path: release/
