@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Box, Button, Grid, Paper, Typography, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
 
 interface TimerState {
@@ -9,6 +10,7 @@ interface TimerState {
 }
 
 const MultiTimer: React.FC = () => {
+  const navigate = useNavigate();
   const [timers, setTimers] = useState<TimerState[]>(
     Array.from({ length: 10 }, (_, i) => ({
       id: i,
@@ -125,7 +127,7 @@ const MultiTimer: React.FC = () => {
       </DialogContent>
 
       <DialogActions sx={{ padding: '16px', backgroundColor: '#f5f5f5' }}>
-        <Button variant="contained" color="primary" onClick={() => window.close()}>
+        <Button variant="contained" color="primary" onClick={() => navigate('/')}>
           OK
         </Button>
       </DialogActions>
