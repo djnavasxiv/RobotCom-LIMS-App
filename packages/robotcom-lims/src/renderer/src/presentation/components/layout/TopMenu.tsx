@@ -61,20 +61,6 @@ const TopMenu: React.FC<TopMenuProps> = ({ onExit }) => {
           PACIENTES
         </Button>
         <Button
-          onClick={() => navigate('/diversos')}
-          sx={{
-            color: 'white',
-            textTransform: 'uppercase',
-            fontSize: '12px',
-            fontWeight: 'bold',
-            '&:hover': {
-              backgroundColor: '#2a5a8f',
-            },
-          }}
-        >
-          DIVERSOS
-        </Button>
-        <Button
           onClick={() => navigate('/billing')}
           sx={{
             color: 'white',

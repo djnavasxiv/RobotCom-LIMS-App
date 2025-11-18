@@ -32,7 +32,6 @@ import { Embarazo } from './presentation/components/TestModules';
 import { TipoSangre } from './presentation/components/TestModules';
 import { Coagulacion } from './presentation/components/TestModules';
 import { ELISA } from './presentation/components/TestModules';
-import { MultiTimer } from './presentation/components/TestModules';
 import { Diversos } from './presentation/components/TestModules';
 
 const AppRoutes: React.FC = () => {
@@ -246,28 +245,6 @@ const AppRoutes: React.FC = () => {
           <ProtectedRoute>
             <MainLayout>
               <ELISA />
-            </MainLayout>
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/timer"
-        element={
-          <ProtectedRoute>
-            <MainLayout>
-              <MultiTimer />
-            </MainLayout>
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/diversos"
-        element={
-          <ProtectedRoute>
-            <MainLayout>
-              <Diversos />
             </MainLayout>
           </ProtectedRoute>
         }

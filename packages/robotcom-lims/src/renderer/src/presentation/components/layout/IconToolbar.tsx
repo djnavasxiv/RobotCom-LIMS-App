@@ -11,7 +11,6 @@ import {
   AssignmentOutlined,
   HistoryOutlined,
   SearchOutlined,
-  TimerOutlined,
 } from '@mui/icons-material';
 
 const IconToolbar: React.FC = () => {
@@ -84,11 +83,6 @@ const IconToolbar: React.FC = () => {
       route: '/tests/semen',
     },
     {
-      icon: <TimerOutlined sx={{ fontSize: '32px' }} />,
-      label: 'CRONOMETRO',
-      route: '/timer',
-    },
-    {
       icon: <SearchOutlined sx={{ fontSize: '32px' }} />,
       label: 'V. BACTER',
       route: '/search/bacteriology',
@@ -102,11 +96,6 @@ const IconToolbar: React.FC = () => {
       icon: <SearchOutlined sx={{ fontSize: '32px' }} />,
       label: 'V. HEMATC',
       route: '/search/hematology',
-    },
-    {
-      icon: <AssignmentOutlined sx={{ fontSize: '32px' }} />,
-      label: 'DIVERSOS',
-      route: '/tests/miscellaneous',
     },
   ];
 
