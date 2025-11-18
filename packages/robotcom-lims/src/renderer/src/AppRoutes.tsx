@@ -32,6 +32,7 @@ import { TipoSangre } from './presentation/components/TestModules';
 import { Coagulacion } from './presentation/components/TestModules';
 import { ELISA } from './presentation/components/TestModules';
 import { MultiTimer } from './presentation/components/TestModules';
+import { Diversos } from './presentation/components/TestModules';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -255,6 +256,28 @@ const AppRoutes: React.FC = () => {
           <ProtectedRoute>
             <MainLayout>
               <MultiTimer />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/diversos"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <Diversos />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/tests/miscellaneous"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <Diversos />
             </MainLayout>
           </ProtectedRoute>
         }

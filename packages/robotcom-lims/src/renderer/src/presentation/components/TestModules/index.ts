@@ -32,3 +32,6 @@ export { default as ELISA } from './ELISA';
 
 // Utility
 export { default as MultiTimer } from './MultiTimer';
+
+// Miscellaneous Tests
+export { default as Diversos } from './Diversos';
