@@ -22,8 +22,8 @@ export class UserService {
           email: 'admin@robotcomlab.com',
           role: 'admin',
           isActive: true,
-          labId: '4e48678b-32e4-4fa9-9f85-da0b655a8e69'
-        }, 'a236c3ac-7a68-4c92-8038-545feeda7c1c');
+          labId: 'lab-001'
+        }, 'user-001');
       }
       
       return null;

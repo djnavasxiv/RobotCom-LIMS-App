@@ -33,6 +33,20 @@ const TopMenu: React.FC<TopMenuProps> = ({ onExit }) => {
     >
       <Stack direction="row" spacing={2}>
         <Button
+          onClick={() => navigate('/dashboard')}
+          sx={{
+            color: 'white',
+            textTransform: 'uppercase',
+            fontSize: '12px',
+            fontWeight: 'bold',
+            '&:hover': {
+              backgroundColor: '#2a5a8f',
+            },
+          }}
+        >
+          PANEL DE CONTROL
+        </Button>
+        <Button
           onClick={() => navigate('/company')}
           sx={{
             color: 'white',
