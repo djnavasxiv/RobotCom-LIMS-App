@@ -9,7 +9,9 @@ import {
   Grid,
   Alert,
   CircularProgress,
+  Paper,
 } from '@mui/material';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { useAuthStore } from '../../../../application/state/authStore';
 
 interface LabInfo {
@@ -18,6 +20,7 @@ interface LabInfo {
   address: string;
   phone: string;
   email: string;
+  logo?: string;
 }
 
 const Company: React.FC = () => {
@@ -27,11 +30,13 @@ const Company: React.FC = () => {
     address: '',
     phone: '',
     email: '',
+    logo: '',
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [editing, setEditing] = useState(false);
+  const [logoPreview, setLogoPreview] = useState<string>('');
   const { labId } = useAuthStore();
 
   useEffect(() => {
@@ -53,7 +58,11 @@ const Company: React.FC = () => {
           address: result.data.address || '',
           phone: result.data.phone || '',
           email: result.data.email || '',
+          logo: result.data.logo || '',
         });
+        if (result.data.logo) {
+          setLogoPreview(result.data.logo);
+        }
       }
     } catch (err) {
       console.error('Error loading lab info:', err);
@@ -69,6 +78,22 @@ const Company: React.FC = () => {
       ...prev,
       [name]: value,
     }));
+  };
+
+  const handleLogoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64String = reader.result as string;
+        setLogoPreview(base64String);
+        setLabInfo(prev => ({
+          ...prev,
+          logo: base64String,
+        }));
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   const handleSave = async () => {
@@ -91,6 +116,7 @@ const Company: React.FC = () => {
           address: labInfo.address,
           phone: labInfo.phone,
           email: labInfo.email,
+          logo: labInfo.logo || null,
         },
       });
 
@@ -143,6 +169,64 @@ const Company: React.FC = () => {
       <Card>
         <CardContent>
           <Grid container spacing={3}>
+            {/* Logo Section */}
+            <Grid item xs={12}>
+              <Typography variant="subtitle1" sx={{ mb: 2, fontWeight: 'bold', color: '#1e3a5f' }}>
+                Logo de la Empresa
+              </Typography>
+              <Paper sx={{ p: 3, backgroundColor: '#f5f5f5', textAlign: 'center' }}>
+                {logoPreview && (
+                  <Box sx={{ mb: 2 }}>
+                    <img 
+                      src={logoPreview} 
+                      alt="Logo preview" 
+                      style={{ 
+                        maxWidth: '200px', 
+                        maxHeight: '200px', 
+                        objectFit: 'contain' 
+                      }} 
+                    />
+                  </Box>
+                )}
+                {!logoPreview && (
+                  <Box sx={{ mb: 2, py: 2 }}>
+                    <CloudUploadIcon sx={{ fontSize: 48, color: '#bdbdbd', mb: 1 }} />
+                    <Typography color="textSecondary">
+                      No hay logo cargado
+                    </Typography>
+                  </Box>
+                )}
+                {editing && (
+                  <>
+                    <input
+                      accept="image/*"
+                      id="logo-upload"
+                      type="file"
+                      onChange={handleLogoChange}
+                      style={{ display: 'none' }}
+                    />
+                    <label htmlFor="logo-upload">
+                      <Button
+                        variant="contained"
+                        component="span"
+                        startIcon={<CloudUploadIcon />}
+                        sx={{
+                          backgroundColor: '#1976d2',
+                          '&:hover': { backgroundColor: '#1565c0' },
+                        }}
+                      >
+                        Seleccionar Logo
+                      </Button>
+                    </label>
+                    <Typography variant="caption" display="block" sx={{ mt: 1, color: '#666' }}>
+                      Formatos soportados: PNG, JPG, GIF (máx. 5MB)
+                    </Typography>
+                  </>
+                )}
+              </Paper>
+            </Grid>
+
+            {/* Company Info Section */}
             <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
