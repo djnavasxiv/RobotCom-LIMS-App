@@ -16,6 +16,7 @@ import Commissions from './presentation/pages/Commissions/Commissions';
 import Inventory from './presentation/pages/Inventory/Inventory';
 import Samples from './presentation/pages/Samples/Samples';
 import Settings from './presentation/pages/Settings/Settings';
+import Company from './presentation/pages/Company/Company';
 
 // Test Modules
 import { OrdenExamen } from './presentation/components/TestModules';
@@ -283,6 +284,17 @@ const AppRoutes: React.FC = () => {
         }
       />
       
+      <Route
+        path="/company"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <Company />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
       <Route
         path="/patients"
         element={
