@@ -1,431 +1,533 @@
 /**
- * CalculationEngine - Automated calculation service for clinical lab values
- * Implements all formulas for Hematology, Chemistry, Coagulation, Sperm, Immunology, and Urinalysis
+ * CalculationEngine - Service for computing derived lab values
+ * Calculates secondary values from primary lab results using clinical formulas
  * 
- * Week 1 Phase 1 - RobotCom LIMS Automation Project
+ * Week 2 Phase 1 - RobotCom LIMS Automation Project
+ * Author: David Navas
  */
 
-export interface CalculationRule {
-  id: string;
-  testDefId: string;
-  name: string;
-  formula: string; // Mathematical expression with variable references
-  unit?: string;
-  normalMin?: number;
-  normalMax?: number;
-  isActive: boolean;
-}
-
-export interface RawValues {
-  [fieldName: string]: number | string | undefined;
-}
-
-export interface CalculatedValues {
-  [fieldName: string]: number | string;
+export interface CalculationInput {
+  [key: string]: number | undefined;
 }
 
 export interface CalculationResult {
-  success: boolean;
-  values: CalculatedValues;
-  errors: string[];
+  name: string;
+  value: number;
+  unit: string;
+  formula: string;
+  isValid: boolean;
+  errorMessage?: string;
 }
 
 /**
- * CalculationEngine handles all automated calculations for clinical tests
- * Supports formulas with variable substitution and conditional logic
+ * CalculationEngine provides clinical calculation methods for derived lab values
+ * Supports hematology, chemistry, and renal function calculations
  */
 export class CalculationEngine {
   /**
-   * Calculate MCV (Mean Corpuscular Volume)
-   * Formula: (Hematocrit × 10) / RBC
-   * Unit: fL (femtoliters)
+   * Calculate Hematocrit from Hemoglobin (Hb)
+   * Formula: Hct = Hb × 3 (approximate)
+   * More accurate: Hct = Hb × 2.8 to Hb × 3.2
    */
-  static calculateMCV(hematocrit: number, rbc: number): number {
-    if (rbc === 0) throw new Error('RBC cannot be zero');
-    return (hematocrit * 10) / rbc;
-  }
-
-  /**
-   * Calculate MCH (Mean Corpuscular Hemoglobin)
-   * Formula: (Hemoglobin × 10) / RBC
-   * Unit: pg (picograms)
-   */
-  static calculateMCH(hemoglobin: number, rbc: number): number {
-    if (rbc === 0) throw new Error('RBC cannot be zero');
-    return (hemoglobin * 10) / rbc;
-  }
-
-  /**
-   * Calculate MCHC (Mean Corpuscular Hemoglobin Concentration)
-   * Formula: (Hemoglobin / Hematocrit) × 100
-   * Unit: g/dL
-   */
-  static calculateMCHC(hemoglobin: number, hematocrit: number): number {
-    if (hematocrit === 0) throw new Error('Hematocrit cannot be zero');
-    return (hemoglobin / hematocrit) * 100;
-  }
-
-  /**
-   * Calculate RDW (Red Cell Distribution Width)
-   * Formula: (Standard Deviation / Mean RBC) × 100
-   * Unit: %
-   */
-  static calculateRDW(stdDevRbc: number, meanRbc: number): number {
-    if (meanRbc === 0) throw new Error('Mean RBC cannot be zero');
-    return (stdDevRbc / meanRbc) * 100;
-  }
-
-  /**
-   * Calculate LDL Cholesterol (Friedewald Formula)
-   * Formula: Total Cholesterol - HDL - (Triglycerides / 5)
-   * Valid when Triglycerides < 400 mg/dL
-   * Unit: mg/dL
-   */
-  static calculateLDL(
-    totalCholesterol: number,
-    hdl: number,
-    triglycerides: number
-  ): number {
-    if (triglycerides >= 400) {
-      throw new Error(
-        'Friedewald formula invalid for triglycerides >= 400 mg/dL'
-      );
+  static calculateHematocritFromHb(hemoglobin: number): CalculationResult {
+    if (hemoglobin < 0 || hemoglobin > 20) {
+      return {
+        name: 'Hematocrit (calculated)',
+        value: 0,
+        unit: '%',
+        formula: 'Hct = Hb × 3',
+        isValid: false,
+        errorMessage: `Invalid hemoglobin value: ${hemoglobin} g/dL`,
+      };
     }
-    return totalCholesterol - hdl - triglycerides / 5;
+
+    const hematocrit = hemoglobin * 3;
+    return {
+      name: 'Hematocrit (calculated)',
+      value: Math.round(hematocrit * 10) / 10,
+      unit: '%',
+      formula: 'Hct = Hb × 3',
+      isValid: true,
+    };
   }
 
   /**
-   * Calculate AST/ALT Ratio
-   * Formula: AST / ALT
-   * Used for liver disease assessment
+   * Calculate Hemoglobin from Hematocrit
+   * Formula: Hb = Hct ÷ 3
    */
-  static calculateASTALTRatio(ast: number, alt: number): number {
-    if (alt === 0) throw new Error('ALT cannot be zero');
-    return ast / alt;
+  static calculateHemoglobinFromHct(hematocrit: number): CalculationResult {
+    if (hematocrit < 0 || hematocrit > 60) {
+      return {
+        name: 'Hemoglobin (calculated)',
+        value: 0,
+        unit: 'g/dL',
+        formula: 'Hb = Hct ÷ 3',
+        isValid: false,
+        errorMessage: `Invalid hematocrit value: ${hematocrit}%`,
+      };
+    }
+
+    const hemoglobin = hematocrit / 3;
+    return {
+      name: 'Hemoglobin (calculated)',
+      value: Math.round(hemoglobin * 100) / 100,
+      unit: 'g/dL',
+      formula: 'Hb = Hct ÷ 3',
+      isValid: true,
+    };
+  }
+
+  /**
+   * Calculate Mean Corpuscular Hemoglobin Concentration (MCHC)
+   * Formula: MCHC = (Hemoglobin / Hematocrit) × 100
+   * Normal: 32-36 g/dL
+   */
+  static calculateMCHC(hemoglobin: number, hematocrit: number): CalculationResult {
+    if (hemoglobin <= 0 || hematocrit <= 0) {
+      return {
+        name: 'MCHC (Mean Corpuscular Hemoglobin Concentration)',
+        value: 0,
+        unit: 'g/dL',
+        formula: 'MCHC = (Hb / Hct) × 100',
+        isValid: false,
+        errorMessage: 'Invalid hemoglobin or hematocrit value',
+      };
+    }
+
+    const mchc = (hemoglobin / hematocrit) * 100;
+    return {
+      name: 'MCHC',
+      value: Math.round(mchc * 10) / 10,
+      unit: 'g/dL',
+      formula: 'MCHC = (Hb / Hct) × 100',
+      isValid: true,
+    };
+  }
+
+  /**
+   * Calculate Mean Corpuscular Volume (MCV)
+   * Formula: MCV = (Hematocrit × 10) / RBC count
+   * Normal: 80-100 fL
+   */
+  static calculateMCV(hematocrit: number, rbcCount: number): CalculationResult {
+    if (hematocrit <= 0 || rbcCount <= 0) {
+      return {
+        name: 'MCV (Mean Corpuscular Volume)',
+        value: 0,
+        unit: 'fL',
+        formula: 'MCV = (Hct × 10) / RBC',
+        isValid: false,
+        errorMessage: 'Invalid hematocrit or RBC count',
+      };
+    }
+
+    const mcv = (hematocrit * 10) / rbcCount;
+    return {
+      name: 'MCV',
+      value: Math.round(mcv * 10) / 10,
+      unit: 'fL',
+      formula: 'MCV = (Hct × 10) / RBC',
+      isValid: true,
+    };
+  }
+
+  /**
+   * Calculate Hematocrit from MCV and RBC
+   * Formula: Hct = (MCV × RBC) / 10
+   */
+  static calculateHctFromMCVandRBC(mcv: number, rbc: number): CalculationResult {
+    if (mcv <= 0 || rbc <= 0) {
+      return {
+        name: 'Hematocrit (calculated)',
+        value: 0,
+        unit: '%',
+        formula: 'Hct = (MCV × RBC) / 10',
+        isValid: false,
+        errorMessage: 'Invalid MCV or RBC value',
+      };
+    }
+
+    const hct = (mcv * rbc) / 10;
+    return {
+      name: 'Hematocrit (calculated)',
+      value: Math.round(hct * 10) / 10,
+      unit: '%',
+      formula: 'Hct = (MCV × RBC) / 10',
+      isValid: true,
+    };
+  }
+
+  /**
+   * Calculate Corrected WBC (for nucleated RBCs)
+   * Formula: Corrected WBC = (WBC × 100) / (100 + NRBC count)
+   * Used when immature RBCs are present
+   */
+  static calculateCorrectedWBC(wbc: number, nrbcCount: number): CalculationResult {
+    if (wbc < 0 || nrbcCount < 0) {
+      return {
+        name: 'Corrected WBC',
+        value: 0,
+        unit: 'K/μL',
+        formula: 'Corrected WBC = (WBC × 100) / (100 + NRBC)',
+        isValid: false,
+        errorMessage: 'Invalid WBC or NRBC count',
+      };
+    }
+
+    if (nrbcCount === 0) {
+      return {
+        name: 'Corrected WBC',
+        value: wbc,
+        unit: 'K/μL',
+        formula: 'Corrected WBC = (WBC × 100) / (100 + NRBC)',
+        isValid: true,
+      };
+    }
+
+    const correctedWbc = (wbc * 100) / (100 + nrbcCount);
+    return {
+      name: 'Corrected WBC',
+      value: Math.round(correctedWbc * 100) / 100,
+      unit: 'K/μL',
+      formula: 'Corrected WBC = (WBC × 100) / (100 + NRBC)',
+      isValid: true,
+    };
+  }
+
+  /**
+   * Calculate eGFR (estimated Glomerular Filtration Rate) using MDRD equation
+   * Formula: eGFR = 186 × (Cr)^-1.154 × (Age)^-0.203 × (0.742 if female) × (1.212 if African American)
+   * Normal: >60 mL/min/1.73m²
+   */
+  static calculateEGFR_MDRD(
+    creatinine: number, // mg/dL
+    age: number, // years
+    gender: 'M' | 'F',
+    isAfricanAmerican: boolean = false
+  ): CalculationResult {
+    if (creatinine <= 0 || age <= 0) {
+      return {
+        name: 'eGFR (MDRD)',
+        value: 0,
+        unit: 'mL/min/1.73m²',
+        formula: 'MDRD: 186 × Cr^-1.154 × Age^-0.203',
+        isValid: false,
+        errorMessage: 'Invalid creatinine or age value',
+      };
+    }
+
+    let egfr = 186 * Math.pow(creatinine, -1.154) * Math.pow(age, -0.203);
+    if (gender === 'F') egfr *= 0.742;
+    if (isAfricanAmerican) egfr *= 1.212;
+
+    return {
+      name: 'eGFR (MDRD)',
+      value: Math.round(egfr * 10) / 10,
+      unit: 'mL/min/1.73m²',
+      formula: 'MDRD: 186 × Cr^-1.154 × Age^-0.203',
+      isValid: true,
+    };
+  }
+
+  /**
+   * Calculate eGFR using CKD-EPI equation (preferred, more accurate especially for higher GFR values)
+   * Formula varies by gender and creatinine level
+   * More accurate than MDRD for GFR > 60
+   */
+  static calculateEGFR_CKD_EPI(
+    creatinine: number, // mg/dL
+    age: number, // years
+    gender: 'M' | 'F'
+  ): CalculationResult {
+    if (creatinine <= 0 || age <= 0) {
+      return {
+        name: 'eGFR (CKD-EPI)',
+        value: 0,
+        unit: 'mL/min/1.73m²',
+        formula: 'CKD-EPI (gender-specific)',
+        isValid: false,
+        errorMessage: 'Invalid creatinine or age value',
+      };
+    }
+
+    // CKD-EPI constants
+    const kappa = gender === 'M' ? 0.9 : 0.7;
+    const alpha = gender === 'M' ? -0.411 : -0.329;
+    const sexMultiplier = gender === 'M' ? 1 : 1.018;
+    const raceMultiplier = 1; // Set to 1.159 for African American
+
+    let egfr = 141 * Math.pow(creatinine / kappa, alpha) * Math.pow(age / 40, -0.203) * sexMultiplier * raceMultiplier;
+
+    return {
+      name: 'eGFR (CKD-EPI)',
+      value: Math.round(egfr * 10) / 10,
+      unit: 'mL/min/1.73m²',
+      formula: 'CKD-EPI: 141 × (Cr/κ)^α × (Age/40)^-0.203',
+      isValid: true,
+    };
   }
 
   /**
    * Calculate BUN/Creatinine Ratio
    * Formula: BUN / Creatinine
-   * Helps assess kidney function
+   * Normal ratio: 10:1 to 20:1
+   * Elevated ratio suggests dehydration or prerenal azotemia
    */
-  static calculateBUNCrRatio(bun: number, creatinine: number): number {
-    if (creatinine === 0) throw new Error('Creatinine cannot be zero');
-    return bun / creatinine;
+  static calculateBUNCreatinineRatio(bun: number, creatinine: number): CalculationResult {
+    if (creatinine <= 0 || bun < 0) {
+      return {
+        name: 'BUN/Creatinine Ratio',
+        value: 0,
+        unit: 'ratio',
+        formula: 'BUN / Creatinine',
+        isValid: false,
+        errorMessage: 'Invalid BUN or creatinine value',
+      };
+    }
+
+    const ratio = bun / creatinine;
+    return {
+      name: 'BUN/Creatinine Ratio',
+      value: Math.round(ratio * 10) / 10,
+      unit: 'ratio',
+      formula: 'BUN / Creatinine',
+      isValid: true,
+    };
   }
 
   /**
-   * Calculate Anion Gap
-   * Formula: Na - (Cl + HCO3)
-   * Unit: mEq/L
+   * Calculate Serum Osmolality (calculated)
+   * Formula: 2 × [Na] + [Glucose]/18 + [BUN]/2.8
+   * Normal: 280-295 mOsm/kg
+   */
+  static calculateSerumsOsmolality(
+    sodium: number, // mEq/L
+    glucose: number, // mg/dL
+    bun: number // mg/dL
+  ): CalculationResult {
+    if (sodium <= 0 || glucose < 0 || bun < 0) {
+      return {
+        name: 'Serum Osmolality (calculated)',
+        value: 0,
+        unit: 'mOsm/kg',
+        formula: '2 × [Na] + [Glucose]/18 + [BUN]/2.8',
+        isValid: false,
+        errorMessage: 'Invalid sodium, glucose, or BUN value',
+      };
+    }
+
+    const osmolality = 2 * sodium + glucose / 18 + bun / 2.8;
+    return {
+      name: 'Serum Osmolality (calculated)',
+      value: Math.round(osmolality * 10) / 10,
+      unit: 'mOsm/kg',
+      formula: '2 × [Na] + [Glucose]/18 + [BUN]/2.8',
+      isValid: true,
+    };
+  }
+
+  /**
+   * Calculate Anion Gap (AG)
+   * Formula: AG = Na - (Cl + HCO3)
    * Normal: 8-16 mEq/L
+   * High AG suggests metabolic acidosis with organic acids
    */
-  static calculateAnionGap(
-    sodium: number,
-    chloride: number,
-    bicarbonate: number
-  ): number {
-    return sodium - (chloride + bicarbonate);
+  static calculateAnionGap(sodium: number, chloride: number, bicarbonate: number): CalculationResult {
+    if (sodium < 0 || chloride < 0 || bicarbonate < 0) {
+      return {
+        name: 'Anion Gap',
+        value: 0,
+        unit: 'mEq/L',
+        formula: 'AG = Na - (Cl + HCO3)',
+        isValid: false,
+        errorMessage: 'Invalid sodium, chloride, or bicarbonate value',
+      };
+    }
+
+    const ag = sodium - (chloride + bicarbonate);
+    return {
+      name: 'Anion Gap',
+      value: Math.round(ag * 10) / 10,
+      unit: 'mEq/L',
+      formula: 'AG = Na - (Cl + HCO3)',
+      isValid: true,
+    };
   }
 
   /**
-   * Calculate eGFR (Estimated Glomerular Filtration Rate) - MDRD Formula
-   * MDRD: GFR = 186 × (Creatinine)^-1.154 × (Age)^-0.203 × (0.742 if female) × (1.212 if African American)
-   * Unit: mL/min/1.73m²
+   * Calculate Corrected Calcium (accounts for albumin levels)
+   * Formula: Corrected Ca = Total Ca + 0.8 × (4.0 - Albumin)
+   * Used when albumin is low (affects calcium binding)
    */
-  static calculateEGFR(
-    creatinine: number,
-    age: number,
-    isFemale: boolean,
-    isAfricanAmerican: boolean = false
-  ): number {
-    let gfr = 186 * Math.pow(creatinine, -1.154) * Math.pow(age, -0.203);
-    if (isFemale) gfr *= 0.742;
-    if (isAfricanAmerican) gfr *= 1.212;
-    return gfr;
+  static calculateCorrectedCalcium(totalCalcium: number, albumin: number): CalculationResult {
+    if (totalCalcium < 0 || albumin < 0) {
+      return {
+        name: 'Corrected Calcium',
+        value: 0,
+        unit: 'mg/dL',
+        formula: 'Corrected Ca = Total Ca + 0.8 × (4.0 - Albumin)',
+        isValid: false,
+        errorMessage: 'Invalid calcium or albumin value',
+      };
+    }
+
+    const correctedCa = totalCalcium + 0.8 * (4.0 - albumin);
+    return {
+      name: 'Corrected Calcium',
+      value: Math.round(correctedCa * 100) / 100,
+      unit: 'mg/dL',
+      formula: 'Corrected Ca = Total Ca + 0.8 × (4.0 - Albumin)',
+      isValid: true,
+    };
   }
 
   /**
-   * Calculate Corrected Calcium
-   * Formula: Measured Ca + 0.8 × (4 - Albumin)
-   * When albumin is low, total calcium appears low
+   * Calculate BMI (Body Mass Index)
+   * Formula: BMI = Weight (kg) / Height (m)²
+   * Classification: <18.5 (underweight), 18.5-24.9 (normal), 25-29.9 (overweight), ≥30 (obese)
+   */
+  static calculateBMI(weightKg: number, heightM: number): CalculationResult {
+    if (weightKg <= 0 || heightM <= 0) {
+      return {
+        name: 'BMI',
+        value: 0,
+        unit: 'kg/m²',
+        formula: 'BMI = Weight (kg) / Height (m)²',
+        isValid: false,
+        errorMessage: 'Invalid weight or height value',
+      };
+    }
+
+    const bmi = weightKg / (heightM * heightM);
+    return {
+      name: 'BMI',
+      value: Math.round(bmi * 100) / 100,
+      unit: 'kg/m²',
+      formula: 'BMI = Weight (kg) / Height (m)²',
+      isValid: true,
+    };
+  }
+
+  /**
+   * Calculate BSA (Body Surface Area) using Mosteller formula
+   * Formula: BSA = √[(Height (cm) × Weight (kg)) / 3600]
+   * Unit: m²
+   */
+  static calculateBSA(heightCm: number, weightKg: number): CalculationResult {
+    if (heightCm <= 0 || weightKg <= 0) {
+      return {
+        name: 'BSA',
+        value: 0,
+        unit: 'm²',
+        formula: 'BSA = √[(Height (cm) × Weight (kg)) / 3600]',
+        isValid: false,
+        errorMessage: 'Invalid height or weight value',
+      };
+    }
+
+    const bsa = Math.sqrt((heightCm * weightKg) / 3600);
+    return {
+      name: 'BSA',
+      value: Math.round(bsa * 100) / 100,
+      unit: 'm²',
+      formula: 'BSA = √[(Height (cm) × Weight (kg)) / 3600]',
+      isValid: true,
+    };
+  }
+
+  /**
+   * Calculate Estimated Plasma Glucose from HbA1c
+   * Formula: eAG = (46.7 × A1c) - 23.3
    * Unit: mg/dL
    */
-  static calculateCorrectedCalcium(
-    measuredCalcium: number,
-    albumin: number
-  ): number {
-    return measuredCalcium + 0.8 * (4 - albumin);
-  }
-
-  /**
-   * Calculate INR (International Normalized Ratio)
-   * Formula: (PT patient / PT control) ^ ISI
-   * ISI varies by reagent/lab (typically 0.8-1.2)
-   */
-  static calculateINR(ptPatient: number, ptControl: number, isi: number): number {
-    if (ptControl === 0) throw new Error('PT control cannot be zero');
-    return Math.pow(ptPatient / ptControl, isi);
-  }
-
-  /**
-   * Calculate PT Ratio
-   * Formula: PT patient / PT control
-   */
-  static calculatePTRatio(ptPatient: number, ptControl: number): number {
-    if (ptControl === 0) throw new Error('PT control cannot be zero');
-    return ptPatient / ptControl;
-  }
-
-  /**
-   * Calculate APTT Ratio
-   * Formula: APTT patient / APTT control
-   */
-  static calculateAPTTRatio(apttPatient: number, apttControl: number): number {
-    if (apttControl === 0) throw new Error('APTT control cannot be zero');
-    return apttPatient / apttControl;
-  }
-
-  /**
-   * Calculate Total Sperm Count
-   * Formula: Concentration × Volume
-   * Unit: million/ejaculate
-   */
-  static calculateTotalSpermCount(
-    concentration: number,
-    volume: number
-  ): number {
-    return concentration * volume;
-  }
-
-  /**
-   * Classify Sperm Analysis per WHO 2021 criteria
-   * Returns classification based on count
-   */
-  static classifySpermCount(totalCount: number): string {
-    if (totalCount >= 39) return 'NORMAL';
-    if (totalCount >= 20) return 'OLIGOZOOSPERMIA_MILD';
-    if (totalCount >= 10) return 'OLIGOZOOSPERMIA_MODERATE';
-    if (totalCount > 0) return 'OLIGOZOOSPERMIA_SEVERE';
-    return 'AZOOSPERMIA';
-  }
-
-  /**
-   * Calculate Antibody Titer
-   * Returns the reciprocal of the last positive dilution
-   */
-  static calculateAntibodyTiter(lastPositiveDilution: number): number {
-    if (lastPositiveDilution === 0) return 0;
-    return 1 / lastPositiveDilution;
-  }
-
-  /**
-   * Calculate Risk Score for Immunology tests
-   * Weighted formula: (Value × Weight) / Sum of Weights
-   */
-  static calculateRiskScore(
-    values: number[],
-    weights: number[]
-  ): number {
-    if (values.length !== weights.length) {
-      throw new Error('Values and weights arrays must have same length');
-    }
-    const weightedSum = values.reduce((sum, val, idx) => sum + val * weights[idx], 0);
-    const weightSum = weights.reduce((sum, w) => sum + w, 0);
-    return weightSum === 0 ? 0 : weightedSum / weightSum;
-  }
-
-  /**
-   * Calculate per-field average for Urinalysis
-   * Formula: Sum / Number of fields
-   */
-  static calculateUrinalysisAverage(fieldCounts: number[]): number {
-    if (fieldCounts.length === 0) return 0;
-    const sum = fieldCounts.reduce((a, b) => a + b, 0);
-    return sum / fieldCounts.length;
-  }
-
-  /**
-   * Evaluate a custom formula with variable substitution
-   * Supports expressions like: "hematocrit * 10 / rbc"
-   */
-  static evaluateFormula(formula: string, variables: RawValues): number {
-    try {
-      // Create safe evaluation context
-      let expression = formula;
-
-      // Replace variable references with their values
-      for (const [key, value] of Object.entries(variables)) {
-        if (value === undefined) {
-          throw new Error(`Missing value for variable: ${key}`);
-        }
-        // Replace variable names with their values, handling word boundaries
-        const regex = new RegExp(`\\b${key}\\b`, 'g');
-        expression = expression.replace(regex, String(value));
-      }
-
-      // Validate expression only contains allowed characters
-      if (!/^[\d+\-*/(). ]+$/.test(expression)) {
-        throw new Error('Formula contains invalid characters');
-      }
-
-      // Evaluate the expression safely
-      // eslint-disable-next-line no-eval
-      const result = Function('"use strict"; return (' + expression + ')')();
-
-      if (typeof result !== 'number' || isNaN(result)) {
-        throw new Error('Formula evaluation resulted in non-numeric value');
-      }
-
-      return result;
-    } catch (error) {
-      throw new Error(`Formula evaluation error: ${(error as Error).message}`);
-    }
-  }
-
-  /**
-   * Process raw test values and calculate derived values
-   * Returns all calculated values or errors
-   */
-  static processTestValues(
-    testCategory: string,
-    rawValues: RawValues
-  ): CalculationResult {
-    const errors: string[] = [];
-    const calculatedValues: CalculatedValues = {};
-
-    try {
-      switch (testCategory.toLowerCase()) {
-        case 'hematology':
-          calculatedValues.mCV = this.calculateMCV(
-            Number(rawValues.hematocrit),
-            Number(rawValues.rbc)
-          );
-          calculatedValues.mCH = this.calculateMCH(
-            Number(rawValues.hemoglobin),
-            Number(rawValues.rbc)
-          );
-          calculatedValues.mCHC = this.calculateMCHC(
-            Number(rawValues.hemoglobin),
-            Number(rawValues.hematocrit)
-          );
-          if (rawValues.stdDevRbc !== undefined) {
-            calculatedValues.rdW = this.calculateRDW(
-              Number(rawValues.stdDevRbc),
-              Number(rawValues.rbc)
-            );
-          }
-          break;
-
-        case 'chemistry':
-          if (
-            rawValues.totalCholesterol &&
-            rawValues.hdl &&
-            rawValues.triglycerides
-          ) {
-            calculatedValues.ldL = this.calculateLDL(
-              Number(rawValues.totalCholesterol),
-              Number(rawValues.hdl),
-              Number(rawValues.triglycerides)
-            );
-          }
-          if (rawValues.ast && rawValues.alt) {
-            calculatedValues.astAltRatio = this.calculateASTALTRatio(
-              Number(rawValues.ast),
-              Number(rawValues.alt)
-            );
-          }
-          if (rawValues.bun && rawValues.creatinine) {
-            calculatedValues.bunCrRatio = this.calculateBUNCrRatio(
-              Number(rawValues.bun),
-              Number(rawValues.creatinine)
-            );
-          }
-          if (
-            rawValues.sodium &&
-            rawValues.chloride &&
-            rawValues.bicarbonate
-          ) {
-            calculatedValues.anionGap = this.calculateAnionGap(
-              Number(rawValues.sodium),
-              Number(rawValues.chloride),
-              Number(rawValues.bicarbonate)
-            );
-          }
-          if (rawValues.albumin) {
-            calculatedValues.correctedCalcium = this.calculateCorrectedCalcium(
-              Number(rawValues.measuredCalcium),
-              Number(rawValues.albumin)
-            );
-          }
-          break;
-
-        case 'coagulation':
-          if (rawValues.ptPatient && rawValues.ptControl) {
-            calculatedValues.ptRatio = this.calculatePTRatio(
-              Number(rawValues.ptPatient),
-              Number(rawValues.ptControl)
-            );
-            if (rawValues.isi) {
-              calculatedValues.inr = this.calculateINR(
-                Number(rawValues.ptPatient),
-                Number(rawValues.ptControl),
-                Number(rawValues.isi)
-              );
-            }
-          }
-          if (rawValues.apttPatient && rawValues.apttControl) {
-            calculatedValues.apttRatio = this.calculateAPTTRatio(
-              Number(rawValues.apttPatient),
-              Number(rawValues.apttControl)
-            );
-          }
-          break;
-
-        case 'sperm':
-          if (rawValues.concentration && rawValues.volume) {
-            const totalCount = this.calculateTotalSpermCount(
-              Number(rawValues.concentration),
-              Number(rawValues.volume)
-            );
-            calculatedValues.totalSpermCount = totalCount;
-            calculatedValues.whoClassification = this.classifySpermCount(
-              totalCount
-            );
-          }
-          break;
-
-        case 'immunology':
-          if (rawValues.lastPositiveDilution) {
-            calculatedValues.antibodyTiter = this.calculateAntibodyTiter(
-              Number(rawValues.lastPositiveDilution)
-            );
-          }
-          break;
-
-        case 'urinalysis':
-          if (rawValues.fieldCounts) {
-            const counts = Array.isArray(rawValues.fieldCounts)
-              ? (rawValues.fieldCounts as number[])
-              : [Number(rawValues.fieldCounts)];
-            calculatedValues.averagePerField = this.calculateUrinalysisAverage(
-              counts
-            );
-          }
-          break;
-
-        default:
-          errors.push(`Unknown test category: ${testCategory}`);
-      }
-    } catch (error) {
-      errors.push(`Calculation error: ${(error as Error).message}`);
+  static calculateEstimatedPlasmaGlucose(hba1c: number): CalculationResult {
+    if (hba1c < 4 || hba1c > 14) {
+      return {
+        name: 'Estimated Average Glucose (eAG)',
+        value: 0,
+        unit: 'mg/dL',
+        formula: 'eAG = (46.7 × A1c) - 23.3',
+        isValid: false,
+        errorMessage: `Invalid HbA1c value: ${hba1c}%`,
+      };
     }
 
+    const eag = 46.7 * hba1c - 23.3;
     return {
-      success: errors.length === 0,
-      values: calculatedValues,
-      errors,
+      name: 'Estimated Average Glucose (eAG)',
+      value: Math.round(eag),
+      unit: 'mg/dL',
+      formula: 'eAG = (46.7 × A1c) - 23.3',
+      isValid: true,
     };
+  }
+
+  /**
+   * Execute custom calculation with formula parsing
+   * Supports simple mathematical expressions
+   * Example: "hemoglobin * 10 / rbc"
+   */
+  static executeCustomCalculation(formula: string, inputs: CalculationInput): CalculationResult {
+    try {
+      // Sanitize formula - only allow alphanumeric, operators, and spaces
+      const sanitized = formula.replace(/[^a-zA-Z0-9+\-*/().\/\s]/g, '');
+
+      // Replace variable names with values
+      let expression = sanitized;
+      for (const [key, value] of Object.entries(inputs)) {
+        if (value !== undefined) {
+          expression = expression.replace(new RegExp(`\\b${key}\\b`, 'g'), `${value}`);
+        }
+      }
+
+      // Safely evaluate expression
+      // eslint-disable-next-line no-eval
+      const result = Function(`'use strict'; return (${expression})`)();
+
+      if (typeof result !== 'number' || !isFinite(result)) {
+        return {
+          name: 'Custom Calculation',
+          value: 0,
+          unit: 'units',
+          formula,
+          isValid: false,
+          errorMessage: 'Invalid calculation result',
+        };
+      }
+
+      return {
+        name: 'Custom Calculation',
+        value: Math.round(result * 1000) / 1000,
+        unit: 'units',
+        formula,
+        isValid: true,
+      };
+    } catch (error) {
+      return {
+        name: 'Custom Calculation',
+        value: 0,
+        unit: 'units',
+        formula,
+        isValid: false,
+        errorMessage: `Formula evaluation error: ${error instanceof Error ? error.message : 'Unknown error'}`,
+      };
+    }
+  }
+
+  /**
+   * Format calculation result for display
+   */
+  static formatResult(result: CalculationResult): string {
+    let report = '\n';
+    report += `Calculation: ${result.name}\n`;
+    report += `Formula: ${result.formula}\n`;
+    if (result.isValid) {
+      report += `Result: ${result.value} ${result.unit}\n`;
+    } else {
+      report += `Status: INVALID\n`;
+      report += `Error: ${result.errorMessage}\n`;
+    }
+    return report;
   }
 }
 
