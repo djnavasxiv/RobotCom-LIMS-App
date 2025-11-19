@@ -1,19 +1,48 @@
-# 🚀 LIMS App - Complete Integration Guide
+# 🚀 LIMS App - Quick Start Guide
 
-## ✅ STATUS: ALL MODULES INTEGRATED & WORKING
+## ✅ STATUS: CODE FIXED & BUILD CLEAN
 
-All 14 test modules are now fully integrated into the Electron application and accessible via the navigation UI.
+Electron regression has been fixed (commit fd108f6). The app is ready to run with proper X server setup.
 
-### Quick Start
+**Build Status:** 12,300 modules, 0 errors ✅  
+**Code Status:** Regression reverted ✅  
+**Ready for:** VcXsrv setup ⏳
 
+### Quick Start (After VcXsrv Setup)
+
+**Windows:** Open Start Menu → Search "XLaunch" → Click it  
+**Ubuntu:** 
 ```bash
 cd /home/djnavasv/RobotCom-LIMS-App/packages/robotcom-lims
 npm run dev
 ```
 
-The Electron app opens automatically with all test modules ready to use.
+The Electron app opens on your Windows desktop with DevTools ready.
 
-### Login with Test Account
+## 📋 Setup Instructions (First Time)
+
+### 1. Windows: Install VcXsrv
+- Run: `./install-vcxsrv.cmd` (in project root)
+- Or visit: https://github.com/ArcticaProject/VcXsrv-Windows/releases
+- Download latest `.exe` and run with defaults
+
+### 2. Ubuntu: Configure Environment  
+```bash
+./setup-windows-electron.sh
+# Close and reopen terminal after running
+```
+
+### 3. Every Session: Start VcXsrv
+- Windows Start Menu → Search "XLaunch" → Click
+- Keep it running in background
+
+### 4. Run the App
+```bash
+cd packages/robotcom-lims
+npm run dev
+```
+
+## 🔐 Login with Test Account
 ```
 Username: admin
 Password: password
