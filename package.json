@@ -5,7 +5,7 @@
     "app": "pnpm --filter robotcom-lims",
     "web": "pnpm --filter website",
     "dev:app": "pnpm app dev",
-    "dev:app:headless": "pnpm app dev:headless",
+    "dev:app:headless": "cd packages/robotcom-lims && npx vite src/renderer --host",
     "dev:web": "cd packages/robotcom-lims && npx vite src/renderer --host",
     "build:app": "pnpm app build",
     "dev:web:site": "pnpm web dev",
