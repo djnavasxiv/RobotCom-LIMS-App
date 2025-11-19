@@ -8,26 +8,10 @@ The Electron app had a regression where it wouldn't launch at all. This was caus
 
 ## Current Status
 
-✅ **Web Version:** Works immediately  
-`npm run dev:web` - Opens app in your browser without any display server needed
-
 ❌ **Electron Version:** Requires X server on Windows (VcXsrv)  
 `npm run dev` - Launches Electron app on Windows (requires setup below)
 
-## Option 1: Run in Browser (No Setup Needed) ⭐ Recommended for Quick Start
-
-If you just want to develop/test the app quickly:
-
-```bash
-cd packages/robotcom-lims
-npm run dev:web
-```
-
-Then open your browser to `http://localhost:5173`
-
-This gives you full app functionality with zero setup required.
-
-## Option 2: Run in Electron on Windows (Requires VcXsrv)
+## Option 1: Run in Electron on Windows (Requires VcXsrv)
 
 If you specifically need the Electron app running as a desktop window on your Windows desktop:
 
@@ -138,12 +122,11 @@ npm run dev
 
 ## Comparison
 
-| Method | Setup | Performance | Features | Browser Support |
-|--------|-------|-------------|----------|-----------------|
-| **Browser (npm run dev:web)** | None | Fast | All ✅ | Chrome/Firefox/Edge |
-| **Electron (npm run dev)** | VcXsrv install | Fast | All ✅ | N/A (desktop window) |
+| Method | Setup | Performance | Features |
+|--------|-------|-------------|----------|
+| **Electron (npm run dev)** | VcXsrv install | Fast | All ✅ |
 
-Both have **identical feature sets** and performance. Choose based on preference.
+The app is built for Electron - this is the primary way to run it during development and in production.
 
 ## Development Tips
 
@@ -170,9 +153,12 @@ Both have **identical feature sets** and performance. Choose based on preference
 
 ## Next Steps
 
-1. **Quick test:** Run `npm run dev:web` - this should work immediately
-2. **If Electron needed:** Follow "Option 2" above starting with VcXsrv install
-3. **Have issues?** The setup script has helpful error messages - run it again
+1. **Install VcXsrv:** Follow "Option 1" above starting with VcXsrv install
+2. **Run setup script:** Execute `./setup-windows-electron.sh`
+3. **Start VcXsrv:** Open Windows Start Menu, search for XLaunch, run it
+4. **Launch app:** Run `npm run dev` from `packages/robotcom-lims/`
+
+Once setup is complete, you can develop the app with hot-reload and DevTools.
 
 ---
 
