@@ -85,17 +85,17 @@ const IconToolbar: React.FC = () => {
     {
       icon: <SearchOutlined sx={{ fontSize: '32px' }} />,
       label: 'V. BACTER',
-      route: '/search/bacteriology',
+      route: '/tests/bacteriology',
     },
     {
       icon: <SearchOutlined sx={{ fontSize: '32px' }} />,
       label: 'V. HECES',
-      route: '/search/stool',
+      route: '/tests/stool',
     },
     {
       icon: <SearchOutlined sx={{ fontSize: '32px' }} />,
       label: 'V. HEMATC',
-      route: '/search/hematology',
+      route: '/tests/hematology',
     },
   ];
 
