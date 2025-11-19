@@ -23,8 +23,10 @@ function createWindow() {
   });
 
   if (process.env.NODE_ENV === 'development') {
+    // Load development URL
     mainWindow.loadURL('http://localhost:5173');
     mainWindow.webContents.openDevTools();
+    console.log('📱 Electron app loaded in development mode');
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'));
   }

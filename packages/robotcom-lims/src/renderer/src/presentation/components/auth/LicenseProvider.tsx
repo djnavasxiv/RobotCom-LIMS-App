@@ -38,9 +38,37 @@ const LicenseProvider: React.FC<LicenseProviderProps> = ({ children }) => {
   });
   const [antiPiracyService] = useState(() => new AntiPiracyService());
 
+  // Developer mode bypass - check for development environment or localStorage flag
+  const isDeveloperMode = (): boolean => {
+    // Check if running in development environment
+    if (process.env.NODE_ENV === 'development') return true;
+    
+    // Check if developer flag is set in localStorage
+    const devFlag = localStorage.getItem('ROBOTCOM_DEV_MODE');
+    if (devFlag === 'true') return true;
+    
+    // Check if running in Electron with dev tools enabled
+    if ((window as any).__DEV__ === true) return true;
+    
+    return false;
+  };
+
   const checkLicense = async () => {
     try {
       setIsChecking(true);
+
+      // If in developer mode, skip license checks
+      if (isDeveloperMode()) {
+        console.log('🔧 Developer mode enabled - skipping license validation');
+        setIsLicenseValid(true);
+        setLicenseStatus({
+          isValid: true,
+          isExpired: false,
+          message: 'Developer mode - license checks disabled',
+        });
+        setIsChecking(false);
+        return;
+      }
 
       // Perform anti-piracy check
       const result = await antiPiracyService.performSecurityCheck();
@@ -64,12 +92,22 @@ const LicenseProvider: React.FC<LicenseProviderProps> = ({ children }) => {
       }
     } catch (error) {
       console.error('License check failed:', error);
-      setIsLicenseValid(false);
-      setLicenseStatus({
-        isValid: false,
-        isExpired: false,
-        message: 'License validation error',
-      });
+      // In development mode, don't block on license check errors
+      if (isDeveloperMode()) {
+        setIsLicenseValid(true);
+        setLicenseStatus({
+          isValid: true,
+          isExpired: false,
+          message: 'Developer mode - license error ignored',
+        });
+      } else {
+        setIsLicenseValid(false);
+        setLicenseStatus({
+          isValid: false,
+          isExpired: false,
+          message: 'License validation error',
+        });
+      }
     } finally {
       setIsChecking(false);
     }
