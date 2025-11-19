@@ -3,6 +3,7 @@ import { join } from 'path';
 import { PrismaClient } from '@prisma/client';
 import { autoUpdater } from 'electron-updater';
 import * as bcrypt from 'bcrypt';
+import { emailService } from './services/EmailService';
 
 const prisma = new PrismaClient();
 let mainWindow: BrowserWindow | null = null;
@@ -283,4 +284,35 @@ ipcMain.handle('print:pdf', async (_event, pdfData) => {
       require('fs').unlinkSync(tempPath);
     });
   });
+});
+
+// Email handlers
+ipcMain.handle('email:sendResults', async (_event, payload) => {
+  try {
+    const success = await emailService.sendResultsEmail(payload);
+    return { success };
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    return { success: false, error: errorMessage };
+  }
+});
+
+ipcMain.handle('email:sendPaymentConfirmation', async (_event, patientEmail, patientName, invoiceNumber, amount) => {
+  try {
+    const success = await emailService.sendPaymentConfirmationEmail(patientEmail, patientName, invoiceNumber, amount);
+    return { success };
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    return { success: false, error: errorMessage };
+  }
+});
+
+ipcMain.handle('email:testConnection', async () => {
+  try {
+    const success = await emailService.testConnection();
+    return { success };
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    return { success: false, error: errorMessage };
+  }
 });
