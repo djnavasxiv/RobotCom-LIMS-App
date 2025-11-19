@@ -1,0 +1,208 @@
+/**
+ * QCChart Styles
+ * @author David Navas
+ */
+
+.qc-chart-container {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 12px 0;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 16px;
+  gap: 20px;
+}
+
+.chart-title-section {
+  flex: 1;
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #333;
+}
+
+.chart-subtitle {
+  font-size: 12px;
+  color: #999;
+}
+
+.chart-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-item .label {
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.stat-item .value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.qc-chart {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.control-limit {
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 4;
+}
+
+.limit-3sd-positive,
+.limit-3sd-negative {
+  stroke: #f44336;
+}
+
+.limit-2sd-positive,
+.limit-2sd-negative {
+  stroke: #ff9800;
+}
+
+.limit-1sd-positive,
+.limit-1sd-negative {
+  stroke: #4caf50;
+}
+
+.mean-line {
+  stroke: #667eea;
+  stroke-width: 2;
+}
+
+.limit-label,
+.mean-label,
+.axis-label {
+  font-size: 10px;
+  fill: #999;
+}
+
+.data-line {
+  stroke: #667eea;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.data-point {
+  cursor: pointer;
+  transition: r 0.2s;
+}
+
+.data-point:hover {
+  r: 7;
+}
+
+.data-point.flagged {
+  fill: #f44336;
+}
+
+.flagged-point-highlight {
+  fill: none;
+  stroke: #f44336;
+  stroke-width: 2;
+  opacity: 0.3;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #fafafa;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend-line {
+  width: 12px;
+  height: 1px;
+  border-top: 2px solid;
+}
+
+.legend-highlight {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #f44336;
+  background-color: rgba(244, 67, 54, 0.2);
+}
+
+.chart-table {
+  overflow-x: auto;
+}
+
+.chart-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.chart-table th {
+  background-color: #f5f5f5;
+  padding: 8px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.chart-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.chart-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.chart-table tr.flagged-row {
+  background-color: #fff5f5;
+}
+
+.chart-table .status-ok {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.chart-table .status-warning {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+.chart-table .status-reject {
+  color: #f44336;
+  font-weight: 600;
+}

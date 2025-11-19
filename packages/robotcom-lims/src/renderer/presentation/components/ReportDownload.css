@@ -1,0 +1,210 @@
+/**
+ * ReportDownload Styles
+ * @author David Navas
+ */
+
+.report-download-container {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 16px;
+  max-width: 500px;
+}
+
+.report-header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.report-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: #333;
+}
+
+.report-info {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.format-options,
+.delivery-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.format-option,
+.delivery-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.format-option:hover,
+.delivery-option:hover {
+  background-color: #f5f5f5;
+}
+
+.format-option input,
+.delivery-option input {
+  cursor: pointer;
+}
+
+.format-label,
+.delivery-label {
+  font-size: 14px;
+  color: #333;
+  user-select: none;
+}
+
+.email-input-group {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.email-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+.progress-section {
+  margin: 16px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+.progress-message {
+  font-size: 12px;
+  color: #667eea;
+  margin: 0;
+  text-align: center;
+}
+
+.status-message {
+  padding: 12px;
+  border-radius: 4px;
+  margin: 12px 0;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.status-message.success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+
+.status-message.error {
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin: 16px 0;
+}
+
+.button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.button.primary {
+  background-color: #667eea;
+  color: white;
+}
+
+.button.primary:hover:not(:disabled) {
+  background-color: #5568d3;
+}
+
+.button.secondary {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.button.secondary:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.format-descriptions {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.description {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.description strong {
+  color: #333;
+}

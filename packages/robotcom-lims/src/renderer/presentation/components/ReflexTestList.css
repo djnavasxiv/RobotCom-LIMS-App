@@ -1,0 +1,180 @@
+/**
+ * ReflexTestList Styles
+ * @author David Navas
+ */
+
+.reflex-test-list {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.reflex-header {
+  margin-bottom: 12px;
+}
+
+.reflex-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #333;
+}
+
+.reflex-subtitle {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+.reflex-tests {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reflex-test-item {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.test-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.test-header:hover {
+  background-color: #fafafa;
+}
+
+.expand-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 0;
+  width: 16px;
+  color: #666;
+}
+
+.status-icon {
+  font-size: 14px;
+}
+
+.test-basic-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.test-name-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.test-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.test-code {
+  font-size: 11px;
+  color: #999;
+}
+
+.test-badges {
+  display: flex;
+  gap: 4px;
+}
+
+.priority-badge,
+.status-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.priority-badge {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.priority-badge.priority-critical {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.priority-badge.priority-high {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+}
+
+.status-ordered {
+  background-color: #cfe2ff;
+}
+
+.status-completed {
+  background-color: #d1e7dd;
+}
+
+.test-details {
+  background-color: #fafafa;
+  padding: 8px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 12px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  color: #666;
+  min-width: 140px;
+}
+
+.detail-row .value {
+  color: #333;
+  flex: 1;
+  text-align: right;
+}
+
+.status-explanation {
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.status-text {
+  margin: 0;
+  color: #999;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 16px;
+  color: #999;
+  font-size: 12px;
+}

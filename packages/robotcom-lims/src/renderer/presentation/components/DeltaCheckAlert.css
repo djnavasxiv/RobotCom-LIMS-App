@@ -1,0 +1,108 @@
+/**
+ * DeltaCheckAlert Styles
+ * @author David Navas
+ */
+
+.delta-check-alert {
+  border-left: 4px solid #ff9800;
+  background-color: #fff8f0;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.delta-check-alert.severity-warning {
+  border-left-color: #ffc107;
+  background-color: #fffbf0;
+}
+
+.delta-check-alert.severity-alert {
+  border-left-color: #ff9800;
+  background-color: #fff8f0;
+}
+
+.delta-check-alert.severity-critical {
+  border-left-color: #f44336;
+  background-color: #fff5f5;
+}
+
+.alert-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.severity-icon {
+  font-size: 18px;
+}
+
+.alert-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.severity-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.alert-content {
+  margin-bottom: 8px;
+}
+
+.percent-change {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.percent-change .value {
+  font-weight: 600;
+}
+
+.percent-change .value.positive {
+  color: #f44336;
+}
+
+.percent-change .value.negative {
+  color: #2196f3;
+}
+
+.alert-message p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.alert-recommendation {
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 8px;
+  border-radius: 3px;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.alert-recommendation strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.alert-recommendation p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.alert-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 8px;
+  font-size: 12px;
+  color: #999;
+}
