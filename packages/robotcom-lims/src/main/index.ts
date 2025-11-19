@@ -7,6 +7,16 @@ import * as bcrypt from 'bcrypt';
 const prisma = new PrismaClient();
 let mainWindow: BrowserWindow | null = null;
 
+// Check if running in headless environment
+const isHeadless = !process.env.DISPLAY && !process.env.WAYLAND_DISPLAY;
+const isHeadlessMode = process.env.HEADLESS === '1' || process.env.ELECTRON_OZONE_PLATFORM_HINT === 'x11' && !process.env.DISPLAY;
+
+// If headless, disable GPU and hardware acceleration
+if (isHeadless || isHeadlessMode) {
+  console.log('⚙️  Running in headless mode');
+  app.disableHardwareAcceleration();
+}
+
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1400,
@@ -20,12 +30,15 @@ function createWindow() {
     },
     title: 'RobotComLab',
     icon: join(__dirname, '../../resources/icon.png'),
+    show: !(isHeadless || isHeadlessMode),
   });
 
   if (process.env.NODE_ENV === 'development') {
     // Load development URL
     mainWindow.loadURL('http://localhost:5173');
-    mainWindow.webContents.openDevTools();
+    if (!isHeadless && !isHeadlessMode) {
+      mainWindow.webContents.openDevTools();
+    }
     console.log('📱 Electron app loaded in development mode');
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'));
@@ -37,16 +50,24 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
-  createWindow();
+  // Only create window if not in headless mode
+  if (!isHeadless && !isHeadlessMode) {
+    createWindow();
+  } else {
+    console.log('📡 Headless mode: Skipping window creation, running API server only');
+  }
 
   autoUpdater.setFeedURL({
     provider: 'generic',
     url: 'https://updates.robotcomlab.com' // Dummy URL
   });
-  autoUpdater.checkForUpdatesAndNotify();
+  
+  if (!isHeadless && !isHeadlessMode) {
+    autoUpdater.checkForUpdatesAndNotify();
+  }
 
   app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
+    if (!isHeadless && !isHeadlessMode && BrowserWindow.getAllWindows().length === 0) {
       createWindow();
     }
   });

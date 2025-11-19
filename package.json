@@ -5,8 +5,10 @@
     "app": "pnpm --filter robotcom-lims",
     "web": "pnpm --filter website",
     "dev:app": "pnpm app dev",
+    "dev:app:headless": "pnpm app dev:headless",
+    "dev:web": "cd packages/robotcom-lims && npx vite src/renderer --host",
     "build:app": "pnpm app build",
-    "dev:web": "pnpm web dev",
+    "dev:web:site": "pnpm web dev",
     "build:web": "pnpm web build"
   },
   "devDependencies": {
