@@ -103,6 +103,61 @@ export type AuditLog = $Result.DefaultSelection<Prisma.$AuditLogPayload>
  * 
  */
 export type Setting = $Result.DefaultSelection<Prisma.$SettingPayload>
+/**
+ * Model TestCategory
+ * 
+ */
+export type TestCategory = $Result.DefaultSelection<Prisma.$TestCategoryPayload>
+/**
+ * Model TestDefinition
+ * 
+ */
+export type TestDefinition = $Result.DefaultSelection<Prisma.$TestDefinitionPayload>
+/**
+ * Model NormalRange
+ * 
+ */
+export type NormalRange = $Result.DefaultSelection<Prisma.$NormalRangePayload>
+/**
+ * Model CalculationRule
+ * 
+ */
+export type CalculationRule = $Result.DefaultSelection<Prisma.$CalculationRulePayload>
+/**
+ * Model InterpretationRule
+ * 
+ */
+export type InterpretationRule = $Result.DefaultSelection<Prisma.$InterpretationRulePayload>
+/**
+ * Model DeltaCheckRule
+ * 
+ */
+export type DeltaCheckRule = $Result.DefaultSelection<Prisma.$DeltaCheckRulePayload>
+/**
+ * Model ReflexTestRule
+ * 
+ */
+export type ReflexTestRule = $Result.DefaultSelection<Prisma.$ReflexTestRulePayload>
+/**
+ * Model DeltaCheckResult
+ * 
+ */
+export type DeltaCheckResult = $Result.DefaultSelection<Prisma.$DeltaCheckResultPayload>
+/**
+ * Model EmailTemplate
+ * 
+ */
+export type EmailTemplate = $Result.DefaultSelection<Prisma.$EmailTemplatePayload>
+/**
+ * Model EmailLog
+ * 
+ */
+export type EmailLog = $Result.DefaultSelection<Prisma.$EmailLogPayload>
+/**
+ * Model EmailSetting
+ * 
+ */
+export type EmailSetting = $Result.DefaultSelection<Prisma.$EmailSettingPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -406,6 +461,116 @@ export class PrismaClient<
     * ```
     */
   get setting(): Prisma.SettingDelegate<ExtArgs>;
+
+  /**
+   * `prisma.testCategory`: Exposes CRUD operations for the **TestCategory** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more TestCategories
+    * const testCategories = await prisma.testCategory.findMany()
+    * ```
+    */
+  get testCategory(): Prisma.TestCategoryDelegate<ExtArgs>;
+
+  /**
+   * `prisma.testDefinition`: Exposes CRUD operations for the **TestDefinition** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more TestDefinitions
+    * const testDefinitions = await prisma.testDefinition.findMany()
+    * ```
+    */
+  get testDefinition(): Prisma.TestDefinitionDelegate<ExtArgs>;
+
+  /**
+   * `prisma.normalRange`: Exposes CRUD operations for the **NormalRange** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more NormalRanges
+    * const normalRanges = await prisma.normalRange.findMany()
+    * ```
+    */
+  get normalRange(): Prisma.NormalRangeDelegate<ExtArgs>;
+
+  /**
+   * `prisma.calculationRule`: Exposes CRUD operations for the **CalculationRule** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more CalculationRules
+    * const calculationRules = await prisma.calculationRule.findMany()
+    * ```
+    */
+  get calculationRule(): Prisma.CalculationRuleDelegate<ExtArgs>;
+
+  /**
+   * `prisma.interpretationRule`: Exposes CRUD operations for the **InterpretationRule** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more InterpretationRules
+    * const interpretationRules = await prisma.interpretationRule.findMany()
+    * ```
+    */
+  get interpretationRule(): Prisma.InterpretationRuleDelegate<ExtArgs>;
+
+  /**
+   * `prisma.deltaCheckRule`: Exposes CRUD operations for the **DeltaCheckRule** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more DeltaCheckRules
+    * const deltaCheckRules = await prisma.deltaCheckRule.findMany()
+    * ```
+    */
+  get deltaCheckRule(): Prisma.DeltaCheckRuleDelegate<ExtArgs>;
+
+  /**
+   * `prisma.reflexTestRule`: Exposes CRUD operations for the **ReflexTestRule** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ReflexTestRules
+    * const reflexTestRules = await prisma.reflexTestRule.findMany()
+    * ```
+    */
+  get reflexTestRule(): Prisma.ReflexTestRuleDelegate<ExtArgs>;
+
+  /**
+   * `prisma.deltaCheckResult`: Exposes CRUD operations for the **DeltaCheckResult** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more DeltaCheckResults
+    * const deltaCheckResults = await prisma.deltaCheckResult.findMany()
+    * ```
+    */
+  get deltaCheckResult(): Prisma.DeltaCheckResultDelegate<ExtArgs>;
+
+  /**
+   * `prisma.emailTemplate`: Exposes CRUD operations for the **EmailTemplate** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more EmailTemplates
+    * const emailTemplates = await prisma.emailTemplate.findMany()
+    * ```
+    */
+  get emailTemplate(): Prisma.EmailTemplateDelegate<ExtArgs>;
+
+  /**
+   * `prisma.emailLog`: Exposes CRUD operations for the **EmailLog** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more EmailLogs
+    * const emailLogs = await prisma.emailLog.findMany()
+    * ```
+    */
+  get emailLog(): Prisma.EmailLogDelegate<ExtArgs>;
+
+  /**
+   * `prisma.emailSetting`: Exposes CRUD operations for the **EmailSetting** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more EmailSettings
+    * const emailSettings = await prisma.emailSetting.findMany()
+    * ```
+    */
+  get emailSetting(): Prisma.EmailSettingDelegate<ExtArgs>;
 }
 
 export namespace Prisma {
@@ -864,7 +1029,18 @@ export namespace Prisma {
     StockAdjustment: 'StockAdjustment',
     License: 'License',
     AuditLog: 'AuditLog',
-    Setting: 'Setting'
+    Setting: 'Setting',
+    TestCategory: 'TestCategory',
+    TestDefinition: 'TestDefinition',
+    NormalRange: 'NormalRange',
+    CalculationRule: 'CalculationRule',
+    InterpretationRule: 'InterpretationRule',
+    DeltaCheckRule: 'DeltaCheckRule',
+    ReflexTestRule: 'ReflexTestRule',
+    DeltaCheckResult: 'DeltaCheckResult',
+    EmailTemplate: 'EmailTemplate',
+    EmailLog: 'EmailLog',
+    EmailSetting: 'EmailSetting'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -880,7 +1056,7 @@ export namespace Prisma {
 
   export type TypeMap<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> = {
     meta: {
-      modelProps: "lab" | "user" | "patient" | "test" | "testProfile" | "testProfileItem" | "sample" | "sampleTest" | "result" | "invoice" | "invoiceItem" | "doctor" | "commission" | "inventoryItem" | "stockAdjustment" | "license" | "auditLog" | "setting"
+      modelProps: "lab" | "user" | "patient" | "test" | "testProfile" | "testProfileItem" | "sample" | "sampleTest" | "result" | "invoice" | "invoiceItem" | "doctor" | "commission" | "inventoryItem" | "stockAdjustment" | "license" | "auditLog" | "setting" | "testCategory" | "testDefinition" | "normalRange" | "calculationRule" | "interpretationRule" | "deltaCheckRule" | "reflexTestRule" | "deltaCheckResult" | "emailTemplate" | "emailLog" | "emailSetting"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -2144,6 +2320,776 @@ export namespace Prisma {
           }
         }
       }
+      TestCategory: {
+        payload: Prisma.$TestCategoryPayload<ExtArgs>
+        fields: Prisma.TestCategoryFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.TestCategoryFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestCategoryPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.TestCategoryFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestCategoryPayload>
+          }
+          findFirst: {
+            args: Prisma.TestCategoryFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestCategoryPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.TestCategoryFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestCategoryPayload>
+          }
+          findMany: {
+            args: Prisma.TestCategoryFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestCategoryPayload>[]
+          }
+          create: {
+            args: Prisma.TestCategoryCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestCategoryPayload>
+          }
+          createMany: {
+            args: Prisma.TestCategoryCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.TestCategoryCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestCategoryPayload>[]
+          }
+          delete: {
+            args: Prisma.TestCategoryDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestCategoryPayload>
+          }
+          update: {
+            args: Prisma.TestCategoryUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestCategoryPayload>
+          }
+          deleteMany: {
+            args: Prisma.TestCategoryDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.TestCategoryUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.TestCategoryUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestCategoryPayload>
+          }
+          aggregate: {
+            args: Prisma.TestCategoryAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTestCategory>
+          }
+          groupBy: {
+            args: Prisma.TestCategoryGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TestCategoryGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.TestCategoryCountArgs<ExtArgs>
+            result: $Utils.Optional<TestCategoryCountAggregateOutputType> | number
+          }
+        }
+      }
+      TestDefinition: {
+        payload: Prisma.$TestDefinitionPayload<ExtArgs>
+        fields: Prisma.TestDefinitionFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.TestDefinitionFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestDefinitionPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.TestDefinitionFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestDefinitionPayload>
+          }
+          findFirst: {
+            args: Prisma.TestDefinitionFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestDefinitionPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.TestDefinitionFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestDefinitionPayload>
+          }
+          findMany: {
+            args: Prisma.TestDefinitionFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestDefinitionPayload>[]
+          }
+          create: {
+            args: Prisma.TestDefinitionCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestDefinitionPayload>
+          }
+          createMany: {
+            args: Prisma.TestDefinitionCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.TestDefinitionCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestDefinitionPayload>[]
+          }
+          delete: {
+            args: Prisma.TestDefinitionDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestDefinitionPayload>
+          }
+          update: {
+            args: Prisma.TestDefinitionUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestDefinitionPayload>
+          }
+          deleteMany: {
+            args: Prisma.TestDefinitionDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.TestDefinitionUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.TestDefinitionUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TestDefinitionPayload>
+          }
+          aggregate: {
+            args: Prisma.TestDefinitionAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTestDefinition>
+          }
+          groupBy: {
+            args: Prisma.TestDefinitionGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TestDefinitionGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.TestDefinitionCountArgs<ExtArgs>
+            result: $Utils.Optional<TestDefinitionCountAggregateOutputType> | number
+          }
+        }
+      }
+      NormalRange: {
+        payload: Prisma.$NormalRangePayload<ExtArgs>
+        fields: Prisma.NormalRangeFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.NormalRangeFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NormalRangePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.NormalRangeFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NormalRangePayload>
+          }
+          findFirst: {
+            args: Prisma.NormalRangeFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NormalRangePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.NormalRangeFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NormalRangePayload>
+          }
+          findMany: {
+            args: Prisma.NormalRangeFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NormalRangePayload>[]
+          }
+          create: {
+            args: Prisma.NormalRangeCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NormalRangePayload>
+          }
+          createMany: {
+            args: Prisma.NormalRangeCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.NormalRangeCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NormalRangePayload>[]
+          }
+          delete: {
+            args: Prisma.NormalRangeDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NormalRangePayload>
+          }
+          update: {
+            args: Prisma.NormalRangeUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NormalRangePayload>
+          }
+          deleteMany: {
+            args: Prisma.NormalRangeDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.NormalRangeUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.NormalRangeUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NormalRangePayload>
+          }
+          aggregate: {
+            args: Prisma.NormalRangeAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateNormalRange>
+          }
+          groupBy: {
+            args: Prisma.NormalRangeGroupByArgs<ExtArgs>
+            result: $Utils.Optional<NormalRangeGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.NormalRangeCountArgs<ExtArgs>
+            result: $Utils.Optional<NormalRangeCountAggregateOutputType> | number
+          }
+        }
+      }
+      CalculationRule: {
+        payload: Prisma.$CalculationRulePayload<ExtArgs>
+        fields: Prisma.CalculationRuleFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.CalculationRuleFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CalculationRulePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.CalculationRuleFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CalculationRulePayload>
+          }
+          findFirst: {
+            args: Prisma.CalculationRuleFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CalculationRulePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.CalculationRuleFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CalculationRulePayload>
+          }
+          findMany: {
+            args: Prisma.CalculationRuleFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CalculationRulePayload>[]
+          }
+          create: {
+            args: Prisma.CalculationRuleCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CalculationRulePayload>
+          }
+          createMany: {
+            args: Prisma.CalculationRuleCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.CalculationRuleCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CalculationRulePayload>[]
+          }
+          delete: {
+            args: Prisma.CalculationRuleDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CalculationRulePayload>
+          }
+          update: {
+            args: Prisma.CalculationRuleUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CalculationRulePayload>
+          }
+          deleteMany: {
+            args: Prisma.CalculationRuleDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.CalculationRuleUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.CalculationRuleUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CalculationRulePayload>
+          }
+          aggregate: {
+            args: Prisma.CalculationRuleAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateCalculationRule>
+          }
+          groupBy: {
+            args: Prisma.CalculationRuleGroupByArgs<ExtArgs>
+            result: $Utils.Optional<CalculationRuleGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.CalculationRuleCountArgs<ExtArgs>
+            result: $Utils.Optional<CalculationRuleCountAggregateOutputType> | number
+          }
+        }
+      }
+      InterpretationRule: {
+        payload: Prisma.$InterpretationRulePayload<ExtArgs>
+        fields: Prisma.InterpretationRuleFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.InterpretationRuleFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$InterpretationRulePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.InterpretationRuleFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$InterpretationRulePayload>
+          }
+          findFirst: {
+            args: Prisma.InterpretationRuleFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$InterpretationRulePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.InterpretationRuleFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$InterpretationRulePayload>
+          }
+          findMany: {
+            args: Prisma.InterpretationRuleFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$InterpretationRulePayload>[]
+          }
+          create: {
+            args: Prisma.InterpretationRuleCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$InterpretationRulePayload>
+          }
+          createMany: {
+            args: Prisma.InterpretationRuleCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.InterpretationRuleCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$InterpretationRulePayload>[]
+          }
+          delete: {
+            args: Prisma.InterpretationRuleDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$InterpretationRulePayload>
+          }
+          update: {
+            args: Prisma.InterpretationRuleUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$InterpretationRulePayload>
+          }
+          deleteMany: {
+            args: Prisma.InterpretationRuleDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.InterpretationRuleUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.InterpretationRuleUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$InterpretationRulePayload>
+          }
+          aggregate: {
+            args: Prisma.InterpretationRuleAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateInterpretationRule>
+          }
+          groupBy: {
+            args: Prisma.InterpretationRuleGroupByArgs<ExtArgs>
+            result: $Utils.Optional<InterpretationRuleGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.InterpretationRuleCountArgs<ExtArgs>
+            result: $Utils.Optional<InterpretationRuleCountAggregateOutputType> | number
+          }
+        }
+      }
+      DeltaCheckRule: {
+        payload: Prisma.$DeltaCheckRulePayload<ExtArgs>
+        fields: Prisma.DeltaCheckRuleFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.DeltaCheckRuleFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckRulePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.DeltaCheckRuleFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckRulePayload>
+          }
+          findFirst: {
+            args: Prisma.DeltaCheckRuleFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckRulePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.DeltaCheckRuleFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckRulePayload>
+          }
+          findMany: {
+            args: Prisma.DeltaCheckRuleFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckRulePayload>[]
+          }
+          create: {
+            args: Prisma.DeltaCheckRuleCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckRulePayload>
+          }
+          createMany: {
+            args: Prisma.DeltaCheckRuleCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.DeltaCheckRuleCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckRulePayload>[]
+          }
+          delete: {
+            args: Prisma.DeltaCheckRuleDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckRulePayload>
+          }
+          update: {
+            args: Prisma.DeltaCheckRuleUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckRulePayload>
+          }
+          deleteMany: {
+            args: Prisma.DeltaCheckRuleDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.DeltaCheckRuleUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.DeltaCheckRuleUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckRulePayload>
+          }
+          aggregate: {
+            args: Prisma.DeltaCheckRuleAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateDeltaCheckRule>
+          }
+          groupBy: {
+            args: Prisma.DeltaCheckRuleGroupByArgs<ExtArgs>
+            result: $Utils.Optional<DeltaCheckRuleGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.DeltaCheckRuleCountArgs<ExtArgs>
+            result: $Utils.Optional<DeltaCheckRuleCountAggregateOutputType> | number
+          }
+        }
+      }
+      ReflexTestRule: {
+        payload: Prisma.$ReflexTestRulePayload<ExtArgs>
+        fields: Prisma.ReflexTestRuleFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ReflexTestRuleFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReflexTestRulePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ReflexTestRuleFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReflexTestRulePayload>
+          }
+          findFirst: {
+            args: Prisma.ReflexTestRuleFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReflexTestRulePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ReflexTestRuleFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReflexTestRulePayload>
+          }
+          findMany: {
+            args: Prisma.ReflexTestRuleFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReflexTestRulePayload>[]
+          }
+          create: {
+            args: Prisma.ReflexTestRuleCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReflexTestRulePayload>
+          }
+          createMany: {
+            args: Prisma.ReflexTestRuleCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ReflexTestRuleCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReflexTestRulePayload>[]
+          }
+          delete: {
+            args: Prisma.ReflexTestRuleDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReflexTestRulePayload>
+          }
+          update: {
+            args: Prisma.ReflexTestRuleUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReflexTestRulePayload>
+          }
+          deleteMany: {
+            args: Prisma.ReflexTestRuleDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ReflexTestRuleUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.ReflexTestRuleUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReflexTestRulePayload>
+          }
+          aggregate: {
+            args: Prisma.ReflexTestRuleAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateReflexTestRule>
+          }
+          groupBy: {
+            args: Prisma.ReflexTestRuleGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ReflexTestRuleGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ReflexTestRuleCountArgs<ExtArgs>
+            result: $Utils.Optional<ReflexTestRuleCountAggregateOutputType> | number
+          }
+        }
+      }
+      DeltaCheckResult: {
+        payload: Prisma.$DeltaCheckResultPayload<ExtArgs>
+        fields: Prisma.DeltaCheckResultFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.DeltaCheckResultFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckResultPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.DeltaCheckResultFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckResultPayload>
+          }
+          findFirst: {
+            args: Prisma.DeltaCheckResultFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckResultPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.DeltaCheckResultFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckResultPayload>
+          }
+          findMany: {
+            args: Prisma.DeltaCheckResultFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckResultPayload>[]
+          }
+          create: {
+            args: Prisma.DeltaCheckResultCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckResultPayload>
+          }
+          createMany: {
+            args: Prisma.DeltaCheckResultCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.DeltaCheckResultCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckResultPayload>[]
+          }
+          delete: {
+            args: Prisma.DeltaCheckResultDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckResultPayload>
+          }
+          update: {
+            args: Prisma.DeltaCheckResultUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckResultPayload>
+          }
+          deleteMany: {
+            args: Prisma.DeltaCheckResultDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.DeltaCheckResultUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.DeltaCheckResultUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DeltaCheckResultPayload>
+          }
+          aggregate: {
+            args: Prisma.DeltaCheckResultAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateDeltaCheckResult>
+          }
+          groupBy: {
+            args: Prisma.DeltaCheckResultGroupByArgs<ExtArgs>
+            result: $Utils.Optional<DeltaCheckResultGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.DeltaCheckResultCountArgs<ExtArgs>
+            result: $Utils.Optional<DeltaCheckResultCountAggregateOutputType> | number
+          }
+        }
+      }
+      EmailTemplate: {
+        payload: Prisma.$EmailTemplatePayload<ExtArgs>
+        fields: Prisma.EmailTemplateFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.EmailTemplateFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailTemplatePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.EmailTemplateFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailTemplatePayload>
+          }
+          findFirst: {
+            args: Prisma.EmailTemplateFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailTemplatePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.EmailTemplateFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailTemplatePayload>
+          }
+          findMany: {
+            args: Prisma.EmailTemplateFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailTemplatePayload>[]
+          }
+          create: {
+            args: Prisma.EmailTemplateCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailTemplatePayload>
+          }
+          createMany: {
+            args: Prisma.EmailTemplateCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.EmailTemplateCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailTemplatePayload>[]
+          }
+          delete: {
+            args: Prisma.EmailTemplateDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailTemplatePayload>
+          }
+          update: {
+            args: Prisma.EmailTemplateUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailTemplatePayload>
+          }
+          deleteMany: {
+            args: Prisma.EmailTemplateDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.EmailTemplateUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.EmailTemplateUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailTemplatePayload>
+          }
+          aggregate: {
+            args: Prisma.EmailTemplateAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateEmailTemplate>
+          }
+          groupBy: {
+            args: Prisma.EmailTemplateGroupByArgs<ExtArgs>
+            result: $Utils.Optional<EmailTemplateGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.EmailTemplateCountArgs<ExtArgs>
+            result: $Utils.Optional<EmailTemplateCountAggregateOutputType> | number
+          }
+        }
+      }
+      EmailLog: {
+        payload: Prisma.$EmailLogPayload<ExtArgs>
+        fields: Prisma.EmailLogFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.EmailLogFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailLogPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.EmailLogFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailLogPayload>
+          }
+          findFirst: {
+            args: Prisma.EmailLogFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailLogPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.EmailLogFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailLogPayload>
+          }
+          findMany: {
+            args: Prisma.EmailLogFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailLogPayload>[]
+          }
+          create: {
+            args: Prisma.EmailLogCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailLogPayload>
+          }
+          createMany: {
+            args: Prisma.EmailLogCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.EmailLogCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailLogPayload>[]
+          }
+          delete: {
+            args: Prisma.EmailLogDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailLogPayload>
+          }
+          update: {
+            args: Prisma.EmailLogUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailLogPayload>
+          }
+          deleteMany: {
+            args: Prisma.EmailLogDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.EmailLogUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.EmailLogUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailLogPayload>
+          }
+          aggregate: {
+            args: Prisma.EmailLogAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateEmailLog>
+          }
+          groupBy: {
+            args: Prisma.EmailLogGroupByArgs<ExtArgs>
+            result: $Utils.Optional<EmailLogGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.EmailLogCountArgs<ExtArgs>
+            result: $Utils.Optional<EmailLogCountAggregateOutputType> | number
+          }
+        }
+      }
+      EmailSetting: {
+        payload: Prisma.$EmailSettingPayload<ExtArgs>
+        fields: Prisma.EmailSettingFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.EmailSettingFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailSettingPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.EmailSettingFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailSettingPayload>
+          }
+          findFirst: {
+            args: Prisma.EmailSettingFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailSettingPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.EmailSettingFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailSettingPayload>
+          }
+          findMany: {
+            args: Prisma.EmailSettingFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailSettingPayload>[]
+          }
+          create: {
+            args: Prisma.EmailSettingCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailSettingPayload>
+          }
+          createMany: {
+            args: Prisma.EmailSettingCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.EmailSettingCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailSettingPayload>[]
+          }
+          delete: {
+            args: Prisma.EmailSettingDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailSettingPayload>
+          }
+          update: {
+            args: Prisma.EmailSettingUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailSettingPayload>
+          }
+          deleteMany: {
+            args: Prisma.EmailSettingDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.EmailSettingUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.EmailSettingUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmailSettingPayload>
+          }
+          aggregate: {
+            args: Prisma.EmailSettingAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateEmailSetting>
+          }
+          groupBy: {
+            args: Prisma.EmailSettingGroupByArgs<ExtArgs>
+            result: $Utils.Optional<EmailSettingGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.EmailSettingCountArgs<ExtArgs>
+            result: $Utils.Optional<EmailSettingCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -2428,12 +3374,14 @@ export namespace Prisma {
     profileTests: number
     sampleTests: number
     results: number
+    testDefs: number
   }
 
   export type TestCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     profileTests?: boolean | TestCountOutputTypeCountProfileTestsArgs
     sampleTests?: boolean | TestCountOutputTypeCountSampleTestsArgs
     results?: boolean | TestCountOutputTypeCountResultsArgs
+    testDefs?: boolean | TestCountOutputTypeCountTestDefsArgs
   }
 
   // Custom InputTypes
@@ -2466,6 +3414,13 @@ export namespace Prisma {
    */
   export type TestCountOutputTypeCountResultsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ResultWhereInput
+  }
+
+  /**
+   * TestCountOutputType without action
+   */
+  export type TestCountOutputTypeCountTestDefsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TestDefinitionWhereInput
   }
 
 
@@ -2516,11 +3471,13 @@ export namespace Prisma {
   export type SampleCountOutputType = {
     tests: number
     results: number
+    emailLogs: number
   }
 
   export type SampleCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     tests?: boolean | SampleCountOutputTypeCountTestsArgs
     results?: boolean | SampleCountOutputTypeCountResultsArgs
+    emailLogs?: boolean | SampleCountOutputTypeCountEmailLogsArgs
   }
 
   // Custom InputTypes
@@ -2548,6 +3505,53 @@ export namespace Prisma {
     where?: ResultWhereInput
   }
 
+  /**
+   * SampleCountOutputType without action
+   */
+  export type SampleCountOutputTypeCountEmailLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EmailLogWhereInput
+  }
+
+
+  /**
+   * Count Type ResultCountOutputType
+   */
+
+  export type ResultCountOutputType = {
+    deltaCheckResults: number
+    emailLogs: number
+  }
+
+  export type ResultCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    deltaCheckResults?: boolean | ResultCountOutputTypeCountDeltaCheckResultsArgs
+    emailLogs?: boolean | ResultCountOutputTypeCountEmailLogsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * ResultCountOutputType without action
+   */
+  export type ResultCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResultCountOutputType
+     */
+    select?: ResultCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * ResultCountOutputType without action
+   */
+  export type ResultCountOutputTypeCountDeltaCheckResultsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: DeltaCheckResultWhereInput
+  }
+
+  /**
+   * ResultCountOutputType without action
+   */
+  export type ResultCountOutputTypeCountEmailLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EmailLogWhereInput
+  }
+
 
   /**
    * Count Type InvoiceCountOutputType
@@ -2556,11 +3560,13 @@ export namespace Prisma {
   export type InvoiceCountOutputType = {
     items: number
     commissions: number
+    emailLogs: number
   }
 
   export type InvoiceCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     items?: boolean | InvoiceCountOutputTypeCountItemsArgs
     commissions?: boolean | InvoiceCountOutputTypeCountCommissionsArgs
+    emailLogs?: boolean | InvoiceCountOutputTypeCountEmailLogsArgs
   }
 
   // Custom InputTypes
@@ -2586,6 +3592,13 @@ export namespace Prisma {
    */
   export type InvoiceCountOutputTypeCountCommissionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: CommissionWhereInput
+  }
+
+  /**
+   * InvoiceCountOutputType without action
+   */
+  export type InvoiceCountOutputTypeCountEmailLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EmailLogWhereInput
   }
 
 
@@ -2648,6 +3661,215 @@ export namespace Prisma {
    */
   export type InventoryItemCountOutputTypeCountAdjustmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: StockAdjustmentWhereInput
+  }
+
+
+  /**
+   * Count Type TestCategoryCountOutputType
+   */
+
+  export type TestCategoryCountOutputType = {
+    definitions: number
+  }
+
+  export type TestCategoryCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    definitions?: boolean | TestCategoryCountOutputTypeCountDefinitionsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * TestCategoryCountOutputType without action
+   */
+  export type TestCategoryCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategoryCountOutputType
+     */
+    select?: TestCategoryCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * TestCategoryCountOutputType without action
+   */
+  export type TestCategoryCountOutputTypeCountDefinitionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TestDefinitionWhereInput
+  }
+
+
+  /**
+   * Count Type TestDefinitionCountOutputType
+   */
+
+  export type TestDefinitionCountOutputType = {
+    normalRanges: number
+    interpretations: number
+    calculationRules: number
+    deltaCheckRules: number
+    reflexRulesAsParent: number
+    reflexRulesAsChild: number
+    testResults: number
+  }
+
+  export type TestDefinitionCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    normalRanges?: boolean | TestDefinitionCountOutputTypeCountNormalRangesArgs
+    interpretations?: boolean | TestDefinitionCountOutputTypeCountInterpretationsArgs
+    calculationRules?: boolean | TestDefinitionCountOutputTypeCountCalculationRulesArgs
+    deltaCheckRules?: boolean | TestDefinitionCountOutputTypeCountDeltaCheckRulesArgs
+    reflexRulesAsParent?: boolean | TestDefinitionCountOutputTypeCountReflexRulesAsParentArgs
+    reflexRulesAsChild?: boolean | TestDefinitionCountOutputTypeCountReflexRulesAsChildArgs
+    testResults?: boolean | TestDefinitionCountOutputTypeCountTestResultsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * TestDefinitionCountOutputType without action
+   */
+  export type TestDefinitionCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinitionCountOutputType
+     */
+    select?: TestDefinitionCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * TestDefinitionCountOutputType without action
+   */
+  export type TestDefinitionCountOutputTypeCountNormalRangesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: NormalRangeWhereInput
+  }
+
+  /**
+   * TestDefinitionCountOutputType without action
+   */
+  export type TestDefinitionCountOutputTypeCountInterpretationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: InterpretationRuleWhereInput
+  }
+
+  /**
+   * TestDefinitionCountOutputType without action
+   */
+  export type TestDefinitionCountOutputTypeCountCalculationRulesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CalculationRuleWhereInput
+  }
+
+  /**
+   * TestDefinitionCountOutputType without action
+   */
+  export type TestDefinitionCountOutputTypeCountDeltaCheckRulesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: DeltaCheckRuleWhereInput
+  }
+
+  /**
+   * TestDefinitionCountOutputType without action
+   */
+  export type TestDefinitionCountOutputTypeCountReflexRulesAsParentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReflexTestRuleWhereInput
+  }
+
+  /**
+   * TestDefinitionCountOutputType without action
+   */
+  export type TestDefinitionCountOutputTypeCountReflexRulesAsChildArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReflexTestRuleWhereInput
+  }
+
+  /**
+   * TestDefinitionCountOutputType without action
+   */
+  export type TestDefinitionCountOutputTypeCountTestResultsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ResultWhereInput
+  }
+
+
+  /**
+   * Count Type InterpretationRuleCountOutputType
+   */
+
+  export type InterpretationRuleCountOutputType = {
+    results: number
+  }
+
+  export type InterpretationRuleCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    results?: boolean | InterpretationRuleCountOutputTypeCountResultsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * InterpretationRuleCountOutputType without action
+   */
+  export type InterpretationRuleCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRuleCountOutputType
+     */
+    select?: InterpretationRuleCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * InterpretationRuleCountOutputType without action
+   */
+  export type InterpretationRuleCountOutputTypeCountResultsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ResultWhereInput
+  }
+
+
+  /**
+   * Count Type DeltaCheckRuleCountOutputType
+   */
+
+  export type DeltaCheckRuleCountOutputType = {
+    deltaCheckResults: number
+  }
+
+  export type DeltaCheckRuleCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    deltaCheckResults?: boolean | DeltaCheckRuleCountOutputTypeCountDeltaCheckResultsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * DeltaCheckRuleCountOutputType without action
+   */
+  export type DeltaCheckRuleCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRuleCountOutputType
+     */
+    select?: DeltaCheckRuleCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * DeltaCheckRuleCountOutputType without action
+   */
+  export type DeltaCheckRuleCountOutputTypeCountDeltaCheckResultsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: DeltaCheckResultWhereInput
+  }
+
+
+  /**
+   * Count Type EmailTemplateCountOutputType
+   */
+
+  export type EmailTemplateCountOutputType = {
+    emailLogs: number
+  }
+
+  export type EmailTemplateCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    emailLogs?: boolean | EmailTemplateCountOutputTypeCountEmailLogsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * EmailTemplateCountOutputType without action
+   */
+  export type EmailTemplateCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplateCountOutputType
+     */
+    select?: EmailTemplateCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * EmailTemplateCountOutputType without action
+   */
+  export type EmailTemplateCountOutputTypeCountEmailLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EmailLogWhereInput
   }
 
 
@@ -5988,6 +7210,7 @@ export namespace Prisma {
     profileTests?: boolean | Test$profileTestsArgs<ExtArgs>
     sampleTests?: boolean | Test$sampleTestsArgs<ExtArgs>
     results?: boolean | Test$resultsArgs<ExtArgs>
+    testDefs?: boolean | Test$testDefsArgs<ExtArgs>
     _count?: boolean | TestCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["test"]>
 
@@ -6019,6 +7242,7 @@ export namespace Prisma {
     profileTests?: boolean | Test$profileTestsArgs<ExtArgs>
     sampleTests?: boolean | Test$sampleTestsArgs<ExtArgs>
     results?: boolean | Test$resultsArgs<ExtArgs>
+    testDefs?: boolean | Test$testDefsArgs<ExtArgs>
     _count?: boolean | TestCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type TestIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -6029,6 +7253,7 @@ export namespace Prisma {
       profileTests: Prisma.$TestProfileItemPayload<ExtArgs>[]
       sampleTests: Prisma.$SampleTestPayload<ExtArgs>[]
       results: Prisma.$ResultPayload<ExtArgs>[]
+      testDefs: Prisma.$TestDefinitionPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -6407,6 +7632,7 @@ export namespace Prisma {
     profileTests<T extends Test$profileTestsArgs<ExtArgs> = {}>(args?: Subset<T, Test$profileTestsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TestProfileItemPayload<ExtArgs>, T, "findMany"> | Null>
     sampleTests<T extends Test$sampleTestsArgs<ExtArgs> = {}>(args?: Subset<T, Test$sampleTestsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SampleTestPayload<ExtArgs>, T, "findMany"> | Null>
     results<T extends Test$resultsArgs<ExtArgs> = {}>(args?: Subset<T, Test$resultsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ResultPayload<ExtArgs>, T, "findMany"> | Null>
+    testDefs<T extends Test$testDefsArgs<ExtArgs> = {}>(args?: Subset<T, Test$testDefsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findMany"> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -6814,6 +8040,26 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: ResultScalarFieldEnum | ResultScalarFieldEnum[]
+  }
+
+  /**
+   * Test.testDefs
+   */
+  export type Test$testDefsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    where?: TestDefinitionWhereInput
+    orderBy?: TestDefinitionOrderByWithRelationInput | TestDefinitionOrderByWithRelationInput[]
+    cursor?: TestDefinitionWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: TestDefinitionScalarFieldEnum | TestDefinitionScalarFieldEnum[]
   }
 
   /**
@@ -8906,6 +10152,7 @@ export namespace Prisma {
     profile?: boolean | Sample$profileArgs<ExtArgs>
     tests?: boolean | Sample$testsArgs<ExtArgs>
     results?: boolean | Sample$resultsArgs<ExtArgs>
+    emailLogs?: boolean | Sample$emailLogsArgs<ExtArgs>
     invoice?: boolean | Sample$invoiceArgs<ExtArgs>
     _count?: boolean | SampleCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["sample"]>
@@ -8939,6 +10186,7 @@ export namespace Prisma {
     profile?: boolean | Sample$profileArgs<ExtArgs>
     tests?: boolean | Sample$testsArgs<ExtArgs>
     results?: boolean | Sample$resultsArgs<ExtArgs>
+    emailLogs?: boolean | Sample$emailLogsArgs<ExtArgs>
     invoice?: boolean | Sample$invoiceArgs<ExtArgs>
     _count?: boolean | SampleCountOutputTypeDefaultArgs<ExtArgs>
   }
@@ -8954,6 +10202,7 @@ export namespace Prisma {
       profile: Prisma.$TestProfilePayload<ExtArgs> | null
       tests: Prisma.$SampleTestPayload<ExtArgs>[]
       results: Prisma.$ResultPayload<ExtArgs>[]
+      emailLogs: Prisma.$EmailLogPayload<ExtArgs>[]
       invoice: Prisma.$InvoicePayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
@@ -9333,6 +10582,7 @@ export namespace Prisma {
     profile<T extends Sample$profileArgs<ExtArgs> = {}>(args?: Subset<T, Sample$profileArgs<ExtArgs>>): Prisma__TestProfileClient<$Result.GetResult<Prisma.$TestProfilePayload<ExtArgs>, T, "findUniqueOrThrow"> | null, null, ExtArgs>
     tests<T extends Sample$testsArgs<ExtArgs> = {}>(args?: Subset<T, Sample$testsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SampleTestPayload<ExtArgs>, T, "findMany"> | Null>
     results<T extends Sample$resultsArgs<ExtArgs> = {}>(args?: Subset<T, Sample$resultsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ResultPayload<ExtArgs>, T, "findMany"> | Null>
+    emailLogs<T extends Sample$emailLogsArgs<ExtArgs> = {}>(args?: Subset<T, Sample$emailLogsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "findMany"> | Null>
     invoice<T extends Sample$invoiceArgs<ExtArgs> = {}>(args?: Subset<T, Sample$invoiceArgs<ExtArgs>>): Prisma__InvoiceClient<$Result.GetResult<Prisma.$InvoicePayload<ExtArgs>, T, "findUniqueOrThrow"> | null, null, ExtArgs>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -9739,6 +10989,26 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: ResultScalarFieldEnum | ResultScalarFieldEnum[]
+  }
+
+  /**
+   * Sample.emailLogs
+   */
+  export type Sample$emailLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    where?: EmailLogWhereInput
+    orderBy?: EmailLogOrderByWithRelationInput | EmailLogOrderByWithRelationInput[]
+    cursor?: EmailLogWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: EmailLogScalarFieldEnum | EmailLogScalarFieldEnum[]
   }
 
   /**
@@ -10744,36 +12014,51 @@ export namespace Prisma {
     id: string | null
     sampleId: string | null
     testId: string | null
+    testDefId: string | null
     value: string | null
+    calculatedValues: string | null
     isNormal: boolean | null
+    abnormalFlags: string | null
+    interpretationId: string | null
     notes: string | null
     enteredBy: string | null
     enteredAt: Date | null
     createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type ResultMaxAggregateOutputType = {
     id: string | null
     sampleId: string | null
     testId: string | null
+    testDefId: string | null
     value: string | null
+    calculatedValues: string | null
     isNormal: boolean | null
+    abnormalFlags: string | null
+    interpretationId: string | null
     notes: string | null
     enteredBy: string | null
     enteredAt: Date | null
     createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type ResultCountAggregateOutputType = {
     id: number
     sampleId: number
     testId: number
+    testDefId: number
     value: number
+    calculatedValues: number
     isNormal: number
+    abnormalFlags: number
+    interpretationId: number
     notes: number
     enteredBy: number
     enteredAt: number
     createdAt: number
+    updatedAt: number
     _all: number
   }
 
@@ -10782,36 +12067,51 @@ export namespace Prisma {
     id?: true
     sampleId?: true
     testId?: true
+    testDefId?: true
     value?: true
+    calculatedValues?: true
     isNormal?: true
+    abnormalFlags?: true
+    interpretationId?: true
     notes?: true
     enteredBy?: true
     enteredAt?: true
     createdAt?: true
+    updatedAt?: true
   }
 
   export type ResultMaxAggregateInputType = {
     id?: true
     sampleId?: true
     testId?: true
+    testDefId?: true
     value?: true
+    calculatedValues?: true
     isNormal?: true
+    abnormalFlags?: true
+    interpretationId?: true
     notes?: true
     enteredBy?: true
     enteredAt?: true
     createdAt?: true
+    updatedAt?: true
   }
 
   export type ResultCountAggregateInputType = {
     id?: true
     sampleId?: true
     testId?: true
+    testDefId?: true
     value?: true
+    calculatedValues?: true
     isNormal?: true
+    abnormalFlags?: true
+    interpretationId?: true
     notes?: true
     enteredBy?: true
     enteredAt?: true
     createdAt?: true
+    updatedAt?: true
     _all?: true
   }
 
@@ -10891,12 +12191,17 @@ export namespace Prisma {
     id: string
     sampleId: string
     testId: string
+    testDefId: string | null
     value: string
+    calculatedValues: string | null
     isNormal: boolean
+    abnormalFlags: string | null
+    interpretationId: string | null
     notes: string | null
     enteredBy: string | null
     enteredAt: Date
     createdAt: Date
+    updatedAt: Date
     _count: ResultCountAggregateOutputType | null
     _min: ResultMinAggregateOutputType | null
     _max: ResultMaxAggregateOutputType | null
@@ -10920,49 +12225,78 @@ export namespace Prisma {
     id?: boolean
     sampleId?: boolean
     testId?: boolean
+    testDefId?: boolean
     value?: boolean
+    calculatedValues?: boolean
     isNormal?: boolean
+    abnormalFlags?: boolean
+    interpretationId?: boolean
     notes?: boolean
     enteredBy?: boolean
     enteredAt?: boolean
     createdAt?: boolean
+    updatedAt?: boolean
     sample?: boolean | SampleDefaultArgs<ExtArgs>
     test?: boolean | TestDefaultArgs<ExtArgs>
+    testDef?: boolean | Result$testDefArgs<ExtArgs>
+    interpretation?: boolean | Result$interpretationArgs<ExtArgs>
+    deltaCheckResults?: boolean | Result$deltaCheckResultsArgs<ExtArgs>
+    emailLogs?: boolean | Result$emailLogsArgs<ExtArgs>
+    _count?: boolean | ResultCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["result"]>
 
   export type ResultSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     sampleId?: boolean
     testId?: boolean
+    testDefId?: boolean
     value?: boolean
+    calculatedValues?: boolean
     isNormal?: boolean
+    abnormalFlags?: boolean
+    interpretationId?: boolean
     notes?: boolean
     enteredBy?: boolean
     enteredAt?: boolean
     createdAt?: boolean
+    updatedAt?: boolean
     sample?: boolean | SampleDefaultArgs<ExtArgs>
     test?: boolean | TestDefaultArgs<ExtArgs>
+    testDef?: boolean | Result$testDefArgs<ExtArgs>
+    interpretation?: boolean | Result$interpretationArgs<ExtArgs>
   }, ExtArgs["result"]["result"]>
 
   export type ResultSelectScalar = {
     id?: boolean
     sampleId?: boolean
     testId?: boolean
+    testDefId?: boolean
     value?: boolean
+    calculatedValues?: boolean
     isNormal?: boolean
+    abnormalFlags?: boolean
+    interpretationId?: boolean
     notes?: boolean
     enteredBy?: boolean
     enteredAt?: boolean
     createdAt?: boolean
+    updatedAt?: boolean
   }
 
   export type ResultInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     sample?: boolean | SampleDefaultArgs<ExtArgs>
     test?: boolean | TestDefaultArgs<ExtArgs>
+    testDef?: boolean | Result$testDefArgs<ExtArgs>
+    interpretation?: boolean | Result$interpretationArgs<ExtArgs>
+    deltaCheckResults?: boolean | Result$deltaCheckResultsArgs<ExtArgs>
+    emailLogs?: boolean | Result$emailLogsArgs<ExtArgs>
+    _count?: boolean | ResultCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type ResultIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     sample?: boolean | SampleDefaultArgs<ExtArgs>
     test?: boolean | TestDefaultArgs<ExtArgs>
+    testDef?: boolean | Result$testDefArgs<ExtArgs>
+    interpretation?: boolean | Result$interpretationArgs<ExtArgs>
   }
 
   export type $ResultPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -10970,17 +12304,26 @@ export namespace Prisma {
     objects: {
       sample: Prisma.$SamplePayload<ExtArgs>
       test: Prisma.$TestPayload<ExtArgs>
+      testDef: Prisma.$TestDefinitionPayload<ExtArgs> | null
+      interpretation: Prisma.$InterpretationRulePayload<ExtArgs> | null
+      deltaCheckResults: Prisma.$DeltaCheckResultPayload<ExtArgs>[]
+      emailLogs: Prisma.$EmailLogPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
       sampleId: string
       testId: string
+      testDefId: string | null
       value: string
+      calculatedValues: string | null
       isNormal: boolean
+      abnormalFlags: string | null
+      interpretationId: string | null
       notes: string | null
       enteredBy: string | null
       enteredAt: Date
       createdAt: Date
+      updatedAt: Date
     }, ExtArgs["result"]["result"]>
     composites: {}
   }
@@ -11347,6 +12690,10 @@ export namespace Prisma {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     sample<T extends SampleDefaultArgs<ExtArgs> = {}>(args?: Subset<T, SampleDefaultArgs<ExtArgs>>): Prisma__SampleClient<$Result.GetResult<Prisma.$SamplePayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
     test<T extends TestDefaultArgs<ExtArgs> = {}>(args?: Subset<T, TestDefaultArgs<ExtArgs>>): Prisma__TestClient<$Result.GetResult<Prisma.$TestPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
+    testDef<T extends Result$testDefArgs<ExtArgs> = {}>(args?: Subset<T, Result$testDefArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findUniqueOrThrow"> | null, null, ExtArgs>
+    interpretation<T extends Result$interpretationArgs<ExtArgs> = {}>(args?: Subset<T, Result$interpretationArgs<ExtArgs>>): Prisma__InterpretationRuleClient<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "findUniqueOrThrow"> | null, null, ExtArgs>
+    deltaCheckResults<T extends Result$deltaCheckResultsArgs<ExtArgs> = {}>(args?: Subset<T, Result$deltaCheckResultsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "findMany"> | Null>
+    emailLogs<T extends Result$emailLogsArgs<ExtArgs> = {}>(args?: Subset<T, Result$emailLogsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "findMany"> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -11379,12 +12726,17 @@ export namespace Prisma {
     readonly id: FieldRef<"Result", 'String'>
     readonly sampleId: FieldRef<"Result", 'String'>
     readonly testId: FieldRef<"Result", 'String'>
+    readonly testDefId: FieldRef<"Result", 'String'>
     readonly value: FieldRef<"Result", 'String'>
+    readonly calculatedValues: FieldRef<"Result", 'String'>
     readonly isNormal: FieldRef<"Result", 'Boolean'>
+    readonly abnormalFlags: FieldRef<"Result", 'String'>
+    readonly interpretationId: FieldRef<"Result", 'String'>
     readonly notes: FieldRef<"Result", 'String'>
     readonly enteredBy: FieldRef<"Result", 'String'>
     readonly enteredAt: FieldRef<"Result", 'DateTime'>
     readonly createdAt: FieldRef<"Result", 'DateTime'>
+    readonly updatedAt: FieldRef<"Result", 'DateTime'>
   }
     
 
@@ -11701,6 +13053,76 @@ export namespace Prisma {
   }
 
   /**
+   * Result.testDef
+   */
+  export type Result$testDefArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    where?: TestDefinitionWhereInput
+  }
+
+  /**
+   * Result.interpretation
+   */
+  export type Result$interpretationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+    where?: InterpretationRuleWhereInput
+  }
+
+  /**
+   * Result.deltaCheckResults
+   */
+  export type Result$deltaCheckResultsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+    where?: DeltaCheckResultWhereInput
+    orderBy?: DeltaCheckResultOrderByWithRelationInput | DeltaCheckResultOrderByWithRelationInput[]
+    cursor?: DeltaCheckResultWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: DeltaCheckResultScalarFieldEnum | DeltaCheckResultScalarFieldEnum[]
+  }
+
+  /**
+   * Result.emailLogs
+   */
+  export type Result$emailLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    where?: EmailLogWhereInput
+    orderBy?: EmailLogOrderByWithRelationInput | EmailLogOrderByWithRelationInput[]
+    cursor?: EmailLogWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: EmailLogScalarFieldEnum | EmailLogScalarFieldEnum[]
+  }
+
+  /**
    * Result without action
    */
   export type ResultDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -12002,6 +13424,7 @@ export namespace Prisma {
     lab?: boolean | LabDefaultArgs<ExtArgs>
     items?: boolean | Invoice$itemsArgs<ExtArgs>
     commissions?: boolean | Invoice$commissionsArgs<ExtArgs>
+    emailLogs?: boolean | Invoice$emailLogsArgs<ExtArgs>
     _count?: boolean | InvoiceCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["invoice"]>
 
@@ -12048,6 +13471,7 @@ export namespace Prisma {
     lab?: boolean | LabDefaultArgs<ExtArgs>
     items?: boolean | Invoice$itemsArgs<ExtArgs>
     commissions?: boolean | Invoice$commissionsArgs<ExtArgs>
+    emailLogs?: boolean | Invoice$emailLogsArgs<ExtArgs>
     _count?: boolean | InvoiceCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type InvoiceIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -12064,6 +13488,7 @@ export namespace Prisma {
       lab: Prisma.$LabPayload<ExtArgs>
       items: Prisma.$InvoiceItemPayload<ExtArgs>[]
       commissions: Prisma.$CommissionPayload<ExtArgs>[]
+      emailLogs: Prisma.$EmailLogPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -12449,6 +13874,7 @@ export namespace Prisma {
     lab<T extends LabDefaultArgs<ExtArgs> = {}>(args?: Subset<T, LabDefaultArgs<ExtArgs>>): Prisma__LabClient<$Result.GetResult<Prisma.$LabPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
     items<T extends Invoice$itemsArgs<ExtArgs> = {}>(args?: Subset<T, Invoice$itemsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InvoiceItemPayload<ExtArgs>, T, "findMany"> | Null>
     commissions<T extends Invoice$commissionsArgs<ExtArgs> = {}>(args?: Subset<T, Invoice$commissionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CommissionPayload<ExtArgs>, T, "findMany"> | Null>
+    emailLogs<T extends Invoice$emailLogsArgs<ExtArgs> = {}>(args?: Subset<T, Invoice$emailLogsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "findMany"> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -12860,6 +14286,26 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: CommissionScalarFieldEnum | CommissionScalarFieldEnum[]
+  }
+
+  /**
+   * Invoice.emailLogs
+   */
+  export type Invoice$emailLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    where?: EmailLogWhereInput
+    orderBy?: EmailLogOrderByWithRelationInput | EmailLogOrderByWithRelationInput[]
+    cursor?: EmailLogWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: EmailLogScalarFieldEnum | EmailLogScalarFieldEnum[]
   }
 
   /**
@@ -20793,6 +22239,11571 @@ export namespace Prisma {
 
 
   /**
+   * Model TestCategory
+   */
+
+  export type AggregateTestCategory = {
+    _count: TestCategoryCountAggregateOutputType | null
+    _min: TestCategoryMinAggregateOutputType | null
+    _max: TestCategoryMaxAggregateOutputType | null
+  }
+
+  export type TestCategoryMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    description: string | null
+    code: string | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type TestCategoryMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    description: string | null
+    code: string | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type TestCategoryCountAggregateOutputType = {
+    id: number
+    name: number
+    description: number
+    code: number
+    isActive: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type TestCategoryMinAggregateInputType = {
+    id?: true
+    name?: true
+    description?: true
+    code?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type TestCategoryMaxAggregateInputType = {
+    id?: true
+    name?: true
+    description?: true
+    code?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type TestCategoryCountAggregateInputType = {
+    id?: true
+    name?: true
+    description?: true
+    code?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type TestCategoryAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which TestCategory to aggregate.
+     */
+    where?: TestCategoryWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TestCategories to fetch.
+     */
+    orderBy?: TestCategoryOrderByWithRelationInput | TestCategoryOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: TestCategoryWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TestCategories from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TestCategories.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned TestCategories
+    **/
+    _count?: true | TestCategoryCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: TestCategoryMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: TestCategoryMaxAggregateInputType
+  }
+
+  export type GetTestCategoryAggregateType<T extends TestCategoryAggregateArgs> = {
+        [P in keyof T & keyof AggregateTestCategory]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateTestCategory[P]>
+      : GetScalarType<T[P], AggregateTestCategory[P]>
+  }
+
+
+
+
+  export type TestCategoryGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TestCategoryWhereInput
+    orderBy?: TestCategoryOrderByWithAggregationInput | TestCategoryOrderByWithAggregationInput[]
+    by: TestCategoryScalarFieldEnum[] | TestCategoryScalarFieldEnum
+    having?: TestCategoryScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: TestCategoryCountAggregateInputType | true
+    _min?: TestCategoryMinAggregateInputType
+    _max?: TestCategoryMaxAggregateInputType
+  }
+
+  export type TestCategoryGroupByOutputType = {
+    id: string
+    name: string
+    description: string | null
+    code: string
+    isActive: boolean
+    createdAt: Date
+    updatedAt: Date
+    _count: TestCategoryCountAggregateOutputType | null
+    _min: TestCategoryMinAggregateOutputType | null
+    _max: TestCategoryMaxAggregateOutputType | null
+  }
+
+  type GetTestCategoryGroupByPayload<T extends TestCategoryGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<TestCategoryGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof TestCategoryGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], TestCategoryGroupByOutputType[P]>
+            : GetScalarType<T[P], TestCategoryGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type TestCategorySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    description?: boolean
+    code?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    definitions?: boolean | TestCategory$definitionsArgs<ExtArgs>
+    _count?: boolean | TestCategoryCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["testCategory"]>
+
+  export type TestCategorySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    description?: boolean
+    code?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["testCategory"]>
+
+  export type TestCategorySelectScalar = {
+    id?: boolean
+    name?: boolean
+    description?: boolean
+    code?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type TestCategoryInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    definitions?: boolean | TestCategory$definitionsArgs<ExtArgs>
+    _count?: boolean | TestCategoryCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type TestCategoryIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $TestCategoryPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "TestCategory"
+    objects: {
+      definitions: Prisma.$TestDefinitionPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      description: string | null
+      code: string
+      isActive: boolean
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["testCategory"]>
+    composites: {}
+  }
+
+  type TestCategoryGetPayload<S extends boolean | null | undefined | TestCategoryDefaultArgs> = $Result.GetResult<Prisma.$TestCategoryPayload, S>
+
+  type TestCategoryCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<TestCategoryFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: TestCategoryCountAggregateInputType | true
+    }
+
+  export interface TestCategoryDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['TestCategory'], meta: { name: 'TestCategory' } }
+    /**
+     * Find zero or one TestCategory that matches the filter.
+     * @param {TestCategoryFindUniqueArgs} args - Arguments to find a TestCategory
+     * @example
+     * // Get one TestCategory
+     * const testCategory = await prisma.testCategory.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends TestCategoryFindUniqueArgs>(args: SelectSubset<T, TestCategoryFindUniqueArgs<ExtArgs>>): Prisma__TestCategoryClient<$Result.GetResult<Prisma.$TestCategoryPayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one TestCategory that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {TestCategoryFindUniqueOrThrowArgs} args - Arguments to find a TestCategory
+     * @example
+     * // Get one TestCategory
+     * const testCategory = await prisma.testCategory.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends TestCategoryFindUniqueOrThrowArgs>(args: SelectSubset<T, TestCategoryFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TestCategoryClient<$Result.GetResult<Prisma.$TestCategoryPayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first TestCategory that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestCategoryFindFirstArgs} args - Arguments to find a TestCategory
+     * @example
+     * // Get one TestCategory
+     * const testCategory = await prisma.testCategory.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends TestCategoryFindFirstArgs>(args?: SelectSubset<T, TestCategoryFindFirstArgs<ExtArgs>>): Prisma__TestCategoryClient<$Result.GetResult<Prisma.$TestCategoryPayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first TestCategory that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestCategoryFindFirstOrThrowArgs} args - Arguments to find a TestCategory
+     * @example
+     * // Get one TestCategory
+     * const testCategory = await prisma.testCategory.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends TestCategoryFindFirstOrThrowArgs>(args?: SelectSubset<T, TestCategoryFindFirstOrThrowArgs<ExtArgs>>): Prisma__TestCategoryClient<$Result.GetResult<Prisma.$TestCategoryPayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more TestCategories that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestCategoryFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all TestCategories
+     * const testCategories = await prisma.testCategory.findMany()
+     * 
+     * // Get first 10 TestCategories
+     * const testCategories = await prisma.testCategory.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const testCategoryWithIdOnly = await prisma.testCategory.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends TestCategoryFindManyArgs>(args?: SelectSubset<T, TestCategoryFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TestCategoryPayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a TestCategory.
+     * @param {TestCategoryCreateArgs} args - Arguments to create a TestCategory.
+     * @example
+     * // Create one TestCategory
+     * const TestCategory = await prisma.testCategory.create({
+     *   data: {
+     *     // ... data to create a TestCategory
+     *   }
+     * })
+     * 
+     */
+    create<T extends TestCategoryCreateArgs>(args: SelectSubset<T, TestCategoryCreateArgs<ExtArgs>>): Prisma__TestCategoryClient<$Result.GetResult<Prisma.$TestCategoryPayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many TestCategories.
+     * @param {TestCategoryCreateManyArgs} args - Arguments to create many TestCategories.
+     * @example
+     * // Create many TestCategories
+     * const testCategory = await prisma.testCategory.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends TestCategoryCreateManyArgs>(args?: SelectSubset<T, TestCategoryCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many TestCategories and returns the data saved in the database.
+     * @param {TestCategoryCreateManyAndReturnArgs} args - Arguments to create many TestCategories.
+     * @example
+     * // Create many TestCategories
+     * const testCategory = await prisma.testCategory.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many TestCategories and only return the `id`
+     * const testCategoryWithIdOnly = await prisma.testCategory.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends TestCategoryCreateManyAndReturnArgs>(args?: SelectSubset<T, TestCategoryCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TestCategoryPayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a TestCategory.
+     * @param {TestCategoryDeleteArgs} args - Arguments to delete one TestCategory.
+     * @example
+     * // Delete one TestCategory
+     * const TestCategory = await prisma.testCategory.delete({
+     *   where: {
+     *     // ... filter to delete one TestCategory
+     *   }
+     * })
+     * 
+     */
+    delete<T extends TestCategoryDeleteArgs>(args: SelectSubset<T, TestCategoryDeleteArgs<ExtArgs>>): Prisma__TestCategoryClient<$Result.GetResult<Prisma.$TestCategoryPayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one TestCategory.
+     * @param {TestCategoryUpdateArgs} args - Arguments to update one TestCategory.
+     * @example
+     * // Update one TestCategory
+     * const testCategory = await prisma.testCategory.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends TestCategoryUpdateArgs>(args: SelectSubset<T, TestCategoryUpdateArgs<ExtArgs>>): Prisma__TestCategoryClient<$Result.GetResult<Prisma.$TestCategoryPayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more TestCategories.
+     * @param {TestCategoryDeleteManyArgs} args - Arguments to filter TestCategories to delete.
+     * @example
+     * // Delete a few TestCategories
+     * const { count } = await prisma.testCategory.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends TestCategoryDeleteManyArgs>(args?: SelectSubset<T, TestCategoryDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more TestCategories.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestCategoryUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many TestCategories
+     * const testCategory = await prisma.testCategory.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends TestCategoryUpdateManyArgs>(args: SelectSubset<T, TestCategoryUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one TestCategory.
+     * @param {TestCategoryUpsertArgs} args - Arguments to update or create a TestCategory.
+     * @example
+     * // Update or create a TestCategory
+     * const testCategory = await prisma.testCategory.upsert({
+     *   create: {
+     *     // ... data to create a TestCategory
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the TestCategory we want to update
+     *   }
+     * })
+     */
+    upsert<T extends TestCategoryUpsertArgs>(args: SelectSubset<T, TestCategoryUpsertArgs<ExtArgs>>): Prisma__TestCategoryClient<$Result.GetResult<Prisma.$TestCategoryPayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of TestCategories.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestCategoryCountArgs} args - Arguments to filter TestCategories to count.
+     * @example
+     * // Count the number of TestCategories
+     * const count = await prisma.testCategory.count({
+     *   where: {
+     *     // ... the filter for the TestCategories we want to count
+     *   }
+     * })
+    **/
+    count<T extends TestCategoryCountArgs>(
+      args?: Subset<T, TestCategoryCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], TestCategoryCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a TestCategory.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestCategoryAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends TestCategoryAggregateArgs>(args: Subset<T, TestCategoryAggregateArgs>): Prisma.PrismaPromise<GetTestCategoryAggregateType<T>>
+
+    /**
+     * Group by TestCategory.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestCategoryGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends TestCategoryGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: TestCategoryGroupByArgs['orderBy'] }
+        : { orderBy?: TestCategoryGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, TestCategoryGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTestCategoryGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the TestCategory model
+   */
+  readonly fields: TestCategoryFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for TestCategory.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__TestCategoryClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    definitions<T extends TestCategory$definitionsArgs<ExtArgs> = {}>(args?: Subset<T, TestCategory$definitionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findMany"> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the TestCategory model
+   */ 
+  interface TestCategoryFieldRefs {
+    readonly id: FieldRef<"TestCategory", 'String'>
+    readonly name: FieldRef<"TestCategory", 'String'>
+    readonly description: FieldRef<"TestCategory", 'String'>
+    readonly code: FieldRef<"TestCategory", 'String'>
+    readonly isActive: FieldRef<"TestCategory", 'Boolean'>
+    readonly createdAt: FieldRef<"TestCategory", 'DateTime'>
+    readonly updatedAt: FieldRef<"TestCategory", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * TestCategory findUnique
+   */
+  export type TestCategoryFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategory
+     */
+    select?: TestCategorySelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestCategoryInclude<ExtArgs> | null
+    /**
+     * Filter, which TestCategory to fetch.
+     */
+    where: TestCategoryWhereUniqueInput
+  }
+
+  /**
+   * TestCategory findUniqueOrThrow
+   */
+  export type TestCategoryFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategory
+     */
+    select?: TestCategorySelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestCategoryInclude<ExtArgs> | null
+    /**
+     * Filter, which TestCategory to fetch.
+     */
+    where: TestCategoryWhereUniqueInput
+  }
+
+  /**
+   * TestCategory findFirst
+   */
+  export type TestCategoryFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategory
+     */
+    select?: TestCategorySelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestCategoryInclude<ExtArgs> | null
+    /**
+     * Filter, which TestCategory to fetch.
+     */
+    where?: TestCategoryWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TestCategories to fetch.
+     */
+    orderBy?: TestCategoryOrderByWithRelationInput | TestCategoryOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for TestCategories.
+     */
+    cursor?: TestCategoryWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TestCategories from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TestCategories.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of TestCategories.
+     */
+    distinct?: TestCategoryScalarFieldEnum | TestCategoryScalarFieldEnum[]
+  }
+
+  /**
+   * TestCategory findFirstOrThrow
+   */
+  export type TestCategoryFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategory
+     */
+    select?: TestCategorySelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestCategoryInclude<ExtArgs> | null
+    /**
+     * Filter, which TestCategory to fetch.
+     */
+    where?: TestCategoryWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TestCategories to fetch.
+     */
+    orderBy?: TestCategoryOrderByWithRelationInput | TestCategoryOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for TestCategories.
+     */
+    cursor?: TestCategoryWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TestCategories from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TestCategories.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of TestCategories.
+     */
+    distinct?: TestCategoryScalarFieldEnum | TestCategoryScalarFieldEnum[]
+  }
+
+  /**
+   * TestCategory findMany
+   */
+  export type TestCategoryFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategory
+     */
+    select?: TestCategorySelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestCategoryInclude<ExtArgs> | null
+    /**
+     * Filter, which TestCategories to fetch.
+     */
+    where?: TestCategoryWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TestCategories to fetch.
+     */
+    orderBy?: TestCategoryOrderByWithRelationInput | TestCategoryOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing TestCategories.
+     */
+    cursor?: TestCategoryWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TestCategories from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TestCategories.
+     */
+    skip?: number
+    distinct?: TestCategoryScalarFieldEnum | TestCategoryScalarFieldEnum[]
+  }
+
+  /**
+   * TestCategory create
+   */
+  export type TestCategoryCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategory
+     */
+    select?: TestCategorySelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestCategoryInclude<ExtArgs> | null
+    /**
+     * The data needed to create a TestCategory.
+     */
+    data: XOR<TestCategoryCreateInput, TestCategoryUncheckedCreateInput>
+  }
+
+  /**
+   * TestCategory createMany
+   */
+  export type TestCategoryCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many TestCategories.
+     */
+    data: TestCategoryCreateManyInput | TestCategoryCreateManyInput[]
+  }
+
+  /**
+   * TestCategory createManyAndReturn
+   */
+  export type TestCategoryCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategory
+     */
+    select?: TestCategorySelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many TestCategories.
+     */
+    data: TestCategoryCreateManyInput | TestCategoryCreateManyInput[]
+  }
+
+  /**
+   * TestCategory update
+   */
+  export type TestCategoryUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategory
+     */
+    select?: TestCategorySelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestCategoryInclude<ExtArgs> | null
+    /**
+     * The data needed to update a TestCategory.
+     */
+    data: XOR<TestCategoryUpdateInput, TestCategoryUncheckedUpdateInput>
+    /**
+     * Choose, which TestCategory to update.
+     */
+    where: TestCategoryWhereUniqueInput
+  }
+
+  /**
+   * TestCategory updateMany
+   */
+  export type TestCategoryUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update TestCategories.
+     */
+    data: XOR<TestCategoryUpdateManyMutationInput, TestCategoryUncheckedUpdateManyInput>
+    /**
+     * Filter which TestCategories to update
+     */
+    where?: TestCategoryWhereInput
+  }
+
+  /**
+   * TestCategory upsert
+   */
+  export type TestCategoryUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategory
+     */
+    select?: TestCategorySelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestCategoryInclude<ExtArgs> | null
+    /**
+     * The filter to search for the TestCategory to update in case it exists.
+     */
+    where: TestCategoryWhereUniqueInput
+    /**
+     * In case the TestCategory found by the `where` argument doesn't exist, create a new TestCategory with this data.
+     */
+    create: XOR<TestCategoryCreateInput, TestCategoryUncheckedCreateInput>
+    /**
+     * In case the TestCategory was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<TestCategoryUpdateInput, TestCategoryUncheckedUpdateInput>
+  }
+
+  /**
+   * TestCategory delete
+   */
+  export type TestCategoryDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategory
+     */
+    select?: TestCategorySelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestCategoryInclude<ExtArgs> | null
+    /**
+     * Filter which TestCategory to delete.
+     */
+    where: TestCategoryWhereUniqueInput
+  }
+
+  /**
+   * TestCategory deleteMany
+   */
+  export type TestCategoryDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which TestCategories to delete
+     */
+    where?: TestCategoryWhereInput
+  }
+
+  /**
+   * TestCategory.definitions
+   */
+  export type TestCategory$definitionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    where?: TestDefinitionWhereInput
+    orderBy?: TestDefinitionOrderByWithRelationInput | TestDefinitionOrderByWithRelationInput[]
+    cursor?: TestDefinitionWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: TestDefinitionScalarFieldEnum | TestDefinitionScalarFieldEnum[]
+  }
+
+  /**
+   * TestCategory without action
+   */
+  export type TestCategoryDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestCategory
+     */
+    select?: TestCategorySelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestCategoryInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model TestDefinition
+   */
+
+  export type AggregateTestDefinition = {
+    _count: TestDefinitionCountAggregateOutputType | null
+    _min: TestDefinitionMinAggregateOutputType | null
+    _max: TestDefinitionMaxAggregateOutputType | null
+  }
+
+  export type TestDefinitionMinAggregateOutputType = {
+    id: string | null
+    testId: string | null
+    categoryId: string | null
+    name: string | null
+    code: string | null
+    unit: string | null
+    sampleType: string | null
+    testFields: string | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type TestDefinitionMaxAggregateOutputType = {
+    id: string | null
+    testId: string | null
+    categoryId: string | null
+    name: string | null
+    code: string | null
+    unit: string | null
+    sampleType: string | null
+    testFields: string | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type TestDefinitionCountAggregateOutputType = {
+    id: number
+    testId: number
+    categoryId: number
+    name: number
+    code: number
+    unit: number
+    sampleType: number
+    testFields: number
+    isActive: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type TestDefinitionMinAggregateInputType = {
+    id?: true
+    testId?: true
+    categoryId?: true
+    name?: true
+    code?: true
+    unit?: true
+    sampleType?: true
+    testFields?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type TestDefinitionMaxAggregateInputType = {
+    id?: true
+    testId?: true
+    categoryId?: true
+    name?: true
+    code?: true
+    unit?: true
+    sampleType?: true
+    testFields?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type TestDefinitionCountAggregateInputType = {
+    id?: true
+    testId?: true
+    categoryId?: true
+    name?: true
+    code?: true
+    unit?: true
+    sampleType?: true
+    testFields?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type TestDefinitionAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which TestDefinition to aggregate.
+     */
+    where?: TestDefinitionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TestDefinitions to fetch.
+     */
+    orderBy?: TestDefinitionOrderByWithRelationInput | TestDefinitionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: TestDefinitionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TestDefinitions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TestDefinitions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned TestDefinitions
+    **/
+    _count?: true | TestDefinitionCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: TestDefinitionMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: TestDefinitionMaxAggregateInputType
+  }
+
+  export type GetTestDefinitionAggregateType<T extends TestDefinitionAggregateArgs> = {
+        [P in keyof T & keyof AggregateTestDefinition]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateTestDefinition[P]>
+      : GetScalarType<T[P], AggregateTestDefinition[P]>
+  }
+
+
+
+
+  export type TestDefinitionGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TestDefinitionWhereInput
+    orderBy?: TestDefinitionOrderByWithAggregationInput | TestDefinitionOrderByWithAggregationInput[]
+    by: TestDefinitionScalarFieldEnum[] | TestDefinitionScalarFieldEnum
+    having?: TestDefinitionScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: TestDefinitionCountAggregateInputType | true
+    _min?: TestDefinitionMinAggregateInputType
+    _max?: TestDefinitionMaxAggregateInputType
+  }
+
+  export type TestDefinitionGroupByOutputType = {
+    id: string
+    testId: string | null
+    categoryId: string
+    name: string
+    code: string
+    unit: string | null
+    sampleType: string | null
+    testFields: string
+    isActive: boolean
+    createdAt: Date
+    updatedAt: Date
+    _count: TestDefinitionCountAggregateOutputType | null
+    _min: TestDefinitionMinAggregateOutputType | null
+    _max: TestDefinitionMaxAggregateOutputType | null
+  }
+
+  type GetTestDefinitionGroupByPayload<T extends TestDefinitionGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<TestDefinitionGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof TestDefinitionGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], TestDefinitionGroupByOutputType[P]>
+            : GetScalarType<T[P], TestDefinitionGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type TestDefinitionSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    testId?: boolean
+    categoryId?: boolean
+    name?: boolean
+    code?: boolean
+    unit?: boolean
+    sampleType?: boolean
+    testFields?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    test?: boolean | TestDefinition$testArgs<ExtArgs>
+    category?: boolean | TestCategoryDefaultArgs<ExtArgs>
+    normalRanges?: boolean | TestDefinition$normalRangesArgs<ExtArgs>
+    interpretations?: boolean | TestDefinition$interpretationsArgs<ExtArgs>
+    calculationRules?: boolean | TestDefinition$calculationRulesArgs<ExtArgs>
+    deltaCheckRules?: boolean | TestDefinition$deltaCheckRulesArgs<ExtArgs>
+    reflexRulesAsParent?: boolean | TestDefinition$reflexRulesAsParentArgs<ExtArgs>
+    reflexRulesAsChild?: boolean | TestDefinition$reflexRulesAsChildArgs<ExtArgs>
+    testResults?: boolean | TestDefinition$testResultsArgs<ExtArgs>
+    _count?: boolean | TestDefinitionCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["testDefinition"]>
+
+  export type TestDefinitionSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    testId?: boolean
+    categoryId?: boolean
+    name?: boolean
+    code?: boolean
+    unit?: boolean
+    sampleType?: boolean
+    testFields?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    test?: boolean | TestDefinition$testArgs<ExtArgs>
+    category?: boolean | TestCategoryDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["testDefinition"]>
+
+  export type TestDefinitionSelectScalar = {
+    id?: boolean
+    testId?: boolean
+    categoryId?: boolean
+    name?: boolean
+    code?: boolean
+    unit?: boolean
+    sampleType?: boolean
+    testFields?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type TestDefinitionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    test?: boolean | TestDefinition$testArgs<ExtArgs>
+    category?: boolean | TestCategoryDefaultArgs<ExtArgs>
+    normalRanges?: boolean | TestDefinition$normalRangesArgs<ExtArgs>
+    interpretations?: boolean | TestDefinition$interpretationsArgs<ExtArgs>
+    calculationRules?: boolean | TestDefinition$calculationRulesArgs<ExtArgs>
+    deltaCheckRules?: boolean | TestDefinition$deltaCheckRulesArgs<ExtArgs>
+    reflexRulesAsParent?: boolean | TestDefinition$reflexRulesAsParentArgs<ExtArgs>
+    reflexRulesAsChild?: boolean | TestDefinition$reflexRulesAsChildArgs<ExtArgs>
+    testResults?: boolean | TestDefinition$testResultsArgs<ExtArgs>
+    _count?: boolean | TestDefinitionCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type TestDefinitionIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    test?: boolean | TestDefinition$testArgs<ExtArgs>
+    category?: boolean | TestCategoryDefaultArgs<ExtArgs>
+  }
+
+  export type $TestDefinitionPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "TestDefinition"
+    objects: {
+      test: Prisma.$TestPayload<ExtArgs> | null
+      category: Prisma.$TestCategoryPayload<ExtArgs>
+      normalRanges: Prisma.$NormalRangePayload<ExtArgs>[]
+      interpretations: Prisma.$InterpretationRulePayload<ExtArgs>[]
+      calculationRules: Prisma.$CalculationRulePayload<ExtArgs>[]
+      deltaCheckRules: Prisma.$DeltaCheckRulePayload<ExtArgs>[]
+      reflexRulesAsParent: Prisma.$ReflexTestRulePayload<ExtArgs>[]
+      reflexRulesAsChild: Prisma.$ReflexTestRulePayload<ExtArgs>[]
+      testResults: Prisma.$ResultPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      testId: string | null
+      categoryId: string
+      name: string
+      code: string
+      unit: string | null
+      sampleType: string | null
+      testFields: string
+      isActive: boolean
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["testDefinition"]>
+    composites: {}
+  }
+
+  type TestDefinitionGetPayload<S extends boolean | null | undefined | TestDefinitionDefaultArgs> = $Result.GetResult<Prisma.$TestDefinitionPayload, S>
+
+  type TestDefinitionCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<TestDefinitionFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: TestDefinitionCountAggregateInputType | true
+    }
+
+  export interface TestDefinitionDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['TestDefinition'], meta: { name: 'TestDefinition' } }
+    /**
+     * Find zero or one TestDefinition that matches the filter.
+     * @param {TestDefinitionFindUniqueArgs} args - Arguments to find a TestDefinition
+     * @example
+     * // Get one TestDefinition
+     * const testDefinition = await prisma.testDefinition.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends TestDefinitionFindUniqueArgs>(args: SelectSubset<T, TestDefinitionFindUniqueArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one TestDefinition that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {TestDefinitionFindUniqueOrThrowArgs} args - Arguments to find a TestDefinition
+     * @example
+     * // Get one TestDefinition
+     * const testDefinition = await prisma.testDefinition.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends TestDefinitionFindUniqueOrThrowArgs>(args: SelectSubset<T, TestDefinitionFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first TestDefinition that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestDefinitionFindFirstArgs} args - Arguments to find a TestDefinition
+     * @example
+     * // Get one TestDefinition
+     * const testDefinition = await prisma.testDefinition.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends TestDefinitionFindFirstArgs>(args?: SelectSubset<T, TestDefinitionFindFirstArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first TestDefinition that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestDefinitionFindFirstOrThrowArgs} args - Arguments to find a TestDefinition
+     * @example
+     * // Get one TestDefinition
+     * const testDefinition = await prisma.testDefinition.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends TestDefinitionFindFirstOrThrowArgs>(args?: SelectSubset<T, TestDefinitionFindFirstOrThrowArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more TestDefinitions that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestDefinitionFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all TestDefinitions
+     * const testDefinitions = await prisma.testDefinition.findMany()
+     * 
+     * // Get first 10 TestDefinitions
+     * const testDefinitions = await prisma.testDefinition.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const testDefinitionWithIdOnly = await prisma.testDefinition.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends TestDefinitionFindManyArgs>(args?: SelectSubset<T, TestDefinitionFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a TestDefinition.
+     * @param {TestDefinitionCreateArgs} args - Arguments to create a TestDefinition.
+     * @example
+     * // Create one TestDefinition
+     * const TestDefinition = await prisma.testDefinition.create({
+     *   data: {
+     *     // ... data to create a TestDefinition
+     *   }
+     * })
+     * 
+     */
+    create<T extends TestDefinitionCreateArgs>(args: SelectSubset<T, TestDefinitionCreateArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many TestDefinitions.
+     * @param {TestDefinitionCreateManyArgs} args - Arguments to create many TestDefinitions.
+     * @example
+     * // Create many TestDefinitions
+     * const testDefinition = await prisma.testDefinition.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends TestDefinitionCreateManyArgs>(args?: SelectSubset<T, TestDefinitionCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many TestDefinitions and returns the data saved in the database.
+     * @param {TestDefinitionCreateManyAndReturnArgs} args - Arguments to create many TestDefinitions.
+     * @example
+     * // Create many TestDefinitions
+     * const testDefinition = await prisma.testDefinition.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many TestDefinitions and only return the `id`
+     * const testDefinitionWithIdOnly = await prisma.testDefinition.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends TestDefinitionCreateManyAndReturnArgs>(args?: SelectSubset<T, TestDefinitionCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a TestDefinition.
+     * @param {TestDefinitionDeleteArgs} args - Arguments to delete one TestDefinition.
+     * @example
+     * // Delete one TestDefinition
+     * const TestDefinition = await prisma.testDefinition.delete({
+     *   where: {
+     *     // ... filter to delete one TestDefinition
+     *   }
+     * })
+     * 
+     */
+    delete<T extends TestDefinitionDeleteArgs>(args: SelectSubset<T, TestDefinitionDeleteArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one TestDefinition.
+     * @param {TestDefinitionUpdateArgs} args - Arguments to update one TestDefinition.
+     * @example
+     * // Update one TestDefinition
+     * const testDefinition = await prisma.testDefinition.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends TestDefinitionUpdateArgs>(args: SelectSubset<T, TestDefinitionUpdateArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more TestDefinitions.
+     * @param {TestDefinitionDeleteManyArgs} args - Arguments to filter TestDefinitions to delete.
+     * @example
+     * // Delete a few TestDefinitions
+     * const { count } = await prisma.testDefinition.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends TestDefinitionDeleteManyArgs>(args?: SelectSubset<T, TestDefinitionDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more TestDefinitions.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestDefinitionUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many TestDefinitions
+     * const testDefinition = await prisma.testDefinition.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends TestDefinitionUpdateManyArgs>(args: SelectSubset<T, TestDefinitionUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one TestDefinition.
+     * @param {TestDefinitionUpsertArgs} args - Arguments to update or create a TestDefinition.
+     * @example
+     * // Update or create a TestDefinition
+     * const testDefinition = await prisma.testDefinition.upsert({
+     *   create: {
+     *     // ... data to create a TestDefinition
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the TestDefinition we want to update
+     *   }
+     * })
+     */
+    upsert<T extends TestDefinitionUpsertArgs>(args: SelectSubset<T, TestDefinitionUpsertArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of TestDefinitions.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestDefinitionCountArgs} args - Arguments to filter TestDefinitions to count.
+     * @example
+     * // Count the number of TestDefinitions
+     * const count = await prisma.testDefinition.count({
+     *   where: {
+     *     // ... the filter for the TestDefinitions we want to count
+     *   }
+     * })
+    **/
+    count<T extends TestDefinitionCountArgs>(
+      args?: Subset<T, TestDefinitionCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], TestDefinitionCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a TestDefinition.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestDefinitionAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends TestDefinitionAggregateArgs>(args: Subset<T, TestDefinitionAggregateArgs>): Prisma.PrismaPromise<GetTestDefinitionAggregateType<T>>
+
+    /**
+     * Group by TestDefinition.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TestDefinitionGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends TestDefinitionGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: TestDefinitionGroupByArgs['orderBy'] }
+        : { orderBy?: TestDefinitionGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, TestDefinitionGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTestDefinitionGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the TestDefinition model
+   */
+  readonly fields: TestDefinitionFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for TestDefinition.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__TestDefinitionClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    test<T extends TestDefinition$testArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinition$testArgs<ExtArgs>>): Prisma__TestClient<$Result.GetResult<Prisma.$TestPayload<ExtArgs>, T, "findUniqueOrThrow"> | null, null, ExtArgs>
+    category<T extends TestCategoryDefaultArgs<ExtArgs> = {}>(args?: Subset<T, TestCategoryDefaultArgs<ExtArgs>>): Prisma__TestCategoryClient<$Result.GetResult<Prisma.$TestCategoryPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
+    normalRanges<T extends TestDefinition$normalRangesArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinition$normalRangesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NormalRangePayload<ExtArgs>, T, "findMany"> | Null>
+    interpretations<T extends TestDefinition$interpretationsArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinition$interpretationsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "findMany"> | Null>
+    calculationRules<T extends TestDefinition$calculationRulesArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinition$calculationRulesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CalculationRulePayload<ExtArgs>, T, "findMany"> | Null>
+    deltaCheckRules<T extends TestDefinition$deltaCheckRulesArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinition$deltaCheckRulesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "findMany"> | Null>
+    reflexRulesAsParent<T extends TestDefinition$reflexRulesAsParentArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinition$reflexRulesAsParentArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "findMany"> | Null>
+    reflexRulesAsChild<T extends TestDefinition$reflexRulesAsChildArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinition$reflexRulesAsChildArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "findMany"> | Null>
+    testResults<T extends TestDefinition$testResultsArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinition$testResultsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ResultPayload<ExtArgs>, T, "findMany"> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the TestDefinition model
+   */ 
+  interface TestDefinitionFieldRefs {
+    readonly id: FieldRef<"TestDefinition", 'String'>
+    readonly testId: FieldRef<"TestDefinition", 'String'>
+    readonly categoryId: FieldRef<"TestDefinition", 'String'>
+    readonly name: FieldRef<"TestDefinition", 'String'>
+    readonly code: FieldRef<"TestDefinition", 'String'>
+    readonly unit: FieldRef<"TestDefinition", 'String'>
+    readonly sampleType: FieldRef<"TestDefinition", 'String'>
+    readonly testFields: FieldRef<"TestDefinition", 'String'>
+    readonly isActive: FieldRef<"TestDefinition", 'Boolean'>
+    readonly createdAt: FieldRef<"TestDefinition", 'DateTime'>
+    readonly updatedAt: FieldRef<"TestDefinition", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * TestDefinition findUnique
+   */
+  export type TestDefinitionFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    /**
+     * Filter, which TestDefinition to fetch.
+     */
+    where: TestDefinitionWhereUniqueInput
+  }
+
+  /**
+   * TestDefinition findUniqueOrThrow
+   */
+  export type TestDefinitionFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    /**
+     * Filter, which TestDefinition to fetch.
+     */
+    where: TestDefinitionWhereUniqueInput
+  }
+
+  /**
+   * TestDefinition findFirst
+   */
+  export type TestDefinitionFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    /**
+     * Filter, which TestDefinition to fetch.
+     */
+    where?: TestDefinitionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TestDefinitions to fetch.
+     */
+    orderBy?: TestDefinitionOrderByWithRelationInput | TestDefinitionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for TestDefinitions.
+     */
+    cursor?: TestDefinitionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TestDefinitions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TestDefinitions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of TestDefinitions.
+     */
+    distinct?: TestDefinitionScalarFieldEnum | TestDefinitionScalarFieldEnum[]
+  }
+
+  /**
+   * TestDefinition findFirstOrThrow
+   */
+  export type TestDefinitionFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    /**
+     * Filter, which TestDefinition to fetch.
+     */
+    where?: TestDefinitionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TestDefinitions to fetch.
+     */
+    orderBy?: TestDefinitionOrderByWithRelationInput | TestDefinitionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for TestDefinitions.
+     */
+    cursor?: TestDefinitionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TestDefinitions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TestDefinitions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of TestDefinitions.
+     */
+    distinct?: TestDefinitionScalarFieldEnum | TestDefinitionScalarFieldEnum[]
+  }
+
+  /**
+   * TestDefinition findMany
+   */
+  export type TestDefinitionFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    /**
+     * Filter, which TestDefinitions to fetch.
+     */
+    where?: TestDefinitionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TestDefinitions to fetch.
+     */
+    orderBy?: TestDefinitionOrderByWithRelationInput | TestDefinitionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing TestDefinitions.
+     */
+    cursor?: TestDefinitionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TestDefinitions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TestDefinitions.
+     */
+    skip?: number
+    distinct?: TestDefinitionScalarFieldEnum | TestDefinitionScalarFieldEnum[]
+  }
+
+  /**
+   * TestDefinition create
+   */
+  export type TestDefinitionCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    /**
+     * The data needed to create a TestDefinition.
+     */
+    data: XOR<TestDefinitionCreateInput, TestDefinitionUncheckedCreateInput>
+  }
+
+  /**
+   * TestDefinition createMany
+   */
+  export type TestDefinitionCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many TestDefinitions.
+     */
+    data: TestDefinitionCreateManyInput | TestDefinitionCreateManyInput[]
+  }
+
+  /**
+   * TestDefinition createManyAndReturn
+   */
+  export type TestDefinitionCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many TestDefinitions.
+     */
+    data: TestDefinitionCreateManyInput | TestDefinitionCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * TestDefinition update
+   */
+  export type TestDefinitionUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    /**
+     * The data needed to update a TestDefinition.
+     */
+    data: XOR<TestDefinitionUpdateInput, TestDefinitionUncheckedUpdateInput>
+    /**
+     * Choose, which TestDefinition to update.
+     */
+    where: TestDefinitionWhereUniqueInput
+  }
+
+  /**
+   * TestDefinition updateMany
+   */
+  export type TestDefinitionUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update TestDefinitions.
+     */
+    data: XOR<TestDefinitionUpdateManyMutationInput, TestDefinitionUncheckedUpdateManyInput>
+    /**
+     * Filter which TestDefinitions to update
+     */
+    where?: TestDefinitionWhereInput
+  }
+
+  /**
+   * TestDefinition upsert
+   */
+  export type TestDefinitionUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    /**
+     * The filter to search for the TestDefinition to update in case it exists.
+     */
+    where: TestDefinitionWhereUniqueInput
+    /**
+     * In case the TestDefinition found by the `where` argument doesn't exist, create a new TestDefinition with this data.
+     */
+    create: XOR<TestDefinitionCreateInput, TestDefinitionUncheckedCreateInput>
+    /**
+     * In case the TestDefinition was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<TestDefinitionUpdateInput, TestDefinitionUncheckedUpdateInput>
+  }
+
+  /**
+   * TestDefinition delete
+   */
+  export type TestDefinitionDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+    /**
+     * Filter which TestDefinition to delete.
+     */
+    where: TestDefinitionWhereUniqueInput
+  }
+
+  /**
+   * TestDefinition deleteMany
+   */
+  export type TestDefinitionDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which TestDefinitions to delete
+     */
+    where?: TestDefinitionWhereInput
+  }
+
+  /**
+   * TestDefinition.test
+   */
+  export type TestDefinition$testArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Test
+     */
+    select?: TestSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestInclude<ExtArgs> | null
+    where?: TestWhereInput
+  }
+
+  /**
+   * TestDefinition.normalRanges
+   */
+  export type TestDefinition$normalRangesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeInclude<ExtArgs> | null
+    where?: NormalRangeWhereInput
+    orderBy?: NormalRangeOrderByWithRelationInput | NormalRangeOrderByWithRelationInput[]
+    cursor?: NormalRangeWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: NormalRangeScalarFieldEnum | NormalRangeScalarFieldEnum[]
+  }
+
+  /**
+   * TestDefinition.interpretations
+   */
+  export type TestDefinition$interpretationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+    where?: InterpretationRuleWhereInput
+    orderBy?: InterpretationRuleOrderByWithRelationInput | InterpretationRuleOrderByWithRelationInput[]
+    cursor?: InterpretationRuleWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: InterpretationRuleScalarFieldEnum | InterpretationRuleScalarFieldEnum[]
+  }
+
+  /**
+   * TestDefinition.calculationRules
+   */
+  export type TestDefinition$calculationRulesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleInclude<ExtArgs> | null
+    where?: CalculationRuleWhereInput
+    orderBy?: CalculationRuleOrderByWithRelationInput | CalculationRuleOrderByWithRelationInput[]
+    cursor?: CalculationRuleWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: CalculationRuleScalarFieldEnum | CalculationRuleScalarFieldEnum[]
+  }
+
+  /**
+   * TestDefinition.deltaCheckRules
+   */
+  export type TestDefinition$deltaCheckRulesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleInclude<ExtArgs> | null
+    where?: DeltaCheckRuleWhereInput
+    orderBy?: DeltaCheckRuleOrderByWithRelationInput | DeltaCheckRuleOrderByWithRelationInput[]
+    cursor?: DeltaCheckRuleWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: DeltaCheckRuleScalarFieldEnum | DeltaCheckRuleScalarFieldEnum[]
+  }
+
+  /**
+   * TestDefinition.reflexRulesAsParent
+   */
+  export type TestDefinition$reflexRulesAsParentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+    where?: ReflexTestRuleWhereInput
+    orderBy?: ReflexTestRuleOrderByWithRelationInput | ReflexTestRuleOrderByWithRelationInput[]
+    cursor?: ReflexTestRuleWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReflexTestRuleScalarFieldEnum | ReflexTestRuleScalarFieldEnum[]
+  }
+
+  /**
+   * TestDefinition.reflexRulesAsChild
+   */
+  export type TestDefinition$reflexRulesAsChildArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+    where?: ReflexTestRuleWhereInput
+    orderBy?: ReflexTestRuleOrderByWithRelationInput | ReflexTestRuleOrderByWithRelationInput[]
+    cursor?: ReflexTestRuleWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReflexTestRuleScalarFieldEnum | ReflexTestRuleScalarFieldEnum[]
+  }
+
+  /**
+   * TestDefinition.testResults
+   */
+  export type TestDefinition$testResultsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Result
+     */
+    select?: ResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResultInclude<ExtArgs> | null
+    where?: ResultWhereInput
+    orderBy?: ResultOrderByWithRelationInput | ResultOrderByWithRelationInput[]
+    cursor?: ResultWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ResultScalarFieldEnum | ResultScalarFieldEnum[]
+  }
+
+  /**
+   * TestDefinition without action
+   */
+  export type TestDefinitionDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TestDefinition
+     */
+    select?: TestDefinitionSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TestDefinitionInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model NormalRange
+   */
+
+  export type AggregateNormalRange = {
+    _count: NormalRangeCountAggregateOutputType | null
+    _avg: NormalRangeAvgAggregateOutputType | null
+    _sum: NormalRangeSumAggregateOutputType | null
+    _min: NormalRangeMinAggregateOutputType | null
+    _max: NormalRangeMaxAggregateOutputType | null
+  }
+
+  export type NormalRangeAvgAggregateOutputType = {
+    minAge: number | null
+    maxAge: number | null
+    minValue: number | null
+    maxValue: number | null
+    criticalLow: number | null
+    criticalHigh: number | null
+  }
+
+  export type NormalRangeSumAggregateOutputType = {
+    minAge: number | null
+    maxAge: number | null
+    minValue: number | null
+    maxValue: number | null
+    criticalLow: number | null
+    criticalHigh: number | null
+  }
+
+  export type NormalRangeMinAggregateOutputType = {
+    id: string | null
+    testDefId: string | null
+    minAge: number | null
+    maxAge: number | null
+    gender: string | null
+    minValue: number | null
+    maxValue: number | null
+    criticalLow: number | null
+    criticalHigh: number | null
+    unit: string | null
+    notes: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type NormalRangeMaxAggregateOutputType = {
+    id: string | null
+    testDefId: string | null
+    minAge: number | null
+    maxAge: number | null
+    gender: string | null
+    minValue: number | null
+    maxValue: number | null
+    criticalLow: number | null
+    criticalHigh: number | null
+    unit: string | null
+    notes: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type NormalRangeCountAggregateOutputType = {
+    id: number
+    testDefId: number
+    minAge: number
+    maxAge: number
+    gender: number
+    minValue: number
+    maxValue: number
+    criticalLow: number
+    criticalHigh: number
+    unit: number
+    notes: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type NormalRangeAvgAggregateInputType = {
+    minAge?: true
+    maxAge?: true
+    minValue?: true
+    maxValue?: true
+    criticalLow?: true
+    criticalHigh?: true
+  }
+
+  export type NormalRangeSumAggregateInputType = {
+    minAge?: true
+    maxAge?: true
+    minValue?: true
+    maxValue?: true
+    criticalLow?: true
+    criticalHigh?: true
+  }
+
+  export type NormalRangeMinAggregateInputType = {
+    id?: true
+    testDefId?: true
+    minAge?: true
+    maxAge?: true
+    gender?: true
+    minValue?: true
+    maxValue?: true
+    criticalLow?: true
+    criticalHigh?: true
+    unit?: true
+    notes?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type NormalRangeMaxAggregateInputType = {
+    id?: true
+    testDefId?: true
+    minAge?: true
+    maxAge?: true
+    gender?: true
+    minValue?: true
+    maxValue?: true
+    criticalLow?: true
+    criticalHigh?: true
+    unit?: true
+    notes?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type NormalRangeCountAggregateInputType = {
+    id?: true
+    testDefId?: true
+    minAge?: true
+    maxAge?: true
+    gender?: true
+    minValue?: true
+    maxValue?: true
+    criticalLow?: true
+    criticalHigh?: true
+    unit?: true
+    notes?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type NormalRangeAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which NormalRange to aggregate.
+     */
+    where?: NormalRangeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of NormalRanges to fetch.
+     */
+    orderBy?: NormalRangeOrderByWithRelationInput | NormalRangeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: NormalRangeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` NormalRanges from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` NormalRanges.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned NormalRanges
+    **/
+    _count?: true | NormalRangeCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: NormalRangeAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: NormalRangeSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: NormalRangeMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: NormalRangeMaxAggregateInputType
+  }
+
+  export type GetNormalRangeAggregateType<T extends NormalRangeAggregateArgs> = {
+        [P in keyof T & keyof AggregateNormalRange]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateNormalRange[P]>
+      : GetScalarType<T[P], AggregateNormalRange[P]>
+  }
+
+
+
+
+  export type NormalRangeGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: NormalRangeWhereInput
+    orderBy?: NormalRangeOrderByWithAggregationInput | NormalRangeOrderByWithAggregationInput[]
+    by: NormalRangeScalarFieldEnum[] | NormalRangeScalarFieldEnum
+    having?: NormalRangeScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: NormalRangeCountAggregateInputType | true
+    _avg?: NormalRangeAvgAggregateInputType
+    _sum?: NormalRangeSumAggregateInputType
+    _min?: NormalRangeMinAggregateInputType
+    _max?: NormalRangeMaxAggregateInputType
+  }
+
+  export type NormalRangeGroupByOutputType = {
+    id: string
+    testDefId: string
+    minAge: number | null
+    maxAge: number | null
+    gender: string | null
+    minValue: number
+    maxValue: number
+    criticalLow: number | null
+    criticalHigh: number | null
+    unit: string | null
+    notes: string | null
+    createdAt: Date
+    updatedAt: Date
+    _count: NormalRangeCountAggregateOutputType | null
+    _avg: NormalRangeAvgAggregateOutputType | null
+    _sum: NormalRangeSumAggregateOutputType | null
+    _min: NormalRangeMinAggregateOutputType | null
+    _max: NormalRangeMaxAggregateOutputType | null
+  }
+
+  type GetNormalRangeGroupByPayload<T extends NormalRangeGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<NormalRangeGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof NormalRangeGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], NormalRangeGroupByOutputType[P]>
+            : GetScalarType<T[P], NormalRangeGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type NormalRangeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    testDefId?: boolean
+    minAge?: boolean
+    maxAge?: boolean
+    gender?: boolean
+    minValue?: boolean
+    maxValue?: boolean
+    criticalLow?: boolean
+    criticalHigh?: boolean
+    unit?: boolean
+    notes?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["normalRange"]>
+
+  export type NormalRangeSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    testDefId?: boolean
+    minAge?: boolean
+    maxAge?: boolean
+    gender?: boolean
+    minValue?: boolean
+    maxValue?: boolean
+    criticalLow?: boolean
+    criticalHigh?: boolean
+    unit?: boolean
+    notes?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["normalRange"]>
+
+  export type NormalRangeSelectScalar = {
+    id?: boolean
+    testDefId?: boolean
+    minAge?: boolean
+    maxAge?: boolean
+    gender?: boolean
+    minValue?: boolean
+    maxValue?: boolean
+    criticalLow?: boolean
+    criticalHigh?: boolean
+    unit?: boolean
+    notes?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type NormalRangeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }
+  export type NormalRangeIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }
+
+  export type $NormalRangePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "NormalRange"
+    objects: {
+      testDef: Prisma.$TestDefinitionPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      testDefId: string
+      minAge: number | null
+      maxAge: number | null
+      gender: string | null
+      minValue: number
+      maxValue: number
+      criticalLow: number | null
+      criticalHigh: number | null
+      unit: string | null
+      notes: string | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["normalRange"]>
+    composites: {}
+  }
+
+  type NormalRangeGetPayload<S extends boolean | null | undefined | NormalRangeDefaultArgs> = $Result.GetResult<Prisma.$NormalRangePayload, S>
+
+  type NormalRangeCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<NormalRangeFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: NormalRangeCountAggregateInputType | true
+    }
+
+  export interface NormalRangeDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['NormalRange'], meta: { name: 'NormalRange' } }
+    /**
+     * Find zero or one NormalRange that matches the filter.
+     * @param {NormalRangeFindUniqueArgs} args - Arguments to find a NormalRange
+     * @example
+     * // Get one NormalRange
+     * const normalRange = await prisma.normalRange.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends NormalRangeFindUniqueArgs>(args: SelectSubset<T, NormalRangeFindUniqueArgs<ExtArgs>>): Prisma__NormalRangeClient<$Result.GetResult<Prisma.$NormalRangePayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one NormalRange that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {NormalRangeFindUniqueOrThrowArgs} args - Arguments to find a NormalRange
+     * @example
+     * // Get one NormalRange
+     * const normalRange = await prisma.normalRange.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends NormalRangeFindUniqueOrThrowArgs>(args: SelectSubset<T, NormalRangeFindUniqueOrThrowArgs<ExtArgs>>): Prisma__NormalRangeClient<$Result.GetResult<Prisma.$NormalRangePayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first NormalRange that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NormalRangeFindFirstArgs} args - Arguments to find a NormalRange
+     * @example
+     * // Get one NormalRange
+     * const normalRange = await prisma.normalRange.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends NormalRangeFindFirstArgs>(args?: SelectSubset<T, NormalRangeFindFirstArgs<ExtArgs>>): Prisma__NormalRangeClient<$Result.GetResult<Prisma.$NormalRangePayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first NormalRange that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NormalRangeFindFirstOrThrowArgs} args - Arguments to find a NormalRange
+     * @example
+     * // Get one NormalRange
+     * const normalRange = await prisma.normalRange.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends NormalRangeFindFirstOrThrowArgs>(args?: SelectSubset<T, NormalRangeFindFirstOrThrowArgs<ExtArgs>>): Prisma__NormalRangeClient<$Result.GetResult<Prisma.$NormalRangePayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more NormalRanges that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NormalRangeFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all NormalRanges
+     * const normalRanges = await prisma.normalRange.findMany()
+     * 
+     * // Get first 10 NormalRanges
+     * const normalRanges = await prisma.normalRange.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const normalRangeWithIdOnly = await prisma.normalRange.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends NormalRangeFindManyArgs>(args?: SelectSubset<T, NormalRangeFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NormalRangePayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a NormalRange.
+     * @param {NormalRangeCreateArgs} args - Arguments to create a NormalRange.
+     * @example
+     * // Create one NormalRange
+     * const NormalRange = await prisma.normalRange.create({
+     *   data: {
+     *     // ... data to create a NormalRange
+     *   }
+     * })
+     * 
+     */
+    create<T extends NormalRangeCreateArgs>(args: SelectSubset<T, NormalRangeCreateArgs<ExtArgs>>): Prisma__NormalRangeClient<$Result.GetResult<Prisma.$NormalRangePayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many NormalRanges.
+     * @param {NormalRangeCreateManyArgs} args - Arguments to create many NormalRanges.
+     * @example
+     * // Create many NormalRanges
+     * const normalRange = await prisma.normalRange.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends NormalRangeCreateManyArgs>(args?: SelectSubset<T, NormalRangeCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many NormalRanges and returns the data saved in the database.
+     * @param {NormalRangeCreateManyAndReturnArgs} args - Arguments to create many NormalRanges.
+     * @example
+     * // Create many NormalRanges
+     * const normalRange = await prisma.normalRange.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many NormalRanges and only return the `id`
+     * const normalRangeWithIdOnly = await prisma.normalRange.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends NormalRangeCreateManyAndReturnArgs>(args?: SelectSubset<T, NormalRangeCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NormalRangePayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a NormalRange.
+     * @param {NormalRangeDeleteArgs} args - Arguments to delete one NormalRange.
+     * @example
+     * // Delete one NormalRange
+     * const NormalRange = await prisma.normalRange.delete({
+     *   where: {
+     *     // ... filter to delete one NormalRange
+     *   }
+     * })
+     * 
+     */
+    delete<T extends NormalRangeDeleteArgs>(args: SelectSubset<T, NormalRangeDeleteArgs<ExtArgs>>): Prisma__NormalRangeClient<$Result.GetResult<Prisma.$NormalRangePayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one NormalRange.
+     * @param {NormalRangeUpdateArgs} args - Arguments to update one NormalRange.
+     * @example
+     * // Update one NormalRange
+     * const normalRange = await prisma.normalRange.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends NormalRangeUpdateArgs>(args: SelectSubset<T, NormalRangeUpdateArgs<ExtArgs>>): Prisma__NormalRangeClient<$Result.GetResult<Prisma.$NormalRangePayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more NormalRanges.
+     * @param {NormalRangeDeleteManyArgs} args - Arguments to filter NormalRanges to delete.
+     * @example
+     * // Delete a few NormalRanges
+     * const { count } = await prisma.normalRange.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends NormalRangeDeleteManyArgs>(args?: SelectSubset<T, NormalRangeDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more NormalRanges.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NormalRangeUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many NormalRanges
+     * const normalRange = await prisma.normalRange.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends NormalRangeUpdateManyArgs>(args: SelectSubset<T, NormalRangeUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one NormalRange.
+     * @param {NormalRangeUpsertArgs} args - Arguments to update or create a NormalRange.
+     * @example
+     * // Update or create a NormalRange
+     * const normalRange = await prisma.normalRange.upsert({
+     *   create: {
+     *     // ... data to create a NormalRange
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the NormalRange we want to update
+     *   }
+     * })
+     */
+    upsert<T extends NormalRangeUpsertArgs>(args: SelectSubset<T, NormalRangeUpsertArgs<ExtArgs>>): Prisma__NormalRangeClient<$Result.GetResult<Prisma.$NormalRangePayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of NormalRanges.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NormalRangeCountArgs} args - Arguments to filter NormalRanges to count.
+     * @example
+     * // Count the number of NormalRanges
+     * const count = await prisma.normalRange.count({
+     *   where: {
+     *     // ... the filter for the NormalRanges we want to count
+     *   }
+     * })
+    **/
+    count<T extends NormalRangeCountArgs>(
+      args?: Subset<T, NormalRangeCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], NormalRangeCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a NormalRange.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NormalRangeAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends NormalRangeAggregateArgs>(args: Subset<T, NormalRangeAggregateArgs>): Prisma.PrismaPromise<GetNormalRangeAggregateType<T>>
+
+    /**
+     * Group by NormalRange.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NormalRangeGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends NormalRangeGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: NormalRangeGroupByArgs['orderBy'] }
+        : { orderBy?: NormalRangeGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, NormalRangeGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetNormalRangeGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the NormalRange model
+   */
+  readonly fields: NormalRangeFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for NormalRange.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__NormalRangeClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    testDef<T extends TestDefinitionDefaultArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinitionDefaultArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the NormalRange model
+   */ 
+  interface NormalRangeFieldRefs {
+    readonly id: FieldRef<"NormalRange", 'String'>
+    readonly testDefId: FieldRef<"NormalRange", 'String'>
+    readonly minAge: FieldRef<"NormalRange", 'Int'>
+    readonly maxAge: FieldRef<"NormalRange", 'Int'>
+    readonly gender: FieldRef<"NormalRange", 'String'>
+    readonly minValue: FieldRef<"NormalRange", 'Float'>
+    readonly maxValue: FieldRef<"NormalRange", 'Float'>
+    readonly criticalLow: FieldRef<"NormalRange", 'Float'>
+    readonly criticalHigh: FieldRef<"NormalRange", 'Float'>
+    readonly unit: FieldRef<"NormalRange", 'String'>
+    readonly notes: FieldRef<"NormalRange", 'String'>
+    readonly createdAt: FieldRef<"NormalRange", 'DateTime'>
+    readonly updatedAt: FieldRef<"NormalRange", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * NormalRange findUnique
+   */
+  export type NormalRangeFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeInclude<ExtArgs> | null
+    /**
+     * Filter, which NormalRange to fetch.
+     */
+    where: NormalRangeWhereUniqueInput
+  }
+
+  /**
+   * NormalRange findUniqueOrThrow
+   */
+  export type NormalRangeFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeInclude<ExtArgs> | null
+    /**
+     * Filter, which NormalRange to fetch.
+     */
+    where: NormalRangeWhereUniqueInput
+  }
+
+  /**
+   * NormalRange findFirst
+   */
+  export type NormalRangeFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeInclude<ExtArgs> | null
+    /**
+     * Filter, which NormalRange to fetch.
+     */
+    where?: NormalRangeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of NormalRanges to fetch.
+     */
+    orderBy?: NormalRangeOrderByWithRelationInput | NormalRangeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for NormalRanges.
+     */
+    cursor?: NormalRangeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` NormalRanges from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` NormalRanges.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of NormalRanges.
+     */
+    distinct?: NormalRangeScalarFieldEnum | NormalRangeScalarFieldEnum[]
+  }
+
+  /**
+   * NormalRange findFirstOrThrow
+   */
+  export type NormalRangeFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeInclude<ExtArgs> | null
+    /**
+     * Filter, which NormalRange to fetch.
+     */
+    where?: NormalRangeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of NormalRanges to fetch.
+     */
+    orderBy?: NormalRangeOrderByWithRelationInput | NormalRangeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for NormalRanges.
+     */
+    cursor?: NormalRangeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` NormalRanges from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` NormalRanges.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of NormalRanges.
+     */
+    distinct?: NormalRangeScalarFieldEnum | NormalRangeScalarFieldEnum[]
+  }
+
+  /**
+   * NormalRange findMany
+   */
+  export type NormalRangeFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeInclude<ExtArgs> | null
+    /**
+     * Filter, which NormalRanges to fetch.
+     */
+    where?: NormalRangeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of NormalRanges to fetch.
+     */
+    orderBy?: NormalRangeOrderByWithRelationInput | NormalRangeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing NormalRanges.
+     */
+    cursor?: NormalRangeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` NormalRanges from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` NormalRanges.
+     */
+    skip?: number
+    distinct?: NormalRangeScalarFieldEnum | NormalRangeScalarFieldEnum[]
+  }
+
+  /**
+   * NormalRange create
+   */
+  export type NormalRangeCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeInclude<ExtArgs> | null
+    /**
+     * The data needed to create a NormalRange.
+     */
+    data: XOR<NormalRangeCreateInput, NormalRangeUncheckedCreateInput>
+  }
+
+  /**
+   * NormalRange createMany
+   */
+  export type NormalRangeCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many NormalRanges.
+     */
+    data: NormalRangeCreateManyInput | NormalRangeCreateManyInput[]
+  }
+
+  /**
+   * NormalRange createManyAndReturn
+   */
+  export type NormalRangeCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many NormalRanges.
+     */
+    data: NormalRangeCreateManyInput | NormalRangeCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * NormalRange update
+   */
+  export type NormalRangeUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeInclude<ExtArgs> | null
+    /**
+     * The data needed to update a NormalRange.
+     */
+    data: XOR<NormalRangeUpdateInput, NormalRangeUncheckedUpdateInput>
+    /**
+     * Choose, which NormalRange to update.
+     */
+    where: NormalRangeWhereUniqueInput
+  }
+
+  /**
+   * NormalRange updateMany
+   */
+  export type NormalRangeUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update NormalRanges.
+     */
+    data: XOR<NormalRangeUpdateManyMutationInput, NormalRangeUncheckedUpdateManyInput>
+    /**
+     * Filter which NormalRanges to update
+     */
+    where?: NormalRangeWhereInput
+  }
+
+  /**
+   * NormalRange upsert
+   */
+  export type NormalRangeUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeInclude<ExtArgs> | null
+    /**
+     * The filter to search for the NormalRange to update in case it exists.
+     */
+    where: NormalRangeWhereUniqueInput
+    /**
+     * In case the NormalRange found by the `where` argument doesn't exist, create a new NormalRange with this data.
+     */
+    create: XOR<NormalRangeCreateInput, NormalRangeUncheckedCreateInput>
+    /**
+     * In case the NormalRange was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<NormalRangeUpdateInput, NormalRangeUncheckedUpdateInput>
+  }
+
+  /**
+   * NormalRange delete
+   */
+  export type NormalRangeDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeInclude<ExtArgs> | null
+    /**
+     * Filter which NormalRange to delete.
+     */
+    where: NormalRangeWhereUniqueInput
+  }
+
+  /**
+   * NormalRange deleteMany
+   */
+  export type NormalRangeDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which NormalRanges to delete
+     */
+    where?: NormalRangeWhereInput
+  }
+
+  /**
+   * NormalRange without action
+   */
+  export type NormalRangeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the NormalRange
+     */
+    select?: NormalRangeSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NormalRangeInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model CalculationRule
+   */
+
+  export type AggregateCalculationRule = {
+    _count: CalculationRuleCountAggregateOutputType | null
+    _avg: CalculationRuleAvgAggregateOutputType | null
+    _sum: CalculationRuleSumAggregateOutputType | null
+    _min: CalculationRuleMinAggregateOutputType | null
+    _max: CalculationRuleMaxAggregateOutputType | null
+  }
+
+  export type CalculationRuleAvgAggregateOutputType = {
+    priority: number | null
+  }
+
+  export type CalculationRuleSumAggregateOutputType = {
+    priority: number | null
+  }
+
+  export type CalculationRuleMinAggregateOutputType = {
+    id: string | null
+    testDefId: string | null
+    name: string | null
+    formula: string | null
+    requiredFields: string | null
+    outputField: string | null
+    priority: number | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type CalculationRuleMaxAggregateOutputType = {
+    id: string | null
+    testDefId: string | null
+    name: string | null
+    formula: string | null
+    requiredFields: string | null
+    outputField: string | null
+    priority: number | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type CalculationRuleCountAggregateOutputType = {
+    id: number
+    testDefId: number
+    name: number
+    formula: number
+    requiredFields: number
+    outputField: number
+    priority: number
+    isActive: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type CalculationRuleAvgAggregateInputType = {
+    priority?: true
+  }
+
+  export type CalculationRuleSumAggregateInputType = {
+    priority?: true
+  }
+
+  export type CalculationRuleMinAggregateInputType = {
+    id?: true
+    testDefId?: true
+    name?: true
+    formula?: true
+    requiredFields?: true
+    outputField?: true
+    priority?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type CalculationRuleMaxAggregateInputType = {
+    id?: true
+    testDefId?: true
+    name?: true
+    formula?: true
+    requiredFields?: true
+    outputField?: true
+    priority?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type CalculationRuleCountAggregateInputType = {
+    id?: true
+    testDefId?: true
+    name?: true
+    formula?: true
+    requiredFields?: true
+    outputField?: true
+    priority?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type CalculationRuleAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which CalculationRule to aggregate.
+     */
+    where?: CalculationRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CalculationRules to fetch.
+     */
+    orderBy?: CalculationRuleOrderByWithRelationInput | CalculationRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: CalculationRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CalculationRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CalculationRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned CalculationRules
+    **/
+    _count?: true | CalculationRuleCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: CalculationRuleAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: CalculationRuleSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: CalculationRuleMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: CalculationRuleMaxAggregateInputType
+  }
+
+  export type GetCalculationRuleAggregateType<T extends CalculationRuleAggregateArgs> = {
+        [P in keyof T & keyof AggregateCalculationRule]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateCalculationRule[P]>
+      : GetScalarType<T[P], AggregateCalculationRule[P]>
+  }
+
+
+
+
+  export type CalculationRuleGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CalculationRuleWhereInput
+    orderBy?: CalculationRuleOrderByWithAggregationInput | CalculationRuleOrderByWithAggregationInput[]
+    by: CalculationRuleScalarFieldEnum[] | CalculationRuleScalarFieldEnum
+    having?: CalculationRuleScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: CalculationRuleCountAggregateInputType | true
+    _avg?: CalculationRuleAvgAggregateInputType
+    _sum?: CalculationRuleSumAggregateInputType
+    _min?: CalculationRuleMinAggregateInputType
+    _max?: CalculationRuleMaxAggregateInputType
+  }
+
+  export type CalculationRuleGroupByOutputType = {
+    id: string
+    testDefId: string
+    name: string
+    formula: string
+    requiredFields: string
+    outputField: string
+    priority: number
+    isActive: boolean
+    createdAt: Date
+    updatedAt: Date
+    _count: CalculationRuleCountAggregateOutputType | null
+    _avg: CalculationRuleAvgAggregateOutputType | null
+    _sum: CalculationRuleSumAggregateOutputType | null
+    _min: CalculationRuleMinAggregateOutputType | null
+    _max: CalculationRuleMaxAggregateOutputType | null
+  }
+
+  type GetCalculationRuleGroupByPayload<T extends CalculationRuleGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<CalculationRuleGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof CalculationRuleGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], CalculationRuleGroupByOutputType[P]>
+            : GetScalarType<T[P], CalculationRuleGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type CalculationRuleSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    testDefId?: boolean
+    name?: boolean
+    formula?: boolean
+    requiredFields?: boolean
+    outputField?: boolean
+    priority?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["calculationRule"]>
+
+  export type CalculationRuleSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    testDefId?: boolean
+    name?: boolean
+    formula?: boolean
+    requiredFields?: boolean
+    outputField?: boolean
+    priority?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["calculationRule"]>
+
+  export type CalculationRuleSelectScalar = {
+    id?: boolean
+    testDefId?: boolean
+    name?: boolean
+    formula?: boolean
+    requiredFields?: boolean
+    outputField?: boolean
+    priority?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type CalculationRuleInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }
+  export type CalculationRuleIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }
+
+  export type $CalculationRulePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "CalculationRule"
+    objects: {
+      testDef: Prisma.$TestDefinitionPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      testDefId: string
+      name: string
+      formula: string
+      requiredFields: string
+      outputField: string
+      priority: number
+      isActive: boolean
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["calculationRule"]>
+    composites: {}
+  }
+
+  type CalculationRuleGetPayload<S extends boolean | null | undefined | CalculationRuleDefaultArgs> = $Result.GetResult<Prisma.$CalculationRulePayload, S>
+
+  type CalculationRuleCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<CalculationRuleFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: CalculationRuleCountAggregateInputType | true
+    }
+
+  export interface CalculationRuleDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['CalculationRule'], meta: { name: 'CalculationRule' } }
+    /**
+     * Find zero or one CalculationRule that matches the filter.
+     * @param {CalculationRuleFindUniqueArgs} args - Arguments to find a CalculationRule
+     * @example
+     * // Get one CalculationRule
+     * const calculationRule = await prisma.calculationRule.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends CalculationRuleFindUniqueArgs>(args: SelectSubset<T, CalculationRuleFindUniqueArgs<ExtArgs>>): Prisma__CalculationRuleClient<$Result.GetResult<Prisma.$CalculationRulePayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one CalculationRule that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {CalculationRuleFindUniqueOrThrowArgs} args - Arguments to find a CalculationRule
+     * @example
+     * // Get one CalculationRule
+     * const calculationRule = await prisma.calculationRule.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends CalculationRuleFindUniqueOrThrowArgs>(args: SelectSubset<T, CalculationRuleFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CalculationRuleClient<$Result.GetResult<Prisma.$CalculationRulePayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first CalculationRule that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CalculationRuleFindFirstArgs} args - Arguments to find a CalculationRule
+     * @example
+     * // Get one CalculationRule
+     * const calculationRule = await prisma.calculationRule.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends CalculationRuleFindFirstArgs>(args?: SelectSubset<T, CalculationRuleFindFirstArgs<ExtArgs>>): Prisma__CalculationRuleClient<$Result.GetResult<Prisma.$CalculationRulePayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first CalculationRule that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CalculationRuleFindFirstOrThrowArgs} args - Arguments to find a CalculationRule
+     * @example
+     * // Get one CalculationRule
+     * const calculationRule = await prisma.calculationRule.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends CalculationRuleFindFirstOrThrowArgs>(args?: SelectSubset<T, CalculationRuleFindFirstOrThrowArgs<ExtArgs>>): Prisma__CalculationRuleClient<$Result.GetResult<Prisma.$CalculationRulePayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more CalculationRules that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CalculationRuleFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all CalculationRules
+     * const calculationRules = await prisma.calculationRule.findMany()
+     * 
+     * // Get first 10 CalculationRules
+     * const calculationRules = await prisma.calculationRule.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const calculationRuleWithIdOnly = await prisma.calculationRule.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends CalculationRuleFindManyArgs>(args?: SelectSubset<T, CalculationRuleFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CalculationRulePayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a CalculationRule.
+     * @param {CalculationRuleCreateArgs} args - Arguments to create a CalculationRule.
+     * @example
+     * // Create one CalculationRule
+     * const CalculationRule = await prisma.calculationRule.create({
+     *   data: {
+     *     // ... data to create a CalculationRule
+     *   }
+     * })
+     * 
+     */
+    create<T extends CalculationRuleCreateArgs>(args: SelectSubset<T, CalculationRuleCreateArgs<ExtArgs>>): Prisma__CalculationRuleClient<$Result.GetResult<Prisma.$CalculationRulePayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many CalculationRules.
+     * @param {CalculationRuleCreateManyArgs} args - Arguments to create many CalculationRules.
+     * @example
+     * // Create many CalculationRules
+     * const calculationRule = await prisma.calculationRule.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends CalculationRuleCreateManyArgs>(args?: SelectSubset<T, CalculationRuleCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many CalculationRules and returns the data saved in the database.
+     * @param {CalculationRuleCreateManyAndReturnArgs} args - Arguments to create many CalculationRules.
+     * @example
+     * // Create many CalculationRules
+     * const calculationRule = await prisma.calculationRule.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many CalculationRules and only return the `id`
+     * const calculationRuleWithIdOnly = await prisma.calculationRule.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends CalculationRuleCreateManyAndReturnArgs>(args?: SelectSubset<T, CalculationRuleCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CalculationRulePayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a CalculationRule.
+     * @param {CalculationRuleDeleteArgs} args - Arguments to delete one CalculationRule.
+     * @example
+     * // Delete one CalculationRule
+     * const CalculationRule = await prisma.calculationRule.delete({
+     *   where: {
+     *     // ... filter to delete one CalculationRule
+     *   }
+     * })
+     * 
+     */
+    delete<T extends CalculationRuleDeleteArgs>(args: SelectSubset<T, CalculationRuleDeleteArgs<ExtArgs>>): Prisma__CalculationRuleClient<$Result.GetResult<Prisma.$CalculationRulePayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one CalculationRule.
+     * @param {CalculationRuleUpdateArgs} args - Arguments to update one CalculationRule.
+     * @example
+     * // Update one CalculationRule
+     * const calculationRule = await prisma.calculationRule.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends CalculationRuleUpdateArgs>(args: SelectSubset<T, CalculationRuleUpdateArgs<ExtArgs>>): Prisma__CalculationRuleClient<$Result.GetResult<Prisma.$CalculationRulePayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more CalculationRules.
+     * @param {CalculationRuleDeleteManyArgs} args - Arguments to filter CalculationRules to delete.
+     * @example
+     * // Delete a few CalculationRules
+     * const { count } = await prisma.calculationRule.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends CalculationRuleDeleteManyArgs>(args?: SelectSubset<T, CalculationRuleDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more CalculationRules.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CalculationRuleUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many CalculationRules
+     * const calculationRule = await prisma.calculationRule.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends CalculationRuleUpdateManyArgs>(args: SelectSubset<T, CalculationRuleUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one CalculationRule.
+     * @param {CalculationRuleUpsertArgs} args - Arguments to update or create a CalculationRule.
+     * @example
+     * // Update or create a CalculationRule
+     * const calculationRule = await prisma.calculationRule.upsert({
+     *   create: {
+     *     // ... data to create a CalculationRule
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the CalculationRule we want to update
+     *   }
+     * })
+     */
+    upsert<T extends CalculationRuleUpsertArgs>(args: SelectSubset<T, CalculationRuleUpsertArgs<ExtArgs>>): Prisma__CalculationRuleClient<$Result.GetResult<Prisma.$CalculationRulePayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of CalculationRules.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CalculationRuleCountArgs} args - Arguments to filter CalculationRules to count.
+     * @example
+     * // Count the number of CalculationRules
+     * const count = await prisma.calculationRule.count({
+     *   where: {
+     *     // ... the filter for the CalculationRules we want to count
+     *   }
+     * })
+    **/
+    count<T extends CalculationRuleCountArgs>(
+      args?: Subset<T, CalculationRuleCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], CalculationRuleCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a CalculationRule.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CalculationRuleAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends CalculationRuleAggregateArgs>(args: Subset<T, CalculationRuleAggregateArgs>): Prisma.PrismaPromise<GetCalculationRuleAggregateType<T>>
+
+    /**
+     * Group by CalculationRule.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CalculationRuleGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends CalculationRuleGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: CalculationRuleGroupByArgs['orderBy'] }
+        : { orderBy?: CalculationRuleGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, CalculationRuleGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCalculationRuleGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the CalculationRule model
+   */
+  readonly fields: CalculationRuleFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for CalculationRule.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__CalculationRuleClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    testDef<T extends TestDefinitionDefaultArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinitionDefaultArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the CalculationRule model
+   */ 
+  interface CalculationRuleFieldRefs {
+    readonly id: FieldRef<"CalculationRule", 'String'>
+    readonly testDefId: FieldRef<"CalculationRule", 'String'>
+    readonly name: FieldRef<"CalculationRule", 'String'>
+    readonly formula: FieldRef<"CalculationRule", 'String'>
+    readonly requiredFields: FieldRef<"CalculationRule", 'String'>
+    readonly outputField: FieldRef<"CalculationRule", 'String'>
+    readonly priority: FieldRef<"CalculationRule", 'Int'>
+    readonly isActive: FieldRef<"CalculationRule", 'Boolean'>
+    readonly createdAt: FieldRef<"CalculationRule", 'DateTime'>
+    readonly updatedAt: FieldRef<"CalculationRule", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * CalculationRule findUnique
+   */
+  export type CalculationRuleFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which CalculationRule to fetch.
+     */
+    where: CalculationRuleWhereUniqueInput
+  }
+
+  /**
+   * CalculationRule findUniqueOrThrow
+   */
+  export type CalculationRuleFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which CalculationRule to fetch.
+     */
+    where: CalculationRuleWhereUniqueInput
+  }
+
+  /**
+   * CalculationRule findFirst
+   */
+  export type CalculationRuleFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which CalculationRule to fetch.
+     */
+    where?: CalculationRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CalculationRules to fetch.
+     */
+    orderBy?: CalculationRuleOrderByWithRelationInput | CalculationRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for CalculationRules.
+     */
+    cursor?: CalculationRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CalculationRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CalculationRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of CalculationRules.
+     */
+    distinct?: CalculationRuleScalarFieldEnum | CalculationRuleScalarFieldEnum[]
+  }
+
+  /**
+   * CalculationRule findFirstOrThrow
+   */
+  export type CalculationRuleFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which CalculationRule to fetch.
+     */
+    where?: CalculationRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CalculationRules to fetch.
+     */
+    orderBy?: CalculationRuleOrderByWithRelationInput | CalculationRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for CalculationRules.
+     */
+    cursor?: CalculationRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CalculationRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CalculationRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of CalculationRules.
+     */
+    distinct?: CalculationRuleScalarFieldEnum | CalculationRuleScalarFieldEnum[]
+  }
+
+  /**
+   * CalculationRule findMany
+   */
+  export type CalculationRuleFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which CalculationRules to fetch.
+     */
+    where?: CalculationRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CalculationRules to fetch.
+     */
+    orderBy?: CalculationRuleOrderByWithRelationInput | CalculationRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing CalculationRules.
+     */
+    cursor?: CalculationRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CalculationRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CalculationRules.
+     */
+    skip?: number
+    distinct?: CalculationRuleScalarFieldEnum | CalculationRuleScalarFieldEnum[]
+  }
+
+  /**
+   * CalculationRule create
+   */
+  export type CalculationRuleCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleInclude<ExtArgs> | null
+    /**
+     * The data needed to create a CalculationRule.
+     */
+    data: XOR<CalculationRuleCreateInput, CalculationRuleUncheckedCreateInput>
+  }
+
+  /**
+   * CalculationRule createMany
+   */
+  export type CalculationRuleCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many CalculationRules.
+     */
+    data: CalculationRuleCreateManyInput | CalculationRuleCreateManyInput[]
+  }
+
+  /**
+   * CalculationRule createManyAndReturn
+   */
+  export type CalculationRuleCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many CalculationRules.
+     */
+    data: CalculationRuleCreateManyInput | CalculationRuleCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * CalculationRule update
+   */
+  export type CalculationRuleUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleInclude<ExtArgs> | null
+    /**
+     * The data needed to update a CalculationRule.
+     */
+    data: XOR<CalculationRuleUpdateInput, CalculationRuleUncheckedUpdateInput>
+    /**
+     * Choose, which CalculationRule to update.
+     */
+    where: CalculationRuleWhereUniqueInput
+  }
+
+  /**
+   * CalculationRule updateMany
+   */
+  export type CalculationRuleUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update CalculationRules.
+     */
+    data: XOR<CalculationRuleUpdateManyMutationInput, CalculationRuleUncheckedUpdateManyInput>
+    /**
+     * Filter which CalculationRules to update
+     */
+    where?: CalculationRuleWhereInput
+  }
+
+  /**
+   * CalculationRule upsert
+   */
+  export type CalculationRuleUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleInclude<ExtArgs> | null
+    /**
+     * The filter to search for the CalculationRule to update in case it exists.
+     */
+    where: CalculationRuleWhereUniqueInput
+    /**
+     * In case the CalculationRule found by the `where` argument doesn't exist, create a new CalculationRule with this data.
+     */
+    create: XOR<CalculationRuleCreateInput, CalculationRuleUncheckedCreateInput>
+    /**
+     * In case the CalculationRule was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<CalculationRuleUpdateInput, CalculationRuleUncheckedUpdateInput>
+  }
+
+  /**
+   * CalculationRule delete
+   */
+  export type CalculationRuleDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleInclude<ExtArgs> | null
+    /**
+     * Filter which CalculationRule to delete.
+     */
+    where: CalculationRuleWhereUniqueInput
+  }
+
+  /**
+   * CalculationRule deleteMany
+   */
+  export type CalculationRuleDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which CalculationRules to delete
+     */
+    where?: CalculationRuleWhereInput
+  }
+
+  /**
+   * CalculationRule without action
+   */
+  export type CalculationRuleDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CalculationRule
+     */
+    select?: CalculationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CalculationRuleInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model InterpretationRule
+   */
+
+  export type AggregateInterpretationRule = {
+    _count: InterpretationRuleCountAggregateOutputType | null
+    _avg: InterpretationRuleAvgAggregateOutputType | null
+    _sum: InterpretationRuleSumAggregateOutputType | null
+    _min: InterpretationRuleMinAggregateOutputType | null
+    _max: InterpretationRuleMaxAggregateOutputType | null
+  }
+
+  export type InterpretationRuleAvgAggregateOutputType = {
+    priority: number | null
+  }
+
+  export type InterpretationRuleSumAggregateOutputType = {
+    priority: number | null
+  }
+
+  export type InterpretationRuleMinAggregateOutputType = {
+    id: string | null
+    testDefId: string | null
+    name: string | null
+    condition: string | null
+    interpretation: string | null
+    severity: string | null
+    priority: number | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type InterpretationRuleMaxAggregateOutputType = {
+    id: string | null
+    testDefId: string | null
+    name: string | null
+    condition: string | null
+    interpretation: string | null
+    severity: string | null
+    priority: number | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type InterpretationRuleCountAggregateOutputType = {
+    id: number
+    testDefId: number
+    name: number
+    condition: number
+    interpretation: number
+    severity: number
+    priority: number
+    isActive: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type InterpretationRuleAvgAggregateInputType = {
+    priority?: true
+  }
+
+  export type InterpretationRuleSumAggregateInputType = {
+    priority?: true
+  }
+
+  export type InterpretationRuleMinAggregateInputType = {
+    id?: true
+    testDefId?: true
+    name?: true
+    condition?: true
+    interpretation?: true
+    severity?: true
+    priority?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type InterpretationRuleMaxAggregateInputType = {
+    id?: true
+    testDefId?: true
+    name?: true
+    condition?: true
+    interpretation?: true
+    severity?: true
+    priority?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type InterpretationRuleCountAggregateInputType = {
+    id?: true
+    testDefId?: true
+    name?: true
+    condition?: true
+    interpretation?: true
+    severity?: true
+    priority?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type InterpretationRuleAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which InterpretationRule to aggregate.
+     */
+    where?: InterpretationRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of InterpretationRules to fetch.
+     */
+    orderBy?: InterpretationRuleOrderByWithRelationInput | InterpretationRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: InterpretationRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` InterpretationRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` InterpretationRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned InterpretationRules
+    **/
+    _count?: true | InterpretationRuleCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: InterpretationRuleAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: InterpretationRuleSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: InterpretationRuleMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: InterpretationRuleMaxAggregateInputType
+  }
+
+  export type GetInterpretationRuleAggregateType<T extends InterpretationRuleAggregateArgs> = {
+        [P in keyof T & keyof AggregateInterpretationRule]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateInterpretationRule[P]>
+      : GetScalarType<T[P], AggregateInterpretationRule[P]>
+  }
+
+
+
+
+  export type InterpretationRuleGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: InterpretationRuleWhereInput
+    orderBy?: InterpretationRuleOrderByWithAggregationInput | InterpretationRuleOrderByWithAggregationInput[]
+    by: InterpretationRuleScalarFieldEnum[] | InterpretationRuleScalarFieldEnum
+    having?: InterpretationRuleScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: InterpretationRuleCountAggregateInputType | true
+    _avg?: InterpretationRuleAvgAggregateInputType
+    _sum?: InterpretationRuleSumAggregateInputType
+    _min?: InterpretationRuleMinAggregateInputType
+    _max?: InterpretationRuleMaxAggregateInputType
+  }
+
+  export type InterpretationRuleGroupByOutputType = {
+    id: string
+    testDefId: string
+    name: string
+    condition: string
+    interpretation: string
+    severity: string | null
+    priority: number
+    isActive: boolean
+    createdAt: Date
+    updatedAt: Date
+    _count: InterpretationRuleCountAggregateOutputType | null
+    _avg: InterpretationRuleAvgAggregateOutputType | null
+    _sum: InterpretationRuleSumAggregateOutputType | null
+    _min: InterpretationRuleMinAggregateOutputType | null
+    _max: InterpretationRuleMaxAggregateOutputType | null
+  }
+
+  type GetInterpretationRuleGroupByPayload<T extends InterpretationRuleGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<InterpretationRuleGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof InterpretationRuleGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], InterpretationRuleGroupByOutputType[P]>
+            : GetScalarType<T[P], InterpretationRuleGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type InterpretationRuleSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    testDefId?: boolean
+    name?: boolean
+    condition?: boolean
+    interpretation?: boolean
+    severity?: boolean
+    priority?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+    results?: boolean | InterpretationRule$resultsArgs<ExtArgs>
+    _count?: boolean | InterpretationRuleCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["interpretationRule"]>
+
+  export type InterpretationRuleSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    testDefId?: boolean
+    name?: boolean
+    condition?: boolean
+    interpretation?: boolean
+    severity?: boolean
+    priority?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["interpretationRule"]>
+
+  export type InterpretationRuleSelectScalar = {
+    id?: boolean
+    testDefId?: boolean
+    name?: boolean
+    condition?: boolean
+    interpretation?: boolean
+    severity?: boolean
+    priority?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type InterpretationRuleInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+    results?: boolean | InterpretationRule$resultsArgs<ExtArgs>
+    _count?: boolean | InterpretationRuleCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type InterpretationRuleIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }
+
+  export type $InterpretationRulePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "InterpretationRule"
+    objects: {
+      testDef: Prisma.$TestDefinitionPayload<ExtArgs>
+      results: Prisma.$ResultPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      testDefId: string
+      name: string
+      condition: string
+      interpretation: string
+      severity: string | null
+      priority: number
+      isActive: boolean
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["interpretationRule"]>
+    composites: {}
+  }
+
+  type InterpretationRuleGetPayload<S extends boolean | null | undefined | InterpretationRuleDefaultArgs> = $Result.GetResult<Prisma.$InterpretationRulePayload, S>
+
+  type InterpretationRuleCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<InterpretationRuleFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: InterpretationRuleCountAggregateInputType | true
+    }
+
+  export interface InterpretationRuleDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['InterpretationRule'], meta: { name: 'InterpretationRule' } }
+    /**
+     * Find zero or one InterpretationRule that matches the filter.
+     * @param {InterpretationRuleFindUniqueArgs} args - Arguments to find a InterpretationRule
+     * @example
+     * // Get one InterpretationRule
+     * const interpretationRule = await prisma.interpretationRule.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends InterpretationRuleFindUniqueArgs>(args: SelectSubset<T, InterpretationRuleFindUniqueArgs<ExtArgs>>): Prisma__InterpretationRuleClient<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one InterpretationRule that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {InterpretationRuleFindUniqueOrThrowArgs} args - Arguments to find a InterpretationRule
+     * @example
+     * // Get one InterpretationRule
+     * const interpretationRule = await prisma.interpretationRule.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends InterpretationRuleFindUniqueOrThrowArgs>(args: SelectSubset<T, InterpretationRuleFindUniqueOrThrowArgs<ExtArgs>>): Prisma__InterpretationRuleClient<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first InterpretationRule that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {InterpretationRuleFindFirstArgs} args - Arguments to find a InterpretationRule
+     * @example
+     * // Get one InterpretationRule
+     * const interpretationRule = await prisma.interpretationRule.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends InterpretationRuleFindFirstArgs>(args?: SelectSubset<T, InterpretationRuleFindFirstArgs<ExtArgs>>): Prisma__InterpretationRuleClient<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first InterpretationRule that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {InterpretationRuleFindFirstOrThrowArgs} args - Arguments to find a InterpretationRule
+     * @example
+     * // Get one InterpretationRule
+     * const interpretationRule = await prisma.interpretationRule.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends InterpretationRuleFindFirstOrThrowArgs>(args?: SelectSubset<T, InterpretationRuleFindFirstOrThrowArgs<ExtArgs>>): Prisma__InterpretationRuleClient<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more InterpretationRules that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {InterpretationRuleFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all InterpretationRules
+     * const interpretationRules = await prisma.interpretationRule.findMany()
+     * 
+     * // Get first 10 InterpretationRules
+     * const interpretationRules = await prisma.interpretationRule.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const interpretationRuleWithIdOnly = await prisma.interpretationRule.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends InterpretationRuleFindManyArgs>(args?: SelectSubset<T, InterpretationRuleFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a InterpretationRule.
+     * @param {InterpretationRuleCreateArgs} args - Arguments to create a InterpretationRule.
+     * @example
+     * // Create one InterpretationRule
+     * const InterpretationRule = await prisma.interpretationRule.create({
+     *   data: {
+     *     // ... data to create a InterpretationRule
+     *   }
+     * })
+     * 
+     */
+    create<T extends InterpretationRuleCreateArgs>(args: SelectSubset<T, InterpretationRuleCreateArgs<ExtArgs>>): Prisma__InterpretationRuleClient<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many InterpretationRules.
+     * @param {InterpretationRuleCreateManyArgs} args - Arguments to create many InterpretationRules.
+     * @example
+     * // Create many InterpretationRules
+     * const interpretationRule = await prisma.interpretationRule.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends InterpretationRuleCreateManyArgs>(args?: SelectSubset<T, InterpretationRuleCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many InterpretationRules and returns the data saved in the database.
+     * @param {InterpretationRuleCreateManyAndReturnArgs} args - Arguments to create many InterpretationRules.
+     * @example
+     * // Create many InterpretationRules
+     * const interpretationRule = await prisma.interpretationRule.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many InterpretationRules and only return the `id`
+     * const interpretationRuleWithIdOnly = await prisma.interpretationRule.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends InterpretationRuleCreateManyAndReturnArgs>(args?: SelectSubset<T, InterpretationRuleCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a InterpretationRule.
+     * @param {InterpretationRuleDeleteArgs} args - Arguments to delete one InterpretationRule.
+     * @example
+     * // Delete one InterpretationRule
+     * const InterpretationRule = await prisma.interpretationRule.delete({
+     *   where: {
+     *     // ... filter to delete one InterpretationRule
+     *   }
+     * })
+     * 
+     */
+    delete<T extends InterpretationRuleDeleteArgs>(args: SelectSubset<T, InterpretationRuleDeleteArgs<ExtArgs>>): Prisma__InterpretationRuleClient<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one InterpretationRule.
+     * @param {InterpretationRuleUpdateArgs} args - Arguments to update one InterpretationRule.
+     * @example
+     * // Update one InterpretationRule
+     * const interpretationRule = await prisma.interpretationRule.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends InterpretationRuleUpdateArgs>(args: SelectSubset<T, InterpretationRuleUpdateArgs<ExtArgs>>): Prisma__InterpretationRuleClient<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more InterpretationRules.
+     * @param {InterpretationRuleDeleteManyArgs} args - Arguments to filter InterpretationRules to delete.
+     * @example
+     * // Delete a few InterpretationRules
+     * const { count } = await prisma.interpretationRule.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends InterpretationRuleDeleteManyArgs>(args?: SelectSubset<T, InterpretationRuleDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more InterpretationRules.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {InterpretationRuleUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many InterpretationRules
+     * const interpretationRule = await prisma.interpretationRule.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends InterpretationRuleUpdateManyArgs>(args: SelectSubset<T, InterpretationRuleUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one InterpretationRule.
+     * @param {InterpretationRuleUpsertArgs} args - Arguments to update or create a InterpretationRule.
+     * @example
+     * // Update or create a InterpretationRule
+     * const interpretationRule = await prisma.interpretationRule.upsert({
+     *   create: {
+     *     // ... data to create a InterpretationRule
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the InterpretationRule we want to update
+     *   }
+     * })
+     */
+    upsert<T extends InterpretationRuleUpsertArgs>(args: SelectSubset<T, InterpretationRuleUpsertArgs<ExtArgs>>): Prisma__InterpretationRuleClient<$Result.GetResult<Prisma.$InterpretationRulePayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of InterpretationRules.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {InterpretationRuleCountArgs} args - Arguments to filter InterpretationRules to count.
+     * @example
+     * // Count the number of InterpretationRules
+     * const count = await prisma.interpretationRule.count({
+     *   where: {
+     *     // ... the filter for the InterpretationRules we want to count
+     *   }
+     * })
+    **/
+    count<T extends InterpretationRuleCountArgs>(
+      args?: Subset<T, InterpretationRuleCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], InterpretationRuleCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a InterpretationRule.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {InterpretationRuleAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends InterpretationRuleAggregateArgs>(args: Subset<T, InterpretationRuleAggregateArgs>): Prisma.PrismaPromise<GetInterpretationRuleAggregateType<T>>
+
+    /**
+     * Group by InterpretationRule.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {InterpretationRuleGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends InterpretationRuleGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: InterpretationRuleGroupByArgs['orderBy'] }
+        : { orderBy?: InterpretationRuleGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, InterpretationRuleGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetInterpretationRuleGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the InterpretationRule model
+   */
+  readonly fields: InterpretationRuleFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for InterpretationRule.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__InterpretationRuleClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    testDef<T extends TestDefinitionDefaultArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinitionDefaultArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
+    results<T extends InterpretationRule$resultsArgs<ExtArgs> = {}>(args?: Subset<T, InterpretationRule$resultsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ResultPayload<ExtArgs>, T, "findMany"> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the InterpretationRule model
+   */ 
+  interface InterpretationRuleFieldRefs {
+    readonly id: FieldRef<"InterpretationRule", 'String'>
+    readonly testDefId: FieldRef<"InterpretationRule", 'String'>
+    readonly name: FieldRef<"InterpretationRule", 'String'>
+    readonly condition: FieldRef<"InterpretationRule", 'String'>
+    readonly interpretation: FieldRef<"InterpretationRule", 'String'>
+    readonly severity: FieldRef<"InterpretationRule", 'String'>
+    readonly priority: FieldRef<"InterpretationRule", 'Int'>
+    readonly isActive: FieldRef<"InterpretationRule", 'Boolean'>
+    readonly createdAt: FieldRef<"InterpretationRule", 'DateTime'>
+    readonly updatedAt: FieldRef<"InterpretationRule", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * InterpretationRule findUnique
+   */
+  export type InterpretationRuleFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which InterpretationRule to fetch.
+     */
+    where: InterpretationRuleWhereUniqueInput
+  }
+
+  /**
+   * InterpretationRule findUniqueOrThrow
+   */
+  export type InterpretationRuleFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which InterpretationRule to fetch.
+     */
+    where: InterpretationRuleWhereUniqueInput
+  }
+
+  /**
+   * InterpretationRule findFirst
+   */
+  export type InterpretationRuleFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which InterpretationRule to fetch.
+     */
+    where?: InterpretationRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of InterpretationRules to fetch.
+     */
+    orderBy?: InterpretationRuleOrderByWithRelationInput | InterpretationRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for InterpretationRules.
+     */
+    cursor?: InterpretationRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` InterpretationRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` InterpretationRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of InterpretationRules.
+     */
+    distinct?: InterpretationRuleScalarFieldEnum | InterpretationRuleScalarFieldEnum[]
+  }
+
+  /**
+   * InterpretationRule findFirstOrThrow
+   */
+  export type InterpretationRuleFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which InterpretationRule to fetch.
+     */
+    where?: InterpretationRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of InterpretationRules to fetch.
+     */
+    orderBy?: InterpretationRuleOrderByWithRelationInput | InterpretationRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for InterpretationRules.
+     */
+    cursor?: InterpretationRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` InterpretationRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` InterpretationRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of InterpretationRules.
+     */
+    distinct?: InterpretationRuleScalarFieldEnum | InterpretationRuleScalarFieldEnum[]
+  }
+
+  /**
+   * InterpretationRule findMany
+   */
+  export type InterpretationRuleFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which InterpretationRules to fetch.
+     */
+    where?: InterpretationRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of InterpretationRules to fetch.
+     */
+    orderBy?: InterpretationRuleOrderByWithRelationInput | InterpretationRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing InterpretationRules.
+     */
+    cursor?: InterpretationRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` InterpretationRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` InterpretationRules.
+     */
+    skip?: number
+    distinct?: InterpretationRuleScalarFieldEnum | InterpretationRuleScalarFieldEnum[]
+  }
+
+  /**
+   * InterpretationRule create
+   */
+  export type InterpretationRuleCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+    /**
+     * The data needed to create a InterpretationRule.
+     */
+    data: XOR<InterpretationRuleCreateInput, InterpretationRuleUncheckedCreateInput>
+  }
+
+  /**
+   * InterpretationRule createMany
+   */
+  export type InterpretationRuleCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many InterpretationRules.
+     */
+    data: InterpretationRuleCreateManyInput | InterpretationRuleCreateManyInput[]
+  }
+
+  /**
+   * InterpretationRule createManyAndReturn
+   */
+  export type InterpretationRuleCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many InterpretationRules.
+     */
+    data: InterpretationRuleCreateManyInput | InterpretationRuleCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * InterpretationRule update
+   */
+  export type InterpretationRuleUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+    /**
+     * The data needed to update a InterpretationRule.
+     */
+    data: XOR<InterpretationRuleUpdateInput, InterpretationRuleUncheckedUpdateInput>
+    /**
+     * Choose, which InterpretationRule to update.
+     */
+    where: InterpretationRuleWhereUniqueInput
+  }
+
+  /**
+   * InterpretationRule updateMany
+   */
+  export type InterpretationRuleUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update InterpretationRules.
+     */
+    data: XOR<InterpretationRuleUpdateManyMutationInput, InterpretationRuleUncheckedUpdateManyInput>
+    /**
+     * Filter which InterpretationRules to update
+     */
+    where?: InterpretationRuleWhereInput
+  }
+
+  /**
+   * InterpretationRule upsert
+   */
+  export type InterpretationRuleUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+    /**
+     * The filter to search for the InterpretationRule to update in case it exists.
+     */
+    where: InterpretationRuleWhereUniqueInput
+    /**
+     * In case the InterpretationRule found by the `where` argument doesn't exist, create a new InterpretationRule with this data.
+     */
+    create: XOR<InterpretationRuleCreateInput, InterpretationRuleUncheckedCreateInput>
+    /**
+     * In case the InterpretationRule was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<InterpretationRuleUpdateInput, InterpretationRuleUncheckedUpdateInput>
+  }
+
+  /**
+   * InterpretationRule delete
+   */
+  export type InterpretationRuleDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+    /**
+     * Filter which InterpretationRule to delete.
+     */
+    where: InterpretationRuleWhereUniqueInput
+  }
+
+  /**
+   * InterpretationRule deleteMany
+   */
+  export type InterpretationRuleDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which InterpretationRules to delete
+     */
+    where?: InterpretationRuleWhereInput
+  }
+
+  /**
+   * InterpretationRule.results
+   */
+  export type InterpretationRule$resultsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Result
+     */
+    select?: ResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResultInclude<ExtArgs> | null
+    where?: ResultWhereInput
+    orderBy?: ResultOrderByWithRelationInput | ResultOrderByWithRelationInput[]
+    cursor?: ResultWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ResultScalarFieldEnum | ResultScalarFieldEnum[]
+  }
+
+  /**
+   * InterpretationRule without action
+   */
+  export type InterpretationRuleDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InterpretationRule
+     */
+    select?: InterpretationRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InterpretationRuleInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model DeltaCheckRule
+   */
+
+  export type AggregateDeltaCheckRule = {
+    _count: DeltaCheckRuleCountAggregateOutputType | null
+    _avg: DeltaCheckRuleAvgAggregateOutputType | null
+    _sum: DeltaCheckRuleSumAggregateOutputType | null
+    _min: DeltaCheckRuleMinAggregateOutputType | null
+    _max: DeltaCheckRuleMaxAggregateOutputType | null
+  }
+
+  export type DeltaCheckRuleAvgAggregateOutputType = {
+    alertThreshold: number | null
+    criticalThreshold: number | null
+    checkDays: number | null
+  }
+
+  export type DeltaCheckRuleSumAggregateOutputType = {
+    alertThreshold: number | null
+    criticalThreshold: number | null
+    checkDays: number | null
+  }
+
+  export type DeltaCheckRuleMinAggregateOutputType = {
+    id: string | null
+    testDefId: string | null
+    name: string | null
+    alertThreshold: number | null
+    criticalThreshold: number | null
+    checkDays: number | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type DeltaCheckRuleMaxAggregateOutputType = {
+    id: string | null
+    testDefId: string | null
+    name: string | null
+    alertThreshold: number | null
+    criticalThreshold: number | null
+    checkDays: number | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type DeltaCheckRuleCountAggregateOutputType = {
+    id: number
+    testDefId: number
+    name: number
+    alertThreshold: number
+    criticalThreshold: number
+    checkDays: number
+    isActive: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type DeltaCheckRuleAvgAggregateInputType = {
+    alertThreshold?: true
+    criticalThreshold?: true
+    checkDays?: true
+  }
+
+  export type DeltaCheckRuleSumAggregateInputType = {
+    alertThreshold?: true
+    criticalThreshold?: true
+    checkDays?: true
+  }
+
+  export type DeltaCheckRuleMinAggregateInputType = {
+    id?: true
+    testDefId?: true
+    name?: true
+    alertThreshold?: true
+    criticalThreshold?: true
+    checkDays?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type DeltaCheckRuleMaxAggregateInputType = {
+    id?: true
+    testDefId?: true
+    name?: true
+    alertThreshold?: true
+    criticalThreshold?: true
+    checkDays?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type DeltaCheckRuleCountAggregateInputType = {
+    id?: true
+    testDefId?: true
+    name?: true
+    alertThreshold?: true
+    criticalThreshold?: true
+    checkDays?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type DeltaCheckRuleAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which DeltaCheckRule to aggregate.
+     */
+    where?: DeltaCheckRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DeltaCheckRules to fetch.
+     */
+    orderBy?: DeltaCheckRuleOrderByWithRelationInput | DeltaCheckRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: DeltaCheckRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DeltaCheckRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DeltaCheckRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned DeltaCheckRules
+    **/
+    _count?: true | DeltaCheckRuleCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: DeltaCheckRuleAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: DeltaCheckRuleSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: DeltaCheckRuleMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: DeltaCheckRuleMaxAggregateInputType
+  }
+
+  export type GetDeltaCheckRuleAggregateType<T extends DeltaCheckRuleAggregateArgs> = {
+        [P in keyof T & keyof AggregateDeltaCheckRule]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateDeltaCheckRule[P]>
+      : GetScalarType<T[P], AggregateDeltaCheckRule[P]>
+  }
+
+
+
+
+  export type DeltaCheckRuleGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: DeltaCheckRuleWhereInput
+    orderBy?: DeltaCheckRuleOrderByWithAggregationInput | DeltaCheckRuleOrderByWithAggregationInput[]
+    by: DeltaCheckRuleScalarFieldEnum[] | DeltaCheckRuleScalarFieldEnum
+    having?: DeltaCheckRuleScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: DeltaCheckRuleCountAggregateInputType | true
+    _avg?: DeltaCheckRuleAvgAggregateInputType
+    _sum?: DeltaCheckRuleSumAggregateInputType
+    _min?: DeltaCheckRuleMinAggregateInputType
+    _max?: DeltaCheckRuleMaxAggregateInputType
+  }
+
+  export type DeltaCheckRuleGroupByOutputType = {
+    id: string
+    testDefId: string
+    name: string
+    alertThreshold: number
+    criticalThreshold: number | null
+    checkDays: number
+    isActive: boolean
+    createdAt: Date
+    updatedAt: Date
+    _count: DeltaCheckRuleCountAggregateOutputType | null
+    _avg: DeltaCheckRuleAvgAggregateOutputType | null
+    _sum: DeltaCheckRuleSumAggregateOutputType | null
+    _min: DeltaCheckRuleMinAggregateOutputType | null
+    _max: DeltaCheckRuleMaxAggregateOutputType | null
+  }
+
+  type GetDeltaCheckRuleGroupByPayload<T extends DeltaCheckRuleGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<DeltaCheckRuleGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof DeltaCheckRuleGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], DeltaCheckRuleGroupByOutputType[P]>
+            : GetScalarType<T[P], DeltaCheckRuleGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type DeltaCheckRuleSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    testDefId?: boolean
+    name?: boolean
+    alertThreshold?: boolean
+    criticalThreshold?: boolean
+    checkDays?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+    deltaCheckResults?: boolean | DeltaCheckRule$deltaCheckResultsArgs<ExtArgs>
+    _count?: boolean | DeltaCheckRuleCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["deltaCheckRule"]>
+
+  export type DeltaCheckRuleSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    testDefId?: boolean
+    name?: boolean
+    alertThreshold?: boolean
+    criticalThreshold?: boolean
+    checkDays?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["deltaCheckRule"]>
+
+  export type DeltaCheckRuleSelectScalar = {
+    id?: boolean
+    testDefId?: boolean
+    name?: boolean
+    alertThreshold?: boolean
+    criticalThreshold?: boolean
+    checkDays?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type DeltaCheckRuleInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+    deltaCheckResults?: boolean | DeltaCheckRule$deltaCheckResultsArgs<ExtArgs>
+    _count?: boolean | DeltaCheckRuleCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type DeltaCheckRuleIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    testDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }
+
+  export type $DeltaCheckRulePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "DeltaCheckRule"
+    objects: {
+      testDef: Prisma.$TestDefinitionPayload<ExtArgs>
+      deltaCheckResults: Prisma.$DeltaCheckResultPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      testDefId: string
+      name: string
+      alertThreshold: number
+      criticalThreshold: number | null
+      checkDays: number
+      isActive: boolean
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["deltaCheckRule"]>
+    composites: {}
+  }
+
+  type DeltaCheckRuleGetPayload<S extends boolean | null | undefined | DeltaCheckRuleDefaultArgs> = $Result.GetResult<Prisma.$DeltaCheckRulePayload, S>
+
+  type DeltaCheckRuleCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<DeltaCheckRuleFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: DeltaCheckRuleCountAggregateInputType | true
+    }
+
+  export interface DeltaCheckRuleDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['DeltaCheckRule'], meta: { name: 'DeltaCheckRule' } }
+    /**
+     * Find zero or one DeltaCheckRule that matches the filter.
+     * @param {DeltaCheckRuleFindUniqueArgs} args - Arguments to find a DeltaCheckRule
+     * @example
+     * // Get one DeltaCheckRule
+     * const deltaCheckRule = await prisma.deltaCheckRule.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends DeltaCheckRuleFindUniqueArgs>(args: SelectSubset<T, DeltaCheckRuleFindUniqueArgs<ExtArgs>>): Prisma__DeltaCheckRuleClient<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one DeltaCheckRule that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {DeltaCheckRuleFindUniqueOrThrowArgs} args - Arguments to find a DeltaCheckRule
+     * @example
+     * // Get one DeltaCheckRule
+     * const deltaCheckRule = await prisma.deltaCheckRule.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends DeltaCheckRuleFindUniqueOrThrowArgs>(args: SelectSubset<T, DeltaCheckRuleFindUniqueOrThrowArgs<ExtArgs>>): Prisma__DeltaCheckRuleClient<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first DeltaCheckRule that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckRuleFindFirstArgs} args - Arguments to find a DeltaCheckRule
+     * @example
+     * // Get one DeltaCheckRule
+     * const deltaCheckRule = await prisma.deltaCheckRule.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends DeltaCheckRuleFindFirstArgs>(args?: SelectSubset<T, DeltaCheckRuleFindFirstArgs<ExtArgs>>): Prisma__DeltaCheckRuleClient<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first DeltaCheckRule that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckRuleFindFirstOrThrowArgs} args - Arguments to find a DeltaCheckRule
+     * @example
+     * // Get one DeltaCheckRule
+     * const deltaCheckRule = await prisma.deltaCheckRule.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends DeltaCheckRuleFindFirstOrThrowArgs>(args?: SelectSubset<T, DeltaCheckRuleFindFirstOrThrowArgs<ExtArgs>>): Prisma__DeltaCheckRuleClient<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more DeltaCheckRules that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckRuleFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all DeltaCheckRules
+     * const deltaCheckRules = await prisma.deltaCheckRule.findMany()
+     * 
+     * // Get first 10 DeltaCheckRules
+     * const deltaCheckRules = await prisma.deltaCheckRule.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const deltaCheckRuleWithIdOnly = await prisma.deltaCheckRule.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends DeltaCheckRuleFindManyArgs>(args?: SelectSubset<T, DeltaCheckRuleFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a DeltaCheckRule.
+     * @param {DeltaCheckRuleCreateArgs} args - Arguments to create a DeltaCheckRule.
+     * @example
+     * // Create one DeltaCheckRule
+     * const DeltaCheckRule = await prisma.deltaCheckRule.create({
+     *   data: {
+     *     // ... data to create a DeltaCheckRule
+     *   }
+     * })
+     * 
+     */
+    create<T extends DeltaCheckRuleCreateArgs>(args: SelectSubset<T, DeltaCheckRuleCreateArgs<ExtArgs>>): Prisma__DeltaCheckRuleClient<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many DeltaCheckRules.
+     * @param {DeltaCheckRuleCreateManyArgs} args - Arguments to create many DeltaCheckRules.
+     * @example
+     * // Create many DeltaCheckRules
+     * const deltaCheckRule = await prisma.deltaCheckRule.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends DeltaCheckRuleCreateManyArgs>(args?: SelectSubset<T, DeltaCheckRuleCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many DeltaCheckRules and returns the data saved in the database.
+     * @param {DeltaCheckRuleCreateManyAndReturnArgs} args - Arguments to create many DeltaCheckRules.
+     * @example
+     * // Create many DeltaCheckRules
+     * const deltaCheckRule = await prisma.deltaCheckRule.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many DeltaCheckRules and only return the `id`
+     * const deltaCheckRuleWithIdOnly = await prisma.deltaCheckRule.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends DeltaCheckRuleCreateManyAndReturnArgs>(args?: SelectSubset<T, DeltaCheckRuleCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a DeltaCheckRule.
+     * @param {DeltaCheckRuleDeleteArgs} args - Arguments to delete one DeltaCheckRule.
+     * @example
+     * // Delete one DeltaCheckRule
+     * const DeltaCheckRule = await prisma.deltaCheckRule.delete({
+     *   where: {
+     *     // ... filter to delete one DeltaCheckRule
+     *   }
+     * })
+     * 
+     */
+    delete<T extends DeltaCheckRuleDeleteArgs>(args: SelectSubset<T, DeltaCheckRuleDeleteArgs<ExtArgs>>): Prisma__DeltaCheckRuleClient<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one DeltaCheckRule.
+     * @param {DeltaCheckRuleUpdateArgs} args - Arguments to update one DeltaCheckRule.
+     * @example
+     * // Update one DeltaCheckRule
+     * const deltaCheckRule = await prisma.deltaCheckRule.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends DeltaCheckRuleUpdateArgs>(args: SelectSubset<T, DeltaCheckRuleUpdateArgs<ExtArgs>>): Prisma__DeltaCheckRuleClient<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more DeltaCheckRules.
+     * @param {DeltaCheckRuleDeleteManyArgs} args - Arguments to filter DeltaCheckRules to delete.
+     * @example
+     * // Delete a few DeltaCheckRules
+     * const { count } = await prisma.deltaCheckRule.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends DeltaCheckRuleDeleteManyArgs>(args?: SelectSubset<T, DeltaCheckRuleDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more DeltaCheckRules.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckRuleUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many DeltaCheckRules
+     * const deltaCheckRule = await prisma.deltaCheckRule.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends DeltaCheckRuleUpdateManyArgs>(args: SelectSubset<T, DeltaCheckRuleUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one DeltaCheckRule.
+     * @param {DeltaCheckRuleUpsertArgs} args - Arguments to update or create a DeltaCheckRule.
+     * @example
+     * // Update or create a DeltaCheckRule
+     * const deltaCheckRule = await prisma.deltaCheckRule.upsert({
+     *   create: {
+     *     // ... data to create a DeltaCheckRule
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the DeltaCheckRule we want to update
+     *   }
+     * })
+     */
+    upsert<T extends DeltaCheckRuleUpsertArgs>(args: SelectSubset<T, DeltaCheckRuleUpsertArgs<ExtArgs>>): Prisma__DeltaCheckRuleClient<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of DeltaCheckRules.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckRuleCountArgs} args - Arguments to filter DeltaCheckRules to count.
+     * @example
+     * // Count the number of DeltaCheckRules
+     * const count = await prisma.deltaCheckRule.count({
+     *   where: {
+     *     // ... the filter for the DeltaCheckRules we want to count
+     *   }
+     * })
+    **/
+    count<T extends DeltaCheckRuleCountArgs>(
+      args?: Subset<T, DeltaCheckRuleCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], DeltaCheckRuleCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a DeltaCheckRule.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckRuleAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends DeltaCheckRuleAggregateArgs>(args: Subset<T, DeltaCheckRuleAggregateArgs>): Prisma.PrismaPromise<GetDeltaCheckRuleAggregateType<T>>
+
+    /**
+     * Group by DeltaCheckRule.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckRuleGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends DeltaCheckRuleGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: DeltaCheckRuleGroupByArgs['orderBy'] }
+        : { orderBy?: DeltaCheckRuleGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, DeltaCheckRuleGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetDeltaCheckRuleGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the DeltaCheckRule model
+   */
+  readonly fields: DeltaCheckRuleFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for DeltaCheckRule.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__DeltaCheckRuleClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    testDef<T extends TestDefinitionDefaultArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinitionDefaultArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
+    deltaCheckResults<T extends DeltaCheckRule$deltaCheckResultsArgs<ExtArgs> = {}>(args?: Subset<T, DeltaCheckRule$deltaCheckResultsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "findMany"> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the DeltaCheckRule model
+   */ 
+  interface DeltaCheckRuleFieldRefs {
+    readonly id: FieldRef<"DeltaCheckRule", 'String'>
+    readonly testDefId: FieldRef<"DeltaCheckRule", 'String'>
+    readonly name: FieldRef<"DeltaCheckRule", 'String'>
+    readonly alertThreshold: FieldRef<"DeltaCheckRule", 'Float'>
+    readonly criticalThreshold: FieldRef<"DeltaCheckRule", 'Float'>
+    readonly checkDays: FieldRef<"DeltaCheckRule", 'Int'>
+    readonly isActive: FieldRef<"DeltaCheckRule", 'Boolean'>
+    readonly createdAt: FieldRef<"DeltaCheckRule", 'DateTime'>
+    readonly updatedAt: FieldRef<"DeltaCheckRule", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * DeltaCheckRule findUnique
+   */
+  export type DeltaCheckRuleFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which DeltaCheckRule to fetch.
+     */
+    where: DeltaCheckRuleWhereUniqueInput
+  }
+
+  /**
+   * DeltaCheckRule findUniqueOrThrow
+   */
+  export type DeltaCheckRuleFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which DeltaCheckRule to fetch.
+     */
+    where: DeltaCheckRuleWhereUniqueInput
+  }
+
+  /**
+   * DeltaCheckRule findFirst
+   */
+  export type DeltaCheckRuleFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which DeltaCheckRule to fetch.
+     */
+    where?: DeltaCheckRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DeltaCheckRules to fetch.
+     */
+    orderBy?: DeltaCheckRuleOrderByWithRelationInput | DeltaCheckRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for DeltaCheckRules.
+     */
+    cursor?: DeltaCheckRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DeltaCheckRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DeltaCheckRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of DeltaCheckRules.
+     */
+    distinct?: DeltaCheckRuleScalarFieldEnum | DeltaCheckRuleScalarFieldEnum[]
+  }
+
+  /**
+   * DeltaCheckRule findFirstOrThrow
+   */
+  export type DeltaCheckRuleFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which DeltaCheckRule to fetch.
+     */
+    where?: DeltaCheckRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DeltaCheckRules to fetch.
+     */
+    orderBy?: DeltaCheckRuleOrderByWithRelationInput | DeltaCheckRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for DeltaCheckRules.
+     */
+    cursor?: DeltaCheckRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DeltaCheckRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DeltaCheckRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of DeltaCheckRules.
+     */
+    distinct?: DeltaCheckRuleScalarFieldEnum | DeltaCheckRuleScalarFieldEnum[]
+  }
+
+  /**
+   * DeltaCheckRule findMany
+   */
+  export type DeltaCheckRuleFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which DeltaCheckRules to fetch.
+     */
+    where?: DeltaCheckRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DeltaCheckRules to fetch.
+     */
+    orderBy?: DeltaCheckRuleOrderByWithRelationInput | DeltaCheckRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing DeltaCheckRules.
+     */
+    cursor?: DeltaCheckRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DeltaCheckRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DeltaCheckRules.
+     */
+    skip?: number
+    distinct?: DeltaCheckRuleScalarFieldEnum | DeltaCheckRuleScalarFieldEnum[]
+  }
+
+  /**
+   * DeltaCheckRule create
+   */
+  export type DeltaCheckRuleCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleInclude<ExtArgs> | null
+    /**
+     * The data needed to create a DeltaCheckRule.
+     */
+    data: XOR<DeltaCheckRuleCreateInput, DeltaCheckRuleUncheckedCreateInput>
+  }
+
+  /**
+   * DeltaCheckRule createMany
+   */
+  export type DeltaCheckRuleCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many DeltaCheckRules.
+     */
+    data: DeltaCheckRuleCreateManyInput | DeltaCheckRuleCreateManyInput[]
+  }
+
+  /**
+   * DeltaCheckRule createManyAndReturn
+   */
+  export type DeltaCheckRuleCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many DeltaCheckRules.
+     */
+    data: DeltaCheckRuleCreateManyInput | DeltaCheckRuleCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * DeltaCheckRule update
+   */
+  export type DeltaCheckRuleUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleInclude<ExtArgs> | null
+    /**
+     * The data needed to update a DeltaCheckRule.
+     */
+    data: XOR<DeltaCheckRuleUpdateInput, DeltaCheckRuleUncheckedUpdateInput>
+    /**
+     * Choose, which DeltaCheckRule to update.
+     */
+    where: DeltaCheckRuleWhereUniqueInput
+  }
+
+  /**
+   * DeltaCheckRule updateMany
+   */
+  export type DeltaCheckRuleUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update DeltaCheckRules.
+     */
+    data: XOR<DeltaCheckRuleUpdateManyMutationInput, DeltaCheckRuleUncheckedUpdateManyInput>
+    /**
+     * Filter which DeltaCheckRules to update
+     */
+    where?: DeltaCheckRuleWhereInput
+  }
+
+  /**
+   * DeltaCheckRule upsert
+   */
+  export type DeltaCheckRuleUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleInclude<ExtArgs> | null
+    /**
+     * The filter to search for the DeltaCheckRule to update in case it exists.
+     */
+    where: DeltaCheckRuleWhereUniqueInput
+    /**
+     * In case the DeltaCheckRule found by the `where` argument doesn't exist, create a new DeltaCheckRule with this data.
+     */
+    create: XOR<DeltaCheckRuleCreateInput, DeltaCheckRuleUncheckedCreateInput>
+    /**
+     * In case the DeltaCheckRule was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<DeltaCheckRuleUpdateInput, DeltaCheckRuleUncheckedUpdateInput>
+  }
+
+  /**
+   * DeltaCheckRule delete
+   */
+  export type DeltaCheckRuleDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleInclude<ExtArgs> | null
+    /**
+     * Filter which DeltaCheckRule to delete.
+     */
+    where: DeltaCheckRuleWhereUniqueInput
+  }
+
+  /**
+   * DeltaCheckRule deleteMany
+   */
+  export type DeltaCheckRuleDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which DeltaCheckRules to delete
+     */
+    where?: DeltaCheckRuleWhereInput
+  }
+
+  /**
+   * DeltaCheckRule.deltaCheckResults
+   */
+  export type DeltaCheckRule$deltaCheckResultsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+    where?: DeltaCheckResultWhereInput
+    orderBy?: DeltaCheckResultOrderByWithRelationInput | DeltaCheckResultOrderByWithRelationInput[]
+    cursor?: DeltaCheckResultWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: DeltaCheckResultScalarFieldEnum | DeltaCheckResultScalarFieldEnum[]
+  }
+
+  /**
+   * DeltaCheckRule without action
+   */
+  export type DeltaCheckRuleDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckRule
+     */
+    select?: DeltaCheckRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckRuleInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ReflexTestRule
+   */
+
+  export type AggregateReflexTestRule = {
+    _count: ReflexTestRuleCountAggregateOutputType | null
+    _avg: ReflexTestRuleAvgAggregateOutputType | null
+    _sum: ReflexTestRuleSumAggregateOutputType | null
+    _min: ReflexTestRuleMinAggregateOutputType | null
+    _max: ReflexTestRuleMaxAggregateOutputType | null
+  }
+
+  export type ReflexTestRuleAvgAggregateOutputType = {
+    priority: number | null
+  }
+
+  export type ReflexTestRuleSumAggregateOutputType = {
+    priority: number | null
+  }
+
+  export type ReflexTestRuleMinAggregateOutputType = {
+    id: string | null
+    parentTestDefId: string | null
+    childTestDefId: string | null
+    condition: string | null
+    priority: number | null
+    requiresApproval: boolean | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ReflexTestRuleMaxAggregateOutputType = {
+    id: string | null
+    parentTestDefId: string | null
+    childTestDefId: string | null
+    condition: string | null
+    priority: number | null
+    requiresApproval: boolean | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ReflexTestRuleCountAggregateOutputType = {
+    id: number
+    parentTestDefId: number
+    childTestDefId: number
+    condition: number
+    priority: number
+    requiresApproval: number
+    isActive: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type ReflexTestRuleAvgAggregateInputType = {
+    priority?: true
+  }
+
+  export type ReflexTestRuleSumAggregateInputType = {
+    priority?: true
+  }
+
+  export type ReflexTestRuleMinAggregateInputType = {
+    id?: true
+    parentTestDefId?: true
+    childTestDefId?: true
+    condition?: true
+    priority?: true
+    requiresApproval?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ReflexTestRuleMaxAggregateInputType = {
+    id?: true
+    parentTestDefId?: true
+    childTestDefId?: true
+    condition?: true
+    priority?: true
+    requiresApproval?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ReflexTestRuleCountAggregateInputType = {
+    id?: true
+    parentTestDefId?: true
+    childTestDefId?: true
+    condition?: true
+    priority?: true
+    requiresApproval?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type ReflexTestRuleAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReflexTestRule to aggregate.
+     */
+    where?: ReflexTestRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReflexTestRules to fetch.
+     */
+    orderBy?: ReflexTestRuleOrderByWithRelationInput | ReflexTestRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ReflexTestRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReflexTestRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReflexTestRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ReflexTestRules
+    **/
+    _count?: true | ReflexTestRuleCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ReflexTestRuleAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ReflexTestRuleSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ReflexTestRuleMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ReflexTestRuleMaxAggregateInputType
+  }
+
+  export type GetReflexTestRuleAggregateType<T extends ReflexTestRuleAggregateArgs> = {
+        [P in keyof T & keyof AggregateReflexTestRule]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateReflexTestRule[P]>
+      : GetScalarType<T[P], AggregateReflexTestRule[P]>
+  }
+
+
+
+
+  export type ReflexTestRuleGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReflexTestRuleWhereInput
+    orderBy?: ReflexTestRuleOrderByWithAggregationInput | ReflexTestRuleOrderByWithAggregationInput[]
+    by: ReflexTestRuleScalarFieldEnum[] | ReflexTestRuleScalarFieldEnum
+    having?: ReflexTestRuleScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ReflexTestRuleCountAggregateInputType | true
+    _avg?: ReflexTestRuleAvgAggregateInputType
+    _sum?: ReflexTestRuleSumAggregateInputType
+    _min?: ReflexTestRuleMinAggregateInputType
+    _max?: ReflexTestRuleMaxAggregateInputType
+  }
+
+  export type ReflexTestRuleGroupByOutputType = {
+    id: string
+    parentTestDefId: string
+    childTestDefId: string
+    condition: string
+    priority: number
+    requiresApproval: boolean
+    isActive: boolean
+    createdAt: Date
+    updatedAt: Date
+    _count: ReflexTestRuleCountAggregateOutputType | null
+    _avg: ReflexTestRuleAvgAggregateOutputType | null
+    _sum: ReflexTestRuleSumAggregateOutputType | null
+    _min: ReflexTestRuleMinAggregateOutputType | null
+    _max: ReflexTestRuleMaxAggregateOutputType | null
+  }
+
+  type GetReflexTestRuleGroupByPayload<T extends ReflexTestRuleGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ReflexTestRuleGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ReflexTestRuleGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ReflexTestRuleGroupByOutputType[P]>
+            : GetScalarType<T[P], ReflexTestRuleGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ReflexTestRuleSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    parentTestDefId?: boolean
+    childTestDefId?: boolean
+    condition?: boolean
+    priority?: boolean
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    parentTestDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+    childTestDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reflexTestRule"]>
+
+  export type ReflexTestRuleSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    parentTestDefId?: boolean
+    childTestDefId?: boolean
+    condition?: boolean
+    priority?: boolean
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    parentTestDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+    childTestDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reflexTestRule"]>
+
+  export type ReflexTestRuleSelectScalar = {
+    id?: boolean
+    parentTestDefId?: boolean
+    childTestDefId?: boolean
+    condition?: boolean
+    priority?: boolean
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type ReflexTestRuleInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    parentTestDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+    childTestDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }
+  export type ReflexTestRuleIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    parentTestDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+    childTestDef?: boolean | TestDefinitionDefaultArgs<ExtArgs>
+  }
+
+  export type $ReflexTestRulePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ReflexTestRule"
+    objects: {
+      parentTestDef: Prisma.$TestDefinitionPayload<ExtArgs>
+      childTestDef: Prisma.$TestDefinitionPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      parentTestDefId: string
+      childTestDefId: string
+      condition: string
+      priority: number
+      requiresApproval: boolean
+      isActive: boolean
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["reflexTestRule"]>
+    composites: {}
+  }
+
+  type ReflexTestRuleGetPayload<S extends boolean | null | undefined | ReflexTestRuleDefaultArgs> = $Result.GetResult<Prisma.$ReflexTestRulePayload, S>
+
+  type ReflexTestRuleCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<ReflexTestRuleFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: ReflexTestRuleCountAggregateInputType | true
+    }
+
+  export interface ReflexTestRuleDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ReflexTestRule'], meta: { name: 'ReflexTestRule' } }
+    /**
+     * Find zero or one ReflexTestRule that matches the filter.
+     * @param {ReflexTestRuleFindUniqueArgs} args - Arguments to find a ReflexTestRule
+     * @example
+     * // Get one ReflexTestRule
+     * const reflexTestRule = await prisma.reflexTestRule.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ReflexTestRuleFindUniqueArgs>(args: SelectSubset<T, ReflexTestRuleFindUniqueArgs<ExtArgs>>): Prisma__ReflexTestRuleClient<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one ReflexTestRule that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {ReflexTestRuleFindUniqueOrThrowArgs} args - Arguments to find a ReflexTestRule
+     * @example
+     * // Get one ReflexTestRule
+     * const reflexTestRule = await prisma.reflexTestRule.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ReflexTestRuleFindUniqueOrThrowArgs>(args: SelectSubset<T, ReflexTestRuleFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ReflexTestRuleClient<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first ReflexTestRule that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReflexTestRuleFindFirstArgs} args - Arguments to find a ReflexTestRule
+     * @example
+     * // Get one ReflexTestRule
+     * const reflexTestRule = await prisma.reflexTestRule.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ReflexTestRuleFindFirstArgs>(args?: SelectSubset<T, ReflexTestRuleFindFirstArgs<ExtArgs>>): Prisma__ReflexTestRuleClient<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first ReflexTestRule that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReflexTestRuleFindFirstOrThrowArgs} args - Arguments to find a ReflexTestRule
+     * @example
+     * // Get one ReflexTestRule
+     * const reflexTestRule = await prisma.reflexTestRule.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ReflexTestRuleFindFirstOrThrowArgs>(args?: SelectSubset<T, ReflexTestRuleFindFirstOrThrowArgs<ExtArgs>>): Prisma__ReflexTestRuleClient<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more ReflexTestRules that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReflexTestRuleFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ReflexTestRules
+     * const reflexTestRules = await prisma.reflexTestRule.findMany()
+     * 
+     * // Get first 10 ReflexTestRules
+     * const reflexTestRules = await prisma.reflexTestRule.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const reflexTestRuleWithIdOnly = await prisma.reflexTestRule.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ReflexTestRuleFindManyArgs>(args?: SelectSubset<T, ReflexTestRuleFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a ReflexTestRule.
+     * @param {ReflexTestRuleCreateArgs} args - Arguments to create a ReflexTestRule.
+     * @example
+     * // Create one ReflexTestRule
+     * const ReflexTestRule = await prisma.reflexTestRule.create({
+     *   data: {
+     *     // ... data to create a ReflexTestRule
+     *   }
+     * })
+     * 
+     */
+    create<T extends ReflexTestRuleCreateArgs>(args: SelectSubset<T, ReflexTestRuleCreateArgs<ExtArgs>>): Prisma__ReflexTestRuleClient<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many ReflexTestRules.
+     * @param {ReflexTestRuleCreateManyArgs} args - Arguments to create many ReflexTestRules.
+     * @example
+     * // Create many ReflexTestRules
+     * const reflexTestRule = await prisma.reflexTestRule.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ReflexTestRuleCreateManyArgs>(args?: SelectSubset<T, ReflexTestRuleCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ReflexTestRules and returns the data saved in the database.
+     * @param {ReflexTestRuleCreateManyAndReturnArgs} args - Arguments to create many ReflexTestRules.
+     * @example
+     * // Create many ReflexTestRules
+     * const reflexTestRule = await prisma.reflexTestRule.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ReflexTestRules and only return the `id`
+     * const reflexTestRuleWithIdOnly = await prisma.reflexTestRule.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ReflexTestRuleCreateManyAndReturnArgs>(args?: SelectSubset<T, ReflexTestRuleCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a ReflexTestRule.
+     * @param {ReflexTestRuleDeleteArgs} args - Arguments to delete one ReflexTestRule.
+     * @example
+     * // Delete one ReflexTestRule
+     * const ReflexTestRule = await prisma.reflexTestRule.delete({
+     *   where: {
+     *     // ... filter to delete one ReflexTestRule
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ReflexTestRuleDeleteArgs>(args: SelectSubset<T, ReflexTestRuleDeleteArgs<ExtArgs>>): Prisma__ReflexTestRuleClient<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one ReflexTestRule.
+     * @param {ReflexTestRuleUpdateArgs} args - Arguments to update one ReflexTestRule.
+     * @example
+     * // Update one ReflexTestRule
+     * const reflexTestRule = await prisma.reflexTestRule.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ReflexTestRuleUpdateArgs>(args: SelectSubset<T, ReflexTestRuleUpdateArgs<ExtArgs>>): Prisma__ReflexTestRuleClient<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more ReflexTestRules.
+     * @param {ReflexTestRuleDeleteManyArgs} args - Arguments to filter ReflexTestRules to delete.
+     * @example
+     * // Delete a few ReflexTestRules
+     * const { count } = await prisma.reflexTestRule.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ReflexTestRuleDeleteManyArgs>(args?: SelectSubset<T, ReflexTestRuleDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReflexTestRules.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReflexTestRuleUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ReflexTestRules
+     * const reflexTestRule = await prisma.reflexTestRule.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ReflexTestRuleUpdateManyArgs>(args: SelectSubset<T, ReflexTestRuleUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one ReflexTestRule.
+     * @param {ReflexTestRuleUpsertArgs} args - Arguments to update or create a ReflexTestRule.
+     * @example
+     * // Update or create a ReflexTestRule
+     * const reflexTestRule = await prisma.reflexTestRule.upsert({
+     *   create: {
+     *     // ... data to create a ReflexTestRule
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ReflexTestRule we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ReflexTestRuleUpsertArgs>(args: SelectSubset<T, ReflexTestRuleUpsertArgs<ExtArgs>>): Prisma__ReflexTestRuleClient<$Result.GetResult<Prisma.$ReflexTestRulePayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of ReflexTestRules.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReflexTestRuleCountArgs} args - Arguments to filter ReflexTestRules to count.
+     * @example
+     * // Count the number of ReflexTestRules
+     * const count = await prisma.reflexTestRule.count({
+     *   where: {
+     *     // ... the filter for the ReflexTestRules we want to count
+     *   }
+     * })
+    **/
+    count<T extends ReflexTestRuleCountArgs>(
+      args?: Subset<T, ReflexTestRuleCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ReflexTestRuleCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ReflexTestRule.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReflexTestRuleAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ReflexTestRuleAggregateArgs>(args: Subset<T, ReflexTestRuleAggregateArgs>): Prisma.PrismaPromise<GetReflexTestRuleAggregateType<T>>
+
+    /**
+     * Group by ReflexTestRule.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReflexTestRuleGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ReflexTestRuleGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ReflexTestRuleGroupByArgs['orderBy'] }
+        : { orderBy?: ReflexTestRuleGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ReflexTestRuleGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetReflexTestRuleGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ReflexTestRule model
+   */
+  readonly fields: ReflexTestRuleFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ReflexTestRule.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ReflexTestRuleClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    parentTestDef<T extends TestDefinitionDefaultArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinitionDefaultArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
+    childTestDef<T extends TestDefinitionDefaultArgs<ExtArgs> = {}>(args?: Subset<T, TestDefinitionDefaultArgs<ExtArgs>>): Prisma__TestDefinitionClient<$Result.GetResult<Prisma.$TestDefinitionPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ReflexTestRule model
+   */ 
+  interface ReflexTestRuleFieldRefs {
+    readonly id: FieldRef<"ReflexTestRule", 'String'>
+    readonly parentTestDefId: FieldRef<"ReflexTestRule", 'String'>
+    readonly childTestDefId: FieldRef<"ReflexTestRule", 'String'>
+    readonly condition: FieldRef<"ReflexTestRule", 'String'>
+    readonly priority: FieldRef<"ReflexTestRule", 'Int'>
+    readonly requiresApproval: FieldRef<"ReflexTestRule", 'Boolean'>
+    readonly isActive: FieldRef<"ReflexTestRule", 'Boolean'>
+    readonly createdAt: FieldRef<"ReflexTestRule", 'DateTime'>
+    readonly updatedAt: FieldRef<"ReflexTestRule", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ReflexTestRule findUnique
+   */
+  export type ReflexTestRuleFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which ReflexTestRule to fetch.
+     */
+    where: ReflexTestRuleWhereUniqueInput
+  }
+
+  /**
+   * ReflexTestRule findUniqueOrThrow
+   */
+  export type ReflexTestRuleFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which ReflexTestRule to fetch.
+     */
+    where: ReflexTestRuleWhereUniqueInput
+  }
+
+  /**
+   * ReflexTestRule findFirst
+   */
+  export type ReflexTestRuleFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which ReflexTestRule to fetch.
+     */
+    where?: ReflexTestRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReflexTestRules to fetch.
+     */
+    orderBy?: ReflexTestRuleOrderByWithRelationInput | ReflexTestRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReflexTestRules.
+     */
+    cursor?: ReflexTestRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReflexTestRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReflexTestRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReflexTestRules.
+     */
+    distinct?: ReflexTestRuleScalarFieldEnum | ReflexTestRuleScalarFieldEnum[]
+  }
+
+  /**
+   * ReflexTestRule findFirstOrThrow
+   */
+  export type ReflexTestRuleFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which ReflexTestRule to fetch.
+     */
+    where?: ReflexTestRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReflexTestRules to fetch.
+     */
+    orderBy?: ReflexTestRuleOrderByWithRelationInput | ReflexTestRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReflexTestRules.
+     */
+    cursor?: ReflexTestRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReflexTestRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReflexTestRules.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReflexTestRules.
+     */
+    distinct?: ReflexTestRuleScalarFieldEnum | ReflexTestRuleScalarFieldEnum[]
+  }
+
+  /**
+   * ReflexTestRule findMany
+   */
+  export type ReflexTestRuleFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+    /**
+     * Filter, which ReflexTestRules to fetch.
+     */
+    where?: ReflexTestRuleWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReflexTestRules to fetch.
+     */
+    orderBy?: ReflexTestRuleOrderByWithRelationInput | ReflexTestRuleOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ReflexTestRules.
+     */
+    cursor?: ReflexTestRuleWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReflexTestRules from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReflexTestRules.
+     */
+    skip?: number
+    distinct?: ReflexTestRuleScalarFieldEnum | ReflexTestRuleScalarFieldEnum[]
+  }
+
+  /**
+   * ReflexTestRule create
+   */
+  export type ReflexTestRuleCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ReflexTestRule.
+     */
+    data: XOR<ReflexTestRuleCreateInput, ReflexTestRuleUncheckedCreateInput>
+  }
+
+  /**
+   * ReflexTestRule createMany
+   */
+  export type ReflexTestRuleCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ReflexTestRules.
+     */
+    data: ReflexTestRuleCreateManyInput | ReflexTestRuleCreateManyInput[]
+  }
+
+  /**
+   * ReflexTestRule createManyAndReturn
+   */
+  export type ReflexTestRuleCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many ReflexTestRules.
+     */
+    data: ReflexTestRuleCreateManyInput | ReflexTestRuleCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReflexTestRule update
+   */
+  export type ReflexTestRuleUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ReflexTestRule.
+     */
+    data: XOR<ReflexTestRuleUpdateInput, ReflexTestRuleUncheckedUpdateInput>
+    /**
+     * Choose, which ReflexTestRule to update.
+     */
+    where: ReflexTestRuleWhereUniqueInput
+  }
+
+  /**
+   * ReflexTestRule updateMany
+   */
+  export type ReflexTestRuleUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ReflexTestRules.
+     */
+    data: XOR<ReflexTestRuleUpdateManyMutationInput, ReflexTestRuleUncheckedUpdateManyInput>
+    /**
+     * Filter which ReflexTestRules to update
+     */
+    where?: ReflexTestRuleWhereInput
+  }
+
+  /**
+   * ReflexTestRule upsert
+   */
+  export type ReflexTestRuleUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ReflexTestRule to update in case it exists.
+     */
+    where: ReflexTestRuleWhereUniqueInput
+    /**
+     * In case the ReflexTestRule found by the `where` argument doesn't exist, create a new ReflexTestRule with this data.
+     */
+    create: XOR<ReflexTestRuleCreateInput, ReflexTestRuleUncheckedCreateInput>
+    /**
+     * In case the ReflexTestRule was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ReflexTestRuleUpdateInput, ReflexTestRuleUncheckedUpdateInput>
+  }
+
+  /**
+   * ReflexTestRule delete
+   */
+  export type ReflexTestRuleDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+    /**
+     * Filter which ReflexTestRule to delete.
+     */
+    where: ReflexTestRuleWhereUniqueInput
+  }
+
+  /**
+   * ReflexTestRule deleteMany
+   */
+  export type ReflexTestRuleDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReflexTestRules to delete
+     */
+    where?: ReflexTestRuleWhereInput
+  }
+
+  /**
+   * ReflexTestRule without action
+   */
+  export type ReflexTestRuleDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReflexTestRule
+     */
+    select?: ReflexTestRuleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReflexTestRuleInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model DeltaCheckResult
+   */
+
+  export type AggregateDeltaCheckResult = {
+    _count: DeltaCheckResultCountAggregateOutputType | null
+    _avg: DeltaCheckResultAvgAggregateOutputType | null
+    _sum: DeltaCheckResultSumAggregateOutputType | null
+    _min: DeltaCheckResultMinAggregateOutputType | null
+    _max: DeltaCheckResultMaxAggregateOutputType | null
+  }
+
+  export type DeltaCheckResultAvgAggregateOutputType = {
+    previousValue: number | null
+    currentValue: number | null
+    changePercent: number | null
+  }
+
+  export type DeltaCheckResultSumAggregateOutputType = {
+    previousValue: number | null
+    currentValue: number | null
+    changePercent: number | null
+  }
+
+  export type DeltaCheckResultMinAggregateOutputType = {
+    id: string | null
+    resultId: string | null
+    ruleId: string | null
+    previousValue: number | null
+    currentValue: number | null
+    changePercent: number | null
+    previousDate: Date | null
+    alertMessage: string | null
+    severity: string | null
+    isResolved: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type DeltaCheckResultMaxAggregateOutputType = {
+    id: string | null
+    resultId: string | null
+    ruleId: string | null
+    previousValue: number | null
+    currentValue: number | null
+    changePercent: number | null
+    previousDate: Date | null
+    alertMessage: string | null
+    severity: string | null
+    isResolved: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type DeltaCheckResultCountAggregateOutputType = {
+    id: number
+    resultId: number
+    ruleId: number
+    previousValue: number
+    currentValue: number
+    changePercent: number
+    previousDate: number
+    alertMessage: number
+    severity: number
+    isResolved: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type DeltaCheckResultAvgAggregateInputType = {
+    previousValue?: true
+    currentValue?: true
+    changePercent?: true
+  }
+
+  export type DeltaCheckResultSumAggregateInputType = {
+    previousValue?: true
+    currentValue?: true
+    changePercent?: true
+  }
+
+  export type DeltaCheckResultMinAggregateInputType = {
+    id?: true
+    resultId?: true
+    ruleId?: true
+    previousValue?: true
+    currentValue?: true
+    changePercent?: true
+    previousDate?: true
+    alertMessage?: true
+    severity?: true
+    isResolved?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type DeltaCheckResultMaxAggregateInputType = {
+    id?: true
+    resultId?: true
+    ruleId?: true
+    previousValue?: true
+    currentValue?: true
+    changePercent?: true
+    previousDate?: true
+    alertMessage?: true
+    severity?: true
+    isResolved?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type DeltaCheckResultCountAggregateInputType = {
+    id?: true
+    resultId?: true
+    ruleId?: true
+    previousValue?: true
+    currentValue?: true
+    changePercent?: true
+    previousDate?: true
+    alertMessage?: true
+    severity?: true
+    isResolved?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type DeltaCheckResultAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which DeltaCheckResult to aggregate.
+     */
+    where?: DeltaCheckResultWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DeltaCheckResults to fetch.
+     */
+    orderBy?: DeltaCheckResultOrderByWithRelationInput | DeltaCheckResultOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: DeltaCheckResultWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DeltaCheckResults from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DeltaCheckResults.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned DeltaCheckResults
+    **/
+    _count?: true | DeltaCheckResultCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: DeltaCheckResultAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: DeltaCheckResultSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: DeltaCheckResultMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: DeltaCheckResultMaxAggregateInputType
+  }
+
+  export type GetDeltaCheckResultAggregateType<T extends DeltaCheckResultAggregateArgs> = {
+        [P in keyof T & keyof AggregateDeltaCheckResult]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateDeltaCheckResult[P]>
+      : GetScalarType<T[P], AggregateDeltaCheckResult[P]>
+  }
+
+
+
+
+  export type DeltaCheckResultGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: DeltaCheckResultWhereInput
+    orderBy?: DeltaCheckResultOrderByWithAggregationInput | DeltaCheckResultOrderByWithAggregationInput[]
+    by: DeltaCheckResultScalarFieldEnum[] | DeltaCheckResultScalarFieldEnum
+    having?: DeltaCheckResultScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: DeltaCheckResultCountAggregateInputType | true
+    _avg?: DeltaCheckResultAvgAggregateInputType
+    _sum?: DeltaCheckResultSumAggregateInputType
+    _min?: DeltaCheckResultMinAggregateInputType
+    _max?: DeltaCheckResultMaxAggregateInputType
+  }
+
+  export type DeltaCheckResultGroupByOutputType = {
+    id: string
+    resultId: string
+    ruleId: string
+    previousValue: number | null
+    currentValue: number
+    changePercent: number
+    previousDate: Date | null
+    alertMessage: string
+    severity: string
+    isResolved: boolean
+    createdAt: Date
+    updatedAt: Date
+    _count: DeltaCheckResultCountAggregateOutputType | null
+    _avg: DeltaCheckResultAvgAggregateOutputType | null
+    _sum: DeltaCheckResultSumAggregateOutputType | null
+    _min: DeltaCheckResultMinAggregateOutputType | null
+    _max: DeltaCheckResultMaxAggregateOutputType | null
+  }
+
+  type GetDeltaCheckResultGroupByPayload<T extends DeltaCheckResultGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<DeltaCheckResultGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof DeltaCheckResultGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], DeltaCheckResultGroupByOutputType[P]>
+            : GetScalarType<T[P], DeltaCheckResultGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type DeltaCheckResultSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    resultId?: boolean
+    ruleId?: boolean
+    previousValue?: boolean
+    currentValue?: boolean
+    changePercent?: boolean
+    previousDate?: boolean
+    alertMessage?: boolean
+    severity?: boolean
+    isResolved?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    result?: boolean | ResultDefaultArgs<ExtArgs>
+    rule?: boolean | DeltaCheckRuleDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["deltaCheckResult"]>
+
+  export type DeltaCheckResultSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    resultId?: boolean
+    ruleId?: boolean
+    previousValue?: boolean
+    currentValue?: boolean
+    changePercent?: boolean
+    previousDate?: boolean
+    alertMessage?: boolean
+    severity?: boolean
+    isResolved?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    result?: boolean | ResultDefaultArgs<ExtArgs>
+    rule?: boolean | DeltaCheckRuleDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["deltaCheckResult"]>
+
+  export type DeltaCheckResultSelectScalar = {
+    id?: boolean
+    resultId?: boolean
+    ruleId?: boolean
+    previousValue?: boolean
+    currentValue?: boolean
+    changePercent?: boolean
+    previousDate?: boolean
+    alertMessage?: boolean
+    severity?: boolean
+    isResolved?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type DeltaCheckResultInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    result?: boolean | ResultDefaultArgs<ExtArgs>
+    rule?: boolean | DeltaCheckRuleDefaultArgs<ExtArgs>
+  }
+  export type DeltaCheckResultIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    result?: boolean | ResultDefaultArgs<ExtArgs>
+    rule?: boolean | DeltaCheckRuleDefaultArgs<ExtArgs>
+  }
+
+  export type $DeltaCheckResultPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "DeltaCheckResult"
+    objects: {
+      result: Prisma.$ResultPayload<ExtArgs>
+      rule: Prisma.$DeltaCheckRulePayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      resultId: string
+      ruleId: string
+      previousValue: number | null
+      currentValue: number
+      changePercent: number
+      previousDate: Date | null
+      alertMessage: string
+      severity: string
+      isResolved: boolean
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["deltaCheckResult"]>
+    composites: {}
+  }
+
+  type DeltaCheckResultGetPayload<S extends boolean | null | undefined | DeltaCheckResultDefaultArgs> = $Result.GetResult<Prisma.$DeltaCheckResultPayload, S>
+
+  type DeltaCheckResultCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<DeltaCheckResultFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: DeltaCheckResultCountAggregateInputType | true
+    }
+
+  export interface DeltaCheckResultDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['DeltaCheckResult'], meta: { name: 'DeltaCheckResult' } }
+    /**
+     * Find zero or one DeltaCheckResult that matches the filter.
+     * @param {DeltaCheckResultFindUniqueArgs} args - Arguments to find a DeltaCheckResult
+     * @example
+     * // Get one DeltaCheckResult
+     * const deltaCheckResult = await prisma.deltaCheckResult.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends DeltaCheckResultFindUniqueArgs>(args: SelectSubset<T, DeltaCheckResultFindUniqueArgs<ExtArgs>>): Prisma__DeltaCheckResultClient<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one DeltaCheckResult that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {DeltaCheckResultFindUniqueOrThrowArgs} args - Arguments to find a DeltaCheckResult
+     * @example
+     * // Get one DeltaCheckResult
+     * const deltaCheckResult = await prisma.deltaCheckResult.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends DeltaCheckResultFindUniqueOrThrowArgs>(args: SelectSubset<T, DeltaCheckResultFindUniqueOrThrowArgs<ExtArgs>>): Prisma__DeltaCheckResultClient<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first DeltaCheckResult that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckResultFindFirstArgs} args - Arguments to find a DeltaCheckResult
+     * @example
+     * // Get one DeltaCheckResult
+     * const deltaCheckResult = await prisma.deltaCheckResult.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends DeltaCheckResultFindFirstArgs>(args?: SelectSubset<T, DeltaCheckResultFindFirstArgs<ExtArgs>>): Prisma__DeltaCheckResultClient<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first DeltaCheckResult that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckResultFindFirstOrThrowArgs} args - Arguments to find a DeltaCheckResult
+     * @example
+     * // Get one DeltaCheckResult
+     * const deltaCheckResult = await prisma.deltaCheckResult.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends DeltaCheckResultFindFirstOrThrowArgs>(args?: SelectSubset<T, DeltaCheckResultFindFirstOrThrowArgs<ExtArgs>>): Prisma__DeltaCheckResultClient<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more DeltaCheckResults that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckResultFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all DeltaCheckResults
+     * const deltaCheckResults = await prisma.deltaCheckResult.findMany()
+     * 
+     * // Get first 10 DeltaCheckResults
+     * const deltaCheckResults = await prisma.deltaCheckResult.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const deltaCheckResultWithIdOnly = await prisma.deltaCheckResult.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends DeltaCheckResultFindManyArgs>(args?: SelectSubset<T, DeltaCheckResultFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a DeltaCheckResult.
+     * @param {DeltaCheckResultCreateArgs} args - Arguments to create a DeltaCheckResult.
+     * @example
+     * // Create one DeltaCheckResult
+     * const DeltaCheckResult = await prisma.deltaCheckResult.create({
+     *   data: {
+     *     // ... data to create a DeltaCheckResult
+     *   }
+     * })
+     * 
+     */
+    create<T extends DeltaCheckResultCreateArgs>(args: SelectSubset<T, DeltaCheckResultCreateArgs<ExtArgs>>): Prisma__DeltaCheckResultClient<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many DeltaCheckResults.
+     * @param {DeltaCheckResultCreateManyArgs} args - Arguments to create many DeltaCheckResults.
+     * @example
+     * // Create many DeltaCheckResults
+     * const deltaCheckResult = await prisma.deltaCheckResult.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends DeltaCheckResultCreateManyArgs>(args?: SelectSubset<T, DeltaCheckResultCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many DeltaCheckResults and returns the data saved in the database.
+     * @param {DeltaCheckResultCreateManyAndReturnArgs} args - Arguments to create many DeltaCheckResults.
+     * @example
+     * // Create many DeltaCheckResults
+     * const deltaCheckResult = await prisma.deltaCheckResult.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many DeltaCheckResults and only return the `id`
+     * const deltaCheckResultWithIdOnly = await prisma.deltaCheckResult.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends DeltaCheckResultCreateManyAndReturnArgs>(args?: SelectSubset<T, DeltaCheckResultCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a DeltaCheckResult.
+     * @param {DeltaCheckResultDeleteArgs} args - Arguments to delete one DeltaCheckResult.
+     * @example
+     * // Delete one DeltaCheckResult
+     * const DeltaCheckResult = await prisma.deltaCheckResult.delete({
+     *   where: {
+     *     // ... filter to delete one DeltaCheckResult
+     *   }
+     * })
+     * 
+     */
+    delete<T extends DeltaCheckResultDeleteArgs>(args: SelectSubset<T, DeltaCheckResultDeleteArgs<ExtArgs>>): Prisma__DeltaCheckResultClient<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one DeltaCheckResult.
+     * @param {DeltaCheckResultUpdateArgs} args - Arguments to update one DeltaCheckResult.
+     * @example
+     * // Update one DeltaCheckResult
+     * const deltaCheckResult = await prisma.deltaCheckResult.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends DeltaCheckResultUpdateArgs>(args: SelectSubset<T, DeltaCheckResultUpdateArgs<ExtArgs>>): Prisma__DeltaCheckResultClient<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more DeltaCheckResults.
+     * @param {DeltaCheckResultDeleteManyArgs} args - Arguments to filter DeltaCheckResults to delete.
+     * @example
+     * // Delete a few DeltaCheckResults
+     * const { count } = await prisma.deltaCheckResult.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends DeltaCheckResultDeleteManyArgs>(args?: SelectSubset<T, DeltaCheckResultDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more DeltaCheckResults.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckResultUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many DeltaCheckResults
+     * const deltaCheckResult = await prisma.deltaCheckResult.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends DeltaCheckResultUpdateManyArgs>(args: SelectSubset<T, DeltaCheckResultUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one DeltaCheckResult.
+     * @param {DeltaCheckResultUpsertArgs} args - Arguments to update or create a DeltaCheckResult.
+     * @example
+     * // Update or create a DeltaCheckResult
+     * const deltaCheckResult = await prisma.deltaCheckResult.upsert({
+     *   create: {
+     *     // ... data to create a DeltaCheckResult
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the DeltaCheckResult we want to update
+     *   }
+     * })
+     */
+    upsert<T extends DeltaCheckResultUpsertArgs>(args: SelectSubset<T, DeltaCheckResultUpsertArgs<ExtArgs>>): Prisma__DeltaCheckResultClient<$Result.GetResult<Prisma.$DeltaCheckResultPayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of DeltaCheckResults.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckResultCountArgs} args - Arguments to filter DeltaCheckResults to count.
+     * @example
+     * // Count the number of DeltaCheckResults
+     * const count = await prisma.deltaCheckResult.count({
+     *   where: {
+     *     // ... the filter for the DeltaCheckResults we want to count
+     *   }
+     * })
+    **/
+    count<T extends DeltaCheckResultCountArgs>(
+      args?: Subset<T, DeltaCheckResultCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], DeltaCheckResultCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a DeltaCheckResult.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckResultAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends DeltaCheckResultAggregateArgs>(args: Subset<T, DeltaCheckResultAggregateArgs>): Prisma.PrismaPromise<GetDeltaCheckResultAggregateType<T>>
+
+    /**
+     * Group by DeltaCheckResult.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DeltaCheckResultGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends DeltaCheckResultGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: DeltaCheckResultGroupByArgs['orderBy'] }
+        : { orderBy?: DeltaCheckResultGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, DeltaCheckResultGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetDeltaCheckResultGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the DeltaCheckResult model
+   */
+  readonly fields: DeltaCheckResultFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for DeltaCheckResult.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__DeltaCheckResultClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    result<T extends ResultDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ResultDefaultArgs<ExtArgs>>): Prisma__ResultClient<$Result.GetResult<Prisma.$ResultPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
+    rule<T extends DeltaCheckRuleDefaultArgs<ExtArgs> = {}>(args?: Subset<T, DeltaCheckRuleDefaultArgs<ExtArgs>>): Prisma__DeltaCheckRuleClient<$Result.GetResult<Prisma.$DeltaCheckRulePayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the DeltaCheckResult model
+   */ 
+  interface DeltaCheckResultFieldRefs {
+    readonly id: FieldRef<"DeltaCheckResult", 'String'>
+    readonly resultId: FieldRef<"DeltaCheckResult", 'String'>
+    readonly ruleId: FieldRef<"DeltaCheckResult", 'String'>
+    readonly previousValue: FieldRef<"DeltaCheckResult", 'Float'>
+    readonly currentValue: FieldRef<"DeltaCheckResult", 'Float'>
+    readonly changePercent: FieldRef<"DeltaCheckResult", 'Float'>
+    readonly previousDate: FieldRef<"DeltaCheckResult", 'DateTime'>
+    readonly alertMessage: FieldRef<"DeltaCheckResult", 'String'>
+    readonly severity: FieldRef<"DeltaCheckResult", 'String'>
+    readonly isResolved: FieldRef<"DeltaCheckResult", 'Boolean'>
+    readonly createdAt: FieldRef<"DeltaCheckResult", 'DateTime'>
+    readonly updatedAt: FieldRef<"DeltaCheckResult", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * DeltaCheckResult findUnique
+   */
+  export type DeltaCheckResultFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+    /**
+     * Filter, which DeltaCheckResult to fetch.
+     */
+    where: DeltaCheckResultWhereUniqueInput
+  }
+
+  /**
+   * DeltaCheckResult findUniqueOrThrow
+   */
+  export type DeltaCheckResultFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+    /**
+     * Filter, which DeltaCheckResult to fetch.
+     */
+    where: DeltaCheckResultWhereUniqueInput
+  }
+
+  /**
+   * DeltaCheckResult findFirst
+   */
+  export type DeltaCheckResultFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+    /**
+     * Filter, which DeltaCheckResult to fetch.
+     */
+    where?: DeltaCheckResultWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DeltaCheckResults to fetch.
+     */
+    orderBy?: DeltaCheckResultOrderByWithRelationInput | DeltaCheckResultOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for DeltaCheckResults.
+     */
+    cursor?: DeltaCheckResultWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DeltaCheckResults from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DeltaCheckResults.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of DeltaCheckResults.
+     */
+    distinct?: DeltaCheckResultScalarFieldEnum | DeltaCheckResultScalarFieldEnum[]
+  }
+
+  /**
+   * DeltaCheckResult findFirstOrThrow
+   */
+  export type DeltaCheckResultFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+    /**
+     * Filter, which DeltaCheckResult to fetch.
+     */
+    where?: DeltaCheckResultWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DeltaCheckResults to fetch.
+     */
+    orderBy?: DeltaCheckResultOrderByWithRelationInput | DeltaCheckResultOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for DeltaCheckResults.
+     */
+    cursor?: DeltaCheckResultWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DeltaCheckResults from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DeltaCheckResults.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of DeltaCheckResults.
+     */
+    distinct?: DeltaCheckResultScalarFieldEnum | DeltaCheckResultScalarFieldEnum[]
+  }
+
+  /**
+   * DeltaCheckResult findMany
+   */
+  export type DeltaCheckResultFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+    /**
+     * Filter, which DeltaCheckResults to fetch.
+     */
+    where?: DeltaCheckResultWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DeltaCheckResults to fetch.
+     */
+    orderBy?: DeltaCheckResultOrderByWithRelationInput | DeltaCheckResultOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing DeltaCheckResults.
+     */
+    cursor?: DeltaCheckResultWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DeltaCheckResults from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DeltaCheckResults.
+     */
+    skip?: number
+    distinct?: DeltaCheckResultScalarFieldEnum | DeltaCheckResultScalarFieldEnum[]
+  }
+
+  /**
+   * DeltaCheckResult create
+   */
+  export type DeltaCheckResultCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+    /**
+     * The data needed to create a DeltaCheckResult.
+     */
+    data: XOR<DeltaCheckResultCreateInput, DeltaCheckResultUncheckedCreateInput>
+  }
+
+  /**
+   * DeltaCheckResult createMany
+   */
+  export type DeltaCheckResultCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many DeltaCheckResults.
+     */
+    data: DeltaCheckResultCreateManyInput | DeltaCheckResultCreateManyInput[]
+  }
+
+  /**
+   * DeltaCheckResult createManyAndReturn
+   */
+  export type DeltaCheckResultCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many DeltaCheckResults.
+     */
+    data: DeltaCheckResultCreateManyInput | DeltaCheckResultCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * DeltaCheckResult update
+   */
+  export type DeltaCheckResultUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+    /**
+     * The data needed to update a DeltaCheckResult.
+     */
+    data: XOR<DeltaCheckResultUpdateInput, DeltaCheckResultUncheckedUpdateInput>
+    /**
+     * Choose, which DeltaCheckResult to update.
+     */
+    where: DeltaCheckResultWhereUniqueInput
+  }
+
+  /**
+   * DeltaCheckResult updateMany
+   */
+  export type DeltaCheckResultUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update DeltaCheckResults.
+     */
+    data: XOR<DeltaCheckResultUpdateManyMutationInput, DeltaCheckResultUncheckedUpdateManyInput>
+    /**
+     * Filter which DeltaCheckResults to update
+     */
+    where?: DeltaCheckResultWhereInput
+  }
+
+  /**
+   * DeltaCheckResult upsert
+   */
+  export type DeltaCheckResultUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+    /**
+     * The filter to search for the DeltaCheckResult to update in case it exists.
+     */
+    where: DeltaCheckResultWhereUniqueInput
+    /**
+     * In case the DeltaCheckResult found by the `where` argument doesn't exist, create a new DeltaCheckResult with this data.
+     */
+    create: XOR<DeltaCheckResultCreateInput, DeltaCheckResultUncheckedCreateInput>
+    /**
+     * In case the DeltaCheckResult was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<DeltaCheckResultUpdateInput, DeltaCheckResultUncheckedUpdateInput>
+  }
+
+  /**
+   * DeltaCheckResult delete
+   */
+  export type DeltaCheckResultDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+    /**
+     * Filter which DeltaCheckResult to delete.
+     */
+    where: DeltaCheckResultWhereUniqueInput
+  }
+
+  /**
+   * DeltaCheckResult deleteMany
+   */
+  export type DeltaCheckResultDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which DeltaCheckResults to delete
+     */
+    where?: DeltaCheckResultWhereInput
+  }
+
+  /**
+   * DeltaCheckResult without action
+   */
+  export type DeltaCheckResultDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DeltaCheckResult
+     */
+    select?: DeltaCheckResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DeltaCheckResultInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model EmailTemplate
+   */
+
+  export type AggregateEmailTemplate = {
+    _count: EmailTemplateCountAggregateOutputType | null
+    _avg: EmailTemplateAvgAggregateOutputType | null
+    _sum: EmailTemplateSumAggregateOutputType | null
+    _min: EmailTemplateMinAggregateOutputType | null
+    _max: EmailTemplateMaxAggregateOutputType | null
+  }
+
+  export type EmailTemplateAvgAggregateOutputType = {
+    version: number | null
+  }
+
+  export type EmailTemplateSumAggregateOutputType = {
+    version: number | null
+  }
+
+  export type EmailTemplateMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    subject: string | null
+    htmlContent: string | null
+    plainTextContent: string | null
+    templateType: string | null
+    requiredVariables: string | null
+    isActive: boolean | null
+    version: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type EmailTemplateMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    subject: string | null
+    htmlContent: string | null
+    plainTextContent: string | null
+    templateType: string | null
+    requiredVariables: string | null
+    isActive: boolean | null
+    version: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type EmailTemplateCountAggregateOutputType = {
+    id: number
+    name: number
+    subject: number
+    htmlContent: number
+    plainTextContent: number
+    templateType: number
+    requiredVariables: number
+    isActive: number
+    version: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type EmailTemplateAvgAggregateInputType = {
+    version?: true
+  }
+
+  export type EmailTemplateSumAggregateInputType = {
+    version?: true
+  }
+
+  export type EmailTemplateMinAggregateInputType = {
+    id?: true
+    name?: true
+    subject?: true
+    htmlContent?: true
+    plainTextContent?: true
+    templateType?: true
+    requiredVariables?: true
+    isActive?: true
+    version?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type EmailTemplateMaxAggregateInputType = {
+    id?: true
+    name?: true
+    subject?: true
+    htmlContent?: true
+    plainTextContent?: true
+    templateType?: true
+    requiredVariables?: true
+    isActive?: true
+    version?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type EmailTemplateCountAggregateInputType = {
+    id?: true
+    name?: true
+    subject?: true
+    htmlContent?: true
+    plainTextContent?: true
+    templateType?: true
+    requiredVariables?: true
+    isActive?: true
+    version?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type EmailTemplateAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which EmailTemplate to aggregate.
+     */
+    where?: EmailTemplateWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailTemplates to fetch.
+     */
+    orderBy?: EmailTemplateOrderByWithRelationInput | EmailTemplateOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: EmailTemplateWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailTemplates from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailTemplates.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned EmailTemplates
+    **/
+    _count?: true | EmailTemplateCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: EmailTemplateAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: EmailTemplateSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: EmailTemplateMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: EmailTemplateMaxAggregateInputType
+  }
+
+  export type GetEmailTemplateAggregateType<T extends EmailTemplateAggregateArgs> = {
+        [P in keyof T & keyof AggregateEmailTemplate]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateEmailTemplate[P]>
+      : GetScalarType<T[P], AggregateEmailTemplate[P]>
+  }
+
+
+
+
+  export type EmailTemplateGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EmailTemplateWhereInput
+    orderBy?: EmailTemplateOrderByWithAggregationInput | EmailTemplateOrderByWithAggregationInput[]
+    by: EmailTemplateScalarFieldEnum[] | EmailTemplateScalarFieldEnum
+    having?: EmailTemplateScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: EmailTemplateCountAggregateInputType | true
+    _avg?: EmailTemplateAvgAggregateInputType
+    _sum?: EmailTemplateSumAggregateInputType
+    _min?: EmailTemplateMinAggregateInputType
+    _max?: EmailTemplateMaxAggregateInputType
+  }
+
+  export type EmailTemplateGroupByOutputType = {
+    id: string
+    name: string
+    subject: string
+    htmlContent: string
+    plainTextContent: string | null
+    templateType: string
+    requiredVariables: string
+    isActive: boolean
+    version: number
+    createdAt: Date
+    updatedAt: Date
+    _count: EmailTemplateCountAggregateOutputType | null
+    _avg: EmailTemplateAvgAggregateOutputType | null
+    _sum: EmailTemplateSumAggregateOutputType | null
+    _min: EmailTemplateMinAggregateOutputType | null
+    _max: EmailTemplateMaxAggregateOutputType | null
+  }
+
+  type GetEmailTemplateGroupByPayload<T extends EmailTemplateGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<EmailTemplateGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof EmailTemplateGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], EmailTemplateGroupByOutputType[P]>
+            : GetScalarType<T[P], EmailTemplateGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type EmailTemplateSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    subject?: boolean
+    htmlContent?: boolean
+    plainTextContent?: boolean
+    templateType?: boolean
+    requiredVariables?: boolean
+    isActive?: boolean
+    version?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    emailLogs?: boolean | EmailTemplate$emailLogsArgs<ExtArgs>
+    _count?: boolean | EmailTemplateCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["emailTemplate"]>
+
+  export type EmailTemplateSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    subject?: boolean
+    htmlContent?: boolean
+    plainTextContent?: boolean
+    templateType?: boolean
+    requiredVariables?: boolean
+    isActive?: boolean
+    version?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["emailTemplate"]>
+
+  export type EmailTemplateSelectScalar = {
+    id?: boolean
+    name?: boolean
+    subject?: boolean
+    htmlContent?: boolean
+    plainTextContent?: boolean
+    templateType?: boolean
+    requiredVariables?: boolean
+    isActive?: boolean
+    version?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type EmailTemplateInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    emailLogs?: boolean | EmailTemplate$emailLogsArgs<ExtArgs>
+    _count?: boolean | EmailTemplateCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type EmailTemplateIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $EmailTemplatePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "EmailTemplate"
+    objects: {
+      emailLogs: Prisma.$EmailLogPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      subject: string
+      htmlContent: string
+      plainTextContent: string | null
+      templateType: string
+      requiredVariables: string
+      isActive: boolean
+      version: number
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["emailTemplate"]>
+    composites: {}
+  }
+
+  type EmailTemplateGetPayload<S extends boolean | null | undefined | EmailTemplateDefaultArgs> = $Result.GetResult<Prisma.$EmailTemplatePayload, S>
+
+  type EmailTemplateCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<EmailTemplateFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: EmailTemplateCountAggregateInputType | true
+    }
+
+  export interface EmailTemplateDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['EmailTemplate'], meta: { name: 'EmailTemplate' } }
+    /**
+     * Find zero or one EmailTemplate that matches the filter.
+     * @param {EmailTemplateFindUniqueArgs} args - Arguments to find a EmailTemplate
+     * @example
+     * // Get one EmailTemplate
+     * const emailTemplate = await prisma.emailTemplate.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends EmailTemplateFindUniqueArgs>(args: SelectSubset<T, EmailTemplateFindUniqueArgs<ExtArgs>>): Prisma__EmailTemplateClient<$Result.GetResult<Prisma.$EmailTemplatePayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one EmailTemplate that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {EmailTemplateFindUniqueOrThrowArgs} args - Arguments to find a EmailTemplate
+     * @example
+     * // Get one EmailTemplate
+     * const emailTemplate = await prisma.emailTemplate.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends EmailTemplateFindUniqueOrThrowArgs>(args: SelectSubset<T, EmailTemplateFindUniqueOrThrowArgs<ExtArgs>>): Prisma__EmailTemplateClient<$Result.GetResult<Prisma.$EmailTemplatePayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first EmailTemplate that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailTemplateFindFirstArgs} args - Arguments to find a EmailTemplate
+     * @example
+     * // Get one EmailTemplate
+     * const emailTemplate = await prisma.emailTemplate.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends EmailTemplateFindFirstArgs>(args?: SelectSubset<T, EmailTemplateFindFirstArgs<ExtArgs>>): Prisma__EmailTemplateClient<$Result.GetResult<Prisma.$EmailTemplatePayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first EmailTemplate that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailTemplateFindFirstOrThrowArgs} args - Arguments to find a EmailTemplate
+     * @example
+     * // Get one EmailTemplate
+     * const emailTemplate = await prisma.emailTemplate.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends EmailTemplateFindFirstOrThrowArgs>(args?: SelectSubset<T, EmailTemplateFindFirstOrThrowArgs<ExtArgs>>): Prisma__EmailTemplateClient<$Result.GetResult<Prisma.$EmailTemplatePayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more EmailTemplates that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailTemplateFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all EmailTemplates
+     * const emailTemplates = await prisma.emailTemplate.findMany()
+     * 
+     * // Get first 10 EmailTemplates
+     * const emailTemplates = await prisma.emailTemplate.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const emailTemplateWithIdOnly = await prisma.emailTemplate.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends EmailTemplateFindManyArgs>(args?: SelectSubset<T, EmailTemplateFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmailTemplatePayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a EmailTemplate.
+     * @param {EmailTemplateCreateArgs} args - Arguments to create a EmailTemplate.
+     * @example
+     * // Create one EmailTemplate
+     * const EmailTemplate = await prisma.emailTemplate.create({
+     *   data: {
+     *     // ... data to create a EmailTemplate
+     *   }
+     * })
+     * 
+     */
+    create<T extends EmailTemplateCreateArgs>(args: SelectSubset<T, EmailTemplateCreateArgs<ExtArgs>>): Prisma__EmailTemplateClient<$Result.GetResult<Prisma.$EmailTemplatePayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many EmailTemplates.
+     * @param {EmailTemplateCreateManyArgs} args - Arguments to create many EmailTemplates.
+     * @example
+     * // Create many EmailTemplates
+     * const emailTemplate = await prisma.emailTemplate.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends EmailTemplateCreateManyArgs>(args?: SelectSubset<T, EmailTemplateCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many EmailTemplates and returns the data saved in the database.
+     * @param {EmailTemplateCreateManyAndReturnArgs} args - Arguments to create many EmailTemplates.
+     * @example
+     * // Create many EmailTemplates
+     * const emailTemplate = await prisma.emailTemplate.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many EmailTemplates and only return the `id`
+     * const emailTemplateWithIdOnly = await prisma.emailTemplate.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends EmailTemplateCreateManyAndReturnArgs>(args?: SelectSubset<T, EmailTemplateCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmailTemplatePayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a EmailTemplate.
+     * @param {EmailTemplateDeleteArgs} args - Arguments to delete one EmailTemplate.
+     * @example
+     * // Delete one EmailTemplate
+     * const EmailTemplate = await prisma.emailTemplate.delete({
+     *   where: {
+     *     // ... filter to delete one EmailTemplate
+     *   }
+     * })
+     * 
+     */
+    delete<T extends EmailTemplateDeleteArgs>(args: SelectSubset<T, EmailTemplateDeleteArgs<ExtArgs>>): Prisma__EmailTemplateClient<$Result.GetResult<Prisma.$EmailTemplatePayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one EmailTemplate.
+     * @param {EmailTemplateUpdateArgs} args - Arguments to update one EmailTemplate.
+     * @example
+     * // Update one EmailTemplate
+     * const emailTemplate = await prisma.emailTemplate.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends EmailTemplateUpdateArgs>(args: SelectSubset<T, EmailTemplateUpdateArgs<ExtArgs>>): Prisma__EmailTemplateClient<$Result.GetResult<Prisma.$EmailTemplatePayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more EmailTemplates.
+     * @param {EmailTemplateDeleteManyArgs} args - Arguments to filter EmailTemplates to delete.
+     * @example
+     * // Delete a few EmailTemplates
+     * const { count } = await prisma.emailTemplate.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends EmailTemplateDeleteManyArgs>(args?: SelectSubset<T, EmailTemplateDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more EmailTemplates.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailTemplateUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many EmailTemplates
+     * const emailTemplate = await prisma.emailTemplate.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends EmailTemplateUpdateManyArgs>(args: SelectSubset<T, EmailTemplateUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one EmailTemplate.
+     * @param {EmailTemplateUpsertArgs} args - Arguments to update or create a EmailTemplate.
+     * @example
+     * // Update or create a EmailTemplate
+     * const emailTemplate = await prisma.emailTemplate.upsert({
+     *   create: {
+     *     // ... data to create a EmailTemplate
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the EmailTemplate we want to update
+     *   }
+     * })
+     */
+    upsert<T extends EmailTemplateUpsertArgs>(args: SelectSubset<T, EmailTemplateUpsertArgs<ExtArgs>>): Prisma__EmailTemplateClient<$Result.GetResult<Prisma.$EmailTemplatePayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of EmailTemplates.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailTemplateCountArgs} args - Arguments to filter EmailTemplates to count.
+     * @example
+     * // Count the number of EmailTemplates
+     * const count = await prisma.emailTemplate.count({
+     *   where: {
+     *     // ... the filter for the EmailTemplates we want to count
+     *   }
+     * })
+    **/
+    count<T extends EmailTemplateCountArgs>(
+      args?: Subset<T, EmailTemplateCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], EmailTemplateCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a EmailTemplate.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailTemplateAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends EmailTemplateAggregateArgs>(args: Subset<T, EmailTemplateAggregateArgs>): Prisma.PrismaPromise<GetEmailTemplateAggregateType<T>>
+
+    /**
+     * Group by EmailTemplate.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailTemplateGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends EmailTemplateGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: EmailTemplateGroupByArgs['orderBy'] }
+        : { orderBy?: EmailTemplateGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, EmailTemplateGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetEmailTemplateGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the EmailTemplate model
+   */
+  readonly fields: EmailTemplateFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for EmailTemplate.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__EmailTemplateClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    emailLogs<T extends EmailTemplate$emailLogsArgs<ExtArgs> = {}>(args?: Subset<T, EmailTemplate$emailLogsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "findMany"> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the EmailTemplate model
+   */ 
+  interface EmailTemplateFieldRefs {
+    readonly id: FieldRef<"EmailTemplate", 'String'>
+    readonly name: FieldRef<"EmailTemplate", 'String'>
+    readonly subject: FieldRef<"EmailTemplate", 'String'>
+    readonly htmlContent: FieldRef<"EmailTemplate", 'String'>
+    readonly plainTextContent: FieldRef<"EmailTemplate", 'String'>
+    readonly templateType: FieldRef<"EmailTemplate", 'String'>
+    readonly requiredVariables: FieldRef<"EmailTemplate", 'String'>
+    readonly isActive: FieldRef<"EmailTemplate", 'Boolean'>
+    readonly version: FieldRef<"EmailTemplate", 'Int'>
+    readonly createdAt: FieldRef<"EmailTemplate", 'DateTime'>
+    readonly updatedAt: FieldRef<"EmailTemplate", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * EmailTemplate findUnique
+   */
+  export type EmailTemplateFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailTemplateInclude<ExtArgs> | null
+    /**
+     * Filter, which EmailTemplate to fetch.
+     */
+    where: EmailTemplateWhereUniqueInput
+  }
+
+  /**
+   * EmailTemplate findUniqueOrThrow
+   */
+  export type EmailTemplateFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailTemplateInclude<ExtArgs> | null
+    /**
+     * Filter, which EmailTemplate to fetch.
+     */
+    where: EmailTemplateWhereUniqueInput
+  }
+
+  /**
+   * EmailTemplate findFirst
+   */
+  export type EmailTemplateFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailTemplateInclude<ExtArgs> | null
+    /**
+     * Filter, which EmailTemplate to fetch.
+     */
+    where?: EmailTemplateWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailTemplates to fetch.
+     */
+    orderBy?: EmailTemplateOrderByWithRelationInput | EmailTemplateOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for EmailTemplates.
+     */
+    cursor?: EmailTemplateWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailTemplates from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailTemplates.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of EmailTemplates.
+     */
+    distinct?: EmailTemplateScalarFieldEnum | EmailTemplateScalarFieldEnum[]
+  }
+
+  /**
+   * EmailTemplate findFirstOrThrow
+   */
+  export type EmailTemplateFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailTemplateInclude<ExtArgs> | null
+    /**
+     * Filter, which EmailTemplate to fetch.
+     */
+    where?: EmailTemplateWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailTemplates to fetch.
+     */
+    orderBy?: EmailTemplateOrderByWithRelationInput | EmailTemplateOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for EmailTemplates.
+     */
+    cursor?: EmailTemplateWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailTemplates from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailTemplates.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of EmailTemplates.
+     */
+    distinct?: EmailTemplateScalarFieldEnum | EmailTemplateScalarFieldEnum[]
+  }
+
+  /**
+   * EmailTemplate findMany
+   */
+  export type EmailTemplateFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailTemplateInclude<ExtArgs> | null
+    /**
+     * Filter, which EmailTemplates to fetch.
+     */
+    where?: EmailTemplateWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailTemplates to fetch.
+     */
+    orderBy?: EmailTemplateOrderByWithRelationInput | EmailTemplateOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing EmailTemplates.
+     */
+    cursor?: EmailTemplateWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailTemplates from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailTemplates.
+     */
+    skip?: number
+    distinct?: EmailTemplateScalarFieldEnum | EmailTemplateScalarFieldEnum[]
+  }
+
+  /**
+   * EmailTemplate create
+   */
+  export type EmailTemplateCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailTemplateInclude<ExtArgs> | null
+    /**
+     * The data needed to create a EmailTemplate.
+     */
+    data: XOR<EmailTemplateCreateInput, EmailTemplateUncheckedCreateInput>
+  }
+
+  /**
+   * EmailTemplate createMany
+   */
+  export type EmailTemplateCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many EmailTemplates.
+     */
+    data: EmailTemplateCreateManyInput | EmailTemplateCreateManyInput[]
+  }
+
+  /**
+   * EmailTemplate createManyAndReturn
+   */
+  export type EmailTemplateCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many EmailTemplates.
+     */
+    data: EmailTemplateCreateManyInput | EmailTemplateCreateManyInput[]
+  }
+
+  /**
+   * EmailTemplate update
+   */
+  export type EmailTemplateUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailTemplateInclude<ExtArgs> | null
+    /**
+     * The data needed to update a EmailTemplate.
+     */
+    data: XOR<EmailTemplateUpdateInput, EmailTemplateUncheckedUpdateInput>
+    /**
+     * Choose, which EmailTemplate to update.
+     */
+    where: EmailTemplateWhereUniqueInput
+  }
+
+  /**
+   * EmailTemplate updateMany
+   */
+  export type EmailTemplateUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update EmailTemplates.
+     */
+    data: XOR<EmailTemplateUpdateManyMutationInput, EmailTemplateUncheckedUpdateManyInput>
+    /**
+     * Filter which EmailTemplates to update
+     */
+    where?: EmailTemplateWhereInput
+  }
+
+  /**
+   * EmailTemplate upsert
+   */
+  export type EmailTemplateUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailTemplateInclude<ExtArgs> | null
+    /**
+     * The filter to search for the EmailTemplate to update in case it exists.
+     */
+    where: EmailTemplateWhereUniqueInput
+    /**
+     * In case the EmailTemplate found by the `where` argument doesn't exist, create a new EmailTemplate with this data.
+     */
+    create: XOR<EmailTemplateCreateInput, EmailTemplateUncheckedCreateInput>
+    /**
+     * In case the EmailTemplate was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<EmailTemplateUpdateInput, EmailTemplateUncheckedUpdateInput>
+  }
+
+  /**
+   * EmailTemplate delete
+   */
+  export type EmailTemplateDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailTemplateInclude<ExtArgs> | null
+    /**
+     * Filter which EmailTemplate to delete.
+     */
+    where: EmailTemplateWhereUniqueInput
+  }
+
+  /**
+   * EmailTemplate deleteMany
+   */
+  export type EmailTemplateDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which EmailTemplates to delete
+     */
+    where?: EmailTemplateWhereInput
+  }
+
+  /**
+   * EmailTemplate.emailLogs
+   */
+  export type EmailTemplate$emailLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    where?: EmailLogWhereInput
+    orderBy?: EmailLogOrderByWithRelationInput | EmailLogOrderByWithRelationInput[]
+    cursor?: EmailLogWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: EmailLogScalarFieldEnum | EmailLogScalarFieldEnum[]
+  }
+
+  /**
+   * EmailTemplate without action
+   */
+  export type EmailTemplateDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailTemplateInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model EmailLog
+   */
+
+  export type AggregateEmailLog = {
+    _count: EmailLogCountAggregateOutputType | null
+    _avg: EmailLogAvgAggregateOutputType | null
+    _sum: EmailLogSumAggregateOutputType | null
+    _min: EmailLogMinAggregateOutputType | null
+    _max: EmailLogMaxAggregateOutputType | null
+  }
+
+  export type EmailLogAvgAggregateOutputType = {
+    retryCount: number | null
+  }
+
+  export type EmailLogSumAggregateOutputType = {
+    retryCount: number | null
+  }
+
+  export type EmailLogMinAggregateOutputType = {
+    id: string | null
+    templateId: string | null
+    resultId: string | null
+    sampleId: string | null
+    invoiceId: string | null
+    recipientEmail: string | null
+    subject: string | null
+    content: string | null
+    status: string | null
+    sentAt: Date | null
+    failureReason: string | null
+    retryCount: number | null
+    nextRetryAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type EmailLogMaxAggregateOutputType = {
+    id: string | null
+    templateId: string | null
+    resultId: string | null
+    sampleId: string | null
+    invoiceId: string | null
+    recipientEmail: string | null
+    subject: string | null
+    content: string | null
+    status: string | null
+    sentAt: Date | null
+    failureReason: string | null
+    retryCount: number | null
+    nextRetryAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type EmailLogCountAggregateOutputType = {
+    id: number
+    templateId: number
+    resultId: number
+    sampleId: number
+    invoiceId: number
+    recipientEmail: number
+    subject: number
+    content: number
+    status: number
+    sentAt: number
+    failureReason: number
+    retryCount: number
+    nextRetryAt: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type EmailLogAvgAggregateInputType = {
+    retryCount?: true
+  }
+
+  export type EmailLogSumAggregateInputType = {
+    retryCount?: true
+  }
+
+  export type EmailLogMinAggregateInputType = {
+    id?: true
+    templateId?: true
+    resultId?: true
+    sampleId?: true
+    invoiceId?: true
+    recipientEmail?: true
+    subject?: true
+    content?: true
+    status?: true
+    sentAt?: true
+    failureReason?: true
+    retryCount?: true
+    nextRetryAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type EmailLogMaxAggregateInputType = {
+    id?: true
+    templateId?: true
+    resultId?: true
+    sampleId?: true
+    invoiceId?: true
+    recipientEmail?: true
+    subject?: true
+    content?: true
+    status?: true
+    sentAt?: true
+    failureReason?: true
+    retryCount?: true
+    nextRetryAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type EmailLogCountAggregateInputType = {
+    id?: true
+    templateId?: true
+    resultId?: true
+    sampleId?: true
+    invoiceId?: true
+    recipientEmail?: true
+    subject?: true
+    content?: true
+    status?: true
+    sentAt?: true
+    failureReason?: true
+    retryCount?: true
+    nextRetryAt?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type EmailLogAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which EmailLog to aggregate.
+     */
+    where?: EmailLogWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailLogs to fetch.
+     */
+    orderBy?: EmailLogOrderByWithRelationInput | EmailLogOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: EmailLogWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailLogs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailLogs.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned EmailLogs
+    **/
+    _count?: true | EmailLogCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: EmailLogAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: EmailLogSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: EmailLogMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: EmailLogMaxAggregateInputType
+  }
+
+  export type GetEmailLogAggregateType<T extends EmailLogAggregateArgs> = {
+        [P in keyof T & keyof AggregateEmailLog]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateEmailLog[P]>
+      : GetScalarType<T[P], AggregateEmailLog[P]>
+  }
+
+
+
+
+  export type EmailLogGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EmailLogWhereInput
+    orderBy?: EmailLogOrderByWithAggregationInput | EmailLogOrderByWithAggregationInput[]
+    by: EmailLogScalarFieldEnum[] | EmailLogScalarFieldEnum
+    having?: EmailLogScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: EmailLogCountAggregateInputType | true
+    _avg?: EmailLogAvgAggregateInputType
+    _sum?: EmailLogSumAggregateInputType
+    _min?: EmailLogMinAggregateInputType
+    _max?: EmailLogMaxAggregateInputType
+  }
+
+  export type EmailLogGroupByOutputType = {
+    id: string
+    templateId: string | null
+    resultId: string | null
+    sampleId: string | null
+    invoiceId: string | null
+    recipientEmail: string
+    subject: string
+    content: string
+    status: string
+    sentAt: Date | null
+    failureReason: string | null
+    retryCount: number
+    nextRetryAt: Date | null
+    createdAt: Date
+    updatedAt: Date
+    _count: EmailLogCountAggregateOutputType | null
+    _avg: EmailLogAvgAggregateOutputType | null
+    _sum: EmailLogSumAggregateOutputType | null
+    _min: EmailLogMinAggregateOutputType | null
+    _max: EmailLogMaxAggregateOutputType | null
+  }
+
+  type GetEmailLogGroupByPayload<T extends EmailLogGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<EmailLogGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof EmailLogGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], EmailLogGroupByOutputType[P]>
+            : GetScalarType<T[P], EmailLogGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type EmailLogSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    templateId?: boolean
+    resultId?: boolean
+    sampleId?: boolean
+    invoiceId?: boolean
+    recipientEmail?: boolean
+    subject?: boolean
+    content?: boolean
+    status?: boolean
+    sentAt?: boolean
+    failureReason?: boolean
+    retryCount?: boolean
+    nextRetryAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    template?: boolean | EmailLog$templateArgs<ExtArgs>
+    result?: boolean | EmailLog$resultArgs<ExtArgs>
+    sample?: boolean | EmailLog$sampleArgs<ExtArgs>
+    invoice?: boolean | EmailLog$invoiceArgs<ExtArgs>
+  }, ExtArgs["result"]["emailLog"]>
+
+  export type EmailLogSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    templateId?: boolean
+    resultId?: boolean
+    sampleId?: boolean
+    invoiceId?: boolean
+    recipientEmail?: boolean
+    subject?: boolean
+    content?: boolean
+    status?: boolean
+    sentAt?: boolean
+    failureReason?: boolean
+    retryCount?: boolean
+    nextRetryAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    template?: boolean | EmailLog$templateArgs<ExtArgs>
+    result?: boolean | EmailLog$resultArgs<ExtArgs>
+    sample?: boolean | EmailLog$sampleArgs<ExtArgs>
+    invoice?: boolean | EmailLog$invoiceArgs<ExtArgs>
+  }, ExtArgs["result"]["emailLog"]>
+
+  export type EmailLogSelectScalar = {
+    id?: boolean
+    templateId?: boolean
+    resultId?: boolean
+    sampleId?: boolean
+    invoiceId?: boolean
+    recipientEmail?: boolean
+    subject?: boolean
+    content?: boolean
+    status?: boolean
+    sentAt?: boolean
+    failureReason?: boolean
+    retryCount?: boolean
+    nextRetryAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type EmailLogInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    template?: boolean | EmailLog$templateArgs<ExtArgs>
+    result?: boolean | EmailLog$resultArgs<ExtArgs>
+    sample?: boolean | EmailLog$sampleArgs<ExtArgs>
+    invoice?: boolean | EmailLog$invoiceArgs<ExtArgs>
+  }
+  export type EmailLogIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    template?: boolean | EmailLog$templateArgs<ExtArgs>
+    result?: boolean | EmailLog$resultArgs<ExtArgs>
+    sample?: boolean | EmailLog$sampleArgs<ExtArgs>
+    invoice?: boolean | EmailLog$invoiceArgs<ExtArgs>
+  }
+
+  export type $EmailLogPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "EmailLog"
+    objects: {
+      template: Prisma.$EmailTemplatePayload<ExtArgs> | null
+      result: Prisma.$ResultPayload<ExtArgs> | null
+      sample: Prisma.$SamplePayload<ExtArgs> | null
+      invoice: Prisma.$InvoicePayload<ExtArgs> | null
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      templateId: string | null
+      resultId: string | null
+      sampleId: string | null
+      invoiceId: string | null
+      recipientEmail: string
+      subject: string
+      content: string
+      status: string
+      sentAt: Date | null
+      failureReason: string | null
+      retryCount: number
+      nextRetryAt: Date | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["emailLog"]>
+    composites: {}
+  }
+
+  type EmailLogGetPayload<S extends boolean | null | undefined | EmailLogDefaultArgs> = $Result.GetResult<Prisma.$EmailLogPayload, S>
+
+  type EmailLogCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<EmailLogFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: EmailLogCountAggregateInputType | true
+    }
+
+  export interface EmailLogDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['EmailLog'], meta: { name: 'EmailLog' } }
+    /**
+     * Find zero or one EmailLog that matches the filter.
+     * @param {EmailLogFindUniqueArgs} args - Arguments to find a EmailLog
+     * @example
+     * // Get one EmailLog
+     * const emailLog = await prisma.emailLog.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends EmailLogFindUniqueArgs>(args: SelectSubset<T, EmailLogFindUniqueArgs<ExtArgs>>): Prisma__EmailLogClient<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one EmailLog that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {EmailLogFindUniqueOrThrowArgs} args - Arguments to find a EmailLog
+     * @example
+     * // Get one EmailLog
+     * const emailLog = await prisma.emailLog.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends EmailLogFindUniqueOrThrowArgs>(args: SelectSubset<T, EmailLogFindUniqueOrThrowArgs<ExtArgs>>): Prisma__EmailLogClient<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first EmailLog that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailLogFindFirstArgs} args - Arguments to find a EmailLog
+     * @example
+     * // Get one EmailLog
+     * const emailLog = await prisma.emailLog.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends EmailLogFindFirstArgs>(args?: SelectSubset<T, EmailLogFindFirstArgs<ExtArgs>>): Prisma__EmailLogClient<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first EmailLog that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailLogFindFirstOrThrowArgs} args - Arguments to find a EmailLog
+     * @example
+     * // Get one EmailLog
+     * const emailLog = await prisma.emailLog.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends EmailLogFindFirstOrThrowArgs>(args?: SelectSubset<T, EmailLogFindFirstOrThrowArgs<ExtArgs>>): Prisma__EmailLogClient<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more EmailLogs that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailLogFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all EmailLogs
+     * const emailLogs = await prisma.emailLog.findMany()
+     * 
+     * // Get first 10 EmailLogs
+     * const emailLogs = await prisma.emailLog.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const emailLogWithIdOnly = await prisma.emailLog.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends EmailLogFindManyArgs>(args?: SelectSubset<T, EmailLogFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a EmailLog.
+     * @param {EmailLogCreateArgs} args - Arguments to create a EmailLog.
+     * @example
+     * // Create one EmailLog
+     * const EmailLog = await prisma.emailLog.create({
+     *   data: {
+     *     // ... data to create a EmailLog
+     *   }
+     * })
+     * 
+     */
+    create<T extends EmailLogCreateArgs>(args: SelectSubset<T, EmailLogCreateArgs<ExtArgs>>): Prisma__EmailLogClient<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many EmailLogs.
+     * @param {EmailLogCreateManyArgs} args - Arguments to create many EmailLogs.
+     * @example
+     * // Create many EmailLogs
+     * const emailLog = await prisma.emailLog.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends EmailLogCreateManyArgs>(args?: SelectSubset<T, EmailLogCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many EmailLogs and returns the data saved in the database.
+     * @param {EmailLogCreateManyAndReturnArgs} args - Arguments to create many EmailLogs.
+     * @example
+     * // Create many EmailLogs
+     * const emailLog = await prisma.emailLog.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many EmailLogs and only return the `id`
+     * const emailLogWithIdOnly = await prisma.emailLog.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends EmailLogCreateManyAndReturnArgs>(args?: SelectSubset<T, EmailLogCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a EmailLog.
+     * @param {EmailLogDeleteArgs} args - Arguments to delete one EmailLog.
+     * @example
+     * // Delete one EmailLog
+     * const EmailLog = await prisma.emailLog.delete({
+     *   where: {
+     *     // ... filter to delete one EmailLog
+     *   }
+     * })
+     * 
+     */
+    delete<T extends EmailLogDeleteArgs>(args: SelectSubset<T, EmailLogDeleteArgs<ExtArgs>>): Prisma__EmailLogClient<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one EmailLog.
+     * @param {EmailLogUpdateArgs} args - Arguments to update one EmailLog.
+     * @example
+     * // Update one EmailLog
+     * const emailLog = await prisma.emailLog.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends EmailLogUpdateArgs>(args: SelectSubset<T, EmailLogUpdateArgs<ExtArgs>>): Prisma__EmailLogClient<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more EmailLogs.
+     * @param {EmailLogDeleteManyArgs} args - Arguments to filter EmailLogs to delete.
+     * @example
+     * // Delete a few EmailLogs
+     * const { count } = await prisma.emailLog.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends EmailLogDeleteManyArgs>(args?: SelectSubset<T, EmailLogDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more EmailLogs.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailLogUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many EmailLogs
+     * const emailLog = await prisma.emailLog.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends EmailLogUpdateManyArgs>(args: SelectSubset<T, EmailLogUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one EmailLog.
+     * @param {EmailLogUpsertArgs} args - Arguments to update or create a EmailLog.
+     * @example
+     * // Update or create a EmailLog
+     * const emailLog = await prisma.emailLog.upsert({
+     *   create: {
+     *     // ... data to create a EmailLog
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the EmailLog we want to update
+     *   }
+     * })
+     */
+    upsert<T extends EmailLogUpsertArgs>(args: SelectSubset<T, EmailLogUpsertArgs<ExtArgs>>): Prisma__EmailLogClient<$Result.GetResult<Prisma.$EmailLogPayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of EmailLogs.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailLogCountArgs} args - Arguments to filter EmailLogs to count.
+     * @example
+     * // Count the number of EmailLogs
+     * const count = await prisma.emailLog.count({
+     *   where: {
+     *     // ... the filter for the EmailLogs we want to count
+     *   }
+     * })
+    **/
+    count<T extends EmailLogCountArgs>(
+      args?: Subset<T, EmailLogCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], EmailLogCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a EmailLog.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailLogAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends EmailLogAggregateArgs>(args: Subset<T, EmailLogAggregateArgs>): Prisma.PrismaPromise<GetEmailLogAggregateType<T>>
+
+    /**
+     * Group by EmailLog.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailLogGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends EmailLogGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: EmailLogGroupByArgs['orderBy'] }
+        : { orderBy?: EmailLogGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, EmailLogGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetEmailLogGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the EmailLog model
+   */
+  readonly fields: EmailLogFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for EmailLog.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__EmailLogClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    template<T extends EmailLog$templateArgs<ExtArgs> = {}>(args?: Subset<T, EmailLog$templateArgs<ExtArgs>>): Prisma__EmailTemplateClient<$Result.GetResult<Prisma.$EmailTemplatePayload<ExtArgs>, T, "findUniqueOrThrow"> | null, null, ExtArgs>
+    result<T extends EmailLog$resultArgs<ExtArgs> = {}>(args?: Subset<T, EmailLog$resultArgs<ExtArgs>>): Prisma__ResultClient<$Result.GetResult<Prisma.$ResultPayload<ExtArgs>, T, "findUniqueOrThrow"> | null, null, ExtArgs>
+    sample<T extends EmailLog$sampleArgs<ExtArgs> = {}>(args?: Subset<T, EmailLog$sampleArgs<ExtArgs>>): Prisma__SampleClient<$Result.GetResult<Prisma.$SamplePayload<ExtArgs>, T, "findUniqueOrThrow"> | null, null, ExtArgs>
+    invoice<T extends EmailLog$invoiceArgs<ExtArgs> = {}>(args?: Subset<T, EmailLog$invoiceArgs<ExtArgs>>): Prisma__InvoiceClient<$Result.GetResult<Prisma.$InvoicePayload<ExtArgs>, T, "findUniqueOrThrow"> | null, null, ExtArgs>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the EmailLog model
+   */ 
+  interface EmailLogFieldRefs {
+    readonly id: FieldRef<"EmailLog", 'String'>
+    readonly templateId: FieldRef<"EmailLog", 'String'>
+    readonly resultId: FieldRef<"EmailLog", 'String'>
+    readonly sampleId: FieldRef<"EmailLog", 'String'>
+    readonly invoiceId: FieldRef<"EmailLog", 'String'>
+    readonly recipientEmail: FieldRef<"EmailLog", 'String'>
+    readonly subject: FieldRef<"EmailLog", 'String'>
+    readonly content: FieldRef<"EmailLog", 'String'>
+    readonly status: FieldRef<"EmailLog", 'String'>
+    readonly sentAt: FieldRef<"EmailLog", 'DateTime'>
+    readonly failureReason: FieldRef<"EmailLog", 'String'>
+    readonly retryCount: FieldRef<"EmailLog", 'Int'>
+    readonly nextRetryAt: FieldRef<"EmailLog", 'DateTime'>
+    readonly createdAt: FieldRef<"EmailLog", 'DateTime'>
+    readonly updatedAt: FieldRef<"EmailLog", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * EmailLog findUnique
+   */
+  export type EmailLogFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    /**
+     * Filter, which EmailLog to fetch.
+     */
+    where: EmailLogWhereUniqueInput
+  }
+
+  /**
+   * EmailLog findUniqueOrThrow
+   */
+  export type EmailLogFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    /**
+     * Filter, which EmailLog to fetch.
+     */
+    where: EmailLogWhereUniqueInput
+  }
+
+  /**
+   * EmailLog findFirst
+   */
+  export type EmailLogFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    /**
+     * Filter, which EmailLog to fetch.
+     */
+    where?: EmailLogWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailLogs to fetch.
+     */
+    orderBy?: EmailLogOrderByWithRelationInput | EmailLogOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for EmailLogs.
+     */
+    cursor?: EmailLogWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailLogs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailLogs.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of EmailLogs.
+     */
+    distinct?: EmailLogScalarFieldEnum | EmailLogScalarFieldEnum[]
+  }
+
+  /**
+   * EmailLog findFirstOrThrow
+   */
+  export type EmailLogFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    /**
+     * Filter, which EmailLog to fetch.
+     */
+    where?: EmailLogWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailLogs to fetch.
+     */
+    orderBy?: EmailLogOrderByWithRelationInput | EmailLogOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for EmailLogs.
+     */
+    cursor?: EmailLogWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailLogs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailLogs.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of EmailLogs.
+     */
+    distinct?: EmailLogScalarFieldEnum | EmailLogScalarFieldEnum[]
+  }
+
+  /**
+   * EmailLog findMany
+   */
+  export type EmailLogFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    /**
+     * Filter, which EmailLogs to fetch.
+     */
+    where?: EmailLogWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailLogs to fetch.
+     */
+    orderBy?: EmailLogOrderByWithRelationInput | EmailLogOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing EmailLogs.
+     */
+    cursor?: EmailLogWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailLogs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailLogs.
+     */
+    skip?: number
+    distinct?: EmailLogScalarFieldEnum | EmailLogScalarFieldEnum[]
+  }
+
+  /**
+   * EmailLog create
+   */
+  export type EmailLogCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    /**
+     * The data needed to create a EmailLog.
+     */
+    data: XOR<EmailLogCreateInput, EmailLogUncheckedCreateInput>
+  }
+
+  /**
+   * EmailLog createMany
+   */
+  export type EmailLogCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many EmailLogs.
+     */
+    data: EmailLogCreateManyInput | EmailLogCreateManyInput[]
+  }
+
+  /**
+   * EmailLog createManyAndReturn
+   */
+  export type EmailLogCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many EmailLogs.
+     */
+    data: EmailLogCreateManyInput | EmailLogCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * EmailLog update
+   */
+  export type EmailLogUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    /**
+     * The data needed to update a EmailLog.
+     */
+    data: XOR<EmailLogUpdateInput, EmailLogUncheckedUpdateInput>
+    /**
+     * Choose, which EmailLog to update.
+     */
+    where: EmailLogWhereUniqueInput
+  }
+
+  /**
+   * EmailLog updateMany
+   */
+  export type EmailLogUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update EmailLogs.
+     */
+    data: XOR<EmailLogUpdateManyMutationInput, EmailLogUncheckedUpdateManyInput>
+    /**
+     * Filter which EmailLogs to update
+     */
+    where?: EmailLogWhereInput
+  }
+
+  /**
+   * EmailLog upsert
+   */
+  export type EmailLogUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    /**
+     * The filter to search for the EmailLog to update in case it exists.
+     */
+    where: EmailLogWhereUniqueInput
+    /**
+     * In case the EmailLog found by the `where` argument doesn't exist, create a new EmailLog with this data.
+     */
+    create: XOR<EmailLogCreateInput, EmailLogUncheckedCreateInput>
+    /**
+     * In case the EmailLog was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<EmailLogUpdateInput, EmailLogUncheckedUpdateInput>
+  }
+
+  /**
+   * EmailLog delete
+   */
+  export type EmailLogDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+    /**
+     * Filter which EmailLog to delete.
+     */
+    where: EmailLogWhereUniqueInput
+  }
+
+  /**
+   * EmailLog deleteMany
+   */
+  export type EmailLogDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which EmailLogs to delete
+     */
+    where?: EmailLogWhereInput
+  }
+
+  /**
+   * EmailLog.template
+   */
+  export type EmailLog$templateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailTemplate
+     */
+    select?: EmailTemplateSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailTemplateInclude<ExtArgs> | null
+    where?: EmailTemplateWhereInput
+  }
+
+  /**
+   * EmailLog.result
+   */
+  export type EmailLog$resultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Result
+     */
+    select?: ResultSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResultInclude<ExtArgs> | null
+    where?: ResultWhereInput
+  }
+
+  /**
+   * EmailLog.sample
+   */
+  export type EmailLog$sampleArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Sample
+     */
+    select?: SampleSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SampleInclude<ExtArgs> | null
+    where?: SampleWhereInput
+  }
+
+  /**
+   * EmailLog.invoice
+   */
+  export type EmailLog$invoiceArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Invoice
+     */
+    select?: InvoiceSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InvoiceInclude<ExtArgs> | null
+    where?: InvoiceWhereInput
+  }
+
+  /**
+   * EmailLog without action
+   */
+  export type EmailLogDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailLog
+     */
+    select?: EmailLogSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmailLogInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model EmailSetting
+   */
+
+  export type AggregateEmailSetting = {
+    _count: EmailSettingCountAggregateOutputType | null
+    _min: EmailSettingMinAggregateOutputType | null
+    _max: EmailSettingMaxAggregateOutputType | null
+  }
+
+  export type EmailSettingMinAggregateOutputType = {
+    id: string | null
+    key: string | null
+    value: string | null
+    description: string | null
+    isEncrypted: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type EmailSettingMaxAggregateOutputType = {
+    id: string | null
+    key: string | null
+    value: string | null
+    description: string | null
+    isEncrypted: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type EmailSettingCountAggregateOutputType = {
+    id: number
+    key: number
+    value: number
+    description: number
+    isEncrypted: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type EmailSettingMinAggregateInputType = {
+    id?: true
+    key?: true
+    value?: true
+    description?: true
+    isEncrypted?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type EmailSettingMaxAggregateInputType = {
+    id?: true
+    key?: true
+    value?: true
+    description?: true
+    isEncrypted?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type EmailSettingCountAggregateInputType = {
+    id?: true
+    key?: true
+    value?: true
+    description?: true
+    isEncrypted?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type EmailSettingAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which EmailSetting to aggregate.
+     */
+    where?: EmailSettingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailSettings to fetch.
+     */
+    orderBy?: EmailSettingOrderByWithRelationInput | EmailSettingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: EmailSettingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailSettings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailSettings.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned EmailSettings
+    **/
+    _count?: true | EmailSettingCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: EmailSettingMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: EmailSettingMaxAggregateInputType
+  }
+
+  export type GetEmailSettingAggregateType<T extends EmailSettingAggregateArgs> = {
+        [P in keyof T & keyof AggregateEmailSetting]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateEmailSetting[P]>
+      : GetScalarType<T[P], AggregateEmailSetting[P]>
+  }
+
+
+
+
+  export type EmailSettingGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EmailSettingWhereInput
+    orderBy?: EmailSettingOrderByWithAggregationInput | EmailSettingOrderByWithAggregationInput[]
+    by: EmailSettingScalarFieldEnum[] | EmailSettingScalarFieldEnum
+    having?: EmailSettingScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: EmailSettingCountAggregateInputType | true
+    _min?: EmailSettingMinAggregateInputType
+    _max?: EmailSettingMaxAggregateInputType
+  }
+
+  export type EmailSettingGroupByOutputType = {
+    id: string
+    key: string
+    value: string
+    description: string | null
+    isEncrypted: boolean
+    createdAt: Date
+    updatedAt: Date
+    _count: EmailSettingCountAggregateOutputType | null
+    _min: EmailSettingMinAggregateOutputType | null
+    _max: EmailSettingMaxAggregateOutputType | null
+  }
+
+  type GetEmailSettingGroupByPayload<T extends EmailSettingGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<EmailSettingGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof EmailSettingGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], EmailSettingGroupByOutputType[P]>
+            : GetScalarType<T[P], EmailSettingGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type EmailSettingSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    key?: boolean
+    value?: boolean
+    description?: boolean
+    isEncrypted?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["emailSetting"]>
+
+  export type EmailSettingSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    key?: boolean
+    value?: boolean
+    description?: boolean
+    isEncrypted?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["emailSetting"]>
+
+  export type EmailSettingSelectScalar = {
+    id?: boolean
+    key?: boolean
+    value?: boolean
+    description?: boolean
+    isEncrypted?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+
+  export type $EmailSettingPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "EmailSetting"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      key: string
+      value: string
+      description: string | null
+      isEncrypted: boolean
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["emailSetting"]>
+    composites: {}
+  }
+
+  type EmailSettingGetPayload<S extends boolean | null | undefined | EmailSettingDefaultArgs> = $Result.GetResult<Prisma.$EmailSettingPayload, S>
+
+  type EmailSettingCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<EmailSettingFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: EmailSettingCountAggregateInputType | true
+    }
+
+  export interface EmailSettingDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['EmailSetting'], meta: { name: 'EmailSetting' } }
+    /**
+     * Find zero or one EmailSetting that matches the filter.
+     * @param {EmailSettingFindUniqueArgs} args - Arguments to find a EmailSetting
+     * @example
+     * // Get one EmailSetting
+     * const emailSetting = await prisma.emailSetting.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends EmailSettingFindUniqueArgs>(args: SelectSubset<T, EmailSettingFindUniqueArgs<ExtArgs>>): Prisma__EmailSettingClient<$Result.GetResult<Prisma.$EmailSettingPayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one EmailSetting that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {EmailSettingFindUniqueOrThrowArgs} args - Arguments to find a EmailSetting
+     * @example
+     * // Get one EmailSetting
+     * const emailSetting = await prisma.emailSetting.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends EmailSettingFindUniqueOrThrowArgs>(args: SelectSubset<T, EmailSettingFindUniqueOrThrowArgs<ExtArgs>>): Prisma__EmailSettingClient<$Result.GetResult<Prisma.$EmailSettingPayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first EmailSetting that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailSettingFindFirstArgs} args - Arguments to find a EmailSetting
+     * @example
+     * // Get one EmailSetting
+     * const emailSetting = await prisma.emailSetting.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends EmailSettingFindFirstArgs>(args?: SelectSubset<T, EmailSettingFindFirstArgs<ExtArgs>>): Prisma__EmailSettingClient<$Result.GetResult<Prisma.$EmailSettingPayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first EmailSetting that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailSettingFindFirstOrThrowArgs} args - Arguments to find a EmailSetting
+     * @example
+     * // Get one EmailSetting
+     * const emailSetting = await prisma.emailSetting.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends EmailSettingFindFirstOrThrowArgs>(args?: SelectSubset<T, EmailSettingFindFirstOrThrowArgs<ExtArgs>>): Prisma__EmailSettingClient<$Result.GetResult<Prisma.$EmailSettingPayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more EmailSettings that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailSettingFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all EmailSettings
+     * const emailSettings = await prisma.emailSetting.findMany()
+     * 
+     * // Get first 10 EmailSettings
+     * const emailSettings = await prisma.emailSetting.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const emailSettingWithIdOnly = await prisma.emailSetting.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends EmailSettingFindManyArgs>(args?: SelectSubset<T, EmailSettingFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmailSettingPayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a EmailSetting.
+     * @param {EmailSettingCreateArgs} args - Arguments to create a EmailSetting.
+     * @example
+     * // Create one EmailSetting
+     * const EmailSetting = await prisma.emailSetting.create({
+     *   data: {
+     *     // ... data to create a EmailSetting
+     *   }
+     * })
+     * 
+     */
+    create<T extends EmailSettingCreateArgs>(args: SelectSubset<T, EmailSettingCreateArgs<ExtArgs>>): Prisma__EmailSettingClient<$Result.GetResult<Prisma.$EmailSettingPayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many EmailSettings.
+     * @param {EmailSettingCreateManyArgs} args - Arguments to create many EmailSettings.
+     * @example
+     * // Create many EmailSettings
+     * const emailSetting = await prisma.emailSetting.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends EmailSettingCreateManyArgs>(args?: SelectSubset<T, EmailSettingCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many EmailSettings and returns the data saved in the database.
+     * @param {EmailSettingCreateManyAndReturnArgs} args - Arguments to create many EmailSettings.
+     * @example
+     * // Create many EmailSettings
+     * const emailSetting = await prisma.emailSetting.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many EmailSettings and only return the `id`
+     * const emailSettingWithIdOnly = await prisma.emailSetting.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends EmailSettingCreateManyAndReturnArgs>(args?: SelectSubset<T, EmailSettingCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmailSettingPayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a EmailSetting.
+     * @param {EmailSettingDeleteArgs} args - Arguments to delete one EmailSetting.
+     * @example
+     * // Delete one EmailSetting
+     * const EmailSetting = await prisma.emailSetting.delete({
+     *   where: {
+     *     // ... filter to delete one EmailSetting
+     *   }
+     * })
+     * 
+     */
+    delete<T extends EmailSettingDeleteArgs>(args: SelectSubset<T, EmailSettingDeleteArgs<ExtArgs>>): Prisma__EmailSettingClient<$Result.GetResult<Prisma.$EmailSettingPayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one EmailSetting.
+     * @param {EmailSettingUpdateArgs} args - Arguments to update one EmailSetting.
+     * @example
+     * // Update one EmailSetting
+     * const emailSetting = await prisma.emailSetting.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends EmailSettingUpdateArgs>(args: SelectSubset<T, EmailSettingUpdateArgs<ExtArgs>>): Prisma__EmailSettingClient<$Result.GetResult<Prisma.$EmailSettingPayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more EmailSettings.
+     * @param {EmailSettingDeleteManyArgs} args - Arguments to filter EmailSettings to delete.
+     * @example
+     * // Delete a few EmailSettings
+     * const { count } = await prisma.emailSetting.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends EmailSettingDeleteManyArgs>(args?: SelectSubset<T, EmailSettingDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more EmailSettings.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailSettingUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many EmailSettings
+     * const emailSetting = await prisma.emailSetting.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends EmailSettingUpdateManyArgs>(args: SelectSubset<T, EmailSettingUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one EmailSetting.
+     * @param {EmailSettingUpsertArgs} args - Arguments to update or create a EmailSetting.
+     * @example
+     * // Update or create a EmailSetting
+     * const emailSetting = await prisma.emailSetting.upsert({
+     *   create: {
+     *     // ... data to create a EmailSetting
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the EmailSetting we want to update
+     *   }
+     * })
+     */
+    upsert<T extends EmailSettingUpsertArgs>(args: SelectSubset<T, EmailSettingUpsertArgs<ExtArgs>>): Prisma__EmailSettingClient<$Result.GetResult<Prisma.$EmailSettingPayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of EmailSettings.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailSettingCountArgs} args - Arguments to filter EmailSettings to count.
+     * @example
+     * // Count the number of EmailSettings
+     * const count = await prisma.emailSetting.count({
+     *   where: {
+     *     // ... the filter for the EmailSettings we want to count
+     *   }
+     * })
+    **/
+    count<T extends EmailSettingCountArgs>(
+      args?: Subset<T, EmailSettingCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], EmailSettingCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a EmailSetting.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailSettingAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends EmailSettingAggregateArgs>(args: Subset<T, EmailSettingAggregateArgs>): Prisma.PrismaPromise<GetEmailSettingAggregateType<T>>
+
+    /**
+     * Group by EmailSetting.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EmailSettingGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends EmailSettingGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: EmailSettingGroupByArgs['orderBy'] }
+        : { orderBy?: EmailSettingGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, EmailSettingGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetEmailSettingGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the EmailSetting model
+   */
+  readonly fields: EmailSettingFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for EmailSetting.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__EmailSettingClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the EmailSetting model
+   */ 
+  interface EmailSettingFieldRefs {
+    readonly id: FieldRef<"EmailSetting", 'String'>
+    readonly key: FieldRef<"EmailSetting", 'String'>
+    readonly value: FieldRef<"EmailSetting", 'String'>
+    readonly description: FieldRef<"EmailSetting", 'String'>
+    readonly isEncrypted: FieldRef<"EmailSetting", 'Boolean'>
+    readonly createdAt: FieldRef<"EmailSetting", 'DateTime'>
+    readonly updatedAt: FieldRef<"EmailSetting", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * EmailSetting findUnique
+   */
+  export type EmailSettingFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailSetting
+     */
+    select?: EmailSettingSelect<ExtArgs> | null
+    /**
+     * Filter, which EmailSetting to fetch.
+     */
+    where: EmailSettingWhereUniqueInput
+  }
+
+  /**
+   * EmailSetting findUniqueOrThrow
+   */
+  export type EmailSettingFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailSetting
+     */
+    select?: EmailSettingSelect<ExtArgs> | null
+    /**
+     * Filter, which EmailSetting to fetch.
+     */
+    where: EmailSettingWhereUniqueInput
+  }
+
+  /**
+   * EmailSetting findFirst
+   */
+  export type EmailSettingFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailSetting
+     */
+    select?: EmailSettingSelect<ExtArgs> | null
+    /**
+     * Filter, which EmailSetting to fetch.
+     */
+    where?: EmailSettingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailSettings to fetch.
+     */
+    orderBy?: EmailSettingOrderByWithRelationInput | EmailSettingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for EmailSettings.
+     */
+    cursor?: EmailSettingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailSettings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailSettings.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of EmailSettings.
+     */
+    distinct?: EmailSettingScalarFieldEnum | EmailSettingScalarFieldEnum[]
+  }
+
+  /**
+   * EmailSetting findFirstOrThrow
+   */
+  export type EmailSettingFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailSetting
+     */
+    select?: EmailSettingSelect<ExtArgs> | null
+    /**
+     * Filter, which EmailSetting to fetch.
+     */
+    where?: EmailSettingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailSettings to fetch.
+     */
+    orderBy?: EmailSettingOrderByWithRelationInput | EmailSettingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for EmailSettings.
+     */
+    cursor?: EmailSettingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailSettings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailSettings.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of EmailSettings.
+     */
+    distinct?: EmailSettingScalarFieldEnum | EmailSettingScalarFieldEnum[]
+  }
+
+  /**
+   * EmailSetting findMany
+   */
+  export type EmailSettingFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailSetting
+     */
+    select?: EmailSettingSelect<ExtArgs> | null
+    /**
+     * Filter, which EmailSettings to fetch.
+     */
+    where?: EmailSettingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EmailSettings to fetch.
+     */
+    orderBy?: EmailSettingOrderByWithRelationInput | EmailSettingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing EmailSettings.
+     */
+    cursor?: EmailSettingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EmailSettings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EmailSettings.
+     */
+    skip?: number
+    distinct?: EmailSettingScalarFieldEnum | EmailSettingScalarFieldEnum[]
+  }
+
+  /**
+   * EmailSetting create
+   */
+  export type EmailSettingCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailSetting
+     */
+    select?: EmailSettingSelect<ExtArgs> | null
+    /**
+     * The data needed to create a EmailSetting.
+     */
+    data: XOR<EmailSettingCreateInput, EmailSettingUncheckedCreateInput>
+  }
+
+  /**
+   * EmailSetting createMany
+   */
+  export type EmailSettingCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many EmailSettings.
+     */
+    data: EmailSettingCreateManyInput | EmailSettingCreateManyInput[]
+  }
+
+  /**
+   * EmailSetting createManyAndReturn
+   */
+  export type EmailSettingCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailSetting
+     */
+    select?: EmailSettingSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many EmailSettings.
+     */
+    data: EmailSettingCreateManyInput | EmailSettingCreateManyInput[]
+  }
+
+  /**
+   * EmailSetting update
+   */
+  export type EmailSettingUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailSetting
+     */
+    select?: EmailSettingSelect<ExtArgs> | null
+    /**
+     * The data needed to update a EmailSetting.
+     */
+    data: XOR<EmailSettingUpdateInput, EmailSettingUncheckedUpdateInput>
+    /**
+     * Choose, which EmailSetting to update.
+     */
+    where: EmailSettingWhereUniqueInput
+  }
+
+  /**
+   * EmailSetting updateMany
+   */
+  export type EmailSettingUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update EmailSettings.
+     */
+    data: XOR<EmailSettingUpdateManyMutationInput, EmailSettingUncheckedUpdateManyInput>
+    /**
+     * Filter which EmailSettings to update
+     */
+    where?: EmailSettingWhereInput
+  }
+
+  /**
+   * EmailSetting upsert
+   */
+  export type EmailSettingUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailSetting
+     */
+    select?: EmailSettingSelect<ExtArgs> | null
+    /**
+     * The filter to search for the EmailSetting to update in case it exists.
+     */
+    where: EmailSettingWhereUniqueInput
+    /**
+     * In case the EmailSetting found by the `where` argument doesn't exist, create a new EmailSetting with this data.
+     */
+    create: XOR<EmailSettingCreateInput, EmailSettingUncheckedCreateInput>
+    /**
+     * In case the EmailSetting was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<EmailSettingUpdateInput, EmailSettingUncheckedUpdateInput>
+  }
+
+  /**
+   * EmailSetting delete
+   */
+  export type EmailSettingDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailSetting
+     */
+    select?: EmailSettingSelect<ExtArgs> | null
+    /**
+     * Filter which EmailSetting to delete.
+     */
+    where: EmailSettingWhereUniqueInput
+  }
+
+  /**
+   * EmailSetting deleteMany
+   */
+  export type EmailSettingDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which EmailSettings to delete
+     */
+    where?: EmailSettingWhereInput
+  }
+
+  /**
+   * EmailSetting without action
+   */
+  export type EmailSettingDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EmailSetting
+     */
+    select?: EmailSettingSelect<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -20913,12 +33924,17 @@ export namespace Prisma {
     id: 'id',
     sampleId: 'sampleId',
     testId: 'testId',
+    testDefId: 'testDefId',
     value: 'value',
+    calculatedValues: 'calculatedValues',
     isNormal: 'isNormal',
+    abnormalFlags: 'abnormalFlags',
+    interpretationId: 'interpretationId',
     notes: 'notes',
     enteredBy: 'enteredBy',
     enteredAt: 'enteredAt',
-    createdAt: 'createdAt'
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
   };
 
   export type ResultScalarFieldEnum = (typeof ResultScalarFieldEnum)[keyof typeof ResultScalarFieldEnum]
@@ -21058,6 +34074,186 @@ export namespace Prisma {
   };
 
   export type SettingScalarFieldEnum = (typeof SettingScalarFieldEnum)[keyof typeof SettingScalarFieldEnum]
+
+
+  export const TestCategoryScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    description: 'description',
+    code: 'code',
+    isActive: 'isActive',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type TestCategoryScalarFieldEnum = (typeof TestCategoryScalarFieldEnum)[keyof typeof TestCategoryScalarFieldEnum]
+
+
+  export const TestDefinitionScalarFieldEnum: {
+    id: 'id',
+    testId: 'testId',
+    categoryId: 'categoryId',
+    name: 'name',
+    code: 'code',
+    unit: 'unit',
+    sampleType: 'sampleType',
+    testFields: 'testFields',
+    isActive: 'isActive',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type TestDefinitionScalarFieldEnum = (typeof TestDefinitionScalarFieldEnum)[keyof typeof TestDefinitionScalarFieldEnum]
+
+
+  export const NormalRangeScalarFieldEnum: {
+    id: 'id',
+    testDefId: 'testDefId',
+    minAge: 'minAge',
+    maxAge: 'maxAge',
+    gender: 'gender',
+    minValue: 'minValue',
+    maxValue: 'maxValue',
+    criticalLow: 'criticalLow',
+    criticalHigh: 'criticalHigh',
+    unit: 'unit',
+    notes: 'notes',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type NormalRangeScalarFieldEnum = (typeof NormalRangeScalarFieldEnum)[keyof typeof NormalRangeScalarFieldEnum]
+
+
+  export const CalculationRuleScalarFieldEnum: {
+    id: 'id',
+    testDefId: 'testDefId',
+    name: 'name',
+    formula: 'formula',
+    requiredFields: 'requiredFields',
+    outputField: 'outputField',
+    priority: 'priority',
+    isActive: 'isActive',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type CalculationRuleScalarFieldEnum = (typeof CalculationRuleScalarFieldEnum)[keyof typeof CalculationRuleScalarFieldEnum]
+
+
+  export const InterpretationRuleScalarFieldEnum: {
+    id: 'id',
+    testDefId: 'testDefId',
+    name: 'name',
+    condition: 'condition',
+    interpretation: 'interpretation',
+    severity: 'severity',
+    priority: 'priority',
+    isActive: 'isActive',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type InterpretationRuleScalarFieldEnum = (typeof InterpretationRuleScalarFieldEnum)[keyof typeof InterpretationRuleScalarFieldEnum]
+
+
+  export const DeltaCheckRuleScalarFieldEnum: {
+    id: 'id',
+    testDefId: 'testDefId',
+    name: 'name',
+    alertThreshold: 'alertThreshold',
+    criticalThreshold: 'criticalThreshold',
+    checkDays: 'checkDays',
+    isActive: 'isActive',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type DeltaCheckRuleScalarFieldEnum = (typeof DeltaCheckRuleScalarFieldEnum)[keyof typeof DeltaCheckRuleScalarFieldEnum]
+
+
+  export const ReflexTestRuleScalarFieldEnum: {
+    id: 'id',
+    parentTestDefId: 'parentTestDefId',
+    childTestDefId: 'childTestDefId',
+    condition: 'condition',
+    priority: 'priority',
+    requiresApproval: 'requiresApproval',
+    isActive: 'isActive',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type ReflexTestRuleScalarFieldEnum = (typeof ReflexTestRuleScalarFieldEnum)[keyof typeof ReflexTestRuleScalarFieldEnum]
+
+
+  export const DeltaCheckResultScalarFieldEnum: {
+    id: 'id',
+    resultId: 'resultId',
+    ruleId: 'ruleId',
+    previousValue: 'previousValue',
+    currentValue: 'currentValue',
+    changePercent: 'changePercent',
+    previousDate: 'previousDate',
+    alertMessage: 'alertMessage',
+    severity: 'severity',
+    isResolved: 'isResolved',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type DeltaCheckResultScalarFieldEnum = (typeof DeltaCheckResultScalarFieldEnum)[keyof typeof DeltaCheckResultScalarFieldEnum]
+
+
+  export const EmailTemplateScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    subject: 'subject',
+    htmlContent: 'htmlContent',
+    plainTextContent: 'plainTextContent',
+    templateType: 'templateType',
+    requiredVariables: 'requiredVariables',
+    isActive: 'isActive',
+    version: 'version',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type EmailTemplateScalarFieldEnum = (typeof EmailTemplateScalarFieldEnum)[keyof typeof EmailTemplateScalarFieldEnum]
+
+
+  export const EmailLogScalarFieldEnum: {
+    id: 'id',
+    templateId: 'templateId',
+    resultId: 'resultId',
+    sampleId: 'sampleId',
+    invoiceId: 'invoiceId',
+    recipientEmail: 'recipientEmail',
+    subject: 'subject',
+    content: 'content',
+    status: 'status',
+    sentAt: 'sentAt',
+    failureReason: 'failureReason',
+    retryCount: 'retryCount',
+    nextRetryAt: 'nextRetryAt',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type EmailLogScalarFieldEnum = (typeof EmailLogScalarFieldEnum)[keyof typeof EmailLogScalarFieldEnum]
+
+
+  export const EmailSettingScalarFieldEnum: {
+    id: 'id',
+    key: 'key',
+    value: 'value',
+    description: 'description',
+    isEncrypted: 'isEncrypted',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type EmailSettingScalarFieldEnum = (typeof EmailSettingScalarFieldEnum)[keyof typeof EmailSettingScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -21385,6 +34581,7 @@ export namespace Prisma {
     profileTests?: TestProfileItemListRelationFilter
     sampleTests?: SampleTestListRelationFilter
     results?: ResultListRelationFilter
+    testDefs?: TestDefinitionListRelationFilter
   }
 
   export type TestOrderByWithRelationInput = {
@@ -21400,6 +34597,7 @@ export namespace Prisma {
     profileTests?: TestProfileItemOrderByRelationAggregateInput
     sampleTests?: SampleTestOrderByRelationAggregateInput
     results?: ResultOrderByRelationAggregateInput
+    testDefs?: TestDefinitionOrderByRelationAggregateInput
   }
 
   export type TestWhereUniqueInput = Prisma.AtLeast<{
@@ -21418,6 +34616,7 @@ export namespace Prisma {
     profileTests?: TestProfileItemListRelationFilter
     sampleTests?: SampleTestListRelationFilter
     results?: ResultListRelationFilter
+    testDefs?: TestDefinitionListRelationFilter
   }, "id" | "code">
 
   export type TestOrderByWithAggregationInput = {
@@ -21575,6 +34774,7 @@ export namespace Prisma {
     profile?: XOR<TestProfileNullableRelationFilter, TestProfileWhereInput> | null
     tests?: SampleTestListRelationFilter
     results?: ResultListRelationFilter
+    emailLogs?: EmailLogListRelationFilter
     invoice?: XOR<InvoiceNullableRelationFilter, InvoiceWhereInput> | null
   }
 
@@ -21591,6 +34791,7 @@ export namespace Prisma {
     profile?: TestProfileOrderByWithRelationInput
     tests?: SampleTestOrderByRelationAggregateInput
     results?: ResultOrderByRelationAggregateInput
+    emailLogs?: EmailLogOrderByRelationAggregateInput
     invoice?: InvoiceOrderByWithRelationInput
   }
 
@@ -21610,6 +34811,7 @@ export namespace Prisma {
     profile?: XOR<TestProfileNullableRelationFilter, TestProfileWhereInput> | null
     tests?: SampleTestListRelationFilter
     results?: ResultListRelationFilter
+    emailLogs?: EmailLogListRelationFilter
     invoice?: XOR<InvoiceNullableRelationFilter, InvoiceWhereInput> | null
   }, "id" | "sampleNumber">
 
@@ -21704,28 +34906,46 @@ export namespace Prisma {
     id?: StringFilter<"Result"> | string
     sampleId?: StringFilter<"Result"> | string
     testId?: StringFilter<"Result"> | string
+    testDefId?: StringNullableFilter<"Result"> | string | null
     value?: StringFilter<"Result"> | string
+    calculatedValues?: StringNullableFilter<"Result"> | string | null
     isNormal?: BoolFilter<"Result"> | boolean
+    abnormalFlags?: StringNullableFilter<"Result"> | string | null
+    interpretationId?: StringNullableFilter<"Result"> | string | null
     notes?: StringNullableFilter<"Result"> | string | null
     enteredBy?: StringNullableFilter<"Result"> | string | null
     enteredAt?: DateTimeFilter<"Result"> | Date | string
     createdAt?: DateTimeFilter<"Result"> | Date | string
+    updatedAt?: DateTimeFilter<"Result"> | Date | string
     sample?: XOR<SampleRelationFilter, SampleWhereInput>
     test?: XOR<TestRelationFilter, TestWhereInput>
+    testDef?: XOR<TestDefinitionNullableRelationFilter, TestDefinitionWhereInput> | null
+    interpretation?: XOR<InterpretationRuleNullableRelationFilter, InterpretationRuleWhereInput> | null
+    deltaCheckResults?: DeltaCheckResultListRelationFilter
+    emailLogs?: EmailLogListRelationFilter
   }
 
   export type ResultOrderByWithRelationInput = {
     id?: SortOrder
     sampleId?: SortOrder
     testId?: SortOrder
+    testDefId?: SortOrderInput | SortOrder
     value?: SortOrder
+    calculatedValues?: SortOrderInput | SortOrder
     isNormal?: SortOrder
+    abnormalFlags?: SortOrderInput | SortOrder
+    interpretationId?: SortOrderInput | SortOrder
     notes?: SortOrderInput | SortOrder
     enteredBy?: SortOrderInput | SortOrder
     enteredAt?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
     sample?: SampleOrderByWithRelationInput
     test?: TestOrderByWithRelationInput
+    testDef?: TestDefinitionOrderByWithRelationInput
+    interpretation?: InterpretationRuleOrderByWithRelationInput
+    deltaCheckResults?: DeltaCheckResultOrderByRelationAggregateInput
+    emailLogs?: EmailLogOrderByRelationAggregateInput
   }
 
   export type ResultWhereUniqueInput = Prisma.AtLeast<{
@@ -21736,26 +34956,40 @@ export namespace Prisma {
     NOT?: ResultWhereInput | ResultWhereInput[]
     sampleId?: StringFilter<"Result"> | string
     testId?: StringFilter<"Result"> | string
+    testDefId?: StringNullableFilter<"Result"> | string | null
     value?: StringFilter<"Result"> | string
+    calculatedValues?: StringNullableFilter<"Result"> | string | null
     isNormal?: BoolFilter<"Result"> | boolean
+    abnormalFlags?: StringNullableFilter<"Result"> | string | null
+    interpretationId?: StringNullableFilter<"Result"> | string | null
     notes?: StringNullableFilter<"Result"> | string | null
     enteredBy?: StringNullableFilter<"Result"> | string | null
     enteredAt?: DateTimeFilter<"Result"> | Date | string
     createdAt?: DateTimeFilter<"Result"> | Date | string
+    updatedAt?: DateTimeFilter<"Result"> | Date | string
     sample?: XOR<SampleRelationFilter, SampleWhereInput>
     test?: XOR<TestRelationFilter, TestWhereInput>
+    testDef?: XOR<TestDefinitionNullableRelationFilter, TestDefinitionWhereInput> | null
+    interpretation?: XOR<InterpretationRuleNullableRelationFilter, InterpretationRuleWhereInput> | null
+    deltaCheckResults?: DeltaCheckResultListRelationFilter
+    emailLogs?: EmailLogListRelationFilter
   }, "id" | "sampleId_testId">
 
   export type ResultOrderByWithAggregationInput = {
     id?: SortOrder
     sampleId?: SortOrder
     testId?: SortOrder
+    testDefId?: SortOrderInput | SortOrder
     value?: SortOrder
+    calculatedValues?: SortOrderInput | SortOrder
     isNormal?: SortOrder
+    abnormalFlags?: SortOrderInput | SortOrder
+    interpretationId?: SortOrderInput | SortOrder
     notes?: SortOrderInput | SortOrder
     enteredBy?: SortOrderInput | SortOrder
     enteredAt?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
     _count?: ResultCountOrderByAggregateInput
     _max?: ResultMaxOrderByAggregateInput
     _min?: ResultMinOrderByAggregateInput
@@ -21768,12 +35002,17 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"Result"> | string
     sampleId?: StringWithAggregatesFilter<"Result"> | string
     testId?: StringWithAggregatesFilter<"Result"> | string
+    testDefId?: StringNullableWithAggregatesFilter<"Result"> | string | null
     value?: StringWithAggregatesFilter<"Result"> | string
+    calculatedValues?: StringNullableWithAggregatesFilter<"Result"> | string | null
     isNormal?: BoolWithAggregatesFilter<"Result"> | boolean
+    abnormalFlags?: StringNullableWithAggregatesFilter<"Result"> | string | null
+    interpretationId?: StringNullableWithAggregatesFilter<"Result"> | string | null
     notes?: StringNullableWithAggregatesFilter<"Result"> | string | null
     enteredBy?: StringNullableWithAggregatesFilter<"Result"> | string | null
     enteredAt?: DateTimeWithAggregatesFilter<"Result"> | Date | string
     createdAt?: DateTimeWithAggregatesFilter<"Result"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Result"> | Date | string
   }
 
   export type InvoiceWhereInput = {
@@ -21799,6 +35038,7 @@ export namespace Prisma {
     lab?: XOR<LabRelationFilter, LabWhereInput>
     items?: InvoiceItemListRelationFilter
     commissions?: CommissionListRelationFilter
+    emailLogs?: EmailLogListRelationFilter
   }
 
   export type InvoiceOrderByWithRelationInput = {
@@ -21821,6 +35061,7 @@ export namespace Prisma {
     lab?: LabOrderByWithRelationInput
     items?: InvoiceItemOrderByRelationAggregateInput
     commissions?: CommissionOrderByRelationAggregateInput
+    emailLogs?: EmailLogOrderByRelationAggregateInput
   }
 
   export type InvoiceWhereUniqueInput = Prisma.AtLeast<{
@@ -21846,6 +35087,7 @@ export namespace Prisma {
     lab?: XOR<LabRelationFilter, LabWhereInput>
     items?: InvoiceItemListRelationFilter
     commissions?: CommissionListRelationFilter
+    emailLogs?: EmailLogListRelationFilter
   }, "id" | "invoiceNumber" | "sampleId">
 
   export type InvoiceOrderByWithAggregationInput = {
@@ -22477,6 +35719,966 @@ export namespace Prisma {
     updatedAt?: DateTimeWithAggregatesFilter<"Setting"> | Date | string
   }
 
+  export type TestCategoryWhereInput = {
+    AND?: TestCategoryWhereInput | TestCategoryWhereInput[]
+    OR?: TestCategoryWhereInput[]
+    NOT?: TestCategoryWhereInput | TestCategoryWhereInput[]
+    id?: StringFilter<"TestCategory"> | string
+    name?: StringFilter<"TestCategory"> | string
+    description?: StringNullableFilter<"TestCategory"> | string | null
+    code?: StringFilter<"TestCategory"> | string
+    isActive?: BoolFilter<"TestCategory"> | boolean
+    createdAt?: DateTimeFilter<"TestCategory"> | Date | string
+    updatedAt?: DateTimeFilter<"TestCategory"> | Date | string
+    definitions?: TestDefinitionListRelationFilter
+  }
+
+  export type TestCategoryOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrderInput | SortOrder
+    code?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    definitions?: TestDefinitionOrderByRelationAggregateInput
+  }
+
+  export type TestCategoryWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    name?: string
+    code?: string
+    AND?: TestCategoryWhereInput | TestCategoryWhereInput[]
+    OR?: TestCategoryWhereInput[]
+    NOT?: TestCategoryWhereInput | TestCategoryWhereInput[]
+    description?: StringNullableFilter<"TestCategory"> | string | null
+    isActive?: BoolFilter<"TestCategory"> | boolean
+    createdAt?: DateTimeFilter<"TestCategory"> | Date | string
+    updatedAt?: DateTimeFilter<"TestCategory"> | Date | string
+    definitions?: TestDefinitionListRelationFilter
+  }, "id" | "name" | "code">
+
+  export type TestCategoryOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrderInput | SortOrder
+    code?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: TestCategoryCountOrderByAggregateInput
+    _max?: TestCategoryMaxOrderByAggregateInput
+    _min?: TestCategoryMinOrderByAggregateInput
+  }
+
+  export type TestCategoryScalarWhereWithAggregatesInput = {
+    AND?: TestCategoryScalarWhereWithAggregatesInput | TestCategoryScalarWhereWithAggregatesInput[]
+    OR?: TestCategoryScalarWhereWithAggregatesInput[]
+    NOT?: TestCategoryScalarWhereWithAggregatesInput | TestCategoryScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"TestCategory"> | string
+    name?: StringWithAggregatesFilter<"TestCategory"> | string
+    description?: StringNullableWithAggregatesFilter<"TestCategory"> | string | null
+    code?: StringWithAggregatesFilter<"TestCategory"> | string
+    isActive?: BoolWithAggregatesFilter<"TestCategory"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"TestCategory"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"TestCategory"> | Date | string
+  }
+
+  export type TestDefinitionWhereInput = {
+    AND?: TestDefinitionWhereInput | TestDefinitionWhereInput[]
+    OR?: TestDefinitionWhereInput[]
+    NOT?: TestDefinitionWhereInput | TestDefinitionWhereInput[]
+    id?: StringFilter<"TestDefinition"> | string
+    testId?: StringNullableFilter<"TestDefinition"> | string | null
+    categoryId?: StringFilter<"TestDefinition"> | string
+    name?: StringFilter<"TestDefinition"> | string
+    code?: StringFilter<"TestDefinition"> | string
+    unit?: StringNullableFilter<"TestDefinition"> | string | null
+    sampleType?: StringNullableFilter<"TestDefinition"> | string | null
+    testFields?: StringFilter<"TestDefinition"> | string
+    isActive?: BoolFilter<"TestDefinition"> | boolean
+    createdAt?: DateTimeFilter<"TestDefinition"> | Date | string
+    updatedAt?: DateTimeFilter<"TestDefinition"> | Date | string
+    test?: XOR<TestNullableRelationFilter, TestWhereInput> | null
+    category?: XOR<TestCategoryRelationFilter, TestCategoryWhereInput>
+    normalRanges?: NormalRangeListRelationFilter
+    interpretations?: InterpretationRuleListRelationFilter
+    calculationRules?: CalculationRuleListRelationFilter
+    deltaCheckRules?: DeltaCheckRuleListRelationFilter
+    reflexRulesAsParent?: ReflexTestRuleListRelationFilter
+    reflexRulesAsChild?: ReflexTestRuleListRelationFilter
+    testResults?: ResultListRelationFilter
+  }
+
+  export type TestDefinitionOrderByWithRelationInput = {
+    id?: SortOrder
+    testId?: SortOrderInput | SortOrder
+    categoryId?: SortOrder
+    name?: SortOrder
+    code?: SortOrder
+    unit?: SortOrderInput | SortOrder
+    sampleType?: SortOrderInput | SortOrder
+    testFields?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    test?: TestOrderByWithRelationInput
+    category?: TestCategoryOrderByWithRelationInput
+    normalRanges?: NormalRangeOrderByRelationAggregateInput
+    interpretations?: InterpretationRuleOrderByRelationAggregateInput
+    calculationRules?: CalculationRuleOrderByRelationAggregateInput
+    deltaCheckRules?: DeltaCheckRuleOrderByRelationAggregateInput
+    reflexRulesAsParent?: ReflexTestRuleOrderByRelationAggregateInput
+    reflexRulesAsChild?: ReflexTestRuleOrderByRelationAggregateInput
+    testResults?: ResultOrderByRelationAggregateInput
+  }
+
+  export type TestDefinitionWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    code_categoryId?: TestDefinitionCodeCategoryIdCompoundUniqueInput
+    AND?: TestDefinitionWhereInput | TestDefinitionWhereInput[]
+    OR?: TestDefinitionWhereInput[]
+    NOT?: TestDefinitionWhereInput | TestDefinitionWhereInput[]
+    testId?: StringNullableFilter<"TestDefinition"> | string | null
+    categoryId?: StringFilter<"TestDefinition"> | string
+    name?: StringFilter<"TestDefinition"> | string
+    code?: StringFilter<"TestDefinition"> | string
+    unit?: StringNullableFilter<"TestDefinition"> | string | null
+    sampleType?: StringNullableFilter<"TestDefinition"> | string | null
+    testFields?: StringFilter<"TestDefinition"> | string
+    isActive?: BoolFilter<"TestDefinition"> | boolean
+    createdAt?: DateTimeFilter<"TestDefinition"> | Date | string
+    updatedAt?: DateTimeFilter<"TestDefinition"> | Date | string
+    test?: XOR<TestNullableRelationFilter, TestWhereInput> | null
+    category?: XOR<TestCategoryRelationFilter, TestCategoryWhereInput>
+    normalRanges?: NormalRangeListRelationFilter
+    interpretations?: InterpretationRuleListRelationFilter
+    calculationRules?: CalculationRuleListRelationFilter
+    deltaCheckRules?: DeltaCheckRuleListRelationFilter
+    reflexRulesAsParent?: ReflexTestRuleListRelationFilter
+    reflexRulesAsChild?: ReflexTestRuleListRelationFilter
+    testResults?: ResultListRelationFilter
+  }, "id" | "code_categoryId">
+
+  export type TestDefinitionOrderByWithAggregationInput = {
+    id?: SortOrder
+    testId?: SortOrderInput | SortOrder
+    categoryId?: SortOrder
+    name?: SortOrder
+    code?: SortOrder
+    unit?: SortOrderInput | SortOrder
+    sampleType?: SortOrderInput | SortOrder
+    testFields?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: TestDefinitionCountOrderByAggregateInput
+    _max?: TestDefinitionMaxOrderByAggregateInput
+    _min?: TestDefinitionMinOrderByAggregateInput
+  }
+
+  export type TestDefinitionScalarWhereWithAggregatesInput = {
+    AND?: TestDefinitionScalarWhereWithAggregatesInput | TestDefinitionScalarWhereWithAggregatesInput[]
+    OR?: TestDefinitionScalarWhereWithAggregatesInput[]
+    NOT?: TestDefinitionScalarWhereWithAggregatesInput | TestDefinitionScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"TestDefinition"> | string
+    testId?: StringNullableWithAggregatesFilter<"TestDefinition"> | string | null
+    categoryId?: StringWithAggregatesFilter<"TestDefinition"> | string
+    name?: StringWithAggregatesFilter<"TestDefinition"> | string
+    code?: StringWithAggregatesFilter<"TestDefinition"> | string
+    unit?: StringNullableWithAggregatesFilter<"TestDefinition"> | string | null
+    sampleType?: StringNullableWithAggregatesFilter<"TestDefinition"> | string | null
+    testFields?: StringWithAggregatesFilter<"TestDefinition"> | string
+    isActive?: BoolWithAggregatesFilter<"TestDefinition"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"TestDefinition"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"TestDefinition"> | Date | string
+  }
+
+  export type NormalRangeWhereInput = {
+    AND?: NormalRangeWhereInput | NormalRangeWhereInput[]
+    OR?: NormalRangeWhereInput[]
+    NOT?: NormalRangeWhereInput | NormalRangeWhereInput[]
+    id?: StringFilter<"NormalRange"> | string
+    testDefId?: StringFilter<"NormalRange"> | string
+    minAge?: IntNullableFilter<"NormalRange"> | number | null
+    maxAge?: IntNullableFilter<"NormalRange"> | number | null
+    gender?: StringNullableFilter<"NormalRange"> | string | null
+    minValue?: FloatFilter<"NormalRange"> | number
+    maxValue?: FloatFilter<"NormalRange"> | number
+    criticalLow?: FloatNullableFilter<"NormalRange"> | number | null
+    criticalHigh?: FloatNullableFilter<"NormalRange"> | number | null
+    unit?: StringNullableFilter<"NormalRange"> | string | null
+    notes?: StringNullableFilter<"NormalRange"> | string | null
+    createdAt?: DateTimeFilter<"NormalRange"> | Date | string
+    updatedAt?: DateTimeFilter<"NormalRange"> | Date | string
+    testDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+  }
+
+  export type NormalRangeOrderByWithRelationInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    minAge?: SortOrderInput | SortOrder
+    maxAge?: SortOrderInput | SortOrder
+    gender?: SortOrderInput | SortOrder
+    minValue?: SortOrder
+    maxValue?: SortOrder
+    criticalLow?: SortOrderInput | SortOrder
+    criticalHigh?: SortOrderInput | SortOrder
+    unit?: SortOrderInput | SortOrder
+    notes?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    testDef?: TestDefinitionOrderByWithRelationInput
+  }
+
+  export type NormalRangeWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: NormalRangeWhereInput | NormalRangeWhereInput[]
+    OR?: NormalRangeWhereInput[]
+    NOT?: NormalRangeWhereInput | NormalRangeWhereInput[]
+    testDefId?: StringFilter<"NormalRange"> | string
+    minAge?: IntNullableFilter<"NormalRange"> | number | null
+    maxAge?: IntNullableFilter<"NormalRange"> | number | null
+    gender?: StringNullableFilter<"NormalRange"> | string | null
+    minValue?: FloatFilter<"NormalRange"> | number
+    maxValue?: FloatFilter<"NormalRange"> | number
+    criticalLow?: FloatNullableFilter<"NormalRange"> | number | null
+    criticalHigh?: FloatNullableFilter<"NormalRange"> | number | null
+    unit?: StringNullableFilter<"NormalRange"> | string | null
+    notes?: StringNullableFilter<"NormalRange"> | string | null
+    createdAt?: DateTimeFilter<"NormalRange"> | Date | string
+    updatedAt?: DateTimeFilter<"NormalRange"> | Date | string
+    testDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+  }, "id">
+
+  export type NormalRangeOrderByWithAggregationInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    minAge?: SortOrderInput | SortOrder
+    maxAge?: SortOrderInput | SortOrder
+    gender?: SortOrderInput | SortOrder
+    minValue?: SortOrder
+    maxValue?: SortOrder
+    criticalLow?: SortOrderInput | SortOrder
+    criticalHigh?: SortOrderInput | SortOrder
+    unit?: SortOrderInput | SortOrder
+    notes?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: NormalRangeCountOrderByAggregateInput
+    _avg?: NormalRangeAvgOrderByAggregateInput
+    _max?: NormalRangeMaxOrderByAggregateInput
+    _min?: NormalRangeMinOrderByAggregateInput
+    _sum?: NormalRangeSumOrderByAggregateInput
+  }
+
+  export type NormalRangeScalarWhereWithAggregatesInput = {
+    AND?: NormalRangeScalarWhereWithAggregatesInput | NormalRangeScalarWhereWithAggregatesInput[]
+    OR?: NormalRangeScalarWhereWithAggregatesInput[]
+    NOT?: NormalRangeScalarWhereWithAggregatesInput | NormalRangeScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"NormalRange"> | string
+    testDefId?: StringWithAggregatesFilter<"NormalRange"> | string
+    minAge?: IntNullableWithAggregatesFilter<"NormalRange"> | number | null
+    maxAge?: IntNullableWithAggregatesFilter<"NormalRange"> | number | null
+    gender?: StringNullableWithAggregatesFilter<"NormalRange"> | string | null
+    minValue?: FloatWithAggregatesFilter<"NormalRange"> | number
+    maxValue?: FloatWithAggregatesFilter<"NormalRange"> | number
+    criticalLow?: FloatNullableWithAggregatesFilter<"NormalRange"> | number | null
+    criticalHigh?: FloatNullableWithAggregatesFilter<"NormalRange"> | number | null
+    unit?: StringNullableWithAggregatesFilter<"NormalRange"> | string | null
+    notes?: StringNullableWithAggregatesFilter<"NormalRange"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"NormalRange"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"NormalRange"> | Date | string
+  }
+
+  export type CalculationRuleWhereInput = {
+    AND?: CalculationRuleWhereInput | CalculationRuleWhereInput[]
+    OR?: CalculationRuleWhereInput[]
+    NOT?: CalculationRuleWhereInput | CalculationRuleWhereInput[]
+    id?: StringFilter<"CalculationRule"> | string
+    testDefId?: StringFilter<"CalculationRule"> | string
+    name?: StringFilter<"CalculationRule"> | string
+    formula?: StringFilter<"CalculationRule"> | string
+    requiredFields?: StringFilter<"CalculationRule"> | string
+    outputField?: StringFilter<"CalculationRule"> | string
+    priority?: IntFilter<"CalculationRule"> | number
+    isActive?: BoolFilter<"CalculationRule"> | boolean
+    createdAt?: DateTimeFilter<"CalculationRule"> | Date | string
+    updatedAt?: DateTimeFilter<"CalculationRule"> | Date | string
+    testDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+  }
+
+  export type CalculationRuleOrderByWithRelationInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    formula?: SortOrder
+    requiredFields?: SortOrder
+    outputField?: SortOrder
+    priority?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    testDef?: TestDefinitionOrderByWithRelationInput
+  }
+
+  export type CalculationRuleWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: CalculationRuleWhereInput | CalculationRuleWhereInput[]
+    OR?: CalculationRuleWhereInput[]
+    NOT?: CalculationRuleWhereInput | CalculationRuleWhereInput[]
+    testDefId?: StringFilter<"CalculationRule"> | string
+    name?: StringFilter<"CalculationRule"> | string
+    formula?: StringFilter<"CalculationRule"> | string
+    requiredFields?: StringFilter<"CalculationRule"> | string
+    outputField?: StringFilter<"CalculationRule"> | string
+    priority?: IntFilter<"CalculationRule"> | number
+    isActive?: BoolFilter<"CalculationRule"> | boolean
+    createdAt?: DateTimeFilter<"CalculationRule"> | Date | string
+    updatedAt?: DateTimeFilter<"CalculationRule"> | Date | string
+    testDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+  }, "id">
+
+  export type CalculationRuleOrderByWithAggregationInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    formula?: SortOrder
+    requiredFields?: SortOrder
+    outputField?: SortOrder
+    priority?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: CalculationRuleCountOrderByAggregateInput
+    _avg?: CalculationRuleAvgOrderByAggregateInput
+    _max?: CalculationRuleMaxOrderByAggregateInput
+    _min?: CalculationRuleMinOrderByAggregateInput
+    _sum?: CalculationRuleSumOrderByAggregateInput
+  }
+
+  export type CalculationRuleScalarWhereWithAggregatesInput = {
+    AND?: CalculationRuleScalarWhereWithAggregatesInput | CalculationRuleScalarWhereWithAggregatesInput[]
+    OR?: CalculationRuleScalarWhereWithAggregatesInput[]
+    NOT?: CalculationRuleScalarWhereWithAggregatesInput | CalculationRuleScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"CalculationRule"> | string
+    testDefId?: StringWithAggregatesFilter<"CalculationRule"> | string
+    name?: StringWithAggregatesFilter<"CalculationRule"> | string
+    formula?: StringWithAggregatesFilter<"CalculationRule"> | string
+    requiredFields?: StringWithAggregatesFilter<"CalculationRule"> | string
+    outputField?: StringWithAggregatesFilter<"CalculationRule"> | string
+    priority?: IntWithAggregatesFilter<"CalculationRule"> | number
+    isActive?: BoolWithAggregatesFilter<"CalculationRule"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"CalculationRule"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"CalculationRule"> | Date | string
+  }
+
+  export type InterpretationRuleWhereInput = {
+    AND?: InterpretationRuleWhereInput | InterpretationRuleWhereInput[]
+    OR?: InterpretationRuleWhereInput[]
+    NOT?: InterpretationRuleWhereInput | InterpretationRuleWhereInput[]
+    id?: StringFilter<"InterpretationRule"> | string
+    testDefId?: StringFilter<"InterpretationRule"> | string
+    name?: StringFilter<"InterpretationRule"> | string
+    condition?: StringFilter<"InterpretationRule"> | string
+    interpretation?: StringFilter<"InterpretationRule"> | string
+    severity?: StringNullableFilter<"InterpretationRule"> | string | null
+    priority?: IntFilter<"InterpretationRule"> | number
+    isActive?: BoolFilter<"InterpretationRule"> | boolean
+    createdAt?: DateTimeFilter<"InterpretationRule"> | Date | string
+    updatedAt?: DateTimeFilter<"InterpretationRule"> | Date | string
+    testDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+    results?: ResultListRelationFilter
+  }
+
+  export type InterpretationRuleOrderByWithRelationInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    condition?: SortOrder
+    interpretation?: SortOrder
+    severity?: SortOrderInput | SortOrder
+    priority?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    testDef?: TestDefinitionOrderByWithRelationInput
+    results?: ResultOrderByRelationAggregateInput
+  }
+
+  export type InterpretationRuleWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: InterpretationRuleWhereInput | InterpretationRuleWhereInput[]
+    OR?: InterpretationRuleWhereInput[]
+    NOT?: InterpretationRuleWhereInput | InterpretationRuleWhereInput[]
+    testDefId?: StringFilter<"InterpretationRule"> | string
+    name?: StringFilter<"InterpretationRule"> | string
+    condition?: StringFilter<"InterpretationRule"> | string
+    interpretation?: StringFilter<"InterpretationRule"> | string
+    severity?: StringNullableFilter<"InterpretationRule"> | string | null
+    priority?: IntFilter<"InterpretationRule"> | number
+    isActive?: BoolFilter<"InterpretationRule"> | boolean
+    createdAt?: DateTimeFilter<"InterpretationRule"> | Date | string
+    updatedAt?: DateTimeFilter<"InterpretationRule"> | Date | string
+    testDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+    results?: ResultListRelationFilter
+  }, "id">
+
+  export type InterpretationRuleOrderByWithAggregationInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    condition?: SortOrder
+    interpretation?: SortOrder
+    severity?: SortOrderInput | SortOrder
+    priority?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: InterpretationRuleCountOrderByAggregateInput
+    _avg?: InterpretationRuleAvgOrderByAggregateInput
+    _max?: InterpretationRuleMaxOrderByAggregateInput
+    _min?: InterpretationRuleMinOrderByAggregateInput
+    _sum?: InterpretationRuleSumOrderByAggregateInput
+  }
+
+  export type InterpretationRuleScalarWhereWithAggregatesInput = {
+    AND?: InterpretationRuleScalarWhereWithAggregatesInput | InterpretationRuleScalarWhereWithAggregatesInput[]
+    OR?: InterpretationRuleScalarWhereWithAggregatesInput[]
+    NOT?: InterpretationRuleScalarWhereWithAggregatesInput | InterpretationRuleScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"InterpretationRule"> | string
+    testDefId?: StringWithAggregatesFilter<"InterpretationRule"> | string
+    name?: StringWithAggregatesFilter<"InterpretationRule"> | string
+    condition?: StringWithAggregatesFilter<"InterpretationRule"> | string
+    interpretation?: StringWithAggregatesFilter<"InterpretationRule"> | string
+    severity?: StringNullableWithAggregatesFilter<"InterpretationRule"> | string | null
+    priority?: IntWithAggregatesFilter<"InterpretationRule"> | number
+    isActive?: BoolWithAggregatesFilter<"InterpretationRule"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"InterpretationRule"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"InterpretationRule"> | Date | string
+  }
+
+  export type DeltaCheckRuleWhereInput = {
+    AND?: DeltaCheckRuleWhereInput | DeltaCheckRuleWhereInput[]
+    OR?: DeltaCheckRuleWhereInput[]
+    NOT?: DeltaCheckRuleWhereInput | DeltaCheckRuleWhereInput[]
+    id?: StringFilter<"DeltaCheckRule"> | string
+    testDefId?: StringFilter<"DeltaCheckRule"> | string
+    name?: StringFilter<"DeltaCheckRule"> | string
+    alertThreshold?: FloatFilter<"DeltaCheckRule"> | number
+    criticalThreshold?: FloatNullableFilter<"DeltaCheckRule"> | number | null
+    checkDays?: IntFilter<"DeltaCheckRule"> | number
+    isActive?: BoolFilter<"DeltaCheckRule"> | boolean
+    createdAt?: DateTimeFilter<"DeltaCheckRule"> | Date | string
+    updatedAt?: DateTimeFilter<"DeltaCheckRule"> | Date | string
+    testDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+    deltaCheckResults?: DeltaCheckResultListRelationFilter
+  }
+
+  export type DeltaCheckRuleOrderByWithRelationInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    alertThreshold?: SortOrder
+    criticalThreshold?: SortOrderInput | SortOrder
+    checkDays?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    testDef?: TestDefinitionOrderByWithRelationInput
+    deltaCheckResults?: DeltaCheckResultOrderByRelationAggregateInput
+  }
+
+  export type DeltaCheckRuleWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: DeltaCheckRuleWhereInput | DeltaCheckRuleWhereInput[]
+    OR?: DeltaCheckRuleWhereInput[]
+    NOT?: DeltaCheckRuleWhereInput | DeltaCheckRuleWhereInput[]
+    testDefId?: StringFilter<"DeltaCheckRule"> | string
+    name?: StringFilter<"DeltaCheckRule"> | string
+    alertThreshold?: FloatFilter<"DeltaCheckRule"> | number
+    criticalThreshold?: FloatNullableFilter<"DeltaCheckRule"> | number | null
+    checkDays?: IntFilter<"DeltaCheckRule"> | number
+    isActive?: BoolFilter<"DeltaCheckRule"> | boolean
+    createdAt?: DateTimeFilter<"DeltaCheckRule"> | Date | string
+    updatedAt?: DateTimeFilter<"DeltaCheckRule"> | Date | string
+    testDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+    deltaCheckResults?: DeltaCheckResultListRelationFilter
+  }, "id">
+
+  export type DeltaCheckRuleOrderByWithAggregationInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    alertThreshold?: SortOrder
+    criticalThreshold?: SortOrderInput | SortOrder
+    checkDays?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: DeltaCheckRuleCountOrderByAggregateInput
+    _avg?: DeltaCheckRuleAvgOrderByAggregateInput
+    _max?: DeltaCheckRuleMaxOrderByAggregateInput
+    _min?: DeltaCheckRuleMinOrderByAggregateInput
+    _sum?: DeltaCheckRuleSumOrderByAggregateInput
+  }
+
+  export type DeltaCheckRuleScalarWhereWithAggregatesInput = {
+    AND?: DeltaCheckRuleScalarWhereWithAggregatesInput | DeltaCheckRuleScalarWhereWithAggregatesInput[]
+    OR?: DeltaCheckRuleScalarWhereWithAggregatesInput[]
+    NOT?: DeltaCheckRuleScalarWhereWithAggregatesInput | DeltaCheckRuleScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"DeltaCheckRule"> | string
+    testDefId?: StringWithAggregatesFilter<"DeltaCheckRule"> | string
+    name?: StringWithAggregatesFilter<"DeltaCheckRule"> | string
+    alertThreshold?: FloatWithAggregatesFilter<"DeltaCheckRule"> | number
+    criticalThreshold?: FloatNullableWithAggregatesFilter<"DeltaCheckRule"> | number | null
+    checkDays?: IntWithAggregatesFilter<"DeltaCheckRule"> | number
+    isActive?: BoolWithAggregatesFilter<"DeltaCheckRule"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"DeltaCheckRule"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"DeltaCheckRule"> | Date | string
+  }
+
+  export type ReflexTestRuleWhereInput = {
+    AND?: ReflexTestRuleWhereInput | ReflexTestRuleWhereInput[]
+    OR?: ReflexTestRuleWhereInput[]
+    NOT?: ReflexTestRuleWhereInput | ReflexTestRuleWhereInput[]
+    id?: StringFilter<"ReflexTestRule"> | string
+    parentTestDefId?: StringFilter<"ReflexTestRule"> | string
+    childTestDefId?: StringFilter<"ReflexTestRule"> | string
+    condition?: StringFilter<"ReflexTestRule"> | string
+    priority?: IntFilter<"ReflexTestRule"> | number
+    requiresApproval?: BoolFilter<"ReflexTestRule"> | boolean
+    isActive?: BoolFilter<"ReflexTestRule"> | boolean
+    createdAt?: DateTimeFilter<"ReflexTestRule"> | Date | string
+    updatedAt?: DateTimeFilter<"ReflexTestRule"> | Date | string
+    parentTestDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+    childTestDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+  }
+
+  export type ReflexTestRuleOrderByWithRelationInput = {
+    id?: SortOrder
+    parentTestDefId?: SortOrder
+    childTestDefId?: SortOrder
+    condition?: SortOrder
+    priority?: SortOrder
+    requiresApproval?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    parentTestDef?: TestDefinitionOrderByWithRelationInput
+    childTestDef?: TestDefinitionOrderByWithRelationInput
+  }
+
+  export type ReflexTestRuleWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    parentTestDefId_childTestDefId?: ReflexTestRuleParentTestDefIdChildTestDefIdCompoundUniqueInput
+    AND?: ReflexTestRuleWhereInput | ReflexTestRuleWhereInput[]
+    OR?: ReflexTestRuleWhereInput[]
+    NOT?: ReflexTestRuleWhereInput | ReflexTestRuleWhereInput[]
+    parentTestDefId?: StringFilter<"ReflexTestRule"> | string
+    childTestDefId?: StringFilter<"ReflexTestRule"> | string
+    condition?: StringFilter<"ReflexTestRule"> | string
+    priority?: IntFilter<"ReflexTestRule"> | number
+    requiresApproval?: BoolFilter<"ReflexTestRule"> | boolean
+    isActive?: BoolFilter<"ReflexTestRule"> | boolean
+    createdAt?: DateTimeFilter<"ReflexTestRule"> | Date | string
+    updatedAt?: DateTimeFilter<"ReflexTestRule"> | Date | string
+    parentTestDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+    childTestDef?: XOR<TestDefinitionRelationFilter, TestDefinitionWhereInput>
+  }, "id" | "parentTestDefId_childTestDefId">
+
+  export type ReflexTestRuleOrderByWithAggregationInput = {
+    id?: SortOrder
+    parentTestDefId?: SortOrder
+    childTestDefId?: SortOrder
+    condition?: SortOrder
+    priority?: SortOrder
+    requiresApproval?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: ReflexTestRuleCountOrderByAggregateInput
+    _avg?: ReflexTestRuleAvgOrderByAggregateInput
+    _max?: ReflexTestRuleMaxOrderByAggregateInput
+    _min?: ReflexTestRuleMinOrderByAggregateInput
+    _sum?: ReflexTestRuleSumOrderByAggregateInput
+  }
+
+  export type ReflexTestRuleScalarWhereWithAggregatesInput = {
+    AND?: ReflexTestRuleScalarWhereWithAggregatesInput | ReflexTestRuleScalarWhereWithAggregatesInput[]
+    OR?: ReflexTestRuleScalarWhereWithAggregatesInput[]
+    NOT?: ReflexTestRuleScalarWhereWithAggregatesInput | ReflexTestRuleScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ReflexTestRule"> | string
+    parentTestDefId?: StringWithAggregatesFilter<"ReflexTestRule"> | string
+    childTestDefId?: StringWithAggregatesFilter<"ReflexTestRule"> | string
+    condition?: StringWithAggregatesFilter<"ReflexTestRule"> | string
+    priority?: IntWithAggregatesFilter<"ReflexTestRule"> | number
+    requiresApproval?: BoolWithAggregatesFilter<"ReflexTestRule"> | boolean
+    isActive?: BoolWithAggregatesFilter<"ReflexTestRule"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"ReflexTestRule"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"ReflexTestRule"> | Date | string
+  }
+
+  export type DeltaCheckResultWhereInput = {
+    AND?: DeltaCheckResultWhereInput | DeltaCheckResultWhereInput[]
+    OR?: DeltaCheckResultWhereInput[]
+    NOT?: DeltaCheckResultWhereInput | DeltaCheckResultWhereInput[]
+    id?: StringFilter<"DeltaCheckResult"> | string
+    resultId?: StringFilter<"DeltaCheckResult"> | string
+    ruleId?: StringFilter<"DeltaCheckResult"> | string
+    previousValue?: FloatNullableFilter<"DeltaCheckResult"> | number | null
+    currentValue?: FloatFilter<"DeltaCheckResult"> | number
+    changePercent?: FloatFilter<"DeltaCheckResult"> | number
+    previousDate?: DateTimeNullableFilter<"DeltaCheckResult"> | Date | string | null
+    alertMessage?: StringFilter<"DeltaCheckResult"> | string
+    severity?: StringFilter<"DeltaCheckResult"> | string
+    isResolved?: BoolFilter<"DeltaCheckResult"> | boolean
+    createdAt?: DateTimeFilter<"DeltaCheckResult"> | Date | string
+    updatedAt?: DateTimeFilter<"DeltaCheckResult"> | Date | string
+    result?: XOR<ResultRelationFilter, ResultWhereInput>
+    rule?: XOR<DeltaCheckRuleRelationFilter, DeltaCheckRuleWhereInput>
+  }
+
+  export type DeltaCheckResultOrderByWithRelationInput = {
+    id?: SortOrder
+    resultId?: SortOrder
+    ruleId?: SortOrder
+    previousValue?: SortOrderInput | SortOrder
+    currentValue?: SortOrder
+    changePercent?: SortOrder
+    previousDate?: SortOrderInput | SortOrder
+    alertMessage?: SortOrder
+    severity?: SortOrder
+    isResolved?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    result?: ResultOrderByWithRelationInput
+    rule?: DeltaCheckRuleOrderByWithRelationInput
+  }
+
+  export type DeltaCheckResultWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: DeltaCheckResultWhereInput | DeltaCheckResultWhereInput[]
+    OR?: DeltaCheckResultWhereInput[]
+    NOT?: DeltaCheckResultWhereInput | DeltaCheckResultWhereInput[]
+    resultId?: StringFilter<"DeltaCheckResult"> | string
+    ruleId?: StringFilter<"DeltaCheckResult"> | string
+    previousValue?: FloatNullableFilter<"DeltaCheckResult"> | number | null
+    currentValue?: FloatFilter<"DeltaCheckResult"> | number
+    changePercent?: FloatFilter<"DeltaCheckResult"> | number
+    previousDate?: DateTimeNullableFilter<"DeltaCheckResult"> | Date | string | null
+    alertMessage?: StringFilter<"DeltaCheckResult"> | string
+    severity?: StringFilter<"DeltaCheckResult"> | string
+    isResolved?: BoolFilter<"DeltaCheckResult"> | boolean
+    createdAt?: DateTimeFilter<"DeltaCheckResult"> | Date | string
+    updatedAt?: DateTimeFilter<"DeltaCheckResult"> | Date | string
+    result?: XOR<ResultRelationFilter, ResultWhereInput>
+    rule?: XOR<DeltaCheckRuleRelationFilter, DeltaCheckRuleWhereInput>
+  }, "id">
+
+  export type DeltaCheckResultOrderByWithAggregationInput = {
+    id?: SortOrder
+    resultId?: SortOrder
+    ruleId?: SortOrder
+    previousValue?: SortOrderInput | SortOrder
+    currentValue?: SortOrder
+    changePercent?: SortOrder
+    previousDate?: SortOrderInput | SortOrder
+    alertMessage?: SortOrder
+    severity?: SortOrder
+    isResolved?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: DeltaCheckResultCountOrderByAggregateInput
+    _avg?: DeltaCheckResultAvgOrderByAggregateInput
+    _max?: DeltaCheckResultMaxOrderByAggregateInput
+    _min?: DeltaCheckResultMinOrderByAggregateInput
+    _sum?: DeltaCheckResultSumOrderByAggregateInput
+  }
+
+  export type DeltaCheckResultScalarWhereWithAggregatesInput = {
+    AND?: DeltaCheckResultScalarWhereWithAggregatesInput | DeltaCheckResultScalarWhereWithAggregatesInput[]
+    OR?: DeltaCheckResultScalarWhereWithAggregatesInput[]
+    NOT?: DeltaCheckResultScalarWhereWithAggregatesInput | DeltaCheckResultScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"DeltaCheckResult"> | string
+    resultId?: StringWithAggregatesFilter<"DeltaCheckResult"> | string
+    ruleId?: StringWithAggregatesFilter<"DeltaCheckResult"> | string
+    previousValue?: FloatNullableWithAggregatesFilter<"DeltaCheckResult"> | number | null
+    currentValue?: FloatWithAggregatesFilter<"DeltaCheckResult"> | number
+    changePercent?: FloatWithAggregatesFilter<"DeltaCheckResult"> | number
+    previousDate?: DateTimeNullableWithAggregatesFilter<"DeltaCheckResult"> | Date | string | null
+    alertMessage?: StringWithAggregatesFilter<"DeltaCheckResult"> | string
+    severity?: StringWithAggregatesFilter<"DeltaCheckResult"> | string
+    isResolved?: BoolWithAggregatesFilter<"DeltaCheckResult"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"DeltaCheckResult"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"DeltaCheckResult"> | Date | string
+  }
+
+  export type EmailTemplateWhereInput = {
+    AND?: EmailTemplateWhereInput | EmailTemplateWhereInput[]
+    OR?: EmailTemplateWhereInput[]
+    NOT?: EmailTemplateWhereInput | EmailTemplateWhereInput[]
+    id?: StringFilter<"EmailTemplate"> | string
+    name?: StringFilter<"EmailTemplate"> | string
+    subject?: StringFilter<"EmailTemplate"> | string
+    htmlContent?: StringFilter<"EmailTemplate"> | string
+    plainTextContent?: StringNullableFilter<"EmailTemplate"> | string | null
+    templateType?: StringFilter<"EmailTemplate"> | string
+    requiredVariables?: StringFilter<"EmailTemplate"> | string
+    isActive?: BoolFilter<"EmailTemplate"> | boolean
+    version?: IntFilter<"EmailTemplate"> | number
+    createdAt?: DateTimeFilter<"EmailTemplate"> | Date | string
+    updatedAt?: DateTimeFilter<"EmailTemplate"> | Date | string
+    emailLogs?: EmailLogListRelationFilter
+  }
+
+  export type EmailTemplateOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    subject?: SortOrder
+    htmlContent?: SortOrder
+    plainTextContent?: SortOrderInput | SortOrder
+    templateType?: SortOrder
+    requiredVariables?: SortOrder
+    isActive?: SortOrder
+    version?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    emailLogs?: EmailLogOrderByRelationAggregateInput
+  }
+
+  export type EmailTemplateWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    name?: string
+    AND?: EmailTemplateWhereInput | EmailTemplateWhereInput[]
+    OR?: EmailTemplateWhereInput[]
+    NOT?: EmailTemplateWhereInput | EmailTemplateWhereInput[]
+    subject?: StringFilter<"EmailTemplate"> | string
+    htmlContent?: StringFilter<"EmailTemplate"> | string
+    plainTextContent?: StringNullableFilter<"EmailTemplate"> | string | null
+    templateType?: StringFilter<"EmailTemplate"> | string
+    requiredVariables?: StringFilter<"EmailTemplate"> | string
+    isActive?: BoolFilter<"EmailTemplate"> | boolean
+    version?: IntFilter<"EmailTemplate"> | number
+    createdAt?: DateTimeFilter<"EmailTemplate"> | Date | string
+    updatedAt?: DateTimeFilter<"EmailTemplate"> | Date | string
+    emailLogs?: EmailLogListRelationFilter
+  }, "id" | "name">
+
+  export type EmailTemplateOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    subject?: SortOrder
+    htmlContent?: SortOrder
+    plainTextContent?: SortOrderInput | SortOrder
+    templateType?: SortOrder
+    requiredVariables?: SortOrder
+    isActive?: SortOrder
+    version?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: EmailTemplateCountOrderByAggregateInput
+    _avg?: EmailTemplateAvgOrderByAggregateInput
+    _max?: EmailTemplateMaxOrderByAggregateInput
+    _min?: EmailTemplateMinOrderByAggregateInput
+    _sum?: EmailTemplateSumOrderByAggregateInput
+  }
+
+  export type EmailTemplateScalarWhereWithAggregatesInput = {
+    AND?: EmailTemplateScalarWhereWithAggregatesInput | EmailTemplateScalarWhereWithAggregatesInput[]
+    OR?: EmailTemplateScalarWhereWithAggregatesInput[]
+    NOT?: EmailTemplateScalarWhereWithAggregatesInput | EmailTemplateScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"EmailTemplate"> | string
+    name?: StringWithAggregatesFilter<"EmailTemplate"> | string
+    subject?: StringWithAggregatesFilter<"EmailTemplate"> | string
+    htmlContent?: StringWithAggregatesFilter<"EmailTemplate"> | string
+    plainTextContent?: StringNullableWithAggregatesFilter<"EmailTemplate"> | string | null
+    templateType?: StringWithAggregatesFilter<"EmailTemplate"> | string
+    requiredVariables?: StringWithAggregatesFilter<"EmailTemplate"> | string
+    isActive?: BoolWithAggregatesFilter<"EmailTemplate"> | boolean
+    version?: IntWithAggregatesFilter<"EmailTemplate"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"EmailTemplate"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"EmailTemplate"> | Date | string
+  }
+
+  export type EmailLogWhereInput = {
+    AND?: EmailLogWhereInput | EmailLogWhereInput[]
+    OR?: EmailLogWhereInput[]
+    NOT?: EmailLogWhereInput | EmailLogWhereInput[]
+    id?: StringFilter<"EmailLog"> | string
+    templateId?: StringNullableFilter<"EmailLog"> | string | null
+    resultId?: StringNullableFilter<"EmailLog"> | string | null
+    sampleId?: StringNullableFilter<"EmailLog"> | string | null
+    invoiceId?: StringNullableFilter<"EmailLog"> | string | null
+    recipientEmail?: StringFilter<"EmailLog"> | string
+    subject?: StringFilter<"EmailLog"> | string
+    content?: StringFilter<"EmailLog"> | string
+    status?: StringFilter<"EmailLog"> | string
+    sentAt?: DateTimeNullableFilter<"EmailLog"> | Date | string | null
+    failureReason?: StringNullableFilter<"EmailLog"> | string | null
+    retryCount?: IntFilter<"EmailLog"> | number
+    nextRetryAt?: DateTimeNullableFilter<"EmailLog"> | Date | string | null
+    createdAt?: DateTimeFilter<"EmailLog"> | Date | string
+    updatedAt?: DateTimeFilter<"EmailLog"> | Date | string
+    template?: XOR<EmailTemplateNullableRelationFilter, EmailTemplateWhereInput> | null
+    result?: XOR<ResultNullableRelationFilter, ResultWhereInput> | null
+    sample?: XOR<SampleNullableRelationFilter, SampleWhereInput> | null
+    invoice?: XOR<InvoiceNullableRelationFilter, InvoiceWhereInput> | null
+  }
+
+  export type EmailLogOrderByWithRelationInput = {
+    id?: SortOrder
+    templateId?: SortOrderInput | SortOrder
+    resultId?: SortOrderInput | SortOrder
+    sampleId?: SortOrderInput | SortOrder
+    invoiceId?: SortOrderInput | SortOrder
+    recipientEmail?: SortOrder
+    subject?: SortOrder
+    content?: SortOrder
+    status?: SortOrder
+    sentAt?: SortOrderInput | SortOrder
+    failureReason?: SortOrderInput | SortOrder
+    retryCount?: SortOrder
+    nextRetryAt?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    template?: EmailTemplateOrderByWithRelationInput
+    result?: ResultOrderByWithRelationInput
+    sample?: SampleOrderByWithRelationInput
+    invoice?: InvoiceOrderByWithRelationInput
+  }
+
+  export type EmailLogWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: EmailLogWhereInput | EmailLogWhereInput[]
+    OR?: EmailLogWhereInput[]
+    NOT?: EmailLogWhereInput | EmailLogWhereInput[]
+    templateId?: StringNullableFilter<"EmailLog"> | string | null
+    resultId?: StringNullableFilter<"EmailLog"> | string | null
+    sampleId?: StringNullableFilter<"EmailLog"> | string | null
+    invoiceId?: StringNullableFilter<"EmailLog"> | string | null
+    recipientEmail?: StringFilter<"EmailLog"> | string
+    subject?: StringFilter<"EmailLog"> | string
+    content?: StringFilter<"EmailLog"> | string
+    status?: StringFilter<"EmailLog"> | string
+    sentAt?: DateTimeNullableFilter<"EmailLog"> | Date | string | null
+    failureReason?: StringNullableFilter<"EmailLog"> | string | null
+    retryCount?: IntFilter<"EmailLog"> | number
+    nextRetryAt?: DateTimeNullableFilter<"EmailLog"> | Date | string | null
+    createdAt?: DateTimeFilter<"EmailLog"> | Date | string
+    updatedAt?: DateTimeFilter<"EmailLog"> | Date | string
+    template?: XOR<EmailTemplateNullableRelationFilter, EmailTemplateWhereInput> | null
+    result?: XOR<ResultNullableRelationFilter, ResultWhereInput> | null
+    sample?: XOR<SampleNullableRelationFilter, SampleWhereInput> | null
+    invoice?: XOR<InvoiceNullableRelationFilter, InvoiceWhereInput> | null
+  }, "id">
+
+  export type EmailLogOrderByWithAggregationInput = {
+    id?: SortOrder
+    templateId?: SortOrderInput | SortOrder
+    resultId?: SortOrderInput | SortOrder
+    sampleId?: SortOrderInput | SortOrder
+    invoiceId?: SortOrderInput | SortOrder
+    recipientEmail?: SortOrder
+    subject?: SortOrder
+    content?: SortOrder
+    status?: SortOrder
+    sentAt?: SortOrderInput | SortOrder
+    failureReason?: SortOrderInput | SortOrder
+    retryCount?: SortOrder
+    nextRetryAt?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: EmailLogCountOrderByAggregateInput
+    _avg?: EmailLogAvgOrderByAggregateInput
+    _max?: EmailLogMaxOrderByAggregateInput
+    _min?: EmailLogMinOrderByAggregateInput
+    _sum?: EmailLogSumOrderByAggregateInput
+  }
+
+  export type EmailLogScalarWhereWithAggregatesInput = {
+    AND?: EmailLogScalarWhereWithAggregatesInput | EmailLogScalarWhereWithAggregatesInput[]
+    OR?: EmailLogScalarWhereWithAggregatesInput[]
+    NOT?: EmailLogScalarWhereWithAggregatesInput | EmailLogScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"EmailLog"> | string
+    templateId?: StringNullableWithAggregatesFilter<"EmailLog"> | string | null
+    resultId?: StringNullableWithAggregatesFilter<"EmailLog"> | string | null
+    sampleId?: StringNullableWithAggregatesFilter<"EmailLog"> | string | null
+    invoiceId?: StringNullableWithAggregatesFilter<"EmailLog"> | string | null
+    recipientEmail?: StringWithAggregatesFilter<"EmailLog"> | string
+    subject?: StringWithAggregatesFilter<"EmailLog"> | string
+    content?: StringWithAggregatesFilter<"EmailLog"> | string
+    status?: StringWithAggregatesFilter<"EmailLog"> | string
+    sentAt?: DateTimeNullableWithAggregatesFilter<"EmailLog"> | Date | string | null
+    failureReason?: StringNullableWithAggregatesFilter<"EmailLog"> | string | null
+    retryCount?: IntWithAggregatesFilter<"EmailLog"> | number
+    nextRetryAt?: DateTimeNullableWithAggregatesFilter<"EmailLog"> | Date | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"EmailLog"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"EmailLog"> | Date | string
+  }
+
+  export type EmailSettingWhereInput = {
+    AND?: EmailSettingWhereInput | EmailSettingWhereInput[]
+    OR?: EmailSettingWhereInput[]
+    NOT?: EmailSettingWhereInput | EmailSettingWhereInput[]
+    id?: StringFilter<"EmailSetting"> | string
+    key?: StringFilter<"EmailSetting"> | string
+    value?: StringFilter<"EmailSetting"> | string
+    description?: StringNullableFilter<"EmailSetting"> | string | null
+    isEncrypted?: BoolFilter<"EmailSetting"> | boolean
+    createdAt?: DateTimeFilter<"EmailSetting"> | Date | string
+    updatedAt?: DateTimeFilter<"EmailSetting"> | Date | string
+  }
+
+  export type EmailSettingOrderByWithRelationInput = {
+    id?: SortOrder
+    key?: SortOrder
+    value?: SortOrder
+    description?: SortOrderInput | SortOrder
+    isEncrypted?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EmailSettingWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    key?: string
+    AND?: EmailSettingWhereInput | EmailSettingWhereInput[]
+    OR?: EmailSettingWhereInput[]
+    NOT?: EmailSettingWhereInput | EmailSettingWhereInput[]
+    value?: StringFilter<"EmailSetting"> | string
+    description?: StringNullableFilter<"EmailSetting"> | string | null
+    isEncrypted?: BoolFilter<"EmailSetting"> | boolean
+    createdAt?: DateTimeFilter<"EmailSetting"> | Date | string
+    updatedAt?: DateTimeFilter<"EmailSetting"> | Date | string
+  }, "id" | "key">
+
+  export type EmailSettingOrderByWithAggregationInput = {
+    id?: SortOrder
+    key?: SortOrder
+    value?: SortOrder
+    description?: SortOrderInput | SortOrder
+    isEncrypted?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: EmailSettingCountOrderByAggregateInput
+    _max?: EmailSettingMaxOrderByAggregateInput
+    _min?: EmailSettingMinOrderByAggregateInput
+  }
+
+  export type EmailSettingScalarWhereWithAggregatesInput = {
+    AND?: EmailSettingScalarWhereWithAggregatesInput | EmailSettingScalarWhereWithAggregatesInput[]
+    OR?: EmailSettingScalarWhereWithAggregatesInput[]
+    NOT?: EmailSettingScalarWhereWithAggregatesInput | EmailSettingScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"EmailSetting"> | string
+    key?: StringWithAggregatesFilter<"EmailSetting"> | string
+    value?: StringWithAggregatesFilter<"EmailSetting"> | string
+    description?: StringNullableWithAggregatesFilter<"EmailSetting"> | string | null
+    isEncrypted?: BoolWithAggregatesFilter<"EmailSetting"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"EmailSetting"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"EmailSetting"> | Date | string
+  }
+
   export type LabCreateInput = {
     id?: string
     name: string
@@ -22778,6 +36980,7 @@ export namespace Prisma {
     profileTests?: TestProfileItemCreateNestedManyWithoutTestInput
     sampleTests?: SampleTestCreateNestedManyWithoutTestInput
     results?: ResultCreateNestedManyWithoutTestInput
+    testDefs?: TestDefinitionCreateNestedManyWithoutTestInput
   }
 
   export type TestUncheckedCreateInput = {
@@ -22793,6 +36996,7 @@ export namespace Prisma {
     profileTests?: TestProfileItemUncheckedCreateNestedManyWithoutTestInput
     sampleTests?: SampleTestUncheckedCreateNestedManyWithoutTestInput
     results?: ResultUncheckedCreateNestedManyWithoutTestInput
+    testDefs?: TestDefinitionUncheckedCreateNestedManyWithoutTestInput
   }
 
   export type TestUpdateInput = {
@@ -22808,6 +37012,7 @@ export namespace Prisma {
     profileTests?: TestProfileItemUpdateManyWithoutTestNestedInput
     sampleTests?: SampleTestUpdateManyWithoutTestNestedInput
     results?: ResultUpdateManyWithoutTestNestedInput
+    testDefs?: TestDefinitionUpdateManyWithoutTestNestedInput
   }
 
   export type TestUncheckedUpdateInput = {
@@ -22823,6 +37028,7 @@ export namespace Prisma {
     profileTests?: TestProfileItemUncheckedUpdateManyWithoutTestNestedInput
     sampleTests?: SampleTestUncheckedUpdateManyWithoutTestNestedInput
     results?: ResultUncheckedUpdateManyWithoutTestNestedInput
+    testDefs?: TestDefinitionUncheckedUpdateManyWithoutTestNestedInput
   }
 
   export type TestCreateManyInput = {
@@ -22976,6 +37182,7 @@ export namespace Prisma {
     profile?: TestProfileCreateNestedOneWithoutSamplesInput
     tests?: SampleTestCreateNestedManyWithoutSampleInput
     results?: ResultCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogCreateNestedManyWithoutSampleInput
     invoice?: InvoiceCreateNestedOneWithoutSampleInput
   }
 
@@ -22990,6 +37197,7 @@ export namespace Prisma {
     createdAt?: Date | string
     tests?: SampleTestUncheckedCreateNestedManyWithoutSampleInput
     results?: ResultUncheckedCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutSampleInput
     invoice?: InvoiceUncheckedCreateNestedOneWithoutSampleInput
   }
 
@@ -23004,6 +37212,7 @@ export namespace Prisma {
     profile?: TestProfileUpdateOneWithoutSamplesNestedInput
     tests?: SampleTestUpdateManyWithoutSampleNestedInput
     results?: ResultUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutSampleNestedInput
     invoice?: InvoiceUpdateOneWithoutSampleNestedInput
   }
 
@@ -23018,6 +37227,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     tests?: SampleTestUncheckedUpdateManyWithoutSampleNestedInput
     results?: ResultUncheckedUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutSampleNestedInput
     invoice?: InvoiceUncheckedUpdateOneWithoutSampleNestedInput
   }
 
@@ -23102,83 +37312,124 @@ export namespace Prisma {
   export type ResultCreateInput = {
     id?: string
     value: string
+    calculatedValues?: string | null
     isNormal?: boolean
+    abnormalFlags?: string | null
     notes?: string | null
     enteredBy?: string | null
     enteredAt?: Date | string
     createdAt?: Date | string
+    updatedAt?: Date | string
     sample: SampleCreateNestedOneWithoutResultsInput
     test: TestCreateNestedOneWithoutResultsInput
+    testDef?: TestDefinitionCreateNestedOneWithoutTestResultsInput
+    interpretation?: InterpretationRuleCreateNestedOneWithoutResultsInput
+    deltaCheckResults?: DeltaCheckResultCreateNestedManyWithoutResultInput
+    emailLogs?: EmailLogCreateNestedManyWithoutResultInput
   }
 
   export type ResultUncheckedCreateInput = {
     id?: string
     sampleId: string
     testId: string
+    testDefId?: string | null
     value: string
+    calculatedValues?: string | null
     isNormal?: boolean
+    abnormalFlags?: string | null
+    interpretationId?: string | null
     notes?: string | null
     enteredBy?: string | null
     enteredAt?: Date | string
     createdAt?: Date | string
+    updatedAt?: Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedCreateNestedManyWithoutResultInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutResultInput
   }
 
   export type ResultUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
     isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
     enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     sample?: SampleUpdateOneRequiredWithoutResultsNestedInput
     test?: TestUpdateOneRequiredWithoutResultsNestedInput
+    testDef?: TestDefinitionUpdateOneWithoutTestResultsNestedInput
+    interpretation?: InterpretationRuleUpdateOneWithoutResultsNestedInput
+    deltaCheckResults?: DeltaCheckResultUpdateManyWithoutResultNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutResultNestedInput
   }
 
   export type ResultUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     sampleId?: StringFieldUpdateOperationsInput | string
     testId?: StringFieldUpdateOperationsInput | string
+    testDefId?: NullableStringFieldUpdateOperationsInput | string | null
     value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
     isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    interpretationId?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
     enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedUpdateManyWithoutResultNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutResultNestedInput
   }
 
   export type ResultCreateManyInput = {
     id?: string
     sampleId: string
     testId: string
+    testDefId?: string | null
     value: string
+    calculatedValues?: string | null
     isNormal?: boolean
+    abnormalFlags?: string | null
+    interpretationId?: string | null
     notes?: string | null
     enteredBy?: string | null
     enteredAt?: Date | string
     createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type ResultUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
     isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
     enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ResultUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     sampleId?: StringFieldUpdateOperationsInput | string
     testId?: StringFieldUpdateOperationsInput | string
+    testDefId?: NullableStringFieldUpdateOperationsInput | string | null
     value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
     isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    interpretationId?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
     enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type InvoiceCreateInput = {
@@ -23198,6 +37449,7 @@ export namespace Prisma {
     lab: LabCreateNestedOneWithoutInvoicesInput
     items?: InvoiceItemCreateNestedManyWithoutInvoiceInput
     commissions?: CommissionCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceUncheckedCreateInput = {
@@ -23217,6 +37469,7 @@ export namespace Prisma {
     createdAt?: Date | string
     items?: InvoiceItemUncheckedCreateNestedManyWithoutInvoiceInput
     commissions?: CommissionUncheckedCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceUpdateInput = {
@@ -23236,6 +37489,7 @@ export namespace Prisma {
     lab?: LabUpdateOneRequiredWithoutInvoicesNestedInput
     items?: InvoiceItemUpdateManyWithoutInvoiceNestedInput
     commissions?: CommissionUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutInvoiceNestedInput
   }
 
   export type InvoiceUncheckedUpdateInput = {
@@ -23255,6 +37509,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     items?: InvoiceItemUncheckedUpdateManyWithoutInvoiceNestedInput
     commissions?: CommissionUncheckedUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutInvoiceNestedInput
   }
 
   export type InvoiceCreateManyInput = {
@@ -23952,6 +38207,1065 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type TestCategoryCreateInput = {
+    id?: string
+    name: string
+    description?: string | null
+    code: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    definitions?: TestDefinitionCreateNestedManyWithoutCategoryInput
+  }
+
+  export type TestCategoryUncheckedCreateInput = {
+    id?: string
+    name: string
+    description?: string | null
+    code: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    definitions?: TestDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  }
+
+  export type TestCategoryUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    code?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    definitions?: TestDefinitionUpdateManyWithoutCategoryNestedInput
+  }
+
+  export type TestCategoryUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    code?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    definitions?: TestDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  }
+
+  export type TestCategoryCreateManyInput = {
+    id?: string
+    name: string
+    description?: string | null
+    code: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TestCategoryUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    code?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TestCategoryUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    code?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TestDefinitionCreateInput = {
+    id?: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    test?: TestCreateNestedOneWithoutTestDefsInput
+    category: TestCategoryCreateNestedOneWithoutDefinitionsInput
+    normalRanges?: NormalRangeCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionUncheckedCreateInput = {
+    id?: string
+    testId?: string | null
+    categoryId: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    normalRanges?: NormalRangeUncheckedCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultUncheckedCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    test?: TestUpdateOneWithoutTestDefsNestedInput
+    category?: TestCategoryUpdateOneRequiredWithoutDefinitionsNestedInput
+    normalRanges?: NormalRangeUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testId?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    normalRanges?: NormalRangeUncheckedUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUncheckedUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionCreateManyInput = {
+    id?: string
+    testId?: string | null
+    categoryId: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TestDefinitionUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TestDefinitionUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testId?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type NormalRangeCreateInput = {
+    id?: string
+    minAge?: number | null
+    maxAge?: number | null
+    gender?: string | null
+    minValue: number
+    maxValue: number
+    criticalLow?: number | null
+    criticalHigh?: number | null
+    unit?: string | null
+    notes?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    testDef: TestDefinitionCreateNestedOneWithoutNormalRangesInput
+  }
+
+  export type NormalRangeUncheckedCreateInput = {
+    id?: string
+    testDefId: string
+    minAge?: number | null
+    maxAge?: number | null
+    gender?: string | null
+    minValue: number
+    maxValue: number
+    criticalLow?: number | null
+    criticalHigh?: number | null
+    unit?: string | null
+    notes?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type NormalRangeUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    minAge?: NullableIntFieldUpdateOperationsInput | number | null
+    maxAge?: NullableIntFieldUpdateOperationsInput | number | null
+    gender?: NullableStringFieldUpdateOperationsInput | string | null
+    minValue?: FloatFieldUpdateOperationsInput | number
+    maxValue?: FloatFieldUpdateOperationsInput | number
+    criticalLow?: NullableFloatFieldUpdateOperationsInput | number | null
+    criticalHigh?: NullableFloatFieldUpdateOperationsInput | number | null
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    testDef?: TestDefinitionUpdateOneRequiredWithoutNormalRangesNestedInput
+  }
+
+  export type NormalRangeUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testDefId?: StringFieldUpdateOperationsInput | string
+    minAge?: NullableIntFieldUpdateOperationsInput | number | null
+    maxAge?: NullableIntFieldUpdateOperationsInput | number | null
+    gender?: NullableStringFieldUpdateOperationsInput | string | null
+    minValue?: FloatFieldUpdateOperationsInput | number
+    maxValue?: FloatFieldUpdateOperationsInput | number
+    criticalLow?: NullableFloatFieldUpdateOperationsInput | number | null
+    criticalHigh?: NullableFloatFieldUpdateOperationsInput | number | null
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type NormalRangeCreateManyInput = {
+    id?: string
+    testDefId: string
+    minAge?: number | null
+    maxAge?: number | null
+    gender?: string | null
+    minValue: number
+    maxValue: number
+    criticalLow?: number | null
+    criticalHigh?: number | null
+    unit?: string | null
+    notes?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type NormalRangeUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    minAge?: NullableIntFieldUpdateOperationsInput | number | null
+    maxAge?: NullableIntFieldUpdateOperationsInput | number | null
+    gender?: NullableStringFieldUpdateOperationsInput | string | null
+    minValue?: FloatFieldUpdateOperationsInput | number
+    maxValue?: FloatFieldUpdateOperationsInput | number
+    criticalLow?: NullableFloatFieldUpdateOperationsInput | number | null
+    criticalHigh?: NullableFloatFieldUpdateOperationsInput | number | null
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type NormalRangeUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testDefId?: StringFieldUpdateOperationsInput | string
+    minAge?: NullableIntFieldUpdateOperationsInput | number | null
+    maxAge?: NullableIntFieldUpdateOperationsInput | number | null
+    gender?: NullableStringFieldUpdateOperationsInput | string | null
+    minValue?: FloatFieldUpdateOperationsInput | number
+    maxValue?: FloatFieldUpdateOperationsInput | number
+    criticalLow?: NullableFloatFieldUpdateOperationsInput | number | null
+    criticalHigh?: NullableFloatFieldUpdateOperationsInput | number | null
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CalculationRuleCreateInput = {
+    id?: string
+    name: string
+    formula: string
+    requiredFields: string
+    outputField: string
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    testDef: TestDefinitionCreateNestedOneWithoutCalculationRulesInput
+  }
+
+  export type CalculationRuleUncheckedCreateInput = {
+    id?: string
+    testDefId: string
+    name: string
+    formula: string
+    requiredFields: string
+    outputField: string
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CalculationRuleUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    formula?: StringFieldUpdateOperationsInput | string
+    requiredFields?: StringFieldUpdateOperationsInput | string
+    outputField?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    testDef?: TestDefinitionUpdateOneRequiredWithoutCalculationRulesNestedInput
+  }
+
+  export type CalculationRuleUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testDefId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    formula?: StringFieldUpdateOperationsInput | string
+    requiredFields?: StringFieldUpdateOperationsInput | string
+    outputField?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CalculationRuleCreateManyInput = {
+    id?: string
+    testDefId: string
+    name: string
+    formula: string
+    requiredFields: string
+    outputField: string
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CalculationRuleUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    formula?: StringFieldUpdateOperationsInput | string
+    requiredFields?: StringFieldUpdateOperationsInput | string
+    outputField?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CalculationRuleUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testDefId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    formula?: StringFieldUpdateOperationsInput | string
+    requiredFields?: StringFieldUpdateOperationsInput | string
+    outputField?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type InterpretationRuleCreateInput = {
+    id?: string
+    name: string
+    condition: string
+    interpretation: string
+    severity?: string | null
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    testDef: TestDefinitionCreateNestedOneWithoutInterpretationsInput
+    results?: ResultCreateNestedManyWithoutInterpretationInput
+  }
+
+  export type InterpretationRuleUncheckedCreateInput = {
+    id?: string
+    testDefId: string
+    name: string
+    condition: string
+    interpretation: string
+    severity?: string | null
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    results?: ResultUncheckedCreateNestedManyWithoutInterpretationInput
+  }
+
+  export type InterpretationRuleUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    interpretation?: StringFieldUpdateOperationsInput | string
+    severity?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    testDef?: TestDefinitionUpdateOneRequiredWithoutInterpretationsNestedInput
+    results?: ResultUpdateManyWithoutInterpretationNestedInput
+  }
+
+  export type InterpretationRuleUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testDefId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    interpretation?: StringFieldUpdateOperationsInput | string
+    severity?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    results?: ResultUncheckedUpdateManyWithoutInterpretationNestedInput
+  }
+
+  export type InterpretationRuleCreateManyInput = {
+    id?: string
+    testDefId: string
+    name: string
+    condition: string
+    interpretation: string
+    severity?: string | null
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type InterpretationRuleUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    interpretation?: StringFieldUpdateOperationsInput | string
+    severity?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type InterpretationRuleUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testDefId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    interpretation?: StringFieldUpdateOperationsInput | string
+    severity?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DeltaCheckRuleCreateInput = {
+    id?: string
+    name: string
+    alertThreshold: number
+    criticalThreshold?: number | null
+    checkDays?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    testDef: TestDefinitionCreateNestedOneWithoutDeltaCheckRulesInput
+    deltaCheckResults?: DeltaCheckResultCreateNestedManyWithoutRuleInput
+  }
+
+  export type DeltaCheckRuleUncheckedCreateInput = {
+    id?: string
+    testDefId: string
+    name: string
+    alertThreshold: number
+    criticalThreshold?: number | null
+    checkDays?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedCreateNestedManyWithoutRuleInput
+  }
+
+  export type DeltaCheckRuleUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    alertThreshold?: FloatFieldUpdateOperationsInput | number
+    criticalThreshold?: NullableFloatFieldUpdateOperationsInput | number | null
+    checkDays?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    testDef?: TestDefinitionUpdateOneRequiredWithoutDeltaCheckRulesNestedInput
+    deltaCheckResults?: DeltaCheckResultUpdateManyWithoutRuleNestedInput
+  }
+
+  export type DeltaCheckRuleUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testDefId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    alertThreshold?: FloatFieldUpdateOperationsInput | number
+    criticalThreshold?: NullableFloatFieldUpdateOperationsInput | number | null
+    checkDays?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedUpdateManyWithoutRuleNestedInput
+  }
+
+  export type DeltaCheckRuleCreateManyInput = {
+    id?: string
+    testDefId: string
+    name: string
+    alertThreshold: number
+    criticalThreshold?: number | null
+    checkDays?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DeltaCheckRuleUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    alertThreshold?: FloatFieldUpdateOperationsInput | number
+    criticalThreshold?: NullableFloatFieldUpdateOperationsInput | number | null
+    checkDays?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DeltaCheckRuleUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testDefId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    alertThreshold?: FloatFieldUpdateOperationsInput | number
+    criticalThreshold?: NullableFloatFieldUpdateOperationsInput | number | null
+    checkDays?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReflexTestRuleCreateInput = {
+    id?: string
+    condition: string
+    priority?: number
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    parentTestDef: TestDefinitionCreateNestedOneWithoutReflexRulesAsParentInput
+    childTestDef: TestDefinitionCreateNestedOneWithoutReflexRulesAsChildInput
+  }
+
+  export type ReflexTestRuleUncheckedCreateInput = {
+    id?: string
+    parentTestDefId: string
+    childTestDefId: string
+    condition: string
+    priority?: number
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ReflexTestRuleUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    requiresApproval?: BoolFieldUpdateOperationsInput | boolean
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    parentTestDef?: TestDefinitionUpdateOneRequiredWithoutReflexRulesAsParentNestedInput
+    childTestDef?: TestDefinitionUpdateOneRequiredWithoutReflexRulesAsChildNestedInput
+  }
+
+  export type ReflexTestRuleUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    parentTestDefId?: StringFieldUpdateOperationsInput | string
+    childTestDefId?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    requiresApproval?: BoolFieldUpdateOperationsInput | boolean
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReflexTestRuleCreateManyInput = {
+    id?: string
+    parentTestDefId: string
+    childTestDefId: string
+    condition: string
+    priority?: number
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ReflexTestRuleUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    requiresApproval?: BoolFieldUpdateOperationsInput | boolean
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReflexTestRuleUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    parentTestDefId?: StringFieldUpdateOperationsInput | string
+    childTestDefId?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    requiresApproval?: BoolFieldUpdateOperationsInput | boolean
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DeltaCheckResultCreateInput = {
+    id?: string
+    previousValue?: number | null
+    currentValue: number
+    changePercent: number
+    previousDate?: Date | string | null
+    alertMessage: string
+    severity?: string
+    isResolved?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    result: ResultCreateNestedOneWithoutDeltaCheckResultsInput
+    rule: DeltaCheckRuleCreateNestedOneWithoutDeltaCheckResultsInput
+  }
+
+  export type DeltaCheckResultUncheckedCreateInput = {
+    id?: string
+    resultId: string
+    ruleId: string
+    previousValue?: number | null
+    currentValue: number
+    changePercent: number
+    previousDate?: Date | string | null
+    alertMessage: string
+    severity?: string
+    isResolved?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DeltaCheckResultUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    previousValue?: NullableFloatFieldUpdateOperationsInput | number | null
+    currentValue?: FloatFieldUpdateOperationsInput | number
+    changePercent?: FloatFieldUpdateOperationsInput | number
+    previousDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    alertMessage?: StringFieldUpdateOperationsInput | string
+    severity?: StringFieldUpdateOperationsInput | string
+    isResolved?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    result?: ResultUpdateOneRequiredWithoutDeltaCheckResultsNestedInput
+    rule?: DeltaCheckRuleUpdateOneRequiredWithoutDeltaCheckResultsNestedInput
+  }
+
+  export type DeltaCheckResultUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    resultId?: StringFieldUpdateOperationsInput | string
+    ruleId?: StringFieldUpdateOperationsInput | string
+    previousValue?: NullableFloatFieldUpdateOperationsInput | number | null
+    currentValue?: FloatFieldUpdateOperationsInput | number
+    changePercent?: FloatFieldUpdateOperationsInput | number
+    previousDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    alertMessage?: StringFieldUpdateOperationsInput | string
+    severity?: StringFieldUpdateOperationsInput | string
+    isResolved?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DeltaCheckResultCreateManyInput = {
+    id?: string
+    resultId: string
+    ruleId: string
+    previousValue?: number | null
+    currentValue: number
+    changePercent: number
+    previousDate?: Date | string | null
+    alertMessage: string
+    severity?: string
+    isResolved?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DeltaCheckResultUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    previousValue?: NullableFloatFieldUpdateOperationsInput | number | null
+    currentValue?: FloatFieldUpdateOperationsInput | number
+    changePercent?: FloatFieldUpdateOperationsInput | number
+    previousDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    alertMessage?: StringFieldUpdateOperationsInput | string
+    severity?: StringFieldUpdateOperationsInput | string
+    isResolved?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DeltaCheckResultUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    resultId?: StringFieldUpdateOperationsInput | string
+    ruleId?: StringFieldUpdateOperationsInput | string
+    previousValue?: NullableFloatFieldUpdateOperationsInput | number | null
+    currentValue?: FloatFieldUpdateOperationsInput | number
+    changePercent?: FloatFieldUpdateOperationsInput | number
+    previousDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    alertMessage?: StringFieldUpdateOperationsInput | string
+    severity?: StringFieldUpdateOperationsInput | string
+    isResolved?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailTemplateCreateInput = {
+    id?: string
+    name: string
+    subject: string
+    htmlContent: string
+    plainTextContent?: string | null
+    templateType: string
+    requiredVariables: string
+    isActive?: boolean
+    version?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    emailLogs?: EmailLogCreateNestedManyWithoutTemplateInput
+  }
+
+  export type EmailTemplateUncheckedCreateInput = {
+    id?: string
+    name: string
+    subject: string
+    htmlContent: string
+    plainTextContent?: string | null
+    templateType: string
+    requiredVariables: string
+    isActive?: boolean
+    version?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutTemplateInput
+  }
+
+  export type EmailTemplateUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    htmlContent?: StringFieldUpdateOperationsInput | string
+    plainTextContent?: NullableStringFieldUpdateOperationsInput | string | null
+    templateType?: StringFieldUpdateOperationsInput | string
+    requiredVariables?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    version?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    emailLogs?: EmailLogUpdateManyWithoutTemplateNestedInput
+  }
+
+  export type EmailTemplateUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    htmlContent?: StringFieldUpdateOperationsInput | string
+    plainTextContent?: NullableStringFieldUpdateOperationsInput | string | null
+    templateType?: StringFieldUpdateOperationsInput | string
+    requiredVariables?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    version?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutTemplateNestedInput
+  }
+
+  export type EmailTemplateCreateManyInput = {
+    id?: string
+    name: string
+    subject: string
+    htmlContent: string
+    plainTextContent?: string | null
+    templateType: string
+    requiredVariables: string
+    isActive?: boolean
+    version?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailTemplateUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    htmlContent?: StringFieldUpdateOperationsInput | string
+    plainTextContent?: NullableStringFieldUpdateOperationsInput | string | null
+    templateType?: StringFieldUpdateOperationsInput | string
+    requiredVariables?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    version?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailTemplateUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    htmlContent?: StringFieldUpdateOperationsInput | string
+    plainTextContent?: NullableStringFieldUpdateOperationsInput | string | null
+    templateType?: StringFieldUpdateOperationsInput | string
+    requiredVariables?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    version?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogCreateInput = {
+    id?: string
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    template?: EmailTemplateCreateNestedOneWithoutEmailLogsInput
+    result?: ResultCreateNestedOneWithoutEmailLogsInput
+    sample?: SampleCreateNestedOneWithoutEmailLogsInput
+    invoice?: InvoiceCreateNestedOneWithoutEmailLogsInput
+  }
+
+  export type EmailLogUncheckedCreateInput = {
+    id?: string
+    templateId?: string | null
+    resultId?: string | null
+    sampleId?: string | null
+    invoiceId?: string | null
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailLogUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    template?: EmailTemplateUpdateOneWithoutEmailLogsNestedInput
+    result?: ResultUpdateOneWithoutEmailLogsNestedInput
+    sample?: SampleUpdateOneWithoutEmailLogsNestedInput
+    invoice?: InvoiceUpdateOneWithoutEmailLogsNestedInput
+  }
+
+  export type EmailLogUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    templateId?: NullableStringFieldUpdateOperationsInput | string | null
+    resultId?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleId?: NullableStringFieldUpdateOperationsInput | string | null
+    invoiceId?: NullableStringFieldUpdateOperationsInput | string | null
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogCreateManyInput = {
+    id?: string
+    templateId?: string | null
+    resultId?: string | null
+    sampleId?: string | null
+    invoiceId?: string | null
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailLogUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    templateId?: NullableStringFieldUpdateOperationsInput | string | null
+    resultId?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleId?: NullableStringFieldUpdateOperationsInput | string | null
+    invoiceId?: NullableStringFieldUpdateOperationsInput | string | null
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailSettingCreateInput = {
+    id?: string
+    key: string
+    value: string
+    description?: string | null
+    isEncrypted?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailSettingUncheckedCreateInput = {
+    id?: string
+    key: string
+    value: string
+    description?: string | null
+    isEncrypted?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailSettingUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    key?: StringFieldUpdateOperationsInput | string
+    value?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    isEncrypted?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailSettingUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    key?: StringFieldUpdateOperationsInput | string
+    value?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    isEncrypted?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailSettingCreateManyInput = {
+    id?: string
+    key: string
+    value: string
+    description?: string | null
+    isEncrypted?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailSettingUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    key?: StringFieldUpdateOperationsInput | string
+    value?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    isEncrypted?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailSettingUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    key?: StringFieldUpdateOperationsInput | string
+    value?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    isEncrypted?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[]
@@ -24255,6 +39569,12 @@ export namespace Prisma {
     none?: ResultWhereInput
   }
 
+  export type TestDefinitionListRelationFilter = {
+    every?: TestDefinitionWhereInput
+    some?: TestDefinitionWhereInput
+    none?: TestDefinitionWhereInput
+  }
+
   export type TestProfileItemOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
@@ -24264,6 +39584,10 @@ export namespace Prisma {
   }
 
   export type ResultOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type TestDefinitionOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -24394,9 +39718,19 @@ export namespace Prisma {
     isNot?: TestProfileWhereInput | null
   }
 
+  export type EmailLogListRelationFilter = {
+    every?: EmailLogWhereInput
+    some?: EmailLogWhereInput
+    none?: EmailLogWhereInput
+  }
+
   export type InvoiceNullableRelationFilter = {
     is?: InvoiceWhereInput | null
     isNot?: InvoiceWhereInput | null
+  }
+
+  export type EmailLogOrderByRelationAggregateInput = {
+    _count?: SortOrder
   }
 
   export type SampleCountOrderByAggregateInput = {
@@ -24471,6 +39805,26 @@ export namespace Prisma {
     price?: SortOrder
   }
 
+  export type TestDefinitionNullableRelationFilter = {
+    is?: TestDefinitionWhereInput | null
+    isNot?: TestDefinitionWhereInput | null
+  }
+
+  export type InterpretationRuleNullableRelationFilter = {
+    is?: InterpretationRuleWhereInput | null
+    isNot?: InterpretationRuleWhereInput | null
+  }
+
+  export type DeltaCheckResultListRelationFilter = {
+    every?: DeltaCheckResultWhereInput
+    some?: DeltaCheckResultWhereInput
+    none?: DeltaCheckResultWhereInput
+  }
+
+  export type DeltaCheckResultOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
   export type ResultSampleIdTestIdCompoundUniqueInput = {
     sampleId: string
     testId: string
@@ -24480,36 +39834,51 @@ export namespace Prisma {
     id?: SortOrder
     sampleId?: SortOrder
     testId?: SortOrder
+    testDefId?: SortOrder
     value?: SortOrder
+    calculatedValues?: SortOrder
     isNormal?: SortOrder
+    abnormalFlags?: SortOrder
+    interpretationId?: SortOrder
     notes?: SortOrder
     enteredBy?: SortOrder
     enteredAt?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type ResultMaxOrderByAggregateInput = {
     id?: SortOrder
     sampleId?: SortOrder
     testId?: SortOrder
+    testDefId?: SortOrder
     value?: SortOrder
+    calculatedValues?: SortOrder
     isNormal?: SortOrder
+    abnormalFlags?: SortOrder
+    interpretationId?: SortOrder
     notes?: SortOrder
     enteredBy?: SortOrder
     enteredAt?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type ResultMinOrderByAggregateInput = {
     id?: SortOrder
     sampleId?: SortOrder
     testId?: SortOrder
+    testDefId?: SortOrder
     value?: SortOrder
+    calculatedValues?: SortOrder
     isNormal?: SortOrder
+    abnormalFlags?: SortOrder
+    interpretationId?: SortOrder
     notes?: SortOrder
     enteredBy?: SortOrder
     enteredAt?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type DateTimeNullableFilter<$PrismaModel = never> = {
@@ -25037,6 +40406,651 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
+  export type TestCategoryCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrder
+    code?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type TestCategoryMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrder
+    code?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type TestCategoryMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrder
+    code?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type TestNullableRelationFilter = {
+    is?: TestWhereInput | null
+    isNot?: TestWhereInput | null
+  }
+
+  export type TestCategoryRelationFilter = {
+    is?: TestCategoryWhereInput
+    isNot?: TestCategoryWhereInput
+  }
+
+  export type NormalRangeListRelationFilter = {
+    every?: NormalRangeWhereInput
+    some?: NormalRangeWhereInput
+    none?: NormalRangeWhereInput
+  }
+
+  export type InterpretationRuleListRelationFilter = {
+    every?: InterpretationRuleWhereInput
+    some?: InterpretationRuleWhereInput
+    none?: InterpretationRuleWhereInput
+  }
+
+  export type CalculationRuleListRelationFilter = {
+    every?: CalculationRuleWhereInput
+    some?: CalculationRuleWhereInput
+    none?: CalculationRuleWhereInput
+  }
+
+  export type DeltaCheckRuleListRelationFilter = {
+    every?: DeltaCheckRuleWhereInput
+    some?: DeltaCheckRuleWhereInput
+    none?: DeltaCheckRuleWhereInput
+  }
+
+  export type ReflexTestRuleListRelationFilter = {
+    every?: ReflexTestRuleWhereInput
+    some?: ReflexTestRuleWhereInput
+    none?: ReflexTestRuleWhereInput
+  }
+
+  export type NormalRangeOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type InterpretationRuleOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type CalculationRuleOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type DeltaCheckRuleOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ReflexTestRuleOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type TestDefinitionCodeCategoryIdCompoundUniqueInput = {
+    code: string
+    categoryId: string
+  }
+
+  export type TestDefinitionCountOrderByAggregateInput = {
+    id?: SortOrder
+    testId?: SortOrder
+    categoryId?: SortOrder
+    name?: SortOrder
+    code?: SortOrder
+    unit?: SortOrder
+    sampleType?: SortOrder
+    testFields?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type TestDefinitionMaxOrderByAggregateInput = {
+    id?: SortOrder
+    testId?: SortOrder
+    categoryId?: SortOrder
+    name?: SortOrder
+    code?: SortOrder
+    unit?: SortOrder
+    sampleType?: SortOrder
+    testFields?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type TestDefinitionMinOrderByAggregateInput = {
+    id?: SortOrder
+    testId?: SortOrder
+    categoryId?: SortOrder
+    name?: SortOrder
+    code?: SortOrder
+    unit?: SortOrder
+    sampleType?: SortOrder
+    testFields?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type IntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | null
+    notIn?: number[] | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
+  export type TestDefinitionRelationFilter = {
+    is?: TestDefinitionWhereInput
+    isNot?: TestDefinitionWhereInput
+  }
+
+  export type NormalRangeCountOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    minAge?: SortOrder
+    maxAge?: SortOrder
+    gender?: SortOrder
+    minValue?: SortOrder
+    maxValue?: SortOrder
+    criticalLow?: SortOrder
+    criticalHigh?: SortOrder
+    unit?: SortOrder
+    notes?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type NormalRangeAvgOrderByAggregateInput = {
+    minAge?: SortOrder
+    maxAge?: SortOrder
+    minValue?: SortOrder
+    maxValue?: SortOrder
+    criticalLow?: SortOrder
+    criticalHigh?: SortOrder
+  }
+
+  export type NormalRangeMaxOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    minAge?: SortOrder
+    maxAge?: SortOrder
+    gender?: SortOrder
+    minValue?: SortOrder
+    maxValue?: SortOrder
+    criticalLow?: SortOrder
+    criticalHigh?: SortOrder
+    unit?: SortOrder
+    notes?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type NormalRangeMinOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    minAge?: SortOrder
+    maxAge?: SortOrder
+    gender?: SortOrder
+    minValue?: SortOrder
+    maxValue?: SortOrder
+    criticalLow?: SortOrder
+    criticalHigh?: SortOrder
+    unit?: SortOrder
+    notes?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type NormalRangeSumOrderByAggregateInput = {
+    minAge?: SortOrder
+    maxAge?: SortOrder
+    minValue?: SortOrder
+    maxValue?: SortOrder
+    criticalLow?: SortOrder
+    criticalHigh?: SortOrder
+  }
+
+  export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | null
+    notIn?: number[] | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedIntNullableFilter<$PrismaModel>
+    _max?: NestedIntNullableFilter<$PrismaModel>
+  }
+
+  export type CalculationRuleCountOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    formula?: SortOrder
+    requiredFields?: SortOrder
+    outputField?: SortOrder
+    priority?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CalculationRuleAvgOrderByAggregateInput = {
+    priority?: SortOrder
+  }
+
+  export type CalculationRuleMaxOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    formula?: SortOrder
+    requiredFields?: SortOrder
+    outputField?: SortOrder
+    priority?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CalculationRuleMinOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    formula?: SortOrder
+    requiredFields?: SortOrder
+    outputField?: SortOrder
+    priority?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CalculationRuleSumOrderByAggregateInput = {
+    priority?: SortOrder
+  }
+
+  export type InterpretationRuleCountOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    condition?: SortOrder
+    interpretation?: SortOrder
+    severity?: SortOrder
+    priority?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type InterpretationRuleAvgOrderByAggregateInput = {
+    priority?: SortOrder
+  }
+
+  export type InterpretationRuleMaxOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    condition?: SortOrder
+    interpretation?: SortOrder
+    severity?: SortOrder
+    priority?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type InterpretationRuleMinOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    condition?: SortOrder
+    interpretation?: SortOrder
+    severity?: SortOrder
+    priority?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type InterpretationRuleSumOrderByAggregateInput = {
+    priority?: SortOrder
+  }
+
+  export type DeltaCheckRuleCountOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    alertThreshold?: SortOrder
+    criticalThreshold?: SortOrder
+    checkDays?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type DeltaCheckRuleAvgOrderByAggregateInput = {
+    alertThreshold?: SortOrder
+    criticalThreshold?: SortOrder
+    checkDays?: SortOrder
+  }
+
+  export type DeltaCheckRuleMaxOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    alertThreshold?: SortOrder
+    criticalThreshold?: SortOrder
+    checkDays?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type DeltaCheckRuleMinOrderByAggregateInput = {
+    id?: SortOrder
+    testDefId?: SortOrder
+    name?: SortOrder
+    alertThreshold?: SortOrder
+    criticalThreshold?: SortOrder
+    checkDays?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type DeltaCheckRuleSumOrderByAggregateInput = {
+    alertThreshold?: SortOrder
+    criticalThreshold?: SortOrder
+    checkDays?: SortOrder
+  }
+
+  export type ReflexTestRuleParentTestDefIdChildTestDefIdCompoundUniqueInput = {
+    parentTestDefId: string
+    childTestDefId: string
+  }
+
+  export type ReflexTestRuleCountOrderByAggregateInput = {
+    id?: SortOrder
+    parentTestDefId?: SortOrder
+    childTestDefId?: SortOrder
+    condition?: SortOrder
+    priority?: SortOrder
+    requiresApproval?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ReflexTestRuleAvgOrderByAggregateInput = {
+    priority?: SortOrder
+  }
+
+  export type ReflexTestRuleMaxOrderByAggregateInput = {
+    id?: SortOrder
+    parentTestDefId?: SortOrder
+    childTestDefId?: SortOrder
+    condition?: SortOrder
+    priority?: SortOrder
+    requiresApproval?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ReflexTestRuleMinOrderByAggregateInput = {
+    id?: SortOrder
+    parentTestDefId?: SortOrder
+    childTestDefId?: SortOrder
+    condition?: SortOrder
+    priority?: SortOrder
+    requiresApproval?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ReflexTestRuleSumOrderByAggregateInput = {
+    priority?: SortOrder
+  }
+
+  export type ResultRelationFilter = {
+    is?: ResultWhereInput
+    isNot?: ResultWhereInput
+  }
+
+  export type DeltaCheckRuleRelationFilter = {
+    is?: DeltaCheckRuleWhereInput
+    isNot?: DeltaCheckRuleWhereInput
+  }
+
+  export type DeltaCheckResultCountOrderByAggregateInput = {
+    id?: SortOrder
+    resultId?: SortOrder
+    ruleId?: SortOrder
+    previousValue?: SortOrder
+    currentValue?: SortOrder
+    changePercent?: SortOrder
+    previousDate?: SortOrder
+    alertMessage?: SortOrder
+    severity?: SortOrder
+    isResolved?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type DeltaCheckResultAvgOrderByAggregateInput = {
+    previousValue?: SortOrder
+    currentValue?: SortOrder
+    changePercent?: SortOrder
+  }
+
+  export type DeltaCheckResultMaxOrderByAggregateInput = {
+    id?: SortOrder
+    resultId?: SortOrder
+    ruleId?: SortOrder
+    previousValue?: SortOrder
+    currentValue?: SortOrder
+    changePercent?: SortOrder
+    previousDate?: SortOrder
+    alertMessage?: SortOrder
+    severity?: SortOrder
+    isResolved?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type DeltaCheckResultMinOrderByAggregateInput = {
+    id?: SortOrder
+    resultId?: SortOrder
+    ruleId?: SortOrder
+    previousValue?: SortOrder
+    currentValue?: SortOrder
+    changePercent?: SortOrder
+    previousDate?: SortOrder
+    alertMessage?: SortOrder
+    severity?: SortOrder
+    isResolved?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type DeltaCheckResultSumOrderByAggregateInput = {
+    previousValue?: SortOrder
+    currentValue?: SortOrder
+    changePercent?: SortOrder
+  }
+
+  export type EmailTemplateCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    subject?: SortOrder
+    htmlContent?: SortOrder
+    plainTextContent?: SortOrder
+    templateType?: SortOrder
+    requiredVariables?: SortOrder
+    isActive?: SortOrder
+    version?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EmailTemplateAvgOrderByAggregateInput = {
+    version?: SortOrder
+  }
+
+  export type EmailTemplateMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    subject?: SortOrder
+    htmlContent?: SortOrder
+    plainTextContent?: SortOrder
+    templateType?: SortOrder
+    requiredVariables?: SortOrder
+    isActive?: SortOrder
+    version?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EmailTemplateMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    subject?: SortOrder
+    htmlContent?: SortOrder
+    plainTextContent?: SortOrder
+    templateType?: SortOrder
+    requiredVariables?: SortOrder
+    isActive?: SortOrder
+    version?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EmailTemplateSumOrderByAggregateInput = {
+    version?: SortOrder
+  }
+
+  export type EmailTemplateNullableRelationFilter = {
+    is?: EmailTemplateWhereInput | null
+    isNot?: EmailTemplateWhereInput | null
+  }
+
+  export type ResultNullableRelationFilter = {
+    is?: ResultWhereInput | null
+    isNot?: ResultWhereInput | null
+  }
+
+  export type EmailLogCountOrderByAggregateInput = {
+    id?: SortOrder
+    templateId?: SortOrder
+    resultId?: SortOrder
+    sampleId?: SortOrder
+    invoiceId?: SortOrder
+    recipientEmail?: SortOrder
+    subject?: SortOrder
+    content?: SortOrder
+    status?: SortOrder
+    sentAt?: SortOrder
+    failureReason?: SortOrder
+    retryCount?: SortOrder
+    nextRetryAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EmailLogAvgOrderByAggregateInput = {
+    retryCount?: SortOrder
+  }
+
+  export type EmailLogMaxOrderByAggregateInput = {
+    id?: SortOrder
+    templateId?: SortOrder
+    resultId?: SortOrder
+    sampleId?: SortOrder
+    invoiceId?: SortOrder
+    recipientEmail?: SortOrder
+    subject?: SortOrder
+    content?: SortOrder
+    status?: SortOrder
+    sentAt?: SortOrder
+    failureReason?: SortOrder
+    retryCount?: SortOrder
+    nextRetryAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EmailLogMinOrderByAggregateInput = {
+    id?: SortOrder
+    templateId?: SortOrder
+    resultId?: SortOrder
+    sampleId?: SortOrder
+    invoiceId?: SortOrder
+    recipientEmail?: SortOrder
+    subject?: SortOrder
+    content?: SortOrder
+    status?: SortOrder
+    sentAt?: SortOrder
+    failureReason?: SortOrder
+    retryCount?: SortOrder
+    nextRetryAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EmailLogSumOrderByAggregateInput = {
+    retryCount?: SortOrder
+  }
+
+  export type EmailSettingCountOrderByAggregateInput = {
+    id?: SortOrder
+    key?: SortOrder
+    value?: SortOrder
+    description?: SortOrder
+    isEncrypted?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EmailSettingMaxOrderByAggregateInput = {
+    id?: SortOrder
+    key?: SortOrder
+    value?: SortOrder
+    description?: SortOrder
+    isEncrypted?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EmailSettingMinOrderByAggregateInput = {
+    id?: SortOrder
+    key?: SortOrder
+    value?: SortOrder
+    description?: SortOrder
+    isEncrypted?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
   export type PatientCreateNestedManyWithoutLabInput = {
     create?: XOR<PatientCreateWithoutLabInput, PatientUncheckedCreateWithoutLabInput> | PatientCreateWithoutLabInput[] | PatientUncheckedCreateWithoutLabInput[]
     connectOrCreate?: PatientCreateOrConnectWithoutLabInput | PatientCreateOrConnectWithoutLabInput[]
@@ -25354,6 +41368,13 @@ export namespace Prisma {
     connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
   }
 
+  export type TestDefinitionCreateNestedManyWithoutTestInput = {
+    create?: XOR<TestDefinitionCreateWithoutTestInput, TestDefinitionUncheckedCreateWithoutTestInput> | TestDefinitionCreateWithoutTestInput[] | TestDefinitionUncheckedCreateWithoutTestInput[]
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutTestInput | TestDefinitionCreateOrConnectWithoutTestInput[]
+    createMany?: TestDefinitionCreateManyTestInputEnvelope
+    connect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+  }
+
   export type TestProfileItemUncheckedCreateNestedManyWithoutTestInput = {
     create?: XOR<TestProfileItemCreateWithoutTestInput, TestProfileItemUncheckedCreateWithoutTestInput> | TestProfileItemCreateWithoutTestInput[] | TestProfileItemUncheckedCreateWithoutTestInput[]
     connectOrCreate?: TestProfileItemCreateOrConnectWithoutTestInput | TestProfileItemCreateOrConnectWithoutTestInput[]
@@ -25373,6 +41394,13 @@ export namespace Prisma {
     connectOrCreate?: ResultCreateOrConnectWithoutTestInput | ResultCreateOrConnectWithoutTestInput[]
     createMany?: ResultCreateManyTestInputEnvelope
     connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+  }
+
+  export type TestDefinitionUncheckedCreateNestedManyWithoutTestInput = {
+    create?: XOR<TestDefinitionCreateWithoutTestInput, TestDefinitionUncheckedCreateWithoutTestInput> | TestDefinitionCreateWithoutTestInput[] | TestDefinitionUncheckedCreateWithoutTestInput[]
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutTestInput | TestDefinitionCreateOrConnectWithoutTestInput[]
+    createMany?: TestDefinitionCreateManyTestInputEnvelope
+    connect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
   }
 
   export type FloatFieldUpdateOperationsInput = {
@@ -25425,6 +41453,20 @@ export namespace Prisma {
     deleteMany?: ResultScalarWhereInput | ResultScalarWhereInput[]
   }
 
+  export type TestDefinitionUpdateManyWithoutTestNestedInput = {
+    create?: XOR<TestDefinitionCreateWithoutTestInput, TestDefinitionUncheckedCreateWithoutTestInput> | TestDefinitionCreateWithoutTestInput[] | TestDefinitionUncheckedCreateWithoutTestInput[]
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutTestInput | TestDefinitionCreateOrConnectWithoutTestInput[]
+    upsert?: TestDefinitionUpsertWithWhereUniqueWithoutTestInput | TestDefinitionUpsertWithWhereUniqueWithoutTestInput[]
+    createMany?: TestDefinitionCreateManyTestInputEnvelope
+    set?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    disconnect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    delete?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    connect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    update?: TestDefinitionUpdateWithWhereUniqueWithoutTestInput | TestDefinitionUpdateWithWhereUniqueWithoutTestInput[]
+    updateMany?: TestDefinitionUpdateManyWithWhereWithoutTestInput | TestDefinitionUpdateManyWithWhereWithoutTestInput[]
+    deleteMany?: TestDefinitionScalarWhereInput | TestDefinitionScalarWhereInput[]
+  }
+
   export type TestProfileItemUncheckedUpdateManyWithoutTestNestedInput = {
     create?: XOR<TestProfileItemCreateWithoutTestInput, TestProfileItemUncheckedCreateWithoutTestInput> | TestProfileItemCreateWithoutTestInput[] | TestProfileItemUncheckedCreateWithoutTestInput[]
     connectOrCreate?: TestProfileItemCreateOrConnectWithoutTestInput | TestProfileItemCreateOrConnectWithoutTestInput[]
@@ -25465,6 +41507,20 @@ export namespace Prisma {
     update?: ResultUpdateWithWhereUniqueWithoutTestInput | ResultUpdateWithWhereUniqueWithoutTestInput[]
     updateMany?: ResultUpdateManyWithWhereWithoutTestInput | ResultUpdateManyWithWhereWithoutTestInput[]
     deleteMany?: ResultScalarWhereInput | ResultScalarWhereInput[]
+  }
+
+  export type TestDefinitionUncheckedUpdateManyWithoutTestNestedInput = {
+    create?: XOR<TestDefinitionCreateWithoutTestInput, TestDefinitionUncheckedCreateWithoutTestInput> | TestDefinitionCreateWithoutTestInput[] | TestDefinitionUncheckedCreateWithoutTestInput[]
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutTestInput | TestDefinitionCreateOrConnectWithoutTestInput[]
+    upsert?: TestDefinitionUpsertWithWhereUniqueWithoutTestInput | TestDefinitionUpsertWithWhereUniqueWithoutTestInput[]
+    createMany?: TestDefinitionCreateManyTestInputEnvelope
+    set?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    disconnect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    delete?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    connect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    update?: TestDefinitionUpdateWithWhereUniqueWithoutTestInput | TestDefinitionUpdateWithWhereUniqueWithoutTestInput[]
+    updateMany?: TestDefinitionUpdateManyWithWhereWithoutTestInput | TestDefinitionUpdateManyWithWhereWithoutTestInput[]
+    deleteMany?: TestDefinitionScalarWhereInput | TestDefinitionScalarWhereInput[]
   }
 
   export type TestProfileItemCreateNestedManyWithoutProfileInput = {
@@ -25605,6 +41661,13 @@ export namespace Prisma {
     connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
   }
 
+  export type EmailLogCreateNestedManyWithoutSampleInput = {
+    create?: XOR<EmailLogCreateWithoutSampleInput, EmailLogUncheckedCreateWithoutSampleInput> | EmailLogCreateWithoutSampleInput[] | EmailLogUncheckedCreateWithoutSampleInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutSampleInput | EmailLogCreateOrConnectWithoutSampleInput[]
+    createMany?: EmailLogCreateManySampleInputEnvelope
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+  }
+
   export type InvoiceCreateNestedOneWithoutSampleInput = {
     create?: XOR<InvoiceCreateWithoutSampleInput, InvoiceUncheckedCreateWithoutSampleInput>
     connectOrCreate?: InvoiceCreateOrConnectWithoutSampleInput
@@ -25623,6 +41686,13 @@ export namespace Prisma {
     connectOrCreate?: ResultCreateOrConnectWithoutSampleInput | ResultCreateOrConnectWithoutSampleInput[]
     createMany?: ResultCreateManySampleInputEnvelope
     connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+  }
+
+  export type EmailLogUncheckedCreateNestedManyWithoutSampleInput = {
+    create?: XOR<EmailLogCreateWithoutSampleInput, EmailLogUncheckedCreateWithoutSampleInput> | EmailLogCreateWithoutSampleInput[] | EmailLogUncheckedCreateWithoutSampleInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutSampleInput | EmailLogCreateOrConnectWithoutSampleInput[]
+    createMany?: EmailLogCreateManySampleInputEnvelope
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
   }
 
   export type InvoiceUncheckedCreateNestedOneWithoutSampleInput = {
@@ -25677,6 +41747,20 @@ export namespace Prisma {
     deleteMany?: ResultScalarWhereInput | ResultScalarWhereInput[]
   }
 
+  export type EmailLogUpdateManyWithoutSampleNestedInput = {
+    create?: XOR<EmailLogCreateWithoutSampleInput, EmailLogUncheckedCreateWithoutSampleInput> | EmailLogCreateWithoutSampleInput[] | EmailLogUncheckedCreateWithoutSampleInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutSampleInput | EmailLogCreateOrConnectWithoutSampleInput[]
+    upsert?: EmailLogUpsertWithWhereUniqueWithoutSampleInput | EmailLogUpsertWithWhereUniqueWithoutSampleInput[]
+    createMany?: EmailLogCreateManySampleInputEnvelope
+    set?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    disconnect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    delete?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    update?: EmailLogUpdateWithWhereUniqueWithoutSampleInput | EmailLogUpdateWithWhereUniqueWithoutSampleInput[]
+    updateMany?: EmailLogUpdateManyWithWhereWithoutSampleInput | EmailLogUpdateManyWithWhereWithoutSampleInput[]
+    deleteMany?: EmailLogScalarWhereInput | EmailLogScalarWhereInput[]
+  }
+
   export type InvoiceUpdateOneWithoutSampleNestedInput = {
     create?: XOR<InvoiceCreateWithoutSampleInput, InvoiceUncheckedCreateWithoutSampleInput>
     connectOrCreate?: InvoiceCreateOrConnectWithoutSampleInput
@@ -25713,6 +41797,20 @@ export namespace Prisma {
     update?: ResultUpdateWithWhereUniqueWithoutSampleInput | ResultUpdateWithWhereUniqueWithoutSampleInput[]
     updateMany?: ResultUpdateManyWithWhereWithoutSampleInput | ResultUpdateManyWithWhereWithoutSampleInput[]
     deleteMany?: ResultScalarWhereInput | ResultScalarWhereInput[]
+  }
+
+  export type EmailLogUncheckedUpdateManyWithoutSampleNestedInput = {
+    create?: XOR<EmailLogCreateWithoutSampleInput, EmailLogUncheckedCreateWithoutSampleInput> | EmailLogCreateWithoutSampleInput[] | EmailLogUncheckedCreateWithoutSampleInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutSampleInput | EmailLogCreateOrConnectWithoutSampleInput[]
+    upsert?: EmailLogUpsertWithWhereUniqueWithoutSampleInput | EmailLogUpsertWithWhereUniqueWithoutSampleInput[]
+    createMany?: EmailLogCreateManySampleInputEnvelope
+    set?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    disconnect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    delete?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    update?: EmailLogUpdateWithWhereUniqueWithoutSampleInput | EmailLogUpdateWithWhereUniqueWithoutSampleInput[]
+    updateMany?: EmailLogUpdateManyWithWhereWithoutSampleInput | EmailLogUpdateManyWithWhereWithoutSampleInput[]
+    deleteMany?: EmailLogScalarWhereInput | EmailLogScalarWhereInput[]
   }
 
   export type InvoiceUncheckedUpdateOneWithoutSampleNestedInput = {
@@ -25765,6 +41863,46 @@ export namespace Prisma {
     connect?: TestWhereUniqueInput
   }
 
+  export type TestDefinitionCreateNestedOneWithoutTestResultsInput = {
+    create?: XOR<TestDefinitionCreateWithoutTestResultsInput, TestDefinitionUncheckedCreateWithoutTestResultsInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutTestResultsInput
+    connect?: TestDefinitionWhereUniqueInput
+  }
+
+  export type InterpretationRuleCreateNestedOneWithoutResultsInput = {
+    create?: XOR<InterpretationRuleCreateWithoutResultsInput, InterpretationRuleUncheckedCreateWithoutResultsInput>
+    connectOrCreate?: InterpretationRuleCreateOrConnectWithoutResultsInput
+    connect?: InterpretationRuleWhereUniqueInput
+  }
+
+  export type DeltaCheckResultCreateNestedManyWithoutResultInput = {
+    create?: XOR<DeltaCheckResultCreateWithoutResultInput, DeltaCheckResultUncheckedCreateWithoutResultInput> | DeltaCheckResultCreateWithoutResultInput[] | DeltaCheckResultUncheckedCreateWithoutResultInput[]
+    connectOrCreate?: DeltaCheckResultCreateOrConnectWithoutResultInput | DeltaCheckResultCreateOrConnectWithoutResultInput[]
+    createMany?: DeltaCheckResultCreateManyResultInputEnvelope
+    connect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+  }
+
+  export type EmailLogCreateNestedManyWithoutResultInput = {
+    create?: XOR<EmailLogCreateWithoutResultInput, EmailLogUncheckedCreateWithoutResultInput> | EmailLogCreateWithoutResultInput[] | EmailLogUncheckedCreateWithoutResultInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutResultInput | EmailLogCreateOrConnectWithoutResultInput[]
+    createMany?: EmailLogCreateManyResultInputEnvelope
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+  }
+
+  export type DeltaCheckResultUncheckedCreateNestedManyWithoutResultInput = {
+    create?: XOR<DeltaCheckResultCreateWithoutResultInput, DeltaCheckResultUncheckedCreateWithoutResultInput> | DeltaCheckResultCreateWithoutResultInput[] | DeltaCheckResultUncheckedCreateWithoutResultInput[]
+    connectOrCreate?: DeltaCheckResultCreateOrConnectWithoutResultInput | DeltaCheckResultCreateOrConnectWithoutResultInput[]
+    createMany?: DeltaCheckResultCreateManyResultInputEnvelope
+    connect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+  }
+
+  export type EmailLogUncheckedCreateNestedManyWithoutResultInput = {
+    create?: XOR<EmailLogCreateWithoutResultInput, EmailLogUncheckedCreateWithoutResultInput> | EmailLogCreateWithoutResultInput[] | EmailLogUncheckedCreateWithoutResultInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutResultInput | EmailLogCreateOrConnectWithoutResultInput[]
+    createMany?: EmailLogCreateManyResultInputEnvelope
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+  }
+
   export type SampleUpdateOneRequiredWithoutResultsNestedInput = {
     create?: XOR<SampleCreateWithoutResultsInput, SampleUncheckedCreateWithoutResultsInput>
     connectOrCreate?: SampleCreateOrConnectWithoutResultsInput
@@ -25779,6 +41917,82 @@ export namespace Prisma {
     upsert?: TestUpsertWithoutResultsInput
     connect?: TestWhereUniqueInput
     update?: XOR<XOR<TestUpdateToOneWithWhereWithoutResultsInput, TestUpdateWithoutResultsInput>, TestUncheckedUpdateWithoutResultsInput>
+  }
+
+  export type TestDefinitionUpdateOneWithoutTestResultsNestedInput = {
+    create?: XOR<TestDefinitionCreateWithoutTestResultsInput, TestDefinitionUncheckedCreateWithoutTestResultsInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutTestResultsInput
+    upsert?: TestDefinitionUpsertWithoutTestResultsInput
+    disconnect?: TestDefinitionWhereInput | boolean
+    delete?: TestDefinitionWhereInput | boolean
+    connect?: TestDefinitionWhereUniqueInput
+    update?: XOR<XOR<TestDefinitionUpdateToOneWithWhereWithoutTestResultsInput, TestDefinitionUpdateWithoutTestResultsInput>, TestDefinitionUncheckedUpdateWithoutTestResultsInput>
+  }
+
+  export type InterpretationRuleUpdateOneWithoutResultsNestedInput = {
+    create?: XOR<InterpretationRuleCreateWithoutResultsInput, InterpretationRuleUncheckedCreateWithoutResultsInput>
+    connectOrCreate?: InterpretationRuleCreateOrConnectWithoutResultsInput
+    upsert?: InterpretationRuleUpsertWithoutResultsInput
+    disconnect?: InterpretationRuleWhereInput | boolean
+    delete?: InterpretationRuleWhereInput | boolean
+    connect?: InterpretationRuleWhereUniqueInput
+    update?: XOR<XOR<InterpretationRuleUpdateToOneWithWhereWithoutResultsInput, InterpretationRuleUpdateWithoutResultsInput>, InterpretationRuleUncheckedUpdateWithoutResultsInput>
+  }
+
+  export type DeltaCheckResultUpdateManyWithoutResultNestedInput = {
+    create?: XOR<DeltaCheckResultCreateWithoutResultInput, DeltaCheckResultUncheckedCreateWithoutResultInput> | DeltaCheckResultCreateWithoutResultInput[] | DeltaCheckResultUncheckedCreateWithoutResultInput[]
+    connectOrCreate?: DeltaCheckResultCreateOrConnectWithoutResultInput | DeltaCheckResultCreateOrConnectWithoutResultInput[]
+    upsert?: DeltaCheckResultUpsertWithWhereUniqueWithoutResultInput | DeltaCheckResultUpsertWithWhereUniqueWithoutResultInput[]
+    createMany?: DeltaCheckResultCreateManyResultInputEnvelope
+    set?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    disconnect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    delete?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    connect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    update?: DeltaCheckResultUpdateWithWhereUniqueWithoutResultInput | DeltaCheckResultUpdateWithWhereUniqueWithoutResultInput[]
+    updateMany?: DeltaCheckResultUpdateManyWithWhereWithoutResultInput | DeltaCheckResultUpdateManyWithWhereWithoutResultInput[]
+    deleteMany?: DeltaCheckResultScalarWhereInput | DeltaCheckResultScalarWhereInput[]
+  }
+
+  export type EmailLogUpdateManyWithoutResultNestedInput = {
+    create?: XOR<EmailLogCreateWithoutResultInput, EmailLogUncheckedCreateWithoutResultInput> | EmailLogCreateWithoutResultInput[] | EmailLogUncheckedCreateWithoutResultInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutResultInput | EmailLogCreateOrConnectWithoutResultInput[]
+    upsert?: EmailLogUpsertWithWhereUniqueWithoutResultInput | EmailLogUpsertWithWhereUniqueWithoutResultInput[]
+    createMany?: EmailLogCreateManyResultInputEnvelope
+    set?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    disconnect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    delete?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    update?: EmailLogUpdateWithWhereUniqueWithoutResultInput | EmailLogUpdateWithWhereUniqueWithoutResultInput[]
+    updateMany?: EmailLogUpdateManyWithWhereWithoutResultInput | EmailLogUpdateManyWithWhereWithoutResultInput[]
+    deleteMany?: EmailLogScalarWhereInput | EmailLogScalarWhereInput[]
+  }
+
+  export type DeltaCheckResultUncheckedUpdateManyWithoutResultNestedInput = {
+    create?: XOR<DeltaCheckResultCreateWithoutResultInput, DeltaCheckResultUncheckedCreateWithoutResultInput> | DeltaCheckResultCreateWithoutResultInput[] | DeltaCheckResultUncheckedCreateWithoutResultInput[]
+    connectOrCreate?: DeltaCheckResultCreateOrConnectWithoutResultInput | DeltaCheckResultCreateOrConnectWithoutResultInput[]
+    upsert?: DeltaCheckResultUpsertWithWhereUniqueWithoutResultInput | DeltaCheckResultUpsertWithWhereUniqueWithoutResultInput[]
+    createMany?: DeltaCheckResultCreateManyResultInputEnvelope
+    set?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    disconnect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    delete?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    connect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    update?: DeltaCheckResultUpdateWithWhereUniqueWithoutResultInput | DeltaCheckResultUpdateWithWhereUniqueWithoutResultInput[]
+    updateMany?: DeltaCheckResultUpdateManyWithWhereWithoutResultInput | DeltaCheckResultUpdateManyWithWhereWithoutResultInput[]
+    deleteMany?: DeltaCheckResultScalarWhereInput | DeltaCheckResultScalarWhereInput[]
+  }
+
+  export type EmailLogUncheckedUpdateManyWithoutResultNestedInput = {
+    create?: XOR<EmailLogCreateWithoutResultInput, EmailLogUncheckedCreateWithoutResultInput> | EmailLogCreateWithoutResultInput[] | EmailLogUncheckedCreateWithoutResultInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutResultInput | EmailLogCreateOrConnectWithoutResultInput[]
+    upsert?: EmailLogUpsertWithWhereUniqueWithoutResultInput | EmailLogUpsertWithWhereUniqueWithoutResultInput[]
+    createMany?: EmailLogCreateManyResultInputEnvelope
+    set?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    disconnect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    delete?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    update?: EmailLogUpdateWithWhereUniqueWithoutResultInput | EmailLogUpdateWithWhereUniqueWithoutResultInput[]
+    updateMany?: EmailLogUpdateManyWithWhereWithoutResultInput | EmailLogUpdateManyWithWhereWithoutResultInput[]
+    deleteMany?: EmailLogScalarWhereInput | EmailLogScalarWhereInput[]
   }
 
   export type PatientCreateNestedOneWithoutInvoicesInput = {
@@ -25813,6 +42027,13 @@ export namespace Prisma {
     connect?: CommissionWhereUniqueInput | CommissionWhereUniqueInput[]
   }
 
+  export type EmailLogCreateNestedManyWithoutInvoiceInput = {
+    create?: XOR<EmailLogCreateWithoutInvoiceInput, EmailLogUncheckedCreateWithoutInvoiceInput> | EmailLogCreateWithoutInvoiceInput[] | EmailLogUncheckedCreateWithoutInvoiceInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutInvoiceInput | EmailLogCreateOrConnectWithoutInvoiceInput[]
+    createMany?: EmailLogCreateManyInvoiceInputEnvelope
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+  }
+
   export type InvoiceItemUncheckedCreateNestedManyWithoutInvoiceInput = {
     create?: XOR<InvoiceItemCreateWithoutInvoiceInput, InvoiceItemUncheckedCreateWithoutInvoiceInput> | InvoiceItemCreateWithoutInvoiceInput[] | InvoiceItemUncheckedCreateWithoutInvoiceInput[]
     connectOrCreate?: InvoiceItemCreateOrConnectWithoutInvoiceInput | InvoiceItemCreateOrConnectWithoutInvoiceInput[]
@@ -25825,6 +42046,13 @@ export namespace Prisma {
     connectOrCreate?: CommissionCreateOrConnectWithoutInvoiceInput | CommissionCreateOrConnectWithoutInvoiceInput[]
     createMany?: CommissionCreateManyInvoiceInputEnvelope
     connect?: CommissionWhereUniqueInput | CommissionWhereUniqueInput[]
+  }
+
+  export type EmailLogUncheckedCreateNestedManyWithoutInvoiceInput = {
+    create?: XOR<EmailLogCreateWithoutInvoiceInput, EmailLogUncheckedCreateWithoutInvoiceInput> | EmailLogCreateWithoutInvoiceInput[] | EmailLogUncheckedCreateWithoutInvoiceInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutInvoiceInput | EmailLogCreateOrConnectWithoutInvoiceInput[]
+    createMany?: EmailLogCreateManyInvoiceInputEnvelope
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
   }
 
   export type NullableDateTimeFieldUpdateOperationsInput = {
@@ -25885,6 +42113,20 @@ export namespace Prisma {
     deleteMany?: CommissionScalarWhereInput | CommissionScalarWhereInput[]
   }
 
+  export type EmailLogUpdateManyWithoutInvoiceNestedInput = {
+    create?: XOR<EmailLogCreateWithoutInvoiceInput, EmailLogUncheckedCreateWithoutInvoiceInput> | EmailLogCreateWithoutInvoiceInput[] | EmailLogUncheckedCreateWithoutInvoiceInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutInvoiceInput | EmailLogCreateOrConnectWithoutInvoiceInput[]
+    upsert?: EmailLogUpsertWithWhereUniqueWithoutInvoiceInput | EmailLogUpsertWithWhereUniqueWithoutInvoiceInput[]
+    createMany?: EmailLogCreateManyInvoiceInputEnvelope
+    set?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    disconnect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    delete?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    update?: EmailLogUpdateWithWhereUniqueWithoutInvoiceInput | EmailLogUpdateWithWhereUniqueWithoutInvoiceInput[]
+    updateMany?: EmailLogUpdateManyWithWhereWithoutInvoiceInput | EmailLogUpdateManyWithWhereWithoutInvoiceInput[]
+    deleteMany?: EmailLogScalarWhereInput | EmailLogScalarWhereInput[]
+  }
+
   export type InvoiceItemUncheckedUpdateManyWithoutInvoiceNestedInput = {
     create?: XOR<InvoiceItemCreateWithoutInvoiceInput, InvoiceItemUncheckedCreateWithoutInvoiceInput> | InvoiceItemCreateWithoutInvoiceInput[] | InvoiceItemUncheckedCreateWithoutInvoiceInput[]
     connectOrCreate?: InvoiceItemCreateOrConnectWithoutInvoiceInput | InvoiceItemCreateOrConnectWithoutInvoiceInput[]
@@ -25911,6 +42153,20 @@ export namespace Prisma {
     update?: CommissionUpdateWithWhereUniqueWithoutInvoiceInput | CommissionUpdateWithWhereUniqueWithoutInvoiceInput[]
     updateMany?: CommissionUpdateManyWithWhereWithoutInvoiceInput | CommissionUpdateManyWithWhereWithoutInvoiceInput[]
     deleteMany?: CommissionScalarWhereInput | CommissionScalarWhereInput[]
+  }
+
+  export type EmailLogUncheckedUpdateManyWithoutInvoiceNestedInput = {
+    create?: XOR<EmailLogCreateWithoutInvoiceInput, EmailLogUncheckedCreateWithoutInvoiceInput> | EmailLogCreateWithoutInvoiceInput[] | EmailLogUncheckedCreateWithoutInvoiceInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutInvoiceInput | EmailLogCreateOrConnectWithoutInvoiceInput[]
+    upsert?: EmailLogUpsertWithWhereUniqueWithoutInvoiceInput | EmailLogUpsertWithWhereUniqueWithoutInvoiceInput[]
+    createMany?: EmailLogCreateManyInvoiceInputEnvelope
+    set?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    disconnect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    delete?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    update?: EmailLogUpdateWithWhereUniqueWithoutInvoiceInput | EmailLogUpdateWithWhereUniqueWithoutInvoiceInput[]
+    updateMany?: EmailLogUpdateManyWithWhereWithoutInvoiceInput | EmailLogUpdateManyWithWhereWithoutInvoiceInput[]
+    deleteMany?: EmailLogScalarWhereInput | EmailLogScalarWhereInput[]
   }
 
   export type InvoiceCreateNestedOneWithoutItemsInput = {
@@ -26083,6 +42339,682 @@ export namespace Prisma {
     delete?: UserWhereInput | boolean
     connect?: UserWhereUniqueInput
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutAuditLogsInput, UserUpdateWithoutAuditLogsInput>, UserUncheckedUpdateWithoutAuditLogsInput>
+  }
+
+  export type TestDefinitionCreateNestedManyWithoutCategoryInput = {
+    create?: XOR<TestDefinitionCreateWithoutCategoryInput, TestDefinitionUncheckedCreateWithoutCategoryInput> | TestDefinitionCreateWithoutCategoryInput[] | TestDefinitionUncheckedCreateWithoutCategoryInput[]
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutCategoryInput | TestDefinitionCreateOrConnectWithoutCategoryInput[]
+    createMany?: TestDefinitionCreateManyCategoryInputEnvelope
+    connect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+  }
+
+  export type TestDefinitionUncheckedCreateNestedManyWithoutCategoryInput = {
+    create?: XOR<TestDefinitionCreateWithoutCategoryInput, TestDefinitionUncheckedCreateWithoutCategoryInput> | TestDefinitionCreateWithoutCategoryInput[] | TestDefinitionUncheckedCreateWithoutCategoryInput[]
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutCategoryInput | TestDefinitionCreateOrConnectWithoutCategoryInput[]
+    createMany?: TestDefinitionCreateManyCategoryInputEnvelope
+    connect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+  }
+
+  export type TestDefinitionUpdateManyWithoutCategoryNestedInput = {
+    create?: XOR<TestDefinitionCreateWithoutCategoryInput, TestDefinitionUncheckedCreateWithoutCategoryInput> | TestDefinitionCreateWithoutCategoryInput[] | TestDefinitionUncheckedCreateWithoutCategoryInput[]
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutCategoryInput | TestDefinitionCreateOrConnectWithoutCategoryInput[]
+    upsert?: TestDefinitionUpsertWithWhereUniqueWithoutCategoryInput | TestDefinitionUpsertWithWhereUniqueWithoutCategoryInput[]
+    createMany?: TestDefinitionCreateManyCategoryInputEnvelope
+    set?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    disconnect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    delete?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    connect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    update?: TestDefinitionUpdateWithWhereUniqueWithoutCategoryInput | TestDefinitionUpdateWithWhereUniqueWithoutCategoryInput[]
+    updateMany?: TestDefinitionUpdateManyWithWhereWithoutCategoryInput | TestDefinitionUpdateManyWithWhereWithoutCategoryInput[]
+    deleteMany?: TestDefinitionScalarWhereInput | TestDefinitionScalarWhereInput[]
+  }
+
+  export type TestDefinitionUncheckedUpdateManyWithoutCategoryNestedInput = {
+    create?: XOR<TestDefinitionCreateWithoutCategoryInput, TestDefinitionUncheckedCreateWithoutCategoryInput> | TestDefinitionCreateWithoutCategoryInput[] | TestDefinitionUncheckedCreateWithoutCategoryInput[]
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutCategoryInput | TestDefinitionCreateOrConnectWithoutCategoryInput[]
+    upsert?: TestDefinitionUpsertWithWhereUniqueWithoutCategoryInput | TestDefinitionUpsertWithWhereUniqueWithoutCategoryInput[]
+    createMany?: TestDefinitionCreateManyCategoryInputEnvelope
+    set?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    disconnect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    delete?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    connect?: TestDefinitionWhereUniqueInput | TestDefinitionWhereUniqueInput[]
+    update?: TestDefinitionUpdateWithWhereUniqueWithoutCategoryInput | TestDefinitionUpdateWithWhereUniqueWithoutCategoryInput[]
+    updateMany?: TestDefinitionUpdateManyWithWhereWithoutCategoryInput | TestDefinitionUpdateManyWithWhereWithoutCategoryInput[]
+    deleteMany?: TestDefinitionScalarWhereInput | TestDefinitionScalarWhereInput[]
+  }
+
+  export type TestCreateNestedOneWithoutTestDefsInput = {
+    create?: XOR<TestCreateWithoutTestDefsInput, TestUncheckedCreateWithoutTestDefsInput>
+    connectOrCreate?: TestCreateOrConnectWithoutTestDefsInput
+    connect?: TestWhereUniqueInput
+  }
+
+  export type TestCategoryCreateNestedOneWithoutDefinitionsInput = {
+    create?: XOR<TestCategoryCreateWithoutDefinitionsInput, TestCategoryUncheckedCreateWithoutDefinitionsInput>
+    connectOrCreate?: TestCategoryCreateOrConnectWithoutDefinitionsInput
+    connect?: TestCategoryWhereUniqueInput
+  }
+
+  export type NormalRangeCreateNestedManyWithoutTestDefInput = {
+    create?: XOR<NormalRangeCreateWithoutTestDefInput, NormalRangeUncheckedCreateWithoutTestDefInput> | NormalRangeCreateWithoutTestDefInput[] | NormalRangeUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: NormalRangeCreateOrConnectWithoutTestDefInput | NormalRangeCreateOrConnectWithoutTestDefInput[]
+    createMany?: NormalRangeCreateManyTestDefInputEnvelope
+    connect?: NormalRangeWhereUniqueInput | NormalRangeWhereUniqueInput[]
+  }
+
+  export type InterpretationRuleCreateNestedManyWithoutTestDefInput = {
+    create?: XOR<InterpretationRuleCreateWithoutTestDefInput, InterpretationRuleUncheckedCreateWithoutTestDefInput> | InterpretationRuleCreateWithoutTestDefInput[] | InterpretationRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: InterpretationRuleCreateOrConnectWithoutTestDefInput | InterpretationRuleCreateOrConnectWithoutTestDefInput[]
+    createMany?: InterpretationRuleCreateManyTestDefInputEnvelope
+    connect?: InterpretationRuleWhereUniqueInput | InterpretationRuleWhereUniqueInput[]
+  }
+
+  export type CalculationRuleCreateNestedManyWithoutTestDefInput = {
+    create?: XOR<CalculationRuleCreateWithoutTestDefInput, CalculationRuleUncheckedCreateWithoutTestDefInput> | CalculationRuleCreateWithoutTestDefInput[] | CalculationRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: CalculationRuleCreateOrConnectWithoutTestDefInput | CalculationRuleCreateOrConnectWithoutTestDefInput[]
+    createMany?: CalculationRuleCreateManyTestDefInputEnvelope
+    connect?: CalculationRuleWhereUniqueInput | CalculationRuleWhereUniqueInput[]
+  }
+
+  export type DeltaCheckRuleCreateNestedManyWithoutTestDefInput = {
+    create?: XOR<DeltaCheckRuleCreateWithoutTestDefInput, DeltaCheckRuleUncheckedCreateWithoutTestDefInput> | DeltaCheckRuleCreateWithoutTestDefInput[] | DeltaCheckRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: DeltaCheckRuleCreateOrConnectWithoutTestDefInput | DeltaCheckRuleCreateOrConnectWithoutTestDefInput[]
+    createMany?: DeltaCheckRuleCreateManyTestDefInputEnvelope
+    connect?: DeltaCheckRuleWhereUniqueInput | DeltaCheckRuleWhereUniqueInput[]
+  }
+
+  export type ReflexTestRuleCreateNestedManyWithoutParentTestDefInput = {
+    create?: XOR<ReflexTestRuleCreateWithoutParentTestDefInput, ReflexTestRuleUncheckedCreateWithoutParentTestDefInput> | ReflexTestRuleCreateWithoutParentTestDefInput[] | ReflexTestRuleUncheckedCreateWithoutParentTestDefInput[]
+    connectOrCreate?: ReflexTestRuleCreateOrConnectWithoutParentTestDefInput | ReflexTestRuleCreateOrConnectWithoutParentTestDefInput[]
+    createMany?: ReflexTestRuleCreateManyParentTestDefInputEnvelope
+    connect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+  }
+
+  export type ReflexTestRuleCreateNestedManyWithoutChildTestDefInput = {
+    create?: XOR<ReflexTestRuleCreateWithoutChildTestDefInput, ReflexTestRuleUncheckedCreateWithoutChildTestDefInput> | ReflexTestRuleCreateWithoutChildTestDefInput[] | ReflexTestRuleUncheckedCreateWithoutChildTestDefInput[]
+    connectOrCreate?: ReflexTestRuleCreateOrConnectWithoutChildTestDefInput | ReflexTestRuleCreateOrConnectWithoutChildTestDefInput[]
+    createMany?: ReflexTestRuleCreateManyChildTestDefInputEnvelope
+    connect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+  }
+
+  export type ResultCreateNestedManyWithoutTestDefInput = {
+    create?: XOR<ResultCreateWithoutTestDefInput, ResultUncheckedCreateWithoutTestDefInput> | ResultCreateWithoutTestDefInput[] | ResultUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: ResultCreateOrConnectWithoutTestDefInput | ResultCreateOrConnectWithoutTestDefInput[]
+    createMany?: ResultCreateManyTestDefInputEnvelope
+    connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+  }
+
+  export type NormalRangeUncheckedCreateNestedManyWithoutTestDefInput = {
+    create?: XOR<NormalRangeCreateWithoutTestDefInput, NormalRangeUncheckedCreateWithoutTestDefInput> | NormalRangeCreateWithoutTestDefInput[] | NormalRangeUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: NormalRangeCreateOrConnectWithoutTestDefInput | NormalRangeCreateOrConnectWithoutTestDefInput[]
+    createMany?: NormalRangeCreateManyTestDefInputEnvelope
+    connect?: NormalRangeWhereUniqueInput | NormalRangeWhereUniqueInput[]
+  }
+
+  export type InterpretationRuleUncheckedCreateNestedManyWithoutTestDefInput = {
+    create?: XOR<InterpretationRuleCreateWithoutTestDefInput, InterpretationRuleUncheckedCreateWithoutTestDefInput> | InterpretationRuleCreateWithoutTestDefInput[] | InterpretationRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: InterpretationRuleCreateOrConnectWithoutTestDefInput | InterpretationRuleCreateOrConnectWithoutTestDefInput[]
+    createMany?: InterpretationRuleCreateManyTestDefInputEnvelope
+    connect?: InterpretationRuleWhereUniqueInput | InterpretationRuleWhereUniqueInput[]
+  }
+
+  export type CalculationRuleUncheckedCreateNestedManyWithoutTestDefInput = {
+    create?: XOR<CalculationRuleCreateWithoutTestDefInput, CalculationRuleUncheckedCreateWithoutTestDefInput> | CalculationRuleCreateWithoutTestDefInput[] | CalculationRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: CalculationRuleCreateOrConnectWithoutTestDefInput | CalculationRuleCreateOrConnectWithoutTestDefInput[]
+    createMany?: CalculationRuleCreateManyTestDefInputEnvelope
+    connect?: CalculationRuleWhereUniqueInput | CalculationRuleWhereUniqueInput[]
+  }
+
+  export type DeltaCheckRuleUncheckedCreateNestedManyWithoutTestDefInput = {
+    create?: XOR<DeltaCheckRuleCreateWithoutTestDefInput, DeltaCheckRuleUncheckedCreateWithoutTestDefInput> | DeltaCheckRuleCreateWithoutTestDefInput[] | DeltaCheckRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: DeltaCheckRuleCreateOrConnectWithoutTestDefInput | DeltaCheckRuleCreateOrConnectWithoutTestDefInput[]
+    createMany?: DeltaCheckRuleCreateManyTestDefInputEnvelope
+    connect?: DeltaCheckRuleWhereUniqueInput | DeltaCheckRuleWhereUniqueInput[]
+  }
+
+  export type ReflexTestRuleUncheckedCreateNestedManyWithoutParentTestDefInput = {
+    create?: XOR<ReflexTestRuleCreateWithoutParentTestDefInput, ReflexTestRuleUncheckedCreateWithoutParentTestDefInput> | ReflexTestRuleCreateWithoutParentTestDefInput[] | ReflexTestRuleUncheckedCreateWithoutParentTestDefInput[]
+    connectOrCreate?: ReflexTestRuleCreateOrConnectWithoutParentTestDefInput | ReflexTestRuleCreateOrConnectWithoutParentTestDefInput[]
+    createMany?: ReflexTestRuleCreateManyParentTestDefInputEnvelope
+    connect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+  }
+
+  export type ReflexTestRuleUncheckedCreateNestedManyWithoutChildTestDefInput = {
+    create?: XOR<ReflexTestRuleCreateWithoutChildTestDefInput, ReflexTestRuleUncheckedCreateWithoutChildTestDefInput> | ReflexTestRuleCreateWithoutChildTestDefInput[] | ReflexTestRuleUncheckedCreateWithoutChildTestDefInput[]
+    connectOrCreate?: ReflexTestRuleCreateOrConnectWithoutChildTestDefInput | ReflexTestRuleCreateOrConnectWithoutChildTestDefInput[]
+    createMany?: ReflexTestRuleCreateManyChildTestDefInputEnvelope
+    connect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+  }
+
+  export type ResultUncheckedCreateNestedManyWithoutTestDefInput = {
+    create?: XOR<ResultCreateWithoutTestDefInput, ResultUncheckedCreateWithoutTestDefInput> | ResultCreateWithoutTestDefInput[] | ResultUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: ResultCreateOrConnectWithoutTestDefInput | ResultCreateOrConnectWithoutTestDefInput[]
+    createMany?: ResultCreateManyTestDefInputEnvelope
+    connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+  }
+
+  export type TestUpdateOneWithoutTestDefsNestedInput = {
+    create?: XOR<TestCreateWithoutTestDefsInput, TestUncheckedCreateWithoutTestDefsInput>
+    connectOrCreate?: TestCreateOrConnectWithoutTestDefsInput
+    upsert?: TestUpsertWithoutTestDefsInput
+    disconnect?: TestWhereInput | boolean
+    delete?: TestWhereInput | boolean
+    connect?: TestWhereUniqueInput
+    update?: XOR<XOR<TestUpdateToOneWithWhereWithoutTestDefsInput, TestUpdateWithoutTestDefsInput>, TestUncheckedUpdateWithoutTestDefsInput>
+  }
+
+  export type TestCategoryUpdateOneRequiredWithoutDefinitionsNestedInput = {
+    create?: XOR<TestCategoryCreateWithoutDefinitionsInput, TestCategoryUncheckedCreateWithoutDefinitionsInput>
+    connectOrCreate?: TestCategoryCreateOrConnectWithoutDefinitionsInput
+    upsert?: TestCategoryUpsertWithoutDefinitionsInput
+    connect?: TestCategoryWhereUniqueInput
+    update?: XOR<XOR<TestCategoryUpdateToOneWithWhereWithoutDefinitionsInput, TestCategoryUpdateWithoutDefinitionsInput>, TestCategoryUncheckedUpdateWithoutDefinitionsInput>
+  }
+
+  export type NormalRangeUpdateManyWithoutTestDefNestedInput = {
+    create?: XOR<NormalRangeCreateWithoutTestDefInput, NormalRangeUncheckedCreateWithoutTestDefInput> | NormalRangeCreateWithoutTestDefInput[] | NormalRangeUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: NormalRangeCreateOrConnectWithoutTestDefInput | NormalRangeCreateOrConnectWithoutTestDefInput[]
+    upsert?: NormalRangeUpsertWithWhereUniqueWithoutTestDefInput | NormalRangeUpsertWithWhereUniqueWithoutTestDefInput[]
+    createMany?: NormalRangeCreateManyTestDefInputEnvelope
+    set?: NormalRangeWhereUniqueInput | NormalRangeWhereUniqueInput[]
+    disconnect?: NormalRangeWhereUniqueInput | NormalRangeWhereUniqueInput[]
+    delete?: NormalRangeWhereUniqueInput | NormalRangeWhereUniqueInput[]
+    connect?: NormalRangeWhereUniqueInput | NormalRangeWhereUniqueInput[]
+    update?: NormalRangeUpdateWithWhereUniqueWithoutTestDefInput | NormalRangeUpdateWithWhereUniqueWithoutTestDefInput[]
+    updateMany?: NormalRangeUpdateManyWithWhereWithoutTestDefInput | NormalRangeUpdateManyWithWhereWithoutTestDefInput[]
+    deleteMany?: NormalRangeScalarWhereInput | NormalRangeScalarWhereInput[]
+  }
+
+  export type InterpretationRuleUpdateManyWithoutTestDefNestedInput = {
+    create?: XOR<InterpretationRuleCreateWithoutTestDefInput, InterpretationRuleUncheckedCreateWithoutTestDefInput> | InterpretationRuleCreateWithoutTestDefInput[] | InterpretationRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: InterpretationRuleCreateOrConnectWithoutTestDefInput | InterpretationRuleCreateOrConnectWithoutTestDefInput[]
+    upsert?: InterpretationRuleUpsertWithWhereUniqueWithoutTestDefInput | InterpretationRuleUpsertWithWhereUniqueWithoutTestDefInput[]
+    createMany?: InterpretationRuleCreateManyTestDefInputEnvelope
+    set?: InterpretationRuleWhereUniqueInput | InterpretationRuleWhereUniqueInput[]
+    disconnect?: InterpretationRuleWhereUniqueInput | InterpretationRuleWhereUniqueInput[]
+    delete?: InterpretationRuleWhereUniqueInput | InterpretationRuleWhereUniqueInput[]
+    connect?: InterpretationRuleWhereUniqueInput | InterpretationRuleWhereUniqueInput[]
+    update?: InterpretationRuleUpdateWithWhereUniqueWithoutTestDefInput | InterpretationRuleUpdateWithWhereUniqueWithoutTestDefInput[]
+    updateMany?: InterpretationRuleUpdateManyWithWhereWithoutTestDefInput | InterpretationRuleUpdateManyWithWhereWithoutTestDefInput[]
+    deleteMany?: InterpretationRuleScalarWhereInput | InterpretationRuleScalarWhereInput[]
+  }
+
+  export type CalculationRuleUpdateManyWithoutTestDefNestedInput = {
+    create?: XOR<CalculationRuleCreateWithoutTestDefInput, CalculationRuleUncheckedCreateWithoutTestDefInput> | CalculationRuleCreateWithoutTestDefInput[] | CalculationRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: CalculationRuleCreateOrConnectWithoutTestDefInput | CalculationRuleCreateOrConnectWithoutTestDefInput[]
+    upsert?: CalculationRuleUpsertWithWhereUniqueWithoutTestDefInput | CalculationRuleUpsertWithWhereUniqueWithoutTestDefInput[]
+    createMany?: CalculationRuleCreateManyTestDefInputEnvelope
+    set?: CalculationRuleWhereUniqueInput | CalculationRuleWhereUniqueInput[]
+    disconnect?: CalculationRuleWhereUniqueInput | CalculationRuleWhereUniqueInput[]
+    delete?: CalculationRuleWhereUniqueInput | CalculationRuleWhereUniqueInput[]
+    connect?: CalculationRuleWhereUniqueInput | CalculationRuleWhereUniqueInput[]
+    update?: CalculationRuleUpdateWithWhereUniqueWithoutTestDefInput | CalculationRuleUpdateWithWhereUniqueWithoutTestDefInput[]
+    updateMany?: CalculationRuleUpdateManyWithWhereWithoutTestDefInput | CalculationRuleUpdateManyWithWhereWithoutTestDefInput[]
+    deleteMany?: CalculationRuleScalarWhereInput | CalculationRuleScalarWhereInput[]
+  }
+
+  export type DeltaCheckRuleUpdateManyWithoutTestDefNestedInput = {
+    create?: XOR<DeltaCheckRuleCreateWithoutTestDefInput, DeltaCheckRuleUncheckedCreateWithoutTestDefInput> | DeltaCheckRuleCreateWithoutTestDefInput[] | DeltaCheckRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: DeltaCheckRuleCreateOrConnectWithoutTestDefInput | DeltaCheckRuleCreateOrConnectWithoutTestDefInput[]
+    upsert?: DeltaCheckRuleUpsertWithWhereUniqueWithoutTestDefInput | DeltaCheckRuleUpsertWithWhereUniqueWithoutTestDefInput[]
+    createMany?: DeltaCheckRuleCreateManyTestDefInputEnvelope
+    set?: DeltaCheckRuleWhereUniqueInput | DeltaCheckRuleWhereUniqueInput[]
+    disconnect?: DeltaCheckRuleWhereUniqueInput | DeltaCheckRuleWhereUniqueInput[]
+    delete?: DeltaCheckRuleWhereUniqueInput | DeltaCheckRuleWhereUniqueInput[]
+    connect?: DeltaCheckRuleWhereUniqueInput | DeltaCheckRuleWhereUniqueInput[]
+    update?: DeltaCheckRuleUpdateWithWhereUniqueWithoutTestDefInput | DeltaCheckRuleUpdateWithWhereUniqueWithoutTestDefInput[]
+    updateMany?: DeltaCheckRuleUpdateManyWithWhereWithoutTestDefInput | DeltaCheckRuleUpdateManyWithWhereWithoutTestDefInput[]
+    deleteMany?: DeltaCheckRuleScalarWhereInput | DeltaCheckRuleScalarWhereInput[]
+  }
+
+  export type ReflexTestRuleUpdateManyWithoutParentTestDefNestedInput = {
+    create?: XOR<ReflexTestRuleCreateWithoutParentTestDefInput, ReflexTestRuleUncheckedCreateWithoutParentTestDefInput> | ReflexTestRuleCreateWithoutParentTestDefInput[] | ReflexTestRuleUncheckedCreateWithoutParentTestDefInput[]
+    connectOrCreate?: ReflexTestRuleCreateOrConnectWithoutParentTestDefInput | ReflexTestRuleCreateOrConnectWithoutParentTestDefInput[]
+    upsert?: ReflexTestRuleUpsertWithWhereUniqueWithoutParentTestDefInput | ReflexTestRuleUpsertWithWhereUniqueWithoutParentTestDefInput[]
+    createMany?: ReflexTestRuleCreateManyParentTestDefInputEnvelope
+    set?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    disconnect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    delete?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    connect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    update?: ReflexTestRuleUpdateWithWhereUniqueWithoutParentTestDefInput | ReflexTestRuleUpdateWithWhereUniqueWithoutParentTestDefInput[]
+    updateMany?: ReflexTestRuleUpdateManyWithWhereWithoutParentTestDefInput | ReflexTestRuleUpdateManyWithWhereWithoutParentTestDefInput[]
+    deleteMany?: ReflexTestRuleScalarWhereInput | ReflexTestRuleScalarWhereInput[]
+  }
+
+  export type ReflexTestRuleUpdateManyWithoutChildTestDefNestedInput = {
+    create?: XOR<ReflexTestRuleCreateWithoutChildTestDefInput, ReflexTestRuleUncheckedCreateWithoutChildTestDefInput> | ReflexTestRuleCreateWithoutChildTestDefInput[] | ReflexTestRuleUncheckedCreateWithoutChildTestDefInput[]
+    connectOrCreate?: ReflexTestRuleCreateOrConnectWithoutChildTestDefInput | ReflexTestRuleCreateOrConnectWithoutChildTestDefInput[]
+    upsert?: ReflexTestRuleUpsertWithWhereUniqueWithoutChildTestDefInput | ReflexTestRuleUpsertWithWhereUniqueWithoutChildTestDefInput[]
+    createMany?: ReflexTestRuleCreateManyChildTestDefInputEnvelope
+    set?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    disconnect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    delete?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    connect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    update?: ReflexTestRuleUpdateWithWhereUniqueWithoutChildTestDefInput | ReflexTestRuleUpdateWithWhereUniqueWithoutChildTestDefInput[]
+    updateMany?: ReflexTestRuleUpdateManyWithWhereWithoutChildTestDefInput | ReflexTestRuleUpdateManyWithWhereWithoutChildTestDefInput[]
+    deleteMany?: ReflexTestRuleScalarWhereInput | ReflexTestRuleScalarWhereInput[]
+  }
+
+  export type ResultUpdateManyWithoutTestDefNestedInput = {
+    create?: XOR<ResultCreateWithoutTestDefInput, ResultUncheckedCreateWithoutTestDefInput> | ResultCreateWithoutTestDefInput[] | ResultUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: ResultCreateOrConnectWithoutTestDefInput | ResultCreateOrConnectWithoutTestDefInput[]
+    upsert?: ResultUpsertWithWhereUniqueWithoutTestDefInput | ResultUpsertWithWhereUniqueWithoutTestDefInput[]
+    createMany?: ResultCreateManyTestDefInputEnvelope
+    set?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    disconnect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    delete?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    update?: ResultUpdateWithWhereUniqueWithoutTestDefInput | ResultUpdateWithWhereUniqueWithoutTestDefInput[]
+    updateMany?: ResultUpdateManyWithWhereWithoutTestDefInput | ResultUpdateManyWithWhereWithoutTestDefInput[]
+    deleteMany?: ResultScalarWhereInput | ResultScalarWhereInput[]
+  }
+
+  export type NormalRangeUncheckedUpdateManyWithoutTestDefNestedInput = {
+    create?: XOR<NormalRangeCreateWithoutTestDefInput, NormalRangeUncheckedCreateWithoutTestDefInput> | NormalRangeCreateWithoutTestDefInput[] | NormalRangeUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: NormalRangeCreateOrConnectWithoutTestDefInput | NormalRangeCreateOrConnectWithoutTestDefInput[]
+    upsert?: NormalRangeUpsertWithWhereUniqueWithoutTestDefInput | NormalRangeUpsertWithWhereUniqueWithoutTestDefInput[]
+    createMany?: NormalRangeCreateManyTestDefInputEnvelope
+    set?: NormalRangeWhereUniqueInput | NormalRangeWhereUniqueInput[]
+    disconnect?: NormalRangeWhereUniqueInput | NormalRangeWhereUniqueInput[]
+    delete?: NormalRangeWhereUniqueInput | NormalRangeWhereUniqueInput[]
+    connect?: NormalRangeWhereUniqueInput | NormalRangeWhereUniqueInput[]
+    update?: NormalRangeUpdateWithWhereUniqueWithoutTestDefInput | NormalRangeUpdateWithWhereUniqueWithoutTestDefInput[]
+    updateMany?: NormalRangeUpdateManyWithWhereWithoutTestDefInput | NormalRangeUpdateManyWithWhereWithoutTestDefInput[]
+    deleteMany?: NormalRangeScalarWhereInput | NormalRangeScalarWhereInput[]
+  }
+
+  export type InterpretationRuleUncheckedUpdateManyWithoutTestDefNestedInput = {
+    create?: XOR<InterpretationRuleCreateWithoutTestDefInput, InterpretationRuleUncheckedCreateWithoutTestDefInput> | InterpretationRuleCreateWithoutTestDefInput[] | InterpretationRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: InterpretationRuleCreateOrConnectWithoutTestDefInput | InterpretationRuleCreateOrConnectWithoutTestDefInput[]
+    upsert?: InterpretationRuleUpsertWithWhereUniqueWithoutTestDefInput | InterpretationRuleUpsertWithWhereUniqueWithoutTestDefInput[]
+    createMany?: InterpretationRuleCreateManyTestDefInputEnvelope
+    set?: InterpretationRuleWhereUniqueInput | InterpretationRuleWhereUniqueInput[]
+    disconnect?: InterpretationRuleWhereUniqueInput | InterpretationRuleWhereUniqueInput[]
+    delete?: InterpretationRuleWhereUniqueInput | InterpretationRuleWhereUniqueInput[]
+    connect?: InterpretationRuleWhereUniqueInput | InterpretationRuleWhereUniqueInput[]
+    update?: InterpretationRuleUpdateWithWhereUniqueWithoutTestDefInput | InterpretationRuleUpdateWithWhereUniqueWithoutTestDefInput[]
+    updateMany?: InterpretationRuleUpdateManyWithWhereWithoutTestDefInput | InterpretationRuleUpdateManyWithWhereWithoutTestDefInput[]
+    deleteMany?: InterpretationRuleScalarWhereInput | InterpretationRuleScalarWhereInput[]
+  }
+
+  export type CalculationRuleUncheckedUpdateManyWithoutTestDefNestedInput = {
+    create?: XOR<CalculationRuleCreateWithoutTestDefInput, CalculationRuleUncheckedCreateWithoutTestDefInput> | CalculationRuleCreateWithoutTestDefInput[] | CalculationRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: CalculationRuleCreateOrConnectWithoutTestDefInput | CalculationRuleCreateOrConnectWithoutTestDefInput[]
+    upsert?: CalculationRuleUpsertWithWhereUniqueWithoutTestDefInput | CalculationRuleUpsertWithWhereUniqueWithoutTestDefInput[]
+    createMany?: CalculationRuleCreateManyTestDefInputEnvelope
+    set?: CalculationRuleWhereUniqueInput | CalculationRuleWhereUniqueInput[]
+    disconnect?: CalculationRuleWhereUniqueInput | CalculationRuleWhereUniqueInput[]
+    delete?: CalculationRuleWhereUniqueInput | CalculationRuleWhereUniqueInput[]
+    connect?: CalculationRuleWhereUniqueInput | CalculationRuleWhereUniqueInput[]
+    update?: CalculationRuleUpdateWithWhereUniqueWithoutTestDefInput | CalculationRuleUpdateWithWhereUniqueWithoutTestDefInput[]
+    updateMany?: CalculationRuleUpdateManyWithWhereWithoutTestDefInput | CalculationRuleUpdateManyWithWhereWithoutTestDefInput[]
+    deleteMany?: CalculationRuleScalarWhereInput | CalculationRuleScalarWhereInput[]
+  }
+
+  export type DeltaCheckRuleUncheckedUpdateManyWithoutTestDefNestedInput = {
+    create?: XOR<DeltaCheckRuleCreateWithoutTestDefInput, DeltaCheckRuleUncheckedCreateWithoutTestDefInput> | DeltaCheckRuleCreateWithoutTestDefInput[] | DeltaCheckRuleUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: DeltaCheckRuleCreateOrConnectWithoutTestDefInput | DeltaCheckRuleCreateOrConnectWithoutTestDefInput[]
+    upsert?: DeltaCheckRuleUpsertWithWhereUniqueWithoutTestDefInput | DeltaCheckRuleUpsertWithWhereUniqueWithoutTestDefInput[]
+    createMany?: DeltaCheckRuleCreateManyTestDefInputEnvelope
+    set?: DeltaCheckRuleWhereUniqueInput | DeltaCheckRuleWhereUniqueInput[]
+    disconnect?: DeltaCheckRuleWhereUniqueInput | DeltaCheckRuleWhereUniqueInput[]
+    delete?: DeltaCheckRuleWhereUniqueInput | DeltaCheckRuleWhereUniqueInput[]
+    connect?: DeltaCheckRuleWhereUniqueInput | DeltaCheckRuleWhereUniqueInput[]
+    update?: DeltaCheckRuleUpdateWithWhereUniqueWithoutTestDefInput | DeltaCheckRuleUpdateWithWhereUniqueWithoutTestDefInput[]
+    updateMany?: DeltaCheckRuleUpdateManyWithWhereWithoutTestDefInput | DeltaCheckRuleUpdateManyWithWhereWithoutTestDefInput[]
+    deleteMany?: DeltaCheckRuleScalarWhereInput | DeltaCheckRuleScalarWhereInput[]
+  }
+
+  export type ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefNestedInput = {
+    create?: XOR<ReflexTestRuleCreateWithoutParentTestDefInput, ReflexTestRuleUncheckedCreateWithoutParentTestDefInput> | ReflexTestRuleCreateWithoutParentTestDefInput[] | ReflexTestRuleUncheckedCreateWithoutParentTestDefInput[]
+    connectOrCreate?: ReflexTestRuleCreateOrConnectWithoutParentTestDefInput | ReflexTestRuleCreateOrConnectWithoutParentTestDefInput[]
+    upsert?: ReflexTestRuleUpsertWithWhereUniqueWithoutParentTestDefInput | ReflexTestRuleUpsertWithWhereUniqueWithoutParentTestDefInput[]
+    createMany?: ReflexTestRuleCreateManyParentTestDefInputEnvelope
+    set?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    disconnect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    delete?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    connect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    update?: ReflexTestRuleUpdateWithWhereUniqueWithoutParentTestDefInput | ReflexTestRuleUpdateWithWhereUniqueWithoutParentTestDefInput[]
+    updateMany?: ReflexTestRuleUpdateManyWithWhereWithoutParentTestDefInput | ReflexTestRuleUpdateManyWithWhereWithoutParentTestDefInput[]
+    deleteMany?: ReflexTestRuleScalarWhereInput | ReflexTestRuleScalarWhereInput[]
+  }
+
+  export type ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefNestedInput = {
+    create?: XOR<ReflexTestRuleCreateWithoutChildTestDefInput, ReflexTestRuleUncheckedCreateWithoutChildTestDefInput> | ReflexTestRuleCreateWithoutChildTestDefInput[] | ReflexTestRuleUncheckedCreateWithoutChildTestDefInput[]
+    connectOrCreate?: ReflexTestRuleCreateOrConnectWithoutChildTestDefInput | ReflexTestRuleCreateOrConnectWithoutChildTestDefInput[]
+    upsert?: ReflexTestRuleUpsertWithWhereUniqueWithoutChildTestDefInput | ReflexTestRuleUpsertWithWhereUniqueWithoutChildTestDefInput[]
+    createMany?: ReflexTestRuleCreateManyChildTestDefInputEnvelope
+    set?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    disconnect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    delete?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    connect?: ReflexTestRuleWhereUniqueInput | ReflexTestRuleWhereUniqueInput[]
+    update?: ReflexTestRuleUpdateWithWhereUniqueWithoutChildTestDefInput | ReflexTestRuleUpdateWithWhereUniqueWithoutChildTestDefInput[]
+    updateMany?: ReflexTestRuleUpdateManyWithWhereWithoutChildTestDefInput | ReflexTestRuleUpdateManyWithWhereWithoutChildTestDefInput[]
+    deleteMany?: ReflexTestRuleScalarWhereInput | ReflexTestRuleScalarWhereInput[]
+  }
+
+  export type ResultUncheckedUpdateManyWithoutTestDefNestedInput = {
+    create?: XOR<ResultCreateWithoutTestDefInput, ResultUncheckedCreateWithoutTestDefInput> | ResultCreateWithoutTestDefInput[] | ResultUncheckedCreateWithoutTestDefInput[]
+    connectOrCreate?: ResultCreateOrConnectWithoutTestDefInput | ResultCreateOrConnectWithoutTestDefInput[]
+    upsert?: ResultUpsertWithWhereUniqueWithoutTestDefInput | ResultUpsertWithWhereUniqueWithoutTestDefInput[]
+    createMany?: ResultCreateManyTestDefInputEnvelope
+    set?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    disconnect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    delete?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    update?: ResultUpdateWithWhereUniqueWithoutTestDefInput | ResultUpdateWithWhereUniqueWithoutTestDefInput[]
+    updateMany?: ResultUpdateManyWithWhereWithoutTestDefInput | ResultUpdateManyWithWhereWithoutTestDefInput[]
+    deleteMany?: ResultScalarWhereInput | ResultScalarWhereInput[]
+  }
+
+  export type TestDefinitionCreateNestedOneWithoutNormalRangesInput = {
+    create?: XOR<TestDefinitionCreateWithoutNormalRangesInput, TestDefinitionUncheckedCreateWithoutNormalRangesInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutNormalRangesInput
+    connect?: TestDefinitionWhereUniqueInput
+  }
+
+  export type NullableIntFieldUpdateOperationsInput = {
+    set?: number | null
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
+  export type TestDefinitionUpdateOneRequiredWithoutNormalRangesNestedInput = {
+    create?: XOR<TestDefinitionCreateWithoutNormalRangesInput, TestDefinitionUncheckedCreateWithoutNormalRangesInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutNormalRangesInput
+    upsert?: TestDefinitionUpsertWithoutNormalRangesInput
+    connect?: TestDefinitionWhereUniqueInput
+    update?: XOR<XOR<TestDefinitionUpdateToOneWithWhereWithoutNormalRangesInput, TestDefinitionUpdateWithoutNormalRangesInput>, TestDefinitionUncheckedUpdateWithoutNormalRangesInput>
+  }
+
+  export type TestDefinitionCreateNestedOneWithoutCalculationRulesInput = {
+    create?: XOR<TestDefinitionCreateWithoutCalculationRulesInput, TestDefinitionUncheckedCreateWithoutCalculationRulesInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutCalculationRulesInput
+    connect?: TestDefinitionWhereUniqueInput
+  }
+
+  export type TestDefinitionUpdateOneRequiredWithoutCalculationRulesNestedInput = {
+    create?: XOR<TestDefinitionCreateWithoutCalculationRulesInput, TestDefinitionUncheckedCreateWithoutCalculationRulesInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutCalculationRulesInput
+    upsert?: TestDefinitionUpsertWithoutCalculationRulesInput
+    connect?: TestDefinitionWhereUniqueInput
+    update?: XOR<XOR<TestDefinitionUpdateToOneWithWhereWithoutCalculationRulesInput, TestDefinitionUpdateWithoutCalculationRulesInput>, TestDefinitionUncheckedUpdateWithoutCalculationRulesInput>
+  }
+
+  export type TestDefinitionCreateNestedOneWithoutInterpretationsInput = {
+    create?: XOR<TestDefinitionCreateWithoutInterpretationsInput, TestDefinitionUncheckedCreateWithoutInterpretationsInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutInterpretationsInput
+    connect?: TestDefinitionWhereUniqueInput
+  }
+
+  export type ResultCreateNestedManyWithoutInterpretationInput = {
+    create?: XOR<ResultCreateWithoutInterpretationInput, ResultUncheckedCreateWithoutInterpretationInput> | ResultCreateWithoutInterpretationInput[] | ResultUncheckedCreateWithoutInterpretationInput[]
+    connectOrCreate?: ResultCreateOrConnectWithoutInterpretationInput | ResultCreateOrConnectWithoutInterpretationInput[]
+    createMany?: ResultCreateManyInterpretationInputEnvelope
+    connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+  }
+
+  export type ResultUncheckedCreateNestedManyWithoutInterpretationInput = {
+    create?: XOR<ResultCreateWithoutInterpretationInput, ResultUncheckedCreateWithoutInterpretationInput> | ResultCreateWithoutInterpretationInput[] | ResultUncheckedCreateWithoutInterpretationInput[]
+    connectOrCreate?: ResultCreateOrConnectWithoutInterpretationInput | ResultCreateOrConnectWithoutInterpretationInput[]
+    createMany?: ResultCreateManyInterpretationInputEnvelope
+    connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+  }
+
+  export type TestDefinitionUpdateOneRequiredWithoutInterpretationsNestedInput = {
+    create?: XOR<TestDefinitionCreateWithoutInterpretationsInput, TestDefinitionUncheckedCreateWithoutInterpretationsInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutInterpretationsInput
+    upsert?: TestDefinitionUpsertWithoutInterpretationsInput
+    connect?: TestDefinitionWhereUniqueInput
+    update?: XOR<XOR<TestDefinitionUpdateToOneWithWhereWithoutInterpretationsInput, TestDefinitionUpdateWithoutInterpretationsInput>, TestDefinitionUncheckedUpdateWithoutInterpretationsInput>
+  }
+
+  export type ResultUpdateManyWithoutInterpretationNestedInput = {
+    create?: XOR<ResultCreateWithoutInterpretationInput, ResultUncheckedCreateWithoutInterpretationInput> | ResultCreateWithoutInterpretationInput[] | ResultUncheckedCreateWithoutInterpretationInput[]
+    connectOrCreate?: ResultCreateOrConnectWithoutInterpretationInput | ResultCreateOrConnectWithoutInterpretationInput[]
+    upsert?: ResultUpsertWithWhereUniqueWithoutInterpretationInput | ResultUpsertWithWhereUniqueWithoutInterpretationInput[]
+    createMany?: ResultCreateManyInterpretationInputEnvelope
+    set?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    disconnect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    delete?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    update?: ResultUpdateWithWhereUniqueWithoutInterpretationInput | ResultUpdateWithWhereUniqueWithoutInterpretationInput[]
+    updateMany?: ResultUpdateManyWithWhereWithoutInterpretationInput | ResultUpdateManyWithWhereWithoutInterpretationInput[]
+    deleteMany?: ResultScalarWhereInput | ResultScalarWhereInput[]
+  }
+
+  export type ResultUncheckedUpdateManyWithoutInterpretationNestedInput = {
+    create?: XOR<ResultCreateWithoutInterpretationInput, ResultUncheckedCreateWithoutInterpretationInput> | ResultCreateWithoutInterpretationInput[] | ResultUncheckedCreateWithoutInterpretationInput[]
+    connectOrCreate?: ResultCreateOrConnectWithoutInterpretationInput | ResultCreateOrConnectWithoutInterpretationInput[]
+    upsert?: ResultUpsertWithWhereUniqueWithoutInterpretationInput | ResultUpsertWithWhereUniqueWithoutInterpretationInput[]
+    createMany?: ResultCreateManyInterpretationInputEnvelope
+    set?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    disconnect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    delete?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    connect?: ResultWhereUniqueInput | ResultWhereUniqueInput[]
+    update?: ResultUpdateWithWhereUniqueWithoutInterpretationInput | ResultUpdateWithWhereUniqueWithoutInterpretationInput[]
+    updateMany?: ResultUpdateManyWithWhereWithoutInterpretationInput | ResultUpdateManyWithWhereWithoutInterpretationInput[]
+    deleteMany?: ResultScalarWhereInput | ResultScalarWhereInput[]
+  }
+
+  export type TestDefinitionCreateNestedOneWithoutDeltaCheckRulesInput = {
+    create?: XOR<TestDefinitionCreateWithoutDeltaCheckRulesInput, TestDefinitionUncheckedCreateWithoutDeltaCheckRulesInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutDeltaCheckRulesInput
+    connect?: TestDefinitionWhereUniqueInput
+  }
+
+  export type DeltaCheckResultCreateNestedManyWithoutRuleInput = {
+    create?: XOR<DeltaCheckResultCreateWithoutRuleInput, DeltaCheckResultUncheckedCreateWithoutRuleInput> | DeltaCheckResultCreateWithoutRuleInput[] | DeltaCheckResultUncheckedCreateWithoutRuleInput[]
+    connectOrCreate?: DeltaCheckResultCreateOrConnectWithoutRuleInput | DeltaCheckResultCreateOrConnectWithoutRuleInput[]
+    createMany?: DeltaCheckResultCreateManyRuleInputEnvelope
+    connect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+  }
+
+  export type DeltaCheckResultUncheckedCreateNestedManyWithoutRuleInput = {
+    create?: XOR<DeltaCheckResultCreateWithoutRuleInput, DeltaCheckResultUncheckedCreateWithoutRuleInput> | DeltaCheckResultCreateWithoutRuleInput[] | DeltaCheckResultUncheckedCreateWithoutRuleInput[]
+    connectOrCreate?: DeltaCheckResultCreateOrConnectWithoutRuleInput | DeltaCheckResultCreateOrConnectWithoutRuleInput[]
+    createMany?: DeltaCheckResultCreateManyRuleInputEnvelope
+    connect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+  }
+
+  export type TestDefinitionUpdateOneRequiredWithoutDeltaCheckRulesNestedInput = {
+    create?: XOR<TestDefinitionCreateWithoutDeltaCheckRulesInput, TestDefinitionUncheckedCreateWithoutDeltaCheckRulesInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutDeltaCheckRulesInput
+    upsert?: TestDefinitionUpsertWithoutDeltaCheckRulesInput
+    connect?: TestDefinitionWhereUniqueInput
+    update?: XOR<XOR<TestDefinitionUpdateToOneWithWhereWithoutDeltaCheckRulesInput, TestDefinitionUpdateWithoutDeltaCheckRulesInput>, TestDefinitionUncheckedUpdateWithoutDeltaCheckRulesInput>
+  }
+
+  export type DeltaCheckResultUpdateManyWithoutRuleNestedInput = {
+    create?: XOR<DeltaCheckResultCreateWithoutRuleInput, DeltaCheckResultUncheckedCreateWithoutRuleInput> | DeltaCheckResultCreateWithoutRuleInput[] | DeltaCheckResultUncheckedCreateWithoutRuleInput[]
+    connectOrCreate?: DeltaCheckResultCreateOrConnectWithoutRuleInput | DeltaCheckResultCreateOrConnectWithoutRuleInput[]
+    upsert?: DeltaCheckResultUpsertWithWhereUniqueWithoutRuleInput | DeltaCheckResultUpsertWithWhereUniqueWithoutRuleInput[]
+    createMany?: DeltaCheckResultCreateManyRuleInputEnvelope
+    set?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    disconnect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    delete?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    connect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    update?: DeltaCheckResultUpdateWithWhereUniqueWithoutRuleInput | DeltaCheckResultUpdateWithWhereUniqueWithoutRuleInput[]
+    updateMany?: DeltaCheckResultUpdateManyWithWhereWithoutRuleInput | DeltaCheckResultUpdateManyWithWhereWithoutRuleInput[]
+    deleteMany?: DeltaCheckResultScalarWhereInput | DeltaCheckResultScalarWhereInput[]
+  }
+
+  export type DeltaCheckResultUncheckedUpdateManyWithoutRuleNestedInput = {
+    create?: XOR<DeltaCheckResultCreateWithoutRuleInput, DeltaCheckResultUncheckedCreateWithoutRuleInput> | DeltaCheckResultCreateWithoutRuleInput[] | DeltaCheckResultUncheckedCreateWithoutRuleInput[]
+    connectOrCreate?: DeltaCheckResultCreateOrConnectWithoutRuleInput | DeltaCheckResultCreateOrConnectWithoutRuleInput[]
+    upsert?: DeltaCheckResultUpsertWithWhereUniqueWithoutRuleInput | DeltaCheckResultUpsertWithWhereUniqueWithoutRuleInput[]
+    createMany?: DeltaCheckResultCreateManyRuleInputEnvelope
+    set?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    disconnect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    delete?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    connect?: DeltaCheckResultWhereUniqueInput | DeltaCheckResultWhereUniqueInput[]
+    update?: DeltaCheckResultUpdateWithWhereUniqueWithoutRuleInput | DeltaCheckResultUpdateWithWhereUniqueWithoutRuleInput[]
+    updateMany?: DeltaCheckResultUpdateManyWithWhereWithoutRuleInput | DeltaCheckResultUpdateManyWithWhereWithoutRuleInput[]
+    deleteMany?: DeltaCheckResultScalarWhereInput | DeltaCheckResultScalarWhereInput[]
+  }
+
+  export type TestDefinitionCreateNestedOneWithoutReflexRulesAsParentInput = {
+    create?: XOR<TestDefinitionCreateWithoutReflexRulesAsParentInput, TestDefinitionUncheckedCreateWithoutReflexRulesAsParentInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutReflexRulesAsParentInput
+    connect?: TestDefinitionWhereUniqueInput
+  }
+
+  export type TestDefinitionCreateNestedOneWithoutReflexRulesAsChildInput = {
+    create?: XOR<TestDefinitionCreateWithoutReflexRulesAsChildInput, TestDefinitionUncheckedCreateWithoutReflexRulesAsChildInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutReflexRulesAsChildInput
+    connect?: TestDefinitionWhereUniqueInput
+  }
+
+  export type TestDefinitionUpdateOneRequiredWithoutReflexRulesAsParentNestedInput = {
+    create?: XOR<TestDefinitionCreateWithoutReflexRulesAsParentInput, TestDefinitionUncheckedCreateWithoutReflexRulesAsParentInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutReflexRulesAsParentInput
+    upsert?: TestDefinitionUpsertWithoutReflexRulesAsParentInput
+    connect?: TestDefinitionWhereUniqueInput
+    update?: XOR<XOR<TestDefinitionUpdateToOneWithWhereWithoutReflexRulesAsParentInput, TestDefinitionUpdateWithoutReflexRulesAsParentInput>, TestDefinitionUncheckedUpdateWithoutReflexRulesAsParentInput>
+  }
+
+  export type TestDefinitionUpdateOneRequiredWithoutReflexRulesAsChildNestedInput = {
+    create?: XOR<TestDefinitionCreateWithoutReflexRulesAsChildInput, TestDefinitionUncheckedCreateWithoutReflexRulesAsChildInput>
+    connectOrCreate?: TestDefinitionCreateOrConnectWithoutReflexRulesAsChildInput
+    upsert?: TestDefinitionUpsertWithoutReflexRulesAsChildInput
+    connect?: TestDefinitionWhereUniqueInput
+    update?: XOR<XOR<TestDefinitionUpdateToOneWithWhereWithoutReflexRulesAsChildInput, TestDefinitionUpdateWithoutReflexRulesAsChildInput>, TestDefinitionUncheckedUpdateWithoutReflexRulesAsChildInput>
+  }
+
+  export type ResultCreateNestedOneWithoutDeltaCheckResultsInput = {
+    create?: XOR<ResultCreateWithoutDeltaCheckResultsInput, ResultUncheckedCreateWithoutDeltaCheckResultsInput>
+    connectOrCreate?: ResultCreateOrConnectWithoutDeltaCheckResultsInput
+    connect?: ResultWhereUniqueInput
+  }
+
+  export type DeltaCheckRuleCreateNestedOneWithoutDeltaCheckResultsInput = {
+    create?: XOR<DeltaCheckRuleCreateWithoutDeltaCheckResultsInput, DeltaCheckRuleUncheckedCreateWithoutDeltaCheckResultsInput>
+    connectOrCreate?: DeltaCheckRuleCreateOrConnectWithoutDeltaCheckResultsInput
+    connect?: DeltaCheckRuleWhereUniqueInput
+  }
+
+  export type ResultUpdateOneRequiredWithoutDeltaCheckResultsNestedInput = {
+    create?: XOR<ResultCreateWithoutDeltaCheckResultsInput, ResultUncheckedCreateWithoutDeltaCheckResultsInput>
+    connectOrCreate?: ResultCreateOrConnectWithoutDeltaCheckResultsInput
+    upsert?: ResultUpsertWithoutDeltaCheckResultsInput
+    connect?: ResultWhereUniqueInput
+    update?: XOR<XOR<ResultUpdateToOneWithWhereWithoutDeltaCheckResultsInput, ResultUpdateWithoutDeltaCheckResultsInput>, ResultUncheckedUpdateWithoutDeltaCheckResultsInput>
+  }
+
+  export type DeltaCheckRuleUpdateOneRequiredWithoutDeltaCheckResultsNestedInput = {
+    create?: XOR<DeltaCheckRuleCreateWithoutDeltaCheckResultsInput, DeltaCheckRuleUncheckedCreateWithoutDeltaCheckResultsInput>
+    connectOrCreate?: DeltaCheckRuleCreateOrConnectWithoutDeltaCheckResultsInput
+    upsert?: DeltaCheckRuleUpsertWithoutDeltaCheckResultsInput
+    connect?: DeltaCheckRuleWhereUniqueInput
+    update?: XOR<XOR<DeltaCheckRuleUpdateToOneWithWhereWithoutDeltaCheckResultsInput, DeltaCheckRuleUpdateWithoutDeltaCheckResultsInput>, DeltaCheckRuleUncheckedUpdateWithoutDeltaCheckResultsInput>
+  }
+
+  export type EmailLogCreateNestedManyWithoutTemplateInput = {
+    create?: XOR<EmailLogCreateWithoutTemplateInput, EmailLogUncheckedCreateWithoutTemplateInput> | EmailLogCreateWithoutTemplateInput[] | EmailLogUncheckedCreateWithoutTemplateInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutTemplateInput | EmailLogCreateOrConnectWithoutTemplateInput[]
+    createMany?: EmailLogCreateManyTemplateInputEnvelope
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+  }
+
+  export type EmailLogUncheckedCreateNestedManyWithoutTemplateInput = {
+    create?: XOR<EmailLogCreateWithoutTemplateInput, EmailLogUncheckedCreateWithoutTemplateInput> | EmailLogCreateWithoutTemplateInput[] | EmailLogUncheckedCreateWithoutTemplateInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutTemplateInput | EmailLogCreateOrConnectWithoutTemplateInput[]
+    createMany?: EmailLogCreateManyTemplateInputEnvelope
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+  }
+
+  export type EmailLogUpdateManyWithoutTemplateNestedInput = {
+    create?: XOR<EmailLogCreateWithoutTemplateInput, EmailLogUncheckedCreateWithoutTemplateInput> | EmailLogCreateWithoutTemplateInput[] | EmailLogUncheckedCreateWithoutTemplateInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutTemplateInput | EmailLogCreateOrConnectWithoutTemplateInput[]
+    upsert?: EmailLogUpsertWithWhereUniqueWithoutTemplateInput | EmailLogUpsertWithWhereUniqueWithoutTemplateInput[]
+    createMany?: EmailLogCreateManyTemplateInputEnvelope
+    set?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    disconnect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    delete?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    update?: EmailLogUpdateWithWhereUniqueWithoutTemplateInput | EmailLogUpdateWithWhereUniqueWithoutTemplateInput[]
+    updateMany?: EmailLogUpdateManyWithWhereWithoutTemplateInput | EmailLogUpdateManyWithWhereWithoutTemplateInput[]
+    deleteMany?: EmailLogScalarWhereInput | EmailLogScalarWhereInput[]
+  }
+
+  export type EmailLogUncheckedUpdateManyWithoutTemplateNestedInput = {
+    create?: XOR<EmailLogCreateWithoutTemplateInput, EmailLogUncheckedCreateWithoutTemplateInput> | EmailLogCreateWithoutTemplateInput[] | EmailLogUncheckedCreateWithoutTemplateInput[]
+    connectOrCreate?: EmailLogCreateOrConnectWithoutTemplateInput | EmailLogCreateOrConnectWithoutTemplateInput[]
+    upsert?: EmailLogUpsertWithWhereUniqueWithoutTemplateInput | EmailLogUpsertWithWhereUniqueWithoutTemplateInput[]
+    createMany?: EmailLogCreateManyTemplateInputEnvelope
+    set?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    disconnect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    delete?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    connect?: EmailLogWhereUniqueInput | EmailLogWhereUniqueInput[]
+    update?: EmailLogUpdateWithWhereUniqueWithoutTemplateInput | EmailLogUpdateWithWhereUniqueWithoutTemplateInput[]
+    updateMany?: EmailLogUpdateManyWithWhereWithoutTemplateInput | EmailLogUpdateManyWithWhereWithoutTemplateInput[]
+    deleteMany?: EmailLogScalarWhereInput | EmailLogScalarWhereInput[]
+  }
+
+  export type EmailTemplateCreateNestedOneWithoutEmailLogsInput = {
+    create?: XOR<EmailTemplateCreateWithoutEmailLogsInput, EmailTemplateUncheckedCreateWithoutEmailLogsInput>
+    connectOrCreate?: EmailTemplateCreateOrConnectWithoutEmailLogsInput
+    connect?: EmailTemplateWhereUniqueInput
+  }
+
+  export type ResultCreateNestedOneWithoutEmailLogsInput = {
+    create?: XOR<ResultCreateWithoutEmailLogsInput, ResultUncheckedCreateWithoutEmailLogsInput>
+    connectOrCreate?: ResultCreateOrConnectWithoutEmailLogsInput
+    connect?: ResultWhereUniqueInput
+  }
+
+  export type SampleCreateNestedOneWithoutEmailLogsInput = {
+    create?: XOR<SampleCreateWithoutEmailLogsInput, SampleUncheckedCreateWithoutEmailLogsInput>
+    connectOrCreate?: SampleCreateOrConnectWithoutEmailLogsInput
+    connect?: SampleWhereUniqueInput
+  }
+
+  export type InvoiceCreateNestedOneWithoutEmailLogsInput = {
+    create?: XOR<InvoiceCreateWithoutEmailLogsInput, InvoiceUncheckedCreateWithoutEmailLogsInput>
+    connectOrCreate?: InvoiceCreateOrConnectWithoutEmailLogsInput
+    connect?: InvoiceWhereUniqueInput
+  }
+
+  export type EmailTemplateUpdateOneWithoutEmailLogsNestedInput = {
+    create?: XOR<EmailTemplateCreateWithoutEmailLogsInput, EmailTemplateUncheckedCreateWithoutEmailLogsInput>
+    connectOrCreate?: EmailTemplateCreateOrConnectWithoutEmailLogsInput
+    upsert?: EmailTemplateUpsertWithoutEmailLogsInput
+    disconnect?: EmailTemplateWhereInput | boolean
+    delete?: EmailTemplateWhereInput | boolean
+    connect?: EmailTemplateWhereUniqueInput
+    update?: XOR<XOR<EmailTemplateUpdateToOneWithWhereWithoutEmailLogsInput, EmailTemplateUpdateWithoutEmailLogsInput>, EmailTemplateUncheckedUpdateWithoutEmailLogsInput>
+  }
+
+  export type ResultUpdateOneWithoutEmailLogsNestedInput = {
+    create?: XOR<ResultCreateWithoutEmailLogsInput, ResultUncheckedCreateWithoutEmailLogsInput>
+    connectOrCreate?: ResultCreateOrConnectWithoutEmailLogsInput
+    upsert?: ResultUpsertWithoutEmailLogsInput
+    disconnect?: ResultWhereInput | boolean
+    delete?: ResultWhereInput | boolean
+    connect?: ResultWhereUniqueInput
+    update?: XOR<XOR<ResultUpdateToOneWithWhereWithoutEmailLogsInput, ResultUpdateWithoutEmailLogsInput>, ResultUncheckedUpdateWithoutEmailLogsInput>
+  }
+
+  export type SampleUpdateOneWithoutEmailLogsNestedInput = {
+    create?: XOR<SampleCreateWithoutEmailLogsInput, SampleUncheckedCreateWithoutEmailLogsInput>
+    connectOrCreate?: SampleCreateOrConnectWithoutEmailLogsInput
+    upsert?: SampleUpsertWithoutEmailLogsInput
+    disconnect?: SampleWhereInput | boolean
+    delete?: SampleWhereInput | boolean
+    connect?: SampleWhereUniqueInput
+    update?: XOR<XOR<SampleUpdateToOneWithWhereWithoutEmailLogsInput, SampleUpdateWithoutEmailLogsInput>, SampleUncheckedUpdateWithoutEmailLogsInput>
+  }
+
+  export type InvoiceUpdateOneWithoutEmailLogsNestedInput = {
+    create?: XOR<InvoiceCreateWithoutEmailLogsInput, InvoiceUncheckedCreateWithoutEmailLogsInput>
+    connectOrCreate?: InvoiceCreateOrConnectWithoutEmailLogsInput
+    upsert?: InvoiceUpsertWithoutEmailLogsInput
+    disconnect?: InvoiceWhereInput | boolean
+    delete?: InvoiceWhereInput | boolean
+    connect?: InvoiceWhereUniqueInput
+    update?: XOR<XOR<InvoiceUpdateToOneWithWhereWithoutEmailLogsInput, InvoiceUpdateWithoutEmailLogsInput>, InvoiceUncheckedUpdateWithoutEmailLogsInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -26302,6 +43234,22 @@ export namespace Prisma {
     _max?: NestedFloatNullableFilter<$PrismaModel>
   }
 
+  export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | null
+    notIn?: number[] | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedIntNullableFilter<$PrismaModel>
+    _max?: NestedIntNullableFilter<$PrismaModel>
+  }
+
   export type PatientCreateWithoutLabInput = {
     id?: string
     firstName: string
@@ -26355,6 +43303,7 @@ export namespace Prisma {
     sample?: SampleCreateNestedOneWithoutInvoiceInput
     items?: InvoiceItemCreateNestedManyWithoutInvoiceInput
     commissions?: CommissionCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceUncheckedCreateWithoutLabInput = {
@@ -26373,6 +43322,7 @@ export namespace Prisma {
     createdAt?: Date | string
     items?: InvoiceItemUncheckedCreateNestedManyWithoutInvoiceInput
     commissions?: CommissionUncheckedCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceCreateOrConnectWithoutLabInput = {
@@ -26699,6 +43649,7 @@ export namespace Prisma {
     profile?: TestProfileCreateNestedOneWithoutSamplesInput
     tests?: SampleTestCreateNestedManyWithoutSampleInput
     results?: ResultCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogCreateNestedManyWithoutSampleInput
     invoice?: InvoiceCreateNestedOneWithoutSampleInput
   }
 
@@ -26712,6 +43663,7 @@ export namespace Prisma {
     createdAt?: Date | string
     tests?: SampleTestUncheckedCreateNestedManyWithoutSampleInput
     results?: ResultUncheckedCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutSampleInput
     invoice?: InvoiceUncheckedCreateNestedOneWithoutSampleInput
   }
 
@@ -26740,6 +43692,7 @@ export namespace Prisma {
     lab: LabCreateNestedOneWithoutInvoicesInput
     items?: InvoiceItemCreateNestedManyWithoutInvoiceInput
     commissions?: CommissionCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceUncheckedCreateWithoutPatientInput = {
@@ -26758,6 +43711,7 @@ export namespace Prisma {
     createdAt?: Date | string
     items?: InvoiceItemUncheckedCreateNestedManyWithoutInvoiceInput
     commissions?: CommissionUncheckedCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceCreateOrConnectWithoutPatientInput = {
@@ -26899,23 +43853,37 @@ export namespace Prisma {
   export type ResultCreateWithoutTestInput = {
     id?: string
     value: string
+    calculatedValues?: string | null
     isNormal?: boolean
+    abnormalFlags?: string | null
     notes?: string | null
     enteredBy?: string | null
     enteredAt?: Date | string
     createdAt?: Date | string
+    updatedAt?: Date | string
     sample: SampleCreateNestedOneWithoutResultsInput
+    testDef?: TestDefinitionCreateNestedOneWithoutTestResultsInput
+    interpretation?: InterpretationRuleCreateNestedOneWithoutResultsInput
+    deltaCheckResults?: DeltaCheckResultCreateNestedManyWithoutResultInput
+    emailLogs?: EmailLogCreateNestedManyWithoutResultInput
   }
 
   export type ResultUncheckedCreateWithoutTestInput = {
     id?: string
     sampleId: string
+    testDefId?: string | null
     value: string
+    calculatedValues?: string | null
     isNormal?: boolean
+    abnormalFlags?: string | null
+    interpretationId?: string | null
     notes?: string | null
     enteredBy?: string | null
     enteredAt?: Date | string
     createdAt?: Date | string
+    updatedAt?: Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedCreateNestedManyWithoutResultInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutResultInput
   }
 
   export type ResultCreateOrConnectWithoutTestInput = {
@@ -26925,6 +43893,55 @@ export namespace Prisma {
 
   export type ResultCreateManyTestInputEnvelope = {
     data: ResultCreateManyTestInput | ResultCreateManyTestInput[]
+  }
+
+  export type TestDefinitionCreateWithoutTestInput = {
+    id?: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    category: TestCategoryCreateNestedOneWithoutDefinitionsInput
+    normalRanges?: NormalRangeCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionUncheckedCreateWithoutTestInput = {
+    id?: string
+    categoryId: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    normalRanges?: NormalRangeUncheckedCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultUncheckedCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionCreateOrConnectWithoutTestInput = {
+    where: TestDefinitionWhereUniqueInput
+    create: XOR<TestDefinitionCreateWithoutTestInput, TestDefinitionUncheckedCreateWithoutTestInput>
+  }
+
+  export type TestDefinitionCreateManyTestInputEnvelope = {
+    data: TestDefinitionCreateManyTestInput | TestDefinitionCreateManyTestInput[]
   }
 
   export type TestProfileItemUpsertWithWhereUniqueWithoutTestInput = {
@@ -27001,12 +44018,50 @@ export namespace Prisma {
     id?: StringFilter<"Result"> | string
     sampleId?: StringFilter<"Result"> | string
     testId?: StringFilter<"Result"> | string
+    testDefId?: StringNullableFilter<"Result"> | string | null
     value?: StringFilter<"Result"> | string
+    calculatedValues?: StringNullableFilter<"Result"> | string | null
     isNormal?: BoolFilter<"Result"> | boolean
+    abnormalFlags?: StringNullableFilter<"Result"> | string | null
+    interpretationId?: StringNullableFilter<"Result"> | string | null
     notes?: StringNullableFilter<"Result"> | string | null
     enteredBy?: StringNullableFilter<"Result"> | string | null
     enteredAt?: DateTimeFilter<"Result"> | Date | string
     createdAt?: DateTimeFilter<"Result"> | Date | string
+    updatedAt?: DateTimeFilter<"Result"> | Date | string
+  }
+
+  export type TestDefinitionUpsertWithWhereUniqueWithoutTestInput = {
+    where: TestDefinitionWhereUniqueInput
+    update: XOR<TestDefinitionUpdateWithoutTestInput, TestDefinitionUncheckedUpdateWithoutTestInput>
+    create: XOR<TestDefinitionCreateWithoutTestInput, TestDefinitionUncheckedCreateWithoutTestInput>
+  }
+
+  export type TestDefinitionUpdateWithWhereUniqueWithoutTestInput = {
+    where: TestDefinitionWhereUniqueInput
+    data: XOR<TestDefinitionUpdateWithoutTestInput, TestDefinitionUncheckedUpdateWithoutTestInput>
+  }
+
+  export type TestDefinitionUpdateManyWithWhereWithoutTestInput = {
+    where: TestDefinitionScalarWhereInput
+    data: XOR<TestDefinitionUpdateManyMutationInput, TestDefinitionUncheckedUpdateManyWithoutTestInput>
+  }
+
+  export type TestDefinitionScalarWhereInput = {
+    AND?: TestDefinitionScalarWhereInput | TestDefinitionScalarWhereInput[]
+    OR?: TestDefinitionScalarWhereInput[]
+    NOT?: TestDefinitionScalarWhereInput | TestDefinitionScalarWhereInput[]
+    id?: StringFilter<"TestDefinition"> | string
+    testId?: StringNullableFilter<"TestDefinition"> | string | null
+    categoryId?: StringFilter<"TestDefinition"> | string
+    name?: StringFilter<"TestDefinition"> | string
+    code?: StringFilter<"TestDefinition"> | string
+    unit?: StringNullableFilter<"TestDefinition"> | string | null
+    sampleType?: StringNullableFilter<"TestDefinition"> | string | null
+    testFields?: StringFilter<"TestDefinition"> | string
+    isActive?: BoolFilter<"TestDefinition"> | boolean
+    createdAt?: DateTimeFilter<"TestDefinition"> | Date | string
+    updatedAt?: DateTimeFilter<"TestDefinition"> | Date | string
   }
 
   export type TestProfileItemCreateWithoutProfileInput = {
@@ -27038,6 +44093,7 @@ export namespace Prisma {
     patient: PatientCreateNestedOneWithoutSamplesInput
     tests?: SampleTestCreateNestedManyWithoutSampleInput
     results?: ResultCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogCreateNestedManyWithoutSampleInput
     invoice?: InvoiceCreateNestedOneWithoutSampleInput
   }
 
@@ -27051,6 +44107,7 @@ export namespace Prisma {
     createdAt?: Date | string
     tests?: SampleTestUncheckedCreateNestedManyWithoutSampleInput
     results?: ResultUncheckedCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutSampleInput
     invoice?: InvoiceUncheckedCreateNestedOneWithoutSampleInput
   }
 
@@ -27130,6 +44187,7 @@ export namespace Prisma {
     createdAt?: Date | string
     sampleTests?: SampleTestCreateNestedManyWithoutTestInput
     results?: ResultCreateNestedManyWithoutTestInput
+    testDefs?: TestDefinitionCreateNestedManyWithoutTestInput
   }
 
   export type TestUncheckedCreateWithoutProfileTestsInput = {
@@ -27144,6 +44202,7 @@ export namespace Prisma {
     createdAt?: Date | string
     sampleTests?: SampleTestUncheckedCreateNestedManyWithoutTestInput
     results?: ResultUncheckedCreateNestedManyWithoutTestInput
+    testDefs?: TestDefinitionUncheckedCreateNestedManyWithoutTestInput
   }
 
   export type TestCreateOrConnectWithoutProfileTestsInput = {
@@ -27203,6 +44262,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     sampleTests?: SampleTestUpdateManyWithoutTestNestedInput
     results?: ResultUpdateManyWithoutTestNestedInput
+    testDefs?: TestDefinitionUpdateManyWithoutTestNestedInput
   }
 
   export type TestUncheckedUpdateWithoutProfileTestsInput = {
@@ -27217,6 +44277,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     sampleTests?: SampleTestUncheckedUpdateManyWithoutTestNestedInput
     results?: ResultUncheckedUpdateManyWithoutTestNestedInput
+    testDefs?: TestDefinitionUncheckedUpdateManyWithoutTestNestedInput
   }
 
   export type PatientCreateWithoutSamplesInput = {
@@ -27299,23 +44360,37 @@ export namespace Prisma {
   export type ResultCreateWithoutSampleInput = {
     id?: string
     value: string
+    calculatedValues?: string | null
     isNormal?: boolean
+    abnormalFlags?: string | null
     notes?: string | null
     enteredBy?: string | null
     enteredAt?: Date | string
     createdAt?: Date | string
+    updatedAt?: Date | string
     test: TestCreateNestedOneWithoutResultsInput
+    testDef?: TestDefinitionCreateNestedOneWithoutTestResultsInput
+    interpretation?: InterpretationRuleCreateNestedOneWithoutResultsInput
+    deltaCheckResults?: DeltaCheckResultCreateNestedManyWithoutResultInput
+    emailLogs?: EmailLogCreateNestedManyWithoutResultInput
   }
 
   export type ResultUncheckedCreateWithoutSampleInput = {
     id?: string
     testId: string
+    testDefId?: string | null
     value: string
+    calculatedValues?: string | null
     isNormal?: boolean
+    abnormalFlags?: string | null
+    interpretationId?: string | null
     notes?: string | null
     enteredBy?: string | null
     enteredAt?: Date | string
     createdAt?: Date | string
+    updatedAt?: Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedCreateNestedManyWithoutResultInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutResultInput
   }
 
   export type ResultCreateOrConnectWithoutSampleInput = {
@@ -27325,6 +44400,49 @@ export namespace Prisma {
 
   export type ResultCreateManySampleInputEnvelope = {
     data: ResultCreateManySampleInput | ResultCreateManySampleInput[]
+  }
+
+  export type EmailLogCreateWithoutSampleInput = {
+    id?: string
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    template?: EmailTemplateCreateNestedOneWithoutEmailLogsInput
+    result?: ResultCreateNestedOneWithoutEmailLogsInput
+    invoice?: InvoiceCreateNestedOneWithoutEmailLogsInput
+  }
+
+  export type EmailLogUncheckedCreateWithoutSampleInput = {
+    id?: string
+    templateId?: string | null
+    resultId?: string | null
+    invoiceId?: string | null
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailLogCreateOrConnectWithoutSampleInput = {
+    where: EmailLogWhereUniqueInput
+    create: XOR<EmailLogCreateWithoutSampleInput, EmailLogUncheckedCreateWithoutSampleInput>
+  }
+
+  export type EmailLogCreateManySampleInputEnvelope = {
+    data: EmailLogCreateManySampleInput | EmailLogCreateManySampleInput[]
   }
 
   export type InvoiceCreateWithoutSampleInput = {
@@ -27343,6 +44461,7 @@ export namespace Prisma {
     lab: LabCreateNestedOneWithoutInvoicesInput
     items?: InvoiceItemCreateNestedManyWithoutInvoiceInput
     commissions?: CommissionCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceUncheckedCreateWithoutSampleInput = {
@@ -27361,6 +44480,7 @@ export namespace Prisma {
     createdAt?: Date | string
     items?: InvoiceItemUncheckedCreateNestedManyWithoutInvoiceInput
     commissions?: CommissionUncheckedCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceCreateOrConnectWithoutSampleInput = {
@@ -27468,6 +44588,43 @@ export namespace Prisma {
     data: XOR<ResultUpdateManyMutationInput, ResultUncheckedUpdateManyWithoutSampleInput>
   }
 
+  export type EmailLogUpsertWithWhereUniqueWithoutSampleInput = {
+    where: EmailLogWhereUniqueInput
+    update: XOR<EmailLogUpdateWithoutSampleInput, EmailLogUncheckedUpdateWithoutSampleInput>
+    create: XOR<EmailLogCreateWithoutSampleInput, EmailLogUncheckedCreateWithoutSampleInput>
+  }
+
+  export type EmailLogUpdateWithWhereUniqueWithoutSampleInput = {
+    where: EmailLogWhereUniqueInput
+    data: XOR<EmailLogUpdateWithoutSampleInput, EmailLogUncheckedUpdateWithoutSampleInput>
+  }
+
+  export type EmailLogUpdateManyWithWhereWithoutSampleInput = {
+    where: EmailLogScalarWhereInput
+    data: XOR<EmailLogUpdateManyMutationInput, EmailLogUncheckedUpdateManyWithoutSampleInput>
+  }
+
+  export type EmailLogScalarWhereInput = {
+    AND?: EmailLogScalarWhereInput | EmailLogScalarWhereInput[]
+    OR?: EmailLogScalarWhereInput[]
+    NOT?: EmailLogScalarWhereInput | EmailLogScalarWhereInput[]
+    id?: StringFilter<"EmailLog"> | string
+    templateId?: StringNullableFilter<"EmailLog"> | string | null
+    resultId?: StringNullableFilter<"EmailLog"> | string | null
+    sampleId?: StringNullableFilter<"EmailLog"> | string | null
+    invoiceId?: StringNullableFilter<"EmailLog"> | string | null
+    recipientEmail?: StringFilter<"EmailLog"> | string
+    subject?: StringFilter<"EmailLog"> | string
+    content?: StringFilter<"EmailLog"> | string
+    status?: StringFilter<"EmailLog"> | string
+    sentAt?: DateTimeNullableFilter<"EmailLog"> | Date | string | null
+    failureReason?: StringNullableFilter<"EmailLog"> | string | null
+    retryCount?: IntFilter<"EmailLog"> | number
+    nextRetryAt?: DateTimeNullableFilter<"EmailLog"> | Date | string | null
+    createdAt?: DateTimeFilter<"EmailLog"> | Date | string
+    updatedAt?: DateTimeFilter<"EmailLog"> | Date | string
+  }
+
   export type InvoiceUpsertWithoutSampleInput = {
     update: XOR<InvoiceUpdateWithoutSampleInput, InvoiceUncheckedUpdateWithoutSampleInput>
     create: XOR<InvoiceCreateWithoutSampleInput, InvoiceUncheckedCreateWithoutSampleInput>
@@ -27495,6 +44652,7 @@ export namespace Prisma {
     lab?: LabUpdateOneRequiredWithoutInvoicesNestedInput
     items?: InvoiceItemUpdateManyWithoutInvoiceNestedInput
     commissions?: CommissionUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutInvoiceNestedInput
   }
 
   export type InvoiceUncheckedUpdateWithoutSampleInput = {
@@ -27513,6 +44671,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     items?: InvoiceItemUncheckedUpdateManyWithoutInvoiceNestedInput
     commissions?: CommissionUncheckedUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutInvoiceNestedInput
   }
 
   export type SampleCreateWithoutTestsInput = {
@@ -27525,6 +44684,7 @@ export namespace Prisma {
     patient: PatientCreateNestedOneWithoutSamplesInput
     profile?: TestProfileCreateNestedOneWithoutSamplesInput
     results?: ResultCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogCreateNestedManyWithoutSampleInput
     invoice?: InvoiceCreateNestedOneWithoutSampleInput
   }
 
@@ -27538,6 +44698,7 @@ export namespace Prisma {
     notes?: string | null
     createdAt?: Date | string
     results?: ResultUncheckedCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutSampleInput
     invoice?: InvoiceUncheckedCreateNestedOneWithoutSampleInput
   }
 
@@ -27558,6 +44719,7 @@ export namespace Prisma {
     createdAt?: Date | string
     profileTests?: TestProfileItemCreateNestedManyWithoutTestInput
     results?: ResultCreateNestedManyWithoutTestInput
+    testDefs?: TestDefinitionCreateNestedManyWithoutTestInput
   }
 
   export type TestUncheckedCreateWithoutSampleTestsInput = {
@@ -27572,6 +44734,7 @@ export namespace Prisma {
     createdAt?: Date | string
     profileTests?: TestProfileItemUncheckedCreateNestedManyWithoutTestInput
     results?: ResultUncheckedCreateNestedManyWithoutTestInput
+    testDefs?: TestDefinitionUncheckedCreateNestedManyWithoutTestInput
   }
 
   export type TestCreateOrConnectWithoutSampleTestsInput = {
@@ -27600,6 +44763,7 @@ export namespace Prisma {
     patient?: PatientUpdateOneRequiredWithoutSamplesNestedInput
     profile?: TestProfileUpdateOneWithoutSamplesNestedInput
     results?: ResultUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutSampleNestedInput
     invoice?: InvoiceUpdateOneWithoutSampleNestedInput
   }
 
@@ -27613,6 +44777,7 @@ export namespace Prisma {
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     results?: ResultUncheckedUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutSampleNestedInput
     invoice?: InvoiceUncheckedUpdateOneWithoutSampleNestedInput
   }
 
@@ -27639,6 +44804,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     profileTests?: TestProfileItemUpdateManyWithoutTestNestedInput
     results?: ResultUpdateManyWithoutTestNestedInput
+    testDefs?: TestDefinitionUpdateManyWithoutTestNestedInput
   }
 
   export type TestUncheckedUpdateWithoutSampleTestsInput = {
@@ -27653,6 +44819,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     profileTests?: TestProfileItemUncheckedUpdateManyWithoutTestNestedInput
     results?: ResultUncheckedUpdateManyWithoutTestNestedInput
+    testDefs?: TestDefinitionUncheckedUpdateManyWithoutTestNestedInput
   }
 
   export type SampleCreateWithoutResultsInput = {
@@ -27665,6 +44832,7 @@ export namespace Prisma {
     patient: PatientCreateNestedOneWithoutSamplesInput
     profile?: TestProfileCreateNestedOneWithoutSamplesInput
     tests?: SampleTestCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogCreateNestedManyWithoutSampleInput
     invoice?: InvoiceCreateNestedOneWithoutSampleInput
   }
 
@@ -27678,6 +44846,7 @@ export namespace Prisma {
     notes?: string | null
     createdAt?: Date | string
     tests?: SampleTestUncheckedCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutSampleInput
     invoice?: InvoiceUncheckedCreateNestedOneWithoutSampleInput
   }
 
@@ -27698,6 +44867,7 @@ export namespace Prisma {
     createdAt?: Date | string
     profileTests?: TestProfileItemCreateNestedManyWithoutTestInput
     sampleTests?: SampleTestCreateNestedManyWithoutTestInput
+    testDefs?: TestDefinitionCreateNestedManyWithoutTestInput
   }
 
   export type TestUncheckedCreateWithoutResultsInput = {
@@ -27712,11 +44882,168 @@ export namespace Prisma {
     createdAt?: Date | string
     profileTests?: TestProfileItemUncheckedCreateNestedManyWithoutTestInput
     sampleTests?: SampleTestUncheckedCreateNestedManyWithoutTestInput
+    testDefs?: TestDefinitionUncheckedCreateNestedManyWithoutTestInput
   }
 
   export type TestCreateOrConnectWithoutResultsInput = {
     where: TestWhereUniqueInput
     create: XOR<TestCreateWithoutResultsInput, TestUncheckedCreateWithoutResultsInput>
+  }
+
+  export type TestDefinitionCreateWithoutTestResultsInput = {
+    id?: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    test?: TestCreateNestedOneWithoutTestDefsInput
+    category: TestCategoryCreateNestedOneWithoutDefinitionsInput
+    normalRanges?: NormalRangeCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleCreateNestedManyWithoutChildTestDefInput
+  }
+
+  export type TestDefinitionUncheckedCreateWithoutTestResultsInput = {
+    id?: string
+    testId?: string | null
+    categoryId: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    normalRanges?: NormalRangeUncheckedCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedCreateNestedManyWithoutChildTestDefInput
+  }
+
+  export type TestDefinitionCreateOrConnectWithoutTestResultsInput = {
+    where: TestDefinitionWhereUniqueInput
+    create: XOR<TestDefinitionCreateWithoutTestResultsInput, TestDefinitionUncheckedCreateWithoutTestResultsInput>
+  }
+
+  export type InterpretationRuleCreateWithoutResultsInput = {
+    id?: string
+    name: string
+    condition: string
+    interpretation: string
+    severity?: string | null
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    testDef: TestDefinitionCreateNestedOneWithoutInterpretationsInput
+  }
+
+  export type InterpretationRuleUncheckedCreateWithoutResultsInput = {
+    id?: string
+    testDefId: string
+    name: string
+    condition: string
+    interpretation: string
+    severity?: string | null
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type InterpretationRuleCreateOrConnectWithoutResultsInput = {
+    where: InterpretationRuleWhereUniqueInput
+    create: XOR<InterpretationRuleCreateWithoutResultsInput, InterpretationRuleUncheckedCreateWithoutResultsInput>
+  }
+
+  export type DeltaCheckResultCreateWithoutResultInput = {
+    id?: string
+    previousValue?: number | null
+    currentValue: number
+    changePercent: number
+    previousDate?: Date | string | null
+    alertMessage: string
+    severity?: string
+    isResolved?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    rule: DeltaCheckRuleCreateNestedOneWithoutDeltaCheckResultsInput
+  }
+
+  export type DeltaCheckResultUncheckedCreateWithoutResultInput = {
+    id?: string
+    ruleId: string
+    previousValue?: number | null
+    currentValue: number
+    changePercent: number
+    previousDate?: Date | string | null
+    alertMessage: string
+    severity?: string
+    isResolved?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DeltaCheckResultCreateOrConnectWithoutResultInput = {
+    where: DeltaCheckResultWhereUniqueInput
+    create: XOR<DeltaCheckResultCreateWithoutResultInput, DeltaCheckResultUncheckedCreateWithoutResultInput>
+  }
+
+  export type DeltaCheckResultCreateManyResultInputEnvelope = {
+    data: DeltaCheckResultCreateManyResultInput | DeltaCheckResultCreateManyResultInput[]
+  }
+
+  export type EmailLogCreateWithoutResultInput = {
+    id?: string
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    template?: EmailTemplateCreateNestedOneWithoutEmailLogsInput
+    sample?: SampleCreateNestedOneWithoutEmailLogsInput
+    invoice?: InvoiceCreateNestedOneWithoutEmailLogsInput
+  }
+
+  export type EmailLogUncheckedCreateWithoutResultInput = {
+    id?: string
+    templateId?: string | null
+    sampleId?: string | null
+    invoiceId?: string | null
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailLogCreateOrConnectWithoutResultInput = {
+    where: EmailLogWhereUniqueInput
+    create: XOR<EmailLogCreateWithoutResultInput, EmailLogUncheckedCreateWithoutResultInput>
+  }
+
+  export type EmailLogCreateManyResultInputEnvelope = {
+    data: EmailLogCreateManyResultInput | EmailLogCreateManyResultInput[]
   }
 
   export type SampleUpsertWithoutResultsInput = {
@@ -27740,6 +45067,7 @@ export namespace Prisma {
     patient?: PatientUpdateOneRequiredWithoutSamplesNestedInput
     profile?: TestProfileUpdateOneWithoutSamplesNestedInput
     tests?: SampleTestUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutSampleNestedInput
     invoice?: InvoiceUpdateOneWithoutSampleNestedInput
   }
 
@@ -27753,6 +45081,7 @@ export namespace Prisma {
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     tests?: SampleTestUncheckedUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutSampleNestedInput
     invoice?: InvoiceUncheckedUpdateOneWithoutSampleNestedInput
   }
 
@@ -27779,6 +45108,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     profileTests?: TestProfileItemUpdateManyWithoutTestNestedInput
     sampleTests?: SampleTestUpdateManyWithoutTestNestedInput
+    testDefs?: TestDefinitionUpdateManyWithoutTestNestedInput
   }
 
   export type TestUncheckedUpdateWithoutResultsInput = {
@@ -27793,6 +45123,145 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     profileTests?: TestProfileItemUncheckedUpdateManyWithoutTestNestedInput
     sampleTests?: SampleTestUncheckedUpdateManyWithoutTestNestedInput
+    testDefs?: TestDefinitionUncheckedUpdateManyWithoutTestNestedInput
+  }
+
+  export type TestDefinitionUpsertWithoutTestResultsInput = {
+    update: XOR<TestDefinitionUpdateWithoutTestResultsInput, TestDefinitionUncheckedUpdateWithoutTestResultsInput>
+    create: XOR<TestDefinitionCreateWithoutTestResultsInput, TestDefinitionUncheckedCreateWithoutTestResultsInput>
+    where?: TestDefinitionWhereInput
+  }
+
+  export type TestDefinitionUpdateToOneWithWhereWithoutTestResultsInput = {
+    where?: TestDefinitionWhereInput
+    data: XOR<TestDefinitionUpdateWithoutTestResultsInput, TestDefinitionUncheckedUpdateWithoutTestResultsInput>
+  }
+
+  export type TestDefinitionUpdateWithoutTestResultsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    test?: TestUpdateOneWithoutTestDefsNestedInput
+    category?: TestCategoryUpdateOneRequiredWithoutDefinitionsNestedInput
+    normalRanges?: NormalRangeUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUpdateManyWithoutChildTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateWithoutTestResultsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testId?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    normalRanges?: NormalRangeUncheckedUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefNestedInput
+  }
+
+  export type InterpretationRuleUpsertWithoutResultsInput = {
+    update: XOR<InterpretationRuleUpdateWithoutResultsInput, InterpretationRuleUncheckedUpdateWithoutResultsInput>
+    create: XOR<InterpretationRuleCreateWithoutResultsInput, InterpretationRuleUncheckedCreateWithoutResultsInput>
+    where?: InterpretationRuleWhereInput
+  }
+
+  export type InterpretationRuleUpdateToOneWithWhereWithoutResultsInput = {
+    where?: InterpretationRuleWhereInput
+    data: XOR<InterpretationRuleUpdateWithoutResultsInput, InterpretationRuleUncheckedUpdateWithoutResultsInput>
+  }
+
+  export type InterpretationRuleUpdateWithoutResultsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    interpretation?: StringFieldUpdateOperationsInput | string
+    severity?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    testDef?: TestDefinitionUpdateOneRequiredWithoutInterpretationsNestedInput
+  }
+
+  export type InterpretationRuleUncheckedUpdateWithoutResultsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testDefId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    interpretation?: StringFieldUpdateOperationsInput | string
+    severity?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DeltaCheckResultUpsertWithWhereUniqueWithoutResultInput = {
+    where: DeltaCheckResultWhereUniqueInput
+    update: XOR<DeltaCheckResultUpdateWithoutResultInput, DeltaCheckResultUncheckedUpdateWithoutResultInput>
+    create: XOR<DeltaCheckResultCreateWithoutResultInput, DeltaCheckResultUncheckedCreateWithoutResultInput>
+  }
+
+  export type DeltaCheckResultUpdateWithWhereUniqueWithoutResultInput = {
+    where: DeltaCheckResultWhereUniqueInput
+    data: XOR<DeltaCheckResultUpdateWithoutResultInput, DeltaCheckResultUncheckedUpdateWithoutResultInput>
+  }
+
+  export type DeltaCheckResultUpdateManyWithWhereWithoutResultInput = {
+    where: DeltaCheckResultScalarWhereInput
+    data: XOR<DeltaCheckResultUpdateManyMutationInput, DeltaCheckResultUncheckedUpdateManyWithoutResultInput>
+  }
+
+  export type DeltaCheckResultScalarWhereInput = {
+    AND?: DeltaCheckResultScalarWhereInput | DeltaCheckResultScalarWhereInput[]
+    OR?: DeltaCheckResultScalarWhereInput[]
+    NOT?: DeltaCheckResultScalarWhereInput | DeltaCheckResultScalarWhereInput[]
+    id?: StringFilter<"DeltaCheckResult"> | string
+    resultId?: StringFilter<"DeltaCheckResult"> | string
+    ruleId?: StringFilter<"DeltaCheckResult"> | string
+    previousValue?: FloatNullableFilter<"DeltaCheckResult"> | number | null
+    currentValue?: FloatFilter<"DeltaCheckResult"> | number
+    changePercent?: FloatFilter<"DeltaCheckResult"> | number
+    previousDate?: DateTimeNullableFilter<"DeltaCheckResult"> | Date | string | null
+    alertMessage?: StringFilter<"DeltaCheckResult"> | string
+    severity?: StringFilter<"DeltaCheckResult"> | string
+    isResolved?: BoolFilter<"DeltaCheckResult"> | boolean
+    createdAt?: DateTimeFilter<"DeltaCheckResult"> | Date | string
+    updatedAt?: DateTimeFilter<"DeltaCheckResult"> | Date | string
+  }
+
+  export type EmailLogUpsertWithWhereUniqueWithoutResultInput = {
+    where: EmailLogWhereUniqueInput
+    update: XOR<EmailLogUpdateWithoutResultInput, EmailLogUncheckedUpdateWithoutResultInput>
+    create: XOR<EmailLogCreateWithoutResultInput, EmailLogUncheckedCreateWithoutResultInput>
+  }
+
+  export type EmailLogUpdateWithWhereUniqueWithoutResultInput = {
+    where: EmailLogWhereUniqueInput
+    data: XOR<EmailLogUpdateWithoutResultInput, EmailLogUncheckedUpdateWithoutResultInput>
+  }
+
+  export type EmailLogUpdateManyWithWhereWithoutResultInput = {
+    where: EmailLogScalarWhereInput
+    data: XOR<EmailLogUpdateManyMutationInput, EmailLogUncheckedUpdateManyWithoutResultInput>
   }
 
   export type PatientCreateWithoutInvoicesInput = {
@@ -27839,6 +45308,7 @@ export namespace Prisma {
     profile?: TestProfileCreateNestedOneWithoutSamplesInput
     tests?: SampleTestCreateNestedManyWithoutSampleInput
     results?: ResultCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogCreateNestedManyWithoutSampleInput
   }
 
   export type SampleUncheckedCreateWithoutInvoiceInput = {
@@ -27852,6 +45322,7 @@ export namespace Prisma {
     createdAt?: Date | string
     tests?: SampleTestUncheckedCreateNestedManyWithoutSampleInput
     results?: ResultUncheckedCreateNestedManyWithoutSampleInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutSampleInput
   }
 
   export type SampleCreateOrConnectWithoutInvoiceInput = {
@@ -27950,6 +45421,49 @@ export namespace Prisma {
     data: CommissionCreateManyInvoiceInput | CommissionCreateManyInvoiceInput[]
   }
 
+  export type EmailLogCreateWithoutInvoiceInput = {
+    id?: string
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    template?: EmailTemplateCreateNestedOneWithoutEmailLogsInput
+    result?: ResultCreateNestedOneWithoutEmailLogsInput
+    sample?: SampleCreateNestedOneWithoutEmailLogsInput
+  }
+
+  export type EmailLogUncheckedCreateWithoutInvoiceInput = {
+    id?: string
+    templateId?: string | null
+    resultId?: string | null
+    sampleId?: string | null
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailLogCreateOrConnectWithoutInvoiceInput = {
+    where: EmailLogWhereUniqueInput
+    create: XOR<EmailLogCreateWithoutInvoiceInput, EmailLogUncheckedCreateWithoutInvoiceInput>
+  }
+
+  export type EmailLogCreateManyInvoiceInputEnvelope = {
+    data: EmailLogCreateManyInvoiceInput | EmailLogCreateManyInvoiceInput[]
+  }
+
   export type PatientUpsertWithoutInvoicesInput = {
     update: XOR<PatientUpdateWithoutInvoicesInput, PatientUncheckedUpdateWithoutInvoicesInput>
     create: XOR<PatientCreateWithoutInvoicesInput, PatientUncheckedCreateWithoutInvoicesInput>
@@ -28011,6 +45525,7 @@ export namespace Prisma {
     profile?: TestProfileUpdateOneWithoutSamplesNestedInput
     tests?: SampleTestUpdateManyWithoutSampleNestedInput
     results?: ResultUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutSampleNestedInput
   }
 
   export type SampleUncheckedUpdateWithoutInvoiceInput = {
@@ -28024,6 +45539,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     tests?: SampleTestUncheckedUpdateManyWithoutSampleNestedInput
     results?: ResultUncheckedUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutSampleNestedInput
   }
 
   export type LabUpsertWithoutInvoicesInput = {
@@ -28126,6 +45642,22 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"Commission"> | Date | string
   }
 
+  export type EmailLogUpsertWithWhereUniqueWithoutInvoiceInput = {
+    where: EmailLogWhereUniqueInput
+    update: XOR<EmailLogUpdateWithoutInvoiceInput, EmailLogUncheckedUpdateWithoutInvoiceInput>
+    create: XOR<EmailLogCreateWithoutInvoiceInput, EmailLogUncheckedCreateWithoutInvoiceInput>
+  }
+
+  export type EmailLogUpdateWithWhereUniqueWithoutInvoiceInput = {
+    where: EmailLogWhereUniqueInput
+    data: XOR<EmailLogUpdateWithoutInvoiceInput, EmailLogUncheckedUpdateWithoutInvoiceInput>
+  }
+
+  export type EmailLogUpdateManyWithWhereWithoutInvoiceInput = {
+    where: EmailLogScalarWhereInput
+    data: XOR<EmailLogUpdateManyMutationInput, EmailLogUncheckedUpdateManyWithoutInvoiceInput>
+  }
+
   export type InvoiceCreateWithoutItemsInput = {
     id?: string
     invoiceNumber: string
@@ -28142,6 +45674,7 @@ export namespace Prisma {
     sample?: SampleCreateNestedOneWithoutInvoiceInput
     lab: LabCreateNestedOneWithoutInvoicesInput
     commissions?: CommissionCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceUncheckedCreateWithoutItemsInput = {
@@ -28160,6 +45693,7 @@ export namespace Prisma {
     notes?: string | null
     createdAt?: Date | string
     commissions?: CommissionUncheckedCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceCreateOrConnectWithoutItemsInput = {
@@ -28194,6 +45728,7 @@ export namespace Prisma {
     sample?: SampleUpdateOneWithoutInvoiceNestedInput
     lab?: LabUpdateOneRequiredWithoutInvoicesNestedInput
     commissions?: CommissionUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutInvoiceNestedInput
   }
 
   export type InvoiceUncheckedUpdateWithoutItemsInput = {
@@ -28212,6 +45747,7 @@ export namespace Prisma {
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     commissions?: CommissionUncheckedUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutInvoiceNestedInput
   }
 
   export type CommissionCreateWithoutDoctorInput = {
@@ -28306,6 +45842,7 @@ export namespace Prisma {
     sample?: SampleCreateNestedOneWithoutInvoiceInput
     lab: LabCreateNestedOneWithoutInvoicesInput
     items?: InvoiceItemCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceUncheckedCreateWithoutCommissionsInput = {
@@ -28324,6 +45861,7 @@ export namespace Prisma {
     notes?: string | null
     createdAt?: Date | string
     items?: InvoiceItemUncheckedCreateNestedManyWithoutInvoiceInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutInvoiceInput
   }
 
   export type InvoiceCreateOrConnectWithoutCommissionsInput = {
@@ -28393,6 +45931,7 @@ export namespace Prisma {
     sample?: SampleUpdateOneWithoutInvoiceNestedInput
     lab?: LabUpdateOneRequiredWithoutInvoicesNestedInput
     items?: InvoiceItemUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutInvoiceNestedInput
   }
 
   export type InvoiceUncheckedUpdateWithoutCommissionsInput = {
@@ -28411,6 +45950,7 @@ export namespace Prisma {
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     items?: InvoiceItemUncheckedUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutInvoiceNestedInput
   }
 
   export type StockAdjustmentCreateWithoutItemInput = {
@@ -28613,6 +46153,1868 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type TestDefinitionCreateWithoutCategoryInput = {
+    id?: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    test?: TestCreateNestedOneWithoutTestDefsInput
+    normalRanges?: NormalRangeCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionUncheckedCreateWithoutCategoryInput = {
+    id?: string
+    testId?: string | null
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    normalRanges?: NormalRangeUncheckedCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultUncheckedCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionCreateOrConnectWithoutCategoryInput = {
+    where: TestDefinitionWhereUniqueInput
+    create: XOR<TestDefinitionCreateWithoutCategoryInput, TestDefinitionUncheckedCreateWithoutCategoryInput>
+  }
+
+  export type TestDefinitionCreateManyCategoryInputEnvelope = {
+    data: TestDefinitionCreateManyCategoryInput | TestDefinitionCreateManyCategoryInput[]
+  }
+
+  export type TestDefinitionUpsertWithWhereUniqueWithoutCategoryInput = {
+    where: TestDefinitionWhereUniqueInput
+    update: XOR<TestDefinitionUpdateWithoutCategoryInput, TestDefinitionUncheckedUpdateWithoutCategoryInput>
+    create: XOR<TestDefinitionCreateWithoutCategoryInput, TestDefinitionUncheckedCreateWithoutCategoryInput>
+  }
+
+  export type TestDefinitionUpdateWithWhereUniqueWithoutCategoryInput = {
+    where: TestDefinitionWhereUniqueInput
+    data: XOR<TestDefinitionUpdateWithoutCategoryInput, TestDefinitionUncheckedUpdateWithoutCategoryInput>
+  }
+
+  export type TestDefinitionUpdateManyWithWhereWithoutCategoryInput = {
+    where: TestDefinitionScalarWhereInput
+    data: XOR<TestDefinitionUpdateManyMutationInput, TestDefinitionUncheckedUpdateManyWithoutCategoryInput>
+  }
+
+  export type TestCreateWithoutTestDefsInput = {
+    id?: string
+    code: string
+    name: string
+    price: number
+    category?: string | null
+    normalRange?: string | null
+    unit?: string | null
+    isActive?: boolean
+    createdAt?: Date | string
+    profileTests?: TestProfileItemCreateNestedManyWithoutTestInput
+    sampleTests?: SampleTestCreateNestedManyWithoutTestInput
+    results?: ResultCreateNestedManyWithoutTestInput
+  }
+
+  export type TestUncheckedCreateWithoutTestDefsInput = {
+    id?: string
+    code: string
+    name: string
+    price: number
+    category?: string | null
+    normalRange?: string | null
+    unit?: string | null
+    isActive?: boolean
+    createdAt?: Date | string
+    profileTests?: TestProfileItemUncheckedCreateNestedManyWithoutTestInput
+    sampleTests?: SampleTestUncheckedCreateNestedManyWithoutTestInput
+    results?: ResultUncheckedCreateNestedManyWithoutTestInput
+  }
+
+  export type TestCreateOrConnectWithoutTestDefsInput = {
+    where: TestWhereUniqueInput
+    create: XOR<TestCreateWithoutTestDefsInput, TestUncheckedCreateWithoutTestDefsInput>
+  }
+
+  export type TestCategoryCreateWithoutDefinitionsInput = {
+    id?: string
+    name: string
+    description?: string | null
+    code: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TestCategoryUncheckedCreateWithoutDefinitionsInput = {
+    id?: string
+    name: string
+    description?: string | null
+    code: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TestCategoryCreateOrConnectWithoutDefinitionsInput = {
+    where: TestCategoryWhereUniqueInput
+    create: XOR<TestCategoryCreateWithoutDefinitionsInput, TestCategoryUncheckedCreateWithoutDefinitionsInput>
+  }
+
+  export type NormalRangeCreateWithoutTestDefInput = {
+    id?: string
+    minAge?: number | null
+    maxAge?: number | null
+    gender?: string | null
+    minValue: number
+    maxValue: number
+    criticalLow?: number | null
+    criticalHigh?: number | null
+    unit?: string | null
+    notes?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type NormalRangeUncheckedCreateWithoutTestDefInput = {
+    id?: string
+    minAge?: number | null
+    maxAge?: number | null
+    gender?: string | null
+    minValue: number
+    maxValue: number
+    criticalLow?: number | null
+    criticalHigh?: number | null
+    unit?: string | null
+    notes?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type NormalRangeCreateOrConnectWithoutTestDefInput = {
+    where: NormalRangeWhereUniqueInput
+    create: XOR<NormalRangeCreateWithoutTestDefInput, NormalRangeUncheckedCreateWithoutTestDefInput>
+  }
+
+  export type NormalRangeCreateManyTestDefInputEnvelope = {
+    data: NormalRangeCreateManyTestDefInput | NormalRangeCreateManyTestDefInput[]
+  }
+
+  export type InterpretationRuleCreateWithoutTestDefInput = {
+    id?: string
+    name: string
+    condition: string
+    interpretation: string
+    severity?: string | null
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    results?: ResultCreateNestedManyWithoutInterpretationInput
+  }
+
+  export type InterpretationRuleUncheckedCreateWithoutTestDefInput = {
+    id?: string
+    name: string
+    condition: string
+    interpretation: string
+    severity?: string | null
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    results?: ResultUncheckedCreateNestedManyWithoutInterpretationInput
+  }
+
+  export type InterpretationRuleCreateOrConnectWithoutTestDefInput = {
+    where: InterpretationRuleWhereUniqueInput
+    create: XOR<InterpretationRuleCreateWithoutTestDefInput, InterpretationRuleUncheckedCreateWithoutTestDefInput>
+  }
+
+  export type InterpretationRuleCreateManyTestDefInputEnvelope = {
+    data: InterpretationRuleCreateManyTestDefInput | InterpretationRuleCreateManyTestDefInput[]
+  }
+
+  export type CalculationRuleCreateWithoutTestDefInput = {
+    id?: string
+    name: string
+    formula: string
+    requiredFields: string
+    outputField: string
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CalculationRuleUncheckedCreateWithoutTestDefInput = {
+    id?: string
+    name: string
+    formula: string
+    requiredFields: string
+    outputField: string
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CalculationRuleCreateOrConnectWithoutTestDefInput = {
+    where: CalculationRuleWhereUniqueInput
+    create: XOR<CalculationRuleCreateWithoutTestDefInput, CalculationRuleUncheckedCreateWithoutTestDefInput>
+  }
+
+  export type CalculationRuleCreateManyTestDefInputEnvelope = {
+    data: CalculationRuleCreateManyTestDefInput | CalculationRuleCreateManyTestDefInput[]
+  }
+
+  export type DeltaCheckRuleCreateWithoutTestDefInput = {
+    id?: string
+    name: string
+    alertThreshold: number
+    criticalThreshold?: number | null
+    checkDays?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    deltaCheckResults?: DeltaCheckResultCreateNestedManyWithoutRuleInput
+  }
+
+  export type DeltaCheckRuleUncheckedCreateWithoutTestDefInput = {
+    id?: string
+    name: string
+    alertThreshold: number
+    criticalThreshold?: number | null
+    checkDays?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedCreateNestedManyWithoutRuleInput
+  }
+
+  export type DeltaCheckRuleCreateOrConnectWithoutTestDefInput = {
+    where: DeltaCheckRuleWhereUniqueInput
+    create: XOR<DeltaCheckRuleCreateWithoutTestDefInput, DeltaCheckRuleUncheckedCreateWithoutTestDefInput>
+  }
+
+  export type DeltaCheckRuleCreateManyTestDefInputEnvelope = {
+    data: DeltaCheckRuleCreateManyTestDefInput | DeltaCheckRuleCreateManyTestDefInput[]
+  }
+
+  export type ReflexTestRuleCreateWithoutParentTestDefInput = {
+    id?: string
+    condition: string
+    priority?: number
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    childTestDef: TestDefinitionCreateNestedOneWithoutReflexRulesAsChildInput
+  }
+
+  export type ReflexTestRuleUncheckedCreateWithoutParentTestDefInput = {
+    id?: string
+    childTestDefId: string
+    condition: string
+    priority?: number
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ReflexTestRuleCreateOrConnectWithoutParentTestDefInput = {
+    where: ReflexTestRuleWhereUniqueInput
+    create: XOR<ReflexTestRuleCreateWithoutParentTestDefInput, ReflexTestRuleUncheckedCreateWithoutParentTestDefInput>
+  }
+
+  export type ReflexTestRuleCreateManyParentTestDefInputEnvelope = {
+    data: ReflexTestRuleCreateManyParentTestDefInput | ReflexTestRuleCreateManyParentTestDefInput[]
+  }
+
+  export type ReflexTestRuleCreateWithoutChildTestDefInput = {
+    id?: string
+    condition: string
+    priority?: number
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    parentTestDef: TestDefinitionCreateNestedOneWithoutReflexRulesAsParentInput
+  }
+
+  export type ReflexTestRuleUncheckedCreateWithoutChildTestDefInput = {
+    id?: string
+    parentTestDefId: string
+    condition: string
+    priority?: number
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ReflexTestRuleCreateOrConnectWithoutChildTestDefInput = {
+    where: ReflexTestRuleWhereUniqueInput
+    create: XOR<ReflexTestRuleCreateWithoutChildTestDefInput, ReflexTestRuleUncheckedCreateWithoutChildTestDefInput>
+  }
+
+  export type ReflexTestRuleCreateManyChildTestDefInputEnvelope = {
+    data: ReflexTestRuleCreateManyChildTestDefInput | ReflexTestRuleCreateManyChildTestDefInput[]
+  }
+
+  export type ResultCreateWithoutTestDefInput = {
+    id?: string
+    value: string
+    calculatedValues?: string | null
+    isNormal?: boolean
+    abnormalFlags?: string | null
+    notes?: string | null
+    enteredBy?: string | null
+    enteredAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sample: SampleCreateNestedOneWithoutResultsInput
+    test: TestCreateNestedOneWithoutResultsInput
+    interpretation?: InterpretationRuleCreateNestedOneWithoutResultsInput
+    deltaCheckResults?: DeltaCheckResultCreateNestedManyWithoutResultInput
+    emailLogs?: EmailLogCreateNestedManyWithoutResultInput
+  }
+
+  export type ResultUncheckedCreateWithoutTestDefInput = {
+    id?: string
+    sampleId: string
+    testId: string
+    value: string
+    calculatedValues?: string | null
+    isNormal?: boolean
+    abnormalFlags?: string | null
+    interpretationId?: string | null
+    notes?: string | null
+    enteredBy?: string | null
+    enteredAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedCreateNestedManyWithoutResultInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutResultInput
+  }
+
+  export type ResultCreateOrConnectWithoutTestDefInput = {
+    where: ResultWhereUniqueInput
+    create: XOR<ResultCreateWithoutTestDefInput, ResultUncheckedCreateWithoutTestDefInput>
+  }
+
+  export type ResultCreateManyTestDefInputEnvelope = {
+    data: ResultCreateManyTestDefInput | ResultCreateManyTestDefInput[]
+  }
+
+  export type TestUpsertWithoutTestDefsInput = {
+    update: XOR<TestUpdateWithoutTestDefsInput, TestUncheckedUpdateWithoutTestDefsInput>
+    create: XOR<TestCreateWithoutTestDefsInput, TestUncheckedCreateWithoutTestDefsInput>
+    where?: TestWhereInput
+  }
+
+  export type TestUpdateToOneWithWhereWithoutTestDefsInput = {
+    where?: TestWhereInput
+    data: XOR<TestUpdateWithoutTestDefsInput, TestUncheckedUpdateWithoutTestDefsInput>
+  }
+
+  export type TestUpdateWithoutTestDefsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    normalRange?: NullableStringFieldUpdateOperationsInput | string | null
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    profileTests?: TestProfileItemUpdateManyWithoutTestNestedInput
+    sampleTests?: SampleTestUpdateManyWithoutTestNestedInput
+    results?: ResultUpdateManyWithoutTestNestedInput
+  }
+
+  export type TestUncheckedUpdateWithoutTestDefsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    price?: FloatFieldUpdateOperationsInput | number
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    normalRange?: NullableStringFieldUpdateOperationsInput | string | null
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    profileTests?: TestProfileItemUncheckedUpdateManyWithoutTestNestedInput
+    sampleTests?: SampleTestUncheckedUpdateManyWithoutTestNestedInput
+    results?: ResultUncheckedUpdateManyWithoutTestNestedInput
+  }
+
+  export type TestCategoryUpsertWithoutDefinitionsInput = {
+    update: XOR<TestCategoryUpdateWithoutDefinitionsInput, TestCategoryUncheckedUpdateWithoutDefinitionsInput>
+    create: XOR<TestCategoryCreateWithoutDefinitionsInput, TestCategoryUncheckedCreateWithoutDefinitionsInput>
+    where?: TestCategoryWhereInput
+  }
+
+  export type TestCategoryUpdateToOneWithWhereWithoutDefinitionsInput = {
+    where?: TestCategoryWhereInput
+    data: XOR<TestCategoryUpdateWithoutDefinitionsInput, TestCategoryUncheckedUpdateWithoutDefinitionsInput>
+  }
+
+  export type TestCategoryUpdateWithoutDefinitionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    code?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TestCategoryUncheckedUpdateWithoutDefinitionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    code?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type NormalRangeUpsertWithWhereUniqueWithoutTestDefInput = {
+    where: NormalRangeWhereUniqueInput
+    update: XOR<NormalRangeUpdateWithoutTestDefInput, NormalRangeUncheckedUpdateWithoutTestDefInput>
+    create: XOR<NormalRangeCreateWithoutTestDefInput, NormalRangeUncheckedCreateWithoutTestDefInput>
+  }
+
+  export type NormalRangeUpdateWithWhereUniqueWithoutTestDefInput = {
+    where: NormalRangeWhereUniqueInput
+    data: XOR<NormalRangeUpdateWithoutTestDefInput, NormalRangeUncheckedUpdateWithoutTestDefInput>
+  }
+
+  export type NormalRangeUpdateManyWithWhereWithoutTestDefInput = {
+    where: NormalRangeScalarWhereInput
+    data: XOR<NormalRangeUpdateManyMutationInput, NormalRangeUncheckedUpdateManyWithoutTestDefInput>
+  }
+
+  export type NormalRangeScalarWhereInput = {
+    AND?: NormalRangeScalarWhereInput | NormalRangeScalarWhereInput[]
+    OR?: NormalRangeScalarWhereInput[]
+    NOT?: NormalRangeScalarWhereInput | NormalRangeScalarWhereInput[]
+    id?: StringFilter<"NormalRange"> | string
+    testDefId?: StringFilter<"NormalRange"> | string
+    minAge?: IntNullableFilter<"NormalRange"> | number | null
+    maxAge?: IntNullableFilter<"NormalRange"> | number | null
+    gender?: StringNullableFilter<"NormalRange"> | string | null
+    minValue?: FloatFilter<"NormalRange"> | number
+    maxValue?: FloatFilter<"NormalRange"> | number
+    criticalLow?: FloatNullableFilter<"NormalRange"> | number | null
+    criticalHigh?: FloatNullableFilter<"NormalRange"> | number | null
+    unit?: StringNullableFilter<"NormalRange"> | string | null
+    notes?: StringNullableFilter<"NormalRange"> | string | null
+    createdAt?: DateTimeFilter<"NormalRange"> | Date | string
+    updatedAt?: DateTimeFilter<"NormalRange"> | Date | string
+  }
+
+  export type InterpretationRuleUpsertWithWhereUniqueWithoutTestDefInput = {
+    where: InterpretationRuleWhereUniqueInput
+    update: XOR<InterpretationRuleUpdateWithoutTestDefInput, InterpretationRuleUncheckedUpdateWithoutTestDefInput>
+    create: XOR<InterpretationRuleCreateWithoutTestDefInput, InterpretationRuleUncheckedCreateWithoutTestDefInput>
+  }
+
+  export type InterpretationRuleUpdateWithWhereUniqueWithoutTestDefInput = {
+    where: InterpretationRuleWhereUniqueInput
+    data: XOR<InterpretationRuleUpdateWithoutTestDefInput, InterpretationRuleUncheckedUpdateWithoutTestDefInput>
+  }
+
+  export type InterpretationRuleUpdateManyWithWhereWithoutTestDefInput = {
+    where: InterpretationRuleScalarWhereInput
+    data: XOR<InterpretationRuleUpdateManyMutationInput, InterpretationRuleUncheckedUpdateManyWithoutTestDefInput>
+  }
+
+  export type InterpretationRuleScalarWhereInput = {
+    AND?: InterpretationRuleScalarWhereInput | InterpretationRuleScalarWhereInput[]
+    OR?: InterpretationRuleScalarWhereInput[]
+    NOT?: InterpretationRuleScalarWhereInput | InterpretationRuleScalarWhereInput[]
+    id?: StringFilter<"InterpretationRule"> | string
+    testDefId?: StringFilter<"InterpretationRule"> | string
+    name?: StringFilter<"InterpretationRule"> | string
+    condition?: StringFilter<"InterpretationRule"> | string
+    interpretation?: StringFilter<"InterpretationRule"> | string
+    severity?: StringNullableFilter<"InterpretationRule"> | string | null
+    priority?: IntFilter<"InterpretationRule"> | number
+    isActive?: BoolFilter<"InterpretationRule"> | boolean
+    createdAt?: DateTimeFilter<"InterpretationRule"> | Date | string
+    updatedAt?: DateTimeFilter<"InterpretationRule"> | Date | string
+  }
+
+  export type CalculationRuleUpsertWithWhereUniqueWithoutTestDefInput = {
+    where: CalculationRuleWhereUniqueInput
+    update: XOR<CalculationRuleUpdateWithoutTestDefInput, CalculationRuleUncheckedUpdateWithoutTestDefInput>
+    create: XOR<CalculationRuleCreateWithoutTestDefInput, CalculationRuleUncheckedCreateWithoutTestDefInput>
+  }
+
+  export type CalculationRuleUpdateWithWhereUniqueWithoutTestDefInput = {
+    where: CalculationRuleWhereUniqueInput
+    data: XOR<CalculationRuleUpdateWithoutTestDefInput, CalculationRuleUncheckedUpdateWithoutTestDefInput>
+  }
+
+  export type CalculationRuleUpdateManyWithWhereWithoutTestDefInput = {
+    where: CalculationRuleScalarWhereInput
+    data: XOR<CalculationRuleUpdateManyMutationInput, CalculationRuleUncheckedUpdateManyWithoutTestDefInput>
+  }
+
+  export type CalculationRuleScalarWhereInput = {
+    AND?: CalculationRuleScalarWhereInput | CalculationRuleScalarWhereInput[]
+    OR?: CalculationRuleScalarWhereInput[]
+    NOT?: CalculationRuleScalarWhereInput | CalculationRuleScalarWhereInput[]
+    id?: StringFilter<"CalculationRule"> | string
+    testDefId?: StringFilter<"CalculationRule"> | string
+    name?: StringFilter<"CalculationRule"> | string
+    formula?: StringFilter<"CalculationRule"> | string
+    requiredFields?: StringFilter<"CalculationRule"> | string
+    outputField?: StringFilter<"CalculationRule"> | string
+    priority?: IntFilter<"CalculationRule"> | number
+    isActive?: BoolFilter<"CalculationRule"> | boolean
+    createdAt?: DateTimeFilter<"CalculationRule"> | Date | string
+    updatedAt?: DateTimeFilter<"CalculationRule"> | Date | string
+  }
+
+  export type DeltaCheckRuleUpsertWithWhereUniqueWithoutTestDefInput = {
+    where: DeltaCheckRuleWhereUniqueInput
+    update: XOR<DeltaCheckRuleUpdateWithoutTestDefInput, DeltaCheckRuleUncheckedUpdateWithoutTestDefInput>
+    create: XOR<DeltaCheckRuleCreateWithoutTestDefInput, DeltaCheckRuleUncheckedCreateWithoutTestDefInput>
+  }
+
+  export type DeltaCheckRuleUpdateWithWhereUniqueWithoutTestDefInput = {
+    where: DeltaCheckRuleWhereUniqueInput
+    data: XOR<DeltaCheckRuleUpdateWithoutTestDefInput, DeltaCheckRuleUncheckedUpdateWithoutTestDefInput>
+  }
+
+  export type DeltaCheckRuleUpdateManyWithWhereWithoutTestDefInput = {
+    where: DeltaCheckRuleScalarWhereInput
+    data: XOR<DeltaCheckRuleUpdateManyMutationInput, DeltaCheckRuleUncheckedUpdateManyWithoutTestDefInput>
+  }
+
+  export type DeltaCheckRuleScalarWhereInput = {
+    AND?: DeltaCheckRuleScalarWhereInput | DeltaCheckRuleScalarWhereInput[]
+    OR?: DeltaCheckRuleScalarWhereInput[]
+    NOT?: DeltaCheckRuleScalarWhereInput | DeltaCheckRuleScalarWhereInput[]
+    id?: StringFilter<"DeltaCheckRule"> | string
+    testDefId?: StringFilter<"DeltaCheckRule"> | string
+    name?: StringFilter<"DeltaCheckRule"> | string
+    alertThreshold?: FloatFilter<"DeltaCheckRule"> | number
+    criticalThreshold?: FloatNullableFilter<"DeltaCheckRule"> | number | null
+    checkDays?: IntFilter<"DeltaCheckRule"> | number
+    isActive?: BoolFilter<"DeltaCheckRule"> | boolean
+    createdAt?: DateTimeFilter<"DeltaCheckRule"> | Date | string
+    updatedAt?: DateTimeFilter<"DeltaCheckRule"> | Date | string
+  }
+
+  export type ReflexTestRuleUpsertWithWhereUniqueWithoutParentTestDefInput = {
+    where: ReflexTestRuleWhereUniqueInput
+    update: XOR<ReflexTestRuleUpdateWithoutParentTestDefInput, ReflexTestRuleUncheckedUpdateWithoutParentTestDefInput>
+    create: XOR<ReflexTestRuleCreateWithoutParentTestDefInput, ReflexTestRuleUncheckedCreateWithoutParentTestDefInput>
+  }
+
+  export type ReflexTestRuleUpdateWithWhereUniqueWithoutParentTestDefInput = {
+    where: ReflexTestRuleWhereUniqueInput
+    data: XOR<ReflexTestRuleUpdateWithoutParentTestDefInput, ReflexTestRuleUncheckedUpdateWithoutParentTestDefInput>
+  }
+
+  export type ReflexTestRuleUpdateManyWithWhereWithoutParentTestDefInput = {
+    where: ReflexTestRuleScalarWhereInput
+    data: XOR<ReflexTestRuleUpdateManyMutationInput, ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefInput>
+  }
+
+  export type ReflexTestRuleScalarWhereInput = {
+    AND?: ReflexTestRuleScalarWhereInput | ReflexTestRuleScalarWhereInput[]
+    OR?: ReflexTestRuleScalarWhereInput[]
+    NOT?: ReflexTestRuleScalarWhereInput | ReflexTestRuleScalarWhereInput[]
+    id?: StringFilter<"ReflexTestRule"> | string
+    parentTestDefId?: StringFilter<"ReflexTestRule"> | string
+    childTestDefId?: StringFilter<"ReflexTestRule"> | string
+    condition?: StringFilter<"ReflexTestRule"> | string
+    priority?: IntFilter<"ReflexTestRule"> | number
+    requiresApproval?: BoolFilter<"ReflexTestRule"> | boolean
+    isActive?: BoolFilter<"ReflexTestRule"> | boolean
+    createdAt?: DateTimeFilter<"ReflexTestRule"> | Date | string
+    updatedAt?: DateTimeFilter<"ReflexTestRule"> | Date | string
+  }
+
+  export type ReflexTestRuleUpsertWithWhereUniqueWithoutChildTestDefInput = {
+    where: ReflexTestRuleWhereUniqueInput
+    update: XOR<ReflexTestRuleUpdateWithoutChildTestDefInput, ReflexTestRuleUncheckedUpdateWithoutChildTestDefInput>
+    create: XOR<ReflexTestRuleCreateWithoutChildTestDefInput, ReflexTestRuleUncheckedCreateWithoutChildTestDefInput>
+  }
+
+  export type ReflexTestRuleUpdateWithWhereUniqueWithoutChildTestDefInput = {
+    where: ReflexTestRuleWhereUniqueInput
+    data: XOR<ReflexTestRuleUpdateWithoutChildTestDefInput, ReflexTestRuleUncheckedUpdateWithoutChildTestDefInput>
+  }
+
+  export type ReflexTestRuleUpdateManyWithWhereWithoutChildTestDefInput = {
+    where: ReflexTestRuleScalarWhereInput
+    data: XOR<ReflexTestRuleUpdateManyMutationInput, ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefInput>
+  }
+
+  export type ResultUpsertWithWhereUniqueWithoutTestDefInput = {
+    where: ResultWhereUniqueInput
+    update: XOR<ResultUpdateWithoutTestDefInput, ResultUncheckedUpdateWithoutTestDefInput>
+    create: XOR<ResultCreateWithoutTestDefInput, ResultUncheckedCreateWithoutTestDefInput>
+  }
+
+  export type ResultUpdateWithWhereUniqueWithoutTestDefInput = {
+    where: ResultWhereUniqueInput
+    data: XOR<ResultUpdateWithoutTestDefInput, ResultUncheckedUpdateWithoutTestDefInput>
+  }
+
+  export type ResultUpdateManyWithWhereWithoutTestDefInput = {
+    where: ResultScalarWhereInput
+    data: XOR<ResultUpdateManyMutationInput, ResultUncheckedUpdateManyWithoutTestDefInput>
+  }
+
+  export type TestDefinitionCreateWithoutNormalRangesInput = {
+    id?: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    test?: TestCreateNestedOneWithoutTestDefsInput
+    category: TestCategoryCreateNestedOneWithoutDefinitionsInput
+    interpretations?: InterpretationRuleCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionUncheckedCreateWithoutNormalRangesInput = {
+    id?: string
+    testId?: string | null
+    categoryId: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    interpretations?: InterpretationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultUncheckedCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionCreateOrConnectWithoutNormalRangesInput = {
+    where: TestDefinitionWhereUniqueInput
+    create: XOR<TestDefinitionCreateWithoutNormalRangesInput, TestDefinitionUncheckedCreateWithoutNormalRangesInput>
+  }
+
+  export type TestDefinitionUpsertWithoutNormalRangesInput = {
+    update: XOR<TestDefinitionUpdateWithoutNormalRangesInput, TestDefinitionUncheckedUpdateWithoutNormalRangesInput>
+    create: XOR<TestDefinitionCreateWithoutNormalRangesInput, TestDefinitionUncheckedCreateWithoutNormalRangesInput>
+    where?: TestDefinitionWhereInput
+  }
+
+  export type TestDefinitionUpdateToOneWithWhereWithoutNormalRangesInput = {
+    where?: TestDefinitionWhereInput
+    data: XOR<TestDefinitionUpdateWithoutNormalRangesInput, TestDefinitionUncheckedUpdateWithoutNormalRangesInput>
+  }
+
+  export type TestDefinitionUpdateWithoutNormalRangesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    test?: TestUpdateOneWithoutTestDefsNestedInput
+    category?: TestCategoryUpdateOneRequiredWithoutDefinitionsNestedInput
+    interpretations?: InterpretationRuleUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateWithoutNormalRangesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testId?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    interpretations?: InterpretationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUncheckedUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionCreateWithoutCalculationRulesInput = {
+    id?: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    test?: TestCreateNestedOneWithoutTestDefsInput
+    category: TestCategoryCreateNestedOneWithoutDefinitionsInput
+    normalRanges?: NormalRangeCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionUncheckedCreateWithoutCalculationRulesInput = {
+    id?: string
+    testId?: string | null
+    categoryId: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    normalRanges?: NormalRangeUncheckedCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultUncheckedCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionCreateOrConnectWithoutCalculationRulesInput = {
+    where: TestDefinitionWhereUniqueInput
+    create: XOR<TestDefinitionCreateWithoutCalculationRulesInput, TestDefinitionUncheckedCreateWithoutCalculationRulesInput>
+  }
+
+  export type TestDefinitionUpsertWithoutCalculationRulesInput = {
+    update: XOR<TestDefinitionUpdateWithoutCalculationRulesInput, TestDefinitionUncheckedUpdateWithoutCalculationRulesInput>
+    create: XOR<TestDefinitionCreateWithoutCalculationRulesInput, TestDefinitionUncheckedCreateWithoutCalculationRulesInput>
+    where?: TestDefinitionWhereInput
+  }
+
+  export type TestDefinitionUpdateToOneWithWhereWithoutCalculationRulesInput = {
+    where?: TestDefinitionWhereInput
+    data: XOR<TestDefinitionUpdateWithoutCalculationRulesInput, TestDefinitionUncheckedUpdateWithoutCalculationRulesInput>
+  }
+
+  export type TestDefinitionUpdateWithoutCalculationRulesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    test?: TestUpdateOneWithoutTestDefsNestedInput
+    category?: TestCategoryUpdateOneRequiredWithoutDefinitionsNestedInput
+    normalRanges?: NormalRangeUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateWithoutCalculationRulesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testId?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    normalRanges?: NormalRangeUncheckedUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUncheckedUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionCreateWithoutInterpretationsInput = {
+    id?: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    test?: TestCreateNestedOneWithoutTestDefsInput
+    category: TestCategoryCreateNestedOneWithoutDefinitionsInput
+    normalRanges?: NormalRangeCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionUncheckedCreateWithoutInterpretationsInput = {
+    id?: string
+    testId?: string | null
+    categoryId: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    normalRanges?: NormalRangeUncheckedCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultUncheckedCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionCreateOrConnectWithoutInterpretationsInput = {
+    where: TestDefinitionWhereUniqueInput
+    create: XOR<TestDefinitionCreateWithoutInterpretationsInput, TestDefinitionUncheckedCreateWithoutInterpretationsInput>
+  }
+
+  export type ResultCreateWithoutInterpretationInput = {
+    id?: string
+    value: string
+    calculatedValues?: string | null
+    isNormal?: boolean
+    abnormalFlags?: string | null
+    notes?: string | null
+    enteredBy?: string | null
+    enteredAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sample: SampleCreateNestedOneWithoutResultsInput
+    test: TestCreateNestedOneWithoutResultsInput
+    testDef?: TestDefinitionCreateNestedOneWithoutTestResultsInput
+    deltaCheckResults?: DeltaCheckResultCreateNestedManyWithoutResultInput
+    emailLogs?: EmailLogCreateNestedManyWithoutResultInput
+  }
+
+  export type ResultUncheckedCreateWithoutInterpretationInput = {
+    id?: string
+    sampleId: string
+    testId: string
+    testDefId?: string | null
+    value: string
+    calculatedValues?: string | null
+    isNormal?: boolean
+    abnormalFlags?: string | null
+    notes?: string | null
+    enteredBy?: string | null
+    enteredAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedCreateNestedManyWithoutResultInput
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutResultInput
+  }
+
+  export type ResultCreateOrConnectWithoutInterpretationInput = {
+    where: ResultWhereUniqueInput
+    create: XOR<ResultCreateWithoutInterpretationInput, ResultUncheckedCreateWithoutInterpretationInput>
+  }
+
+  export type ResultCreateManyInterpretationInputEnvelope = {
+    data: ResultCreateManyInterpretationInput | ResultCreateManyInterpretationInput[]
+  }
+
+  export type TestDefinitionUpsertWithoutInterpretationsInput = {
+    update: XOR<TestDefinitionUpdateWithoutInterpretationsInput, TestDefinitionUncheckedUpdateWithoutInterpretationsInput>
+    create: XOR<TestDefinitionCreateWithoutInterpretationsInput, TestDefinitionUncheckedCreateWithoutInterpretationsInput>
+    where?: TestDefinitionWhereInput
+  }
+
+  export type TestDefinitionUpdateToOneWithWhereWithoutInterpretationsInput = {
+    where?: TestDefinitionWhereInput
+    data: XOR<TestDefinitionUpdateWithoutInterpretationsInput, TestDefinitionUncheckedUpdateWithoutInterpretationsInput>
+  }
+
+  export type TestDefinitionUpdateWithoutInterpretationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    test?: TestUpdateOneWithoutTestDefsNestedInput
+    category?: TestCategoryUpdateOneRequiredWithoutDefinitionsNestedInput
+    normalRanges?: NormalRangeUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateWithoutInterpretationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testId?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    normalRanges?: NormalRangeUncheckedUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUncheckedUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type ResultUpsertWithWhereUniqueWithoutInterpretationInput = {
+    where: ResultWhereUniqueInput
+    update: XOR<ResultUpdateWithoutInterpretationInput, ResultUncheckedUpdateWithoutInterpretationInput>
+    create: XOR<ResultCreateWithoutInterpretationInput, ResultUncheckedCreateWithoutInterpretationInput>
+  }
+
+  export type ResultUpdateWithWhereUniqueWithoutInterpretationInput = {
+    where: ResultWhereUniqueInput
+    data: XOR<ResultUpdateWithoutInterpretationInput, ResultUncheckedUpdateWithoutInterpretationInput>
+  }
+
+  export type ResultUpdateManyWithWhereWithoutInterpretationInput = {
+    where: ResultScalarWhereInput
+    data: XOR<ResultUpdateManyMutationInput, ResultUncheckedUpdateManyWithoutInterpretationInput>
+  }
+
+  export type TestDefinitionCreateWithoutDeltaCheckRulesInput = {
+    id?: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    test?: TestCreateNestedOneWithoutTestDefsInput
+    category: TestCategoryCreateNestedOneWithoutDefinitionsInput
+    normalRanges?: NormalRangeCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionUncheckedCreateWithoutDeltaCheckRulesInput = {
+    id?: string
+    testId?: string | null
+    categoryId: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    normalRanges?: NormalRangeUncheckedCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedCreateNestedManyWithoutParentTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultUncheckedCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionCreateOrConnectWithoutDeltaCheckRulesInput = {
+    where: TestDefinitionWhereUniqueInput
+    create: XOR<TestDefinitionCreateWithoutDeltaCheckRulesInput, TestDefinitionUncheckedCreateWithoutDeltaCheckRulesInput>
+  }
+
+  export type DeltaCheckResultCreateWithoutRuleInput = {
+    id?: string
+    previousValue?: number | null
+    currentValue: number
+    changePercent: number
+    previousDate?: Date | string | null
+    alertMessage: string
+    severity?: string
+    isResolved?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    result: ResultCreateNestedOneWithoutDeltaCheckResultsInput
+  }
+
+  export type DeltaCheckResultUncheckedCreateWithoutRuleInput = {
+    id?: string
+    resultId: string
+    previousValue?: number | null
+    currentValue: number
+    changePercent: number
+    previousDate?: Date | string | null
+    alertMessage: string
+    severity?: string
+    isResolved?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DeltaCheckResultCreateOrConnectWithoutRuleInput = {
+    where: DeltaCheckResultWhereUniqueInput
+    create: XOR<DeltaCheckResultCreateWithoutRuleInput, DeltaCheckResultUncheckedCreateWithoutRuleInput>
+  }
+
+  export type DeltaCheckResultCreateManyRuleInputEnvelope = {
+    data: DeltaCheckResultCreateManyRuleInput | DeltaCheckResultCreateManyRuleInput[]
+  }
+
+  export type TestDefinitionUpsertWithoutDeltaCheckRulesInput = {
+    update: XOR<TestDefinitionUpdateWithoutDeltaCheckRulesInput, TestDefinitionUncheckedUpdateWithoutDeltaCheckRulesInput>
+    create: XOR<TestDefinitionCreateWithoutDeltaCheckRulesInput, TestDefinitionUncheckedCreateWithoutDeltaCheckRulesInput>
+    where?: TestDefinitionWhereInput
+  }
+
+  export type TestDefinitionUpdateToOneWithWhereWithoutDeltaCheckRulesInput = {
+    where?: TestDefinitionWhereInput
+    data: XOR<TestDefinitionUpdateWithoutDeltaCheckRulesInput, TestDefinitionUncheckedUpdateWithoutDeltaCheckRulesInput>
+  }
+
+  export type TestDefinitionUpdateWithoutDeltaCheckRulesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    test?: TestUpdateOneWithoutTestDefsNestedInput
+    category?: TestCategoryUpdateOneRequiredWithoutDefinitionsNestedInput
+    normalRanges?: NormalRangeUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateWithoutDeltaCheckRulesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testId?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    normalRanges?: NormalRangeUncheckedUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUncheckedUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type DeltaCheckResultUpsertWithWhereUniqueWithoutRuleInput = {
+    where: DeltaCheckResultWhereUniqueInput
+    update: XOR<DeltaCheckResultUpdateWithoutRuleInput, DeltaCheckResultUncheckedUpdateWithoutRuleInput>
+    create: XOR<DeltaCheckResultCreateWithoutRuleInput, DeltaCheckResultUncheckedCreateWithoutRuleInput>
+  }
+
+  export type DeltaCheckResultUpdateWithWhereUniqueWithoutRuleInput = {
+    where: DeltaCheckResultWhereUniqueInput
+    data: XOR<DeltaCheckResultUpdateWithoutRuleInput, DeltaCheckResultUncheckedUpdateWithoutRuleInput>
+  }
+
+  export type DeltaCheckResultUpdateManyWithWhereWithoutRuleInput = {
+    where: DeltaCheckResultScalarWhereInput
+    data: XOR<DeltaCheckResultUpdateManyMutationInput, DeltaCheckResultUncheckedUpdateManyWithoutRuleInput>
+  }
+
+  export type TestDefinitionCreateWithoutReflexRulesAsParentInput = {
+    id?: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    test?: TestCreateNestedOneWithoutTestDefsInput
+    category: TestCategoryCreateNestedOneWithoutDefinitionsInput
+    normalRanges?: NormalRangeCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleCreateNestedManyWithoutTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionUncheckedCreateWithoutReflexRulesAsParentInput = {
+    id?: string
+    testId?: string | null
+    categoryId: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    normalRanges?: NormalRangeUncheckedCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedCreateNestedManyWithoutTestDefInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedCreateNestedManyWithoutChildTestDefInput
+    testResults?: ResultUncheckedCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionCreateOrConnectWithoutReflexRulesAsParentInput = {
+    where: TestDefinitionWhereUniqueInput
+    create: XOR<TestDefinitionCreateWithoutReflexRulesAsParentInput, TestDefinitionUncheckedCreateWithoutReflexRulesAsParentInput>
+  }
+
+  export type TestDefinitionCreateWithoutReflexRulesAsChildInput = {
+    id?: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    test?: TestCreateNestedOneWithoutTestDefsInput
+    category: TestCategoryCreateNestedOneWithoutDefinitionsInput
+    normalRanges?: NormalRangeCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleCreateNestedManyWithoutParentTestDefInput
+    testResults?: ResultCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionUncheckedCreateWithoutReflexRulesAsChildInput = {
+    id?: string
+    testId?: string | null
+    categoryId: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    normalRanges?: NormalRangeUncheckedCreateNestedManyWithoutTestDefInput
+    interpretations?: InterpretationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    calculationRules?: CalculationRuleUncheckedCreateNestedManyWithoutTestDefInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedCreateNestedManyWithoutTestDefInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedCreateNestedManyWithoutParentTestDefInput
+    testResults?: ResultUncheckedCreateNestedManyWithoutTestDefInput
+  }
+
+  export type TestDefinitionCreateOrConnectWithoutReflexRulesAsChildInput = {
+    where: TestDefinitionWhereUniqueInput
+    create: XOR<TestDefinitionCreateWithoutReflexRulesAsChildInput, TestDefinitionUncheckedCreateWithoutReflexRulesAsChildInput>
+  }
+
+  export type TestDefinitionUpsertWithoutReflexRulesAsParentInput = {
+    update: XOR<TestDefinitionUpdateWithoutReflexRulesAsParentInput, TestDefinitionUncheckedUpdateWithoutReflexRulesAsParentInput>
+    create: XOR<TestDefinitionCreateWithoutReflexRulesAsParentInput, TestDefinitionUncheckedCreateWithoutReflexRulesAsParentInput>
+    where?: TestDefinitionWhereInput
+  }
+
+  export type TestDefinitionUpdateToOneWithWhereWithoutReflexRulesAsParentInput = {
+    where?: TestDefinitionWhereInput
+    data: XOR<TestDefinitionUpdateWithoutReflexRulesAsParentInput, TestDefinitionUncheckedUpdateWithoutReflexRulesAsParentInput>
+  }
+
+  export type TestDefinitionUpdateWithoutReflexRulesAsParentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    test?: TestUpdateOneWithoutTestDefsNestedInput
+    category?: TestCategoryUpdateOneRequiredWithoutDefinitionsNestedInput
+    normalRanges?: NormalRangeUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateWithoutReflexRulesAsParentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testId?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    normalRanges?: NormalRangeUncheckedUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUncheckedUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUpsertWithoutReflexRulesAsChildInput = {
+    update: XOR<TestDefinitionUpdateWithoutReflexRulesAsChildInput, TestDefinitionUncheckedUpdateWithoutReflexRulesAsChildInput>
+    create: XOR<TestDefinitionCreateWithoutReflexRulesAsChildInput, TestDefinitionUncheckedCreateWithoutReflexRulesAsChildInput>
+    where?: TestDefinitionWhereInput
+  }
+
+  export type TestDefinitionUpdateToOneWithWhereWithoutReflexRulesAsChildInput = {
+    where?: TestDefinitionWhereInput
+    data: XOR<TestDefinitionUpdateWithoutReflexRulesAsChildInput, TestDefinitionUncheckedUpdateWithoutReflexRulesAsChildInput>
+  }
+
+  export type TestDefinitionUpdateWithoutReflexRulesAsChildInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    test?: TestUpdateOneWithoutTestDefsNestedInput
+    category?: TestCategoryUpdateOneRequiredWithoutDefinitionsNestedInput
+    normalRanges?: NormalRangeUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUpdateManyWithoutParentTestDefNestedInput
+    testResults?: ResultUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateWithoutReflexRulesAsChildInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testId?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    normalRanges?: NormalRangeUncheckedUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefNestedInput
+    testResults?: ResultUncheckedUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type ResultCreateWithoutDeltaCheckResultsInput = {
+    id?: string
+    value: string
+    calculatedValues?: string | null
+    isNormal?: boolean
+    abnormalFlags?: string | null
+    notes?: string | null
+    enteredBy?: string | null
+    enteredAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sample: SampleCreateNestedOneWithoutResultsInput
+    test: TestCreateNestedOneWithoutResultsInput
+    testDef?: TestDefinitionCreateNestedOneWithoutTestResultsInput
+    interpretation?: InterpretationRuleCreateNestedOneWithoutResultsInput
+    emailLogs?: EmailLogCreateNestedManyWithoutResultInput
+  }
+
+  export type ResultUncheckedCreateWithoutDeltaCheckResultsInput = {
+    id?: string
+    sampleId: string
+    testId: string
+    testDefId?: string | null
+    value: string
+    calculatedValues?: string | null
+    isNormal?: boolean
+    abnormalFlags?: string | null
+    interpretationId?: string | null
+    notes?: string | null
+    enteredBy?: string | null
+    enteredAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    emailLogs?: EmailLogUncheckedCreateNestedManyWithoutResultInput
+  }
+
+  export type ResultCreateOrConnectWithoutDeltaCheckResultsInput = {
+    where: ResultWhereUniqueInput
+    create: XOR<ResultCreateWithoutDeltaCheckResultsInput, ResultUncheckedCreateWithoutDeltaCheckResultsInput>
+  }
+
+  export type DeltaCheckRuleCreateWithoutDeltaCheckResultsInput = {
+    id?: string
+    name: string
+    alertThreshold: number
+    criticalThreshold?: number | null
+    checkDays?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    testDef: TestDefinitionCreateNestedOneWithoutDeltaCheckRulesInput
+  }
+
+  export type DeltaCheckRuleUncheckedCreateWithoutDeltaCheckResultsInput = {
+    id?: string
+    testDefId: string
+    name: string
+    alertThreshold: number
+    criticalThreshold?: number | null
+    checkDays?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DeltaCheckRuleCreateOrConnectWithoutDeltaCheckResultsInput = {
+    where: DeltaCheckRuleWhereUniqueInput
+    create: XOR<DeltaCheckRuleCreateWithoutDeltaCheckResultsInput, DeltaCheckRuleUncheckedCreateWithoutDeltaCheckResultsInput>
+  }
+
+  export type ResultUpsertWithoutDeltaCheckResultsInput = {
+    update: XOR<ResultUpdateWithoutDeltaCheckResultsInput, ResultUncheckedUpdateWithoutDeltaCheckResultsInput>
+    create: XOR<ResultCreateWithoutDeltaCheckResultsInput, ResultUncheckedCreateWithoutDeltaCheckResultsInput>
+    where?: ResultWhereInput
+  }
+
+  export type ResultUpdateToOneWithWhereWithoutDeltaCheckResultsInput = {
+    where?: ResultWhereInput
+    data: XOR<ResultUpdateWithoutDeltaCheckResultsInput, ResultUncheckedUpdateWithoutDeltaCheckResultsInput>
+  }
+
+  export type ResultUpdateWithoutDeltaCheckResultsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
+    isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sample?: SampleUpdateOneRequiredWithoutResultsNestedInput
+    test?: TestUpdateOneRequiredWithoutResultsNestedInput
+    testDef?: TestDefinitionUpdateOneWithoutTestResultsNestedInput
+    interpretation?: InterpretationRuleUpdateOneWithoutResultsNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutResultNestedInput
+  }
+
+  export type ResultUncheckedUpdateWithoutDeltaCheckResultsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sampleId?: StringFieldUpdateOperationsInput | string
+    testId?: StringFieldUpdateOperationsInput | string
+    testDefId?: NullableStringFieldUpdateOperationsInput | string | null
+    value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
+    isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    interpretationId?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutResultNestedInput
+  }
+
+  export type DeltaCheckRuleUpsertWithoutDeltaCheckResultsInput = {
+    update: XOR<DeltaCheckRuleUpdateWithoutDeltaCheckResultsInput, DeltaCheckRuleUncheckedUpdateWithoutDeltaCheckResultsInput>
+    create: XOR<DeltaCheckRuleCreateWithoutDeltaCheckResultsInput, DeltaCheckRuleUncheckedCreateWithoutDeltaCheckResultsInput>
+    where?: DeltaCheckRuleWhereInput
+  }
+
+  export type DeltaCheckRuleUpdateToOneWithWhereWithoutDeltaCheckResultsInput = {
+    where?: DeltaCheckRuleWhereInput
+    data: XOR<DeltaCheckRuleUpdateWithoutDeltaCheckResultsInput, DeltaCheckRuleUncheckedUpdateWithoutDeltaCheckResultsInput>
+  }
+
+  export type DeltaCheckRuleUpdateWithoutDeltaCheckResultsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    alertThreshold?: FloatFieldUpdateOperationsInput | number
+    criticalThreshold?: NullableFloatFieldUpdateOperationsInput | number | null
+    checkDays?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    testDef?: TestDefinitionUpdateOneRequiredWithoutDeltaCheckRulesNestedInput
+  }
+
+  export type DeltaCheckRuleUncheckedUpdateWithoutDeltaCheckResultsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testDefId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    alertThreshold?: FloatFieldUpdateOperationsInput | number
+    criticalThreshold?: NullableFloatFieldUpdateOperationsInput | number | null
+    checkDays?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogCreateWithoutTemplateInput = {
+    id?: string
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    result?: ResultCreateNestedOneWithoutEmailLogsInput
+    sample?: SampleCreateNestedOneWithoutEmailLogsInput
+    invoice?: InvoiceCreateNestedOneWithoutEmailLogsInput
+  }
+
+  export type EmailLogUncheckedCreateWithoutTemplateInput = {
+    id?: string
+    resultId?: string | null
+    sampleId?: string | null
+    invoiceId?: string | null
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailLogCreateOrConnectWithoutTemplateInput = {
+    where: EmailLogWhereUniqueInput
+    create: XOR<EmailLogCreateWithoutTemplateInput, EmailLogUncheckedCreateWithoutTemplateInput>
+  }
+
+  export type EmailLogCreateManyTemplateInputEnvelope = {
+    data: EmailLogCreateManyTemplateInput | EmailLogCreateManyTemplateInput[]
+  }
+
+  export type EmailLogUpsertWithWhereUniqueWithoutTemplateInput = {
+    where: EmailLogWhereUniqueInput
+    update: XOR<EmailLogUpdateWithoutTemplateInput, EmailLogUncheckedUpdateWithoutTemplateInput>
+    create: XOR<EmailLogCreateWithoutTemplateInput, EmailLogUncheckedCreateWithoutTemplateInput>
+  }
+
+  export type EmailLogUpdateWithWhereUniqueWithoutTemplateInput = {
+    where: EmailLogWhereUniqueInput
+    data: XOR<EmailLogUpdateWithoutTemplateInput, EmailLogUncheckedUpdateWithoutTemplateInput>
+  }
+
+  export type EmailLogUpdateManyWithWhereWithoutTemplateInput = {
+    where: EmailLogScalarWhereInput
+    data: XOR<EmailLogUpdateManyMutationInput, EmailLogUncheckedUpdateManyWithoutTemplateInput>
+  }
+
+  export type EmailTemplateCreateWithoutEmailLogsInput = {
+    id?: string
+    name: string
+    subject: string
+    htmlContent: string
+    plainTextContent?: string | null
+    templateType: string
+    requiredVariables: string
+    isActive?: boolean
+    version?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailTemplateUncheckedCreateWithoutEmailLogsInput = {
+    id?: string
+    name: string
+    subject: string
+    htmlContent: string
+    plainTextContent?: string | null
+    templateType: string
+    requiredVariables: string
+    isActive?: boolean
+    version?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailTemplateCreateOrConnectWithoutEmailLogsInput = {
+    where: EmailTemplateWhereUniqueInput
+    create: XOR<EmailTemplateCreateWithoutEmailLogsInput, EmailTemplateUncheckedCreateWithoutEmailLogsInput>
+  }
+
+  export type ResultCreateWithoutEmailLogsInput = {
+    id?: string
+    value: string
+    calculatedValues?: string | null
+    isNormal?: boolean
+    abnormalFlags?: string | null
+    notes?: string | null
+    enteredBy?: string | null
+    enteredAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sample: SampleCreateNestedOneWithoutResultsInput
+    test: TestCreateNestedOneWithoutResultsInput
+    testDef?: TestDefinitionCreateNestedOneWithoutTestResultsInput
+    interpretation?: InterpretationRuleCreateNestedOneWithoutResultsInput
+    deltaCheckResults?: DeltaCheckResultCreateNestedManyWithoutResultInput
+  }
+
+  export type ResultUncheckedCreateWithoutEmailLogsInput = {
+    id?: string
+    sampleId: string
+    testId: string
+    testDefId?: string | null
+    value: string
+    calculatedValues?: string | null
+    isNormal?: boolean
+    abnormalFlags?: string | null
+    interpretationId?: string | null
+    notes?: string | null
+    enteredBy?: string | null
+    enteredAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedCreateNestedManyWithoutResultInput
+  }
+
+  export type ResultCreateOrConnectWithoutEmailLogsInput = {
+    where: ResultWhereUniqueInput
+    create: XOR<ResultCreateWithoutEmailLogsInput, ResultUncheckedCreateWithoutEmailLogsInput>
+  }
+
+  export type SampleCreateWithoutEmailLogsInput = {
+    id?: string
+    sampleNumber: string
+    collectionDate?: Date | string
+    status?: string
+    notes?: string | null
+    createdAt?: Date | string
+    patient: PatientCreateNestedOneWithoutSamplesInput
+    profile?: TestProfileCreateNestedOneWithoutSamplesInput
+    tests?: SampleTestCreateNestedManyWithoutSampleInput
+    results?: ResultCreateNestedManyWithoutSampleInput
+    invoice?: InvoiceCreateNestedOneWithoutSampleInput
+  }
+
+  export type SampleUncheckedCreateWithoutEmailLogsInput = {
+    id?: string
+    sampleNumber: string
+    patientId: string
+    profileId?: string | null
+    collectionDate?: Date | string
+    status?: string
+    notes?: string | null
+    createdAt?: Date | string
+    tests?: SampleTestUncheckedCreateNestedManyWithoutSampleInput
+    results?: ResultUncheckedCreateNestedManyWithoutSampleInput
+    invoice?: InvoiceUncheckedCreateNestedOneWithoutSampleInput
+  }
+
+  export type SampleCreateOrConnectWithoutEmailLogsInput = {
+    where: SampleWhereUniqueInput
+    create: XOR<SampleCreateWithoutEmailLogsInput, SampleUncheckedCreateWithoutEmailLogsInput>
+  }
+
+  export type InvoiceCreateWithoutEmailLogsInput = {
+    id?: string
+    invoiceNumber: string
+    subtotal: number
+    tax?: number
+    discount?: number
+    total: number
+    status?: string
+    dueDate?: Date | string | null
+    paidDate?: Date | string | null
+    notes?: string | null
+    createdAt?: Date | string
+    patient: PatientCreateNestedOneWithoutInvoicesInput
+    sample?: SampleCreateNestedOneWithoutInvoiceInput
+    lab: LabCreateNestedOneWithoutInvoicesInput
+    items?: InvoiceItemCreateNestedManyWithoutInvoiceInput
+    commissions?: CommissionCreateNestedManyWithoutInvoiceInput
+  }
+
+  export type InvoiceUncheckedCreateWithoutEmailLogsInput = {
+    id?: string
+    invoiceNumber: string
+    patientId: string
+    sampleId?: string | null
+    labId: string
+    subtotal: number
+    tax?: number
+    discount?: number
+    total: number
+    status?: string
+    dueDate?: Date | string | null
+    paidDate?: Date | string | null
+    notes?: string | null
+    createdAt?: Date | string
+    items?: InvoiceItemUncheckedCreateNestedManyWithoutInvoiceInput
+    commissions?: CommissionUncheckedCreateNestedManyWithoutInvoiceInput
+  }
+
+  export type InvoiceCreateOrConnectWithoutEmailLogsInput = {
+    where: InvoiceWhereUniqueInput
+    create: XOR<InvoiceCreateWithoutEmailLogsInput, InvoiceUncheckedCreateWithoutEmailLogsInput>
+  }
+
+  export type EmailTemplateUpsertWithoutEmailLogsInput = {
+    update: XOR<EmailTemplateUpdateWithoutEmailLogsInput, EmailTemplateUncheckedUpdateWithoutEmailLogsInput>
+    create: XOR<EmailTemplateCreateWithoutEmailLogsInput, EmailTemplateUncheckedCreateWithoutEmailLogsInput>
+    where?: EmailTemplateWhereInput
+  }
+
+  export type EmailTemplateUpdateToOneWithWhereWithoutEmailLogsInput = {
+    where?: EmailTemplateWhereInput
+    data: XOR<EmailTemplateUpdateWithoutEmailLogsInput, EmailTemplateUncheckedUpdateWithoutEmailLogsInput>
+  }
+
+  export type EmailTemplateUpdateWithoutEmailLogsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    htmlContent?: StringFieldUpdateOperationsInput | string
+    plainTextContent?: NullableStringFieldUpdateOperationsInput | string | null
+    templateType?: StringFieldUpdateOperationsInput | string
+    requiredVariables?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    version?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailTemplateUncheckedUpdateWithoutEmailLogsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    htmlContent?: StringFieldUpdateOperationsInput | string
+    plainTextContent?: NullableStringFieldUpdateOperationsInput | string | null
+    templateType?: StringFieldUpdateOperationsInput | string
+    requiredVariables?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    version?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ResultUpsertWithoutEmailLogsInput = {
+    update: XOR<ResultUpdateWithoutEmailLogsInput, ResultUncheckedUpdateWithoutEmailLogsInput>
+    create: XOR<ResultCreateWithoutEmailLogsInput, ResultUncheckedCreateWithoutEmailLogsInput>
+    where?: ResultWhereInput
+  }
+
+  export type ResultUpdateToOneWithWhereWithoutEmailLogsInput = {
+    where?: ResultWhereInput
+    data: XOR<ResultUpdateWithoutEmailLogsInput, ResultUncheckedUpdateWithoutEmailLogsInput>
+  }
+
+  export type ResultUpdateWithoutEmailLogsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
+    isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sample?: SampleUpdateOneRequiredWithoutResultsNestedInput
+    test?: TestUpdateOneRequiredWithoutResultsNestedInput
+    testDef?: TestDefinitionUpdateOneWithoutTestResultsNestedInput
+    interpretation?: InterpretationRuleUpdateOneWithoutResultsNestedInput
+    deltaCheckResults?: DeltaCheckResultUpdateManyWithoutResultNestedInput
+  }
+
+  export type ResultUncheckedUpdateWithoutEmailLogsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sampleId?: StringFieldUpdateOperationsInput | string
+    testId?: StringFieldUpdateOperationsInput | string
+    testDefId?: NullableStringFieldUpdateOperationsInput | string | null
+    value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
+    isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    interpretationId?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedUpdateManyWithoutResultNestedInput
+  }
+
+  export type SampleUpsertWithoutEmailLogsInput = {
+    update: XOR<SampleUpdateWithoutEmailLogsInput, SampleUncheckedUpdateWithoutEmailLogsInput>
+    create: XOR<SampleCreateWithoutEmailLogsInput, SampleUncheckedCreateWithoutEmailLogsInput>
+    where?: SampleWhereInput
+  }
+
+  export type SampleUpdateToOneWithWhereWithoutEmailLogsInput = {
+    where?: SampleWhereInput
+    data: XOR<SampleUpdateWithoutEmailLogsInput, SampleUncheckedUpdateWithoutEmailLogsInput>
+  }
+
+  export type SampleUpdateWithoutEmailLogsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sampleNumber?: StringFieldUpdateOperationsInput | string
+    collectionDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: StringFieldUpdateOperationsInput | string
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    patient?: PatientUpdateOneRequiredWithoutSamplesNestedInput
+    profile?: TestProfileUpdateOneWithoutSamplesNestedInput
+    tests?: SampleTestUpdateManyWithoutSampleNestedInput
+    results?: ResultUpdateManyWithoutSampleNestedInput
+    invoice?: InvoiceUpdateOneWithoutSampleNestedInput
+  }
+
+  export type SampleUncheckedUpdateWithoutEmailLogsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sampleNumber?: StringFieldUpdateOperationsInput | string
+    patientId?: StringFieldUpdateOperationsInput | string
+    profileId?: NullableStringFieldUpdateOperationsInput | string | null
+    collectionDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    status?: StringFieldUpdateOperationsInput | string
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    tests?: SampleTestUncheckedUpdateManyWithoutSampleNestedInput
+    results?: ResultUncheckedUpdateManyWithoutSampleNestedInput
+    invoice?: InvoiceUncheckedUpdateOneWithoutSampleNestedInput
+  }
+
+  export type InvoiceUpsertWithoutEmailLogsInput = {
+    update: XOR<InvoiceUpdateWithoutEmailLogsInput, InvoiceUncheckedUpdateWithoutEmailLogsInput>
+    create: XOR<InvoiceCreateWithoutEmailLogsInput, InvoiceUncheckedCreateWithoutEmailLogsInput>
+    where?: InvoiceWhereInput
+  }
+
+  export type InvoiceUpdateToOneWithWhereWithoutEmailLogsInput = {
+    where?: InvoiceWhereInput
+    data: XOR<InvoiceUpdateWithoutEmailLogsInput, InvoiceUncheckedUpdateWithoutEmailLogsInput>
+  }
+
+  export type InvoiceUpdateWithoutEmailLogsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    invoiceNumber?: StringFieldUpdateOperationsInput | string
+    subtotal?: FloatFieldUpdateOperationsInput | number
+    tax?: FloatFieldUpdateOperationsInput | number
+    discount?: FloatFieldUpdateOperationsInput | number
+    total?: FloatFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
+    dueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    paidDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    patient?: PatientUpdateOneRequiredWithoutInvoicesNestedInput
+    sample?: SampleUpdateOneWithoutInvoiceNestedInput
+    lab?: LabUpdateOneRequiredWithoutInvoicesNestedInput
+    items?: InvoiceItemUpdateManyWithoutInvoiceNestedInput
+    commissions?: CommissionUpdateManyWithoutInvoiceNestedInput
+  }
+
+  export type InvoiceUncheckedUpdateWithoutEmailLogsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    invoiceNumber?: StringFieldUpdateOperationsInput | string
+    patientId?: StringFieldUpdateOperationsInput | string
+    sampleId?: NullableStringFieldUpdateOperationsInput | string | null
+    labId?: StringFieldUpdateOperationsInput | string
+    subtotal?: FloatFieldUpdateOperationsInput | number
+    tax?: FloatFieldUpdateOperationsInput | number
+    discount?: FloatFieldUpdateOperationsInput | number
+    total?: FloatFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
+    dueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    paidDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    items?: InvoiceItemUncheckedUpdateManyWithoutInvoiceNestedInput
+    commissions?: CommissionUncheckedUpdateManyWithoutInvoiceNestedInput
+  }
+
   export type PatientCreateManyLabInput = {
     id?: string
     firstName: string
@@ -28708,6 +48110,7 @@ export namespace Prisma {
     sample?: SampleUpdateOneWithoutInvoiceNestedInput
     items?: InvoiceItemUpdateManyWithoutInvoiceNestedInput
     commissions?: CommissionUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutInvoiceNestedInput
   }
 
   export type InvoiceUncheckedUpdateWithoutLabInput = {
@@ -28726,6 +48129,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     items?: InvoiceItemUncheckedUpdateManyWithoutInvoiceNestedInput
     commissions?: CommissionUncheckedUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutInvoiceNestedInput
   }
 
   export type InvoiceUncheckedUpdateManyWithoutLabInput = {
@@ -28859,6 +48263,7 @@ export namespace Prisma {
     profile?: TestProfileUpdateOneWithoutSamplesNestedInput
     tests?: SampleTestUpdateManyWithoutSampleNestedInput
     results?: ResultUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutSampleNestedInput
     invoice?: InvoiceUpdateOneWithoutSampleNestedInput
   }
 
@@ -28872,6 +48277,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     tests?: SampleTestUncheckedUpdateManyWithoutSampleNestedInput
     results?: ResultUncheckedUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutSampleNestedInput
     invoice?: InvoiceUncheckedUpdateOneWithoutSampleNestedInput
   }
 
@@ -28901,6 +48307,7 @@ export namespace Prisma {
     lab?: LabUpdateOneRequiredWithoutInvoicesNestedInput
     items?: InvoiceItemUpdateManyWithoutInvoiceNestedInput
     commissions?: CommissionUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutInvoiceNestedInput
   }
 
   export type InvoiceUncheckedUpdateWithoutPatientInput = {
@@ -28919,6 +48326,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     items?: InvoiceItemUncheckedUpdateManyWithoutInvoiceNestedInput
     commissions?: CommissionUncheckedUpdateManyWithoutInvoiceNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutInvoiceNestedInput
   }
 
   export type InvoiceUncheckedUpdateManyWithoutPatientInput = {
@@ -28951,12 +48359,30 @@ export namespace Prisma {
   export type ResultCreateManyTestInput = {
     id?: string
     sampleId: string
+    testDefId?: string | null
     value: string
+    calculatedValues?: string | null
     isNormal?: boolean
+    abnormalFlags?: string | null
+    interpretationId?: string | null
     notes?: string | null
     enteredBy?: string | null
     enteredAt?: Date | string
     createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TestDefinitionCreateManyTestInput = {
+    id?: string
+    categoryId: string
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type TestProfileItemUpdateWithoutTestInput = {
@@ -28995,34 +48421,106 @@ export namespace Prisma {
   export type ResultUpdateWithoutTestInput = {
     id?: StringFieldUpdateOperationsInput | string
     value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
     isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
     enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     sample?: SampleUpdateOneRequiredWithoutResultsNestedInput
+    testDef?: TestDefinitionUpdateOneWithoutTestResultsNestedInput
+    interpretation?: InterpretationRuleUpdateOneWithoutResultsNestedInput
+    deltaCheckResults?: DeltaCheckResultUpdateManyWithoutResultNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutResultNestedInput
   }
 
   export type ResultUncheckedUpdateWithoutTestInput = {
     id?: StringFieldUpdateOperationsInput | string
     sampleId?: StringFieldUpdateOperationsInput | string
+    testDefId?: NullableStringFieldUpdateOperationsInput | string | null
     value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
     isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    interpretationId?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
     enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedUpdateManyWithoutResultNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutResultNestedInput
   }
 
   export type ResultUncheckedUpdateManyWithoutTestInput = {
     id?: StringFieldUpdateOperationsInput | string
     sampleId?: StringFieldUpdateOperationsInput | string
+    testDefId?: NullableStringFieldUpdateOperationsInput | string | null
     value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
     isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    interpretationId?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
     enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TestDefinitionUpdateWithoutTestInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    category?: TestCategoryUpdateOneRequiredWithoutDefinitionsNestedInput
+    normalRanges?: NormalRangeUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateWithoutTestInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    categoryId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    normalRanges?: NormalRangeUncheckedUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUncheckedUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateManyWithoutTestInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    categoryId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type TestProfileItemCreateManyProfileInput = {
@@ -29065,6 +48563,7 @@ export namespace Prisma {
     patient?: PatientUpdateOneRequiredWithoutSamplesNestedInput
     tests?: SampleTestUpdateManyWithoutSampleNestedInput
     results?: ResultUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutSampleNestedInput
     invoice?: InvoiceUpdateOneWithoutSampleNestedInput
   }
 
@@ -29078,6 +48577,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     tests?: SampleTestUncheckedUpdateManyWithoutSampleNestedInput
     results?: ResultUncheckedUpdateManyWithoutSampleNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutSampleNestedInput
     invoice?: InvoiceUncheckedUpdateOneWithoutSampleNestedInput
   }
 
@@ -29100,12 +48600,34 @@ export namespace Prisma {
   export type ResultCreateManySampleInput = {
     id?: string
     testId: string
+    testDefId?: string | null
     value: string
+    calculatedValues?: string | null
     isNormal?: boolean
+    abnormalFlags?: string | null
+    interpretationId?: string | null
     notes?: string | null
     enteredBy?: string | null
     enteredAt?: Date | string
     createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailLogCreateManySampleInput = {
+    id?: string
+    templateId?: string | null
+    resultId?: string | null
+    invoiceId?: string | null
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type SampleTestUpdateWithoutSampleInput = {
@@ -29129,34 +48651,228 @@ export namespace Prisma {
   export type ResultUpdateWithoutSampleInput = {
     id?: StringFieldUpdateOperationsInput | string
     value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
     isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
     enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     test?: TestUpdateOneRequiredWithoutResultsNestedInput
+    testDef?: TestDefinitionUpdateOneWithoutTestResultsNestedInput
+    interpretation?: InterpretationRuleUpdateOneWithoutResultsNestedInput
+    deltaCheckResults?: DeltaCheckResultUpdateManyWithoutResultNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutResultNestedInput
   }
 
   export type ResultUncheckedUpdateWithoutSampleInput = {
     id?: StringFieldUpdateOperationsInput | string
     testId?: StringFieldUpdateOperationsInput | string
+    testDefId?: NullableStringFieldUpdateOperationsInput | string | null
     value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
     isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    interpretationId?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
     enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedUpdateManyWithoutResultNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutResultNestedInput
   }
 
   export type ResultUncheckedUpdateManyWithoutSampleInput = {
     id?: StringFieldUpdateOperationsInput | string
     testId?: StringFieldUpdateOperationsInput | string
+    testDefId?: NullableStringFieldUpdateOperationsInput | string | null
     value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
     isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    interpretationId?: NullableStringFieldUpdateOperationsInput | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
     enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogUpdateWithoutSampleInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    template?: EmailTemplateUpdateOneWithoutEmailLogsNestedInput
+    result?: ResultUpdateOneWithoutEmailLogsNestedInput
+    invoice?: InvoiceUpdateOneWithoutEmailLogsNestedInput
+  }
+
+  export type EmailLogUncheckedUpdateWithoutSampleInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    templateId?: NullableStringFieldUpdateOperationsInput | string | null
+    resultId?: NullableStringFieldUpdateOperationsInput | string | null
+    invoiceId?: NullableStringFieldUpdateOperationsInput | string | null
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogUncheckedUpdateManyWithoutSampleInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    templateId?: NullableStringFieldUpdateOperationsInput | string | null
+    resultId?: NullableStringFieldUpdateOperationsInput | string | null
+    invoiceId?: NullableStringFieldUpdateOperationsInput | string | null
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DeltaCheckResultCreateManyResultInput = {
+    id?: string
+    ruleId: string
+    previousValue?: number | null
+    currentValue: number
+    changePercent: number
+    previousDate?: Date | string | null
+    alertMessage: string
+    severity?: string
+    isResolved?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailLogCreateManyResultInput = {
+    id?: string
+    templateId?: string | null
+    sampleId?: string | null
+    invoiceId?: string | null
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DeltaCheckResultUpdateWithoutResultInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    previousValue?: NullableFloatFieldUpdateOperationsInput | number | null
+    currentValue?: FloatFieldUpdateOperationsInput | number
+    changePercent?: FloatFieldUpdateOperationsInput | number
+    previousDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    alertMessage?: StringFieldUpdateOperationsInput | string
+    severity?: StringFieldUpdateOperationsInput | string
+    isResolved?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    rule?: DeltaCheckRuleUpdateOneRequiredWithoutDeltaCheckResultsNestedInput
+  }
+
+  export type DeltaCheckResultUncheckedUpdateWithoutResultInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    ruleId?: StringFieldUpdateOperationsInput | string
+    previousValue?: NullableFloatFieldUpdateOperationsInput | number | null
+    currentValue?: FloatFieldUpdateOperationsInput | number
+    changePercent?: FloatFieldUpdateOperationsInput | number
+    previousDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    alertMessage?: StringFieldUpdateOperationsInput | string
+    severity?: StringFieldUpdateOperationsInput | string
+    isResolved?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DeltaCheckResultUncheckedUpdateManyWithoutResultInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    ruleId?: StringFieldUpdateOperationsInput | string
+    previousValue?: NullableFloatFieldUpdateOperationsInput | number | null
+    currentValue?: FloatFieldUpdateOperationsInput | number
+    changePercent?: FloatFieldUpdateOperationsInput | number
+    previousDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    alertMessage?: StringFieldUpdateOperationsInput | string
+    severity?: StringFieldUpdateOperationsInput | string
+    isResolved?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogUpdateWithoutResultInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    template?: EmailTemplateUpdateOneWithoutEmailLogsNestedInput
+    sample?: SampleUpdateOneWithoutEmailLogsNestedInput
+    invoice?: InvoiceUpdateOneWithoutEmailLogsNestedInput
+  }
+
+  export type EmailLogUncheckedUpdateWithoutResultInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    templateId?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleId?: NullableStringFieldUpdateOperationsInput | string | null
+    invoiceId?: NullableStringFieldUpdateOperationsInput | string | null
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogUncheckedUpdateManyWithoutResultInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    templateId?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleId?: NullableStringFieldUpdateOperationsInput | string | null
+    invoiceId?: NullableStringFieldUpdateOperationsInput | string | null
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type InvoiceItemCreateManyInvoiceInput = {
@@ -29176,6 +48892,23 @@ export namespace Prisma {
     paidDate?: Date | string | null
     notes?: string | null
     createdAt?: Date | string
+  }
+
+  export type EmailLogCreateManyInvoiceInput = {
+    id?: string
+    templateId?: string | null
+    resultId?: string | null
+    sampleId?: string | null
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type InvoiceItemUpdateWithoutInvoiceInput = {
@@ -29233,6 +48966,57 @@ export namespace Prisma {
     paidDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogUpdateWithoutInvoiceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    template?: EmailTemplateUpdateOneWithoutEmailLogsNestedInput
+    result?: ResultUpdateOneWithoutEmailLogsNestedInput
+    sample?: SampleUpdateOneWithoutEmailLogsNestedInput
+  }
+
+  export type EmailLogUncheckedUpdateWithoutInvoiceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    templateId?: NullableStringFieldUpdateOperationsInput | string | null
+    resultId?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleId?: NullableStringFieldUpdateOperationsInput | string | null
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogUncheckedUpdateManyWithoutInvoiceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    templateId?: NullableStringFieldUpdateOperationsInput | string | null
+    resultId?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleId?: NullableStringFieldUpdateOperationsInput | string | null
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type CommissionCreateManyDoctorInput = {
@@ -29315,6 +49099,624 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type TestDefinitionCreateManyCategoryInput = {
+    id?: string
+    testId?: string | null
+    name: string
+    code: string
+    unit?: string | null
+    sampleType?: string | null
+    testFields: string
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TestDefinitionUpdateWithoutCategoryInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    test?: TestUpdateOneWithoutTestDefsNestedInput
+    normalRanges?: NormalRangeUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateWithoutCategoryInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testId?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    normalRanges?: NormalRangeUncheckedUpdateManyWithoutTestDefNestedInput
+    interpretations?: InterpretationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    calculationRules?: CalculationRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    deltaCheckRules?: DeltaCheckRuleUncheckedUpdateManyWithoutTestDefNestedInput
+    reflexRulesAsParent?: ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefNestedInput
+    reflexRulesAsChild?: ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefNestedInput
+    testResults?: ResultUncheckedUpdateManyWithoutTestDefNestedInput
+  }
+
+  export type TestDefinitionUncheckedUpdateManyWithoutCategoryInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    testId?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: StringFieldUpdateOperationsInput | string
+    code?: StringFieldUpdateOperationsInput | string
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleType?: NullableStringFieldUpdateOperationsInput | string | null
+    testFields?: StringFieldUpdateOperationsInput | string
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type NormalRangeCreateManyTestDefInput = {
+    id?: string
+    minAge?: number | null
+    maxAge?: number | null
+    gender?: string | null
+    minValue: number
+    maxValue: number
+    criticalLow?: number | null
+    criticalHigh?: number | null
+    unit?: string | null
+    notes?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type InterpretationRuleCreateManyTestDefInput = {
+    id?: string
+    name: string
+    condition: string
+    interpretation: string
+    severity?: string | null
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CalculationRuleCreateManyTestDefInput = {
+    id?: string
+    name: string
+    formula: string
+    requiredFields: string
+    outputField: string
+    priority?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DeltaCheckRuleCreateManyTestDefInput = {
+    id?: string
+    name: string
+    alertThreshold: number
+    criticalThreshold?: number | null
+    checkDays?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ReflexTestRuleCreateManyParentTestDefInput = {
+    id?: string
+    childTestDefId: string
+    condition: string
+    priority?: number
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ReflexTestRuleCreateManyChildTestDefInput = {
+    id?: string
+    parentTestDefId: string
+    condition: string
+    priority?: number
+    requiresApproval?: boolean
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ResultCreateManyTestDefInput = {
+    id?: string
+    sampleId: string
+    testId: string
+    value: string
+    calculatedValues?: string | null
+    isNormal?: boolean
+    abnormalFlags?: string | null
+    interpretationId?: string | null
+    notes?: string | null
+    enteredBy?: string | null
+    enteredAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type NormalRangeUpdateWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    minAge?: NullableIntFieldUpdateOperationsInput | number | null
+    maxAge?: NullableIntFieldUpdateOperationsInput | number | null
+    gender?: NullableStringFieldUpdateOperationsInput | string | null
+    minValue?: FloatFieldUpdateOperationsInput | number
+    maxValue?: FloatFieldUpdateOperationsInput | number
+    criticalLow?: NullableFloatFieldUpdateOperationsInput | number | null
+    criticalHigh?: NullableFloatFieldUpdateOperationsInput | number | null
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type NormalRangeUncheckedUpdateWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    minAge?: NullableIntFieldUpdateOperationsInput | number | null
+    maxAge?: NullableIntFieldUpdateOperationsInput | number | null
+    gender?: NullableStringFieldUpdateOperationsInput | string | null
+    minValue?: FloatFieldUpdateOperationsInput | number
+    maxValue?: FloatFieldUpdateOperationsInput | number
+    criticalLow?: NullableFloatFieldUpdateOperationsInput | number | null
+    criticalHigh?: NullableFloatFieldUpdateOperationsInput | number | null
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type NormalRangeUncheckedUpdateManyWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    minAge?: NullableIntFieldUpdateOperationsInput | number | null
+    maxAge?: NullableIntFieldUpdateOperationsInput | number | null
+    gender?: NullableStringFieldUpdateOperationsInput | string | null
+    minValue?: FloatFieldUpdateOperationsInput | number
+    maxValue?: FloatFieldUpdateOperationsInput | number
+    criticalLow?: NullableFloatFieldUpdateOperationsInput | number | null
+    criticalHigh?: NullableFloatFieldUpdateOperationsInput | number | null
+    unit?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type InterpretationRuleUpdateWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    interpretation?: StringFieldUpdateOperationsInput | string
+    severity?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    results?: ResultUpdateManyWithoutInterpretationNestedInput
+  }
+
+  export type InterpretationRuleUncheckedUpdateWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    interpretation?: StringFieldUpdateOperationsInput | string
+    severity?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    results?: ResultUncheckedUpdateManyWithoutInterpretationNestedInput
+  }
+
+  export type InterpretationRuleUncheckedUpdateManyWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    interpretation?: StringFieldUpdateOperationsInput | string
+    severity?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CalculationRuleUpdateWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    formula?: StringFieldUpdateOperationsInput | string
+    requiredFields?: StringFieldUpdateOperationsInput | string
+    outputField?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CalculationRuleUncheckedUpdateWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    formula?: StringFieldUpdateOperationsInput | string
+    requiredFields?: StringFieldUpdateOperationsInput | string
+    outputField?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CalculationRuleUncheckedUpdateManyWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    formula?: StringFieldUpdateOperationsInput | string
+    requiredFields?: StringFieldUpdateOperationsInput | string
+    outputField?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DeltaCheckRuleUpdateWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    alertThreshold?: FloatFieldUpdateOperationsInput | number
+    criticalThreshold?: NullableFloatFieldUpdateOperationsInput | number | null
+    checkDays?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    deltaCheckResults?: DeltaCheckResultUpdateManyWithoutRuleNestedInput
+  }
+
+  export type DeltaCheckRuleUncheckedUpdateWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    alertThreshold?: FloatFieldUpdateOperationsInput | number
+    criticalThreshold?: NullableFloatFieldUpdateOperationsInput | number | null
+    checkDays?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedUpdateManyWithoutRuleNestedInput
+  }
+
+  export type DeltaCheckRuleUncheckedUpdateManyWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    alertThreshold?: FloatFieldUpdateOperationsInput | number
+    criticalThreshold?: NullableFloatFieldUpdateOperationsInput | number | null
+    checkDays?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReflexTestRuleUpdateWithoutParentTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    requiresApproval?: BoolFieldUpdateOperationsInput | boolean
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    childTestDef?: TestDefinitionUpdateOneRequiredWithoutReflexRulesAsChildNestedInput
+  }
+
+  export type ReflexTestRuleUncheckedUpdateWithoutParentTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    childTestDefId?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    requiresApproval?: BoolFieldUpdateOperationsInput | boolean
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReflexTestRuleUncheckedUpdateManyWithoutParentTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    childTestDefId?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    requiresApproval?: BoolFieldUpdateOperationsInput | boolean
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReflexTestRuleUpdateWithoutChildTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    requiresApproval?: BoolFieldUpdateOperationsInput | boolean
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    parentTestDef?: TestDefinitionUpdateOneRequiredWithoutReflexRulesAsParentNestedInput
+  }
+
+  export type ReflexTestRuleUncheckedUpdateWithoutChildTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    parentTestDefId?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    requiresApproval?: BoolFieldUpdateOperationsInput | boolean
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReflexTestRuleUncheckedUpdateManyWithoutChildTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    parentTestDefId?: StringFieldUpdateOperationsInput | string
+    condition?: StringFieldUpdateOperationsInput | string
+    priority?: IntFieldUpdateOperationsInput | number
+    requiresApproval?: BoolFieldUpdateOperationsInput | boolean
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ResultUpdateWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
+    isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sample?: SampleUpdateOneRequiredWithoutResultsNestedInput
+    test?: TestUpdateOneRequiredWithoutResultsNestedInput
+    interpretation?: InterpretationRuleUpdateOneWithoutResultsNestedInput
+    deltaCheckResults?: DeltaCheckResultUpdateManyWithoutResultNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutResultNestedInput
+  }
+
+  export type ResultUncheckedUpdateWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sampleId?: StringFieldUpdateOperationsInput | string
+    testId?: StringFieldUpdateOperationsInput | string
+    value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
+    isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    interpretationId?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedUpdateManyWithoutResultNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutResultNestedInput
+  }
+
+  export type ResultUncheckedUpdateManyWithoutTestDefInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sampleId?: StringFieldUpdateOperationsInput | string
+    testId?: StringFieldUpdateOperationsInput | string
+    value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
+    isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    interpretationId?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ResultCreateManyInterpretationInput = {
+    id?: string
+    sampleId: string
+    testId: string
+    testDefId?: string | null
+    value: string
+    calculatedValues?: string | null
+    isNormal?: boolean
+    abnormalFlags?: string | null
+    notes?: string | null
+    enteredBy?: string | null
+    enteredAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ResultUpdateWithoutInterpretationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
+    isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sample?: SampleUpdateOneRequiredWithoutResultsNestedInput
+    test?: TestUpdateOneRequiredWithoutResultsNestedInput
+    testDef?: TestDefinitionUpdateOneWithoutTestResultsNestedInput
+    deltaCheckResults?: DeltaCheckResultUpdateManyWithoutResultNestedInput
+    emailLogs?: EmailLogUpdateManyWithoutResultNestedInput
+  }
+
+  export type ResultUncheckedUpdateWithoutInterpretationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sampleId?: StringFieldUpdateOperationsInput | string
+    testId?: StringFieldUpdateOperationsInput | string
+    testDefId?: NullableStringFieldUpdateOperationsInput | string | null
+    value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
+    isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    deltaCheckResults?: DeltaCheckResultUncheckedUpdateManyWithoutResultNestedInput
+    emailLogs?: EmailLogUncheckedUpdateManyWithoutResultNestedInput
+  }
+
+  export type ResultUncheckedUpdateManyWithoutInterpretationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sampleId?: StringFieldUpdateOperationsInput | string
+    testId?: StringFieldUpdateOperationsInput | string
+    testDefId?: NullableStringFieldUpdateOperationsInput | string | null
+    value?: StringFieldUpdateOperationsInput | string
+    calculatedValues?: NullableStringFieldUpdateOperationsInput | string | null
+    isNormal?: BoolFieldUpdateOperationsInput | boolean
+    abnormalFlags?: NullableStringFieldUpdateOperationsInput | string | null
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredBy?: NullableStringFieldUpdateOperationsInput | string | null
+    enteredAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DeltaCheckResultCreateManyRuleInput = {
+    id?: string
+    resultId: string
+    previousValue?: number | null
+    currentValue: number
+    changePercent: number
+    previousDate?: Date | string | null
+    alertMessage: string
+    severity?: string
+    isResolved?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DeltaCheckResultUpdateWithoutRuleInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    previousValue?: NullableFloatFieldUpdateOperationsInput | number | null
+    currentValue?: FloatFieldUpdateOperationsInput | number
+    changePercent?: FloatFieldUpdateOperationsInput | number
+    previousDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    alertMessage?: StringFieldUpdateOperationsInput | string
+    severity?: StringFieldUpdateOperationsInput | string
+    isResolved?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    result?: ResultUpdateOneRequiredWithoutDeltaCheckResultsNestedInput
+  }
+
+  export type DeltaCheckResultUncheckedUpdateWithoutRuleInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    resultId?: StringFieldUpdateOperationsInput | string
+    previousValue?: NullableFloatFieldUpdateOperationsInput | number | null
+    currentValue?: FloatFieldUpdateOperationsInput | number
+    changePercent?: FloatFieldUpdateOperationsInput | number
+    previousDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    alertMessage?: StringFieldUpdateOperationsInput | string
+    severity?: StringFieldUpdateOperationsInput | string
+    isResolved?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DeltaCheckResultUncheckedUpdateManyWithoutRuleInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    resultId?: StringFieldUpdateOperationsInput | string
+    previousValue?: NullableFloatFieldUpdateOperationsInput | number | null
+    currentValue?: FloatFieldUpdateOperationsInput | number
+    changePercent?: FloatFieldUpdateOperationsInput | number
+    previousDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    alertMessage?: StringFieldUpdateOperationsInput | string
+    severity?: StringFieldUpdateOperationsInput | string
+    isResolved?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogCreateManyTemplateInput = {
+    id?: string
+    resultId?: string | null
+    sampleId?: string | null
+    invoiceId?: string | null
+    recipientEmail: string
+    subject: string
+    content: string
+    status?: string
+    sentAt?: Date | string | null
+    failureReason?: string | null
+    retryCount?: number
+    nextRetryAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EmailLogUpdateWithoutTemplateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    result?: ResultUpdateOneWithoutEmailLogsNestedInput
+    sample?: SampleUpdateOneWithoutEmailLogsNestedInput
+    invoice?: InvoiceUpdateOneWithoutEmailLogsNestedInput
+  }
+
+  export type EmailLogUncheckedUpdateWithoutTemplateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    resultId?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleId?: NullableStringFieldUpdateOperationsInput | string | null
+    invoiceId?: NullableStringFieldUpdateOperationsInput | string | null
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EmailLogUncheckedUpdateManyWithoutTemplateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    resultId?: NullableStringFieldUpdateOperationsInput | string | null
+    sampleId?: NullableStringFieldUpdateOperationsInput | string | null
+    invoiceId?: NullableStringFieldUpdateOperationsInput | string | null
+    recipientEmail?: StringFieldUpdateOperationsInput | string
+    subject?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    sentAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    failureReason?: NullableStringFieldUpdateOperationsInput | string | null
+    retryCount?: IntFieldUpdateOperationsInput | number
+    nextRetryAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
 
 
   /**
@@ -29345,6 +49747,10 @@ export namespace Prisma {
      */
     export type SampleCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = SampleCountOutputTypeDefaultArgs<ExtArgs>
     /**
+     * @deprecated Use ResultCountOutputTypeDefaultArgs instead
+     */
+    export type ResultCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = ResultCountOutputTypeDefaultArgs<ExtArgs>
+    /**
      * @deprecated Use InvoiceCountOutputTypeDefaultArgs instead
      */
     export type InvoiceCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = InvoiceCountOutputTypeDefaultArgs<ExtArgs>
@@ -29356,6 +49762,26 @@ export namespace Prisma {
      * @deprecated Use InventoryItemCountOutputTypeDefaultArgs instead
      */
     export type InventoryItemCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = InventoryItemCountOutputTypeDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use TestCategoryCountOutputTypeDefaultArgs instead
+     */
+    export type TestCategoryCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = TestCategoryCountOutputTypeDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use TestDefinitionCountOutputTypeDefaultArgs instead
+     */
+    export type TestDefinitionCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = TestDefinitionCountOutputTypeDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use InterpretationRuleCountOutputTypeDefaultArgs instead
+     */
+    export type InterpretationRuleCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = InterpretationRuleCountOutputTypeDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use DeltaCheckRuleCountOutputTypeDefaultArgs instead
+     */
+    export type DeltaCheckRuleCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = DeltaCheckRuleCountOutputTypeDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use EmailTemplateCountOutputTypeDefaultArgs instead
+     */
+    export type EmailTemplateCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = EmailTemplateCountOutputTypeDefaultArgs<ExtArgs>
     /**
      * @deprecated Use LabDefaultArgs instead
      */
@@ -29428,6 +49854,50 @@ export namespace Prisma {
      * @deprecated Use SettingDefaultArgs instead
      */
     export type SettingArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = SettingDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use TestCategoryDefaultArgs instead
+     */
+    export type TestCategoryArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = TestCategoryDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use TestDefinitionDefaultArgs instead
+     */
+    export type TestDefinitionArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = TestDefinitionDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use NormalRangeDefaultArgs instead
+     */
+    export type NormalRangeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = NormalRangeDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use CalculationRuleDefaultArgs instead
+     */
+    export type CalculationRuleArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = CalculationRuleDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use InterpretationRuleDefaultArgs instead
+     */
+    export type InterpretationRuleArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = InterpretationRuleDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use DeltaCheckRuleDefaultArgs instead
+     */
+    export type DeltaCheckRuleArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = DeltaCheckRuleDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use ReflexTestRuleDefaultArgs instead
+     */
+    export type ReflexTestRuleArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = ReflexTestRuleDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use DeltaCheckResultDefaultArgs instead
+     */
+    export type DeltaCheckResultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = DeltaCheckResultDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use EmailTemplateDefaultArgs instead
+     */
+    export type EmailTemplateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = EmailTemplateDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use EmailLogDefaultArgs instead
+     */
+    export type EmailLogArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = EmailLogDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use EmailSettingDefaultArgs instead
+     */
+    export type EmailSettingArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = EmailSettingDefaultArgs<ExtArgs>
 
   /**
    * Batch Payload for updateMany & deleteMany & createMany

@@ -1,0 +1,4230 @@
+BackColor = 0,198,198
+Error in line 23: Syntax error.
+÷
+Error in line 225: Unrecognized command verb.
+÷
+Error in line 228: Unrecognized command verb.
+÷
+Error in line 230: Unrecognized command verb.
+÷
+Error in line 232: Unrecognized command verb.
+÷
+Error in line 234: Unrecognized command verb.
+÷
+Error in line 235: Unrecognized command verb.
+÷	
+Error in line 236: Unrecognized command verb.
+÷
+Error in line 237: Unrecognized command verb.
+÷
+Error in line 239: Unrecognized command verb.
+÷
+Error in line 240: Unrecognized command verb.
+÷
+Error in line 241: Unrecognized command verb.
+÷
+Error in line 242: Unrecognized command verb.
+÷
+Error in line 247: Unrecognized command verb.
+÷
+Error in line 248: Unrecognized command verb.
+ýù'þ
+Error in line 252: Unrecognized command verb.
+÷
+Error in line 253: Unrecognized command verb.
+÷
+Error in line 256: Unrecognized command verb.
+÷
+Error in line 258: Unrecognized command verb.
+÷
+Error in line 260: Unrecognized command verb.
+ýùR
+Error in line 268: Unrecognized command verb.
+÷
+Error in line 269: Unrecognized command verb.
+÷
+Error in line 270: Unrecognized command verb.
+ýùR
+Error in line 277: Unrecognized command verb.
+÷
+Error in line 278: Unrecognized command verb.
+÷
+Error in line 279: Unrecognized command verb.
+commandbutton
+Error in line 288: Unrecognized command verb.
+commandbutton
+Error in line 289: Unrecognized command verb.
+Value = 1
+Error in line 296: Statement is not in a procedure.
+Height = 44
+Error in line 297: Statement is not in a procedure.
+Left = 204
+Error in line 298: Statement is not in a procedure.
+Top = 449
+Error in line 299: Statement is not in a procedure.
+Width = 500
+Error in line 300: Statement is not in a procedure.
+TabIndex = 8
+Error in line 301: Statement is not in a procedure.
+BackColor = 128,128,128
+Error in line 302: Syntax error.
+Name = "grupboton"
+Error in line 303: Statement is not in a procedure.
+Command1.Top = 4
+Error in line 304: Statement is not in a procedure.
+Command1.Left = 3
+Error in line 305: Statement is not in a procedure.
+Command1.Height = 37
+Error in line 306: Statement is not in a procedure.
+Command1.Width = 54
+Error in line 307: Statement is not in a procedure.
+Command1.Picture = ..\sistemab\wztop.bmp
+Error in line 308: Syntax error.
+Command1.Caption = ""
+Error in line 309: Statement is not in a procedure.
+Command1.TabIndex = 1
+Error in line 310: Statement is not in a procedure.
+Command1.ToolTipText = "Inicio"
+Error in line 311: Statement is not in a procedure.
+Command1.Name = "TOPREC"
+Error in line 312: Statement is not in a procedure.
+Command2.Top = 4
+Error in line 313: Statement is not in a procedure.
+Command2.Left = 168
+Error in line 314: Statement is not in a procedure.
+Command2.Height = 37
+Error in line 315: Statement is not in a procedure.
+Command2.Width = 54
+Error in line 316: Statement is not in a procedure.
+Command2.Picture = ..\sistemab\wzend.bmp
+Error in line 317: Syntax error.
+Command2.Caption = ""
+Error in line 318: Statement is not in a procedure.
+Command2.TabIndex = 4
+Error in line 319: Statement is not in a procedure.
+Command2.ToolTipText = "Final"
+Error in line 320: Statement is not in a procedure.
+Command2.Name = "BOTTREC"
+Error in line 321: Statement is not in a procedure.
+Command3.Top = 4
+Error in line 322: Statement is not in a procedure.
+Command3.Left = 278
+Error in line 323: Statement is not in a procedure.
+Command3.Height = 37
+Error in line 324: Statement is not in a procedure.
+Command3.Width = 54
+Error in line 325: Statement is not in a procedure.
+Command3.Picture = ..\sistemab\wzedit.bmp
+Error in line 326: Syntax error.
+Command3.Caption = ""
+Error in line 327: Statement is not in a procedure.
+Command3.TabIndex = 6
+Error in line 328: Statement is not in a procedure.
+Command3.ToolTipText = "Modificar"
+Error in line 329: Statement is not in a procedure.
+Command3.Name = "EDITA"
+Error in line 330: Statement is not in a procedure.
+Command4.Top = 4
+Error in line 331: Statement is not in a procedure.
+Command4.Left = 333
+Error in line 332: Statement is not in a procedure.
+Command4.Height = 37
+Error in line 333: Statement is not in a procedure.
+Command4.Width = 54
+Error in line 334: Statement is not in a procedure.
+Command4.Picture = ..\sistemab\ayuda.bmp
+Error in line 335: Syntax error.
+Command4.Caption = ""
+Error in line 336: Statement is not in a procedure.
+Command4.TabIndex = 7
+Error in line 337: Statement is not in a procedure.
+Command4.ToolTipText = "Busqueda"
+Error in line 338: Statement is not in a procedure.
+Command4.Name = "BUSCA"
+Error in line 339: Statement is not in a procedure.
+Command5.Top = 4
+Error in line 340: Statement is not in a procedure.
+Command5.Left = 388
+Error in line 341: Statement is not in a procedure.
+Command5.Height = 37
+Error in line 342: Statement is not in a procedure.
+Command5.Width = 54
+Error in line 343: Statement is not in a procedure.
+Command5.Picture = ..\sistemab\delete.bmp
+Error in line 344: Syntax error.
+Command5.Caption = ""
+Error in line 345: Statement is not in a procedure.
+Command5.Enabled = .T.
+Error in line 346: Statement is not in a procedure.
+Command5.TabIndex = 8
+Error in line 347: Statement is not in a procedure.
+Command5.ToolTipText = "Eliminar"
+Error in line 348: Statement is not in a procedure.
+Command5.Name = "BORRA"
+Error in line 349: Statement is not in a procedure.
+Command6.Top = 4
+Error in line 350: Statement is not in a procedure.
+Command6.Left = 113
+Error in line 351: Statement is not in a procedure.
+Command6.Height = 37
+Error in line 352: Statement is not in a procedure.
+Command6.Width = 54
+Error in line 353: Statement is not in a procedure.
+Command6.Picture = ..\sistemab\wznext.bmp
+Error in line 354: Syntax error.
+Command6.Caption = ""
+Error in line 355: Statement is not in a procedure.
+Command6.TabIndex = 2
+Error in line 356: Statement is not in a procedure.
+Command6.ToolTipText = "Siguiente"
+Error in line 357: Statement is not in a procedure.
+Command6.Name = "NEXTREC"
+Error in line 358: Statement is not in a procedure.
+Command7.Top = 4
+Error in line 359: Statement is not in a procedure.
+Command7.Left = 58
+Error in line 360: Statement is not in a procedure.
+Command7.Height = 37
+Error in line 361: Statement is not in a procedure.
+Command7.Width = 54
+Error in line 362: Statement is not in a procedure.
+Command7.Picture = ..\sistemab\wzback.bmp
+Error in line 363: Syntax error.
+Command7.Caption = ""
+Error in line 364: Statement is not in a procedure.
+Command7.TabIndex = 3
+Error in line 365: Statement is not in a procedure.
+Command7.ToolTipText = "Anterior"
+Error in line 366: Statement is not in a procedure.
+Command7.Name = "PREVREC"
+Error in line 367: Statement is not in a procedure.
+Command8.Top = 4
+Error in line 368: Statement is not in a procedure.
+Command8.Left = 223
+Error in line 369: Statement is not in a procedure.
+Command8.Height = 37
+Error in line 370: Statement is not in a procedure.
+Command8.Width = 54
+Error in line 371: Statement is not in a procedure.
+Command8.Picture = ..\sistemab\wzsave.bmp
+Error in line 372: Syntax error.
+Command8.Caption = ""
+Error in line 373: Statement is not in a procedure.
+Command8.TabIndex = 5
+Error in line 374: Statement is not in a procedure.
+Command8.ToolTipText = "Nuevo/Almacenar"
+Error in line 375: Statement is not in a procedure.
+Command8.Name = "NUEVO"
+Error in line 376: Statement is not in a procedure.
+Command9.Top = 4
+Error in line 377: Statement is not in a procedure.
+Command9.Left = 443
+Error in line 378: Statement is not in a procedure.
+Command9.Height = 37
+Error in line 379: Statement is not in a procedure.
+Command9.Width = 54
+Error in line 380: Statement is not in a procedure.
+Command9.Picture = ..\sistemab\wzclose.bmp
+Error in line 381: Syntax error.
+Command9.Caption = ""
+Error in line 382: Statement is not in a procedure.
+Command9.TabIndex = 9
+Error in line 383: Statement is not in a procedure.
+Command9.ToolTipText = "Salir/Cancelar"
+Error in line 384: Statement is not in a procedure.
+Command9.Name = "SALE"
+Error in line 385: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 387: Statement is not in a procedure.
+IF RECCOUNT()=0
+Error in line 388: Statement is not in a procedure.
+RETURN
+Error in line 389: Statement is not in a procedure.
+ENDIF
+Error in line 390: Statement is not in a procedure.
+GOTO TOP
+Error in line 391: Statement is not in a procedure.
+SCATTER MEMVAR
+Error in line 392: Statement is not in a procedure.
+thisform.datos
+Error in line 393: Statement is not in a procedure.
+thisform.refresh
+Error in line 394: Statement is not in a procedure.
+ENDPROC
+Error in line 395: Nesting error.
+PROCEDURE BOTTREC.Click
+Error in line 396: Command contains unrecognized phrase/keyword.
+SELECT dbquimisangre
+Error in line 397: Statement is not in a procedure.
+IF RECCOUNT()=0
+Error in line 398: Statement is not in a procedure.
+RETURN
+Error in line 399: Statement is not in a procedure.
+ENDIF
+Error in line 400: Statement is not in a procedure.
+GOTO BOTTOM
+Error in line 401: Statement is not in a procedure.
+SCATTER MEMVAR
+Error in line 402: Statement is not in a procedure.
+thisform.datos
+Error in line 403: Statement is not in a procedure.
+thisform.refresh
+Error in line 404: Statement is not in a procedure.
+ENDPROC
+Error in line 405: Nesting error.
+PROCEDURE EDITA.Click
+Error in line 406: Command contains unrecognized phrase/keyword.
+IF prutabakup <>""
+Error in line 407: Statement is not in a procedure.
+RETURN
+Error in line 408: Statement is not in a procedure.
+ENDIF
+Error in line 409: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 412: Statement is not in a procedure.
+IF RECCOUNT()=0
+Error in line 413: Statement is not in a procedure.
+RETURN
+Error in line 414: Statement is not in a procedure.
+ENDIF
+Error in line 415: Statement is not in a procedure.
+mflag = 'M'
+Error in line 416: Statement is not in a procedure.
+SCATTER MEMVAR
+Error in line 417: Statement is not in a procedure.
+thisform.refresh
+Error in line 418: Statement is not in a procedure.
+thisform.met_botones
+Error in line 419: Statement is not in a procedure.
+thisform.met_activa
+Error in line 420: Statement is not in a procedure.
+thisform.txtserie.enabled = .F.
+Error in line 421: Statement is not in a procedure.
+thisform.txtpaciente.setfocus()
+Error in line 422: Statement is not in a procedure.
+RETURN
+Error in line 423: Statement is not in a procedure.
+ENDPROC
+Error in line 424: Nesting error.
+PROCEDURE BUSCA.Click
+Error in line 425: Command contains unrecognized phrase/keyword.
+lcFile = PFOLDERLOAD+"SISTEMAB\AYUDAQUIMICA.pdf"
+Error in line 426: Statement is not in a procedure.
+loShell = CREATEOBJECT("Shell.Application")
+Error in line 427: Statement is not in a procedure.
+loShell.ShellExecute(lcFile)
+Error in line 428: Statement is not in a procedure.
+RELEASE loShell
+Error in line 430: Statement is not in a procedure.
+ENDPROC
+Error in line 433: Nesting error.
+PROCEDURE BORRA.Click
+Error in line 434: Command contains unrecognized phrase/keyword.
+RELEASE mclave
+Error in line 435: Statement is not in a procedure.
+PUBLIC mclave
+Error in line 436: Statement is not in a procedure.
+mclave = ""
+Error in line 437: Statement is not in a procedure.
+DO FORM pfolderload+"frmpasword"
+Error in line 438: Statement is not in a procedure.
+IF  .NOT. INLIST(mclave, "JNAVAS", "71593210")
+Error in line 439: Statement is not in a procedure.
+RETURN
+Error in line 440: Statement is not in a procedure.
+ENDIF
+Error in line 441: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 442: Statement is not in a procedure.
+a = MESSAGEBOX('Desea Borrar este registro', 36, 'Tipos de QUIMISANGRE')
+Error in line 443: Statement is not in a procedure.
+IF a=6
+Error in line 444: Statement is not in a procedure.
+DELETE
+Error in line 445: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 446: Statement is not in a procedure.
+thisform.grupboton.toprec.click()
+Error in line 447: Statement is not in a procedure.
+ENDIF
+Error in line 448: Statement is not in a procedure.
+thisform.refresh()
+Error in line 449: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 450: Statement is not in a procedure.
+RETURN
+Error in line 451: Statement is not in a procedure.
+ENDPROC
+Error in line 452: Nesting error.
+PROCEDURE NEXTREC.Click
+Error in line 453: Command contains unrecognized phrase/keyword.
+SELECT dbquimisangre
+Error in line 454: Statement is not in a procedure.
+SET ORDER TO TAG EXAMENES
+Error in line 455: Statement is not in a procedure.
+IF RECCOUNT()=0
+Error in line 458: Statement is not in a procedure.
+RETURN
+Error in line 459: Statement is not in a procedure.
+ENDIF
+Error in line 460: Statement is not in a procedure.
+IF  .NOT. EOF()
+Error in line 461: Statement is not in a procedure.
+SKIP
+Error in line 462: Statement is not in a procedure.
+IF EOF()
+Error in line 464: Statement is not in a procedure.
+GO BOTT
+Error in line 465: Statement is not in a procedure.
+ENDIF
+Error in line 466: Statement is not in a procedure.
+ELSE
+Error in line 469: Statement is not in a procedure.
+SKIP -1
+Error in line 470: Statement is not in a procedure.
+ENDIF
+Error in line 471: Statement is not in a procedure.
+SCATTER MEMVAR
+Error in line 472: Statement is not in a procedure.
+thisform.datos
+Error in line 473: Statement is not in a procedure.
+thisform.refresh
+Error in line 474: Statement is not in a procedure.
+ENDPROC
+Error in line 475: Nesting error.
+PROCEDURE PREVREC.Click
+Error in line 476: Command contains unrecognized phrase/keyword.
+SELECT dbquimisangre
+Error in line 477: Statement is not in a procedure.
+IF RECCOUNT()=0
+Error in line 478: Statement is not in a procedure.
+RETURN
+Error in line 479: Statement is not in a procedure.
+ENDIF
+Error in line 480: Statement is not in a procedure.
+IF  .NOT. BOF()
+Error in line 481: Statement is not in a procedure.
+SKIP -1
+Error in line 482: Statement is not in a procedure.
+IF EOF()
+Error in line 484: Statement is not in a procedure.
+GO TOP
+Error in line 485: Statement is not in a procedure.
+ENDIF
+Error in line 486: Statement is not in a procedure.
+ELSE
+Error in line 488: Statement is not in a procedure.
+SKIP
+Error in line 489: Statement is not in a procedure.
+ENDIF
+Error in line 490: Statement is not in a procedure.
+SCATTER MEMVAR
+Error in line 492: Statement is not in a procedure.
+thisform.datos
+Error in line 493: Statement is not in a procedure.
+thisform.refresh
+Error in line 494: Statement is not in a procedure.
+ENDPROC
+Error in line 495: Nesting error.
+PROCEDURE NUEVO.Click
+Error in line 496: Command contains unrecognized phrase/keyword.
+IF mflag=SPACE(1)
+Error in line 497: Statement is not in a procedure.
+RETURN
+Error in line 547: Statement is not in a procedure.
+ELSE
+Error in line 548: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 549: Statement is not in a procedure.
+IF EMPTY(m.genero)
+Error in line 550: Statement is not in a procedure.
+MESSAGEBOX("SELECCIONE GENERO")
+Error in line 551: Statement is not in a procedure.
+RETURN
+Error in line 552: Statement is not in a procedure.
+ENDIF
+Error in line 553: Statement is not in a procedure.
+IF INLIST(m.genero, "MASCULINO", "VARON")
+Error in line 554: Statement is not in a procedure.
+REPLACE vnormal1 WITH h1 ALL
+Error in line 555: Statement is not in a procedure.
+ELSE
+Error in line 556: Statement is not in a procedure.
+REPLACE vnormal1 WITH m1 ALL
+Error in line 557: Statement is not in a procedure.
+ENDIF
+Error in line 558: Statement is not in a procedure.
+IF INLIST(m.genero, "MASCULINO", "VARON")
+Error in line 559: Statement is not in a procedure.
+REPLACE vnormal11 WITH h2 ALL
+Error in line 560: Statement is not in a procedure.
+ELSE
+Error in line 561: Statement is not in a procedure.
+REPLACE vnormal11 WITH m2 ALL
+Error in line 562: Statement is not in a procedure.
+ENDIF
+Error in line 563: Statement is not in a procedure.
+DO CASE
+Error in line 567: Statement is not in a procedure.
+CASE mflag='G'
+Error in line 568: Statement is not in a procedure.
+SUMPRECIOS =0000.00
+Error in line 570: Statement is not in a procedure.
+mflag = SPACE(1)
+Error in line 572: Statement is not in a procedure.
+a = MESSAGEBOX('Desea Almacenar Nuevo Registro', 36, 'Control de QUIMISANGRE')
+Error in line 573: Statement is not in a procedure.
+IF a=6          
+Error in line 576: Statement is not in a procedure.
+M.enteros 	=	"  "
+Error in line 578: Statement is not in a procedure.
+M.decimales	=	"  "
+Error in line 579: Statement is not in a procedure.
+SET STEP ON 
+Error in line 581: Statement is not in a procedure.
+SELECT 0			
+Error in line 584: Statement is not in a procedure.
+USE prutalabo+"detacli.DBF" shared			
+Error in line 585: Statement is not in a procedure.
+SUM detacli.PRECIO TO SUMPRECIOS FOR detacli.NUMORDEN  = M.NUMORDEN  AND detacli.AREA = "QUIMICA" AND NOT DELETED()
+Error in line 586: Statement is not in a procedure.
+USE IN detacli
+Error in line 589: Statement is not in a procedure.
+A = INT(SUMPRECIOS)
+Error in line 592: Statement is not in a procedure.
+B = SUMPRECIOS-INT(SUMPRECIOS)
+Error in line 593: Statement is not in a procedure.
+AC=IIF(A<10,"0"+ALLTRIM(STR(A)),ALLTRIM(STR(A) ))
+Error in line 595: Statement is not in a procedure.
+BC=IIF(B<10,"0"+ALLTRIM(STR(B)),ALLTRIM(STR(A) ))
+Error in line 596: Statement is not in a procedure.
+M.ENTEROS =AC
+Error in line 598: Statement is not in a procedure.
+M.DECIMALES =BC 
+Error in line 599: Statement is not in a procedure.
+DO FORM pfolderload+"frmcobro"
+Error in line 601: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 604: Statement is not in a procedure.
+m.serie = m.enteros+m.decimales+PADL(ALLTRIM(m.notest), 5, "0")
+Error in line 605: Statement is not in a procedure.
+APPEND BLANK
+Error in line 606: Statement is not in a procedure.
+GATHER MEMVAR
+Error in line 607: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 608: Statement is not in a procedure.
+GOTO TOP
+Error in line 609: Statement is not in a procedure.
+REPLACE quiplantilla.notest WITH m.notest ALL
+Error in line 610: Statement is not in a procedure.
+REPLACE quiplantilla.serie WITH m.serie ALL
+Error in line 611: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 612: Statement is not in a procedure.
+SELECT 0
+Error in line 613: Statement is not in a procedure.
+USE SHARED prutalabo+"DETQUIMICAS.DBF"
+Error in line 614: Statement is not in a procedure.
+GOTO TOP
+Error in line 615: Statement is not in a procedure.
+DELETE ALL FOR detquimicas.notest=m.notest
+Error in line 616: Statement is not in a procedure.
+IF ALIAS()="DETQUIMICAS"
+Error in line 617: Statement is not in a procedure.
+APPEND FROM prutalabo+"QUIPLANTILLA"
+Error in line 618: Statement is not in a procedure.
+ENDIF
+Error in line 619: Statement is not in a procedure.
+USE IN detquimicas
+Error in line 620: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 622: Statement is not in a procedure.
+GO TOP
+Error in line 623: Statement is not in a procedure.
+ELSE
+Error in line 625: Statement is not in a procedure.
+thisform.grupboton.toprec.click()
+Error in line 626: Statement is not in a procedure.
+ENDIF
+Error in line 627: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 628: Statement is not in a procedure.
+thisform.met_activa
+Error in line 629: Statement is not in a procedure.
+thisform.met_botones
+Error in line 630: Statement is not in a procedure.
+CASE mflag='M'
+Error in line 632: Statement is not in a procedure.
+mflag = SPACE(1)
+Error in line 633: Statement is not in a procedure.
+a = MESSAGEBOX('Desea Almacenar Cambios', 36, 'Control de QUIMICA')
+Error in line 634: Statement is not in a procedure.
+IF a=6
+Error in line 635: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 636: Statement is not in a procedure.
+LOCATE FOR notest=m.notest
+Error in line 637: Statement is not in a procedure.
+GATHER MEMVAR
+Error in line 638: Statement is not in a procedure.
+SELECT 0
+Error in line 639: Statement is not in a procedure.
+USE SHARED prutalabo+"DETQUIMICAS.DBF"
+Error in line 640: Statement is not in a procedure.
+GOTO TOP
+Error in line 641: Statement is not in a procedure.
+DELETE ALL FOR detquimicas.notest=m.notest
+Error in line 642: Statement is not in a procedure.
+IF ALIAS()="DETQUIMICAS"
+Error in line 643: Statement is not in a procedure.
+APPEND FROM prutalabo+"QUIPLANTILLA"
+Error in line 644: Statement is not in a procedure.
+ENDIF
+Error in line 645: Statement is not in a procedure.
+USE IN detquimicas
+Error in line 646: Statement is not in a procedure.
+SELECT dbquimisangre	         	         	                     
+Error in line 647: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 648: Statement is not in a procedure.
+GO TOP
+Error in line 649: Statement is not in a procedure.
+ELSE
+Error in line 651: Statement is not in a procedure.
+thisform.grupboton.toprec.click()
+Error in line 652: Statement is not in a procedure.
+ENDIF
+Error in line 653: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 654: Statement is not in a procedure.
+thisform.met_botones
+Error in line 655: Statement is not in a procedure.
+thisform.met_activa
+Error in line 656: Statement is not in a procedure.
+thisform.refresh
+Error in line 657: Statement is not in a procedure.
+ENDCASE
+Error in line 658: Statement is not in a procedure.
+ENDIF
+Error in line 659: Statement is not in a procedure.
+RETURN
+Error in line 660: Statement is not in a procedure.
+ENDPROC
+Error in line 661: Nesting error.
+PROCEDURE SALE.Click
+Error in line 662: Command contains unrecognized phrase/keyword.
+DO CASE
+Error in line 663: Statement is not in a procedure.
+CASE mflag='G' .OR. mflag='M'
+Error in line 664: Statement is not in a procedure.
+mflag = 'C'
+Error in line 665: Statement is not in a procedure.
+thisform.met_botones
+Error in line 666: Statement is not in a procedure.
+mflag = SPACE(1)
+Error in line 667: Statement is not in a procedure.
+thisform.met_activa
+Error in line 668: Statement is not in a procedure.
+thisform.grupboton.toprec.click()
+Error in line 669: Statement is not in a procedure.
+RETURN
+Error in line 670: Statement is not in a procedure.
+CASE mflag=SPACE(1)
+Error in line 671: Statement is not in a procedure.
+SET DEFA TO &mload	
+Error in line 672: Statement is not in a procedure.
+SET DEFA TO &mloadsys
+Error in line 673: Statement is not in a procedure.
+USE IN dbquimisangre
+Error in line 674: Statement is not in a procedure.
+pnotest = m.notest
+Error in line 675: Statement is not in a procedure.
+RELEASE mflag, m.notest, m.direcprov, m.faxprovee, m.proempresa, m.teleprov, m.descuento, m.contaprove, m.tipo_credi, m.cod_contab, m.nit, m.tipcontrib
+Error in line 676: Statement is not in a procedure.
+thisform.release
+Error in line 677: Statement is not in a procedure.
+ENDCASE
+Error in line 678: Statement is not in a procedure.
+RETURN
+Error in line 679: Statement is not in a procedure.
+ENDPROC
+Error in line 680: Nesting error.
+ýùN
+Error in line 682: Unrecognized command verb.
+÷
+Error in line 683: Unrecognized command verb.
+÷
+Error in line 685: Unrecognized command verb.
+÷
+Error in line 688: Unrecognized command verb.
+÷
+Error in line 689: Unrecognized command verb.
+÷
+Error in line 691: Unrecognized command verb.
+÷
+Error in line 692: Unrecognized command verb.
+÷
+Error in line 694: Unrecognized command verb.
+÷
+Error in line 695: Unrecognized command verb.
+÷
+Error in line 696: Unrecognized command verb.
+÷
+Error in line 697: Unrecognized command verb.
+÷
+Error in line 699: Unrecognized command verb.
+÷
+Error in line 700: Unrecognized command verb.
+÷
+Error in line 701: Unrecognized command verb.
+÷
+Error in line 703: Unrecognized command verb.
+÷
+Error in line 704: Unrecognized command verb.
+÷
+Error in line 705: Unrecognized command verb.
+÷
+Error in line 706: Unrecognized command verb.
+÷
+Error in line 707: Unrecognized command verb.
+÷
+Error in line 708: Unrecognized command verb.
+÷
+Error in line 709: Unrecognized command verb.
+÷
+Error in line 710: Unrecognized command verb.
+÷
+Error in line 711: Unrecognized command verb.
+÷
+Error in line 712: Unrecognized command verb.
+÷
+Error in line 713: Unrecognized command verb.
+÷
+Error in line 714: Unrecognized command verb.
+÷
+Error in line 715: Unrecognized command verb.
+÷
+Error in line 716: Unrecognized command verb.
+÷
+Error in line 717: Unrecognized command verb.
+÷
+Error in line 718: Unrecognized command verb.
+÷
+Error in line 719: Unrecognized command verb.
+÷
+Error in line 720: Unrecognized command verb.
+÷
+Error in line 722: Unrecognized command verb.
+ýù¯þ
+Error in line 723: Unrecognized command verb.
+÷
+Error in line 724: Unrecognized command verb.
+÷
+Error in line 725: Unrecognized command verb.
+÷
+Error in line 726: Unrecognized command verb.
+÷
+Error in line 727: Unrecognized command verb.
+÷
+Error in line 728: Unrecognized command verb.
+÷
+Error in line 729: Unrecognized command verb.
+÷
+Error in line 730: Unrecognized command verb.
+÷
+Error in line 733: Unrecognized command verb.
+þòÿ 
+Error in line 766: Unrecognized command verb.
+(þ
+Error in line 768: Unrecognized command verb.
+Left = 16
+Error in line 770: Statement is not in a procedure.
+Height = 21
+Error in line 771: Statement is not in a procedure.
+Width = 62
+Error in line 772: Statement is not in a procedure.
+FontSize = 9
+Error in line 773: Statement is not in a procedure.
+Caption = "ORDN No"
+Error in line 774: Statement is not in a procedure.
+BackColor = 255,128,0
+Error in line 775: Syntax error.
+Name = "Command13"
+Error in line 776: Statement is not in a procedure.
+commandbutton
+Error in line 778: Unrecognized command verb.
+commandbutton
+Error in line 779: Unrecognized command verb.
+Left = 625
+Error in line 780: Statement is not in a procedure.
+Height = 21
+Error in line 781: Statement is not in a procedure.
+Width = 69
+Error in line 782: Statement is not in a procedure.
+FontBold = .T.
+Error in line 783: Statement is not in a procedure.
+FontSize = 8
+Error in line 784: Statement is not in a procedure.
+Caption = "BUSCAR"
+Error in line 785: Statement is not in a procedure.
+TabIndex = 15
+Error in line 786: Statement is not in a procedure.
+TabStop = .F.
+Error in line 787: Statement is not in a procedure.
+ForeColor = 255,255,255
+Error in line 788: Syntax error.
+BackColor = 128,0,128
+Error in line 789: Syntax error.
+Name = "cmdbusca"
+Error in line 790: Statement is not in a procedure.
+If  .Not. Empty(mflag)
+Error in line 792: Statement is not in a procedure.
+Return
+Error in line 793: Statement is not in a procedure.
+ENDIF
+Error in line 794: Statement is not in a procedure.
+Select 0
+Error in line 796: Statement is not in a procedure.
+Use pfolderload+"CARPETAS" Shared
+Error in line 797: Statement is not in a procedure.
+Release pcaption1, pcaption2, pcaption3
+Error in line 799: Statement is not in a procedure.
+Public pcaption1, pcaption2, pcaption3
+Error in line 800: Statement is not in a procedure.
+pcaption1 = "Corr"
+Error in line 802: Statement is not in a procedure.
+pcaption2 = "Carpeta Respaldo"
+Error in line 803: Statement is not in a procedure.
+pcaption3 = " "
+Error in line 804: Statement is not in a procedure.
+mdevuelve = Space(15)
+Error in line 805: Statement is not in a procedure.
+Select CARPETAS.corre As campo1, nombre  As campo2, "" As campo3  FROM CARPETAS  INTO Cursor CRIBUSCARDATOS
+Error in line 809: Statement is not in a procedure.
+Select CRIBUSCARDATOS
+Error in line 811: Statement is not in a procedure.
+If Reccount()=0
+Error in line 812: Statement is not in a procedure.
+Use In CRIBUSCARDATOS
+Error in line 813: Statement is not in a procedure.
+Return
+Error in line 814: Statement is not in a procedure.
+Endif
+Error in line 815: Statement is not in a procedure.
+Select CRIBUSCARDATOS
+Error in line 816: Statement is not in a procedure.
+Do Form public_data_busca+"frmbuscriteriook"
+Error in line 818: Statement is not in a procedure.
+prutabakup =""
+Error in line 820: Statement is not in a procedure.
+If  .Not. Empty(mdevuelve)
+Error in line 821: Statement is not in a procedure.
+m.corre = mdevuelve
+Error in line 822: Statement is not in a procedure.
+Select CARPETAS
+Error in line 824: Statement is not in a procedure.
+Goto Top
+Error in line 825: Statement is not in a procedure.
+Locate For corre = m.corre
+Error in line 826: Statement is not in a procedure.
+Scatter Memvar
+Error in line 827: Statement is not in a procedure.
+prutabakup = ALLTRIM(m.nombre)    
+Error in line 828: Statement is not in a procedure.
+ENDIF
+Error in line 829: Statement is not in a procedure.
+USE IN CARPETAS
+Error in line 831: Statement is not in a procedure.
+SELECT dbquimisangre 
+Error in line 833: Statement is not in a procedure.
+USE IN dbquimisangre 
+Error in line 834: Statement is not in a procedure.
+SELECT 0
+Error in line 836: Statement is not in a procedure.
+USE EXCL prutabakup+"QUIMISANGRE" AGAIN ALIAS dbquimisangre ORDER NOTEST
+Error in line 837: Statement is not in a procedure.
+INDEX ON VAL(NOTEST) TAG EXAMENES
+Error in line 838: Statement is not in a procedure.
+GO TOP
+Error in line 840: Statement is not in a procedure.
+SCATTER MEMVAR
+Error in line 841: Statement is not in a procedure.
+THISFORM.Refresh()
+Error in line 842: Statement is not in a procedure.
+ENDPROC
+Error in line 844: Nesting error.
+(ü÷
+Error in line 846: Unrecognized command verb.
+÷
+Error in line 847: Unrecognized command verb.
+ýùN
+Error in line 850: Unrecognized command verb.
+÷
+Error in line 851: Unrecognized command verb.
+÷
+Error in line 852: Unrecognized command verb.
+Left = 439
+Error in line 854: Statement is not in a procedure.
+Top = 136
+Error in line 855: Statement is not in a procedure.
+Width = 0
+Error in line 856: Statement is not in a procedure.
+Name = "Line44"
+Error in line 857: Statement is not in a procedure.
+FontSize = 9
+Error in line 859: Statement is not in a procedure.
+ControlSource = "m.paciente"
+Error in line 860: Statement is not in a procedure.
+Enabled = .F.
+Error in line 861: Statement is not in a procedure.
+Height = 21
+Error in line 862: Statement is not in a procedure.
+Left = 104
+Error in line 863: Statement is not in a procedure.
+MaxLength = 60
+Error in line 864: Statement is not in a procedure.
+ReadOnly = .T.
+Error in line 865: Statement is not in a procedure.
+TabIndex = 19
+Error in line 866: Statement is not in a procedure.
+Top = 32
+Error in line 867: Statement is not in a procedure.
+Width = 513
+Error in line 868: Statement is not in a procedure.
+DisabledBackColor = 255,255,196
+Error in line 869: Syntax error.
+DisabledForeColor = 0,0,0
+Error in line 870: Syntax error.
+Name = "txtPaciente"
+Error in line 871: Statement is not in a procedure.
+FontBold = .T.
+Error in line 873: Statement is not in a procedure.
+Alignment = 0
+Error in line 874: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 875: Statement is not in a procedure.
+ControlSource = "m.fecha"
+Error in line 876: Statement is not in a procedure.
+Enabled = .F.
+Error in line 877: Statement is not in a procedure.
+Height = 21
+Error in line 878: Statement is not in a procedure.
+Left = 104
+Error in line 879: Statement is not in a procedure.
+ReadOnly = .T.
+Error in line 880: Statement is not in a procedure.
+TabIndex = 18
+Error in line 881: Statement is not in a procedure.
+Top = 6
+Error in line 882: Statement is not in a procedure.
+Width = 100
+Error in line 883: Statement is not in a procedure.
+ForeColor = 255,255,255
+Error in line 884: Syntax error.
+BackColor = 0,198,198
+Error in line 885: Syntax error.
+DisabledBackColor = 0,198,198
+Error in line 886: Syntax error.
+DisabledForeColor = 255,255,255
+Error in line 887: Syntax error.
+Name = "txtFecha"
+Error in line 888: Statement is not in a procedure.
+M.TIPOEDAD="AÑOS"
+Error in line 890: Statement is not in a procedure.
+THISFORM.Refresh 
+Error in line 891: Statement is not in a procedure.
+ENDPROC
+Error in line 893: Nesting error.
+commandbutton
+Error in line 895: Unrecognized command verb.
+commandbutton
+Error in line 896: Unrecognized command verb.
+commandbutton
+Error in line 897: Unrecognized command verb.
+commandbutton
+Error in line 898: Unrecognized command verb.
+commandbutton
+Error in line 899: Unrecognized command verb.
+commandbutton
+Error in line 900: Unrecognized command verb.
+ControlSource = "m.medico"
+Error in line 901: Statement is not in a procedure.
+Enabled = .F.
+Error in line 902: Statement is not in a procedure.
+Height = 21
+Error in line 903: Statement is not in a procedure.
+Left = 104
+Error in line 904: Statement is not in a procedure.
+MaxLength = 40
+Error in line 905: Statement is not in a procedure.
+TabIndex = 20
+Error in line 906: Statement is not in a procedure.
+Top = 83
+Error in line 907: Statement is not in a procedure.
+Width = 269
+Error in line 908: Statement is not in a procedure.
+DisabledBackColor = 255,255,196
+Error in line 909: Syntax error.
+DisabledForeColor = 0,0,0
+Error in line 910: Syntax error.
+Name = "txtMedico"
+Error in line 911: Statement is not in a procedure.
+ControlSource = "m.edad"
+Error in line 913: Statement is not in a procedure.
+Enabled = .F.
+Error in line 914: Statement is not in a procedure.
+Height = 21
+Error in line 915: Statement is not in a procedure.
+Left = 104
+Error in line 916: Statement is not in a procedure.
+MaxLength = 3
+Error in line 917: Statement is not in a procedure.
+TabIndex = 2
+Error in line 918: Statement is not in a procedure.
+Top = 58
+Error in line 919: Statement is not in a procedure.
+Width = 33
+Error in line 920: Statement is not in a procedure.
+DisabledBackColor = 255,255,196
+Error in line 921: Syntax error.
+DisabledForeColor = 0,0,0
+Error in line 922: Syntax error.
+Name = "txtEdad"
+Error in line 923: Statement is not in a procedure.
+FontBold = .T.
+Error in line 925: Statement is not in a procedure.
+WordWrap = .T.
+Error in line 926: Statement is not in a procedure.
+BackStyle = 0
+Error in line 927: Statement is not in a procedure.
+Caption = "EDAD"
+Error in line 928: Statement is not in a procedure.
+Left = 18
+Error in line 929: Statement is not in a procedure.
+Top = 60
+Error in line 930: Statement is not in a procedure.
+Width = 31
+Error in line 931: Statement is not in a procedure.
+TabIndex = 27
+Error in line 932: Statement is not in a procedure.
+Name = "lblEdad"
+Error in line 933: Statement is not in a procedure.
+ColumnWidths = ""
+Error in line 935: Statement is not in a procedure.
+RowSourceType = 1
+Error in line 936: Statement is not in a procedure.
+RowSource = "AÑOS,MESES,DIAS"
+Error in line 937: Statement is not in a procedure.
+ControlSource = "M.TIPOEDAD"
+Error in line 938: Statement is not in a procedure.
+Enabled = .F.
+Error in line 939: Statement is not in a procedure.
+FirstElement = 1
+Error in line 940: Statement is not in a procedure.
+Height = 21
+Error in line 941: Statement is not in a procedure.
+Left = 138
+Error in line 942: Statement is not in a procedure.
+NumberOfElements = 0
+Error in line 943: Statement is not in a procedure.
+Style = 2
+Error in line 944: Statement is not in a procedure.
+TabIndex = 3
+Error in line 945: Statement is not in a procedure.
+Top = 58
+Error in line 946: Statement is not in a procedure.
+Width = 68
+Error in line 947: Statement is not in a procedure.
+DisabledBackColor = 255,255,196
+Error in line 948: Syntax error.
+DisabledForeColor = 0,0,0
+Error in line 949: Syntax error.
+Name = "ComboTIPO"
+Error in line 950: Statement is not in a procedure.
+commandbutton
+Error in line 952: Unrecognized command verb.
+commandbutton
+Error in line 953: Unrecognized command verb.
+Left = 760
+Error in line 954: Statement is not in a procedure.
+Height = 33
+Error in line 955: Statement is not in a procedure.
+Width = 92
+Error in line 956: Statement is not in a procedure.
+FontBold = .T.
+Error in line 957: Statement is not in a procedure.
+FontSize = 12
+Error in line 958: Statement is not in a procedure.
+Caption = "IMPRIMIR"
+Error in line 959: Statement is not in a procedure.
+TabIndex = 9
+Error in line 960: Statement is not in a procedure.
+ForeColor = 255,255,255
+Error in line 961: Syntax error.
+BackColor = 0,0,0
+Error in line 962: Syntax error.
+Name = "Command1"
+Error in line 963: Statement is not in a procedure.
+IF  .NOT. EMPTY(mflag)
+Error in line 965: Statement is not in a procedure.
+MESSAGEBOX("DEBE ALMACENAR BOLETA", 48, "LABORATORIO CLINICO")
+Error in line 966: Statement is not in a procedure.
+RETURN
+Error in line 967: Statement is not in a procedure.
+ENDIF
+Error in line 968: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 969: Statement is not in a procedure.
+REPLACE notest WITH m.notest ALL
+Error in line 970: Statement is not in a procedure.
+SELECT quiplantilla.* FROM QUIPLANTILLA WHERE quiplantilla.resul1>0 AND notest=m.notest INTO TABLE prutalabo+"TMPINFORME"
+Error in line 971: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 972: Statement is not in a procedure.
+SELECT quiplantilla.* FROM QUIPLANTILLA WHERE quiplantilla.resul11>0 AND notest=m.notest INTO TABLE prutalabo+"TMPINFORME2"
+Error in line 973: Statement is not in a procedure.
+SELECT tmpinforme
+Error in line 974: Statement is not in a procedure.
+SELECT tmpinforme2
+Error in line 975: Statement is not in a procedure.
+SCAN
+Error in line 976: Statement is not in a procedure.
+SCATTER MEMVAR
+Error in line 977: Statement is not in a procedure.
+SELECT tmpinforme
+Error in line 978: Statement is not in a procedure.
+APPEND BLANK
+Error in line 979: Statement is not in a procedure.
+REPLACE tmpinforme.exam1 WITH m.exam2
+Error in line 980: Statement is not in a procedure.
+REPLACE tmpinforme.resul1 WITH m.resul11
+Error in line 981: Statement is not in a procedure.
+REPLACE tmpinforme.control1 WITH m.control11
+Error in line 982: Statement is not in a procedure.
+REPLACE tmpinforme.unidad1 WITH m.unidad11
+Error in line 983: Statement is not in a procedure.
+REPLACE tmpinforme.vnormal1 WITH m.vnormal11
+Error in line 984: Statement is not in a procedure.
+REPLACE tmpinforme.vnormal1 WITH m.vnormal11
+Error in line 985: Statement is not in a procedure.
+REPLACE tmpinforme.notest WITH m.notest
+Error in line 986: Statement is not in a procedure.
+SELECT tmpinforme2
+Error in line 987: Statement is not in a procedure.
+ENDSCAN
+Error in line 988: Statement is not in a procedure.
+SELECT tmpinforme
+Error in line 989: Statement is not in a procedure.
+GOTO TOP
+Error in line 990: Statement is not in a procedure.
+RELEASE CARFECHA 
+Error in line 995: Statement is not in a procedure.
+PUBLIC  CARFECHA 
+Error in line 996: Statement is not in a procedure.
+CARFECHA =""
+Error in line 998: Statement is not in a procedure.
+CARFECHA =ALLTRIM(STR(DAY(M.FECHA)))
+Error in line 999: Statement is not in a procedure.
+CARFECHA =CARFECHA+" DE "
+Error in line 1001: Statement is not in a procedure.
+m.mesnum=Month(M.fecha)
+Error in line 1003: Statement is not in a procedure.
+Do Case
+Error in line 1005: Statement is not in a procedure.
+Case m.mesnum=1
+Error in line 1006: Statement is not in a procedure.
+m.mes='Enero'
+Error in line 1007: Statement is not in a procedure.
+Case m.mesnum=2
+Error in line 1008: Statement is not in a procedure.
+m.mes='Febrero'
+Error in line 1009: Statement is not in a procedure.
+Case m.mesnum=3
+Error in line 1010: Statement is not in a procedure.
+m.mes='Marzo'
+Error in line 1011: Statement is not in a procedure.
+Case m.mesnum=4
+Error in line 1012: Statement is not in a procedure.
+m.mes='Abril'
+Error in line 1013: Statement is not in a procedure.
+Case m.mesnum=5
+Error in line 1014: Statement is not in a procedure.
+m.mes='Mayo'
+Error in line 1015: Statement is not in a procedure.
+Case m.mesnum=6
+Error in line 1016: Statement is not in a procedure.
+m.mes='Junio'
+Error in line 1017: Statement is not in a procedure.
+Case m.mesnum=7
+Error in line 1018: Statement is not in a procedure.
+m.mes='Julio'
+Error in line 1019: Statement is not in a procedure.
+Case m.mesnum=8
+Error in line 1020: Statement is not in a procedure.
+m.mes='Agosto'
+Error in line 1021: Statement is not in a procedure.
+Case m.mesnum=9
+Error in line 1022: Statement is not in a procedure.
+m.mes='Septiembre'
+Error in line 1023: Statement is not in a procedure.
+Case m.mesnum=10
+Error in line 1024: Statement is not in a procedure.
+m.mes='Octubre'
+Error in line 1025: Statement is not in a procedure.
+Case m.mesnum=11
+Error in line 1026: Statement is not in a procedure.
+m.mes='Noviembre'
+Error in line 1027: Statement is not in a procedure.
+Case m.mesnum=12
+Error in line 1028: Statement is not in a procedure.
+m.mes='Diciembre'
+Error in line 1029: Statement is not in a procedure.
+ENDCASE
+Error in line 1030: Statement is not in a procedure.
+CARFECHA =CARFECHA+ M.MES+" DE "+ALLTRIM(STR(YEAR(M.FECHA)))
+Error in line 1032: Statement is not in a procedure.
+CARFECHA =UPPER(CARFECHA)
+Error in line 1033: Statement is not in a procedure.
+IF ALIAS()="TMPINFORME"
+Error in line 1039: Statement is not in a procedure.
+REPORT FORM pfolderload+"FORMS\QUIMICA" FOR notest=m.notest PREVIEW RANGE 1
+Error in line 1040: Statement is not in a procedure.
+ENDIF
+Error in line 1041: Statement is not in a procedure.
+ENDPROC
+Error in line 1042: Nesting error.
+÷
+Error in line 1046: Unrecognized command verb.
+Arial, 1, 9, 6, 15, 12, 32, 3, 0
+Error in line 1062: Unrecognized command verb.
+Arial, 0, 9, 5, 15, 12, 32, 3, 0
+Error in line 1063: Unrecognized command verb.
+Arial, 1, 8, 5, 14, 11, 29, 3, 0
+Error in line 1064: Unrecognized command verb.
+Arial, 1, 12, 8, 20, 15, 42, 4, 1
+Error in line 1065: Unrecognized command verb.
+Arial Narrow, 1, 9, 5, 16, 13, 14, 3, 0
+Error in line 1066: Unrecognized command verb.
+Arial Narrow, 0, 8, 4, 15, 12, 13, 3, 0
+Error in line 1067: Unrecognized command verb.
+Arial, 25, 9, 6, 15, 12, 32, 3, 0
+Error in line 1068: Unrecognized command verb.
+Arial, 16, 12, 7, 19, 15, 43, 3, 1
+Error in line 1069: Unrecognized command verb.
+ColumnWidths = ""
+Error in line 1071: Statement is not in a procedure.
+RowSourceType = 1
+Error in line 1072: Statement is not in a procedure.
+RowSource = "MASCULINO,FEMENINO"
+Error in line 1073: Statement is not in a procedure.
+ControlSource = "M.GENERO"
+Error in line 1074: Statement is not in a procedure.
+Enabled = .F.
+Error in line 1075: Statement is not in a procedure.
+FirstElement = 1
+Error in line 1076: Statement is not in a procedure.
+Height = 21
+Error in line 1077: Statement is not in a procedure.
+Left = 528
+Error in line 1078: Statement is not in a procedure.
+NumberOfElements = 0
+Error in line 1079: Statement is not in a procedure.
+Style = 2
+Error in line 1080: Statement is not in a procedure.
+TabIndex = 14
+Error in line 1081: Statement is not in a procedure.
+Top = 58
+Error in line 1082: Statement is not in a procedure.
+Width = 89
+Error in line 1083: Statement is not in a procedure.
+ForeColor = 255,0,0
+Error in line 1084: Syntax error.
+DisabledBackColor = 255,255,196
+Error in line 1085: Syntax error.
+DisabledForeColor = 0,0,0
+Error in line 1086: Syntax error.
+Name = "Combogenero"
+Error in line 1087: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 1090: Statement is not in a procedure.
+IF INLIST(m.genero, "MASCULINO", "VARON")
+Error in line 1092: Statement is not in a procedure.
+REPLACE vnormal1 WITH h1 ALL
+Error in line 1093: Statement is not in a procedure.
+REPLACE vnormal11 WITH h2 ALL
+Error in line 1094: Statement is not in a procedure.
+ELSE
+Error in line 1095: Statement is not in a procedure.
+REPLACE vnormal1 WITH m1 ALL
+Error in line 1096: Statement is not in a procedure.
+REPLACE vnormal11 WITH m2 ALL
+Error in line 1097: Statement is not in a procedure.
+ENDIF
+Error in line 1098: Statement is not in a procedure.
+GO TOP
+Error in line 1100: Statement is not in a procedure.
+thisform.refresh
+Error in line 1101: Statement is not in a procedure.
+ENDPROC
+Error in line 1102: Nesting error.
+Top = 136
+Error in line 1126: Statement is not in a procedure.
+Left = 748
+Error in line 1127: Statement is not in a procedure.
+Height = 18
+Error in line 1128: Statement is not in a procedure.
+Width = 106
+Error in line 1129: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1130: Statement is not in a procedure.
+FontSize = 8
+Error in line 1131: Statement is not in a procedure.
+WordWrap = .F.
+Error in line 1132: Statement is not in a procedure.
+Caption = "GRABA V. NORMAL"
+Error in line 1133: Statement is not in a procedure.
+TabIndex = 31
+Error in line 1134: Statement is not in a procedure.
+ForeColor = 255,0,0
+Error in line 1135: Syntax error.
+BackColor = 255,255,255
+Error in line 1136: Syntax error.
+DisabledForeColor = 128,255,0
+Error in line 1137: Syntax error.
+DisabledBackColor = 255,128,128
+Error in line 1138: Syntax error.
+Name = "Command10"
+Error in line 1139: Statement is not in a procedure.
+txtObserva
+Error in line 1141: Unrecognized command verb.
+ControlSource = "m.observa"
+Error in line 1142: Statement is not in a procedure.
+Enabled = .F.
+Error in line 1143: Statement is not in a procedure.
+Height = 23
+Error in line 1144: Statement is not in a procedure.
+Left = 123
+Error in line 1145: Statement is not in a procedure.
+MaxLength = 60
+Error in line 1146: Statement is not in a procedure.
+TabIndex = 7
+Error in line 1147: Statement is not in a procedure.
+Top = 423
+Error in line 1148: Statement is not in a procedure.
+Width = 729
+Error in line 1149: Statement is not in a procedure.
+DisabledBackColor = 255,255,196
+Error in line 1150: Syntax error.
+DisabledForeColor = 0,0,0
+Error in line 1151: Syntax error.
+Name = "txtObserva"
+Error in line 1152: Statement is not in a procedure.
+lblObserva
+Error in line 1154: Unrecognized command verb.
+FontBold = .T.
+Error in line 1155: Statement is not in a procedure.
+WordWrap = .T.
+Error in line 1156: Statement is not in a procedure.
+BackStyle = 0
+Error in line 1157: Statement is not in a procedure.
+Caption = "OBSERVACIONES:"
+Error in line 1158: Statement is not in a procedure.
+Left = 18
+Error in line 1159: Statement is not in a procedure.
+Top = 428
+Error in line 1160: Statement is not in a procedure.
+Width = 101
+Error in line 1161: Statement is not in a procedure.
+TabIndex = 24
+Error in line 1162: Statement is not in a procedure.
+Name = "lblObserva"
+Error in line 1163: Statement is not in a procedure.
+lblMuestra
+Error in line 1165: Unrecognized command verb.
+FontBold = .T.
+Error in line 1166: Statement is not in a procedure.
+WordWrap = .T.
+Error in line 1167: Statement is not in a procedure.
+BackStyle = 0
+Error in line 1168: Statement is not in a procedure.
+Caption = "MUESTRA:"
+Error in line 1169: Statement is not in a procedure.
+Left = 457
+Error in line 1170: Statement is not in a procedure.
+Top = 85
+Error in line 1171: Statement is not in a procedure.
+Width = 59
+Error in line 1172: Statement is not in a procedure.
+TabIndex = 21
+Error in line 1173: Statement is not in a procedure.
+Name = "lblMuestra"
+Error in line 1174: Statement is not in a procedure.
+ColumnWidths = ""
+Error in line 1176: Statement is not in a procedure.
+RowSourceType = 1
+Error in line 1177: Statement is not in a procedure.
+RowSource = "SUERO,PLASMA,ORINA"
+Error in line 1178: Statement is not in a procedure.
+ControlSource = "M.MUESTRA"
+Error in line 1179: Statement is not in a procedure.
+Enabled = .F.
+Error in line 1180: Statement is not in a procedure.
+FirstElement = 1
+Error in line 1181: Statement is not in a procedure.
+Height = 21
+Error in line 1182: Statement is not in a procedure.
+Left = 528
+Error in line 1183: Statement is not in a procedure.
+NumberOfElements = 0
+Error in line 1184: Statement is not in a procedure.
+Style = 2
+Error in line 1185: Statement is not in a procedure.
+TabIndex = 5
+Error in line 1186: Statement is not in a procedure.
+Top = 83
+Error in line 1187: Statement is not in a procedure.
+Width = 89
+Error in line 1188: Statement is not in a procedure.
+DisabledBackColor = 255,255,196
+Error in line 1189: Syntax error.
+DisabledForeColor = 0,0,0
+Error in line 1190: Syntax error.
+Name = "ComboMUESTRA"
+Error in line 1191: Statement is not in a procedure.
+commandbutton
+Error in line 1193: Unrecognized command verb.
+commandbutton
+Error in line 1194: Unrecognized command verb.
+Left = 16
+Error in line 1195: Statement is not in a procedure.
+Height = 21
+Error in line 1196: Statement is not in a procedure.
+Width = 62
+Error in line 1197: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1198: Statement is not in a procedure.
+FontSize = 9
+Error in line 1199: Statement is not in a procedure.
+Caption = "MEDICO"
+Error in line 1200: Statement is not in a procedure.
+TabIndex = 4
+Error in line 1201: Statement is not in a procedure.
+TabStop = .F.
+Error in line 1202: Statement is not in a procedure.
+BackColor = 0,255,128
+Error in line 1203: Syntax error.
+Name = "Command3"
+Error in line 1204: Statement is not in a procedure.
+IF EMPTY(mflag)
+Error in line 1206: Statement is not in a procedure.
+RETURN
+Error in line 1207: Statement is not in a procedure.
+ENDIF
+Error in line 1208: Statement is not in a procedure.
+SELECT 0
+Error in line 1209: Statement is not in a procedure.
+USE SHARED prutalabo+"DOCTORES" AGAIN ORDER IDOCTOR
+Error in line 1210: Statement is not in a procedure.
+SELECT doctores
+Error in line 1211: Statement is not in a procedure.
+RELEASE mdevuelve
+Error in line 1212: Statement is not in a procedure.
+PUBLIC mdevuelve
+Error in line 1213: Statement is not in a procedure.
+RELEASE pcaption1, pcaption2, pcaption3
+Error in line 1214: Statement is not in a procedure.
+PUBLIC pcaption1, pcaption2, pcaption3
+Error in line 1215: Statement is not in a procedure.
+pcaption1 = "IDOCTOR"
+Error in line 1216: Statement is not in a procedure.
+pcaption2 = "NOMBRE "
+Error in line 1217: Statement is not in a procedure.
+pcaption3 = ""
+Error in line 1218: Statement is not in a procedure.
+mdevuelve = SPACE(15)
+Error in line 1219: Statement is not in a procedure.
+SELECT ALLTRIM(STR(doctores.idoctor)) AS campo1, medico AS campo2, "" AS campo3 FROM DOCTORES INTO CURSOR CRIBUSCARDATOS
+Error in line 1220: Statement is not in a procedure.
+SELECT cribuscardatos
+Error in line 1221: Statement is not in a procedure.
+IF RECCOUNT()=0
+Error in line 1222: Statement is not in a procedure.
+USE IN cribuscardatos
+Error in line 1223: Statement is not in a procedure.
+USE IN doctores
+Error in line 1224: Statement is not in a procedure.
+RETURN
+Error in line 1225: Statement is not in a procedure.
+ENDIF
+Error in line 1226: Statement is not in a procedure.
+SELECT cribuscardatos
+Error in line 1227: Statement is not in a procedure.
+DO FORM public_data_busca+"frmbuscriteriook"
+Error in line 1228: Statement is not in a procedure.
+IF  .NOT. EMPTY(mdevuelve)
+Error in line 1229: Statement is not in a procedure.
+m.idoctor = VAL(mdevuelve)
+Error in line 1230: Statement is not in a procedure.
+SELECT doctores
+Error in line 1231: Statement is not in a procedure.
+GOTO TOP
+Error in line 1232: Statement is not in a procedure.
+LOCATE FOR idoctor=m.idoctor
+Error in line 1233: Statement is not in a procedure.
+SCATTER MEMVAR
+Error in line 1234: Statement is not in a procedure.
+ENDIF
+Error in line 1235: Statement is not in a procedure.
+SELECT doctores
+Error in line 1236: Statement is not in a procedure.
+USE IN doctores
+Error in line 1237: Statement is not in a procedure.
+thisform.txtmedico.setfocus()
+Error in line 1238: Statement is not in a procedure.
+thisform.refresh()
+Error in line 1239: Statement is not in a procedure.
+RETURN
+Error in line 1240: Statement is not in a procedure.
+ENDPROC
+Error in line 1241: Nesting error.
+ýù•þ
+Error in line 1246: Unrecognized command verb.
+÷
+Error in line 1247: Unrecognized command verb.
+÷
+Error in line 1248: Unrecognized command verb.
+BorderWidth = 20
+Error in line 1250: Statement is not in a procedure.
+Height = 245
+Error in line 1251: Statement is not in a procedure.
+Left = 409
+Error in line 1252: Statement is not in a procedure.
+Top = 143
+Error in line 1253: Statement is not in a procedure.
+Width = 0
+Error in line 1254: Statement is not in a procedure.
+BorderColor = 0,198,198
+Error in line 1255: Syntax error.
+Name = "Line1"
+Error in line 1256: Statement is not in a procedure.
+BorderWidth = 5
+Error in line 1258: Statement is not in a procedure.
+Height = 231
+Error in line 1259: Statement is not in a procedure.
+Left = 182
+Error in line 1260: Statement is not in a procedure.
+Top = 157
+Error in line 1261: Statement is not in a procedure.
+Width = 0
+Error in line 1262: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1263: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1264: Syntax error.
+Name = "Line4"
+Error in line 1265: Statement is not in a procedure.
+BorderWidth = 1
+Error in line 1267: Statement is not in a procedure.
+Height = 253
+Error in line 1268: Statement is not in a procedure.
+Left = 418
+Error in line 1269: Statement is not in a procedure.
+Top = 138
+Error in line 1270: Statement is not in a procedure.
+Width = 0
+Error in line 1271: Statement is not in a procedure.
+BorderColor = 0,0,0
+Error in line 1272: Syntax error.
+Name = "Line19"
+Error in line 1273: Statement is not in a procedure.
+BorderWidth = 1
+Error in line 1275: Statement is not in a procedure.
+Height = 253
+Error in line 1276: Statement is not in a procedure.
+Left = 399
+Error in line 1277: Statement is not in a procedure.
+Top = 138
+Error in line 1278: Statement is not in a procedure.
+Width = 0
+Error in line 1279: Statement is not in a procedure.
+BorderColor = 0,0,0
+Error in line 1280: Syntax error.
+Name = "Line20"
+Error in line 1281: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1283: Statement is not in a procedure.
+Height = 0
+Error in line 1284: Statement is not in a procedure.
+Left = 181
+Error in line 1285: Statement is not in a procedure.
+Top = 245
+Error in line 1286: Statement is not in a procedure.
+Width = 22
+Error in line 1287: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1288: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1289: Syntax error.
+Name = "Line6"
+Error in line 1290: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1292: Statement is not in a procedure.
+Height = 0
+Error in line 1293: Statement is not in a procedure.
+Left = 181
+Error in line 1294: Statement is not in a procedure.
+Top = 227
+Error in line 1295: Statement is not in a procedure.
+Width = 22
+Error in line 1296: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1297: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1298: Syntax error.
+Name = "Line5"
+Error in line 1299: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1301: Statement is not in a procedure.
+Height = 0
+Error in line 1302: Statement is not in a procedure.
+Left = 181
+Error in line 1303: Statement is not in a procedure.
+Top = 263
+Error in line 1304: Statement is not in a procedure.
+Width = 22
+Error in line 1305: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1306: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1307: Syntax error.
+Name = "Line7"
+Error in line 1308: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1310: Statement is not in a procedure.
+Height = 0
+Error in line 1311: Statement is not in a procedure.
+Left = 230
+Error in line 1312: Statement is not in a procedure.
+Top = 209
+Error in line 1313: Statement is not in a procedure.
+Width = 0
+Error in line 1314: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1315: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1316: Syntax error.
+Name = "Line8"
+Error in line 1317: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1319: Statement is not in a procedure.
+Height = 0
+Error in line 1320: Statement is not in a procedure.
+Left = 181
+Error in line 1321: Statement is not in a procedure.
+Top = 281
+Error in line 1322: Statement is not in a procedure.
+Width = 22
+Error in line 1323: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1324: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1325: Syntax error.
+Name = "Line9"
+Error in line 1326: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1328: Statement is not in a procedure.
+Height = 0
+Error in line 1329: Statement is not in a procedure.
+Left = 181
+Error in line 1330: Statement is not in a procedure.
+Top = 299
+Error in line 1331: Statement is not in a procedure.
+Width = 22
+Error in line 1332: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1333: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1334: Syntax error.
+Name = "Line10"
+Error in line 1335: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1337: Statement is not in a procedure.
+Height = 0
+Error in line 1338: Statement is not in a procedure.
+Left = 181
+Error in line 1339: Statement is not in a procedure.
+Top = 317
+Error in line 1340: Statement is not in a procedure.
+Width = 22
+Error in line 1341: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1342: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1343: Syntax error.
+Name = "Line11"
+Error in line 1344: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1346: Statement is not in a procedure.
+Height = 0
+Error in line 1347: Statement is not in a procedure.
+Left = 181
+Error in line 1348: Statement is not in a procedure.
+Top = 191
+Error in line 1349: Statement is not in a procedure.
+Width = 22
+Error in line 1350: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1351: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1352: Syntax error.
+Name = "Line12"
+Error in line 1353: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1355: Statement is not in a procedure.
+Height = 0
+Error in line 1356: Statement is not in a procedure.
+Left = 181
+Error in line 1357: Statement is not in a procedure.
+Top = 173
+Error in line 1358: Statement is not in a procedure.
+Width = 22
+Error in line 1359: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1360: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1361: Syntax error.
+Name = "Line13"
+Error in line 1362: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1364: Statement is not in a procedure.
+Height = 0
+Error in line 1365: Statement is not in a procedure.
+Left = 181
+Error in line 1366: Statement is not in a procedure.
+Top = 335
+Error in line 1367: Statement is not in a procedure.
+Width = 22
+Error in line 1368: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1369: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1370: Syntax error.
+Name = "Line14"
+Error in line 1371: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1373: Statement is not in a procedure.
+Height = 0
+Error in line 1374: Statement is not in a procedure.
+Left = 181
+Error in line 1375: Statement is not in a procedure.
+Top = 353
+Error in line 1376: Statement is not in a procedure.
+Width = 22
+Error in line 1377: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1378: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1379: Syntax error.
+Name = "Line15"
+Error in line 1380: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1382: Statement is not in a procedure.
+Height = 0
+Error in line 1383: Statement is not in a procedure.
+Left = 181
+Error in line 1384: Statement is not in a procedure.
+Top = 371
+Error in line 1385: Statement is not in a procedure.
+Width = 22
+Error in line 1386: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1387: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1388: Syntax error.
+Name = "Line16"
+Error in line 1389: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1391: Statement is not in a procedure.
+Height = 0
+Error in line 1392: Statement is not in a procedure.
+Left = 181
+Error in line 1393: Statement is not in a procedure.
+Top = 388
+Error in line 1394: Statement is not in a procedure.
+Width = 22
+Error in line 1395: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1396: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1397: Syntax error.
+Name = "Line17"
+Error in line 1398: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1400: Statement is not in a procedure.
+Height = 0
+Error in line 1401: Statement is not in a procedure.
+Left = 180
+Error in line 1402: Statement is not in a procedure.
+Top = 210
+Error in line 1403: Statement is not in a procedure.
+Width = 22
+Error in line 1404: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1405: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1406: Syntax error.
+Name = "Line18"
+Error in line 1407: Statement is not in a procedure.
+BorderWidth = 5
+Error in line 1409: Statement is not in a procedure.
+Height = 231
+Error in line 1410: Statement is not in a procedure.
+Left = 207
+Error in line 1411: Statement is not in a procedure.
+Top = 157
+Error in line 1412: Statement is not in a procedure.
+Width = 0
+Error in line 1413: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1414: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1415: Syntax error.
+Name = "Line21"
+Error in line 1416: Statement is not in a procedure.
+BorderWidth = 2
+Error in line 1418: Statement is not in a procedure.
+Height = 233
+Error in line 1419: Statement is not in a procedure.
+Left = 207
+Error in line 1420: Statement is not in a procedure.
+Top = 156
+Error in line 1421: Statement is not in a procedure.
+Width = 0
+Error in line 1422: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1423: Statement is not in a procedure.
+BorderColor = 0,0,0
+Error in line 1424: Syntax error.
+Name = "Line23"
+Error in line 1425: Statement is not in a procedure.
+BorderWidth = 2
+Error in line 1427: Statement is not in a procedure.
+Height = 234
+Error in line 1428: Statement is not in a procedure.
+Left = 181
+Error in line 1429: Statement is not in a procedure.
+Top = 156
+Error in line 1430: Statement is not in a procedure.
+Width = 0
+Error in line 1431: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1432: Statement is not in a procedure.
+BorderColor = 0,0,0
+Error in line 1433: Syntax error.
+Name = "Line24"
+Error in line 1434: Statement is not in a procedure.
+BorderWidth = 5
+Error in line 1436: Statement is not in a procedure.
+Height = 231
+Error in line 1437: Statement is not in a procedure.
+Left = 579
+Error in line 1438: Statement is not in a procedure.
+Top = 157
+Error in line 1439: Statement is not in a procedure.
+Width = 0
+Error in line 1440: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1441: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1442: Syntax error.
+Name = "Line2"
+Error in line 1443: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1445: Statement is not in a procedure.
+Height = 0
+Error in line 1446: Statement is not in a procedure.
+Left = 579
+Error in line 1447: Statement is not in a procedure.
+Top = 245
+Error in line 1448: Statement is not in a procedure.
+Width = 22
+Error in line 1449: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1450: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1451: Syntax error.
+Name = "Line3"
+Error in line 1452: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1454: Statement is not in a procedure.
+Height = 0
+Error in line 1455: Statement is not in a procedure.
+Left = 579
+Error in line 1456: Statement is not in a procedure.
+Top = 227
+Error in line 1457: Statement is not in a procedure.
+Width = 22
+Error in line 1458: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1459: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1460: Syntax error.
+Name = "Line25"
+Error in line 1461: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1463: Statement is not in a procedure.
+Height = 0
+Error in line 1464: Statement is not in a procedure.
+Left = 579
+Error in line 1465: Statement is not in a procedure.
+Top = 263
+Error in line 1466: Statement is not in a procedure.
+Width = 22
+Error in line 1467: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1468: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1469: Syntax error.
+Name = "Line26"
+Error in line 1470: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1472: Statement is not in a procedure.
+Height = 0
+Error in line 1473: Statement is not in a procedure.
+Left = 579
+Error in line 1474: Statement is not in a procedure.
+Top = 209
+Error in line 1475: Statement is not in a procedure.
+Width = 22
+Error in line 1476: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1477: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1478: Syntax error.
+Name = "Line27"
+Error in line 1479: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1481: Statement is not in a procedure.
+Height = 0
+Error in line 1482: Statement is not in a procedure.
+Left = 579
+Error in line 1483: Statement is not in a procedure.
+Top = 281
+Error in line 1484: Statement is not in a procedure.
+Width = 22
+Error in line 1485: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1486: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1487: Syntax error.
+Name = "Line28"
+Error in line 1488: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1490: Statement is not in a procedure.
+Height = 0
+Error in line 1491: Statement is not in a procedure.
+Left = 579
+Error in line 1492: Statement is not in a procedure.
+Top = 299
+Error in line 1493: Statement is not in a procedure.
+Width = 22
+Error in line 1494: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1495: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1496: Syntax error.
+Name = "Line29"
+Error in line 1497: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1499: Statement is not in a procedure.
+Height = 0
+Error in line 1500: Statement is not in a procedure.
+Left = 579
+Error in line 1501: Statement is not in a procedure.
+Top = 317
+Error in line 1502: Statement is not in a procedure.
+Width = 22
+Error in line 1503: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1504: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1505: Syntax error.
+Name = "Line30"
+Error in line 1506: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1508: Statement is not in a procedure.
+Height = 0
+Error in line 1509: Statement is not in a procedure.
+Left = 579
+Error in line 1510: Statement is not in a procedure.
+Top = 191
+Error in line 1511: Statement is not in a procedure.
+Width = 22
+Error in line 1512: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1513: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1514: Syntax error.
+Name = "Line31"
+Error in line 1515: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1517: Statement is not in a procedure.
+Height = 0
+Error in line 1518: Statement is not in a procedure.
+Left = 579
+Error in line 1519: Statement is not in a procedure.
+Top = 173
+Error in line 1520: Statement is not in a procedure.
+Width = 22
+Error in line 1521: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1522: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1523: Syntax error.
+Name = "Line32"
+Error in line 1524: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1526: Statement is not in a procedure.
+Height = 0
+Error in line 1527: Statement is not in a procedure.
+Left = 579
+Error in line 1528: Statement is not in a procedure.
+Top = 335
+Error in line 1529: Statement is not in a procedure.
+Width = 22
+Error in line 1530: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1531: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1532: Syntax error.
+Name = "Line33"
+Error in line 1533: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1535: Statement is not in a procedure.
+Height = 0
+Error in line 1536: Statement is not in a procedure.
+Left = 579
+Error in line 1537: Statement is not in a procedure.
+Top = 353
+Error in line 1538: Statement is not in a procedure.
+Width = 22
+Error in line 1539: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1540: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1541: Syntax error.
+Name = "Line34"
+Error in line 1542: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1544: Statement is not in a procedure.
+Height = 0
+Error in line 1545: Statement is not in a procedure.
+Left = 579
+Error in line 1546: Statement is not in a procedure.
+Top = 371
+Error in line 1547: Statement is not in a procedure.
+Width = 22
+Error in line 1548: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1549: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1550: Syntax error.
+Name = "Line35"
+Error in line 1551: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1553: Statement is not in a procedure.
+Height = 0
+Error in line 1554: Statement is not in a procedure.
+Left = 581
+Error in line 1555: Statement is not in a procedure.
+Top = 388
+Error in line 1556: Statement is not in a procedure.
+Width = 22
+Error in line 1557: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1558: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1559: Syntax error.
+Name = "Line36"
+Error in line 1560: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1562: Statement is not in a procedure.
+Height = 0
+Error in line 1563: Statement is not in a procedure.
+Left = 579
+Error in line 1564: Statement is not in a procedure.
+Top = 157
+Error in line 1565: Statement is not in a procedure.
+Width = 22
+Error in line 1566: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1567: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1568: Syntax error.
+Name = "Line37"
+Error in line 1569: Statement is not in a procedure.
+BorderWidth = 5
+Error in line 1571: Statement is not in a procedure.
+Height = 231
+Error in line 1572: Statement is not in a procedure.
+Left = 606
+Error in line 1573: Statement is not in a procedure.
+Top = 158
+Error in line 1574: Statement is not in a procedure.
+Width = 0
+Error in line 1575: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1576: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1577: Syntax error.
+Name = "Line38"
+Error in line 1578: Statement is not in a procedure.
+BorderWidth = 2
+Error in line 1580: Statement is not in a procedure.
+Height = 234
+Error in line 1581: Statement is not in a procedure.
+Left = 578
+Error in line 1582: Statement is not in a procedure.
+Top = 156
+Error in line 1583: Statement is not in a procedure.
+Width = 0
+Error in line 1584: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1585: Statement is not in a procedure.
+BorderColor = 0,0,0
+Error in line 1586: Syntax error.
+Name = "Line40"
+Error in line 1587: Statement is not in a procedure.
+commandbutton
+Error in line 1589: Unrecognized command verb.
+commandbutton
+Error in line 1590: Unrecognized command verb.
+Left = 625
+Error in line 1591: Statement is not in a procedure.
+Height = 21
+Error in line 1592: Statement is not in a procedure.
+Width = 69
+Error in line 1593: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1594: Statement is not in a procedure.
+FontSize = 9
+Error in line 1595: Statement is not in a procedure.
+Caption = "ADD TEST"
+Error in line 1596: Statement is not in a procedure.
+TabIndex = 12
+Error in line 1597: Statement is not in a procedure.
+ForeColor = 255,255,255
+Error in line 1598: Syntax error.
+BackColor = 255,0,0
+Error in line 1599: Syntax error.
+Name = "Command4"
+Error in line 1600: Statement is not in a procedure.
+SELECT quimicas
+Error in line 1602: Statement is not in a procedure.
+RELEASE mclave
+Error in line 1603: Statement is not in a procedure.
+PUBLIC mclave
+Error in line 1604: Statement is not in a procedure.
+mclave = ""
+Error in line 1605: Statement is not in a procedure.
+DO FORM pfolderload+"frmpasword"
+Error in line 1606: Statement is not in a procedure.
+DEFINE WINDOW wParent  FROM 7, 5 TO 45, 133  TITLE "Parent"         
+Error in line 1610: Statement is not in a procedure.
+ACTIVATE WINDOW wParent 
+Error in line 1611: Statement is not in a procedure.
+IF INLIST(mclave, "ROBOTCOM")
+Error in line 1613: Statement is not in a procedure.
+BROWSE FIELDS exam1, unidad1, exam2, unidad11 	  
+Error in line 1614: Statement is not in a procedure.
+ENDIF
+Error in line 1615: Statement is not in a procedure.
+RELEASE WINDOWS wParent 
+Error in line 1617: Statement is not in a procedure.
+RETURN
+Error in line 1619: Statement is not in a procedure.
+ENDPROC
+Error in line 1623: Nesting error.
+Left = 335
+Error in line 1625: Statement is not in a procedure.
+Height = 18
+Error in line 1626: Statement is not in a procedure.
+Width = 106
+Error in line 1627: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1628: Statement is not in a procedure.
+FontSize = 8
+Error in line 1629: Statement is not in a procedure.
+WordWrap = .F.
+Error in line 1630: Statement is not in a procedure.
+Caption = "GRABA V. NORMAL"
+Error in line 1631: Statement is not in a procedure.
+TabIndex = 30
+Error in line 1632: Statement is not in a procedure.
+ForeColor = 255,0,0
+Error in line 1633: Syntax error.
+BackColor = 255,255,255
+Error in line 1634: Syntax error.
+DisabledForeColor = 128,255,0
+Error in line 1635: Syntax error.
+DisabledBackColor = 255,128,128
+Error in line 1636: Syntax error.
+Alignment = 2
+Error in line 1637: Statement is not in a procedure.
+Name = "Command11"
+Error in line 1638: Statement is not in a procedure.
+BorderWidth = 2
+Error in line 1640: Statement is not in a procedure.
+Height = 233
+Error in line 1641: Statement is not in a procedure.
+Left = 645
+Error in line 1642: Statement is not in a procedure.
+Top = 138
+Error in line 1643: Statement is not in a procedure.
+Width = 0
+Error in line 1644: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1645: Statement is not in a procedure.
+BorderColor = 0,0,0
+Error in line 1646: Syntax error.
+Name = "Line22"
+Error in line 1647: Statement is not in a procedure.
+BorderWidth = 2
+Error in line 1649: Statement is not in a procedure.
+Height = 233
+Error in line 1650: Statement is not in a procedure.
+Left = 606
+Error in line 1651: Statement is not in a procedure.
+Top = 156
+Error in line 1652: Statement is not in a procedure.
+Width = 0
+Error in line 1653: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1654: Statement is not in a procedure.
+BorderColor = 0,0,0
+Error in line 1655: Syntax error.
+Name = "Line39"
+Error in line 1656: Statement is not in a procedure.
+BorderWidth = 2
+Error in line 1658: Statement is not in a procedure.
+Height = 233
+Error in line 1659: Statement is not in a procedure.
+Left = 247
+Error in line 1660: Statement is not in a procedure.
+Top = 156
+Error in line 1661: Statement is not in a procedure.
+Width = 0
+Error in line 1662: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1663: Statement is not in a procedure.
+BorderColor = 0,0,0
+Error in line 1664: Syntax error.
+Name = "Line41"
+Error in line 1665: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 1667: Statement is not in a procedure.
+Height = 0
+Error in line 1668: Statement is not in a procedure.
+Left = 183
+Error in line 1669: Statement is not in a procedure.
+Top = 157
+Error in line 1670: Statement is not in a procedure.
+Width = 22
+Error in line 1671: Statement is not in a procedure.
+ColorSource = 4
+Error in line 1672: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 1673: Syntax error.
+Name = "Line42"
+Error in line 1674: Statement is not in a procedure.
+commandbutton
+Error in line 1676: Unrecognized command verb.
+commandbutton
+Error in line 1677: Unrecognized command verb.
+Left = 760
+Error in line 1678: Statement is not in a procedure.
+Height = 33
+Error in line 1679: Statement is not in a procedure.
+Width = 92
+Error in line 1680: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1681: Statement is not in a procedure.
+FontSize = 12
+Error in line 1682: Statement is not in a procedure.
+WordWrap = .T.
+Error in line 1683: Statement is not in a procedure.
+Caption = " SOBRE"
+Error in line 1684: Statement is not in a procedure.
+TabIndex = 10
+Error in line 1685: Statement is not in a procedure.
+BackColor = 255,255,255
+Error in line 1686: Syntax error.
+Name = "Command5"
+Error in line 1687: Statement is not in a procedure.
+IF  .NOT. EMPTY(mflag)
+Error in line 1689: Statement is not in a procedure.
+MESSAGEBOX("DEBE ALMACENAR BOLETA", 48, "LABORATORIO CLINICO")
+Error in line 1690: Statement is not in a procedure.
+RETURN
+Error in line 1691: Statement is not in a procedure.
+ENDIF
+Error in line 1692: Statement is not in a procedure.
+REPORT FORM pfolderload+"FORMS\SOBRE" FOR notest=m.notest PREVIEW
+Error in line 1693: Statement is not in a procedure.
+ENDPROC
+Error in line 1694: Nesting error.
+Left = 760
+Error in line 1696: Statement is not in a procedure.
+Height = 33
+Error in line 1697: Statement is not in a procedure.
+Width = 92
+Error in line 1698: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1699: Statement is not in a procedure.
+FontSize = 12
+Error in line 1700: Statement is not in a procedure.
+Caption = "PDF"
+Error in line 1701: Statement is not in a procedure.
+TabIndex = 11
+Error in line 1702: Statement is not in a procedure.
+ForeColor = 255,255,0
+Error in line 1703: Syntax error.
+BackColor = 0,0,255
+Error in line 1704: Syntax error.
+Name = "Command2"
+Error in line 1705: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1707: Statement is not in a procedure.
+FontSize = 14
+Error in line 1708: Statement is not in a procedure.
+WordWrap = .T.
+Error in line 1709: Statement is not in a procedure.
+BackStyle = 0
+Error in line 1710: Statement is not in a procedure.
+Caption = "QUIMICA SANGUINEA"
+Error in line 1711: Statement is not in a procedure.
+Height = 25
+Error in line 1712: Statement is not in a procedure.
+Left = 275
+Error in line 1713: Statement is not in a procedure.
+Top = 4
+Error in line 1714: Statement is not in a procedure.
+Width = 197
+Error in line 1715: Statement is not in a procedure.
+TabIndex = 28
+Error in line 1716: Statement is not in a procedure.
+ForeColor = 0,0,255
+Error in line 1717: Syntax error.
+Name = "Label1"
+Error in line 1718: Statement is not in a procedure.
+commandbutton
+Error in line 1720: Unrecognized command verb.
+commandbutton
+Error in line 1721: Unrecognized command verb.
+Left = 625
+Error in line 1722: Statement is not in a procedure.
+Height = 21
+Error in line 1723: Statement is not in a procedure.
+Width = 69
+Error in line 1724: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1725: Statement is not in a procedure.
+FontSize = 8
+Error in line 1726: Statement is not in a procedure.
+Caption = "FILTRAR"
+Error in line 1727: Statement is not in a procedure.
+TabIndex = 16
+Error in line 1728: Statement is not in a procedure.
+ForeColor = 255,255,0
+Error in line 1729: Syntax error.
+BackColor = 0,64,0
+Error in line 1730: Syntax error.
+Name = "Command6"
+Error in line 1731: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 1733: Statement is not in a procedure.
+SET FILTER TO nopx=m.nopx
+Error in line 1734: Statement is not in a procedure.
+GOTO TOP
+Error in line 1735: Statement is not in a procedure.
+thisform.refresh
+Error in line 1736: Statement is not in a procedure.
+ENDPROC
+Error in line 1737: Nesting error.
+FontOutline = .F.
+Error in line 1739: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 1740: Statement is not in a procedure.
+FontSize = 9
+Error in line 1741: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 1742: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 1743: Statement is not in a procedure.
+Enabled = .T.
+Error in line 1744: Statement is not in a procedure.
+Margin = 0
+Error in line 1745: Statement is not in a procedure.
+ReadOnly = .F.
+Error in line 1746: Statement is not in a procedure.
+TabStop = .F.
+Error in line 1747: Statement is not in a procedure.
+Visible = .T.
+Error in line 1748: Statement is not in a procedure.
+ForeColor = 0,0,0
+Error in line 1749: Syntax error.
+BackColor = 0,198,198
+Error in line 1750: Syntax error.
+Name = "Text1"
+Error in line 1751: Statement is not in a procedure.
+commandbutton
+Error in line 1753: Unrecognized command verb.
+commandbutton
+Error in line 1754: Unrecognized command verb.
+Left = 625
+Error in line 1755: Statement is not in a procedure.
+Height = 21
+Error in line 1756: Statement is not in a procedure.
+Width = 69
+Error in line 1757: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1758: Statement is not in a procedure.
+FontSize = 8
+Error in line 1759: Statement is not in a procedure.
+Caption = "NO FILTRO"
+Error in line 1760: Statement is not in a procedure.
+TabIndex = 17
+Error in line 1761: Statement is not in a procedure.
+ForeColor = 255,255,0
+Error in line 1762: Syntax error.
+BackColor = 0,64,0
+Error in line 1763: Syntax error.
+Name = "Command7"
+Error in line 1764: Statement is not in a procedure.
+SELECT dbquimisangre
+Error in line 1766: Statement is not in a procedure.
+SET FILTER TO
+Error in line 1767: Statement is not in a procedure.
+ENDPROC
+Error in line 1768: Nesting error.
+FontOutline = .F.
+Error in line 1770: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 1771: Statement is not in a procedure.
+FontSize = 9
+Error in line 1772: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 1773: Statement is not in a procedure.
+Alignment = 2
+Error in line 1774: Statement is not in a procedure.
+Caption = "V. NORMAL"
+Error in line 1775: Statement is not in a procedure.
+BackColor = 255,196,225
+Error in line 1776: Syntax error.
+Name = "Header1"
+Error in line 1777: Statement is not in a procedure.
+commandbutton
+Error in line 1779: Unrecognized command verb.
+commandbutton
+Error in line 1780: Unrecognized command verb.
+Left = 118
+Error in line 1781: Statement is not in a procedure.
+Height = 21
+Error in line 1782: Statement is not in a procedure.
+Width = 90
+Error in line 1783: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1784: Statement is not in a procedure.
+FontName = "Arial Narrow"
+Error in line 1785: Statement is not in a procedure.
+Caption = "CALCULAR N-U"
+Error in line 1786: Statement is not in a procedure.
+TabIndex = 13
+Error in line 1787: Statement is not in a procedure.
+ForeColor = 255,255,255
+Error in line 1788: Syntax error.
+BackColor = 255,0,255
+Error in line 1789: Syntax error.
+Name = "Command8"
+Error in line 1790: Statement is not in a procedure.
+IF EMPTY(mflag)
+Error in line 1792: Statement is not in a procedure.
+RETURN
+Error in line 1793: Statement is not in a procedure.
+ENDIF
+Error in line 1794: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 1795: Statement is not in a procedure.
+GOTO TOP
+Error in line 1796: Statement is not in a procedure.
+LOCATE FOR ALLTRIM(quiplantilla.exam1)="NITRÓGENO URÉICO"
+Error in line 1797: Statement is not in a procedure.
+IF ALLTRIM(quiplantilla.exam1)="NITRÓGENO URÉICO"
+Error in line 1799: Statement is not in a procedure.
+linea = RECNO()
+Error in line 1800: Statement is not in a procedure.
+GOTO TOP
+Error in line 1801: Statement is not in a procedure.
+SUM quiplantilla.resul1 TO toturea FOR ALLTRIM(exam1)="UREA"
+Error in line 1802: Statement is not in a procedure.
+GOTO linea
+Error in line 1803: Statement is not in a procedure.
+IF toturea=0
+Error in line 1804: Statement is not in a procedure.
+REPLACE quiplantilla.resul1 WITH 0
+Error in line 1805: Statement is not in a procedure.
+RETURN
+Error in line 1806: Statement is not in a procedure.
+ENDIF
+Error in line 1807: Statement is not in a procedure.
+REPLACE quiplantilla.resul1 WITH toturea/mfactor
+Error in line 1808: Statement is not in a procedure.
+ENDIF
+Error in line 1809: Statement is not in a procedure.
+thisform.refresh
+Error in line 1810: Statement is not in a procedure.
+ENDPROC
+Error in line 1811: Nesting error.
+FontOutline = .F.
+Error in line 1813: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 1814: Statement is not in a procedure.
+FontSize = 9
+Error in line 1815: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 1816: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 1817: Statement is not in a procedure.
+Enabled = .F.
+Error in line 1818: Statement is not in a procedure.
+Margin = 0
+Error in line 1819: Statement is not in a procedure.
+ReadOnly = .T.
+Error in line 1820: Statement is not in a procedure.
+TabStop = .F.
+Error in line 1821: Statement is not in a procedure.
+Visible = .T.
+Error in line 1822: Statement is not in a procedure.
+ForeColor = 0,0,0
+Error in line 1823: Syntax error.
+BackColor = 0,198,198
+Error in line 1824: Syntax error.
+Name = "Text1"
+Error in line 1825: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 1827: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 1828: Statement is not in a procedure.
+FontSize = 9
+Error in line 1829: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 1830: Statement is not in a procedure.
+Alignment = 2
+Error in line 1831: Statement is not in a procedure.
+Caption = "UNIDAD"
+Error in line 1832: Statement is not in a procedure.
+BackColor = 0,255,255
+Error in line 1833: Syntax error.
+Name = "Header1"
+Error in line 1834: Statement is not in a procedure.
+Height = 21
+Error in line 1836: Statement is not in a procedure.
+Left = 71
+Error in line 1837: Statement is not in a procedure.
+TabIndex = 29
+Error in line 1838: Statement is not in a procedure.
+Top = 112
+Error in line 1839: Statement is not in a procedure.
+Width = 44
+Error in line 1840: Statement is not in a procedure.
+Name = "Text1"
+Error in line 1841: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1843: Statement is not in a procedure.
+WordWrap = .T.
+Error in line 1844: Statement is not in a procedure.
+BackStyle = 0
+Error in line 1845: Statement is not in a procedure.
+Caption = "FTOR NU"
+Error in line 1846: Statement is not in a procedure.
+Height = 17
+Error in line 1847: Statement is not in a procedure.
+Left = 18
+Error in line 1848: Statement is not in a procedure.
+Top = 114
+Error in line 1849: Statement is not in a procedure.
+Width = 49
+Error in line 1850: Statement is not in a procedure.
+TabIndex = 25
+Error in line 1851: Statement is not in a procedure.
+ForeColor = 255,0,0
+Error in line 1852: Syntax error.
+Name = "Label3"
+Error in line 1853: Statement is not in a procedure.
+Left = 416
+Error in line 1855: Statement is not in a procedure.
+Top = 138
+Error in line 1856: Statement is not in a procedure.
+Width = 0
+Error in line 1857: Statement is not in a procedure.
+Name = "Line43"
+Error in line 1858: Statement is not in a procedure.
+FontSize = 9
+Error in line 1860: Statement is not in a procedure.
+Alignment = 0
+Error in line 1861: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 1862: Statement is not in a procedure.
+ControlSource = "M.SERIE"
+Error in line 1863: Statement is not in a procedure.
+Height = 21
+Error in line 1864: Statement is not in a procedure.
+Left = 527
+Error in line 1865: Statement is not in a procedure.
+ReadOnly = .T.
+Error in line 1866: Statement is not in a procedure.
+TabIndex = 22
+Error in line 1867: Statement is not in a procedure.
+TabStop = .F.
+Error in line 1868: Statement is not in a procedure.
+Top = 6
+Error in line 1869: Statement is not in a procedure.
+Width = 90
+Error in line 1870: Statement is not in a procedure.
+ForeColor = 255,255,255
+Error in line 1871: Syntax error.
+BackColor = 0,198,198
+Error in line 1872: Syntax error.
+DisabledBackColor = 0,198,198
+Error in line 1873: Syntax error.
+DisabledForeColor = 255,255,255
+Error in line 1874: Syntax error.
+Name = "TXTSERIE"
+Error in line 1875: Statement is not in a procedure.
+FontName = "Arial Narrow"
+Error in line 1877: Statement is not in a procedure.
+FontSize = 8
+Error in line 1878: Statement is not in a procedure.
+Alignment = 0
+Error in line 1879: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 1880: Statement is not in a procedure.
+ControlSource = "m.reportapor"
+Error in line 1881: Statement is not in a procedure.
+Enabled = .F.
+Error in line 1882: Statement is not in a procedure.
+Height = 22
+Error in line 1883: Statement is not in a procedure.
+Left = 18
+Error in line 1884: Statement is not in a procedure.
+MaxLength = 50
+Error in line 1885: Statement is not in a procedure.
+TabIndex = 23
+Error in line 1886: Statement is not in a procedure.
+Top = 459
+Error in line 1887: Statement is not in a procedure.
+Width = 171
+Error in line 1888: Statement is not in a procedure.
+ForeColor = 255,0,0
+Error in line 1889: Syntax error.
+BackColor = 0,198,198
+Error in line 1890: Syntax error.
+DisabledBackColor = 0,198,198
+Error in line 1891: Syntax error.
+DisabledForeColor = 0,0,0
+Error in line 1892: Syntax error.
+BorderColor = 0,198,198
+Error in line 1893: Syntax error.
+Name = "Text2"
+Error in line 1894: Statement is not in a procedure.
+commandbutton
+Error in line 1896: Unrecognized command verb.
+commandbutton
+Error in line 1897: Unrecognized command verb.
+Left = 16
+Error in line 1898: Statement is not in a procedure.
+Height = 21
+Error in line 1899: Statement is not in a procedure.
+Width = 62
+Error in line 1900: Statement is not in a procedure.
+FontBold = .T.
+Error in line 1901: Statement is not in a procedure.
+Caption = "PACIENTE"
+Error in line 1902: Statement is not in a procedure.
+TabIndex = 1
+Error in line 1903: Statement is not in a procedure.
+BackColor = 0,255,128
+Error in line 1904: Syntax error.
+Name = "Command9"
+Error in line 1905: Statement is not in a procedure.
+÷
+Error in line 2053: Unrecognized command verb.
+÷
+Error in line 2055: Unrecognized command verb.
+÷
+Error in line 2057: Unrecognized command verb.
+÷
+Error in line 2059: Unrecognized command verb.
+÷
+Error in line 2060: Unrecognized command verb.
+÷
+Error in line 2061: Unrecognized command verb.
+÷
+Error in line 2063: Unrecognized command verb.
+÷
+Error in line 2065: Unrecognized command verb.
+÷
+Error in line 2066: Unrecognized command verb.
+÷
+Error in line 2067: Unrecognized command verb.
+÷
+Error in line 2068: Unrecognized command verb.
+÷
+Error in line 2073: Unrecognized command verb.
+÷
+Error in line 2074: Unrecognized command verb.
+ýù+þ
+Error in line 2077: Unrecognized command verb.
+÷
+Error in line 2078: Unrecognized command verb.
+÷
+Error in line 2079: Unrecognized command verb.
+÷
+Error in line 2080: Unrecognized command verb.
+FontBold = .T.
+Error in line 2087: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2088: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2089: Statement is not in a procedure.
+FontSize = 9
+Error in line 2090: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2091: Statement is not in a procedure.
+Anchor = 0
+Error in line 2092: Statement is not in a procedure.
+DeleteMark = .F.
+Error in line 2093: Statement is not in a procedure.
+GridLines = 2
+Error in line 2094: Statement is not in a procedure.
+Height = 283
+Error in line 2095: Statement is not in a procedure.
+Left = 12
+Error in line 2096: Statement is not in a procedure.
+Panel = 1
+Error in line 2097: Statement is not in a procedure.
+RecordSource = "quiplantilla"
+Error in line 2098: Statement is not in a procedure.
+RowHeight = 18
+Error in line 2099: Statement is not in a procedure.
+ScrollBars = 1
+Error in line 2100: Statement is not in a procedure.
+TabIndex = 6
+Error in line 2101: Statement is not in a procedure.
+Top = 135
+Error in line 2102: Statement is not in a procedure.
+Width = 842
+Error in line 2103: Statement is not in a procedure.
+ForeColor = 0,0,0
+Error in line 2104: Syntax error.
+GridLineColor = 192,192,192
+Error in line 2105: Syntax error.
+Name = "Grid1"
+Error in line 2106: Statement is not in a procedure.
+Column1.FontBold = .T.
+Error in line 2107: Statement is not in a procedure.
+Column1.FontOutline = .F.
+Error in line 2108: Statement is not in a procedure.
+Column1.FontShadow = .F.
+Error in line 2109: Statement is not in a procedure.
+Column1.FontSize = 9
+Error in line 2110: Statement is not in a procedure.
+Column1.FontUnderline = .F.
+Error in line 2111: Statement is not in a procedure.
+Column1.ControlSource = "quiplantilla.exam1"
+Error in line 2112: Statement is not in a procedure.
+Column1.Enabled = .F.
+Error in line 2113: Statement is not in a procedure.
+Column1.Width = 155
+Error in line 2114: Statement is not in a procedure.
+Column1.ReadOnly = .T.
+Error in line 2115: Statement is not in a procedure.
+Column1.Visible = .T.
+Error in line 2116: Statement is not in a procedure.
+Column1.ForeColor = 0,0,0
+Error in line 2117: Syntax error.
+Column1.BackColor = 0,198,198
+Error in line 2118: Syntax error.
+Column1.Name = "Column1"
+Error in line 2119: Statement is not in a procedure.
+Column2.FontBold = .T.
+Error in line 2120: Statement is not in a procedure.
+Column2.FontOutline = .T.
+Error in line 2121: Statement is not in a procedure.
+Column2.FontShadow = .T.
+Error in line 2122: Statement is not in a procedure.
+Column2.FontSize = 9
+Error in line 2123: Statement is not in a procedure.
+Column2.FontUnderline = .F.
+Error in line 2124: Statement is not in a procedure.
+Column2.ControlSource = "quiplantilla.control1"
+Error in line 2125: Statement is not in a procedure.
+Column2.Width = 29
+Error in line 2126: Statement is not in a procedure.
+Column2.Visible = .T.
+Error in line 2127: Statement is not in a procedure.
+Column2.SelectOnEntry = .F.
+Error in line 2128: Statement is not in a procedure.
+Column2.ForeColor = 255,0,0
+Error in line 2129: Syntax error.
+Column2.BackColor = 233,196,139
+Error in line 2130: Syntax error.
+Column2.Name = "Column2"
+Error in line 2131: Statement is not in a procedure.
+Column3.FontBold = .T.
+Error in line 2132: Statement is not in a procedure.
+Column3.FontOutline = .F.
+Error in line 2133: Statement is not in a procedure.
+Column3.FontShadow = .F.
+Error in line 2134: Statement is not in a procedure.
+Column3.FontSize = 9
+Error in line 2135: Statement is not in a procedure.
+Column3.FontUnderline = .F.
+Error in line 2136: Statement is not in a procedure.
+Column3.ControlSource = "quiplantilla.resul1"
+Error in line 2137: Statement is not in a procedure.
+Column3.Width = 69
+Error in line 2138: Statement is not in a procedure.
+Column3.Visible = .T.
+Error in line 2139: Statement is not in a procedure.
+Column3.SelectOnEntry = .F.
+Error in line 2140: Statement is not in a procedure.
+Column3.ForeColor = 0,0,0
+Error in line 2141: Syntax error.
+Column3.BackColor = 255,255,255
+Error in line 2142: Syntax error.
+Column3.Name = "Column3"
+Error in line 2143: Statement is not in a procedure.
+Column4.FontBold = .F.
+Error in line 2144: Statement is not in a procedure.
+Column4.FontOutline = .F.
+Error in line 2145: Statement is not in a procedure.
+Column4.FontShadow = .F.
+Error in line 2146: Statement is not in a procedure.
+Column4.FontSize = 9
+Error in line 2147: Statement is not in a procedure.
+Column4.FontUnderline = .F.
+Error in line 2148: Statement is not in a procedure.
+Column4.ControlSource = "quiplantilla.unidad1"
+Error in line 2149: Statement is not in a procedure.
+Column4.Enabled = .F.
+Error in line 2150: Statement is not in a procedure.
+Column4.Width = 57
+Error in line 2151: Statement is not in a procedure.
+Column4.ReadOnly = .T.
+Error in line 2152: Statement is not in a procedure.
+Column4.Visible = .T.
+Error in line 2153: Statement is not in a procedure.
+Column4.ForeColor = 0,0,0
+Error in line 2154: Syntax error.
+Column4.BackColor = 0,198,198
+Error in line 2155: Syntax error.
+Column4.Name = "Column4"
+Error in line 2156: Statement is not in a procedure.
+Column5.FontBold = .F.
+Error in line 2157: Statement is not in a procedure.
+Column5.FontOutline = .F.
+Error in line 2158: Statement is not in a procedure.
+Column5.FontShadow = .F.
+Error in line 2159: Statement is not in a procedure.
+Column5.FontSize = 9
+Error in line 2160: Statement is not in a procedure.
+Column5.FontUnderline = .F.
+Error in line 2161: Statement is not in a procedure.
+Column5.ControlSource = "quiplantilla.vnormal1"
+Error in line 2162: Statement is not in a procedure.
+Column5.Width = 102
+Error in line 2163: Statement is not in a procedure.
+Column5.Visible = .T.
+Error in line 2164: Statement is not in a procedure.
+Column5.ForeColor = 0,0,0
+Error in line 2165: Syntax error.
+Column5.BackColor = 0,198,198
+Error in line 2166: Syntax error.
+Column5.Name = "Column5"
+Error in line 2167: Statement is not in a procedure.
+Column6.FontBold = .T.
+Error in line 2168: Statement is not in a procedure.
+Column6.FontOutline = .F.
+Error in line 2169: Statement is not in a procedure.
+Column6.FontShadow = .F.
+Error in line 2170: Statement is not in a procedure.
+Column6.FontSize = 9
+Error in line 2171: Statement is not in a procedure.
+Column6.FontUnderline = .F.
+Error in line 2172: Statement is not in a procedure.
+Column6.ControlSource = "quiplantilla.exam2"
+Error in line 2173: Statement is not in a procedure.
+Column6.Enabled = .F.
+Error in line 2174: Statement is not in a procedure.
+Column6.Width = 160
+Error in line 2175: Statement is not in a procedure.
+Column6.ReadOnly = .T.
+Error in line 2176: Statement is not in a procedure.
+Column6.Visible = .T.
+Error in line 2177: Statement is not in a procedure.
+Column6.ForeColor = 0,0,0
+Error in line 2178: Syntax error.
+Column6.BackColor = 0,198,198
+Error in line 2179: Syntax error.
+Column6.Name = "Column6"
+Error in line 2180: Statement is not in a procedure.
+Column7.FontBold = .T.
+Error in line 2181: Statement is not in a procedure.
+Column7.FontOutline = .F.
+Error in line 2182: Statement is not in a procedure.
+Column7.FontShadow = .F.
+Error in line 2183: Statement is not in a procedure.
+Column7.FontSize = 9
+Error in line 2184: Statement is not in a procedure.
+Column7.FontUnderline = .F.
+Error in line 2185: Statement is not in a procedure.
+Column7.Alignment = 6
+Error in line 2186: Statement is not in a procedure.
+Column7.ControlSource = "quiplantilla.control11"
+Error in line 2187: Statement is not in a procedure.
+Column7.Width = 23
+Error in line 2188: Statement is not in a procedure.
+Column7.Visible = .T.
+Error in line 2189: Statement is not in a procedure.
+Column7.SelectOnEntry = .F.
+Error in line 2190: Statement is not in a procedure.
+Column7.ForeColor = 255,0,0
+Error in line 2191: Syntax error.
+Column7.BackColor = 233,196,139
+Error in line 2192: Syntax error.
+Column7.Name = "Column7"
+Error in line 2193: Statement is not in a procedure.
+Column8.FontBold = .T.
+Error in line 2194: Statement is not in a procedure.
+Column8.FontOutline = .F.
+Error in line 2195: Statement is not in a procedure.
+Column8.FontShadow = .F.
+Error in line 2196: Statement is not in a procedure.
+Column8.FontSize = 9
+Error in line 2197: Statement is not in a procedure.
+Column8.FontUnderline = .F.
+Error in line 2198: Statement is not in a procedure.
+Column8.ControlSource = "quiplantilla.resul11"
+Error in line 2199: Statement is not in a procedure.
+Column8.Width = 66
+Error in line 2200: Statement is not in a procedure.
+Column8.Visible = .T.
+Error in line 2201: Statement is not in a procedure.
+Column8.SelectOnEntry = .F.
+Error in line 2202: Statement is not in a procedure.
+Column8.ForeColor = 0,0,0
+Error in line 2203: Syntax error.
+Column8.BackColor = 255,255,255
+Error in line 2204: Syntax error.
+Column8.Name = "Column8"
+Error in line 2205: Statement is not in a procedure.
+Column9.FontBold = .F.
+Error in line 2206: Statement is not in a procedure.
+Column9.FontOutline = .F.
+Error in line 2207: Statement is not in a procedure.
+Column9.FontShadow = .F.
+Error in line 2208: Statement is not in a procedure.
+Column9.FontSize = 9
+Error in line 2209: Statement is not in a procedure.
+Column9.FontUnderline = .F.
+Error in line 2210: Statement is not in a procedure.
+Column9.ControlSource = "quiplantilla.unidad11"
+Error in line 2211: Statement is not in a procedure.
+Column9.Enabled = .F.
+Error in line 2212: Statement is not in a procedure.
+Column9.Width = 58
+Error in line 2213: Statement is not in a procedure.
+Column9.ReadOnly = .T.
+Error in line 2214: Statement is not in a procedure.
+Column9.Visible = .T.
+Error in line 2215: Statement is not in a procedure.
+Column9.ForeColor = 0,0,0
+Error in line 2216: Syntax error.
+Column9.BackColor = 0,198,198
+Error in line 2217: Syntax error.
+Column9.Name = "Column9"
+Error in line 2218: Statement is not in a procedure.
+Column10.FontBold = .F.
+Error in line 2219: Statement is not in a procedure.
+Column10.FontOutline = .F.
+Error in line 2220: Statement is not in a procedure.
+Column10.FontShadow = .F.
+Error in line 2221: Statement is not in a procedure.
+Column10.FontSize = 9
+Error in line 2222: Statement is not in a procedure.
+Column10.FontUnderline = .F.
+Error in line 2223: Statement is not in a procedure.
+Column10.ControlSource = "quiplantilla.vnormal11"
+Error in line 2224: Statement is not in a procedure.
+Column10.Enabled = .T.
+Error in line 2225: Statement is not in a procedure.
+Column10.Width = 99
+Error in line 2226: Statement is not in a procedure.
+Column10.Visible = .T.
+Error in line 2227: Statement is not in a procedure.
+Column10.ForeColor = 0,0,0
+Error in line 2228: Syntax error.
+Column10.BackColor = 0,198,198
+Error in line 2229: Syntax error.
+Column10.Name = "Column10"
+Error in line 2230: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2232: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2233: Statement is not in a procedure.
+FontSize = 9
+Error in line 2234: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2235: Statement is not in a procedure.
+Alignment = 2
+Error in line 2236: Statement is not in a procedure.
+Caption = "ANALISIS"
+Error in line 2237: Statement is not in a procedure.
+BackColor = 0,255,255
+Error in line 2238: Syntax error.
+Name = "Header1"
+Error in line 2239: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2241: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2242: Statement is not in a procedure.
+FontSize = 9
+Error in line 2243: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2244: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 2245: Statement is not in a procedure.
+Enabled = .F.
+Error in line 2246: Statement is not in a procedure.
+Margin = 0
+Error in line 2247: Statement is not in a procedure.
+ReadOnly = .T.
+Error in line 2248: Statement is not in a procedure.
+TabStop = .F.
+Error in line 2249: Statement is not in a procedure.
+Visible = .T.
+Error in line 2250: Statement is not in a procedure.
+ForeColor = 0,0,0
+Error in line 2251: Syntax error.
+BackColor = 0,198,198
+Error in line 2252: Syntax error.
+Name = "Text1"
+Error in line 2253: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 2255: Statement is not in a procedure.
+Height = 0
+Error in line 2256: Statement is not in a procedure.
+Left = 232
+Error in line 2257: Statement is not in a procedure.
+Top = 241
+Error in line 2258: Statement is not in a procedure.
+Width = 22
+Error in line 2259: Statement is not in a procedure.
+ColorSource = 4
+Error in line 2260: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 2261: Syntax error.
+Name = "Line6"
+Error in line 2262: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2264: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2265: Statement is not in a procedure.
+FontSize = 9
+Error in line 2266: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2267: Statement is not in a procedure.
+Caption = '"C"'
+Error in line 2268: Statement is not in a procedure.
+BackColor = 255,128,64
+Error in line 2269: Syntax error.
+Name = "Header1"
+Error in line 2270: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2272: Statement is not in a procedure.
+FontShadow = .T.
+Error in line 2273: Statement is not in a procedure.
+FontSize = 12
+Error in line 2274: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2275: Statement is not in a procedure.
+Alignment = 3
+Error in line 2276: Statement is not in a procedure.
+BorderStyle = 1
+Error in line 2277: Statement is not in a procedure.
+Margin = 0
+Error in line 2278: Statement is not in a procedure.
+Visible = .T.
+Error in line 2279: Statement is not in a procedure.
+ColorSource = 4
+Error in line 2280: Statement is not in a procedure.
+ForeColor = 255,0,0
+Error in line 2281: Syntax error.
+BackColor = 233,196,139
+Error in line 2282: Syntax error.
+BorderColor = 0,0,0
+Error in line 2283: Syntax error.
+Name = "Text1"
+Error in line 2284: Statement is not in a procedure.
+IF EMPTY(control1)
+Error in line 2286: Statement is not in a procedure.
+REPLACE control1 WITH "C"
+Error in line 2287: Statement is not in a procedure.
+ELSE
+Error in line 2288: Statement is not in a procedure.
+REPLACE control1 WITH ""
+Error in line 2289: Statement is not in a procedure.
+ENDIF
+Error in line 2290: Statement is not in a procedure.
+thisform.refresh
+Error in line 2291: Statement is not in a procedure.
+ENDPROC
+Error in line 2292: Nesting error.
+FontOutline = .F.
+Error in line 2294: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2295: Statement is not in a procedure.
+FontSize = 9
+Error in line 2296: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2297: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 2298: Statement is not in a procedure.
+Margin = 0
+Error in line 2299: Statement is not in a procedure.
+Visible = .T.
+Error in line 2300: Statement is not in a procedure.
+ForeColor = 0,0,0
+Error in line 2301: Syntax error.
+BackColor = 255,255,255
+Error in line 2302: Syntax error.
+SelectedForeColor = 0,0,0
+Error in line 2303: Syntax error.
+SelectedBackColor = 255,255,255
+Error in line 2304: Syntax error.
+Name = "Text1"
+Error in line 2305: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2307: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2308: Statement is not in a procedure.
+FontSize = 9
+Error in line 2309: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2310: Statement is not in a procedure.
+Alignment = 2
+Error in line 2311: Statement is not in a procedure.
+Caption = "RSULTADO"
+Error in line 2312: Statement is not in a procedure.
+BackColor = 255,255,0
+Error in line 2313: Syntax error.
+Name = "Header1"
+Error in line 2314: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2316: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2317: Statement is not in a procedure.
+FontSize = 9
+Error in line 2318: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2319: Statement is not in a procedure.
+Alignment = 3
+Error in line 2320: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 2321: Statement is not in a procedure.
+Margin = 0
+Error in line 2322: Statement is not in a procedure.
+Visible = .T.
+Error in line 2323: Statement is not in a procedure.
+ForeColor = 0,0,0
+Error in line 2324: Syntax error.
+BackColor = 255,255,255
+Error in line 2325: Syntax error.
+SelectedForeColor = 0,0,0
+Error in line 2326: Syntax error.
+SelectedBackColor = 255,255,255
+Error in line 2327: Syntax error.
+Name = "Text1"
+Error in line 2328: Statement is not in a procedure.
+thisform.refresh
+Error in line 2330: Statement is not in a procedure.
+ENDPROC
+Error in line 2331: Nesting error.
+÷
+Error in line 2400: Unrecognized command verb.
+÷
+Error in line 2403: Unrecognized command verb.
+÷
+Error in line 2404: Unrecognized command verb.
+FontOutline = .F.
+Error in line 2407: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2408: Statement is not in a procedure.
+FontSize = 9
+Error in line 2409: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2410: Statement is not in a procedure.
+Alignment = 2
+Error in line 2411: Statement is not in a procedure.
+Caption = "RSULTADO"
+Error in line 2412: Statement is not in a procedure.
+BackColor = 255,255,0
+Error in line 2413: Syntax error.
+Name = "Header1"
+Error in line 2414: Statement is not in a procedure.
+IF EMPTY(control11)
+Error in line 2416: Statement is not in a procedure.
+REPLACE control11 WITH "C"
+Error in line 2417: Statement is not in a procedure.
+ELSE
+Error in line 2418: Statement is not in a procedure.
+REPLACE control11 WITH ""
+Error in line 2419: Statement is not in a procedure.
+ENDIF
+Error in line 2420: Statement is not in a procedure.
+thisform.refresh
+Error in line 2421: Statement is not in a procedure.
+ENDPROC
+Error in line 2422: Nesting error.
+FontOutline = .F.
+Error in line 2424: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2425: Statement is not in a procedure.
+FontSize = 12
+Error in line 2426: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2427: Statement is not in a procedure.
+Alignment = 2
+Error in line 2428: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 2429: Statement is not in a procedure.
+Margin = 0
+Error in line 2430: Statement is not in a procedure.
+Visible = .T.
+Error in line 2431: Statement is not in a procedure.
+ForeColor = 255,0,0
+Error in line 2432: Syntax error.
+BackColor = 233,196,139
+Error in line 2433: Syntax error.
+Name = "Text1"
+Error in line 2434: Statement is not in a procedure.
+BorderWidth = 3
+Error in line 2436: Statement is not in a procedure.
+Height = 0
+Error in line 2437: Statement is not in a procedure.
+Left = 232
+Error in line 2438: Statement is not in a procedure.
+Top = 241
+Error in line 2439: Statement is not in a procedure.
+Width = 22
+Error in line 2440: Statement is not in a procedure.
+ColorSource = 4
+Error in line 2441: Statement is not in a procedure.
+BorderColor = 255,255,255
+Error in line 2442: Syntax error.
+Name = "Line6"
+Error in line 2443: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2445: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2446: Statement is not in a procedure.
+FontSize = 9
+Error in line 2447: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2448: Statement is not in a procedure.
+Alignment = 2
+Error in line 2449: Statement is not in a procedure.
+Caption = "UNIDAD"
+Error in line 2450: Statement is not in a procedure.
+BackColor = 0,255,255
+Error in line 2451: Syntax error.
+Name = "Header1"
+Error in line 2452: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2454: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2455: Statement is not in a procedure.
+FontSize = 9
+Error in line 2456: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2457: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 2458: Statement is not in a procedure.
+Enabled = .F.
+Error in line 2459: Statement is not in a procedure.
+Margin = 0
+Error in line 2460: Statement is not in a procedure.
+ReadOnly = .T.
+Error in line 2461: Statement is not in a procedure.
+TabStop = .F.
+Error in line 2462: Statement is not in a procedure.
+Visible = .T.
+Error in line 2463: Statement is not in a procedure.
+ForeColor = 0,0,0
+Error in line 2464: Syntax error.
+BackColor = 0,198,198
+Error in line 2465: Syntax error.
+Name = "Text1"
+Error in line 2466: Statement is not in a procedure.
+ENDPROC
+Error in line 2471: Nesting error.
+FontOutline = .F.
+Error in line 2473: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2474: Statement is not in a procedure.
+FontSize = 9
+Error in line 2475: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2476: Statement is not in a procedure.
+Alignment = 2
+Error in line 2477: Statement is not in a procedure.
+Caption = '"C"'
+Error in line 2478: Statement is not in a procedure.
+BackColor = 255,128,64
+Error in line 2479: Syntax error.
+Name = "Header1"
+Error in line 2480: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2482: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2483: Statement is not in a procedure.
+FontSize = 9
+Error in line 2484: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2485: Statement is not in a procedure.
+Alignment = 0
+Error in line 2486: Statement is not in a procedure.
+Caption = "     V.NORMAL"
+Error in line 2487: Statement is not in a procedure.
+BackColor = 255,196,225
+Error in line 2488: Syntax error.
+Name = "Header1"
+Error in line 2489: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2491: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2492: Statement is not in a procedure.
+FontSize = 9
+Error in line 2493: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2494: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 2495: Statement is not in a procedure.
+Enabled = .T.
+Error in line 2496: Statement is not in a procedure.
+Margin = 0
+Error in line 2497: Statement is not in a procedure.
+ReadOnly = .F.
+Error in line 2498: Statement is not in a procedure.
+TabStop = .F.
+Error in line 2499: Statement is not in a procedure.
+Visible = .T.
+Error in line 2500: Statement is not in a procedure.
+ForeColor = 0,0,0
+Error in line 2501: Syntax error.
+BackColor = 0,198,198
+Error in line 2502: Syntax error.
+Name = "Text1"
+Error in line 2503: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2505: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2506: Statement is not in a procedure.
+FontSize = 9
+Error in line 2507: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2508: Statement is not in a procedure.
+Alignment = 2
+Error in line 2509: Statement is not in a procedure.
+Caption = "ANALISIS"
+Error in line 2510: Statement is not in a procedure.
+BackColor = 0,255,255
+Error in line 2511: Syntax error.
+Name = "Header1"
+Error in line 2512: Statement is not in a procedure.
+FontOutline = .F.
+Error in line 2514: Statement is not in a procedure.
+FontShadow = .F.
+Error in line 2515: Statement is not in a procedure.
+FontSize = 9
+Error in line 2516: Statement is not in a procedure.
+FontUnderline = .F.
+Error in line 2517: Statement is not in a procedure.
+BorderStyle = 0
+Error in line 2518: Statement is not in a procedure.
+Enabled = .F.
+Error in line 2519: Statement is not in a procedure.
+Margin = 0
+Error in line 2520: Statement is not in a procedure.
+ReadOnly = .T.
+Error in line 2521: Statement is not in a procedure.
+TabStop = .F.
+Error in line 2522: Statement is not in a procedure.
+Visible = .T.
+Error in line 2523: Statement is not in a procedure.
+ForeColor = 0,0,0
+Error in line 2524: Syntax error.
+BackColor = 0,198,198
+Error in line 2525: Syntax error.
+Name = "Text1"
+Error in line 2526: Statement is not in a procedure.
+ýù
+Error in line 2528: Unrecognized command verb.
+ýùŒþ
+Error in line 2532: Unrecognized command verb.
+÷
+Error in line 2533: Unrecognized command verb.
+÷
+Error in line 2534: Unrecognized command verb.
+÷	
+Error in line 2535: Unrecognized command verb.
+¨PROCEDURE Valid
+Error in line 2539: Unrecognized command verb.
+DO CASE
+Error in line 2540: Statement is not in a procedure.
+CASE RECNO()=1
+Error in line 2541: Statement is not in a procedure.
+IF RECNO()=1 .AND. resul11>0
+Error in line 2542: Statement is not in a procedure.
+primero = resul11
+Error in line 2543: Statement is not in a procedure.
+GOTO 2
+Error in line 2544: Statement is not in a procedure.
+segundo = resul11
+Error in line 2545: Statement is not in a procedure.
+GOTO 3
+Error in line 2546: Statement is not in a procedure.
+REPLACE resul11 WITH primero-segundo
+Error in line 2547: Statement is not in a procedure.
+ELSE
+Error in line 2548: Statement is not in a procedure.
+primero = 0
+Error in line 2549: Statement is not in a procedure.
+GOTO 3
+Error in line 2550: Statement is not in a procedure.
+REPLACE resul11 WITH 0
+Error in line 2551: Statement is not in a procedure.
+ENDIF
+Error in line 2552: Statement is not in a procedure.
+CASE RECNO()=2
+Error in line 2553: Statement is not in a procedure.
+IF RECNO()=2 .AND. resul11>0
+Error in line 2554: Statement is not in a procedure.
+GOTO 1
+Error in line 2555: Statement is not in a procedure.
+primero = resul11
+Error in line 2556: Statement is not in a procedure.
+GOTO 2
+Error in line 2557: Statement is not in a procedure.
+segundo = resul11
+Error in line 2558: Statement is not in a procedure.
+IF primero>0
+Error in line 2559: Statement is not in a procedure.
+GOTO 3
+Error in line 2560: Statement is not in a procedure.
+REPLACE resul11 WITH primero-segundo
+Error in line 2561: Statement is not in a procedure.
+thisform.refresh
+Error in line 2562: Statement is not in a procedure.
+ELSE
+Error in line 2563: Statement is not in a procedure.
+GOTO 3
+Error in line 2564: Statement is not in a procedure.
+REPLACE resul11 WITH 0
+Error in line 2565: Statement is not in a procedure.
+thisform.refresh
+Error in line 2566: Statement is not in a procedure.
+ENDIF
+Error in line 2567: Statement is not in a procedure.
+ELSE
+Error in line 2568: Statement is not in a procedure.
+GOTO 1
+Error in line 2569: Statement is not in a procedure.
+primero = resul11
+Error in line 2570: Statement is not in a procedure.
+GOTO 3
+Error in line 2571: Statement is not in a procedure.
+REPLACE resul11 WITH primero
+Error in line 2572: Statement is not in a procedure.
+ENDIF
+Error in line 2573: Statement is not in a procedure.
+ENDCASE
+Error in line 2574: Statement is not in a procedure.
+totglobina = 000.0 
+Error in line 2575: Statement is not in a procedure.
+totprote = 000.0 
+Error in line 2576: Statement is not in a procedure.
+totalbum = 000.0 
+Error in line 2577: Statement is not in a procedure.
+IF quiplantilla.exam2="PROTEINAS TOTALES"
+Error in line 2578: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2579: Statement is not in a procedure.
+GOTO TOP
+Error in line 2580: Statement is not in a procedure.
+LOCATE FOR quiplantilla.exam2="PROTEINAS TOTALES"
+Error in line 2581: Statement is not in a procedure.
+IF FOUND()
+Error in line 2582: Statement is not in a procedure.
+totprote = resul11
+Error in line 2583: Statement is not in a procedure.
+ENDIF
+Error in line 2584: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2585: Statement is not in a procedure.
+GOTO TOP
+Error in line 2586: Statement is not in a procedure.
+LOCATE FOR quiplantilla.exam2="ALBUMINA"
+Error in line 2587: Statement is not in a procedure.
+IF FOUND()
+Error in line 2588: Statement is not in a procedure.
+totalbum = resul11
+Error in line 2589: Statement is not in a procedure.
+ENDIF
+Error in line 2590: Statement is not in a procedure.
+IF totprote>0
+Error in line 2591: Statement is not in a procedure.
+valglobu = totprote-totalbum
+Error in line 2592: Statement is not in a procedure.
+ELSE
+Error in line 2593: Statement is not in a procedure.
+valglobu = 000.0 
+Error in line 2594: Statement is not in a procedure.
+ENDIF
+Error in line 2595: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2596: Statement is not in a procedure.
+GOTO TOP
+Error in line 2597: Statement is not in a procedure.
+LOCATE FOR quiplantilla.exam2="GLOBULINA"
+Error in line 2598: Statement is not in a procedure.
+IF FOUND()
+Error in line 2599: Statement is not in a procedure.
+REPLACE quiplantilla.resul11 WITH valglobu
+Error in line 2600: Statement is not in a procedure.
+ENDIF
+Error in line 2601: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2602: Statement is not in a procedure.
+GOTO TOP
+Error in line 2603: Statement is not in a procedure.
+LOCATE FOR quiplantilla.exam2="RELACION A/G"
+Error in line 2604: Statement is not in a procedure.
+IF FOUND()
+Error in line 2605: Statement is not in a procedure.
+IF totalbum>0 .AND. valglobu>0
+Error in line 2606: Statement is not in a procedure.
+REPLACE quiplantilla.resul11 WITH totalbum/valglobu
+Error in line 2607: Statement is not in a procedure.
+ELSE
+Error in line 2608: Statement is not in a procedure.
+REPLACE quiplantilla.resul11 WITH 0
+Error in line 2609: Statement is not in a procedure.
+ENDIF
+Error in line 2610: Statement is not in a procedure.
+ENDIF
+Error in line 2611: Statement is not in a procedure.
+ENDIF
+Error in line 2612: Statement is not in a procedure.
+IF quiplantilla.exam2="ALBUMINA"
+Error in line 2613: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2614: Statement is not in a procedure.
+GOTO TOP
+Error in line 2615: Statement is not in a procedure.
+LOCATE FOR quiplantilla.exam2="PROTEINAS TOTALES"
+Error in line 2616: Statement is not in a procedure.
+IF FOUND()
+Error in line 2617: Statement is not in a procedure.
+totprote = resul11
+Error in line 2618: Statement is not in a procedure.
+ENDIF
+Error in line 2619: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2620: Statement is not in a procedure.
+GOTO TOP
+Error in line 2621: Statement is not in a procedure.
+LOCATE FOR quiplantilla.exam2="ALBUMINA"
+Error in line 2622: Statement is not in a procedure.
+IF FOUND()
+Error in line 2623: Statement is not in a procedure.
+totalbum = resul11
+Error in line 2624: Statement is not in a procedure.
+ENDIF
+Error in line 2625: Statement is not in a procedure.
+IF totprote>0
+Error in line 2626: Statement is not in a procedure.
+valglobu = totprote-totalbum
+Error in line 2627: Statement is not in a procedure.
+ELSE
+Error in line 2628: Statement is not in a procedure.
+valglobu = 000.0 
+Error in line 2629: Statement is not in a procedure.
+ENDIF
+Error in line 2630: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2631: Statement is not in a procedure.
+GOTO TOP
+Error in line 2632: Statement is not in a procedure.
+LOCATE FOR quiplantilla.exam2="GLOBULINA"
+Error in line 2633: Statement is not in a procedure.
+IF FOUND()
+Error in line 2634: Statement is not in a procedure.
+REPLACE quiplantilla.resul11 WITH valglobu
+Error in line 2635: Statement is not in a procedure.
+ENDIF
+Error in line 2636: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2637: Statement is not in a procedure.
+GOTO TOP
+Error in line 2638: Statement is not in a procedure.
+LOCATE FOR quiplantilla.exam2="RELACION A/G"
+Error in line 2639: Statement is not in a procedure.
+IF FOUND()
+Error in line 2640: Statement is not in a procedure.
+IF totalbum>0 .AND. valglobu>0
+Error in line 2641: Statement is not in a procedure.
+REPLACE quiplantilla.resul11 WITH totalbum/valglobu
+Error in line 2642: Statement is not in a procedure.
+ELSE
+Error in line 2643: Statement is not in a procedure.
+REPLACE quiplantilla.resul11 WITH 0
+Error in line 2644: Statement is not in a procedure.
+ENDIF
+Error in line 2645: Statement is not in a procedure.
+ENDIF
+Error in line 2646: Statement is not in a procedure.
+ENDIF
+Error in line 2647: Statement is not in a procedure.
+ENDPROC
+Error in line 2648: Nesting error.
+ýùN
+Error in line 2650: Unrecognized command verb.
+÷
+Error in line 2651: Unrecognized command verb.
+÷
+Error in line 2653: Unrecognized command verb.
+÷
+Error in line 2656: Unrecognized command verb.
+÷
+Error in line 2657: Unrecognized command verb.
+÷
+Error in line 2659: Unrecognized command verb.
+÷
+Error in line 2660: Unrecognized command verb.
+÷
+Error in line 2662: Unrecognized command verb.
+÷
+Error in line 2663: Unrecognized command verb.
+÷
+Error in line 2664: Unrecognized command verb.
+÷
+Error in line 2665: Unrecognized command verb.
+÷
+Error in line 2667: Unrecognized command verb.
+÷
+Error in line 2668: Unrecognized command verb.
+÷
+Error in line 2669: Unrecognized command verb.
+÷
+Error in line 2671: Unrecognized command verb.
+÷
+Error in line 2672: Unrecognized command verb.
+÷
+Error in line 2673: Unrecognized command verb.
+÷
+Error in line 2674: Unrecognized command verb.
+÷
+Error in line 2675: Unrecognized command verb.
+÷
+Error in line 2676: Unrecognized command verb.
+÷
+Error in line 2677: Unrecognized command verb.
+÷
+Error in line 2678: Unrecognized command verb.
+÷
+Error in line 2679: Unrecognized command verb.
+÷
+Error in line 2680: Unrecognized command verb.
+÷
+Error in line 2681: Unrecognized command verb.
+÷
+Error in line 2682: Unrecognized command verb.
+÷
+Error in line 2683: Unrecognized command verb.
+÷
+Error in line 2684: Unrecognized command verb.
+÷
+Error in line 2685: Unrecognized command verb.
+÷
+Error in line 2686: Unrecognized command verb.
+÷
+Error in line 2687: Unrecognized command verb.
+÷
+Error in line 2688: Unrecognized command verb.
+÷
+Error in line 2690: Unrecognized command verb.
+ýù¯þ
+Error in line 2691: Unrecognized command verb.
+÷
+Error in line 2692: Unrecognized command verb.
+÷
+Error in line 2693: Unrecognized command verb.
+÷
+Error in line 2694: Unrecognized command verb.
+÷
+Error in line 2695: Unrecognized command verb.
+÷
+Error in line 2696: Unrecognized command verb.
+÷
+Error in line 2697: Unrecognized command verb.
+÷
+Error in line 2698: Unrecognized command verb.
+÷
+Error in line 2702: Unrecognized command verb.
+RELEASE mclave
+Error in line 2705: Statement is not in a procedure.
+PUBLIC mclave
+Error in line 2706: Statement is not in a procedure.
+mclave = ""
+Error in line 2707: Statement is not in a procedure.
+DO FORM pfolderload+"frmpasword" 
+Error in line 2709: Statement is not in a procedure.
+IF NOT INLIST(mclave, "ROBOTCOM")
+Error in line 2711: Statement is not in a procedure.
+RETURN
+Error in line 2712: Statement is not in a procedure.
+ENDIF
+Error in line 2713: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2716: Statement is not in a procedure.
+IF INLIST(m.genero, "VARON", "MASCULINO")
+Error in line 2718: Statement is not in a procedure.
+REPLACE ALL h1 WITH vnormal1
+Error in line 2719: Statement is not in a procedure.
+ELSE
+Error in line 2720: Statement is not in a procedure.
+REPLACE ALL m1 WITH vnormal1
+Error in line 2721: Statement is not in a procedure.
+ENDIF
+Error in line 2722: Statement is not in a procedure.
+IF INLIST(m.genero, "VARON", "MASCULINO")
+Error in line 2725: Statement is not in a procedure.
+REPLACE ALL h2 WITH vnormal11 
+Error in line 2726: Statement is not in a procedure.
+ELSE
+Error in line 2727: Statement is not in a procedure.
+REPLACE ALL m2 WITH vnormal11 
+Error in line 2728: Statement is not in a procedure.
+ENDIF
+Error in line 2729: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2733: Statement is not in a procedure.
+SELECT QUIMICAS
+Error in line 2734: Statement is not in a procedure.
+IF ALIAS()="QUIMICAS"	
+Error in line 2736: Statement is not in a procedure.
+DELETE ALL 
+Error in line 2737: Statement is not in a procedure.
+APPEND FROM prutalabo+"quiplantilla" 	
+Error in line 2738: Statement is not in a procedure.
+REPLACE ALL resul11 WITH 0
+Error in line 2739: Statement is not in a procedure.
+REPLACE ALL resul1 WITH 0
+Error in line 2740: Statement is not in a procedure.
+ENDIF
+Error in line 2741: Statement is not in a procedure.
+SELECT QUIPLANTILLA
+Error in line 2744: Statement is not in a procedure.
+thisform.refresh
+Error in line 2746: Statement is not in a procedure.
+ENDPROC
+Error in line 2748: Nesting error.
+RELEASE mclave
+Error in line 2751: Statement is not in a procedure.
+PUBLIC mclave
+Error in line 2752: Statement is not in a procedure.
+mclave = ""
+Error in line 2753: Statement is not in a procedure.
+DO FORM pfolderload+"frmpasword" 
+Error in line 2755: Statement is not in a procedure.
+IF NOT INLIST(mclave, "ROBOTCOM")
+Error in line 2757: Statement is not in a procedure.
+RETURN
+Error in line 2758: Statement is not in a procedure.
+ENDIF
+Error in line 2759: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2762: Statement is not in a procedure.
+IF INLIST(m.genero, "VARON", "MASCULINO")
+Error in line 2764: Statement is not in a procedure.
+REPLACE ALL h1 WITH vnormal1
+Error in line 2765: Statement is not in a procedure.
+ELSE
+Error in line 2766: Statement is not in a procedure.
+REPLACE ALL m1 WITH vnormal1
+Error in line 2767: Statement is not in a procedure.
+ENDIF
+Error in line 2768: Statement is not in a procedure.
+IF INLIST(m.genero, "VARON", "MASCULINO")
+Error in line 2771: Statement is not in a procedure.
+REPLACE ALL h2 WITH vnormal11 
+Error in line 2772: Statement is not in a procedure.
+ELSE
+Error in line 2773: Statement is not in a procedure.
+REPLACE ALL m2 WITH vnormal11 
+Error in line 2774: Statement is not in a procedure.
+ENDIF
+Error in line 2775: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2779: Statement is not in a procedure.
+SELECT QUIMICAS
+Error in line 2780: Statement is not in a procedure.
+IF ALIAS()="QUIMICAS"	
+Error in line 2782: Statement is not in a procedure.
+DELETE ALL 
+Error in line 2783: Statement is not in a procedure.
+APPEND FROM prutalabo+"quiplantilla" 	
+Error in line 2784: Statement is not in a procedure.
+REPLACE ALL resul11 WITH 0
+Error in line 2785: Statement is not in a procedure.
+REPLACE ALL resul1 WITH 0
+Error in line 2786: Statement is not in a procedure.
+ENDIF
+Error in line 2787: Statement is not in a procedure.
+SELECT QUIPLANTILLA
+Error in line 2790: Statement is not in a procedure.
+thisform.refresh
+Error in line 2792: Statement is not in a procedure.
+ENDPROC
+Error in line 2794: Nesting error.
+IF  .NOT. EMPTY(mflag)
+Error in line 2796: Statement is not in a procedure.
+MESSAGEBOX("DEBE ALMACENAR BOLETA", 48, "LABORATORIO CLINICO")
+Error in line 2797: Statement is not in a procedure.
+RETURN
+Error in line 2798: Statement is not in a procedure.
+ENDIF
+Error in line 2799: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2800: Statement is not in a procedure.
+REPLACE notest WITH m.notest ALL
+Error in line 2801: Statement is not in a procedure.
+SELECT quiplantilla.* FROM QUIPLANTILLA WHERE quiplantilla.resul1>0 AND notest=m.notest INTO TABLE prutalabo+"TMPINFORME"
+Error in line 2802: Statement is not in a procedure.
+SELECT quiplantilla
+Error in line 2803: Statement is not in a procedure.
+SELECT quiplantilla.* FROM QUIPLANTILLA WHERE quiplantilla.resul11>0 AND notest=m.notest INTO TABLE prutalabo+"TMPINFORME2"
+Error in line 2804: Statement is not in a procedure.
+SELECT tmpinforme
+Error in line 2805: Statement is not in a procedure.
+SELECT tmpinforme2
+Error in line 2806: Statement is not in a procedure.
+SCAN
+Error in line 2807: Statement is not in a procedure.
+SCATTER MEMVAR
+Error in line 2808: Statement is not in a procedure.
+SELECT tmpinforme
+Error in line 2809: Statement is not in a procedure.
+APPEND BLANK
+Error in line 2810: Statement is not in a procedure.
+REPLACE tmpinforme.exam1 WITH m.exam2
+Error in line 2811: Statement is not in a procedure.
+REPLACE tmpinforme.resul1 WITH m.resul11
+Error in line 2812: Statement is not in a procedure.
+REPLACE tmpinforme.control1 WITH m.control11
+Error in line 2813: Statement is not in a procedure.
+REPLACE tmpinforme.unidad1 WITH m.unidad11
+Error in line 2814: Statement is not in a procedure.
+REPLACE tmpinforme.vnormal1 WITH m.vnormal11
+Error in line 2815: Statement is not in a procedure.
+REPLACE tmpinforme.vnormal1 WITH m.vnormal11
+Error in line 2816: Statement is not in a procedure.
+REPLACE tmpinforme.notest WITH m.notest
+Error in line 2817: Statement is not in a procedure.
+SELECT tmpinforme2
+Error in line 2818: Statement is not in a procedure.
+ENDSCAN
+Error in line 2819: Statement is not in a procedure.
+SELECT tmpinforme
+Error in line 2820: Statement is not in a procedure.
+GOTO TOP
+Error in line 2821: Statement is not in a procedure.
+RELEASE CARFECHA 
+Error in line 2826: Statement is not in a procedure.
+PUBLIC  CARFECHA 
+Error in line 2827: Statement is not in a procedure.
+CARFECHA =""
+Error in line 2829: Statement is not in a procedure.
+CARFECHA =ALLTRIM(STR(DAY(M.FECHA)))
+Error in line 2830: Statement is not in a procedure.
+CARFECHA =CARFECHA+" DE "
+Error in line 2832: Statement is not in a procedure.
+m.mesnum=Month(M.fecha)
+Error in line 2834: Statement is not in a procedure.
+Do Case
+Error in line 2836: Statement is not in a procedure.
+Case m.mesnum=1
+Error in line 2837: Statement is not in a procedure.
+m.mes='Enero'
+Error in line 2838: Statement is not in a procedure.
+Case m.mesnum=2
+Error in line 2839: Statement is not in a procedure.
+m.mes='Febrero'
+Error in line 2840: Statement is not in a procedure.
+Case m.mesnum=3
+Error in line 2841: Statement is not in a procedure.
+m.mes='Marzo'
+Error in line 2842: Statement is not in a procedure.
+Case m.mesnum=4
+Error in line 2843: Statement is not in a procedure.
+m.mes='Abril'
+Error in line 2844: Statement is not in a procedure.
+Case m.mesnum=5
+Error in line 2845: Statement is not in a procedure.
+m.mes='Mayo'
+Error in line 2846: Statement is not in a procedure.
+Case m.mesnum=6
+Error in line 2847: Statement is not in a procedure.
+m.mes='Junio'
+Error in line 2848: Statement is not in a procedure.
+Case m.mesnum=7
+Error in line 2849: Statement is not in a procedure.
+m.mes='Julio'
+Error in line 2850: Statement is not in a procedure.
+Case m.mesnum=8
+Error in line 2851: Statement is not in a procedure.
+m.mes='Agosto'
+Error in line 2852: Statement is not in a procedure.
+Case m.mesnum=9
+Error in line 2853: Statement is not in a procedure.
+m.mes='Septiembre'
+Error in line 2854: Statement is not in a procedure.
+Case m.mesnum=10
+Error in line 2855: Statement is not in a procedure.
+m.mes='Octubre'
+Error in line 2856: Statement is not in a procedure.
+Case m.mesnum=11
+Error in line 2857: Statement is not in a procedure.
+m.mes='Noviembre'
+Error in line 2858: Statement is not in a procedure.
+Case m.mesnum=12
+Error in line 2859: Statement is not in a procedure.
+m.mes='Diciembre'
+Error in line 2860: Statement is not in a procedure.
+ENDCASE
+Error in line 2861: Statement is not in a procedure.
+CARFECHA =CARFECHA+ M.MES+" DE "+ALLTRIM(STR(YEAR(M.FECHA)))
+Error in line 2863: Statement is not in a procedure.
+CARFECHA =UPPER(CARFECHA)
+Error in line 2864: Statement is not in a procedure.
+IF ALIAS()="TMPINFORME"
+Error in line 2870: Statement is not in a procedure.
+REPORT FORM pfolderload+"FORMS\QUIMICAPDF" FOR notest=m.notest  TO PRINTER PROMPT NOCONSOLE
+Error in line 2871: Statement is not in a procedure.
+ENDIF
+Error in line 2872: Statement is not in a procedure.
+ENDPROC
+Error in line 2873: Nesting error.
+ýù[
+Error in line 2891: Unrecognized command verb.
+ýùV
+Error in line 2896: Unrecognized command verb.
+ýùK
+Error in line 2902: Unrecognized command verb.
+÷
+Error in line 2907: Unrecognized command verb.
+÷
+Error in line 2908: Unrecognized command verb.
+÷
+Error in line 2909: Unrecognized command verb.
+÷
+Error in line 2912: Unrecognized command verb.
+÷
+Error in line 2913: Unrecognized command verb.
+÷
+Error in line 2915: Unrecognized command verb.
+ý(÷
+Error in line 2916: Command contains unrecognized phrase/keyword.
+ò
+Error in line 2922: Unrecognized command verb.
+ò
+Error in line 2924: Unrecognized command verb.
+÷
+Error in line 2925: Unrecognized command verb.
+÷
+Error in line 2926: Unrecognized command verb.
+÷
+Error in line 2928: Unrecognized command verb.
+÷
+Error in line 2929: Unrecognized command verb.
+÷
+Error in line 2930: Unrecognized command verb.
+÷
+Error in line 2932: Unrecognized command verb.
+÷
+Error in line 2933: Unrecognized command verb.
+÷
+Error in line 2934: Unrecognized command verb.
+÷
+Error in line 2936: Unrecognized command verb.
+÷
+Error in line 2941: Unrecognized command verb.
+÷
+Error in line 2943: Unrecognized command verb.
+
+Error in line 2956: Unrecognized command verb.
+
+Error in line 2957: Unrecognized command verb.
+÷	
+Error in line 2958: Unrecognized command verb.
+÷	
+Error in line 2959: Unrecognized command verb.
+÷
+Error in line 2960: Unrecognized command verb.
+÷
+Error in line 2962: Unrecognized command verb.
+÷
+Error in line 2963: Unrecognized command verb.
+÷
+Error in line 2964: Unrecognized command verb.
+÷
+Error in line 2966: Unrecognized command verb.
+÷
+Error in line 2967: Unrecognized command verb.
+÷
+Error in line 2968: Unrecognized command verb.
+÷
+Error in line 2969: Unrecognized command verb.
+÷
+Error in line 2970: Unrecognized command verb.
+÷
+Error in line 2971: Unrecognized command verb.
+
+Error in line 2985: Unrecognized command verb.
+If mflag="M"
+Error in line 2987: Statement is not in a procedure.
+Return
+Error in line 2988: Statement is not in a procedure.
+Endif
+Error in line 2989: Statement is not in a procedure.
+M.NUMORDEN=""
+Error in line 2991: Statement is not in a procedure.
+mflag=""
+Error in line 2992: Statement is not in a procedure.
+Select dbquimisangre
+Error in line 2994: Statement is not in a procedure.
+Scatter Blank Memvar
+Error in line 2996: Statement is not in a procedure.
+Thisform.Refresh
+Error in line 2997: Statement is not in a procedure.
+Select dbquimisangre
+Error in line 2999: Statement is not in a procedure.
+Select quiplantilla
+Error in line 3001: Statement is not in a procedure.
+If Alias()="QUIPLANTILLA"
+Error in line 3003: Statement is not in a procedure.
+Zap
+Error in line 3004: Statement is not in a procedure.
+Append From prutalabo+"QUIMICAS"
+Error in line 3005: Statement is not in a procedure.
+Goto Top
+Error in line 3006: Statement is not in a procedure.
+Endif
+Error in line 3007: Statement is not in a procedure.
+Goto Top
+Error in line 3010: Statement is not in a procedure.
+Select dbquimisangre
+Error in line 3011: Statement is not in a procedure.
+Goto Top
+Error in line 3013: Statement is not in a procedure.
+Set Order To
+Error in line 3014: Statement is not in a procedure.
+m.notest = ""
+Error in line 3016: Statement is not in a procedure.
+sigue = 0
+Error in line 3017: Statement is not in a procedure.
+If Reccount()=0
+Error in line 3018: Statement is not in a procedure.
+m.notest = "1"
+Error in line 3019: Statement is not in a procedure.
+Else
+Error in line 3020: Statement is not in a procedure.
+Goto Bottom
+Error in line 3021: Statement is not in a procedure.
+sigue = 0
+Error in line 3022: Statement is not in a procedure.
+sigue = Val(dbquimisangre.notest)+1
+Error in line 3023: Statement is not in a procedure.
+m.notest = Str(sigue)
+Error in line 3024: Statement is not in a procedure.
+Endif
+Error in line 3025: Statement is not in a procedure.
+Thisform.Refresh()
+Error in line 3026: Statement is not in a procedure.
+Select dbquimisangre
+Error in line 3028: Statement is not in a procedure.
+Set Order To notest
+Error in line 3029: Statement is not in a procedure.
+m.notest = Alltrim(m.notest)
+Error in line 3030: Statement is not in a procedure.
+mflag = 'G'
+Error in line 3031: Statement is not in a procedure.
+m.tipoprov = "LOCAL"
+Error in line 3032: Statement is not in a procedure.
+m.genero = "FEMENINO"
+Error in line 3033: Statement is not in a procedure.
+Select quiplantilla
+Error in line 3034: Statement is not in a procedure.
+Replace vnormal11 With m2 All
+Error in line 3035: Statement is not in a procedure.
+m.reportapor = p_reportapor
+Error in line 3036: Statement is not in a procedure.
+m.usuario = p_reportapor
+Error in line 3037: Statement is not in a procedure.
+m.fecha = Date()
+Error in line 3038: Statement is not in a procedure.
+m.muestra ="SUERO"
+Error in line 3040: Statement is not in a procedure.
+Goto Top
+Error in line 3042: Statement is not in a procedure.
+Thisform.Refresh
+Error in line 3043: Statement is not in a procedure.
+Thisform.met_botones
+Error in line 3044: Statement is not in a procedure.
+Thisform.met_activa
+Error in line 3045: Statement is not in a procedure.
+Thisform.txtfecha.Enabled = .T.
+Error in line 3046: Statement is not in a procedure.
+Thisform.txtfecha.SetFocus()
+Error in line 3047: Statement is not in a procedure.
+This.SetFocus()
+Error in line 3048: Statement is not in a procedure.
+m.fecha=Date()
+Error in line 3050: Statement is not in a procedure.
+m.TIPOEDAD="AÑOS"
+Error in line 3051: Statement is not in a procedure.
+Select 0
+Error in line 3053: Statement is not in a procedure.
+Use prutalabo+"ORDECLINI" Order NORDEN  Shared
+Error in line 3054: Statement is not in a procedure.
+Select ORDECLINI
+Error in line 3056: Statement is not in a procedure.
+Release mdevuelve
+Error in line 3057: Statement is not in a procedure.
+Public mdevuelve
+Error in line 3058: Statement is not in a procedure.
+Release pcaption1, pcaption2, pcaption3
+Error in line 3061: Statement is not in a procedure.
+Public pcaption1, pcaption2, pcaption3
+Error in line 3062: Statement is not in a procedure.
+pcaption1 = "NORDEN"
+Error in line 3064: Statement is not in a procedure.
+pcaption2 = "NOMBRE COMERCIAL"
+Error in line 3065: Statement is not in a procedure.
+pcaption3 = "NOMBRE SOCIAL"
+Error in line 3066: Statement is not in a procedure.
+mdevuelve = Space(15)
+Error in line 3067: Statement is not in a procedure.
+Select ORDECLINI.NORDEN As campo1, paciente As campo2, "" As campo3 From ORDECLINI Into Cursor CRIBUSCARDATOS
+Error in line 3070: Statement is not in a procedure.
+Select CRIBUSCARDATOS
+Error in line 3072: Statement is not in a procedure.
+If Reccount()=0
+Error in line 3073: Statement is not in a procedure.
+Use In CRIBUSCARDATOS
+Error in line 3074: Statement is not in a procedure.
+Return
+Error in line 3075: Statement is not in a procedure.
+Endif
+Error in line 3076: Statement is not in a procedure.
+Select CRIBUSCARDATOS
+Error in line 3078: Statement is not in a procedure.
+Do Form public_data_busca+"frmbuscarorden"
+Error in line 3079: Statement is not in a procedure.
+If  .Not. Empty(mdevuelve)	
+Error in line 3082: Statement is not in a procedure.
+m.NORDEN = mdevuelve				
+Error in line 3083: Statement is not in a procedure.
+Select ORDECLINI
+Error in line 3084: Statement is not in a procedure.
+Goto Top	
+Error in line 3085: Statement is not in a procedure.
+Locate For ALLTRIM(NORDEN)=ALLTRIM(m.NORDEN)  AND MONTH(FEORDEN)=MONTH(DATE()) AND YEAR(FEORDEN) = YEAR(DATE())	
+Error in line 3086: Statement is not in a procedure.
+Scatter Memvar	
+Error in line 3087: Statement is not in a procedure.
+M.NUMORDEN = ORDECLINI.NUMORDEN
+Error in line 3088: Statement is not in a procedure.
+thisform.Refresh 		
+Error in line 3090: Statement is not in a procedure.
+ENDIF
+Error in line 3091: Statement is not in a procedure.
+Use In ORDECLINI
+Error in line 3103: Statement is not in a procedure.
+Select quiplantilla
+Error in line 3106: Statement is not in a procedure.
+If Inlist(m.genero, "MASCULINO", "VARON")
+Error in line 3108: Statement is not in a procedure.
+Replace vnormal1  With h1 All
+Error in line 3109: Statement is not in a procedure.
+Replace vnormal11 With h2 All
+Error in line 3110: Statement is not in a procedure.
+Else
+Error in line 3111: Statement is not in a procedure.
+Replace vnormal1  With m1 All
+Error in line 3112: Statement is not in a procedure.
+Replace vnormal11 With m2 All
+Error in line 3113: Statement is not in a procedure.
+Endif
+Error in line 3114: Statement is not in a procedure.
+Select quiplantilla
+Error in line 3117: Statement is not in a procedure.
+Go Top
+Error in line 3118: Statement is not in a procedure.
+Select quiplantilla
+Error in line 3122: Statement is not in a procedure.
+Select quiplantilla
+Error in line 3124: Statement is not in a procedure.
+Thisform.txtpaciente.SetFocus()
+Error in line 3126: Statement is not in a procedure.
+Thisform.Refresh()
+Error in line 3127: Statement is not in a procedure.
+RETURN
+Error in line 3128: Statement is not in a procedure.
+ENDPROC
+Error in line 3130: Nesting error.
+â÷
+Error in line 3149: Unrecognized command verb.
+â÷
+Error in line 3151: Unrecognized command verb.
+÷
+Error in line 3157: Unrecognized command verb.
+÷
+Error in line 3158: Unrecognized command verb.
+÷
+Error in line 3163: Unrecognized command verb.
+÷
+Error in line 3164: Unrecognized command verb.
+÷
+Error in line 3165: Unrecognized command verb.
+
+Error in line 3172: Unrecognized command verb.
+
+Error in line 3173: Unrecognized command verb.
+
+Error in line 3180: Unrecognized command verb.
+
+Error in line 3181: Unrecognized command verb.

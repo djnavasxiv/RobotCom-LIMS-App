@@ -205,12 +205,17 @@ exports.Prisma.ResultScalarFieldEnum = {
   id: 'id',
   sampleId: 'sampleId',
   testId: 'testId',
+  testDefId: 'testDefId',
   value: 'value',
+  calculatedValues: 'calculatedValues',
   isNormal: 'isNormal',
+  abnormalFlags: 'abnormalFlags',
+  interpretationId: 'interpretationId',
   notes: 'notes',
   enteredBy: 'enteredBy',
   enteredAt: 'enteredAt',
-  createdAt: 'createdAt'
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.InvoiceScalarFieldEnum = {
@@ -322,6 +327,153 @@ exports.Prisma.SettingScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
+exports.Prisma.TestCategoryScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  code: 'code',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.TestDefinitionScalarFieldEnum = {
+  id: 'id',
+  testId: 'testId',
+  categoryId: 'categoryId',
+  name: 'name',
+  code: 'code',
+  unit: 'unit',
+  sampleType: 'sampleType',
+  testFields: 'testFields',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.NormalRangeScalarFieldEnum = {
+  id: 'id',
+  testDefId: 'testDefId',
+  minAge: 'minAge',
+  maxAge: 'maxAge',
+  gender: 'gender',
+  minValue: 'minValue',
+  maxValue: 'maxValue',
+  criticalLow: 'criticalLow',
+  criticalHigh: 'criticalHigh',
+  unit: 'unit',
+  notes: 'notes',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.CalculationRuleScalarFieldEnum = {
+  id: 'id',
+  testDefId: 'testDefId',
+  name: 'name',
+  formula: 'formula',
+  requiredFields: 'requiredFields',
+  outputField: 'outputField',
+  priority: 'priority',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.InterpretationRuleScalarFieldEnum = {
+  id: 'id',
+  testDefId: 'testDefId',
+  name: 'name',
+  condition: 'condition',
+  interpretation: 'interpretation',
+  severity: 'severity',
+  priority: 'priority',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.DeltaCheckRuleScalarFieldEnum = {
+  id: 'id',
+  testDefId: 'testDefId',
+  name: 'name',
+  alertThreshold: 'alertThreshold',
+  criticalThreshold: 'criticalThreshold',
+  checkDays: 'checkDays',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ReflexTestRuleScalarFieldEnum = {
+  id: 'id',
+  parentTestDefId: 'parentTestDefId',
+  childTestDefId: 'childTestDefId',
+  condition: 'condition',
+  priority: 'priority',
+  requiresApproval: 'requiresApproval',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.DeltaCheckResultScalarFieldEnum = {
+  id: 'id',
+  resultId: 'resultId',
+  ruleId: 'ruleId',
+  previousValue: 'previousValue',
+  currentValue: 'currentValue',
+  changePercent: 'changePercent',
+  previousDate: 'previousDate',
+  alertMessage: 'alertMessage',
+  severity: 'severity',
+  isResolved: 'isResolved',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.EmailTemplateScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  subject: 'subject',
+  htmlContent: 'htmlContent',
+  plainTextContent: 'plainTextContent',
+  templateType: 'templateType',
+  requiredVariables: 'requiredVariables',
+  isActive: 'isActive',
+  version: 'version',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.EmailLogScalarFieldEnum = {
+  id: 'id',
+  templateId: 'templateId',
+  resultId: 'resultId',
+  sampleId: 'sampleId',
+  invoiceId: 'invoiceId',
+  recipientEmail: 'recipientEmail',
+  subject: 'subject',
+  content: 'content',
+  status: 'status',
+  sentAt: 'sentAt',
+  failureReason: 'failureReason',
+  retryCount: 'retryCount',
+  nextRetryAt: 'nextRetryAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.EmailSettingScalarFieldEnum = {
+  id: 'id',
+  key: 'key',
+  value: 'value',
+  description: 'description',
+  isEncrypted: 'isEncrypted',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -351,7 +503,18 @@ exports.Prisma.ModelName = {
   StockAdjustment: 'StockAdjustment',
   License: 'License',
   AuditLog: 'AuditLog',
-  Setting: 'Setting'
+  Setting: 'Setting',
+  TestCategory: 'TestCategory',
+  TestDefinition: 'TestDefinition',
+  NormalRange: 'NormalRange',
+  CalculationRule: 'CalculationRule',
+  InterpretationRule: 'InterpretationRule',
+  DeltaCheckRule: 'DeltaCheckRule',
+  ReflexTestRule: 'ReflexTestRule',
+  DeltaCheckResult: 'DeltaCheckResult',
+  EmailTemplate: 'EmailTemplate',
+  EmailLog: 'EmailLog',
+  EmailSetting: 'EmailSetting'
 };
 
 /**

@@ -1,0 +1,35 @@
+
+Structure for table:    C:\ROBOTCOMLAB\DBFS\CONTRATOS.DBF
+Number of data records: 13      
+Date of last update:    22/04/14
+Code Page:              1252    
+Field  Field Name      Type                Width    Dec   Index   Collate Nulls    Next    Step
+    1  NOCONTRATO      Character              10                             No
+    2  FECHA           Date                    8                             No
+    3  FECHALETRA      Character             100                             No
+    4  EMPRESA         Character              60                             No
+    5  PROFESION       Character              50                             No
+    6  NOMBRE          Character              60                             No
+    7  DUI1            Character               1                             No
+    8  DUI2            Character              10                             No
+    9  DUI3            Character              10                             No
+   10  DUI4            Character              10                             No
+   11  DUI5            Character              10                             No
+   12  DUI6            Character              10                             No
+   13  DUI7            Character              10                             No
+   14  DUI8            Character              10                             No
+   15  DUI9            Character              10                             No
+   16  DUILETRAS       Character             100                             No
+   17  NIT1            Character               4                             No
+   18  NIT2            Character               6                             No
+   19  NIT3            Character               3                             No
+   20  NIT4            Character               1                             No
+   21  NITLETRAS       Character              75                             No
+   22  DIRECCION       Character              80                             No
+   23  PRECIO          Numeric                10      2                      No
+   24  PRECIOLE        Character              80                             No
+   25  MUNICIPIO       Character              60                             No
+   26  DEPARTA         Character              30                             No
+   27  CDIA            Character              15                             No
+   28  CMES            Character              30                             No
+** Total **                                  864

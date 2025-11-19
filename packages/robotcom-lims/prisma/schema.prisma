@@ -70,6 +70,7 @@ model Test {
   profileTests TestProfileItem[]
   sampleTests  SampleTest[]
   results      Result[]
+  testDefs     TestDefinition[]
   @@index([code])
 }
 
@@ -107,6 +108,7 @@ model Sample {
   createdAt      DateTime     @default(now())
   tests          SampleTest[]
   results        Result[]
+  emailLogs      EmailLog[]
   invoice        Invoice?
   @@index([patientId])
   @@index([sampleNumber])
@@ -125,19 +127,30 @@ model SampleTest {
 }
 
 model Result {
-  id        String   @id @default(uuid())
-  sampleId  String
-  sample    Sample   @relation(fields: [sampleId], references: [id])
-  testId    String
-  test      Test     @relation(fields: [testId], references: [id])
-  value     String
-  isNormal  Boolean  @default(true)
-  notes     String?
-  enteredBy String?
-  enteredAt DateTime @default(now())
-  createdAt DateTime @default(now())
+  id                  String   @id @default(uuid())
+  sampleId            String
+  sample              Sample   @relation(fields: [sampleId], references: [id])
+  testId              String
+  test                Test     @relation(fields: [testId], references: [id])
+  testDefId           String?
+  testDef             TestDefinition? @relation("TestResultDef", fields: [testDefId], references: [id], onDelete: SetNull)
+  value               String
+  calculatedValues    String? // JSON: {fieldName: value, ...}
+  isNormal            Boolean  @default(true)
+  abnormalFlags       String? // JSON: {fieldName: "HIGH"|"LOW"|"CRITICAL", ...}
+  interpretationId    String?
+  interpretation      InterpretationRule? @relation(fields: [interpretationId], references: [id], onDelete: SetNull)
+  notes               String?
+  enteredBy           String?
+  enteredAt           DateTime @default(now())
+  deltaCheckResults   DeltaCheckResult[]
+  emailLogs           EmailLog[]
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
   @@unique([sampleId, testId])
   @@index([sampleId])
+  @@index([testDefId])
+  @@index([interpretationId])
 }
 
 model Invoice {
@@ -160,6 +173,7 @@ model Invoice {
   createdAt     DateTime      @default(now())
   items         InvoiceItem[]
   commissions   Commission[]
+  emailLogs     EmailLog[]
   @@index([patientId])
   @@index([labId])
   @@index([invoiceNumber])
@@ -272,5 +286,198 @@ model Setting {
   value     String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  @@index([key])
+}
+
+// ============= PHASE 1: TEST AUTOMATION MODELS =============
+
+model TestCategory {
+  id          String           @id @default(uuid())
+  name        String           @unique
+  description String?
+  code        String           @unique
+  isActive    Boolean          @default(true)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  definitions TestDefinition[]
+  @@index([code])
+}
+
+model TestDefinition {
+  id                String             @id @default(uuid())
+  testId            String?
+  test              Test?              @relation(fields: [testId], references: [id], onDelete: SetNull)
+  categoryId        String
+  category          TestCategory       @relation(fields: [categoryId], references: [id])
+  name              String
+  code              String
+  unit              String?
+  sampleType        String?
+  testFields        String // JSON: {fieldName, dataType, required, position}
+  normalRanges      NormalRange[]
+  interpretations   InterpretationRule[]
+  calculationRules  CalculationRule[]
+  deltaCheckRules   DeltaCheckRule[]   @relation("DeltaCheckRuleDef")
+  reflexRulesAsParent ReflexTestRule[] @relation("ReflexParent")
+  reflexRulesAsChild  ReflexTestRule[] @relation("ReflexChild")
+  testResults       Result[]           @relation("TestResultDef")
+  isActive          Boolean            @default(true)
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+  @@unique([code, categoryId])
+  @@index([categoryId])
+}
+
+model NormalRange {
+  id             String         @id @default(uuid())
+  testDefId      String
+  testDef        TestDefinition @relation(fields: [testDefId], references: [id], onDelete: Cascade)
+  minAge         Int? // in years, null = no lower bound
+  maxAge         Int? // in years, null = no upper bound
+  gender         String? // M, F, or null for both
+  minValue       Float
+  maxValue       Float
+  criticalLow    Float? // triggers alert
+  criticalHigh   Float? // triggers alert
+  unit           String?
+  notes          String?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  @@index([testDefId])
+}
+
+model CalculationRule {
+  id             String         @id @default(uuid())
+  testDefId      String
+  testDef        TestDefinition @relation(fields: [testDefId], references: [id], onDelete: Cascade)
+  name           String
+  formula        String // JavaScript expression: "hemoglobin * 10 / rbc"
+  requiredFields String // JSON: ["hemoglobin", "rbc"]
+  outputField    String
+  priority       Int            @default(100)
+  isActive       Boolean        @default(true)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  @@index([testDefId])
+}
+
+model InterpretationRule {
+  id             String       @id @default(uuid())
+  testDefId      String
+  testDef        TestDefinition @relation(fields: [testDefId], references: [id], onDelete: Cascade)
+  name           String
+  condition      String // "value < 10", "value > 50 AND gender == 'M'"
+  interpretation String
+  severity       String? // "INFO", "WARNING", "CRITICAL"
+  priority       Int          @default(100)
+  isActive       Boolean      @default(true)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  results        Result[]
+  @@index([testDefId])
+}
+
+model DeltaCheckRule {
+  id              String    @id @default(uuid())
+  testDefId       String
+  testDef         TestDefinition @relation("DeltaCheckRuleDef", fields: [testDefId], references: [id], onDelete: Cascade)
+  name            String
+  alertThreshold  Float // percentage change (e.g., 50 = 50% change)
+  criticalThreshold Float? // if exceeded, alert physician
+  checkDays       Int       @default(30) // look back N days
+  isActive        Boolean   @default(true)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  deltaCheckResults DeltaCheckResult[]
+  @@index([testDefId])
+}
+
+model ReflexTestRule {
+  id              String         @id @default(uuid())
+  parentTestDefId String
+  parentTestDef   TestDefinition @relation("ReflexParent", fields: [parentTestDefId], references: [id], onDelete: Cascade)
+  childTestDefId  String
+  childTestDef    TestDefinition @relation("ReflexChild", fields: [childTestDefId], references: [id], onDelete: Cascade)
+  condition       String // "value > 100", "abnormalFlag == 'HIGH'"
+  priority        Int            @default(100)
+  requiresApproval Boolean        @default(true)
+  isActive        Boolean        @default(true)
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  @@unique([parentTestDefId, childTestDefId])
+  @@index([parentTestDefId])
+  @@index([childTestDefId])
+}
+
+model DeltaCheckResult {
+  id              String    @id @default(uuid())
+  resultId        String
+  result          Result    @relation(fields: [resultId], references: [id], onDelete: Cascade)
+  ruleId          String
+  rule            DeltaCheckRule @relation(fields: [ruleId], references: [id], onDelete: Cascade)
+  previousValue   Float?
+  currentValue    Float
+  changePercent   Float // percentage change
+  previousDate    DateTime?
+  alertMessage    String
+  severity        String    @default("INFO") // "INFO", "WARNING", "CRITICAL"
+  isResolved      Boolean   @default(false)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  @@index([resultId])
+  @@index([ruleId])
+}
+
+model EmailTemplate {
+  id              String   @id @default(uuid())
+  name            String   @unique
+  subject         String
+  htmlContent     String // HTML with {{variable}} placeholders
+  plainTextContent String?
+  templateType    String // "payment_confirmation", "test_results", "critical_alert", "invoice", "appointment"
+  requiredVariables String // JSON: ["patientName", "invoiceNumber"]
+  isActive        Boolean  @default(true)
+  version         Int      @default(1)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  emailLogs       EmailLog[]
+  @@index([templateType])
+}
+
+model EmailLog {
+  id              String        @id @default(uuid())
+  templateId      String?
+  template        EmailTemplate? @relation(fields: [templateId], references: [id], onDelete: SetNull)
+  resultId        String?
+  result          Result?       @relation(fields: [resultId], references: [id], onDelete: SetNull)
+  sampleId        String?
+  sample          Sample?       @relation(fields: [sampleId], references: [id], onDelete: SetNull)
+  invoiceId       String?
+  invoice         Invoice?      @relation(fields: [invoiceId], references: [id], onDelete: SetNull)
+  recipientEmail  String
+  subject         String
+  content         String // The rendered HTML
+  status          String        @default("pending") // "pending", "sent", "failed", "bounced"
+  sentAt          DateTime?
+  failureReason   String?
+  retryCount      Int           @default(0)
+  nextRetryAt     DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  @@index([resultId])
+  @@index([sampleId])
+  @@index([invoiceId])
+  @@index([status])
+  @@index([recipientEmail])
+}
+
+model EmailSetting {
+  id              String   @id @default(uuid())
+  key             String   @unique
+  value           String // SMTP host, port, password (encrypted), fromEmail, etc
+  description     String?
+  isEncrypted     Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
   @@index([key])
 }

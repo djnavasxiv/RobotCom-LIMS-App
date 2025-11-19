@@ -1,0 +1,17 @@
+
+Structure for table:    C:\ROBOTCOMLAB\DBFS\MENU_ELISAS.DBF
+Number of data records: 9       
+Date of last update:    01/27/16
+Code Page:              1252    
+Field  Field Name      Type                Width    Dec   Index   Collate Nulls    Next    Step
+    1  ANALISIS        Character              25                             No
+    2  RESULTADO       Numeric                10      3                      No
+    3  UNIDAD          Character              10                             No
+    4  VNORMAL         Character              20                             No
+    5  PRECIO          Numeric                10      2                      No
+    6  ANALISIS2       Character              25                             No
+    7  RESULDOS        Numeric                10      3                      No
+    8  UNIDADOS        Character              10                             No
+    9  VNORMAL2        Character              20                             No
+   10  PRECIO2         Numeric                10      2                      No
+** Total **                                  151
