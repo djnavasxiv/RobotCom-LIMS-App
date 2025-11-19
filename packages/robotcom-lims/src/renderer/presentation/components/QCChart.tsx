@@ -231,7 +231,7 @@ const QCChart: React.FC<QCChartProps> = ({
         <text x={20} y={toSVGY(yMin) + 5} className="axis-label">{yMin.toFixed(0)}</text>
 
         {/* X-axis labels */}
-        {filteredData.map((dp, index) => {
+        {filteredData.map((dp, index: number) => {
           if (index % Math.ceil(filteredData.length / 5) === 0) {
             return (
               <text key={`label-${index}`}
@@ -285,7 +285,7 @@ const QCChart: React.FC<QCChartProps> = ({
               </tr>
             </thead>
             <tbody>
-              {filteredData.map((dp, index) => {
+              {filteredData.map((dp, _index) => {
                 const zScore = (dp.value - mean) / sd;
                 const status = Math.abs(zScore) > 3 ? 'REJECT' : 
                               Math.abs(zScore) > 2 ? 'WARNING' : 'OK';
