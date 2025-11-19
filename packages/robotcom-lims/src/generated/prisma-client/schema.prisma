@@ -334,7 +334,7 @@ model TestDefinition {
   normalRanges        NormalRange[]
   interpretations     InterpretationRule[]
   calculationRules    CalculationRule[]
-  deltaCheckRules     DeltaCheckRule[]
+  deltaCheckRules     DeltaCheckRule[]     @relation("DeltaCheckRuleDef")
   reflexRulesAsParent ReflexTestRule[]     @relation("ReflexParent")
   reflexRulesAsChild  ReflexTestRule[]     @relation("ReflexChild")
   testResults         Result[]             @relation("TestResultDef")
@@ -401,7 +401,7 @@ model InterpretationRule {
 model DeltaCheckRule {
   id                String             @id @default(uuid())
   testDefId         String
-  testDef           TestDefinition     @relation(fields: [testDefId], references: [id], onDelete: Cascade)
+  testDef           TestDefinition     @relation("DeltaCheckRuleDef", fields: [testDefId], references: [id], onDelete: Cascade)
   name              String
   alertThreshold    Float // percentage change (e.g., 50 = 50% change)
   criticalThreshold Float? // if exceeded, alert physician
