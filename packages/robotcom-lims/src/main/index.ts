@@ -19,9 +19,12 @@ function createWindow() {
       nodeIntegration: false,
       contextIsolation: true,
     },
-    title: 'RobotComLab',
+    show: false, // Don't show until ready
     icon: join(__dirname, '../../resources/icon.png'),
   });
+
+  // Hide the menu bar to make it look like a native app
+  mainWindow.removeMenu();
 
   if (process.env.NODE_ENV === 'development') {
     // Load development URL
@@ -31,6 +34,11 @@ function createWindow() {
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'));
   }
+
+  // Show window when ready
+  mainWindow.once('ready-to-show', () => {
+    mainWindow?.show();
+  });
 
   mainWindow.on('closed', () => {
     mainWindow = null;

@@ -237,34 +237,46 @@ export const TestResultsEntry: React.FC = () => {
 
         {/* Test Modules Tabs */}
         {selectedSample ? (
-          <Paper sx={{ mb: 4 }}>
-            <Tabs
-              value={activeModuleTab}
-              onChange={handleModuleTabChange}
-              variant="scrollable"
-              scrollButtons="auto"
-              sx={{
-                borderBottom: '2px solid #E0E0E0',
-                '& .MuiTab-root': {
-                  textTransform: 'none',
-                  fontSize: '0.95rem',
-                  fontWeight: 500,
-                  minHeight: '60px',
-                  color: '#666',
-                  '&.Mui-selected': {
-                    color: '#2196F3',
-                    fontWeight: 'bold',
-                  },
-                },
-              }}
-            >
+          <Paper sx={{ mb: 4, width: '100%', overflow: 'visible' }}>
+            <Box sx={{ 
+              display: 'flex', 
+              flexWrap: 'wrap', 
+              gap: 0, 
+              borderBottom: '2px solid #E0E0E0',
+              width: '100%',
+              boxSizing: 'border-box',
+              alignContent: 'flex-start',
+              overflow: 'visible',
+            }}>
               {modulesTabs.map((module) => (
-                <Tab key={module.id} label={module.label} value={module.id} />
+                <Box
+                  key={module.id}
+                  onClick={() => setActiveModuleTab(module.id)}
+                  sx={{
+                    flex: '0 1 auto',
+                    minWidth: '140px',
+                    px: 2,
+                    py: 1.5,
+                    cursor: 'pointer',
+                    borderBottom: activeModuleTab === module.id ? '3px solid #2196F3' : '3px solid transparent',
+                    textAlign: 'center',
+                    fontWeight: activeModuleTab === module.id ? 'bold' : '500',
+                    color: activeModuleTab === module.id ? '#2196F3' : '#666',
+                    fontSize: '0.9rem',
+                    transition: 'all 0.2s',
+                    '&:hover': {
+                      backgroundColor: '#F5F5F5',
+                      color: '#2196F3',
+                    },
+                  }}
+                >
+                  {module.label}
+                </Box>
               ))}
-            </Tabs>
+            </Box>
 
             {/* Module Content */}
-            <Box sx={{ p: 3, backgroundColor: '#fff' }}>
+            <Box sx={{ p: 3, backgroundColor: '#fff', width: '100%', boxSizing: 'border-box' }}>
               {getCurrentModuleComponent()}
             </Box>
           </Paper>

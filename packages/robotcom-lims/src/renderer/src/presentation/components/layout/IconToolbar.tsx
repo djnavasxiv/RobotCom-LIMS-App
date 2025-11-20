@@ -108,8 +108,8 @@ const IconToolbar: React.FC = () => {
         padding: '12px',
         backgroundColor: '#f5f5f5',
         borderBottom: '1px solid #ddd',
-        overflowY: 'auto',
-        maxHeight: '120px',
+        width: '100%',
+        boxSizing: 'border-box',
       }}
     >
       {toolbarButtons.map((btn, index) => (
@@ -121,6 +121,8 @@ const IconToolbar: React.FC = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
+              flex: '0 1 auto',
+              minWidth: '85px',
               width: '90px',
               height: '80px',
               padding: '4px',
