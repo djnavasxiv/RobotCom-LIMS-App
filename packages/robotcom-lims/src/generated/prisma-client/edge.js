@@ -495,7 +495,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/djnavasv/RobotCom-LIMS-App/packages/robotcom-lims/src/generated/prisma-client",
+      "value": "/project/packages/robotcom-lims/src/generated/prisma-client",
       "fromEnvVar": null
     },
     "config": {
@@ -504,12 +504,12 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "debian-openssl-3.0.x",
+        "value": "debian-openssl-1.1.x",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/djnavasv/RobotCom-LIMS-App/packages/robotcom-lims/prisma/schema.prisma",
+    "sourceFilePath": "/project/packages/robotcom-lims/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

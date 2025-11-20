@@ -64,6 +64,7 @@
   "build": {
     "appId": "com.robotcom.lims",
     "productName": "RobotComLab",
+    "asar": false,
     "publish": [
       {
         "provider": "generic",
