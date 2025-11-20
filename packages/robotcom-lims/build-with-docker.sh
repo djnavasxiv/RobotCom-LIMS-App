@@ -26,6 +26,14 @@ fi
 echo "✓ Docker is ready"
 echo ""
 
+# Clean pnpm store to avoid version conflicts
+echo "Cleaning pnpm store..."
+sudo rm -rf ${PROJECT_DIR}/.pnpm-store 2>/dev/null || rm -rf ${PROJECT_DIR}/.pnpm-store 2>/dev/null || true
+sudo rm -rf ${APP_DIR}/node_modules 2>/dev/null || rm -rf ${APP_DIR}/node_modules 2>/dev/null || true
+sudo rm -rf ${APP_DIR}/out 2>/dev/null || rm -rf ${APP_DIR}/out 2>/dev/null || true
+sudo rm -rf ${APP_DIR}/release 2>/dev/null || rm -rf ${APP_DIR}/release 2>/dev/null || true
+echo ""
+
 # Run the build in Docker
 echo "Starting Docker build container..."
 docker run --rm \
@@ -34,7 +42,7 @@ docker run --rm \
   -v ~/.cache/electron:/root/.cache/electron \
   -v ~/.cache/electron-builder:/root/.cache/electron-builder \
   electronuserland/builder:wine \
-  /bin/bash -c "cd /project/packages/robotcom-lims && pnpm install --ignore-scripts && pnpm run build && pnpm run package:win"
+  /bin/bash -c "cd /project/packages/robotcom-lims && rm -rf node_modules && pnpm install --force --no-frozen-lockfile --ignore-scripts && pnpm run build && pnpm run package:win"
 
 BUILD_EXIT=$?
 

@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "electron-vite dev",
     "dev:headless": "DISPLAY='' ELECTRON_OZONE_PLATFORM_HINT=x11 electron-vite dev",
+    "prebuild": "prisma generate",
     "build": "electron-vite build",
     "preview": "electron-vite preview",
     "package": "electron-builder",
-    "package:win": "electron-builder --win",
+    "package:win": "prisma generate && electron-builder --win",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
@@ -73,9 +74,17 @@
       "output": "release",
       "buildResources": "resources"
     },
+    "asarUnpack": [
+      "node_modules/@prisma/**/*",
+      "node_modules/.prisma/**/*",
+      "node_modules/bcrypt/**/*",
+      "src/generated/**/*"
+    ],
     "files": [
       "out/**/*",
       "node_modules/**/*",
+      "src/generated/**/*",
+      "prisma/**/*",
       "package.json"
     ],
     "win": {
@@ -93,7 +102,7 @@
           ]
         }
       ],
-      "icon": "resources/icon.png",
+      "icon": "resources/icon.ico",
       "artifactName": "${productName}-Setup-${version}.${ext}"
     },
     "nsis": {
@@ -102,9 +111,9 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "RobotComLab",
-      "installerIcon": "resources/icon.png",
-      "uninstallerIcon": "resources/icon.png",
-      "installerHeaderIcon": "resources/icon.png",
+      "installerIcon": "resources/icon.ico",
+      "uninstallerIcon": "resources/icon.ico",
+      "installerHeaderIcon": "resources/icon.ico",
       "language": "1033",
       "differentialPackage": true,
       "deleteAppDataOnUninstall": false
