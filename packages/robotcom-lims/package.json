@@ -101,7 +101,18 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "RobotComLab"
+      "shortcutName": "RobotComLab",
+      "installerIcon": "resources/icon.png",
+      "uninstallerIcon": "resources/icon.png",
+      "installerHeader": "RobotComLab Installation",
+      "installerHeaderIcon": "resources/icon.png",
+      "installerSidebar": "resources/icon.png",
+      "installerSidebarImage": "resources/icon.png",
+      "language": ["en_US"],
+      "showLanguageSelector": false,
+      "differentialPackage": true,
+      "deleteAppDataOnUninstall": false,
+      "artifactName": "${productName}-${version}-installer.${ext}"
     }
   },
   "pnpm": {
