@@ -1,0 +1,49 @@
+{
+  "appId": "com.robotcom.lims",
+  "productName": "RobotComLab",
+  "directories": {
+    "output": "release",
+    "buildResources": "resources"
+  },
+  "files": [
+    "out/**/*",
+    "node_modules/**/*",
+    "package.json"
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      },
+      {
+        "target": "portable",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "icon": "resources/icon.ico",
+    "artifactName": "${productName}-Setup-${version}.${ext}",
+    "certificateFile": null,
+    "certificatePassword": null,
+    "signingHashAlgorithms": null,
+    "sign": null,
+    "signAndEditExecutable": false
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "RobotComLab",
+    "installerIcon": "resources/icon.ico",
+    "uninstallerIcon": "resources/icon.ico",
+    "installerHeaderIcon": "resources/icon.ico",
+    "language": "1033",
+    "differentialPackage": true,
+    "deleteAppDataOnUninstall": false
+  }
+}
