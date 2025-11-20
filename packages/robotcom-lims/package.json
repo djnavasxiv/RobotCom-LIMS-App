@@ -93,7 +93,7 @@
           ]
         }
       ],
-      "icon": "resources/icon.ico",
+      "icon": "resources/icon.png",
       "artifactName": "${productName}-Setup-${version}.${ext}"
     },
     "nsis": {
@@ -101,10 +101,7 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "RobotComLab",
-      "installerIcon": "resources/icon.ico",
-      "uninstallerIcon": "resources/icon.ico",
-      "installerHeaderIcon": "resources/icon.ico"
+      "shortcutName": "RobotComLab"
     }
   },
   "pnpm": {
