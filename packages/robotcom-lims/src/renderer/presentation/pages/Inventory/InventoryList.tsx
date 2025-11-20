@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Button,
@@ -15,36 +15,15 @@ import {
   CircularProgress,
 } from '@mui/material';
 import { Add, Edit, Delete } from '@mui/icons-material';
-import { InventoryService } from '../../../application/services/InventoryService';
+import { useInventory } from '../../hooks/useInventory';
 import { InventoryItem } from '../../../domain/entities/InventoryItem';
 import InventoryForm from './InventoryForm';
 
 const InventoryList: React.FC = () => {
-  const [items, setItems] = useState<InventoryItem[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<InventoryItem | null>(null);
 
-  const inventoryService = new InventoryService();
-
-  useEffect(() => {
-    loadItems();
-  }, []);
-
-  const loadItems = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const data = await inventoryService.getAllItems();
-      setItems(data);
-    } catch (err) {
-      setError('Error al cargar el inventario.');
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const { inventory, loading, error, refetch } = useInventory();
 
   const handleDelete = async (id: string) => {
     if (!confirm('¿Está seguro de que desea eliminar este artículo?')) {
@@ -70,12 +49,12 @@ const InventoryList: React.FC = () => {
   };
 
   const handleSave = () => {
-    loadItems();
+    refetch();
   };
 
   return (
     <Box>
-       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
+       <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', mb: 3, gap: 2 }}>
         <Typography variant="h4">Gestión de Inventario</Typography>
         <Button
           variant="contained"
@@ -90,8 +69,8 @@ const InventoryList: React.FC = () => {
       {error && <Typography color="error">{error}</Typography>}
 
       {!loading && !error && (
-        <TableContainer component={Paper}>
-          <Table>
+        <Box sx={{ overflowX: 'auto' }}>
+          <Table sx={{ minWidth: 600 }}>
             <TableHead>
               <TableRow>
                 <TableCell>Código</TableCell>
@@ -103,7 +82,7 @@ const InventoryList: React.FC = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {items.map((item) => (
+              {inventory.map((item) => (
                 <TableRow key={item.id}>
                   <TableCell>{item.code}</TableCell>
                   <TableCell>{item.name}</TableCell>
@@ -124,7 +103,7 @@ const InventoryList: React.FC = () => {
               ))}
             </TableBody>
           </Table>
-        </TableContainer>
+        </Box>
       )}
 
       <InventoryForm

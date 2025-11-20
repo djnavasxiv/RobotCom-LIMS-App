@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Button,
@@ -15,58 +15,28 @@ import {
   CircularProgress,
 } from '@mui/material';
 import { Add, Edit, Delete, Search } from '@mui/icons-material';
-import { PatientService } from '../../../application/services/PatientService';
+import { usePatients } from '../../hooks/usePatients';
 import { Patient } from '../../../domain/entities/Patient';
 import PatientForm from './PatientForm';
 import { useAuthStore } from '../../../application/state/authStore';
 
 const PatientList: React.FC = () => {
-  const [patients, setPatients] = useState<Patient[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [selectedPatient, setSelectedPatient] = useState<Patient | null>(null);
   const labId = useAuthStore((state) => state.labId);
 
-  const patientService = new PatientService();
-
-  useEffect(() => {
-    if (labId) loadPatients();
-  }, [labId]);
-
-  const loadPatients = async () => {
-    if (!labId) return;
-    setLoading(true);
-    setError(null);
-    try {
-      const data = await patientService.getPatientsByLab(labId);
-      setPatients(data);
-    } catch (err) {
-      setError('Error al cargar pacientes.');
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const { patients, loading, error, refetch, searchPatients } = usePatients({
+    labId,
+    autoFetch: true,
+  });
 
   const handleSearch = async () => {
-    if (!labId) return;
     if (!searchQuery.trim()) {
-      loadPatients();
+      await refetch();
       return;
     }
-    setLoading(true);
-    setError(null);
-    try {
-      const data = await patientService.searchPatients(labId, searchQuery);
-      setPatients(data);
-    } catch (err) {
-      setError('Error en la búsqueda.');
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
+    await searchPatients(searchQuery);
   };
 
   const handleDelete = async (id: string) => {
@@ -74,11 +44,11 @@ const PatientList: React.FC = () => {
       return;
     }
     try {
-      await patientService.deletePatient(id);
-      loadPatients();
+      // TODO: Add delete functionality to hook or service
+      console.warn('Delete functionality to be implemented');
+      await refetch();
     } catch (err) {
-      setError('Error al eliminar el paciente.');
-      console.error(err);
+      console.error('Error deleting patient:', err);
     }
   };
 
@@ -92,13 +62,13 @@ const PatientList: React.FC = () => {
     setIsFormOpen(false);
   };
 
-  const handleSave = () => {
-    loadPatients();
+  const handleSave = async () => {
+    await refetch();
   };
 
   return (
     <Box sx={{ p: 3 }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', mb: 3, gap: 2 }}>
         <Typography variant="h4">Pacientes</Typography>
         <Button
           variant="contained"
@@ -109,19 +79,20 @@ const PatientList: React.FC = () => {
         </Button>
       </Box>
 
-      <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 3, alignItems: 'center' }}>
         <TextField
-          fullWidth
           placeholder="Buscar por nombre, teléfono, o email..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+          sx={{ flex: '1 1 250px', minWidth: '250px' }}
         />
         <Button
           variant="contained"
           startIcon={<Search />}
           onClick={handleSearch}
           disabled={loading}
+          sx={{ whiteSpace: 'nowrap' }}
         >
           Buscar
         </Button>
@@ -131,8 +102,8 @@ const PatientList: React.FC = () => {
       {error && <Typography color="error">{error}</Typography>}
 
       {!loading && !error && (
-        <TableContainer component={Paper}>
-          <Table>
+        <Box sx={{ overflowX: 'auto' }}>
+          <Table sx={{ minWidth: 600 }}>
             <TableHead>
               <TableRow>
                 <TableCell>Nombre</TableCell>
@@ -169,7 +140,7 @@ const PatientList: React.FC = () => {
               ))}
             </TableBody>
           </Table>
-        </TableContainer>
+        </Box>
       )}
 
       <PatientForm

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Box,
   Table,
@@ -12,37 +12,15 @@ import {
   Chip,
   CircularProgress,
 } from '@mui/material';
-import { CommissionService } from '../../../application/services/CommissionService';
+import { useCommissions } from '../../hooks/useCommissions';
 import { Commission } from '../../../domain/entities/Commission';
 
 const CommissionList: React.FC = () => {
-  const [commissions, setCommissions] = useState<Commission[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const commissionService = new CommissionService();
-
-  useEffect(() => {
-    loadCommissions();
-  }, []);
-
-  const loadCommissions = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const data = await commissionService.getAllCommissions();
-      setCommissions(data);
-    } catch (err) {
-      setError('Error al cargar comisiones.');
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const { commissions, loading, error } = useCommissions();
 
   return (
     <Box>
-       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
+       <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', mb: 3, gap: 2 }}>
         <Typography variant="h4">Reporte de Comisiones</Typography>
       </Box>
 
@@ -50,8 +28,8 @@ const CommissionList: React.FC = () => {
       {error && <Typography color="error">{error}</Typography>}
 
       {!loading && !error && (
-        <TableContainer component={Paper}>
-          <Table>
+        <Box sx={{ overflowX: 'auto' }}>
+          <Table sx={{ minWidth: 600 }}>
             <TableHead>
               <TableRow>
                 <TableCell>Doctor</TableCell>
@@ -75,7 +53,7 @@ const CommissionList: React.FC = () => {
               ))}
             </TableBody>
           </Table>
-        </TableContainer>
+        </Box>
       )}
     </Box>
   );

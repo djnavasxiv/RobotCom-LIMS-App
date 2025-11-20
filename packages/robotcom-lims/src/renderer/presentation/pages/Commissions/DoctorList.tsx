@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Button,
@@ -14,36 +14,15 @@ import {
   CircularProgress,
 } from '@mui/material';
 import { Add, Edit, Delete } from '@mui/icons-material';
-import { DoctorService } from '../../../application/services/DoctorService';
+import { useDoctors } from '../../hooks/useDoctors';
 import { Doctor } from '../../../domain/entities/Doctor';
 import DoctorForm from './DoctorForm';
 
 const DoctorList: React.FC = () => {
-  const [doctors, setDoctors] = useState<Doctor[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
 
-  const doctorService = new DoctorService();
-
-  useEffect(() => {
-    loadDoctors();
-  }, []);
-
-  const loadDoctors = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const data = await doctorService.getAllDoctors();
-      setDoctors(data);
-    } catch (err) {
-      setError('Error al cargar doctores.');
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const { doctors, loading, error, refetch } = useDoctors();
 
   const handleDelete = async (id: string) => {
     if (!confirm('¿Está seguro de que desea eliminar este doctor?')) {
@@ -69,12 +48,12 @@ const DoctorList: React.FC = () => {
   };
 
   const handleSave = () => {
-    loadDoctors();
+    refetch();
   };
 
   return (
     <Box>
-       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
+       <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', mb: 3, gap: 2 }}>
         <Typography variant="h4">Gestión de Doctores</Typography>
         <Button
           variant="contained"
@@ -89,8 +68,8 @@ const DoctorList: React.FC = () => {
       {error && <Typography color="error">{error}</Typography>}
 
       {!loading && !error && (
-        <TableContainer component={Paper}>
-          <Table>
+        <Box sx={{ overflowX: 'auto' }}>
+          <Table sx={{ minWidth: 700 }}>
             <TableHead>
               <TableRow>
                 <TableCell>Nombre</TableCell>
@@ -121,7 +100,7 @@ const DoctorList: React.FC = () => {
               ))}
             </TableBody>
           </Table>
-        </TableContainer>
+        </Box>
       )}
 
       <DoctorForm

@@ -26,7 +26,6 @@
 import DeltaCheckEngine from '../../../main/services/DeltaCheckEngine';
 import CalculationEngine from '../../../main/services/CalculationEngine';
 import ReflexTestingEngine from '../../../main/services/ReflexTestingEngine';
-import QualityControlEngine from '../../../main/services/QualityControlEngine';
 import CriticalValueEngine from '../../../main/services/CriticalValueEngine';
 import ReportGeneratorEngine from '../../../main/services/ReportGeneratorEngine';
 
@@ -159,7 +158,7 @@ class LabAutomationService {
       // Step 3: Check for critical values
       const criticalValue = this.checkCriticalValues(testValue, patient);
       if (criticalValue) {
-        processedResult.criticalValue = criticalValue;
+        processedResult.criticalValue = criticalValue as any;
         processedResult.abnormalStatus = 'CRITICAL';
       }
 
@@ -351,7 +350,7 @@ class LabAutomationService {
   /**
    * Validate QC using QualityControlEngine
    */
-  private static validateQC(testValue: TestValue, qcData: unknown) {
+  private static validateQC(_testValue: TestValue, _qcData: unknown) {
     // This would integrate with QualityControlEngine.applyWestgardRules()
     return {
       passed: true,
@@ -377,7 +376,7 @@ class LabAutomationService {
    * Determine abnormal status based on value
    */
   private static determineAbnormalStatus(
-    testValue: TestValue
+    _testValue: TestValue
   ): 'NORMAL' | 'LOW' | 'HIGH' | 'CRITICAL' {
     // Placeholder logic - would be replaced with actual interpretation
     return 'NORMAL';
@@ -386,7 +385,7 @@ class LabAutomationService {
   /**
    * Get reference range for test and patient demographics
    */
-  private static getReferenceRange(testValue: TestValue, patient: PatientContext): string {
+  private static getReferenceRange(testValue: TestValue, _patient: PatientContext): string {
     // Placeholder - would fetch from database based on test and demographics
     return `0-100 ${testValue.unit}`;
   }
@@ -420,7 +419,7 @@ class LabAutomationService {
   private static queueNotifications(
     result: ProcessedResult,
     patient: PatientContext,
-    sample: SampleContext
+    _sample: SampleContext
   ): void {
     // Queue notifications to be processed asynchronously
     if (result.criticalValue) {
@@ -485,8 +484,7 @@ class LabAutomationService {
           sampleNumber: sample.sampleNumber,
           sampleType: sample.sampleType,
           collectionDate: sample.collectionDate,
-          receivedDate: sample.receivedDate,
-          sampleId: sample.sampleID
+          receivedDate: sample.receivedDate
         },
         [
           {
@@ -495,7 +493,7 @@ class LabAutomationService {
             value: result.value,
             unit: result.unit,
             normalRange: result.referenceRange || 'N/A',
-            abnormalStatus: result.abnormalStatus
+            abnormalStatus: result.abnormalStatus === 'CRITICAL' ? 'CRITICAL_HIGH' : result.abnormalStatus as any
           }
         ],
         reportConfig
@@ -515,8 +513,7 @@ class LabAutomationService {
         sampleNumber: sample.sampleNumber,
         sampleType: sample.sampleType,
         collectionDate: sample.collectionDate,
-        receivedDate: sample.receivedDate,
-        sampleId: sample.sampleID
+        receivedDate: sample.receivedDate
       },
       [
         {
@@ -525,10 +522,9 @@ class LabAutomationService {
           value: result.value,
           unit: result.unit,
           normalRange: result.referenceRange || 'N/A',
-          abnormalStatus: result.abnormalStatus
+          abnormalStatus: result.abnormalStatus === 'CRITICAL' ? 'CRITICAL_HIGH' : result.abnormalStatus as any
         }
-      ],
-      reportConfig
+      ]
     ).content;
   }
 }

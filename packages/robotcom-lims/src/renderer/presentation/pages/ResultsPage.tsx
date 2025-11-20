@@ -130,7 +130,7 @@ const ResultsPage: React.FC = () => {
    * STEP 2: Mock database query to fetch previous results for delta checking
    * In production, this would query Result table where sampleId != current and patientId = current
    */
-  const fetchPreviousResults = useCallback(async (patientId: string, testIds: string[]) => {
+  const fetchPreviousResults = useCallback(async (_patientId: string, _testIds: string[]) => {
     try {
       // Mock previous results
       const mockPreviousResults: Record<string, { value: number; date: Date }> = {
@@ -177,7 +177,8 @@ const ResultsPage: React.FC = () => {
           firstName: patient.firstName,
           lastName: patient.lastName,
           age: patient.age,
-          gender: patient.gender
+          gender: patient.gender,
+          dateOfBirth: typeof patient.dateOfBirth === 'string' ? new Date(patient.dateOfBirth) : (patient.dateOfBirth || new Date())
         };
 
         // Create sample context
@@ -185,8 +186,8 @@ const ResultsPage: React.FC = () => {
           sampleID: sample.sampleID,
           sampleNumber: sample.sampleNumber,
           sampleType: sample.sampleType,
-          collectionTime: new Date(sample.collectionTime),
-          receivedTime: new Date(sample.receivedTime)
+          collectionDate: new Date(sample.collectionTime),
+          receivedDate: new Date(sample.receivedTime)
         };
 
         // Fetch previous result for this test
@@ -198,7 +199,7 @@ const ResultsPage: React.FC = () => {
           testValue,
           patientContext,
           sampleContext,
-          previousResult || { value: 0, date: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) }
+          (previousResult || { id: 'null', value: 0, date: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) }) as any
         );
 
         // Map LabAutomationService output to component-friendly format
@@ -207,46 +208,46 @@ const ResultsPage: React.FC = () => {
           testName: rawResult.testName,
           value: rawResult.value,
           unit: rawResult.unit,
-          status: determineMappedStatus(processedResult.status),
+          status: determineMappedStatus(processedResult.abnormalStatus),
           previousValue: previousResult?.value,
           previousDate: previousResult?.date,
           deltaCheck: processedResult.deltaCheck ? {
             triggered: processedResult.deltaCheck.triggered,
-            changePercent: processedResult.deltaCheck.changePercent,
-            severity: processedResult.deltaCheck.severity,
-            message: processedResult.deltaCheck.message,
-            recommendation: processedResult.deltaCheck.recommendation
+            changePercent: processedResult.deltaCheck.percentChange ?? 0,
+            severity: (processedResult.deltaCheck.severity || 'WARNING') as 'WARNING' | 'CRITICAL' | 'ALERT',
+            message: processedResult.deltaCheck.message ?? '',
+            recommendation: processedResult.deltaCheck.recommendation ?? ''
           } : undefined,
-          reflexTests: processedResult.reflexTests?.map(rt => ({
+          reflexTests: (processedResult.reflexTests?.map(rt => ({
             testId: rt.testId,
             testName: rt.testName,
             priority: rt.priority,
             status: 'PENDING' as const,
             reason: rt.reason,
-            estimatedTurnaround: rt.estimatedTurnaround
-          })),
+            estimatedTurnaround: (rt as any).estimatedTurnaround || ''
+          })) || []) as any,
           criticalValue: processedResult.criticalValue ? {
-            triggered: processedResult.criticalValue.triggered,
+            triggered: (processedResult.criticalValue as any).triggered ?? true,
             value: rawResult.value,
             unit: rawResult.unit,
-            thresholdLow: processedResult.criticalValue.thresholdLow,
-            thresholdHigh: processedResult.criticalValue.thresholdHigh,
+            thresholdLow: (processedResult.criticalValue as any).thresholdLow,
+            thresholdHigh: (processedResult.criticalValue as any).thresholdHigh,
             message: processedResult.criticalValue.message,
-            notificationMethods: processedResult.criticalValue.notificationMethods
+            notificationMethods: (processedResult.criticalValue as any).notificationMethods || (processedResult.criticalValue as any).notificationActions || []
           } : undefined
         };
 
         processedResults.push(componentResult);
 
         // Collect critical alerts for popup
-        if (processedResult.criticalValue?.triggered) {
+        if (processedResult.criticalValue) {
           allCriticalAlerts.push({
             testId: rawResult.testId,
             testName: rawResult.testName,
             value: rawResult.value,
             unit: rawResult.unit,
             message: processedResult.criticalValue.message,
-            notificationMethods: processedResult.criticalValue.notificationMethods
+            notificationMethods: (processedResult.criticalValue as any).notificationMethods || (processedResult.criticalValue as any).notificationActions || []
           });
         }
 
@@ -373,14 +374,14 @@ const ResultsPage: React.FC = () => {
             age: patientInfo.age,
             gender: patientInfo.gender,
             dob: patientInfo.dateOfBirth
-          }}
+          } as any}
           sampleInfo={{
             id: sampleInfo.sampleID,
             number: sampleInfo.sampleNumber,
             type: sampleInfo.sampleType,
             collectionTime: sampleInfo.collectionTime,
             receivedTime: sampleInfo.receivedTime
-          }}
+          } as any}
           results={testResults.map(tr => ({
             id: tr.testId,
             name: tr.testName,
@@ -389,7 +390,7 @@ const ResultsPage: React.FC = () => {
             status: tr.status,
             previousValue: tr.previousValue,
             previousDate: tr.previousDate?.toISOString()
-          }))}
+          })) as any}
           deltaChecks={testResults
             .filter(tr => tr.deltaCheck)
             .map(tr => ({
@@ -410,7 +411,7 @@ const ResultsPage: React.FC = () => {
               status: rt.status,
               reason: rt.reason,
               estimatedTurnaround: rt.estimatedTurnaround
-            }))}
+            })) as any}
           criticalValues={testResults
             .filter(tr => tr.criticalValue?.triggered)
             .map(tr => ({
@@ -422,18 +423,22 @@ const ResultsPage: React.FC = () => {
               thresholdHigh: tr.criticalValue!.thresholdHigh,
               message: tr.criticalValue!.message,
               notificationMethods: tr.criticalValue!.notificationMethods
-            }))}
+            })) as any}
         />
       )}
 
       {/* Critical value popup modal */}
       {activeCriticalAlert && (
         <CriticalValuePopup
-          testName={activeCriticalAlert.testName}
-          value={activeCriticalAlert.value}
-          unit={activeCriticalAlert.unit}
-          message={activeCriticalAlert.message}
-          notificationMethods={activeCriticalAlert.notificationMethods}
+          criticalValue={{
+            testId: activeCriticalAlert.testId,
+            testName: activeCriticalAlert.testName,
+            value: activeCriticalAlert.value,
+            unit: activeCriticalAlert.unit,
+            message: activeCriticalAlert.message,
+            notificationActions: activeCriticalAlert.notificationMethods,
+            severity: 'CRITICAL'
+          }}
           onClose={() => setActiveCriticalAlert(null)}
           onAcknowledge={handleAcknowledgeCriticalValue}
         />

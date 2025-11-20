@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Table,
@@ -19,36 +19,15 @@ import {
   Button,
 } from '@mui/material';
 import { Visibility, Print } from '@mui/icons-material';
-import { InvoiceService } from '../../../application/services/InvoiceService';
+import { useInvoices } from '../../hooks/useInvoices';
 import { Invoice } from '../../../domain/entities/Invoice';
 import InvoiceDetail from './InvoiceDetail';
 import { PrintingService } from '../../../infrastructure/printing/PrintingService';
 
 const InvoiceList: React.FC = () => {
-  const [invoices, setInvoices] = useState<Invoice[]>([]);
   const [selectedInvoiceId, setSelectedInvoiceId] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
-  const invoiceService = new InvoiceService();
-
-  useEffect(() => {
-    loadInvoices();
-  }, []);
-
-  const loadInvoices = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const data = await invoiceService.getAllInvoices();
-      setInvoices(data);
-    } catch (err) {
-      setError('Error al cargar facturas.');
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const { invoices, loading, error, refetch } = useInvoices();
 
   const handleCloseDetail = () => {
     setSelectedInvoiceId(null);
@@ -73,12 +52,16 @@ const InvoiceList: React.FC = () => {
 
   return (
     <Box>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', mb: 3, gap: 2 }}>
+        <Typography variant="h4">Historial de Facturas</Typography>
+      </Box>
+
       {loading && <CircularProgress />}
       {error && <Typography color="error">{error}</Typography>}
 
       {!loading && !error && (
-        <TableContainer component={Paper}>
-          <Table>
+        <Box sx={{ overflowX: 'auto' }}>
+          <Table sx={{ minWidth: 600 }}>
             <TableHead>
               <TableRow>
                 <TableCell>Factura #</TableCell>
@@ -109,7 +92,7 @@ const InvoiceList: React.FC = () => {
               ))}
             </TableBody>
           </Table>
-        </TableContainer>
+        </Box>
       )}
 
       <Dialog open={!!selectedInvoiceId} onClose={handleCloseDetail} maxWidth="md" fullWidth>
