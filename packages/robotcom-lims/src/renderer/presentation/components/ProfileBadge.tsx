@@ -24,7 +24,8 @@ const ProfileBadge: React.FC = () => {
 
   // Generate color based on user ID (consistent across sessions)
   const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E2'];
-  const userColor = colors[user.id.charCodeAt(0) % colors.length];
+  const userId = user.id || user.username || 'user';
+  const userColor = colors[userId.charCodeAt(0) % colors.length];
 
   return (
     <Box
