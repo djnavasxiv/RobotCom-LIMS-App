@@ -1,0 +1,146 @@
+═══════════════════════════════════════════════════════════════════════════════
+                     RobotComLab - Ubuntu/Linux Quick Start
+═══════════════════════════════════════════════════════════════════════════════
+
+STATUS: ✅ WORKING - Electron dev mode functional
+
+═══════════════════════════════════════════════════════════════════════════════
+QUICK SETUP (5 minutes):
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Open terminal in project root:
+   cd ~/RobotCom-LIMS-App
+
+2. Install dependencies (if first time):
+   pnpm install
+
+3. Navigate to app:
+   cd packages/robotcom-lims
+
+4. Start development:
+   pnpm dev
+
+✨ Expected result: Electron window opens with React UI
+
+═══════════════════════════════════════════════════════════════════════════════
+WHAT'S INCLUDED:
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ Fully functional Electron application
+✅ React UI with Material-UI components
+✅ SQLite database with Prisma ORM
+✅ User authentication with bcrypt
+✅ All CRUD operations working
+✅ Database migrations included
+✅ Production-ready code
+
+═══════════════════════════════════════════════════════════════════════════════
+AVAILABLE COMMANDS:
+═══════════════════════════════════════════════════════════════════════════════
+
+From packages/robotcom-lims/:
+
+  pnpm dev                 # Start development server
+  pnpm dev:headless        # Dev without GUI (for remote/CI)
+  pnpm build               # Build optimized bundles
+  pnpm package:win         # Create Windows installer ZIP
+  pnpm prisma:generate     # Generate Prisma client
+  pnpm prisma:migrate      # Apply database migrations
+  pnpm prisma:studio       # Open Prisma Studio (GUI for DB)
+  pnpm prisma:seed         # Seed database with initial data
+
+═══════════════════════════════════════════════════════════════════════════════
+TROUBLESHOOTING:
+═══════════════════════════════════════════════════════════════════════════════
+
+Error: "Cannot find module"
+→ Run: pnpm install && pnpm prisma:generate
+
+Error: "Port 5173 in use"
+→ Close other terminals or kill process on that port
+
+Error: bcrypt or native module issues
+→ Run: rm -rf node_modules && pnpm install
+
+Error: "DISPLAY not set" (headless system)
+→ Use: pnpm dev:headless
+
+═══════════════════════════════════════════════════════════════════════════════
+IMPORTANT FIX (Applied to this version):
+═══════════════════════════════════════════════════════════════════════════════
+
+The Prisma module resolution issue has been fixed automatically:
+- The build process now syncs generated Prisma client to expected location
+- This happens automatically when you run any npm script
+- No manual steps needed
+
+═══════════════════════════════════════════════════════════════════════════════
+DEVELOPMENT WORKFLOW:
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Make changes to source code (src/renderer/, src/main/, etc.)
+2. Files auto-reload in development mode
+3. Test changes immediately in Electron window
+4. When done:
+   - Test with pnpm build
+   - Commit changes: git add . && git commit -m "message"
+   - Push: git push origin main
+
+═══════════════════════════════════════════════════════════════════════════════
+BUILDING FOR DISTRIBUTION:
+═══════════════════════════════════════════════════════════════════════════════
+
+Create Windows installer:
+  pnpm package:win
+
+Output location:
+  release/RobotComLab-Setup-1.0.0-portable.zip (171 MB)
+
+Extract and run on Windows:
+  1. Extract ZIP
+  2. Double-click START_HERE.bat
+  3. Application launches
+
+═══════════════════════════════════════════════════════════════════════════════
+SYSTEM REQUIREMENTS:
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ Node.js 20+ (installed: check with `node --version`)
+✅ pnpm (installed globally)
+✅ X11 display or DISPLAY environment variable
+✅ 2GB RAM minimum
+✅ 500MB disk space
+
+═══════════════════════════════════════════════════════════════════════════════
+GIT STATUS:
+═══════════════════════════════════════════════════════════════════════════════
+
+Repository: https://github.com/djnavasxiv/RobotCom-LIMS-App
+Branch: main
+Status: Production-ready
+Last fix: Prisma module syncing (commit 93a0eca)
+
+═══════════════════════════════════════════════════════════════════════════════
+KEY FILES:
+═══════════════════════════════════════════════════════════════════════════════
+
+Source:
+  packages/robotcom-lims/src/                    - Source code
+  packages/robotcom-lims/src/main/               - Electron main process
+  packages/robotcom-lims/src/renderer/           - React UI
+  packages/robotcom-lims/src/renderer/src/       - React components
+
+Config:
+  packages/robotcom-lims/electron.vite.config.ts - Build config
+  packages/robotcom-lims/package.json            - Project config
+  packages/robotcom-lims/prisma/schema.prisma    - Database schema
+
+Database:
+  packages/robotcom-lims/prisma/dev.db           - SQLite database
+  packages/robotcom-lims/prisma/migrations/      - DB migrations
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Questions? Check the documentation files in the root directory.
+
+Ready to develop! 🚀
